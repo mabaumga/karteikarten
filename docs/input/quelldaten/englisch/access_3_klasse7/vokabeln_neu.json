@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "buch": "Access 3",
+    "klasse": 7,
+    "unit": 4,
+    "sprache": "Englisch-Deutsch"
+  },
+  "vokabeln": [
+    {
+      "chapter": 1,
+      "page": 4,
+      "englisch": "to unpack sth.",
+      "deutsch": "etwas auspacken"
+    },
+    {
+      "chapter": 1,
+      "page": 4,
+      "englisch": "to seem",
+      "deutsch": "scheinen"
+    },
+    {
+      "chapter": 1,
+      "page": 4,
+      "englisch": "to congratulate",
+      "deutsch": "gratulieren"
+    },
+    {
+      "chapter": 1,
+      "page": 5,
+      "englisch": "joy",
+      "deutsch": "Freude"
+    },
+    {
+      "chapter": 1,
+      "page": 5,
+      "englisch": "to lift",
+      "deutsch": "(hoch-)heben"
+    },
+    {
+      "chapter": 1,
+      "page": 5,
+      "englisch": "human",
+      "deutsch": "menschlich"
+    },
+    {
+      "chapter": 1,
+      "page": 6,
+      "englisch": "frightened",
+      "deutsch": "erschreckt"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "excessively",
+      "deutsch": "übermäßig"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "enthusiastic",
+      "deutsch": "begeistert"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "passion",
+      "deutsch": "Leidenschaft"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "passionate",
+      "deutsch": "leidenschaftlich"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "hilarious",
+      "deutsch": "lustig, urkomisch"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "englisch": "witty",
+      "deutsch": "geistreich, witzig"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "englisch": "chain",
+      "deutsch": "Kette, Verkettung"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "englisch": "memory",
+      "deutsch": "Erinnerung"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "englisch": "fear",
+      "deutsch": "Angst"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "englisch": "beneath",
+      "deutsch": "unter"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "englisch": "gaze",
+      "deutsch": "Blick"
+    },
+    {
+      "chapter": 3,
+      "page": 10,
+      "englisch": "immediately",
+      "deutsch": "sofort, umgehend"
+    }
+  ],
+  "emotionen": {
+    "beschreibung": "Gefühlswörter aus Inside Out",
+    "kategorien": [
+      {
+        "emotion": "JOY",
+        "woerter": [
+          {"englisch": "joyful", "deutsch": "fröhlich"},
+          {"englisch": "happy", "deutsch": "glücklich"},
+          {"englisch": "confident", "deutsch": "selbstbewusst"},
+          {"englisch": "loving", "deutsch": "liebevoll"},
+          {"englisch": "sensitive", "deutsch": "sensibel"},
+          {"englisch": "courageous", "deutsch": "mutig"},
+          {"englisch": "hopeful", "deutsch": "hoffnungsvoll"}
+        ]
+      },
+      {
+        "emotion": "ANGER",
+        "woerter": [
+          {"englisch": "mad", "deutsch": "wütend"},
+          {"englisch": "jealous", "deutsch": "eifersüchtig"},
+          {"englisch": "withdrawn", "deutsch": "zurückgezogen"},
+          {"englisch": "embarrassed", "deutsch": "verlegen"},
+          {"englisch": "furious", "deutsch": "zornig"},
+          {"englisch": "irritated", "deutsch": "gereizt"},
+          {"englisch": "frustrated", "deutsch": "frustriert"},
+          {"englisch": "skeptical", "deutsch": "skeptisch"}
+        ]
+      },
+      {
+        "emotion": "DISGUST",
+        "woerter": [
+          {"englisch": "awful", "deutsch": "schrecklich"},
+          {"englisch": "disappointed", "deutsch": "enttäuscht"},
+          {"englisch": "loathing", "deutsch": "verabscheuungswürdig"},
+          {"englisch": "hesitant", "deutsch": "zögerlich"},
+          {"englisch": "revolted", "deutsch": "empört"},
+          {"englisch": "judgemental", "deutsch": "urteilend"}
+        ]
+      },
+      {
+        "emotion": "FEAR",
+        "woerter": [
+          {"englisch": "humiliated", "deutsch": "gedemütigt"},
+          {"englisch": "rejected", "deutsch": "abgelehnt"},
+          {"englisch": "worthless", "deutsch": "wertlos"},
+          {"englisch": "insecure", "deutsch": "unsicher"},
+          {"englisch": "anxious", "deutsch": "ängstlich"},
+          {"englisch": "scared", "deutsch": "verängstigt"},
+          {"englisch": "eager", "deutsch": "eifrig"},
+          {"englisch": "dismayed", "deutsch": "bestürzt"}
+        ]
+      },
+      {
+        "emotion": "SURPRISE",
+        "woerter": [
+          {"englisch": "startled", "deutsch": "erschrocken"},
+          {"englisch": "confused", "deutsch": "verwirrt"},
+          {"englisch": "amazed", "deutsch": "erstaunt"},
+          {"englisch": "excited", "deutsch": "aufgeregt"},
+          {"englisch": "shocked", "deutsch": "schockiert"},
+          {"englisch": "astonished", "deutsch": "verblüfft"}
+        ]
+      },
+      {
+        "emotion": "SADNESS",
+        "woerter": [
+          {"englisch": "sad", "deutsch": "traurig"},
+          {"englisch": "bored", "deutsch": "gelangweilt"},
+          {"englisch": "sleepy", "deutsch": "schläfrig"},
+          {"englisch": "unhappy", "deutsch": "unglücklich"},
+          {"englisch": "ignored", "deutsch": "ignoriert"},
+          {"englisch": "guilty", "deutsch": "schuldig"},
+          {"englisch": "lonely", "deutsch": "einsam"},
+          {"englisch": "alone", "deutsch": "allein"}
+        ]
+      }
+    ]
+  }
+}

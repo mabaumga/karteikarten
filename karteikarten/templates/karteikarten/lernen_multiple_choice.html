@@ -1,0 +1,97 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Multiple Choice - {{ lernblock.name }}{% endblock %}
+
+{% block nav_right %}
+<a href="{% url 'lernblock_detail' lernblock.pk %}" class="btn btn-link text-white">
+    <i class="bi bi-x-lg"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<!-- Progress -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted small">
+        <i class="bi bi-ui-radios me-1"></i>Multiple Choice
+    </span>
+    <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+</div>
+
+<!-- Question -->
+<div class="flashcard mb-4">
+    <div class="begriff">{{ karte.begriff }}</div>
+</div>
+
+<!-- Options -->
+<div class="d-grid gap-3" id="options">
+    {% for option in optionen %}
+    <div class="mc-option" data-korrekt="{{ option.korrekt|yesno:'true,false' }}"
+         data-karte-id="{{ option.karte_id }}" onclick="selectOption(this)">
+        <span class="badge bg-secondary me-2">{{ forloop.counter|add:-1|make_list|first|default:'A' }}{% cycle 'A' 'B' 'C' 'D' %}</span>
+        {{ option.text }}
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Card Info -->
+<div class="text-center mt-4">
+    <span class="badge bg-secondary">Fach {{ karte.fach }}</span>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let answered = false;
+
+    function selectOption(element) {
+        if (answered) return;
+        answered = true;
+
+        const isCorrect = element.dataset.korrekt === 'true';
+
+        // Mark selected
+        element.classList.add('selected');
+
+        // Show correct/wrong
+        document.querySelectorAll('.mc-option').forEach(opt => {
+            opt.style.pointerEvents = 'none';
+            if (opt.dataset.korrekt === 'true') {
+                opt.classList.add('correct');
+            } else if (opt === element) {
+                opt.classList.add('wrong');
+            }
+        });
+
+        // Send answer
+        fetch('{% url "karte_antwort" karte.pk %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrftoken,
+            },
+            body: `richtig=${isCorrect}&modus=multiple_choice`
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Load next card after delay
+            setTimeout(() => {
+                window.location.reload();
+            }, 1500);
+        })
+        .catch(err => {
+            console.error(err);
+            setTimeout(() => window.location.reload(), 1500);
+        });
+    }
+
+    // Keyboard shortcuts (1-4)
+    document.addEventListener('keydown', (e) => {
+        if (answered) return;
+        const options = document.querySelectorAll('.mc-option');
+        if (e.code === 'Digit1' || e.code === 'KeyA') selectOption(options[0]);
+        if (e.code === 'Digit2' || e.code === 'KeyB') selectOption(options[1]);
+        if (e.code === 'Digit3' || e.code === 'KeyC') selectOption(options[2]);
+        if (e.code === 'Digit4' || e.code === 'KeyD') selectOption(options[3]);
+    });
+</script>
+{% endblock %}

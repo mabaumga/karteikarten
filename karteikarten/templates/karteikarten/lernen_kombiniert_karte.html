@@ -1,0 +1,149 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Gemeinsam lernen - Karteikarten{% endblock %}
+
+{% block nav_right %}
+<a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-link text-white">
+    <i class="bi bi-x-lg"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<!-- Progress -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted small">
+        <i class="bi bi-collection me-1"></i>{{ lernbloecke|length }} Bl&ouml;cke
+    </span>
+    <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+</div>
+
+<!-- Block name badge -->
+<div class="mb-2">
+    <span class="badge bg-secondary">
+        <i class="bi bi-folder2 me-1"></i>{{ karte.lernblock.name }}
+    </span>
+</div>
+
+<!-- Flashcard -->
+<div class="flashcard mb-4" id="flashcard">
+    <!-- Front (always visible) -->
+    <div class="begriff">
+        {{ karte.begriff }}
+    </div>
+
+    <!-- Back (hidden initially) -->
+    <div id="card-back" style="display: none;">
+        <div class="definition">
+            {{ karte.definition }}
+        </div>
+
+        {% if karte.beispiele %}
+        <div class="beispiele">
+            <i class="bi bi-quote me-1"></i>{{ karte.beispiele }}
+        </div>
+        {% endif %}
+
+        {% if karte.zusatz_label and karte.zusatz_wert %}
+        <div class="zusatz">
+            <span class="zusatz-label">{{ karte.zusatz_label }}:</span>
+            {{ karte.zusatz_wert }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Buttons -->
+<div id="reveal-section">
+    <button type="button" class="btn btn-primary btn-lg w-100" onclick="aufloesen()">
+        <i class="bi bi-eye me-1"></i>Aufl&ouml;sen
+    </button>
+</div>
+
+<div id="answer-section" style="display: none;">
+    <div class="row g-3">
+        <div class="col-6">
+            <button type="button" class="btn btn-danger btn-lg w-100" onclick="antworten(false)">
+                <i class="bi bi-x-lg me-1"></i>Falsch
+            </button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-success btn-lg w-100" onclick="antworten(true)">
+                <i class="bi bi-check-lg me-1"></i>Richtig
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Card Info -->
+<div class="text-center mt-4">
+    <span class="badge bg-secondary">Fach {{ status.fach }}</span>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const blockIds = '{{ block_ids }}';
+
+    function aufloesen() {
+        document.getElementById('card-back').style.display = 'block';
+        document.getElementById('reveal-section').style.display = 'none';
+        document.getElementById('answer-section').style.display = 'block';
+
+        // Animate
+        document.getElementById('flashcard').style.transform = 'scale(1.02)';
+        setTimeout(() => {
+            document.getElementById('flashcard').style.transform = 'scale(1)';
+        }, 150);
+    }
+
+    function antworten(richtig) {
+        // Disable buttons
+        document.querySelectorAll('#answer-section button').forEach(btn => {
+            btn.disabled = true;
+        });
+
+        // Send answer
+        fetch('{% url "karte_antwort" karte.pk %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrftoken,
+            },
+            body: `richtig=${richtig}&modus={{ modus }}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Show feedback
+            const card = document.getElementById('flashcard');
+            card.style.borderLeft = `4px solid ${richtig ? 'var(--success)' : 'var(--danger)'}`;
+
+            // Load next card (preserve block selection)
+            setTimeout(() => {
+                window.location.href = '{% url "lernen_kombiniert" %}?bloecke=' + blockIds;
+            }, 500);
+        })
+        .catch(err => {
+            console.error(err);
+            window.location.href = '{% url "lernen_kombiniert" %}?bloecke=' + blockIds;
+        });
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            e.preventDefault();
+            if (document.getElementById('reveal-section').style.display !== 'none') {
+                aufloesen();
+            }
+        } else if (e.code === 'ArrowLeft' || e.code === 'KeyF') {
+            if (document.getElementById('answer-section').style.display !== 'none') {
+                antworten(false);
+            }
+        } else if (e.code === 'ArrowRight' || e.code === 'KeyR') {
+            if (document.getElementById('answer-section').style.display !== 'none') {
+                antworten(true);
+            }
+        }
+    });
+</script>
+{% endblock %}

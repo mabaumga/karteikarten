@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "fach": "Französisch",
+    "lehrwerk": "À plus! Nouvelle édition",
+    "band": 2,
+    "klasse": 7,
+    "verlag": "Cornelsen",
+    "sprachen": ["Französisch", "Deutsch"],
+    "version": "1.0",
+    "quelle": "Vokipedia"
+  },
+  "felder": {
+    "vorderseite": "Französisch",
+    "rueckseite": "Deutsch",
+    "zusatzfelder": [
+      {"name": "beispiel", "label": "Beispielsatz"},
+      {"name": "wortart", "label": "Wortart"}
+    ]
+  },
+  "inhalt": [
+    {
+      "name": "Unité 1",
+      "beschreibung": "Bienvenue à Nantes",
+      "bloecke": [
+        {
+          "name": "Volet 1 - Begrüßung & Stadt",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Bienvenue!",
+              "hinten": "Willkommen!, Herzlich willkommen!",
+              "tags": ["Begrüßung"]
+            },
+            {
+              "vorne": "la vieille ville",
+              "hinten": "die Altstadt",
+              "beispiel": {
+                "fr": "La vieille ville de Nantes est très jolie.",
+                "de": "Die Altstadt von Nantes ist sehr schön."
+              },
+              "zusatz": {"wortart": "Nomen (f)"},
+              "tags": ["Nomen", "Stadt"]
+            },
+            {
+              "vorne": "jouer de qc",
+              "hinten": "etw. spielen (Instrument)",
+              "beispiel": {
+                "fr": "Je joue de la guitare.",
+                "de": "Ich spiele Gitarre."
+              },
+              "zusatz": {"wortart": "Verb", "konjugation": "je joue, tu joues, il joue"},
+              "tags": ["Verb", "Musik"]
+            }
+          ]
+        },
+        {
+          "name": "Volet 2 - Orte & Richtungen",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "se trouver",
+              "hinten": "sich befinden, liegen",
+              "beispiel": {
+                "fr": "Où se trouve la gare?",
+                "de": "Wo befindet sich der Bahnhof?"
+              },
+              "zusatz": {"wortart": "Verb (reflexiv)"}
+            },
+            {
+              "vorne": "à côté de",
+              "hinten": "neben",
+              "beispiel": {
+                "fr": "Le cinéma est à côté de la poste.",
+                "de": "Das Kino ist neben der Post."
+              },
+              "zusatz": {"wortart": "Präposition"}
+            }
+          ]
+        },
+        {
+          "name": "Le français en classe",
+          "beschreibung": "Unterrichtssprache",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "corriger",
+              "hinten": "verbessern, korrigieren",
+              "beispiel": {
+                "fr": "Pouvez-vous me corriger?",
+                "de": "Können Sie mich verbessern?"
+              }
+            },
+            {
+              "vorne": "répéter",
+              "hinten": "wiederholen",
+              "beispiel": {
+                "fr": "Répétez, s'il vous plaît!",
+                "de": "Wiederholen Sie bitte!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 2",
+      "beschreibung": "Freizeit und Hobbys",
+      "bloecke": [
+        {
+          "name": "Volet 1 - Freizeitaktivitäten",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le temps libre",
+              "hinten": "die Freizeit",
+              "beispiel": {
+                "fr": "Qu'est-ce que tu fais pendant ton temps libre?",
+                "de": "Was machst du in deiner Freizeit?"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

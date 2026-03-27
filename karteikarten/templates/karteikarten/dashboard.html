@@ -1,0 +1,148 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Dashboard - Karteikarten{% endblock %}
+
+{% block content %}
+<!-- Stats Overview -->
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="col-4">
+                <div class="streak-badge d-inline-block mb-2">
+                    <i class="bi bi-fire"></i> {{ streak }}
+                </div>
+                <div class="small text-muted">Tage Streak</div>
+            </div>
+            <div class="col-4">
+                <div class="h4 mb-0 text-primary">{{ total_karten }}</div>
+                <div class="small text-muted">Karten</div>
+            </div>
+            <div class="col-4">
+                {% if heute_richtig or heute_falsch %}
+                    {% widthratio heute_richtig heute_richtig|add:heute_falsch 100 as quote %}
+                    <div class="h4 mb-0 text-success">{{ quote|default:0 }}%</div>
+                {% else %}
+                    <div class="h4 mb-0 text-muted">-</div>
+                {% endif %}
+                <div class="small text-muted">Heute</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Due Cards Alert -->
+{% if total_faellig > 0 %}
+<div class="alert alert-primary d-flex justify-content-between align-items-center mb-4" role="alert">
+    <div>
+        <i class="bi bi-clock-fill me-2"></i>
+        <strong>{{ total_faellig }}</strong> Karten warten auf dich!
+    </div>
+    <a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-primary btn-sm">
+        <i class="bi bi-collection me-1"></i>Gemeinsam lernen
+    </a>
+</div>
+{% endif %}
+
+<!-- Offline Learning Button -->
+<div class="card mb-4 border-info">
+    <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+            <i class="bi bi-cloud-offline text-info me-2"></i>
+            <span class="fw-semibold">Offline lernen</span>
+            <small class="text-muted d-block">Funktioniert auch ohne Internet</small>
+        </div>
+        <a href="{% url 'lernen_offline' %}" class="btn btn-outline-info">
+            <i class="bi bi-download me-1"></i>Offline-Modus
+        </a>
+    </div>
+</div>
+
+<!-- Learning Blocks -->
+<h5 class="mb-3">
+    <i class="bi bi-collection me-2"></i>Deine Lernbloecke
+</h5>
+
+{% for item in bloecke_mit_status %}
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+            <h5 class="card-title mb-0">
+                <i class="bi bi-folder2 me-2 text-primary"></i>{{ item.lernblock.name }}
+            </h5>
+            {% if item.lernblock.bidirektional %}
+            <span class="badge bg-info"><i class="bi bi-arrow-left-right"></i></span>
+            {% endif %}
+        </div>
+
+        {% if item.lernblock.beschreibung %}
+        <p class="card-text text-muted small mb-2">{{ item.lernblock.beschreibung }}</p>
+        {% endif %}
+
+        {% if item.lernblock.lehrwerk_unit %}
+        <p class="card-text small mb-2">
+            <span class="badge bg-primary me-1">
+                <i class="bi bi-book me-1"></i>{{ item.lernblock.lehrwerk_unit.lehrwerk }}
+            </span>
+            <span class="badge bg-info me-1">{{ item.lernblock.lehrwerk_unit.name }}</span>
+            {% if item.lernblock.display_jahrgangsstufe %}
+            <span class="badge bg-secondary me-1">{{ item.lernblock.display_jahrgangsstufe }}</span>
+            {% endif %}
+            {% if item.lernblock.display_seiten %}
+            <span class="badge bg-light text-dark">
+                <i class="bi bi-file-earmark-text me-1"></i>S. {{ item.lernblock.display_seiten }}
+            </span>
+            {% endif %}
+        </p>
+        {% elif item.lernblock.display_schulfach or item.lernblock.display_jahrgangsstufe %}
+        <p class="card-text small mb-2">
+            {% if item.lernblock.display_schulfach %}
+            <span class="badge bg-secondary me-1">{{ item.lernblock.display_schulfach }}</span>
+            {% endif %}
+            {% if item.lernblock.display_jahrgangsstufe %}
+            <span class="badge bg-secondary">{{ item.lernblock.display_jahrgangsstufe }}</span>
+            {% endif %}
+        </p>
+        {% endif %}
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted small">
+                <i class="bi bi-card-text me-1"></i>{{ item.anzahl }} Karten
+            </span>
+            {% if item.faellig > 0 %}
+            <span class="badge bg-warning text-dark">
+                {{ item.faellig }} faellig
+            </span>
+            {% else %}
+            <span class="badge bg-success">
+                <i class="bi bi-check"></i> Fertig
+            </span>
+            {% endif %}
+        </div>
+
+        <a href="{% url 'lernblock_detail' item.lernblock.pk %}" class="btn btn-primary w-100">
+            <i class="bi bi-play-fill me-1"></i>Lernen
+        </a>
+    </div>
+</div>
+{% empty %}
+<div class="text-center py-5">
+    <i class="bi bi-inbox display-1 text-muted"></i>
+    <p class="text-muted mt-3">Du hast noch keine Lernbloecke ausgewaehlt.</p>
+    <a href="{% url 'meine_lernbloecke' %}" class="btn btn-primary">
+        <i class="bi bi-plus-lg me-1"></i>Lernbloecke auswaehlen
+    </a>
+</div>
+{% endfor %}
+
+<!-- Add Block Buttons -->
+{% if bloecke_mit_status %}
+<div class="d-flex gap-2 mt-3">
+    <a href="{% url 'meine_lernbloecke' %}" class="btn btn-outline-secondary flex-fill">
+        <i class="bi bi-collection me-1"></i>Bloecke verwalten
+    </a>
+    <a href="{% url 'lernblock_create' %}" class="btn btn-outline-primary flex-fill">
+        <i class="bi bi-plus-lg me-1"></i>Neuen Block
+    </a>
+</div>
+{% endif %}
+{% endblock %}

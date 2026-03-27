@@ -1,0 +1,27 @@
+services:
+  karteikarten:
+    build: .
+    container_name: karteikarten
+    ports:
+      - "8080:8000"
+    volumes:
+      - karteikarten-data:/app/data
+      # Import directory - place JSON files here for automatic import
+      - karteikarten-import:/app/data/import
+      # Archive directory - imported files are moved here
+      - karteikarten-archive:/app/data/archive
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-change-me-in-production}
+      - DEBUG=False
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      # Import directories (inside container)
+      - KARTEIKARTEN_IMPORT_DIR=/app/data/import
+      - KARTEIKARTEN_ARCHIVE_DIR=/app/data/archive
+      # Import interval in seconds (default: 60)
+      - KARTEIKARTEN_IMPORT_INTERVAL=60
+    restart: unless-stopped
+
+volumes:
+  karteikarten-data:
+  karteikarten-import:
+  karteikarten-archive:

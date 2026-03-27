@@ -1,0 +1,48 @@
+services:
+  karteikarten:
+    image: docker-registry.baumgartner.online/karteikarten:latest
+    container_name: karteikarten
+    hostname: karteikarten
+
+    # Kein Port-Mapping noetig - Container hat eigene IP
+    # Der Service laeuft auf Port 8000
+
+    volumes:
+      # Persistenter Speicher fuer SQLite Datenbank
+      - /mnt/user/appdata/karteikarten:/app/data
+      # Import-Verzeichnis - JSON-Dateien hier ablegen fuer automatischen Import
+      - /mnt/user/appdata/karteikarten/import:/app/data/import
+      # Archiv-Verzeichnis - importierte Dateien werden hierher verschoben
+      - /mnt/user/appdata/karteikarten/archive:/app/data/archive
+
+    environment:
+      - SECRET_KEY=change-me-to-a-secure-random-string-min-50-chars
+      - DEBUG=False
+      # Alle erlaubten Hostnamen (Proxy, direkte IP, etc.)
+      - ALLOWED_HOSTS=karteikarten.baumgartner.online,localhost,192.168.1.200
+      # Fuer HTTPS ueber Proxy
+      - CSRF_TRUSTED_ORIGINS=https://karteikarten.baumgartner.online
+      # Import-Verzeichnisse (innerhalb des Containers)
+      - KARTEIKARTEN_IMPORT_DIR=/app/data/import
+      - KARTEIKARTEN_ARCHIVE_DIR=/app/data/archive
+      # Import-Intervall in Sekunden (Standard: 60)
+      - KARTEIKARTEN_IMPORT_INTERVAL=60
+
+    networks:
+      proxy: {}
+      internal: {}
+
+    restart: unless-stopped
+
+    labels:
+      - "net.unraid.docker.icon=https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/anki.png"
+      - "net.unraid.docker.managed=composeman"
+
+
+networks:
+  internal:
+    driver: bridge
+    name: karteikarten_internal
+  proxy:
+    driver: bridge
+    external: true

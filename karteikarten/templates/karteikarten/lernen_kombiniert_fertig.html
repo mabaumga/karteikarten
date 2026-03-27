@@ -1,0 +1,44 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Fertig! - Gemeinsam lernen{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    {% if error %}
+    <i class="bi bi-exclamation-circle display-1 text-warning"></i>
+    <h4 class="mt-4">{{ error }}</h4>
+    {% else %}
+    <i class="bi bi-trophy display-1 text-warning"></i>
+    <h4 class="mt-4">Geschafft!</h4>
+    <p class="text-muted">
+        Keine f&auml;lligen Karten mehr in den ausgew&auml;hlten Lernbl&ouml;cken.
+    </p>
+    {% endif %}
+
+    <div class="mb-4">
+        <p class="small text-muted mb-2">Ausgew&auml;hlte Bl&ouml;cke:</p>
+        {% for lb in lernbloecke %}
+        <span class="badge bg-secondary me-1">{{ lb.name }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="d-grid gap-2 mt-4" style="max-width: 400px; margin: 0 auto;">
+        {% if not error %}
+        <form action="{% url 'karten_zuruecksetzen_kombiniert' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="bloecke" value="{{ block_ids }}">
+            <input type="hidden" name="modus" value="{{ modus }}">
+            <button type="submit" class="btn btn-success btn-lg w-100">
+                <i class="bi bi-arrow-repeat me-1"></i>Weiter &uuml;ben
+            </button>
+        </form>
+        {% endif %}
+        <a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-primary btn-lg">
+            <i class="bi bi-collection me-1"></i>Andere Bl&ouml;cke w&auml;hlen
+        </a>
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+            <i class="bi bi-house me-1"></i>Zum Dashboard
+        </a>
+    </div>
+</div>
+{% endblock %}

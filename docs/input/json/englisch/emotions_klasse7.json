@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "fach": "Englisch",
+    "lehrwerk": "Extra-Vokabeln",
+    "band": 3,
+    "klasse": 7,
+    "sprachen": ["Englisch", "Deutsch"],
+    "version": "1.0",
+    "quelle": "Inside Out - Emotions Vocabulary"
+  },
+  "felder": {
+    "vorderseite": "English",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Emotions",
+      "beschreibung": "Gefuehlswoerter aus dem Film Inside Out",
+      "bloecke": [
+        {
+          "name": "JOY - Freude",
+          "beschreibung": "Positive Emotionen rund um Freude",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "joyful", "hinten": "froehlich", "tags": ["adjective", "positive"]},
+            {"vorne": "happy", "hinten": "gluecklich", "tags": ["adjective", "positive"]},
+            {"vorne": "confident", "hinten": "selbstbewusst", "tags": ["adjective", "positive"]},
+            {"vorne": "loving", "hinten": "liebevoll", "tags": ["adjective", "positive"]},
+            {"vorne": "sensitive", "hinten": "sensibel", "tags": ["adjective"]},
+            {"vorne": "courageous", "hinten": "mutig", "tags": ["adjective", "positive"]},
+            {"vorne": "hopeful", "hinten": "hoffnungsvoll", "tags": ["adjective", "positive"]}
+          ]
+        },
+        {
+          "name": "ANGER - Wut",
+          "beschreibung": "Emotionen rund um Aerger und Wut",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "mad", "hinten": "wuetend", "tags": ["adjective", "negative"]},
+            {"vorne": "jealous", "hinten": "eifersüchtig", "tags": ["adjective", "negative"]},
+            {"vorne": "withdrawn", "hinten": "zurueckgezogen", "tags": ["adjective"]},
+            {"vorne": "embarrassed", "hinten": "verlegen", "tags": ["adjective", "negative"]},
+            {"vorne": "furious", "hinten": "zornig", "tags": ["adjective", "negative"]},
+            {"vorne": "irritated", "hinten": "gereizt", "tags": ["adjective", "negative"]},
+            {"vorne": "frustrated", "hinten": "frustriert", "tags": ["adjective", "negative"]},
+            {"vorne": "skeptical", "hinten": "skeptisch", "tags": ["adjective"]}
+          ]
+        },
+        {
+          "name": "DISGUST - Ekel",
+          "beschreibung": "Emotionen rund um Ablehnung und Ekel",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "awful", "hinten": "schrecklich", "tags": ["adjective", "negative"]},
+            {"vorne": "disappointed", "hinten": "enttaeuscht", "tags": ["adjective", "negative"]},
+            {"vorne": "loathing", "hinten": "verabscheuungswuerdig", "tags": ["adjective", "negative"]},
+            {"vorne": "hesitant", "hinten": "zoeagerlich", "tags": ["adjective"]},
+            {"vorne": "revolted", "hinten": "empoert", "tags": ["adjective", "negative"]},
+            {"vorne": "judgemental", "hinten": "urteilend", "tags": ["adjective"]}
+          ]
+        },
+        {
+          "name": "FEAR - Angst",
+          "beschreibung": "Emotionen rund um Angst und Unsicherheit",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "humiliated", "hinten": "gedemuetigt", "tags": ["adjective", "negative"]},
+            {"vorne": "rejected", "hinten": "abgelehnt", "tags": ["adjective", "negative"]},
+            {"vorne": "worthless", "hinten": "wertlos", "tags": ["adjective", "negative"]},
+            {"vorne": "insecure", "hinten": "unsicher", "tags": ["adjective", "negative"]},
+            {"vorne": "anxious", "hinten": "aengstlich", "tags": ["adjective", "negative"]},
+            {"vorne": "scared", "hinten": "veraengstigt", "tags": ["adjective", "negative"]},
+            {"vorne": "eager", "hinten": "eifrig", "tags": ["adjective", "positive"]},
+            {"vorne": "dismayed", "hinten": "bestuerzt", "tags": ["adjective", "negative"]}
+          ]
+        },
+        {
+          "name": "SURPRISE - Ueberraschung",
+          "beschreibung": "Emotionen rund um Ueberraschung und Erstaunen",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "startled", "hinten": "erschrocken", "tags": ["adjective"]},
+            {"vorne": "confused", "hinten": "verwirrt", "tags": ["adjective"]},
+            {"vorne": "amazed", "hinten": "erstaunt", "tags": ["adjective", "positive"]},
+            {"vorne": "excited", "hinten": "aufgeregt", "tags": ["adjective", "positive"]},
+            {"vorne": "shocked", "hinten": "schockiert", "tags": ["adjective"]},
+            {"vorne": "astonished", "hinten": "verblüfft", "tags": ["adjective"]}
+          ]
+        },
+        {
+          "name": "SADNESS - Traurigkeit",
+          "beschreibung": "Emotionen rund um Traurigkeit",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "sad", "hinten": "traurig", "tags": ["adjective", "negative"]},
+            {"vorne": "bored", "hinten": "gelangweilt", "tags": ["adjective", "negative"]},
+            {"vorne": "sleepy", "hinten": "schlaefrig", "tags": ["adjective"]},
+            {"vorne": "unhappy", "hinten": "ungluecklich", "tags": ["adjective", "negative"]},
+            {"vorne": "ignored", "hinten": "ignoriert", "tags": ["adjective", "negative"]},
+            {"vorne": "guilty", "hinten": "schuldig", "tags": ["adjective", "negative"]},
+            {"vorne": "lonely", "hinten": "einsam", "tags": ["adjective", "negative"]},
+            {"vorne": "alone", "hinten": "allein", "tags": ["adjective"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

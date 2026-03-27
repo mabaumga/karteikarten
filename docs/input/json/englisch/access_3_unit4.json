@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "fach": "Englisch",
+    "lehrwerk": "Access 3",
+    "band": 3,
+    "klasse": 7,
+    "verlag": "Cornelsen",
+    "sprachen": [
+      "Englisch",
+      "Deutsch"
+    ],
+    "version": "1.0"
+  },
+  "felder": {
+    "vorderseite": "English",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Unit 4",
+      "bloecke": [
+        {
+          "name": "Part 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to unpack sth.",
+              "hinten": "etwas auspacken",
+              "seite": "4"
+            },
+            {
+              "vorne": "to seem",
+              "hinten": "scheinen",
+              "seite": "4"
+            },
+            {
+              "vorne": "to congratulate",
+              "hinten": "gratulieren",
+              "seite": "4"
+            },
+            {
+              "vorne": "joy",
+              "hinten": "Freude",
+              "seite": "5"
+            },
+            {
+              "vorne": "to lift",
+              "hinten": "(hoch-)heben",
+              "seite": "5"
+            },
+            {
+              "vorne": "human",
+              "hinten": "menschlich",
+              "seite": "5"
+            },
+            {
+              "vorne": "frightened",
+              "hinten": "erschreckt",
+              "seite": "6"
+            }
+          ]
+        },
+        {
+          "name": "Part 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "excessively",
+              "hinten": "übermäßig",
+              "seite": "7"
+            },
+            {
+              "vorne": "enthusiastic",
+              "hinten": "begeistert",
+              "seite": "7"
+            },
+            {
+              "vorne": "passion",
+              "hinten": "Leidenschaft",
+              "seite": "7"
+            },
+            {
+              "vorne": "passionate",
+              "hinten": "leidenschaftlich",
+              "seite": "7"
+            },
+            {
+              "vorne": "hilarious",
+              "hinten": "lustig, urkomisch",
+              "seite": "7"
+            },
+            {
+              "vorne": "witty",
+              "hinten": "geistreich, witzig",
+              "seite": "7"
+            }
+          ]
+        },
+        {
+          "name": "Part 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "chain",
+              "hinten": "Kette, Verkettung",
+              "seite": "9"
+            },
+            {
+              "vorne": "memory",
+              "hinten": "Erinnerung",
+              "seite": "9"
+            },
+            {
+              "vorne": "fear",
+              "hinten": "Angst",
+              "seite": "9"
+            },
+            {
+              "vorne": "beneath",
+              "hinten": "unter",
+              "seite": "9"
+            },
+            {
+              "vorne": "gaze",
+              "hinten": "Blick",
+              "seite": "9"
+            },
+            {
+              "vorne": "immediately",
+              "hinten": "sofort, umgehend",
+              "seite": "10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

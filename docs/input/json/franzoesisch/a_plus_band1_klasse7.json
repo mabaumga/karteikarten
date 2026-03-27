@@ -1,0 +1,2208 @@
+{
+  "meta": {
+    "fach": "Französisch",
+    "lehrwerk": "À plus! Nouvelle édition",
+    "band": 1,
+    "klasse": 7,
+    "verlag": "Cornelsen",
+    "sprachen": [
+      "Französisch",
+      "Deutsch"
+    ],
+    "version": "1.0",
+    "quelle": "Lehrbuch (manuell erfasst)"
+  },
+  "felder": {
+    "vorderseite": "Français",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Unité 1",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le bâtiment",
+              "hinten": "das Gebäude",
+              "beispiel": "Le bâtiment a beaucoup de fenêtres."
+            },
+            {
+              "vorne": "la maison",
+              "hinten": "das Haus",
+              "beispiel": "J'habite dans une maison."
+            },
+            {
+              "vorne": "le monument",
+              "hinten": "das Bauwerk, das Denkmal"
+            },
+            {
+              "vorne": "une œuvre d'art",
+              "hinten": "ein Kunstwerk",
+              "beispiel": "Au musée, il y a des œuvres d'art."
+            },
+            {
+              "vorne": "le port",
+              "hinten": "der Hafen",
+              "beispiel": "Le port est très grand."
+            },
+            {
+              "vorne": "le pont",
+              "hinten": "die Brücke",
+              "beispiel": "À Nantes, il y a beaucoup de ponts."
+            },
+            {
+              "vorne": "le fleuve",
+              "hinten": "der Fluss",
+              "beispiel": "La Loire est un fleuve."
+            },
+            {
+              "vorne": "la place",
+              "hinten": "der Platz",
+              "beispiel": "Au centre-ville, il y a une place."
+            },
+            {
+              "vorne": "la rue piétonne",
+              "hinten": "die Fußgängerzone",
+              "beispiel": "À Nantes, il y a des rues piétonnes."
+            },
+            {
+              "vorne": "le tram",
+              "hinten": "die Straßenbahn",
+              "beispiel": "Le tram est toujours en retard."
+            },
+            {
+              "vorne": "un arrêt",
+              "hinten": "eine Haltestelle, ein Halt",
+              "beispiel": "Les filles vont à l'arrêt de tram."
+            },
+            {
+              "vorne": "le carrefour",
+              "hinten": "die Kreuzung",
+              "beispiel": "On arrive à un carrefour."
+            },
+            {
+              "vorne": "présenter qn/qc",
+              "hinten": "jdn./etw. vorstellen"
+            },
+            {
+              "vorne": "qui",
+              "hinten": "der, die, das (Relativpronomen)",
+              "beispiel": "C'est une fille qui habite ici."
+            },
+            {
+              "vorne": "il/elle se trouve",
+              "hinten": "er/sie/es befindet sich, er/sie/es liegt",
+              "beispiel": "La place se trouve au centre-ville."
+            },
+            {
+              "vorne": "traverser qc",
+              "hinten": "etw. durchqueren, etw. überqueren",
+              "beispiel": "Le fleuve traverse la ville."
+            },
+            {
+              "vorne": "célèbre",
+              "hinten": "berühmt",
+              "beispiel": "Jules Verne est un auteur célèbre."
+            },
+            {
+              "vorne": "un auteur / une auteure",
+              "hinten": "ein/e Autor/in"
+            },
+            {
+              "vorne": "le voyage",
+              "hinten": "die Reise",
+              "beispiel": "Je vais faire un voyage en France."
+            },
+            {
+              "vorne": "extraordinaire",
+              "hinten": "außergewöhnlich"
+            },
+            {
+              "vorne": "où",
+              "hinten": "wo (Relativpronomen)",
+              "beispiel": "C'est un parc où je vais souvent."
+            },
+            {
+              "vorne": "la spécialité",
+              "hinten": "die Spezialität",
+              "beispiel": "Il y a des spécialités de ta ville?"
+            },
+            {
+              "vorne": "le parcours",
+              "hinten": "der Rundgang, die Strecke",
+              "beispiel": "On fait le parcours ensemble?"
+            },
+            {
+              "vorne": "le/la jeune",
+              "hinten": "der/die Jugendliche",
+              "beispiel": "Les jeunes, ce sont les garçons et les filles."
+            },
+            {
+              "vorne": "sortir",
+              "hinten": "ausgehen, hinausgehen",
+              "beispiel": "Je sors à 8 heures et je rentre à midi."
+            },
+            {
+              "vorne": "chiller",
+              "hinten": "chillen",
+              "beispiel": "Maman, je chille!"
+            },
+            {
+              "vorne": "un arbre",
+              "hinten": "ein Baum",
+              "beispiel": "Dans un parc, il y a des arbres."
+            },
+            {
+              "vorne": "le ping-pong",
+              "hinten": "Tischtennis",
+              "beispiel": "Tu as une table de ping-pong?"
+            },
+            {
+              "vorne": "ils/elles se trouvent",
+              "hinten": "sie befinden sich, sie liegen",
+              "beispiel": "Les monuments se trouvent au centre-ville."
+            },
+            {
+              "vorne": "(être) né/née",
+              "hinten": "geboren (sein)",
+              "beispiel": "Quand est-ce que tu es né?"
+            },
+            {
+              "vorne": "partir",
+              "hinten": "losgehen, wegfahren",
+              "beispiel": "On part en vacances aujourd'hui!"
+            },
+            {
+              "vorne": "partir en week-end",
+              "hinten": "am Wochenende wegfahren",
+              "beispiel": "Je pars en week-end."
+            },
+            {
+              "vorne": "le vélo",
+              "hinten": "das Fahrrad",
+              "beispiel": "Samedi, je vais faire du vélo."
+            },
+            {
+              "vorne": "à vélo",
+              "hinten": "mit dem Fahrrad",
+              "beispiel": "Je vais au collège à vélo."
+            },
+            {
+              "vorne": "le bateau / les bateaux",
+              "hinten": "das Schiff, das Boot",
+              "beispiel": "Au port, il y a beaucoup de bateaux."
+            },
+            {
+              "vorne": "moderne",
+              "hinten": "modern",
+              "beispiel": "C'est une maison moderne."
+            },
+            {
+              "vorne": "la chaîne",
+              "hinten": "der Kanal"
+            },
+            {
+              "vorne": "sur",
+              "hinten": "hier: über",
+              "beispiel": "C'est un livre sur l'histoire de Nantes."
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "prendre à gauche / à droite",
+              "hinten": "(links/rechts) abbiegen",
+              "beispiel": "Tu prends à gauche et ensuite, tu prends à droite."
+            },
+            {
+              "vorne": "continuer",
+              "hinten": "hier: weitergehen, weiterlaufen"
+            },
+            {
+              "vorne": "tout droit",
+              "hinten": "geradeaus",
+              "beispiel": "Vous continuez tout droit."
+            },
+            {
+              "vorne": "jusqu'à",
+              "hinten": "örtlich + zeitlich: bis",
+              "beispiel": "Tu vas jusqu'au pont."
+            },
+            {
+              "vorne": "deuxième",
+              "hinten": "zweiter/zweite/zweites",
+              "beispiel": "Tu prends la deuxième rue à droite."
+            },
+            {
+              "vorne": "en face",
+              "hinten": "gegenüber",
+              "beispiel": "Le bâtiment est en face."
+            },
+            {
+              "vorne": "venir",
+              "hinten": "kommen",
+              "beispiel": "Tu viens chez moi, mercredi?"
+            },
+            {
+              "vorne": "important/importante",
+              "hinten": "wichtig"
+            },
+            {
+              "vorne": "beaucoup de monde",
+              "hinten": "viele Leute",
+              "beispiel": "Il y a beaucoup de monde à la plage?"
+            },
+            {
+              "vorne": "quel/quelle/quels/quelles",
+              "hinten": "welcher/welche/welches, was für ein/eine",
+              "beispiel": "Quel est le nom de la rue?"
+            },
+            {
+              "vorne": "le nom",
+              "hinten": "der Name, der Nachname",
+              "beispiel": "Hamlaoui, c'est le nom de Lamya."
+            },
+            {
+              "vorne": "le trampoline",
+              "hinten": "das Trampolin",
+              "beispiel": "Dans le jardin, il y a un trampoline."
+            },
+            {
+              "vorne": "la longueur",
+              "hinten": "die Länge",
+              "beispiel": "Le parcours a une longueur de 400 mètres."
+            },
+            {
+              "vorne": "la hauteur",
+              "hinten": "die Höhe",
+              "beispiel": "Quelle est la hauteur de la tour?"
+            },
+            {
+              "vorne": "le mètre",
+              "hinten": "der Meter",
+              "beispiel": "Le parcours a une longueur de 200 mètres."
+            },
+            {
+              "vorne": "la couleur",
+              "hinten": "die Farbe"
+            },
+            {
+              "vorne": "À vous, maintenant !",
+              "hinten": "Jetzt seid ihr dran!",
+              "beispiel": "Voilà. À vous, maintenant!"
+            },
+            {
+              "vorne": "vrai/vraie",
+              "hinten": "wahr, richtig, echt",
+              "beispiel": "C'est vrai? – Oui, c'est vrai!"
+            },
+            {
+              "vorne": "le/la touriste",
+              "hinten": "der/die Tourist/in",
+              "beispiel": "Les touristes vont au musée."
+            },
+            {
+              "vorne": "marcher",
+              "hinten": "laufen, gehen, auch: funktionieren",
+              "beispiel": "On marche un peu ensemble?"
+            },
+            {
+              "vorne": "non ?",
+              "hinten": "nicht wahr?, oder? (fam.)",
+              "beispiel": "– Karine, c'est toi, non ? – Oui."
+            },
+            {
+              "vorne": "la fin",
+              "hinten": "das Ende",
+              "beispiel": "Raconte la fin du livre, s'il te plaît!"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le départ",
+              "hinten": "die Abfahrt",
+              "beispiel": "Je prends le train pour Nantes."
+            },
+            {
+              "vorne": "pour",
+              "hinten": "hier: nach",
+              "beispiel": "Je prends le train pour Nantes."
+            },
+            {
+              "vorne": "content/contente",
+              "hinten": "zufrieden, froh",
+              "beispiel": "Clara est contente."
+            },
+            {
+              "vorne": "le train",
+              "hinten": "der Zug"
+            },
+            {
+              "vorne": "quand",
+              "hinten": "wenn, immer wenn, auch: als",
+              "beispiel": "J'aime bien quand tu es là."
+            },
+            {
+              "vorne": "attendre qn/qc",
+              "hinten": "(auf jdn./etw.) warten",
+              "beispiel": "J'attends devant la gare."
+            },
+            {
+              "vorne": "le billet",
+              "hinten": "das Ticket, der Schein, hier: der Fahrschein",
+              "beispiel": "J'ai un billet pour Nantes."
+            },
+            {
+              "vorne": "la valise",
+              "hinten": "der Koffer",
+              "beispiel": "Tu as combien de valises?"
+            },
+            {
+              "vorne": "une annonce",
+              "hinten": "eine Anzeige, hier: eine Ansage",
+              "beispiel": "Écoute l'annonce!"
+            },
+            {
+              "vorne": "la voie",
+              "hinten": "das Gleis",
+              "beispiel": "Le train est sur la voie 3."
+            },
+            {
+              "vorne": "répéter qc",
+              "hinten": "etw. wiederholen",
+              "beispiel": "Je répète."
+            },
+            {
+              "vorne": "Allez !",
+              "hinten": "Los!, Kommt schon!",
+              "beispiel": "Allez, c'est parti!"
+            },
+            {
+              "vorne": "On y va !",
+              "hinten": "Los geht's!, Wir gehen dahin!",
+              "beispiel": "Allez, on y va!"
+            },
+            {
+              "vorne": "la minute",
+              "hinten": "die Minute",
+              "beispiel": "Attends encore une minute!"
+            },
+            {
+              "vorne": "il faut + inf.",
+              "hinten": "man muss/wir müssen etw. tun",
+              "beispiel": "Il faut attendre!"
+            },
+            {
+              "vorne": "il ne faut pas + inf.",
+              "hinten": "man darf/sollte etw. nicht tun",
+              "beispiel": "Il ne faut pas oublier les billets."
+            },
+            {
+              "vorne": "rater qn/qc",
+              "hinten": "jdn./etw. verpassen",
+              "beispiel": "Vite! Je ne veux pas rater mon train!"
+            },
+            {
+              "vorne": "le message",
+              "hinten": "die Nachricht"
+            },
+            {
+              "vorne": "le quai",
+              "hinten": "der Bahnsteig",
+              "beispiel": "On attend le train sur le quai."
+            },
+            {
+              "vorne": "répondre (à qn/qc)",
+              "hinten": "(jdm.) antworten, etw. beantworten",
+              "beispiel": "Je réponds à ma mère."
+            },
+            {
+              "vorne": "Zut !",
+              "hinten": "Mist! (fam.)",
+              "beispiel": "Zut! Où est mon portable?"
+            },
+            {
+              "vorne": "la batterie",
+              "hinten": "der Akku",
+              "beispiel": "Zut! Où est mon portable?"
+            },
+            {
+              "vorne": "descendre",
+              "hinten": "aussteigen, auch: hinuntergehen",
+              "beispiel": "Vous descendez ici?"
+            },
+            {
+              "vorne": "le TGV (= train à grande vitesse)",
+              "hinten": "der TGV (französischer Hochgeschwindigkeitszug)"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "corriger qc",
+              "hinten": "etw. korrigieren, etw. berichtigen",
+              "beispiel": "Les profs corrigent les contrôles."
+            },
+            {
+              "vorne": "lire (qc)",
+              "hinten": "(etw.) lesen",
+              "beispiel": "Le soir, je lis."
+            },
+            {
+              "vorne": "Est-ce que je peux ouvrir la fenêtre ?",
+              "hinten": "Kann ich das Fenster öffnen?",
+              "beispiel": "Monsieur, est-ce que je peux ouvrir la fenêtre?"
+            },
+            {
+              "vorne": "la tablette",
+              "hinten": "das Tablet",
+              "beispiel": "La tablette est sur la table."
+            },
+            {
+              "vorne": "les écouteurs",
+              "hinten": "die Kopfhörer (m. pl.)"
+            },
+            {
+              "vorne": "un exercice",
+              "hinten": "eine Übung"
+            },
+            {
+              "vorne": "le numéro",
+              "hinten": "die Nummer",
+              "beispiel": "L'exercice numéro 7, c'est où?"
+            },
+            {
+              "vorne": "en groupe",
+              "hinten": "in der Gruppe",
+              "beispiel": "Travaillez en groupe!"
+            },
+            {
+              "vorne": "la page",
+              "hinten": "die Seite"
+            },
+            {
+              "vorne": "Ça y est !",
+              "hinten": "so, es ist soweit (fam.)",
+              "beispiel": "Ça y est, c'est terminé!"
+            },
+            {
+              "vorne": "Vous avez fini ?",
+              "hinten": "Seid ihr fertig?",
+              "beispiel": "– Vous avez fini ? – Non, pas encore."
+            },
+            {
+              "vorne": "c'est à...",
+              "hinten": "... ist dran.",
+              "beispiel": "– C'est à qui ? – C'est à Marion."
+            },
+            {
+              "vorne": "apprendre qc",
+              "hinten": "etw. lernen",
+              "beispiel": "Il apprend l'allemand."
+            },
+            {
+              "vorne": "le vocabulaire",
+              "hinten": "das Vokabular, der Wortschatz",
+              "beispiel": "Apprenez le vocabulaire de l'unité 1!"
+            },
+            {
+              "vorne": "une unité",
+              "hinten": "eine Lektion"
+            },
+            {
+              "vorne": "le contrôle",
+              "hinten": "die Kontrolle, hier: die Leistungskontrolle",
+              "beispiel": "On a un contrôle en anglais."
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le château / les châteaux",
+              "hinten": "das Schloss",
+              "beispiel": "On peut visiter le château de mai à octobre."
+            },
+            {
+              "vorne": "un éléphant",
+              "hinten": "ein Elefant"
+            },
+            {
+              "vorne": "la machine",
+              "hinten": "die Maschine",
+              "beispiel": "Un ordinateur est une machine."
+            },
+            {
+              "vorne": "une île",
+              "hinten": "eine Insel",
+              "beispiel": "À Nantes, il y a une île."
+            },
+            {
+              "vorne": "le centre-ville",
+              "hinten": "das Stadtzentrum",
+              "beispiel": "Le centre-ville est très joli."
+            },
+            {
+              "vorne": "le skatepark",
+              "hinten": "der Skatepark"
+            },
+            {
+              "vorne": "la Loire",
+              "hinten": "mit 1012 Kilometern Frankreichs längster Fluss"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 2",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "à... ans",
+              "hinten": "mit ... Jahren",
+              "beispiel": "À 18 ans, je voudrais partir en France."
+            },
+            {
+              "vorne": "voyager",
+              "hinten": "reisen",
+              "beispiel": "Nous voyageons toujours en train."
+            },
+            {
+              "vorne": "le pays",
+              "hinten": "das Land",
+              "beispiel": "La France est un pays."
+            },
+            {
+              "vorne": "surtout",
+              "hinten": "vor allem",
+              "beispiel": "Éva adore la musique, surtout le rap."
+            },
+            {
+              "vorne": "la tête",
+              "hinten": "der Kopf",
+              "beispiel": "Mon frère a une petite tête."
+            },
+            {
+              "vorne": "le monde",
+              "hinten": "die Welt",
+              "beispiel": "Le monde est grand."
+            },
+            {
+              "vorne": "le roman",
+              "hinten": "der Roman",
+              "beispiel": "Abdel lit beaucoup de romans."
+            },
+            {
+              "vorne": "un héros / une héroïne",
+              "hinten": "ein/e Held/in"
+            },
+            {
+              "vorne": "un/une artiste",
+              "hinten": "ein/e Künstler/in"
+            },
+            {
+              "vorne": "seulement",
+              "hinten": "nur (noch), erst",
+              "beispiel": "Elsa vient seulement pour Aya."
+            },
+            {
+              "vorne": "gagner (qc)",
+              "hinten": "(etw.) gewinnen",
+              "beispiel": "Qui a gagné?"
+            },
+            {
+              "vorne": "le prix /! les prix",
+              "hinten": "der Preis",
+              "beispiel": "Tu as gagné le prix!"
+            },
+            {
+              "vorne": "la mécanique",
+              "hinten": "die Mechanik",
+              "beispiel": "Mon truc, c'est la mécanique."
+            },
+            {
+              "vorne": "la passion",
+              "hinten": "die Leidenschaft"
+            },
+            {
+              "vorne": "imiter qn/qc",
+              "hinten": "jdn nachahmen, etw. nachmachen",
+              "beispiel": "Chloé imite ses parents."
+            },
+            {
+              "vorne": "inventer qc",
+              "hinten": "etw. erfinden"
+            },
+            {
+              "vorne": "la saison",
+              "hinten": "die Jahreszeit, auch: die Staffel"
+            },
+            {
+              "vorne": "la dent",
+              "hinten": "der Zahn",
+              "beispiel": "Les chats ont combien de dents?"
+            },
+            {
+              "vorne": "le centimètre",
+              "hinten": "der Zentimeter"
+            },
+            {
+              "vorne": "le trou",
+              "hinten": "das Loch",
+              "beispiel": "Zut! J'ai un trou dans ma valise!"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "tôt",
+              "hinten": "früh",
+              "beispiel": "Vendredi, je suis rentrée tôt."
+            },
+            {
+              "vorne": "tard",
+              "hinten": "spät",
+              "beispiel": "Samedi, nous sommes rentrés tard."
+            },
+            {
+              "vorne": "jouer au / à la / à l' / aux",
+              "hinten": "etw. spielen (Spiel oder Ballsportart)",
+              "beispiel": "J'ai joué au basket avec mes amis."
+            },
+            {
+              "vorne": "jouer du / de la / de l' / des",
+              "hinten": "etw. spielen (Instrument)",
+              "beispiel": "J'ai joué du piano."
+            },
+            {
+              "vorne": "faire la fête",
+              "hinten": "feiern",
+              "beispiel": "On a fait la fête!"
+            },
+            {
+              "vorne": "au début (de qc)",
+              "hinten": "am Anfang (von etw.), zuerst"
+            },
+            {
+              "vorne": "et puis",
+              "hinten": "außerdem",
+              "beispiel": "J'ai joué, et puis j'ai chanté."
+            },
+            {
+              "vorne": "avant",
+              "hinten": "vor, davor",
+              "beispiel": "Avant la fête, on a chillé."
+            },
+            {
+              "vorne": "tout à coup",
+              "hinten": "plötzlich",
+              "beispiel": "Tout à coup, Gwen est partie."
+            },
+            {
+              "vorne": "finalement",
+              "hinten": "letztendlich, schließlich"
+            },
+            {
+              "vorne": "tout le temps",
+              "hinten": "die ganze Zeit, ständig",
+              "beispiel": "Je suis resté chez moi tout le temps."
+            },
+            {
+              "vorne": "faire un tour",
+              "hinten": "spazieren gehen, eine Runde drehen",
+              "beispiel": "On a fait un tour au centre-ville."
+            },
+            {
+              "vorne": "monter",
+              "hinten": "steigen, hinaufsteigen, ansteigen",
+              "beispiel": "Nous sommes montés sur la tour."
+            },
+            {
+              "vorne": "tomber",
+              "hinten": "fallen, hinfallen",
+              "beispiel": "Aïe! Je suis tombée!"
+            },
+            {
+              "vorne": "avoir peur",
+              "hinten": "Angst haben, Angst bekommen",
+              "beispiel": "Elle a eu peur."
+            },
+            {
+              "vorne": "avoir mal",
+              "hinten": "Schmerzen haben",
+              "beispiel": "J'ai mal partout."
+            },
+            {
+              "vorne": "c'était",
+              "hinten": "das war, es war",
+              "beispiel": "Ce week-end, c'était cool!"
+            },
+            {
+              "vorne": "l'aviron",
+              "hinten": "das Rudern",
+              "beispiel": "Je fais de l'aviron."
+            },
+            {
+              "vorne": "la course-poursuite",
+              "hinten": "die Verfolgungsjagd, hier: Spiel wie 'Räuber und Gendarme'",
+              "beispiel": "On fait une course-poursuite?"
+            },
+            {
+              "vorne": "Aïe !",
+              "hinten": "Aua!"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la nuit",
+              "hinten": "die Nacht, nachts",
+              "beispiel": "La nuit, Allan a peur."
+            },
+            {
+              "vorne": "hier",
+              "hinten": "gestern"
+            },
+            {
+              "vorne": "après",
+              "hinten": "nach",
+              "beispiel": "Après les cours, je suis allé au ciné."
+            },
+            {
+              "vorne": "la marée haute",
+              "hinten": "die Flut, das Hochwasser",
+              "beispiel": "La marée haute est à quelle heure?"
+            },
+            {
+              "vorne": "la marée basse",
+              "hinten": "die Ebbe, das Niedrigwasser",
+              "beispiel": "À marée basse, la mer est loin."
+            },
+            {
+              "vorne": "la balise",
+              "hinten": "die Boje",
+              "beispiel": "On peut aller jusqu'à la balise."
+            },
+            {
+              "vorne": "rencontrer qn",
+              "hinten": "jdm begegnen, jdn treffen",
+              "beispiel": "J'ai rencontré une amie en ville."
+            },
+            {
+              "vorne": "rigoler (bien)",
+              "hinten": "(viel) lachen, (echt) Spaß haben",
+              "beispiel": "On rigole bien avec Marie."
+            },
+            {
+              "vorne": "comprendre qn/qc",
+              "hinten": "jdn/etw. verstehen",
+              "beispiel": "Je ne comprends pas. Vous pouvez répéter, s'il vous plaît?"
+            },
+            {
+              "vorne": "moins... que",
+              "hinten": "weniger ... als, nicht so ... wie",
+              "beispiel": "Le film est moins intéressant que le livre."
+            },
+            {
+              "vorne": "plus... que",
+              "hinten": "mehr ... als",
+              "beispiel": "Le livre est plus intéressant que le film."
+            },
+            {
+              "vorne": "aussi... que",
+              "hinten": "(genau) so ... wie",
+              "beispiel": "Mehdi est aussi grand que son frère."
+            },
+            {
+              "vorne": "meilleur/meilleure... que",
+              "hinten": "besser (Komparativ von bon/bonne)",
+              "beispiel": "Rudy est meilleur en SVT que Léo."
+            },
+            {
+              "vorne": "l'or",
+              "hinten": "das Gold",
+              "beispiel": "L'or, c'est très cher."
+            },
+            {
+              "vorne": "l'argent",
+              "hinten": "das Silber",
+              "beispiel": "Je n'aime pas l'or. Je préfère l'argent."
+            },
+            {
+              "vorne": "la femme",
+              "hinten": "die Frau, die Ehefrau",
+              "beispiel": "Les filles deviennent des femmes."
+            },
+            {
+              "vorne": "un homme",
+              "hinten": "ein Mann",
+              "beispiel": "Les garçons deviennent des hommes."
+            },
+            {
+              "vorne": "puissant/puissante",
+              "hinten": "mächtig",
+              "beispiel": "Qui est la femme la plus puissante du monde?"
+            },
+            {
+              "vorne": "le/la chef",
+              "hinten": "der/die Chef/in",
+              "beispiel": "Mme Rosso est la chef du magasin."
+            },
+            {
+              "vorne": "le/la chef de cuisine",
+              "hinten": "der Chefkoch / die Chefköchin",
+              "beispiel": "En France, il y a les meilleurs chefs de cuisine."
+            },
+            {
+              "vorne": "devenir",
+              "hinten": "werden",
+              "beispiel": "Je veux devenir célèbre."
+            },
+            {
+              "vorne": "le meilleur / la meilleure",
+              "hinten": "der/die/das beste (Superlativ von bon/bonne)",
+              "beispiel": "Anna est la meilleure élève en maths."
+            },
+            {
+              "vorne": "impressionnant/impressionnante",
+              "hinten": "beeindruckend"
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "une aventure",
+              "hinten": "ein Abenteuer",
+              "beispiel": "On fait le tour du quartier."
+            },
+            {
+              "vorne": "le tour",
+              "hinten": "die Tour, die Reise, die Rundfahrt",
+              "beispiel": "On fait le tour du quartier."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 3",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "rapprocher qn/qc",
+              "hinten": "hier: jdn/etw. einander näher bringen",
+              "beispiel": "Les moments en famille nous rapprochent."
+            },
+            {
+              "vorne": "accompagner qn",
+              "hinten": "jdn begleiten",
+              "beispiel": "Elle m'accompagne toujours."
+            },
+            {
+              "vorne": "aider (qn)",
+              "hinten": "(jdm) helfen",
+              "beispiel": "Lola aide ses parents."
+            },
+            {
+              "vorne": "énerver qn",
+              "hinten": "jdn nerven, jdn ärgern",
+              "beispiel": "Tu m'énerves!"
+            },
+            {
+              "vorne": "parler de qc",
+              "hinten": "über etw. sprechen",
+              "beispiel": "Avec ma mère, on parle de tout."
+            },
+            {
+              "vorne": "c'est normal",
+              "hinten": "das ist normal",
+              "beispiel": "– C'est normal? – Oui, c'est normal!"
+            },
+            {
+              "vorne": "faire la cuisine",
+              "hinten": "kochen",
+              "beispiel": "On fait la cuisine ensemble."
+            },
+            {
+              "vorne": "le travail",
+              "hinten": "die Arbeit"
+            },
+            {
+              "vorne": "filmer qn/qc",
+              "hinten": "jdn/etw. filmen"
+            },
+            {
+              "vorne": "La Réunion",
+              "hinten": "Insel im Indischen Ozean, Überseeregion und -departement Frankreichs",
+              "beispiel": "La Réunion est une île française."
+            },
+            {
+              "vorne": "la chose",
+              "hinten": "die Sache, das Ding",
+              "beispiel": "J'ai oublié une chose: mon portable!"
+            },
+            {
+              "vorne": "du coup",
+              "hinten": "daraufhin, deshalb, daher (fam.)",
+              "beispiel": "Mardi, on n'a pas cours, du coup je reste à la maison."
+            },
+            {
+              "vorne": "si",
+              "hinten": "doch",
+              "beispiel": "– Tu ne viens pas avec nous? – Si!"
+            },
+            {
+              "vorne": "par",
+              "hinten": "pro",
+              "beispiel": "Frida lit une heure par jour."
+            },
+            {
+              "vorne": "le vide-grenier",
+              "hinten": "der Flohmarkt, der Trödelmarkt (wörtlich: das Dachbodenleeren)",
+              "beispiel": "Dimanche, il y a un vide-grenier."
+            },
+            {
+              "vorne": "trier qc",
+              "hinten": "etw. aussortieren, etw. sortieren",
+              "beispiel": "Qu'est-ce que tu tries?"
+            },
+            {
+              "vorne": "vendre qc (à qn)",
+              "hinten": "(jdm) etw. verkaufen",
+              "beispiel": "J'ai trop de livres. Je les vends."
+            },
+            {
+              "vorne": "échanger qc (contre qc)",
+              "hinten": "etw. austauschen, etw. (gegen etw.) tauschen",
+              "beispiel": "Tu échanges ton gâteau contre ma pomme?"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la carrière",
+              "hinten": "die Karriere"
+            },
+            {
+              "vorne": "le succès",
+              "hinten": "der Erfolg"
+            },
+            {
+              "vorne": "jeune",
+              "hinten": "jung",
+              "beispiel": "Ma sœur est plus jeune que moi."
+            },
+            {
+              "vorne": "d'ailleurs",
+              "hinten": "übrigens",
+              "beispiel": "Je n'ai pas fait les courses. Papa non plus d'ailleurs."
+            },
+            {
+              "vorne": "appeler qn",
+              "hinten": "jdn nennen",
+              "beispiel": "On appelle Alexandre «Alex»."
+            },
+            {
+              "vorne": "la mélodie",
+              "hinten": "die Melodie",
+              "beispiel": "La mélodie est jolie."
+            },
+            {
+              "vorne": "que",
+              "hinten": "den, die, das (Relativpronomen)",
+              "beispiel": "Nathan aime la musique que son frère écoute."
+            },
+            {
+              "vorne": "créatif/créative",
+              "hinten": "kreativ",
+              "beispiel": "Mon père est très créatif."
+            },
+            {
+              "vorne": "le message",
+              "hinten": "hier: die Botschaft, die Aussage"
+            },
+            {
+              "vorne": "le champion / la championne",
+              "hinten": "der Champion, der/die Meister/in",
+              "beispiel": "Cool, nous sommes les champions!"
+            },
+            {
+              "vorne": "un entraîneur / une entraîneuse",
+              "hinten": "ein/e Trainer/in",
+              "beispiel": "L'entraîneur arrive au stade."
+            },
+            {
+              "vorne": "sportif/sportive",
+              "hinten": "sportlich",
+              "beispiel": "Ma mère est sportive, elle fait du basket."
+            },
+            {
+              "vorne": "le ski",
+              "hinten": "der Ski, das Skifahren, der Skier",
+              "beispiel": "Avec ma famille, on fait du ski."
+            },
+            {
+              "vorne": "le ski de bosses",
+              "hinten": "das Buckelpistenfahren, Freestyle-Skiing",
+              "beispiel": "Tu fais du ski de bosses?"
+            },
+            {
+              "vorne": "une équipe",
+              "hinten": "eine Mannschaft, ein Team",
+              "beispiel": "Tu as une équipe préférée de foot?"
+            },
+            {
+              "vorne": "remarquer qn/qc",
+              "hinten": "jdn/etw. bemerken",
+              "beispiel": "Tu as remarqué la fille en face?"
+            },
+            {
+              "vorne": "le talent",
+              "hinten": "das Talent",
+              "beispiel": "Elle chante bien. Elle a du talent!"
+            },
+            {
+              "vorne": "compter sur qn",
+              "hinten": "auf jdn zählen",
+              "beispiel": "Je peux compter sur ma famille!"
+            },
+            {
+              "vorne": "la médaille",
+              "hinten": "die Medaille",
+              "beispiel": "J'ai eu une médaille d'or!"
+            },
+            {
+              "vorne": "courageux/courageuse",
+              "hinten": "mutig",
+              "beispiel": "Je voudrais être plus courageux."
+            },
+            {
+              "vorne": "heureux/heureuse",
+              "hinten": "glücklich",
+              "beispiel": "Olivier est heureux."
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "ce/cet/cette/ces",
+              "hinten": "dieser/diese/dieses",
+              "beispiel": "Ce livre est un cadeau pour ma mère."
+            },
+            {
+              "vorne": "ce matin",
+              "hinten": "heute Morgen"
+            },
+            {
+              "vorne": "ce soir",
+              "hinten": "heute Abend"
+            },
+            {
+              "vorne": "cet après-midi",
+              "hinten": "heute Nachmittag"
+            },
+            {
+              "vorne": "cette semaine",
+              "hinten": "diese Woche, in dieser Woche"
+            },
+            {
+              "vorne": "le fer à repasser",
+              "hinten": "das Bügeleisen",
+              "beispiel": "Je n'ai pas de fer à repasser."
+            },
+            {
+              "vorne": "ne... rien",
+              "hinten": "nichts",
+              "beispiel": "Je ne comprends rien."
+            },
+            {
+              "vorne": "ne... jamais",
+              "hinten": "nie"
+            },
+            {
+              "vorne": "une appli / une application",
+              "hinten": "eine App",
+              "beispiel": "Quelle est ton appli préférée?"
+            },
+            {
+              "vorne": "un échange",
+              "hinten": "ein Tausch, auch: ein Austausch"
+            },
+            {
+              "vorne": "Quoi ?",
+              "hinten": "Was? (Fragewort, fam.)",
+              "beispiel": "Quoi? Je n'ai rien compris!"
+            },
+            {
+              "vorne": "mettre qc",
+              "hinten": "etw. stellen, etw. setzen, etw. legen, auch: etw. anziehen",
+              "beispiel": "Mets tes affaires dans l'armoire."
+            },
+            {
+              "vorne": "en ligne",
+              "hinten": "online",
+              "beispiel": "Laura achète des BD en ligne."
+            },
+            {
+              "vorne": "utiliser qc",
+              "hinten": "etw. benutzen"
+            },
+            {
+              "vorne": "prêter qc (à qn)",
+              "hinten": "(jdm) etw. (ver-)leihen",
+              "beispiel": "Je ne prête rien."
+            },
+            {
+              "vorne": "le gaspillage",
+              "hinten": "die Verschwendung"
+            },
+            {
+              "vorne": "tu sais",
+              "hinten": "du weißt, weißt du",
+              "beispiel": "Tu sais, on pourrait faire comme ça!"
+            },
+            {
+              "vorne": "écolo / écologique",
+              "hinten": "umweltbewusst, ökologisch, Öko-"
+            },
+            {
+              "vorne": "emprunter qc",
+              "hinten": "etw. (aus-)leihen",
+              "beispiel": "J'emprunte des livres au CDI."
+            },
+            {
+              "vorne": "coûter",
+              "hinten": "kosten",
+              "beispiel": "Elle coûte combien, ta console?"
+            },
+            {
+              "vorne": "Ce n'est pas pareil !",
+              "hinten": "Das ist nicht das Gleiche!",
+              "beispiel": "Non, mais ce n'est pas pareil!"
+            },
+            {
+              "vorne": "commander qc",
+              "hinten": "etw. bestellen",
+              "beispiel": "Je déteste commander en ligne."
+            },
+            {
+              "vorne": "la poubelle",
+              "hinten": "der Mülleimer",
+              "beispiel": "Les poubelles sont dans la cour."
+            },
+            {
+              "vorne": "mettre qc à la poubelle",
+              "hinten": "etw. in den Müll werfen",
+              "beispiel": "J'ai tout mis à la poubelle!"
+            },
+            {
+              "vorne": "un emballage",
+              "hinten": "eine Verpackung",
+              "beispiel": "Cet emballage n'est pas écologique."
+            }
+          ]
+        },
+        {
+          "name": "Volet Module 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la finale",
+              "hinten": "das Finale",
+              "beispiel": "La finale est un grand moment!"
+            },
+            {
+              "vorne": "le match",
+              "hinten": "das Spiel"
+            },
+            {
+              "vorne": "le/la Croate",
+              "hinten": "der Kroate / die Kroatin",
+              "beispiel": "Les Croates jouent bien."
+            },
+            {
+              "vorne": "fort/forte",
+              "hinten": "stark",
+              "beispiel": "Les Bleus mènent. Ils sont forts."
+            },
+            {
+              "vorne": "le but",
+              "hinten": "das Ziel, hier: das Tor",
+              "beispiel": "La joueuse tire et... But!!!"
+            },
+            {
+              "vorne": "tirer",
+              "hinten": "ziehen, hier: schießen",
+              "beispiel": "Allez! Tire!"
+            },
+            {
+              "vorne": "défendre (qn/qc)",
+              "hinten": "(jdn/etw.) verteidigen",
+              "beispiel": "La joueuse défend bien."
+            },
+            {
+              "vorne": "marquer un but",
+              "hinten": "ein Tor schießen, treffen",
+              "beispiel": "L'équipe d'Arthur a marqué un but."
+            },
+            {
+              "vorne": "mener",
+              "hinten": "führen, in Führung liegen",
+              "beispiel": "L'équipe de France mène 3 à 1!"
+            },
+            {
+              "vorne": "(1) à (0)",
+              "hinten": "(1) zu (0)",
+              "beispiel": "L'équipe mène 2 à 1."
+            },
+            {
+              "vorne": "un/une arbitre",
+              "hinten": "ein/e Schiedsrichter/in",
+              "beispiel": "L'arbitre donne un carton jaune."
+            },
+            {
+              "vorne": "le carton (jaune/rouge)",
+              "hinten": "die (gelbe/rote) Karte",
+              "beispiel": "Le joueur a eu un carton jaune."
+            },
+            {
+              "vorne": "le score",
+              "hinten": "der Spielstand",
+              "beispiel": "Le score est de 2 à 3."
+            },
+            {
+              "vorne": "le score est de... à...",
+              "hinten": "es steht ... zu ...",
+              "beispiel": "Le score est de 2 à 3."
+            },
+            {
+              "vorne": "partout",
+              "hinten": "hier: unentschieden",
+              "beispiel": "Le score est de 3 partout."
+            },
+            {
+              "vorne": "attaquer (qn)",
+              "hinten": "(jdn) angreifen"
+            },
+            {
+              "vorne": "la faute",
+              "hinten": "der Fehler, hier: das Foul",
+              "beispiel": "Le joueur a fait une faute."
+            },
+            {
+              "vorne": "parler à qn",
+              "hinten": "mit jdm sprechen",
+              "beispiel": "L'entraîneur parle à l'arbitre."
+            },
+            {
+              "vorne": "le penalty",
+              "hinten": "der Strafstoß, der Elfmeter",
+              "beispiel": "L'arbitre donne un penalty au joueur."
+            },
+            {
+              "vorne": "la mi-temps",
+              "hinten": "die Halbzeit",
+              "beispiel": "C'est la deuxième mi-temps."
+            },
+            {
+              "vorne": "le ballon",
+              "hinten": "der Ball",
+              "beispiel": "Le ballon est sur le terrain."
+            },
+            {
+              "vorne": "passer le ballon à qn",
+              "hinten": "jdm den Ball zuspielen",
+              "beispiel": "Il a passé le ballon au gardien."
+            },
+            {
+              "vorne": "le gardien / la gardienne (de but)",
+              "hinten": "der/die Torwart/in",
+              "beispiel": "Il est trop fort, votre gardien!"
+            },
+            {
+              "vorne": "faire attention",
+              "hinten": "aufpassen",
+              "beispiel": "Pardon, je n'ai pas fait attention."
+            },
+            {
+              "vorne": "il reste...",
+              "hinten": "(nur) noch ...",
+              "beispiel": "Il reste une minute avant la fin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 4",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "écrire qc (à qn)",
+              "hinten": "(jdm) etw. schreiben",
+              "beispiel": "Inès écrit des messages à sa copine."
+            },
+            {
+              "vorne": "laisser qn tranquille",
+              "hinten": "jdn in Ruhe lassen",
+              "beispiel": "Jérôme laisse sa voisine tranquille."
+            },
+            {
+              "vorne": "sérieux/sérieuse",
+              "hinten": "ernst, ernsthaft",
+              "beispiel": "Baptiste est un élève sérieux."
+            },
+            {
+              "vorne": "débrouillard/débrouillarde",
+              "hinten": "geschickt, pfiffig (fam.)",
+              "beispiel": "Mon voisin trouve toujours des solutions à ses problèmes. Il est débrouillard."
+            },
+            {
+              "vorne": "populaire",
+              "hinten": "beliebt"
+            },
+            {
+              "vorne": "malade",
+              "hinten": "krank",
+              "beispiel": "Hugo est toujours malade."
+            },
+            {
+              "vorne": "le voisin / la voisine",
+              "hinten": "der/die (Sitz-)Nachbar/in",
+              "beispiel": "Elle est ma voisine en classe."
+            },
+            {
+              "vorne": "le sac",
+              "hinten": "die Tasche, auch: die Schultasche",
+              "beispiel": "Il oublie toujours son sac de sport."
+            },
+            {
+              "vorne": "le bulletin",
+              "hinten": "das Zeugnis",
+              "beispiel": "Cette année, il a eu un bon bulletin."
+            },
+            {
+              "vorne": "le conseil",
+              "hinten": "der Rat, der Ratschlag",
+              "beispiel": "Elle donne des bons conseils."
+            },
+            {
+              "vorne": "le résultat",
+              "hinten": "das Ergebnis, das Resultat",
+              "beispiel": "Il a des mauvais résultats."
+            },
+            {
+              "vorne": "le test",
+              "hinten": "der Test",
+              "beispiel": "Tu as fait le test?"
+            },
+            {
+              "vorne": "le genre (de qc)",
+              "hinten": "die Art",
+              "beispiel": "C'est quel genre d'école?"
+            },
+            {
+              "vorne": "le réveil",
+              "hinten": "der Wecker",
+              "beispiel": "Mon réveil est à côté de mon lit."
+            },
+            {
+              "vorne": "sonner",
+              "hinten": "klingeln",
+              "beispiel": "Ça sonne!"
+            },
+            {
+              "vorne": "plus",
+              "hinten": "mehr"
+            },
+            {
+              "vorne": "sans + inf.",
+              "hinten": "ohne etw. zu tun",
+              "beispiel": "Je ne peux pas réviser sans écrire."
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "stresser qn",
+              "hinten": "jdn stressen",
+              "beispiel": "– Ça te stresse? – Oui, ça me stresse!"
+            },
+            {
+              "vorne": "dire qc (à qn)",
+              "hinten": "(jdm) etw. sagen",
+              "beispiel": "Pardon, qu'est-ce que vous dites?"
+            },
+            {
+              "vorne": "que",
+              "hinten": "dass",
+              "beispiel": "Éric dit qu'il est en retard."
+            },
+            {
+              "vorne": "devoir + inf.",
+              "hinten": "etw. tun müssen",
+              "beispiel": "Je dois faire mes devoirs."
+            },
+            {
+              "vorne": "au moins",
+              "hinten": "mindestens, wenigstens",
+              "beispiel": "Je veux avoir au moins une pause."
+            },
+            {
+              "vorne": "à cause de",
+              "hinten": "wegen",
+              "beispiel": "Je suis en retard à cause du métro."
+            },
+            {
+              "vorne": "une impression",
+              "hinten": "ein Eindruck"
+            },
+            {
+              "vorne": "à la place de (qn/qc)",
+              "hinten": "anstelle von (jdm/etw.), statt",
+              "beispiel": "Je voudrais être à ta place."
+            },
+            {
+              "vorne": "à ma place / à ta place / à sa place",
+              "hinten": "an meiner/deiner/seiner/ihrer Stelle"
+            },
+            {
+              "vorne": "à notre place / à votre place / à leur place",
+              "hinten": "an unserer/eurer/ihrer Stelle"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le stress",
+              "hinten": "der Stress"
+            },
+            {
+              "vorne": "la lettre",
+              "hinten": "der Buchstabe"
+            },
+            {
+              "vorne": "comme",
+              "hinten": "als",
+              "beispiel": "Comme devoir, vous terminez l'exercice."
+            },
+            {
+              "vorne": "calculer qc",
+              "hinten": "etw. berechnen, etw. ausrechnen"
+            },
+            {
+              "vorne": "précis/précise",
+              "hinten": "genau, exakt, klar",
+              "beispiel": "En maths, il faut être précis!"
+            },
+            {
+              "vorne": "exister",
+              "hinten": "existieren",
+              "beispiel": "Les notes sur 6, ça existe en France?"
+            },
+            {
+              "vorne": "le/la même",
+              "hinten": "der-/die-/dasselbe, der/die/das Gleiche",
+              "beispiel": "Nous sommes dans la même classe!"
+            },
+            {
+              "vorne": "juste",
+              "hinten": "gerecht",
+              "beispiel": "Ce n'est pas juste!"
+            },
+            {
+              "vorne": "autre",
+              "hinten": "anderer/andere/anderes",
+              "beispiel": "Zut! J'ai fait un autre exercice!"
+            },
+            {
+              "vorne": "penser",
+              "hinten": "denken",
+              "beispiel": "Je pense que c'est une bonne idée."
+            },
+            {
+              "vorne": "motivant/motivante",
+              "hinten": "motivierend"
+            },
+            {
+              "vorne": "les gens",
+              "hinten": "die Leute",
+              "beispiel": "Je déteste les gens de mon collège."
+            },
+            {
+              "vorne": "dur/dure",
+              "hinten": "hart, schwer"
+            },
+            {
+              "vorne": "ça veut dire",
+              "hinten": "das heißt",
+              "beispiel": "3/20, ça veut dire qu'on est nul."
+            },
+            {
+              "vorne": "la catastrophe",
+              "hinten": "die Katastrophe",
+              "beispiel": "C'est la catastrophe!"
+            },
+            {
+              "vorne": "par contre",
+              "hinten": "jedoch, allerdings",
+              "beispiel": "Je n'aime pas le foot. Par contre j'adore le basket."
+            },
+            {
+              "vorne": "entendre qn/qc",
+              "hinten": "jdn/etw. hören",
+              "beispiel": "Il veut écouter, mais il n'entend rien."
+            },
+            {
+              "vorne": "avoir la moyenne",
+              "hinten": "bestehen",
+              "beispiel": "– Tu as la moyenne? – Oui, j'ai 10/20."
+            }
+          ]
+        },
+        {
+          "name": "Volet Module 4",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le handball",
+              "hinten": "Handball, das Handballspielen",
+              "beispiel": "Bilal joue au handball."
+            },
+            {
+              "vorne": "la batterie",
+              "hinten": "das Schlagzeug",
+              "beispiel": "Éloïse joue de la batterie."
+            },
+            {
+              "vorne": "le repas",
+              "hinten": "das Essen, die Mahlzeit",
+              "beispiel": "Vous faites des repas en famille?"
+            },
+            {
+              "vorne": "presque",
+              "hinten": "fast, beinahe",
+              "beispiel": "J'ai presque terminé."
+            },
+            {
+              "vorne": "sauf",
+              "hinten": "außer, abgesehen von",
+              "beispiel": "Je n'ai rien mangé, sauf une pomme."
+            },
+            {
+              "vorne": "végan/végane",
+              "hinten": "vegan",
+              "beispiel": "Mon copain mange végan."
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la planète",
+              "hinten": "der Planet"
+            },
+            {
+              "vorne": "le médiateur / la médiatrice",
+              "hinten": "der/die Vermittler/in",
+              "beispiel": "Il y a un conflit. La médiatrice cherche une solution."
+            },
+            {
+              "vorne": "un/une intello",
+              "hinten": "ein/e Streber/in (fam.)",
+              "beispiel": "Tom est l'intello de la classe."
+            },
+            {
+              "vorne": "la brute",
+              "hinten": "der/die Unruhestifter/in",
+              "beispiel": "Romain est la brute de la classe."
+            },
+            {
+              "vorne": "le bavard / la bavarde",
+              "hinten": "die Quasselstrippe",
+              "beispiel": "Un bavard, c'est quelqu'un qui parle trop!"
+            },
+            {
+              "vorne": "le geek",
+              "hinten": "der Nerd, auch: der Computer-nerd",
+              "beispiel": "Les geeks adorent la techno."
+            },
+            {
+              "vorne": "le clown",
+              "hinten": "der/die Clown/in",
+              "beispiel": "Emy est trop drôle! C'est notre clown."
+            },
+            {
+              "vorne": "les inséparables",
+              "hinten": "die Unzertrennlichen",
+              "beispiel": "Les inséparables, ce sont Axel et Sasha. Ils sont toujours ensemble."
+            },
+            {
+              "vorne": "le chouchou / la chouchoute",
+              "hinten": "der Liebling (fam.)",
+              "beispiel": "Lana est la chouchoute des profs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 5",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "intelligent/intelligente",
+              "hinten": "intelligent",
+              "beispiel": "Les éléphants sont des animaux intelligents."
+            },
+            {
+              "vorne": "normal/normale/normaux/normales",
+              "hinten": "normal",
+              "beispiel": "Qu'est-ce que c'est pour toi, une journée normale?"
+            },
+            {
+              "vorne": "la culture",
+              "hinten": "die Kultur"
+            },
+            {
+              "vorne": "le cliché",
+              "hinten": "das Klischee",
+              "beispiel": "Quels sont les clichés sur les Français?"
+            },
+            {
+              "vorne": "chinois/chinoise",
+              "hinten": "chinesisch",
+              "beispiel": "Shanghai est une ville chinoise."
+            },
+            {
+              "vorne": "génial/géniale/géniaux/géniales",
+              "hinten": "toll, genial",
+              "beispiel": "Mes copains sont géniaux!"
+            },
+            {
+              "vorne": "voir qn/qc",
+              "hinten": "jdn/etw. sehen"
+            },
+            {
+              "vorne": "être d'origine (allemande/française)",
+              "hinten": "(deutscher/französischer) Herkunft sein",
+              "beispiel": "Laurin est d'origine allemande."
+            },
+            {
+              "vorne": "asiatique",
+              "hinten": "asiatisch",
+              "beispiel": "J'aime la cuisine asiatique."
+            },
+            {
+              "vorne": "l'Asie",
+              "hinten": "Asien (f.)"
+            },
+            {
+              "vorne": "le thème",
+              "hinten": "das Thema",
+              "beispiel": "C'est un thème important."
+            },
+            {
+              "vorne": "critiquer (qn/qc)",
+              "hinten": "(jdn/etw.) kritisieren",
+              "beispiel": "Critiquer quelqu'un n'est pas facile."
+            },
+            {
+              "vorne": "national/nationale/nationaux/nationales",
+              "hinten": "national, National-",
+              "beispiel": "Le 14 juillet en France, c'est le jour de la fête nationale."
+            },
+            {
+              "vorne": "l'humour",
+              "hinten": "der Humor (m.)"
+            },
+            {
+              "vorne": "avant",
+              "hinten": "früher, vorher",
+              "beispiel": "Avant, c'était plus drôle."
+            },
+            {
+              "vorne": "faire des études",
+              "hinten": "studieren",
+              "beispiel": "Julia fait des études de musique."
+            },
+            {
+              "vorne": "un ingénieur / une ingénieure",
+              "hinten": "ein/e Ingenieur/in",
+              "beispiel": "Ma mère est ingénieure."
+            },
+            {
+              "vorne": "original/originale/originaux/originales",
+              "hinten": "originell",
+              "beispiel": "J'aime les films originaux."
+            },
+            {
+              "vorne": "adulte",
+              "hinten": "erwachsen"
+            },
+            {
+              "vorne": "polonais/polonaise",
+              "hinten": "polnisch",
+              "beispiel": "Anna est d'origine polonaise."
+            },
+            {
+              "vorne": "la beauté",
+              "hinten": "die Schönheit"
+            },
+            {
+              "vorne": "le policier / la policière",
+              "hinten": "der/die Polizist/in",
+              "beispiel": "Les policiers font des contrôles."
+            },
+            {
+              "vorne": "une émission",
+              "hinten": "eine Sendung",
+              "beispiel": "Quelle est ton émission préférée?"
+            },
+            {
+              "vorne": "un avis",
+              "hinten": "eine Meinung"
+            },
+            {
+              "vorne": "autre chose",
+              "hinten": "etwas anderes"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "(être) né/née",
+              "hinten": "geboren (sein)",
+              "beispiel": "Natoo est née le 8 février 1985."
+            },
+            {
+              "vorne": "à... ans",
+              "hinten": "mit ... Jahren",
+              "beispiel": "À 18 ans, il devient célèbre."
+            },
+            {
+              "vorne": "le prix / les prix",
+              "hinten": "der Preis",
+              "beispiel": "Elle a gagné beaucoup de prix."
+            },
+            {
+              "vorne": "finir qc",
+              "hinten": "etw. beenden, enden",
+              "beispiel": "Il finit son travail."
+            },
+            {
+              "vorne": "grandir",
+              "hinten": "aufwachsen, wachsen",
+              "beispiel": "Bilal Hassani a grandi en France."
+            },
+            {
+              "vorne": "réussir (qc)",
+              "hinten": "es/etw. schaffen, gelingen, etw. bestehen",
+              "beispiel": "Finalement, il a réussi."
+            },
+            {
+              "vorne": "choisir qn/qc",
+              "hinten": "jdn/etw. aussuchen, jdn/etw. auswählen",
+              "beispiel": "On le choisit pour l'équipe de France."
+            },
+            {
+              "vorne": "quitter qn/qc",
+              "hinten": "jdn/etw. verlassen",
+              "beispiel": "Benjamin Pavard a quitté la France."
+            },
+            {
+              "vorne": "participer à qc",
+              "hinten": "an etw. teilnehmen",
+              "beispiel": "Elle a participé à une émission."
+            },
+            {
+              "vorne": "baisser les bras",
+              "hinten": "aufgeben (wörtlich: die Arme senken)",
+              "beispiel": "Il n'a pas baissé les bras."
+            },
+            {
+              "vorne": "encourager qn",
+              "hinten": "jdn ermutigen",
+              "beispiel": "Elle a encouragé beaucoup de gens."
+            },
+            {
+              "vorne": "perdre (qn/qc)",
+              "hinten": "(jdn/etw.) verlieren",
+              "beispiel": "Elle a perdu ses parents très tôt."
+            },
+            {
+              "vorne": "les médias",
+              "hinten": "die Medien (m. pl.)",
+              "beispiel": "On parle de ce thème dans tous les médias."
+            },
+            {
+              "vorne": "un album",
+              "hinten": "ein Album",
+              "beispiel": "Ils font un album."
+            },
+            {
+              "vorne": "le concert",
+              "hinten": "das Konzert",
+              "beispiel": "Il fait des concerts en Europe."
+            },
+            {
+              "vorne": "les hauts et les bas",
+              "hinten": "die Höhen und Tiefen, das Auf und Ab (m. pl.)",
+              "beispiel": "Ils ont des hauts et des bas."
+            },
+            {
+              "vorne": "marocain/marocaine",
+              "hinten": "marokkanisch",
+              "beispiel": "En histoire, j'ai appris des choses sur l'histoire marocaine."
+            },
+            {
+              "vorne": "tout le / toute la / tous les / toutes les",
+              "hinten": "ganzer/ganze/ganzes, alle",
+              "beispiel": "Il a fait une photo de toute l'équipe."
+            },
+            {
+              "vorne": "tomber amoureux/amoureuse (de qn)",
+              "hinten": "sich (in jdn) verlieben",
+              "beispiel": "Ils sont tombés amoureux."
+            },
+            {
+              "vorne": "difficile",
+              "hinten": "schwer, schwierig"
+            },
+            {
+              "vorne": "le jury",
+              "hinten": "die Jury",
+              "beispiel": "C'est un jury sévère."
+            },
+            {
+              "vorne": "la perruque",
+              "hinten": "die Perücke",
+              "beispiel": "Mon grand-père met une perruque."
+            },
+            {
+              "vorne": "le bac fam. / le baccalauréat",
+              "hinten": "das Abi, das Abitur",
+              "beispiel": "Je vais avoir mon bac à 18 ans."
+            },
+            {
+              "vorne": "homosexuel/homosexuelle",
+              "hinten": "homosexuell",
+              "beispiel": "Marie et Valérie sont homosexuelles."
+            }
+          ]
+        },
+        {
+          "name": "Volet Module 5",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le blog",
+              "hinten": "der Blog",
+              "beispiel": "J'écris un blog sur La Réunion."
+            },
+            {
+              "vorne": "un avion",
+              "hinten": "ein Flugzeug",
+              "beispiel": "Vous prenez souvent l'avion?"
+            },
+            {
+              "vorne": "durer",
+              "hinten": "dauern, andauern",
+              "beispiel": "Le voyage va durer trois heures."
+            },
+            {
+              "vorne": "la personne",
+              "hinten": "die Person",
+              "beispiel": "Il y a 3 000 personnes au festival."
+            },
+            {
+              "vorne": "le bonbon",
+              "hinten": "das Bonbon",
+              "beispiel": "Il y a trop de sucre dans les bonbons."
+            },
+            {
+              "vorne": "le piment",
+              "hinten": "die Chili(schote)",
+              "beispiel": "Les enfants n'aiment pas le piment."
+            },
+            {
+              "vorne": "le Réunionnais / la Réunionnaise",
+              "hinten": "der/die Reunionaiser/in (Einwohner von La Réunion)",
+              "beispiel": "Les gens qui habitent à La Réunion, ce sont les Réunionnais."
+            },
+            {
+              "vorne": "le Français / la Française",
+              "hinten": "der Franzose / die Französin"
+            },
+            {
+              "vorne": "le continent",
+              "hinten": "der Kontinent",
+              "beispiel": "L'Asie, c'est un continent."
+            },
+            {
+              "vorne": "créole",
+              "hinten": "kreolisch",
+              "beispiel": "Tu aimes les pâtisseries créoles?"
+            },
+            {
+              "vorne": "ça sent",
+              "hinten": "es riecht (nach)",
+              "beispiel": "Ça sent le gâteau! Ça sent bon!"
+            },
+            {
+              "vorne": "nager",
+              "hinten": "schwimmen",
+              "beispiel": "Je nage dans la mer."
+            },
+            {
+              "vorne": "beau/bel/belle/beaux/belles",
+              "hinten": "schön",
+              "beispiel": "La Réunion est une belle île."
+            },
+            {
+              "vorne": "la cascade",
+              "hinten": "der Wasserfall",
+              "beispiel": "À La Réunion, il y a des cascades."
+            },
+            {
+              "vorne": "la forêt",
+              "hinten": "der Wald"
+            },
+            {
+              "vorne": "vieux/vieil/vieille/vieux/vieilles",
+              "hinten": "alt",
+              "beispiel": "C'est une vieille maison de 1678."
+            },
+            {
+              "vorne": "nouveau/nouvel/nouvelle/nouveaux/nouvelles",
+              "hinten": "neu",
+              "beispiel": "Marielle est nouvelle à l'école."
+            },
+            {
+              "vorne": "le paysage",
+              "hinten": "die Landschaft"
+            },
+            {
+              "vorne": "la course",
+              "hinten": "der Lauf, das Rennen",
+              "beispiel": "Qui participe à la course?"
+            },
+            {
+              "vorne": "fou/folle",
+              "hinten": "verrückt, wahnsinnig",
+              "beispiel": "Mais c'est fou!"
+            },
+            {
+              "vorne": "la région",
+              "hinten": "die Gegend, die Region",
+              "beispiel": "La Bretagne est une région."
+            },
+            {
+              "vorne": "la capitale",
+              "hinten": "die Hauptstadt"
+            },
+            {
+              "vorne": "un habitant / une habitante",
+              "hinten": "ein/e Bewohner/in, ein/e Einwohner/in"
+            },
+            {
+              "vorne": "l'été",
+              "hinten": "der Sommer (m.)",
+              "beispiel": "L'été, c'est ma saison préférée."
+            },
+            {
+              "vorne": "le printemps",
+              "hinten": "der Frühling"
+            },
+            {
+              "vorne": "l'automne",
+              "hinten": "der Herbst (m.)"
+            },
+            {
+              "vorne": "l'hiver",
+              "hinten": "der Winter (m.)"
+            },
+            {
+              "vorne": "actif/active",
+              "hinten": "aktiv",
+              "beispiel": "Ma grand-mère est très active."
+            },
+            {
+              "vorne": "le centre",
+              "hinten": "das Zentrum"
+            },
+            {
+              "vorne": "le rougail saucisse",
+              "hinten": "typisches Gericht auf La Réunion aus Tomaten, Wurst und Reis"
+            },
+            {
+              "vorne": "le cari poisson",
+              "hinten": "Fischcurry auf La Réunion"
+            },
+            {
+              "vorne": "le bonbon piment",
+              "hinten": "scharfe und frittierte Bällchen auf La Réunion"
+            },
+            {
+              "vorne": "le/la Zoreille",
+              "hinten": "Bezeichnung auf La Réunion für Franzosen, die auf dem Festland leben"
+            },
+            {
+              "vorne": "la barrière de corail",
+              "hinten": "das Korallenriff"
+            },
+            {
+              "vorne": "un endormi",
+              "hinten": "Bezeichnung auf La Réunion für das Pantherchamäleon (wörtlich: ein Eingeschlafener)"
+            },
+            {
+              "vorne": "la région d'outre-mer (ROM)",
+              "hinten": "die Überseeregion"
+            },
+            {
+              "vorne": "Saint-Denis",
+              "hinten": "Hauptstadt von La Réunion mit ca. 150 000 Einwohnern"
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "une activité",
+              "hinten": "eine Aktivität"
+            },
+            {
+              "vorne": "télécharger qc",
+              "hinten": "etw. herunterladen",
+              "beispiel": "Je n'aime pas télécharger des films."
+            },
+            {
+              "vorne": "cliquer sur qc",
+              "hinten": "auf etw. klicken",
+              "beispiel": "J'ai cliqué sur la photo."
+            },
+            {
+              "vorne": "le lien",
+              "hinten": "der Link",
+              "beispiel": "Où est le lien?"
+            },
+            {
+              "vorne": "laisser qc",
+              "hinten": "etw. lassen, hier: etw. hinterlassen",
+              "beispiel": "Laissez des commentaires!"
+            },
+            {
+              "vorne": "poster qc",
+              "hinten": "etw. posten",
+              "beispiel": "Hakim poste une vidéo."
+            },
+            {
+              "vorne": "le tuto fam. / le tutoriel",
+              "hinten": "das Erklärvideo, das Tutorial",
+              "beispiel": "Il fait des tutos sur Internet."
+            },
+            {
+              "vorne": "enregistrer qc",
+              "hinten": "etw. aufnehmen, etw. speichern",
+              "beispiel": "J'enregistre une vidéo sur mon portable."
+            },
+            {
+              "vorne": "les réseaux sociaux",
+              "hinten": "die sozialen Netzwerke (m. pl.)",
+              "beispiel": "Tu es sur quels réseaux sociaux?"
+            },
+            {
+              "vorne": "être accro à qc",
+              "hinten": "nach etw. süchtig sein, von etw. abhängig sein",
+              "beispiel": "Isabelle est accro aux réseaux sociaux."
+            },
+            {
+              "vorne": "la victime",
+              "hinten": "das Opfer"
+            },
+            {
+              "vorne": "le cyberharcèlement",
+              "hinten": "das Cybermobbing",
+              "beispiel": "Vous avez des problèmes de cyberharcèlement au collège?"
+            },
+            {
+              "vorne": "créer qc",
+              "hinten": "etw. erschaffen, etw. gründen"
+            },
+            {
+              "vorne": "avoir... vues",
+              "hinten": "... Aufrufe/Klicks haben",
+              "beispiel": "Cette vidéo a un million de vues."
+            },
+            {
+              "vorne": "le million",
+              "hinten": "die Million",
+              "beispiel": "Il a deux millions d'abonnés!"
+            },
+            {
+              "vorne": "un abonné / une abonnée",
+              "hinten": "ein/e Abonnent/in",
+              "beispiel": "Tu as combien d'abonnés?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

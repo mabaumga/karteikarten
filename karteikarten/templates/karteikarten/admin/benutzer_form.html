@@ -1,0 +1,144 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Benutzer {{ action }}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="mb-0">
+        <i class="bi bi-person{% if action == 'erstellen' %}-plus{% endif %} me-2"></i>
+        Benutzer {{ action }}
+    </h4>
+    <a href="{% url 'benutzer_liste' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+    </a>
+</div>
+
+{% if errors %}
+<div class="alert alert-danger">
+    <ul class="mb-0">
+        {% for error in errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+
+            <h5 class="mb-3">Anmeldedaten</h5>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="username" class="form-label">Benutzername *</label>
+                    {% if benutzer %}
+                    <input type="text" class="form-control" value="{{ benutzer.username }}" disabled>
+                    <div class="form-text">Benutzername kann nicht ge&auml;ndert werden.</div>
+                    {% else %}
+                    <input type="text" class="form-control" id="username" name="username"
+                           value="{{ request.POST.username }}" required>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-Mail</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                           value="{% if benutzer %}{{ benutzer.email }}{% else %}{{ request.POST.email }}{% endif %}">
+                </div>
+            </div>
+
+            {% if action == 'erstellen' %}
+            <div class="mb-3">
+                <label for="password" class="form-label">Anfangspasswort *</label>
+                <input type="password" class="form-control" id="password" name="password" required minlength="6">
+                <div class="form-text">Mindestens 6 Zeichen. Der Benutzer muss das Passwort beim ersten Login &auml;ndern.</div>
+            </div>
+            {% else %}
+            <div class="mb-3">
+                <label for="reset_password" class="form-label">Neues Passwort (optional)</label>
+                <input type="password" class="form-control" id="reset_password" name="reset_password" minlength="6">
+                <div class="form-text">Leer lassen um Passwort nicht zu &auml;ndern. Bei &Auml;nderung muss der Benutzer es beim n&auml;chsten Login erneut &auml;ndern.</div>
+            </div>
+            {% endif %}
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Pers&ouml;nliche Daten</h5>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="first_name" class="form-label">Vorname</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name"
+                           value="{% if benutzer %}{{ benutzer.first_name }}{% else %}{{ request.POST.first_name }}{% endif %}">
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name" class="form-label">Nachname</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name"
+                           value="{% if benutzer %}{{ benutzer.last_name }}{% else %}{{ request.POST.last_name }}{% endif %}">
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Berechtigungen</h5>
+
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="is_staff" name="is_staff"
+                       {% if benutzer.is_staff %}checked{% endif %}>
+                <label class="form-check-label" for="is_staff">
+                    <strong>Administrator</strong>
+                    <br><small class="text-muted">Kann andere Benutzer verwalten</small>
+                </label>
+            </div>
+
+            {% if benutzer %}
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="is_active" name="is_active"
+                       {% if benutzer.is_active %}checked{% endif %}>
+                <label class="form-check-label" for="is_active">
+                    <strong>Aktiv</strong>
+                    <br><small class="text-muted">Benutzer kann sich anmelden</small>
+                </label>
+            </div>
+            {% endif %}
+
+            <hr class="my-4">
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-lg me-1"></i>
+                    {% if action == 'erstellen' %}Benutzer erstellen{% else %}Speichern{% endif %}
+                </button>
+                <a href="{% url 'benutzer_liste' %}" class="btn btn-outline-secondary">Abbrechen</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if benutzer and benutzer_stats %}
+<div class="card mt-4">
+    <div class="card-header">
+        <h5 class="mb-0"><i class="bi bi-bar-chart me-2"></i>Statistik</h5>
+    </div>
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="col-4">
+                <div class="h4 mb-0 text-warning">
+                    <i class="bi bi-fire"></i> {{ benutzer_stats.streak }}
+                </div>
+                <div class="small text-muted">Tage Streak</div>
+            </div>
+            <div class="col-4">
+                <div class="h4 mb-0 text-primary">{{ benutzer_stats.gesamt_gelernt }}</div>
+                <div class="small text-muted">Gelernt</div>
+            </div>
+            <div class="col-4">
+                <div class="h4 mb-0 text-success">{{ benutzer_stats.erfolgsquote }}%</div>
+                <div class="small text-muted">Erfolgsquote</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

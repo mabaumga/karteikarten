@@ -1,0 +1,158 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Meine Lernbloecke - Karteikarten{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="mb-0">
+        <i class="bi bi-collection me-2"></i>Lernbloecke auswaehlen
+    </h4>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i>Zurueck
+    </a>
+</div>
+
+<!-- Filter Card -->
+<div class="card mb-4">
+    <div class="card-body">
+        <form method="get" class="row g-3 align-items-end">
+            <div class="col-12 col-sm-4">
+                <label class="form-label small text-muted">
+                    <i class="bi bi-book me-1"></i>Fach
+                </label>
+                <select name="fach" class="form-select" onchange="this.form.submit()">
+                    <option value="">Alle Faecher</option>
+                    {% for fach in schulfaecher %}
+                    <option value="{{ fach.id }}" {% if filter_fach == fach.id|stringformat:"i" %}selected{% endif %}>
+                        {{ fach.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12 col-sm-4">
+                <label class="form-label small text-muted">
+                    <i class="bi bi-mortarboard me-1"></i>Jahrgangsstufe
+                </label>
+                <select name="stufe" class="form-select" onchange="this.form.submit()">
+                    <option value="">Alle Stufen</option>
+                    {% for stufe in jahrgangsstufen %}
+                    <option value="{{ stufe.id }}" {% if filter_stufe == stufe.id|stringformat:"i" %}selected{% endif %}>
+                        {{ stufe }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="ausgewaehlt" value="1"
+                           id="filterAusgewaehlt" {% if filter_ausgewaehlt %}checked{% endif %}
+                           onchange="this.form.submit()">
+                    <label class="form-check-label" for="filterAusgewaehlt">
+                        Nur meine ({{ anzahl_ausgewaehlt }})
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<p class="text-muted mb-3">
+    {{ bloecke|length }} Lernbloecke gefunden
+</p>
+
+{% regroup bloecke by lernblock.schulfach as bloecke_nach_fach %}
+
+{% for fach in bloecke_nach_fach %}
+<div class="mb-4">
+    <h5 class="text-muted mb-3">
+        {% if fach.grouper %}
+            <i class="bi bi-book me-2"></i>{{ fach.grouper }}
+        {% else %}
+            <i class="bi bi-folder me-2"></i>Ohne Zuordnung
+        {% endif %}
+    </h5>
+
+    {% for item in fach.list %}
+    <div class="card mb-2 {% if item.ausgewaehlt %}border-primary{% endif %}">
+        <div class="card-body py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="flex-grow-1">
+                    <h6 class="mb-1">
+                        {% if item.ausgewaehlt %}
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                        {% else %}
+                        <i class="bi bi-circle text-muted me-2"></i>
+                        {% endif %}
+                        {{ item.lernblock.name }}
+                    </h6>
+                    <div class="small text-muted">
+                        <span class="me-2">
+                            <i class="bi bi-card-text me-1"></i>{{ item.lernblock.anzahl_karten }} Karten
+                        </span>
+                        {% if item.lernblock.lehrwerk_unit %}
+                        <span class="me-2">
+                            <i class="bi bi-book me-1"></i>{{ item.lernblock.lehrwerk_unit.lehrwerk }}
+                        </span>
+                        <span class="me-2">
+                            <i class="bi bi-bookmark me-1"></i>{{ item.lernblock.lehrwerk_unit.name }}
+                        </span>
+                        {% endif %}
+                        {% if item.lernblock.display_jahrgangsstufe %}
+                        <span class="me-2">
+                            <i class="bi bi-mortarboard me-1"></i>{{ item.lernblock.display_jahrgangsstufe }}
+                        </span>
+                        {% endif %}
+                        {% if item.lernblock.display_seiten %}
+                        <span class="me-2">
+                            <i class="bi bi-file-earmark-text me-1"></i>S. {{ item.lernblock.display_seiten }}
+                        </span>
+                        {% endif %}
+                        {% if item.lernblock.thema %}
+                        <span>
+                            <i class="bi bi-tag me-1"></i>{{ item.lernblock.thema }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% if item.lernblock.beschreibung %}
+                    <p class="small text-muted mb-0 mt-1">{{ item.lernblock.beschreibung|truncatewords:20 }}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if item.ausgewaehlt %}
+                    <form action="{% url 'lernblock_entfernen' item.lernblock.pk %}?{{ request.GET.urlencode }}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-dash-lg"></i>
+                        </button>
+                    </form>
+                    {% else %}
+                    <form action="{% url 'lernblock_hinzufuegen' item.lernblock.pk %}?{{ request.GET.urlencode }}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% empty %}
+<div class="text-center py-5">
+    <i class="bi bi-inbox display-1 text-muted"></i>
+    <p class="text-muted mt-3">Keine Lernbloecke mit diesen Filtern gefunden.</p>
+    <a href="{% url 'meine_lernbloecke' %}" class="btn btn-outline-secondary">
+        Filter zuruecksetzen
+    </a>
+</div>
+{% endfor %}
+
+<!-- Create new block -->
+<div class="mt-4 pt-3 border-top">
+    <a href="{% url 'lernblock_create' %}" class="btn btn-outline-primary w-100">
+        <i class="bi bi-plus-lg me-1"></i>Neuen Lernblock erstellen
+    </a>
+</div>
+{% endblock %}

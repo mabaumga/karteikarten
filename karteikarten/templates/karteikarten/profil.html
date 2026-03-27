@@ -1,0 +1,98 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Profil - Karteikarten{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="mb-0">
+        <i class="bi bi-person-circle me-2"></i>Mein Profil
+    </h4>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i>Zurueck
+    </a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+
+            <h5 class="mb-3">Persoenliche Daten</h5>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="first_name" class="form-label">Vorname</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name"
+                           value="{{ user.first_name }}" placeholder="Dein Vorname">
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name" class="form-label">Nachname</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name"
+                           value="{{ user.last_name }}" placeholder="Dein Nachname">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-muted">Benutzername</label>
+                <input type="text" class="form-control" value="{{ user.username }}" disabled>
+                <div class="form-text">Der Benutzername kann nur vom Administrator geaendert werden.</div>
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Lerneinstellungen</h5>
+
+            <div class="mb-3">
+                <label for="jahrgangsstufe" class="form-label">Meine Jahrgangsstufe</label>
+                <select name="jahrgangsstufe" id="jahrgangsstufe" class="form-select">
+                    <option value="">-- Keine Vorauswahl --</option>
+                    {% for stufe in jahrgangsstufen %}
+                    <option value="{{ stufe.id }}"
+                            {% if stats.bevorzugte_jahrgangsstufe_id == stufe.id %}selected{% endif %}>
+                        {{ stufe }}
+                    </option>
+                    {% endfor %}
+                </select>
+                <div class="form-text">
+                    Wird als Standard-Filter bei der Lernblock-Auswahl verwendet.
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Sicherheit</h5>
+
+            <div class="mb-3">
+                <a href="{% url 'passwort_aendern' %}" class="btn btn-outline-secondary">
+                    <i class="bi bi-key me-1"></i>Passwort &auml;ndern
+                </a>
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Statistiken</h5>
+
+            <div class="row text-center mb-4">
+                <div class="col-4">
+                    <div class="h4 mb-0 text-warning">
+                        <i class="bi bi-fire"></i> {{ stats.streak }}
+                    </div>
+                    <div class="small text-muted">Tage Streak</div>
+                </div>
+                <div class="col-4">
+                    <div class="h4 mb-0 text-primary">{{ stats.gesamt_gelernt }}</div>
+                    <div class="small text-muted">Gelernt</div>
+                </div>
+                <div class="col-4">
+                    <div class="h4 mb-0 text-success">{{ stats.erfolgsquote }}%</div>
+                    <div class="small text-muted">Erfolgsquote</div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-check-lg me-1"></i>Speichern
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

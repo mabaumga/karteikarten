@@ -1,0 +1,81 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Passwort &auml;ndern{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+
+        {% if force_change %}
+        <div class="alert alert-warning mb-4">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            <strong>Passwort&auml;nderung erforderlich</strong>
+            <br>Du musst dein Passwort &auml;ndern, bevor du fortfahren kannst.
+        </div>
+        {% endif %}
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-key me-2"></i>Passwort &auml;ndern
+                </h5>
+            </div>
+            <div class="card-body">
+
+                {% if errors %}
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        {% for error in errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="current_password" class="form-label">Aktuelles Passwort</label>
+                        <input type="password" class="form-control" id="current_password"
+                               name="current_password" required autofocus>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">Neues Passwort</label>
+                        <input type="password" class="form-control" id="new_password"
+                               name="new_password" required minlength="6">
+                        <div class="form-text">Mindestens 6 Zeichen</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="confirm_password" class="form-label">Neues Passwort best&auml;tigen</label>
+                        <input type="password" class="form-control" id="confirm_password"
+                               name="confirm_password" required minlength="6">
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-lg me-1"></i>Passwort &auml;ndern
+                        </button>
+                        {% if not force_change %}
+                        <a href="{% url 'profil' %}" class="btn btn-outline-secondary">
+                            Abbrechen
+                        </a>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Gemeinsam lernen - Multiple Choice{% endblock %}
+
+{% block nav_right %}
+<a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-link text-white">
+    <i class="bi bi-x-lg"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<!-- Progress -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted small">
+        <i class="bi bi-ui-radios me-1"></i>Multiple Choice
+    </span>
+    <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+</div>
+
+<!-- Block name badge -->
+<div class="mb-2">
+    <span class="badge bg-secondary">
+        <i class="bi bi-folder2 me-1"></i>{{ karte.lernblock.name }}
+    </span>
+</div>
+
+<!-- Question -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h5 class="card-title mb-0">{{ karte.begriff }}</h5>
+    </div>
+</div>
+
+<!-- Options -->
+<div class="d-grid gap-2" id="options">
+    {% for option in optionen %}
+    <button type="button" class="btn btn-outline-primary text-start py-3 option-btn"
+            data-korrekt="{{ option.korrekt|yesno:'true,false' }}"
+            data-karte-id="{{ option.karte_id }}"
+            onclick="selectOption(this)">
+        {{ option.text }}
+    </button>
+    {% endfor %}
+</div>
+
+<!-- Card Info -->
+<div class="text-center mt-4">
+    <span class="badge bg-secondary">Fach {{ status.fach }}</span>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const blockIds = '{{ block_ids }}';
+    let answered = false;
+
+    function selectOption(btn) {
+        if (answered) return;
+        answered = true;
+
+        const korrekt = btn.dataset.korrekt === 'true';
+
+        // Disable all buttons and show correct/wrong
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.disabled = true;
+            if (b.dataset.korrekt === 'true') {
+                b.classList.remove('btn-outline-primary');
+                b.classList.add('btn-success');
+            } else if (b === btn && !korrekt) {
+                b.classList.remove('btn-outline-primary');
+                b.classList.add('btn-danger');
+            }
+        });
+
+        // Send answer
+        fetch('{% url "karte_antwort" karte.pk %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrftoken,
+            },
+            body: `richtig=${korrekt}&modus=multiple_choice`
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Load next card
+            setTimeout(() => {
+                window.location.href = '{% url "lernen_kombiniert_mc" %}?bloecke=' + blockIds;
+            }, 1000);
+        })
+        .catch(err => {
+            console.error(err);
+            setTimeout(() => {
+                window.location.href = '{% url "lernen_kombiniert_mc" %}?bloecke=' + blockIds;
+            }, 1000);
+        });
+    }
+
+    // Keyboard shortcuts (1-4)
+    document.addEventListener('keydown', (e) => {
+        if (answered) return;
+        const num = parseInt(e.key);
+        if (num >= 1 && num <= 4) {
+            const buttons = document.querySelectorAll('.option-btn');
+            if (buttons[num - 1]) {
+                selectOption(buttons[num - 1]);
+            }
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,2970 @@
+{
+  "meta": {
+    "buch": "À plus!",
+    "klasse": 7,
+    "sprache": "Französisch-Deutsch"
+  },
+  "vokabeln": [
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le château / les châteaux",
+      "deutsch": "das Schloss",
+      "beispiel": "On peut visiter le château de mai à octobre."
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "un éléphant",
+      "deutsch": "ein Elefant",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "la machine",
+      "deutsch": "die Maschine",
+      "beispiel": "Un ordinateur est une machine."
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "une île",
+      "deutsch": "eine Insel",
+      "beispiel": "À Nantes, il y a une île."
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le centre-ville",
+      "deutsch": "das Stadtzentrum",
+      "beispiel": "Le centre-ville est très joli."
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le skatepark",
+      "deutsch": "der Skatepark",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "la Loire",
+      "deutsch": "mit 1012 Kilometern Frankreichs längster Fluss",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le bâtiment",
+      "deutsch": "das Gebäude",
+      "beispiel": "Le bâtiment a beaucoup de fenêtres."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la maison",
+      "deutsch": "das Haus",
+      "beispiel": "J'habite dans une maison."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le monument",
+      "deutsch": "das Bauwerk, das Denkmal",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "une œuvre d'art",
+      "deutsch": "ein Kunstwerk",
+      "beispiel": "Au musée, il y a des œuvres d'art."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le port",
+      "deutsch": "der Hafen",
+      "beispiel": "Le port est très grand."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le pont",
+      "deutsch": "die Brücke",
+      "beispiel": "À Nantes, il y a beaucoup de ponts."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le fleuve",
+      "deutsch": "der Fluss",
+      "beispiel": "La Loire est un fleuve."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la place",
+      "deutsch": "der Platz",
+      "beispiel": "Au centre-ville, il y a une place."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la rue piétonne",
+      "deutsch": "die Fußgängerzone",
+      "beispiel": "À Nantes, il y a des rues piétonnes."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le tram",
+      "deutsch": "die Straßenbahn",
+      "beispiel": "Le tram est toujours en retard."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "un arrêt",
+      "deutsch": "eine Haltestelle, ein Halt",
+      "beispiel": "Les filles vont à l'arrêt de tram."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le carrefour",
+      "deutsch": "die Kreuzung",
+      "beispiel": "On arrive à un carrefour."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "présenter qn/qc",
+      "deutsch": "jdn./etw. vorstellen",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "qui",
+      "deutsch": "der, die, das (Relativpronomen)",
+      "beispiel": "C'est une fille qui habite ici."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "il/elle se trouve",
+      "deutsch": "er/sie/es befindet sich, er/sie/es liegt",
+      "beispiel": "La place se trouve au centre-ville."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "traverser qc",
+      "deutsch": "etw. durchqueren, etw. überqueren",
+      "beispiel": "Le fleuve traverse la ville."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "célèbre",
+      "deutsch": "berühmt",
+      "beispiel": "Jules Verne est un auteur célèbre."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "un auteur / une auteure",
+      "deutsch": "ein/e Autor/in",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le voyage",
+      "deutsch": "die Reise",
+      "beispiel": "Je vais faire un voyage en France."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "extraordinaire",
+      "deutsch": "außergewöhnlich",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "où",
+      "deutsch": "wo (Relativpronomen)",
+      "beispiel": "C'est un parc où je vais souvent."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la spécialité",
+      "deutsch": "die Spezialität",
+      "beispiel": "Il y a des spécialités de ta ville?"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le parcours",
+      "deutsch": "der Rundgang, die Strecke",
+      "beispiel": "On fait le parcours ensemble?"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le/la jeune",
+      "deutsch": "der/die Jugendliche",
+      "beispiel": "Les jeunes, ce sont les garçons et les filles."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "sortir",
+      "deutsch": "ausgehen, hinausgehen",
+      "beispiel": "Je sors à 8 heures et je rentre à midi."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "chiller",
+      "deutsch": "chillen",
+      "beispiel": "Maman, je chille!"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "un arbre",
+      "deutsch": "ein Baum",
+      "beispiel": "Dans un parc, il y a des arbres."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le ping-pong",
+      "deutsch": "Tischtennis",
+      "beispiel": "Tu as une table de ping-pong?"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "ils/elles se trouvent",
+      "deutsch": "sie befinden sich, sie liegen",
+      "beispiel": "Les monuments se trouvent au centre-ville."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "(être) né/née",
+      "deutsch": "geboren (sein)",
+      "beispiel": "Quand est-ce que tu es né?"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "partir",
+      "deutsch": "losgehen, wegfahren",
+      "beispiel": "On part en vacances aujourd'hui!"
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "partir en week-end",
+      "deutsch": "am Wochenende wegfahren",
+      "beispiel": "Je pars en week-end."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le vélo",
+      "deutsch": "das Fahrrad",
+      "beispiel": "Samedi, je vais faire du vélo."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "à vélo",
+      "deutsch": "mit dem Fahrrad",
+      "beispiel": "Je vais au collège à vélo."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le bateau / les bateaux",
+      "deutsch": "das Schiff, das Boot",
+      "beispiel": "Au port, il y a beaucoup de bateaux."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "moderne",
+      "deutsch": "modern",
+      "beispiel": "C'est une maison moderne."
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la chaîne",
+      "deutsch": "der Kanal",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "sur",
+      "deutsch": "hier: über",
+      "beispiel": "C'est un livre sur l'histoire de Nantes."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "prendre à gauche / à droite",
+      "deutsch": "(links/rechts) abbiegen",
+      "beispiel": "Tu prends à gauche et ensuite, tu prends à droite."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "continuer",
+      "deutsch": "hier: weitergehen, weiterlaufen",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "tout droit",
+      "deutsch": "geradeaus",
+      "beispiel": "Vous continuez tout droit."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "jusqu'à",
+      "deutsch": "örtlich + zeitlich: bis",
+      "beispiel": "Tu vas jusqu'au pont."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "deuxième",
+      "deutsch": "zweiter/zweite/zweites",
+      "beispiel": "Tu prends la deuxième rue à droite."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "en face",
+      "deutsch": "gegenüber",
+      "beispiel": "Le bâtiment est en face."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "venir",
+      "deutsch": "kommen",
+      "beispiel": "Tu viens chez moi, mercredi?"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "important/importante",
+      "deutsch": "wichtig",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "beaucoup de monde",
+      "deutsch": "viele Leute",
+      "beispiel": "Il y a beaucoup de monde à la plage?"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "quel/quelle/quels/quelles",
+      "deutsch": "welcher/welche/welches, was für ein/eine",
+      "beispiel": "Quel est le nom de la rue?"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le nom",
+      "deutsch": "der Name, der Nachname",
+      "beispiel": "Hamlaoui, c'est le nom de Lamya."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le trampoline",
+      "deutsch": "das Trampolin",
+      "beispiel": "Dans le jardin, il y a un trampoline."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la longueur",
+      "deutsch": "die Länge",
+      "beispiel": "Le parcours a une longueur de 400 mètres."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la hauteur",
+      "deutsch": "die Höhe",
+      "beispiel": "Quelle est la hauteur de la tour?"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le mètre",
+      "deutsch": "der Meter",
+      "beispiel": "Le parcours a une longueur de 200 mètres."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la couleur",
+      "deutsch": "die Farbe",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "À vous, maintenant !",
+      "deutsch": "Jetzt seid ihr dran!",
+      "beispiel": "Voilà. À vous, maintenant!"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "vrai/vraie",
+      "deutsch": "wahr, richtig, echt",
+      "beispiel": "C'est vrai? – Oui, c'est vrai!"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le/la touriste",
+      "deutsch": "der/die Tourist/in",
+      "beispiel": "Les touristes vont au musée."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "marcher",
+      "deutsch": "laufen, gehen, auch: funktionieren",
+      "beispiel": "On marche un peu ensemble?"
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "non ?",
+      "deutsch": "nicht wahr?, oder? (fam.)",
+      "beispiel": "– Karine, c'est toi, non ? – Oui."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la fin",
+      "deutsch": "das Ende",
+      "beispiel": "Raconte la fin du livre, s'il te plaît!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le départ",
+      "deutsch": "die Abfahrt",
+      "beispiel": "Je prends le train pour Nantes."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "pour",
+      "deutsch": "hier: nach",
+      "beispiel": "Je prends le train pour Nantes."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "content/contente",
+      "deutsch": "zufrieden, froh",
+      "beispiel": "Clara est contente."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le train",
+      "deutsch": "der Zug",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "quand",
+      "deutsch": "wenn, immer wenn, auch: als",
+      "beispiel": "J'aime bien quand tu es là."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "attendre qn/qc",
+      "deutsch": "(auf jdn./etw.) warten",
+      "beispiel": "J'attends devant la gare."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le billet",
+      "deutsch": "das Ticket, der Schein, hier: der Fahrschein",
+      "beispiel": "J'ai un billet pour Nantes."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la valise",
+      "deutsch": "der Koffer",
+      "beispiel": "Tu as combien de valises?"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "une annonce",
+      "deutsch": "eine Anzeige, hier: eine Ansage",
+      "beispiel": "Écoute l'annonce!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la voie",
+      "deutsch": "das Gleis",
+      "beispiel": "Le train est sur la voie 3."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "répéter qc",
+      "deutsch": "etw. wiederholen",
+      "beispiel": "Je répète."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "Allez !",
+      "deutsch": "Los!, Kommt schon!",
+      "beispiel": "Allez, c'est parti!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "On y va !",
+      "deutsch": "Los geht's!, Wir gehen dahin!",
+      "beispiel": "Allez, on y va!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la minute",
+      "deutsch": "die Minute",
+      "beispiel": "Attends encore une minute!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "il faut + inf.",
+      "deutsch": "man muss/wir müssen etw. tun",
+      "beispiel": "Il faut attendre!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "il ne faut pas + inf.",
+      "deutsch": "man darf/sollte etw. nicht tun",
+      "beispiel": "Il ne faut pas oublier les billets."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "rater qn/qc",
+      "deutsch": "jdn./etw. verpassen",
+      "beispiel": "Vite! Je ne veux pas rater mon train!"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le message",
+      "deutsch": "die Nachricht",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le quai",
+      "deutsch": "der Bahnsteig",
+      "beispiel": "On attend le train sur le quai."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "répondre (à qn/qc)",
+      "deutsch": "(jdm.) antworten, etw. beantworten",
+      "beispiel": "Je réponds à ma mère."
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "Zut !",
+      "deutsch": "Mist! (fam.)",
+      "beispiel": "Zut! Où est mon portable?"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la batterie",
+      "deutsch": "der Akku",
+      "beispiel": "Zut! Où est mon portable?"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "descendre",
+      "deutsch": "aussteigen, auch: hinuntergehen",
+      "beispiel": "Vous descendez ici?"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le TGV (= train à grande vitesse)",
+      "deutsch": "der TGV (französischer Hochgeschwindigkeitszug)",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "corriger qc",
+      "deutsch": "etw. korrigieren, etw. berichtigen",
+      "beispiel": "Les profs corrigent les contrôles."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "lire (qc)",
+      "deutsch": "(etw.) lesen",
+      "beispiel": "Le soir, je lis."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "Est-ce que je peux ouvrir la fenêtre ?",
+      "deutsch": "Kann ich das Fenster öffnen?",
+      "beispiel": "Monsieur, est-ce que je peux ouvrir la fenêtre?"
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "la tablette",
+      "deutsch": "das Tablet",
+      "beispiel": "La tablette est sur la table."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "les écouteurs",
+      "deutsch": "die Kopfhörer (m. pl.)",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "un exercice",
+      "deutsch": "eine Übung",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "le numéro",
+      "deutsch": "die Nummer",
+      "beispiel": "L'exercice numéro 7, c'est où?"
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "en groupe",
+      "deutsch": "in der Gruppe",
+      "beispiel": "Travaillez en groupe!"
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "la page",
+      "deutsch": "die Seite",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "Ça y est !",
+      "deutsch": "so, es ist soweit (fam.)",
+      "beispiel": "Ça y est, c'est terminé!"
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "Vous avez fini ?",
+      "deutsch": "Seid ihr fertig?",
+      "beispiel": "– Vous avez fini ? – Non, pas encore."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "c'est à...",
+      "deutsch": "... ist dran.",
+      "beispiel": "– C'est à qui ? – C'est à Marion."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "apprendre qc",
+      "deutsch": "etw. lernen",
+      "beispiel": "Il apprend l'allemand."
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "le vocabulaire",
+      "deutsch": "das Vokabular, der Wortschatz",
+      "beispiel": "Apprenez le vocabulaire de l'unité 1!"
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "une unité",
+      "deutsch": "eine Lektion",
+      "beispiel": null
+    },
+    {
+      "unite": 1,
+      "volet": "Module 1",
+      "franzoesisch": "le contrôle",
+      "deutsch": "die Kontrolle, hier: die Leistungskontrolle",
+      "beispiel": "On a un contrôle en anglais."
+    },
+    {
+      "unite": 2,
+      "volet": null,
+      "franzoesisch": "une aventure",
+      "deutsch": "ein Abenteuer",
+      "beispiel": "On fait le tour du quartier."
+    },
+    {
+      "unite": 2,
+      "volet": null,
+      "franzoesisch": "le tour",
+      "deutsch": "die Tour, die Reise, die Rundfahrt",
+      "beispiel": "On fait le tour du quartier."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "à... ans",
+      "deutsch": "mit ... Jahren",
+      "beispiel": "À 18 ans, je voudrais partir en France."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "voyager",
+      "deutsch": "reisen",
+      "beispiel": "Nous voyageons toujours en train."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le pays",
+      "deutsch": "das Land",
+      "beispiel": "La France est un pays."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "surtout",
+      "deutsch": "vor allem",
+      "beispiel": "Éva adore la musique, surtout le rap."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la tête",
+      "deutsch": "der Kopf",
+      "beispiel": "Mon frère a une petite tête."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le monde",
+      "deutsch": "die Welt",
+      "beispiel": "Le monde est grand."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le roman",
+      "deutsch": "der Roman",
+      "beispiel": "Abdel lit beaucoup de romans."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "un héros / une héroïne",
+      "deutsch": "ein/e Held/in",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "un/une artiste",
+      "deutsch": "ein/e Künstler/in",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "seulement",
+      "deutsch": "nur (noch), erst",
+      "beispiel": "Elsa vient seulement pour Aya."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "gagner (qc)",
+      "deutsch": "(etw.) gewinnen",
+      "beispiel": "Qui a gagné?"
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le prix /! les prix",
+      "deutsch": "der Preis",
+      "beispiel": "Tu as gagné le prix!"
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la mécanique",
+      "deutsch": "die Mechanik",
+      "beispiel": "Mon truc, c'est la mécanique."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la passion",
+      "deutsch": "die Leidenschaft",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "imiter qn/qc",
+      "deutsch": "jdn nachahmen, etw. nachmachen",
+      "beispiel": "Chloé imite ses parents."
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "inventer qc",
+      "deutsch": "etw. erfinden",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la saison",
+      "deutsch": "die Jahreszeit, auch: die Staffel",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la dent",
+      "deutsch": "der Zahn",
+      "beispiel": "Les chats ont combien de dents?"
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le centimètre",
+      "deutsch": "der Zentimeter",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le trou",
+      "deutsch": "das Loch",
+      "beispiel": "Zut! J'ai un trou dans ma valise!"
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "tôt",
+      "deutsch": "früh",
+      "beispiel": "Vendredi, je suis rentrée tôt."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "tard",
+      "deutsch": "spät",
+      "beispiel": "Samedi, nous sommes rentrés tard."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "jouer au / à la / à l' / aux",
+      "deutsch": "etw. spielen (Spiel oder Ballsportart)",
+      "beispiel": "J'ai joué au basket avec mes amis."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "jouer du / de la / de l' / des",
+      "deutsch": "etw. spielen (Instrument)",
+      "beispiel": "J'ai joué du piano."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "faire la fête",
+      "deutsch": "feiern",
+      "beispiel": "On a fait la fête!"
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "au début (de qc)",
+      "deutsch": "am Anfang (von etw.), zuerst",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "et puis",
+      "deutsch": "außerdem",
+      "beispiel": "J'ai joué, et puis j'ai chanté."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "avant",
+      "deutsch": "vor, davor",
+      "beispiel": "Avant la fête, on a chillé."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "tout à coup",
+      "deutsch": "plötzlich",
+      "beispiel": "Tout à coup, Gwen est partie."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "finalement",
+      "deutsch": "letztendlich, schließlich",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "tout le temps",
+      "deutsch": "die ganze Zeit, ständig",
+      "beispiel": "Je suis resté chez moi tout le temps."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "faire un tour",
+      "deutsch": "spazieren gehen, eine Runde drehen",
+      "beispiel": "On a fait un tour au centre-ville."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "monter",
+      "deutsch": "steigen, hinaufsteigen, ansteigen",
+      "beispiel": "Nous sommes montés sur la tour."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "tomber",
+      "deutsch": "fallen, hinfallen",
+      "beispiel": "Aïe! Je suis tombée!"
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "avoir peur",
+      "deutsch": "Angst haben, Angst bekommen",
+      "beispiel": "Elle a eu peur."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "avoir mal",
+      "deutsch": "Schmerzen haben",
+      "beispiel": "J'ai mal partout."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "c'était",
+      "deutsch": "das war, es war",
+      "beispiel": "Ce week-end, c'était cool!"
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "l'aviron",
+      "deutsch": "das Rudern",
+      "beispiel": "Je fais de l'aviron."
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "la course-poursuite",
+      "deutsch": "die Verfolgungsjagd, hier: Spiel wie 'Räuber und Gendarme'",
+      "beispiel": "On fait une course-poursuite?"
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "Aïe !",
+      "deutsch": "Aua!",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la nuit",
+      "deutsch": "die Nacht, nachts",
+      "beispiel": "La nuit, Allan a peur."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "hier",
+      "deutsch": "gestern",
+      "beispiel": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "après",
+      "deutsch": "nach",
+      "beispiel": "Après les cours, je suis allé au ciné."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la marée haute",
+      "deutsch": "die Flut, das Hochwasser",
+      "beispiel": "La marée haute est à quelle heure?"
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la marée basse",
+      "deutsch": "die Ebbe, das Niedrigwasser",
+      "beispiel": "À marée basse, la mer est loin."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la balise",
+      "deutsch": "die Boje",
+      "beispiel": "On peut aller jusqu'à la balise."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "rencontrer qn",
+      "deutsch": "jdm begegnen, jdn treffen",
+      "beispiel": "J'ai rencontré une amie en ville."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "rigoler (bien)",
+      "deutsch": "(viel) lachen, (echt) Spaß haben",
+      "beispiel": "On rigole bien avec Marie."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "comprendre qn/qc",
+      "deutsch": "jdn/etw. verstehen",
+      "beispiel": "Je ne comprends pas. Vous pouvez répéter, s'il vous plaît?"
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "moins... que",
+      "deutsch": "weniger ... als, nicht so ... wie",
+      "beispiel": "Le film est moins intéressant que le livre."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "plus... que",
+      "deutsch": "mehr ... als",
+      "beispiel": "Le livre est plus intéressant que le film."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "aussi... que",
+      "deutsch": "(genau) so ... wie",
+      "beispiel": "Mehdi est aussi grand que son frère."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "meilleur/meilleure... que",
+      "deutsch": "besser (Komparativ von bon/bonne)",
+      "beispiel": "Rudy est meilleur en SVT que Léo."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "l'or",
+      "deutsch": "das Gold",
+      "beispiel": "L'or, c'est très cher."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "l'argent",
+      "deutsch": "das Silber",
+      "beispiel": "Je n'aime pas l'or. Je préfère l'argent."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la femme",
+      "deutsch": "die Frau, die Ehefrau",
+      "beispiel": "Les filles deviennent des femmes."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "un homme",
+      "deutsch": "ein Mann",
+      "beispiel": "Les garçons deviennent des hommes."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "puissant/puissante",
+      "deutsch": "mächtig",
+      "beispiel": "Qui est la femme la plus puissante du monde?"
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le/la chef",
+      "deutsch": "der/die Chef/in",
+      "beispiel": "Mme Rosso est la chef du magasin."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le/la chef de cuisine",
+      "deutsch": "der Chefkoch / die Chefköchin",
+      "beispiel": "En France, il y a les meilleurs chefs de cuisine."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "devenir",
+      "deutsch": "werden",
+      "beispiel": "Je veux devenir célèbre."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le meilleur / la meilleure",
+      "deutsch": "der/die/das beste (Superlativ von bon/bonne)",
+      "beispiel": "Anna est la meilleure élève en maths."
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "impressionnant/impressionnante",
+      "deutsch": "beeindruckend",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "rapprocher qn/qc",
+      "deutsch": "hier: jdn/etw. einander näher bringen",
+      "beispiel": "Les moments en famille nous rapprochent."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "accompagner qn",
+      "deutsch": "jdn begleiten",
+      "beispiel": "Elle m'accompagne toujours."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "aider (qn)",
+      "deutsch": "(jdm) helfen",
+      "beispiel": "Lola aide ses parents."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "énerver qn",
+      "deutsch": "jdn nerven, jdn ärgern",
+      "beispiel": "Tu m'énerves!"
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "parler de qc",
+      "deutsch": "über etw. sprechen",
+      "beispiel": "Avec ma mère, on parle de tout."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "c'est normal",
+      "deutsch": "das ist normal",
+      "beispiel": "– C'est normal? – Oui, c'est normal!"
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "faire la cuisine",
+      "deutsch": "kochen",
+      "beispiel": "On fait la cuisine ensemble."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le travail",
+      "deutsch": "die Arbeit",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "filmer qn/qc",
+      "deutsch": "jdn/etw. filmen",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "La Réunion",
+      "deutsch": "Insel im Indischen Ozean, Überseeregion und -departement Frankreichs",
+      "beispiel": "La Réunion est une île française."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la chose",
+      "deutsch": "die Sache, das Ding",
+      "beispiel": "J'ai oublié une chose: mon portable!"
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "du coup",
+      "deutsch": "daraufhin, deshalb, daher (fam.)",
+      "beispiel": "Mardi, on n'a pas cours, du coup je reste à la maison."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "si",
+      "deutsch": "doch",
+      "beispiel": "– Tu ne viens pas avec nous? – Si!"
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "par",
+      "deutsch": "pro",
+      "beispiel": "Frida lit une heure par jour."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le vide-grenier",
+      "deutsch": "der Flohmarkt, der Trödelmarkt (wörtlich: das Dachbodenleeren)",
+      "beispiel": "Dimanche, il y a un vide-grenier."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "trier qc",
+      "deutsch": "etw. aussortieren, etw. sortieren",
+      "beispiel": "Qu'est-ce que tu tries?"
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "vendre qc (à qn)",
+      "deutsch": "(jdm) etw. verkaufen",
+      "beispiel": "J'ai trop de livres. Je les vends."
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "échanger qc (contre qc)",
+      "deutsch": "etw. austauschen, etw. (gegen etw.) tauschen",
+      "beispiel": "Tu échanges ton gâteau contre ma pomme?"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la carrière",
+      "deutsch": "die Karriere",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le succès",
+      "deutsch": "der Erfolg",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "jeune",
+      "deutsch": "jung",
+      "beispiel": "Ma sœur est plus jeune que moi."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "d'ailleurs",
+      "deutsch": "übrigens",
+      "beispiel": "Je n'ai pas fait les courses. Papa non plus d'ailleurs."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "appeler qn",
+      "deutsch": "jdn nennen",
+      "beispiel": "On appelle Alexandre «Alex»."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la mélodie",
+      "deutsch": "die Melodie",
+      "beispiel": "La mélodie est jolie."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "que",
+      "deutsch": "den, die, das (Relativpronomen)",
+      "beispiel": "Nathan aime la musique que son frère écoute."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "créatif/créative",
+      "deutsch": "kreativ",
+      "beispiel": "Mon père est très créatif."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le message",
+      "deutsch": "hier: die Botschaft, die Aussage",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le champion / la championne",
+      "deutsch": "der Champion, der/die Meister/in",
+      "beispiel": "Cool, nous sommes les champions!"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "un entraîneur / une entraîneuse",
+      "deutsch": "ein/e Trainer/in",
+      "beispiel": "L'entraîneur arrive au stade."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "sportif/sportive",
+      "deutsch": "sportlich",
+      "beispiel": "Ma mère est sportive, elle fait du basket."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le ski",
+      "deutsch": "der Ski, das Skifahren, der Skier",
+      "beispiel": "Avec ma famille, on fait du ski."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le ski de bosses",
+      "deutsch": "das Buckelpistenfahren, Freestyle-Skiing",
+      "beispiel": "Tu fais du ski de bosses?"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "une équipe",
+      "deutsch": "eine Mannschaft, ein Team",
+      "beispiel": "Tu as une équipe préférée de foot?"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "remarquer qn/qc",
+      "deutsch": "jdn/etw. bemerken",
+      "beispiel": "Tu as remarqué la fille en face?"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le talent",
+      "deutsch": "das Talent",
+      "beispiel": "Elle chante bien. Elle a du talent!"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "compter sur qn",
+      "deutsch": "auf jdn zählen",
+      "beispiel": "Je peux compter sur ma famille!"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la médaille",
+      "deutsch": "die Medaille",
+      "beispiel": "J'ai eu une médaille d'or!"
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "courageux/courageuse",
+      "deutsch": "mutig",
+      "beispiel": "Je voudrais être plus courageux."
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "heureux/heureuse",
+      "deutsch": "glücklich",
+      "beispiel": "Olivier est heureux."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "ce/cet/cette/ces",
+      "deutsch": "dieser/diese/dieses",
+      "beispiel": "Ce livre est un cadeau pour ma mère."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "ce matin",
+      "deutsch": "heute Morgen",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "ce soir",
+      "deutsch": "heute Abend",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "cet après-midi",
+      "deutsch": "heute Nachmittag",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "cette semaine",
+      "deutsch": "diese Woche, in dieser Woche",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le fer à repasser",
+      "deutsch": "das Bügeleisen",
+      "beispiel": "Je n'ai pas de fer à repasser."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "ne... rien",
+      "deutsch": "nichts",
+      "beispiel": "Je ne comprends rien."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "ne... jamais",
+      "deutsch": "nie",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "une appli / une application",
+      "deutsch": "eine App",
+      "beispiel": "Quelle est ton appli préférée?"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "un échange",
+      "deutsch": "ein Tausch, auch: ein Austausch",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Quoi ?",
+      "deutsch": "Was? (Fragewort, fam.)",
+      "beispiel": "Quoi? Je n'ai rien compris!"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "mettre qc",
+      "deutsch": "etw. stellen, etw. setzen, etw. legen, auch: etw. anziehen",
+      "beispiel": "Mets tes affaires dans l'armoire."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "en ligne",
+      "deutsch": "online",
+      "beispiel": "Laura achète des BD en ligne."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "utiliser qc",
+      "deutsch": "etw. benutzen",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "prêter qc (à qn)",
+      "deutsch": "(jdm) etw. (ver-)leihen",
+      "beispiel": "Je ne prête rien."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le gaspillage",
+      "deutsch": "die Verschwendung",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "tu sais",
+      "deutsch": "du weißt, weißt du",
+      "beispiel": "Tu sais, on pourrait faire comme ça!"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "écolo / écologique",
+      "deutsch": "umweltbewusst, ökologisch, Öko-",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "emprunter qc",
+      "deutsch": "etw. (aus-)leihen",
+      "beispiel": "J'emprunte des livres au CDI."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "coûter",
+      "deutsch": "kosten",
+      "beispiel": "Elle coûte combien, ta console?"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Ce n'est pas pareil !",
+      "deutsch": "Das ist nicht das Gleiche!",
+      "beispiel": "Non, mais ce n'est pas pareil!"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "commander qc",
+      "deutsch": "etw. bestellen",
+      "beispiel": "Je déteste commander en ligne."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la poubelle",
+      "deutsch": "der Mülleimer",
+      "beispiel": "Les poubelles sont dans la cour."
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "mettre qc à la poubelle",
+      "deutsch": "etw. in den Müll werfen",
+      "beispiel": "J'ai tout mis à la poubelle!"
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "un emballage",
+      "deutsch": "eine Verpackung",
+      "beispiel": "Cet emballage n'est pas écologique."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "la finale",
+      "deutsch": "das Finale",
+      "beispiel": "La finale est un grand moment!"
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le match",
+      "deutsch": "das Spiel",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le/la Croate",
+      "deutsch": "der Kroate / die Kroatin",
+      "beispiel": "Les Croates jouent bien."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "fort/forte",
+      "deutsch": "stark",
+      "beispiel": "Les Bleus mènent. Ils sont forts."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le but",
+      "deutsch": "das Ziel, hier: das Tor",
+      "beispiel": "La joueuse tire et... But!!!"
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "tirer",
+      "deutsch": "ziehen, hier: schießen",
+      "beispiel": "Allez! Tire!"
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "défendre (qn/qc)",
+      "deutsch": "(jdn/etw.) verteidigen",
+      "beispiel": "La joueuse défend bien."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "marquer un but",
+      "deutsch": "ein Tor schießen, treffen",
+      "beispiel": "L'équipe d'Arthur a marqué un but."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "mener",
+      "deutsch": "führen, in Führung liegen",
+      "beispiel": "L'équipe de France mène 3 à 1!"
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "(1) à (0)",
+      "deutsch": "(1) zu (0)",
+      "beispiel": "L'équipe mène 2 à 1."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "un/une arbitre",
+      "deutsch": "ein/e Schiedsrichter/in",
+      "beispiel": "L'arbitre donne un carton jaune."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le carton (jaune/rouge)",
+      "deutsch": "die (gelbe/rote) Karte",
+      "beispiel": "Le joueur a eu un carton jaune."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le score",
+      "deutsch": "der Spielstand",
+      "beispiel": "Le score est de 2 à 3."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le score est de... à...",
+      "deutsch": "es steht ... zu ...",
+      "beispiel": "Le score est de 2 à 3."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "partout",
+      "deutsch": "hier: unentschieden",
+      "beispiel": "Le score est de 3 partout."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "attaquer (qn)",
+      "deutsch": "(jdn) angreifen",
+      "beispiel": null
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "la faute",
+      "deutsch": "der Fehler, hier: das Foul",
+      "beispiel": "Le joueur a fait une faute."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "parler à qn",
+      "deutsch": "mit jdm sprechen",
+      "beispiel": "L'entraîneur parle à l'arbitre."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le penalty",
+      "deutsch": "der Strafstoß, der Elfmeter",
+      "beispiel": "L'arbitre donne un penalty au joueur."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "la mi-temps",
+      "deutsch": "die Halbzeit",
+      "beispiel": "C'est la deuxième mi-temps."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le ballon",
+      "deutsch": "der Ball",
+      "beispiel": "Le ballon est sur le terrain."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "passer le ballon à qn",
+      "deutsch": "jdm den Ball zuspielen",
+      "beispiel": "Il a passé le ballon au gardien."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "le gardien / la gardienne (de but)",
+      "deutsch": "der/die Torwart/in",
+      "beispiel": "Il est trop fort, votre gardien!"
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "faire attention",
+      "deutsch": "aufpassen",
+      "beispiel": "Pardon, je n'ai pas fait attention."
+    },
+    {
+      "unite": 3,
+      "volet": "Module 3",
+      "franzoesisch": "il reste...",
+      "deutsch": "(nur) noch ...",
+      "beispiel": "Il reste une minute avant la fin."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "la planète",
+      "deutsch": "der Planet",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "le médiateur / la médiatrice",
+      "deutsch": "der/die Vermittler/in",
+      "beispiel": "Il y a un conflit. La médiatrice cherche une solution."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "un/une intello",
+      "deutsch": "ein/e Streber/in (fam.)",
+      "beispiel": "Tom est l'intello de la classe."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "la brute",
+      "deutsch": "der/die Unruhestifter/in",
+      "beispiel": "Romain est la brute de la classe."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "le bavard / la bavarde",
+      "deutsch": "die Quasselstrippe",
+      "beispiel": "Un bavard, c'est quelqu'un qui parle trop!"
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "le geek",
+      "deutsch": "der Nerd, auch: der Computer-nerd",
+      "beispiel": "Les geeks adorent la techno."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "le clown",
+      "deutsch": "der/die Clown/in",
+      "beispiel": "Emy est trop drôle! C'est notre clown."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "les inséparables",
+      "deutsch": "die Unzertrennlichen",
+      "beispiel": "Les inséparables, ce sont Axel et Sasha. Ils sont toujours ensemble."
+    },
+    {
+      "unite": 4,
+      "volet": null,
+      "franzoesisch": "le chouchou / la chouchoute",
+      "deutsch": "der Liebling (fam.)",
+      "beispiel": "Lana est la chouchoute des profs."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "écrire qc (à qn)",
+      "deutsch": "(jdm) etw. schreiben",
+      "beispiel": "Inès écrit des messages à sa copine."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "laisser qn tranquille",
+      "deutsch": "jdn in Ruhe lassen",
+      "beispiel": "Jérôme laisse sa voisine tranquille."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "sérieux/sérieuse",
+      "deutsch": "ernst, ernsthaft",
+      "beispiel": "Baptiste est un élève sérieux."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "débrouillard/débrouillarde",
+      "deutsch": "geschickt, pfiffig (fam.)",
+      "beispiel": "Mon voisin trouve toujours des solutions à ses problèmes. Il est débrouillard."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "populaire",
+      "deutsch": "beliebt",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "malade",
+      "deutsch": "krank",
+      "beispiel": "Hugo est toujours malade."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le voisin / la voisine",
+      "deutsch": "der/die (Sitz-)Nachbar/in",
+      "beispiel": "Elle est ma voisine en classe."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le sac",
+      "deutsch": "die Tasche, auch: die Schultasche",
+      "beispiel": "Il oublie toujours son sac de sport."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le bulletin",
+      "deutsch": "das Zeugnis",
+      "beispiel": "Cette année, il a eu un bon bulletin."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le conseil",
+      "deutsch": "der Rat, der Ratschlag",
+      "beispiel": "Elle donne des bons conseils."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le résultat",
+      "deutsch": "das Ergebnis, das Resultat",
+      "beispiel": "Il a des mauvais résultats."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le test",
+      "deutsch": "der Test",
+      "beispiel": "Tu as fait le test?"
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le genre (de qc)",
+      "deutsch": "die Art",
+      "beispiel": "C'est quel genre d'école?"
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "le réveil",
+      "deutsch": "der Wecker",
+      "beispiel": "Mon réveil est à côté de mon lit."
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "sonner",
+      "deutsch": "klingeln",
+      "beispiel": "Ça sonne!"
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "plus",
+      "deutsch": "mehr",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 1,
+      "franzoesisch": "sans + inf.",
+      "deutsch": "ohne etw. zu tun",
+      "beispiel": "Je ne peux pas réviser sans écrire."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "stresser qn",
+      "deutsch": "jdn stressen",
+      "beispiel": "– Ça te stresse? – Oui, ça me stresse!"
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "dire qc (à qn)",
+      "deutsch": "(jdm) etw. sagen",
+      "beispiel": "Pardon, qu'est-ce que vous dites?"
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "que",
+      "deutsch": "dass",
+      "beispiel": "Éric dit qu'il est en retard."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "devoir + inf.",
+      "deutsch": "etw. tun müssen",
+      "beispiel": "Je dois faire mes devoirs."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "au moins",
+      "deutsch": "mindestens, wenigstens",
+      "beispiel": "Je veux avoir au moins une pause."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "à cause de",
+      "deutsch": "wegen",
+      "beispiel": "Je suis en retard à cause du métro."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "une impression",
+      "deutsch": "ein Eindruck",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "à la place de (qn/qc)",
+      "deutsch": "anstelle von (jdm/etw.), statt",
+      "beispiel": "Je voudrais être à ta place."
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "à ma place / à ta place / à sa place",
+      "deutsch": "an meiner/deiner/seiner/ihrer Stelle",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 2,
+      "franzoesisch": "à notre place / à votre place / à leur place",
+      "deutsch": "an unserer/eurer/ihrer Stelle",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "le stress",
+      "deutsch": "der Stress",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "la lettre",
+      "deutsch": "der Buchstabe",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "comme",
+      "deutsch": "als",
+      "beispiel": "Comme devoir, vous terminez l'exercice."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "calculer qc",
+      "deutsch": "etw. berechnen, etw. ausrechnen",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "précis/précise",
+      "deutsch": "genau, exakt, klar",
+      "beispiel": "En maths, il faut être précis!"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "exister",
+      "deutsch": "existieren",
+      "beispiel": "Les notes sur 6, ça existe en France?"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "le/la même",
+      "deutsch": "der-/die-/dasselbe, der/die/das Gleiche",
+      "beispiel": "Nous sommes dans la même classe!"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "juste",
+      "deutsch": "gerecht",
+      "beispiel": "Ce n'est pas juste!"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "autre",
+      "deutsch": "anderer/andere/anderes",
+      "beispiel": "Zut! J'ai fait un autre exercice!"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "penser",
+      "deutsch": "denken",
+      "beispiel": "Je pense que c'est une bonne idée."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "motivant/motivante",
+      "deutsch": "motivierend",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "les gens",
+      "deutsch": "die Leute",
+      "beispiel": "Je déteste les gens de mon collège."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "dur/dure",
+      "deutsch": "hart, schwer",
+      "beispiel": null
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "ça veut dire",
+      "deutsch": "das heißt",
+      "beispiel": "3/20, ça veut dire qu'on est nul."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "la catastrophe",
+      "deutsch": "die Katastrophe",
+      "beispiel": "C'est la catastrophe!"
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "par contre",
+      "deutsch": "jedoch, allerdings",
+      "beispiel": "Je n'aime pas le foot. Par contre j'adore le basket."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "entendre qn/qc",
+      "deutsch": "jdn/etw. hören",
+      "beispiel": "Il veut écouter, mais il n'entend rien."
+    },
+    {
+      "unite": 4,
+      "volet": 3,
+      "franzoesisch": "avoir la moyenne",
+      "deutsch": "bestehen",
+      "beispiel": "– Tu as la moyenne? – Oui, j'ai 10/20."
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "le handball",
+      "deutsch": "Handball, das Handballspielen",
+      "beispiel": "Bilal joue au handball."
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "la batterie",
+      "deutsch": "das Schlagzeug",
+      "beispiel": "Éloïse joue de la batterie."
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "le repas",
+      "deutsch": "das Essen, die Mahlzeit",
+      "beispiel": "Vous faites des repas en famille?"
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "presque",
+      "deutsch": "fast, beinahe",
+      "beispiel": "J'ai presque terminé."
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "sauf",
+      "deutsch": "außer, abgesehen von",
+      "beispiel": "Je n'ai rien mangé, sauf une pomme."
+    },
+    {
+      "unite": 4,
+      "volet": "Module 4",
+      "franzoesisch": "végan/végane",
+      "deutsch": "vegan",
+      "beispiel": "Mon copain mange végan."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "une activité",
+      "deutsch": "eine Aktivität",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "télécharger qc",
+      "deutsch": "etw. herunterladen",
+      "beispiel": "Je n'aime pas télécharger des films."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "cliquer sur qc",
+      "deutsch": "auf etw. klicken",
+      "beispiel": "J'ai cliqué sur la photo."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "le lien",
+      "deutsch": "der Link",
+      "beispiel": "Où est le lien?"
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "laisser qc",
+      "deutsch": "etw. lassen, hier: etw. hinterlassen",
+      "beispiel": "Laissez des commentaires!"
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "poster qc",
+      "deutsch": "etw. posten",
+      "beispiel": "Hakim poste une vidéo."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "le tuto fam. / le tutoriel",
+      "deutsch": "das Erklärvideo, das Tutorial",
+      "beispiel": "Il fait des tutos sur Internet."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "enregistrer qc",
+      "deutsch": "etw. aufnehmen, etw. speichern",
+      "beispiel": "J'enregistre une vidéo sur mon portable."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "les réseaux sociaux",
+      "deutsch": "die sozialen Netzwerke (m. pl.)",
+      "beispiel": "Tu es sur quels réseaux sociaux?"
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "être accro à qc",
+      "deutsch": "nach etw. süchtig sein, von etw. abhängig sein",
+      "beispiel": "Isabelle est accro aux réseaux sociaux."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "la victime",
+      "deutsch": "das Opfer",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "le cyberharcèlement",
+      "deutsch": "das Cybermobbing",
+      "beispiel": "Vous avez des problèmes de cyberharcèlement au collège?"
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "créer qc",
+      "deutsch": "etw. erschaffen, etw. gründen",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "avoir... vues",
+      "deutsch": "... Aufrufe/Klicks haben",
+      "beispiel": "Cette vidéo a un million de vues."
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "le million",
+      "deutsch": "die Million",
+      "beispiel": "Il a deux millions d'abonnés!"
+    },
+    {
+      "unite": 5,
+      "volet": null,
+      "franzoesisch": "un abonné / une abonnée",
+      "deutsch": "ein/e Abonnent/in",
+      "beispiel": "Tu as combien d'abonnés?"
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "intelligent/intelligente",
+      "deutsch": "intelligent",
+      "beispiel": "Les éléphants sont des animaux intelligents."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "normal/normale/normaux/normales",
+      "deutsch": "normal",
+      "beispiel": "Qu'est-ce que c'est pour toi, une journée normale?"
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "la culture",
+      "deutsch": "die Kultur",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "le cliché",
+      "deutsch": "das Klischee",
+      "beispiel": "Quels sont les clichés sur les Français?"
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "chinois/chinoise",
+      "deutsch": "chinesisch",
+      "beispiel": "Shanghai est une ville chinoise."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "génial/géniale/géniaux/géniales",
+      "deutsch": "toll, genial",
+      "beispiel": "Mes copains sont géniaux!"
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "voir qn/qc",
+      "deutsch": "jdn/etw. sehen",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "être d'origine (allemande/française)",
+      "deutsch": "(deutscher/französischer) Herkunft sein",
+      "beispiel": "Laurin est d'origine allemande."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "asiatique",
+      "deutsch": "asiatisch",
+      "beispiel": "J'aime la cuisine asiatique."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "l'Asie",
+      "deutsch": "Asien (f.)",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "le thème",
+      "deutsch": "das Thema",
+      "beispiel": "C'est un thème important."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "critiquer (qn/qc)",
+      "deutsch": "(jdn/etw.) kritisieren",
+      "beispiel": "Critiquer quelqu'un n'est pas facile."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "national/nationale/nationaux/nationales",
+      "deutsch": "national, National-",
+      "beispiel": "Le 14 juillet en France, c'est le jour de la fête nationale."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "l'humour",
+      "deutsch": "der Humor (m.)",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "avant",
+      "deutsch": "früher, vorher",
+      "beispiel": "Avant, c'était plus drôle."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "faire des études",
+      "deutsch": "studieren",
+      "beispiel": "Julia fait des études de musique."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "un ingénieur / une ingénieure",
+      "deutsch": "ein/e Ingenieur/in",
+      "beispiel": "Ma mère est ingénieure."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "original/originale/originaux/originales",
+      "deutsch": "originell",
+      "beispiel": "J'aime les films originaux."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "adulte",
+      "deutsch": "erwachsen",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "polonais/polonaise",
+      "deutsch": "polnisch",
+      "beispiel": "Anna est d'origine polonaise."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "la beauté",
+      "deutsch": "die Schönheit",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "le policier / la policière",
+      "deutsch": "der/die Polizist/in",
+      "beispiel": "Les policiers font des contrôles."
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "une émission",
+      "deutsch": "eine Sendung",
+      "beispiel": "Quelle est ton émission préférée?"
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "un avis",
+      "deutsch": "eine Meinung",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 1,
+      "franzoesisch": "autre chose",
+      "deutsch": "etwas anderes",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "(être) né/née",
+      "deutsch": "geboren (sein)",
+      "beispiel": "Natoo est née le 8 février 1985."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "à... ans",
+      "deutsch": "mit ... Jahren",
+      "beispiel": "À 18 ans, il devient célèbre."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "le prix / les prix",
+      "deutsch": "der Preis",
+      "beispiel": "Elle a gagné beaucoup de prix."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "finir qc",
+      "deutsch": "etw. beenden, enden",
+      "beispiel": "Il finit son travail."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "grandir",
+      "deutsch": "aufwachsen, wachsen",
+      "beispiel": "Bilal Hassani a grandi en France."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "réussir (qc)",
+      "deutsch": "es/etw. schaffen, gelingen, etw. bestehen",
+      "beispiel": "Finalement, il a réussi."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "choisir qn/qc",
+      "deutsch": "jdn/etw. aussuchen, jdn/etw. auswählen",
+      "beispiel": "On le choisit pour l'équipe de France."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "quitter qn/qc",
+      "deutsch": "jdn/etw. verlassen",
+      "beispiel": "Benjamin Pavard a quitté la France."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "participer à qc",
+      "deutsch": "an etw. teilnehmen",
+      "beispiel": "Elle a participé à une émission."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "baisser les bras",
+      "deutsch": "aufgeben (wörtlich: die Arme senken)",
+      "beispiel": "Il n'a pas baissé les bras."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "encourager qn",
+      "deutsch": "jdn ermutigen",
+      "beispiel": "Elle a encouragé beaucoup de gens."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "perdre (qn/qc)",
+      "deutsch": "(jdn/etw.) verlieren",
+      "beispiel": "Elle a perdu ses parents très tôt."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "les médias",
+      "deutsch": "die Medien (m. pl.)",
+      "beispiel": "On parle de ce thème dans tous les médias."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "un album",
+      "deutsch": "ein Album",
+      "beispiel": "Ils font un album."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "le concert",
+      "deutsch": "das Konzert",
+      "beispiel": "Il fait des concerts en Europe."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "les hauts et les bas",
+      "deutsch": "die Höhen und Tiefen, das Auf und Ab (m. pl.)",
+      "beispiel": "Ils ont des hauts et des bas."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "marocain/marocaine",
+      "deutsch": "marokkanisch",
+      "beispiel": "En histoire, j'ai appris des choses sur l'histoire marocaine."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "tout le / toute la / tous les / toutes les",
+      "deutsch": "ganzer/ganze/ganzes, alle",
+      "beispiel": "Il a fait une photo de toute l'équipe."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "tomber amoureux/amoureuse (de qn)",
+      "deutsch": "sich (in jdn) verlieben",
+      "beispiel": "Ils sont tombés amoureux."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "difficile",
+      "deutsch": "schwer, schwierig",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "le jury",
+      "deutsch": "die Jury",
+      "beispiel": "C'est un jury sévère."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "la perruque",
+      "deutsch": "die Perücke",
+      "beispiel": "Mon grand-père met une perruque."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "le bac fam. / le baccalauréat",
+      "deutsch": "das Abi, das Abitur",
+      "beispiel": "Je vais avoir mon bac à 18 ans."
+    },
+    {
+      "unite": 5,
+      "volet": 2,
+      "franzoesisch": "homosexuel/homosexuelle",
+      "deutsch": "homosexuell",
+      "beispiel": "Marie et Valérie sont homosexuelles."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le blog",
+      "deutsch": "der Blog",
+      "beispiel": "J'écris un blog sur La Réunion."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "un avion",
+      "deutsch": "ein Flugzeug",
+      "beispiel": "Vous prenez souvent l'avion?"
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "durer",
+      "deutsch": "dauern, andauern",
+      "beispiel": "Le voyage va durer trois heures."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la personne",
+      "deutsch": "die Person",
+      "beispiel": "Il y a 3 000 personnes au festival."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le bonbon",
+      "deutsch": "das Bonbon",
+      "beispiel": "Il y a trop de sucre dans les bonbons."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le piment",
+      "deutsch": "die Chili(schote)",
+      "beispiel": "Les enfants n'aiment pas le piment."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le Réunionnais / la Réunionnaise",
+      "deutsch": "der/die Reunionaiser/in (Einwohner von La Réunion)",
+      "beispiel": "Les gens qui habitent à La Réunion, ce sont les Réunionnais."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le Français / la Française",
+      "deutsch": "der Franzose / die Französin",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le continent",
+      "deutsch": "der Kontinent",
+      "beispiel": "L'Asie, c'est un continent."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "créole",
+      "deutsch": "kreolisch",
+      "beispiel": "Tu aimes les pâtisseries créoles?"
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "ça sent",
+      "deutsch": "es riecht (nach)",
+      "beispiel": "Ça sent le gâteau! Ça sent bon!"
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "nager",
+      "deutsch": "schwimmen",
+      "beispiel": "Je nage dans la mer."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "beau/bel/belle/beaux/belles",
+      "deutsch": "schön",
+      "beispiel": "La Réunion est une belle île."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la cascade",
+      "deutsch": "der Wasserfall",
+      "beispiel": "À La Réunion, il y a des cascades."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la forêt",
+      "deutsch": "der Wald",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "vieux/vieil/vieille/vieux/vieilles",
+      "deutsch": "alt",
+      "beispiel": "C'est une vieille maison de 1678."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "nouveau/nouvel/nouvelle/nouveaux/nouvelles",
+      "deutsch": "neu",
+      "beispiel": "Marielle est nouvelle à l'école."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le paysage",
+      "deutsch": "die Landschaft",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la course",
+      "deutsch": "der Lauf, das Rennen",
+      "beispiel": "Qui participe à la course?"
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "fou/folle",
+      "deutsch": "verrückt, wahnsinnig",
+      "beispiel": "Mais c'est fou!"
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la région",
+      "deutsch": "die Gegend, die Region",
+      "beispiel": "La Bretagne est une région."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la capitale",
+      "deutsch": "die Hauptstadt",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "un habitant / une habitante",
+      "deutsch": "ein/e Bewohner/in, ein/e Einwohner/in",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "l'été",
+      "deutsch": "der Sommer (m.)",
+      "beispiel": "L'été, c'est ma saison préférée."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le printemps",
+      "deutsch": "der Frühling",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "l'automne",
+      "deutsch": "der Herbst (m.)",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "l'hiver",
+      "deutsch": "der Winter (m.)",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "actif/active",
+      "deutsch": "aktiv",
+      "beispiel": "Ma grand-mère est très active."
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le centre",
+      "deutsch": "das Zentrum",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le rougail saucisse",
+      "deutsch": "typisches Gericht auf La Réunion aus Tomaten, Wurst und Reis",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le cari poisson",
+      "deutsch": "Fischcurry auf La Réunion",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le bonbon piment",
+      "deutsch": "scharfe und frittierte Bällchen auf La Réunion",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "le/la Zoreille",
+      "deutsch": "Bezeichnung auf La Réunion für Franzosen, die auf dem Festland leben",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la barrière de corail",
+      "deutsch": "das Korallenriff",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "un endormi",
+      "deutsch": "Bezeichnung auf La Réunion für das Pantherchamäleon (wörtlich: ein Eingeschlafener)",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "la région d'outre-mer (ROM)",
+      "deutsch": "die Überseeregion",
+      "beispiel": null
+    },
+    {
+      "unite": 5,
+      "volet": "Module 5",
+      "franzoesisch": "Saint-Denis",
+      "deutsch": "Hauptstadt von La Réunion mit ca. 150 000 Einwohnern",
+      "beispiel": null
+    }
+  ]
+}

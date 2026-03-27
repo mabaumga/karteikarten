@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv
+.venv
+*.egg-info
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Test/Dev
+.coverage
+htmlcov
+.pytest_cache
+.tox
+
+# Docs - exclude images but keep JSON
+docs/input/**/*.jpg
+docs/input/**/*.jpeg
+docs/input/**/*.png
+docs/input/**/*.pdf
+
+# Local data
+data/
+*.sqlite3
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Misc
+*.md
+*.log
+Makefile

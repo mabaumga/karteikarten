@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "fach": "Englisch",
+    "lehrwerk": "83 Miles from Home",
+    "band": 3,
+    "klasse": 7,
+    "verlag": "Cornelsen",
+    "sprachen": ["Englisch", "Deutsch"],
+    "version": "1.0",
+    "quelle": "Lehrbuch (manuell erfasst)"
+  },
+  "felder": {
+    "vorderseite": "English",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "83 Miles from Home",
+      "bloecke": [
+        {
+          "name": "Chapter 1",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "(to) seem", "hinten": "scheinen", "seite": "4"},
+            {"vorne": "(to) congratulate", "hinten": "gratulieren", "seite": "4"},
+            {"vorne": "joy", "hinten": "Freude", "seite": "5"},
+            {"vorne": "(to) lift", "hinten": "(hoch-)heben", "seite": "5"},
+            {"vorne": "human", "hinten": "menschlich", "seite": "5"},
+            {"vorne": "frightened", "hinten": "erschreckt", "seite": "6"}
+          ]
+        },
+        {
+          "name": "Chapter 2",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "excessively", "hinten": "übermäßig", "seite": "7"},
+            {"vorne": "enthusiastic", "hinten": "begeistert", "seite": "7"},
+            {"vorne": "passion", "hinten": "Leidenschaft", "seite": "7"},
+            {"vorne": "passionate", "hinten": "leidenschaftlich", "seite": "7"},
+            {"vorne": "hilarious", "hinten": "lustig, urkomisch", "seite": "7"},
+            {"vorne": "witty", "hinten": "geistreich, witzig", "seite": "7"}
+          ]
+        },
+        {
+          "name": "Chapter 3",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "chain", "hinten": "Kette, Verkettung", "seite": "9"},
+            {"vorne": "memory", "hinten": "Erinnerung", "seite": "9"},
+            {"vorne": "fear", "hinten": "Angst", "seite": "9"},
+            {"vorne": "beneath", "hinten": "unter", "seite": "9"},
+            {"vorne": "gaze", "hinten": "Blick", "seite": "9"},
+            {"vorne": "immediately", "hinten": "sofort, umgehend", "seite": "10"}
+          ]
+        },
+        {
+          "name": "Chapter 4",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "(to) unpack sth.", "hinten": "etwas auspacken", "seite": "12"},
+            {"vorne": "stairs", "hinten": "Treppe; Treppenstufen", "seite": "12"},
+            {"vorne": "(to) gaze (at sth./sb.)", "hinten": "(jn./etwas an)starren", "seite": "12"},
+            {"vorne": "bilingual", "hinten": "zweisprachig", "seite": "12"},
+            {"vorne": "Welsh", "hinten": "Walisisch; walisisch", "seite": "12"},
+            {"vorne": "(to) rise, rose, risen", "hinten": "aufragen, emporragen", "seite": "12"},
+            {"vorne": "glow", "hinten": "das Glühen", "seite": "12"},
+            {"vorne": "(to) warm", "hinten": "wärmen", "seite": "12"},
+            {"vorne": "silence", "hinten": "Stille; Schweigen", "seite": "13"},
+            {"vorne": "business", "hinten": "Geschäft, Unternehmen, Angelegenheit(en)", "seite": "13"},
+            {"vorne": "bully", "hinten": "(Schul-)Tyrann/in, Rabauke", "seite": "13"},
+            {"vorne": "(to) bully sb.", "hinten": "jn. mobben, tyrannisieren", "seite": "13"},
+            {"vorne": "We used to live in Aberystwyth.", "hinten": "Wir haben früher in Aberystwyth gewohnt.", "seite": "14"},
+            {"vorne": "(to) attack", "hinten": "angreifen", "seite": "14"},
+            {"vorne": "attack", "hinten": "der Angriff", "seite": "14"},
+            {"vorne": "cultural", "hinten": "kulturell", "seite": "14"},
+            {"vorne": "encyclopedia", "hinten": "Enzyklopädie, Nachschlagewerk", "seite": "14"},
+            {"vorne": "(to) capture", "hinten": "(ein)fangen (auch im übertragenen Sinne)", "seite": "14"},
+            {"vorne": "(to) rebel", "hinten": "sich auflehnen, rebellieren", "seite": "14"},
+            {"vorne": "rebel", "hinten": "Rebell/in", "seite": "14"},
+            {"vorne": "fantastic", "hinten": "fantastisch", "seite": "14"}
+          ]
+        },
+        {
+          "name": "Chapter 5",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "spot", "hinten": "Ort, Fleck", "seite": "15"},
+            {"vorne": "coastline", "hinten": "Küste, Küstenstrich", "seite": "15"},
+            {"vorne": "scenic", "hinten": "malerisch, landschaftlich reizvoll", "seite": "15"},
+            {"vorne": "nearby", "hinten": "nah", "seite": "15"},
+            {"vorne": "confused", "hinten": "verwirrt", "seite": "15"}
+          ]
+        },
+        {
+          "name": "Chapter 6",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "(to) prefer sb./sth.", "hinten": "jn./etwas lieber mögen", "seite": "17"},
+            {"vorne": "(to) utter sth.", "hinten": "etwas äußern", "seite": "18"}
+          ]
+        },
+        {
+          "name": "Chapter 7",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "quite a ...", "hinten": "ein ziemliche(r, s) ..., ein echte(r, s) ...", "seite": "19"},
+            {"vorne": "oddball", "hinten": "Verrückte(r)", "seite": "19"},
+            {"vorne": "try", "hinten": "der Versuch (im Rugby; ähnlich wie ein Tor schießen beim Fußball)", "seite": "19"},
+            {"vorne": "coach", "hinten": "Trainer/in", "seite": "19"},
+            {"vorne": "each other", "hinten": "sich (gegenseitig), einander", "seite": "19"},
+            {"vorne": "lad", "hinten": "der Kumpel, der Junge", "seite": "19"},
+            {"vorne": "(to) enjoy yourself", "hinten": "sich amüsieren, Spaß haben", "seite": "19"},
+            {"vorne": "curly", "hinten": "lockig", "seite": "20"},
+            {"vorne": "coastal", "hinten": "Küsten-", "seite": "20"}
+          ]
+        },
+        {
+          "name": "Chapter 8",
+          "bidirektional": true,
+          "karten": [
+            {"vorne": "impatient", "hinten": "ungeduldig", "seite": "21"},
+            {"vorne": "due", "hinten": "fällig", "seite": "21"},
+            {"vorne": "(to) hand sth. in", "hinten": "etwas abgeben", "seite": "21"},
+            {"vorne": "soppy", "hinten": "übertrieben sentimental, schmalzig", "seite": "21"},
+            {"vorne": "corridor", "hinten": "Gang, Korridor", "seite": "21"},
+            {"vorne": "(to) hand sb. sth.", "hinten": "jm. etwas (über)geben, (über)reichen", "seite": "21"},
+            {"vorne": "stuff", "hinten": "Zeug, Kram", "seite": "22"},
+            {"vorne": "mystery", "hinten": "rätselhaft", "seite": "22"},
+            {"vorne": "hardly", "hinten": "kaum", "seite": "22"},
+            {"vorne": "(to) catch sb.'s eye", "hinten": "Blickkontakt mit jm. herstellen", "seite": "22"},
+            {"vorne": "(to) give up", "hinten": "aufgeben", "seite": "23"},
+            {"vorne": "embarrassed", "hinten": "verlegen; peinlich berührt", "seite": "23"},
+            {"vorne": "favour", "hinten": "Gefallen", "seite": "24"}
+          ]
+        }
+      ]
+    }
+  ]
+}

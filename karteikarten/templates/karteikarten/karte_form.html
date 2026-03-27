@@ -1,0 +1,71 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Karte {{ action }} - Karteikarten{% endblock %}
+
+{% block content %}
+<a href="{% url 'karten_liste' lernblock.pk %}" class="btn btn-link text-muted ps-0 mb-3">
+    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+</a>
+
+<h4 class="mb-4">Karte {{ action }}</h4>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="begriff" class="form-label">Begriff *</label>
+                <input type="text" class="form-control" id="begriff" name="begriff"
+                       value="{{ karte.begriff|default:'' }}" required
+                       placeholder="z.B. Prokrastination">
+            </div>
+
+            <div class="mb-3">
+                <label for="definition" class="form-label">Definition *</label>
+                <textarea class="form-control" id="definition" name="definition"
+                          rows="3" required
+                          placeholder="z.B. Das Aufschieben von Aufgaben">{{ karte.definition|default:'' }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="beispiele" class="form-label">Beispiele</label>
+                <textarea class="form-control" id="beispiele" name="beispiele"
+                          rows="2"
+                          placeholder="z.B. 'Er prokrastiniert seit Wochen.'">{{ karte.beispiele|default:'' }}</textarea>
+                <div class="form-text">Optional: Anwendungsbeispiele</div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="zusatz_label" class="form-label">Zusatz-Feld (Name)</label>
+                        <input type="text" class="form-control" id="zusatz_label" name="zusatz_label"
+                               value="{{ karte.zusatz_label|default:'' }}"
+                               placeholder="z.B. Herkunft">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="zusatz_wert" class="form-label">Zusatz-Feld (Wert)</label>
+                        <input type="text" class="form-control" id="zusatz_wert" name="zusatz_wert"
+                               value="{{ karte.zusatz_wert|default:'' }}"
+                               placeholder="z.B. lat. procrastinare">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary btn-lg">
+            <i class="bi bi-check-lg me-1"></i>Speichern
+        </button>
+        {% if not karte %}
+        <button type="submit" name="weitere" value="1" class="btn btn-outline-primary">
+            <i class="bi bi-plus-lg me-1"></i>Speichern & weitere Karte
+        </button>
+        {% endif %}
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Gemeinsam lernen - Karteikarten{% endblock %}
+
+{% block content %}
+<a href="{% url 'dashboard' %}" class="btn btn-link text-muted ps-0 mb-3">
+    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+</a>
+
+<h4 class="mb-2"><i class="bi bi-collection me-2"></i>Gemeinsam lernen</h4>
+<p class="text-muted mb-4">W&auml;hle mehrere Lernbl&ouml;cke aus, um sie zusammen abzufragen.</p>
+
+{% if total_faellig > 0 %}
+<div class="alert alert-info mb-4">
+    <i class="bi bi-info-circle me-2"></i>
+    <strong>{{ total_faellig }}</strong> Karten sind insgesamt f&auml;llig.
+</div>
+{% endif %}
+
+<form id="kombiniertForm">
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="selectAll" onchange="toggleAll()">
+                <label class="form-check-label fw-bold" for="selectAll">
+                    Alle ausw&auml;hlen
+                </label>
+            </div>
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for item in bloecke %}
+            <li class="list-group-item">
+                <div class="form-check d-flex justify-content-between align-items-center">
+                    <div>
+                        <input class="form-check-input block-checkbox" type="checkbox"
+                               value="{{ item.lernblock.pk }}" id="block{{ item.lernblock.pk }}"
+                               {% if item.faellig > 0 %}checked{% endif %}>
+                        <label class="form-check-label" for="block{{ item.lernblock.pk }}">
+                            {{ item.lernblock.name }}
+                            <span class="text-muted small ms-2">({{ item.anzahl }} Karten)</span>
+                        </label>
+                    </div>
+                    {% if item.faellig > 0 %}
+                    <span class="badge bg-warning text-dark">{{ item.faellig }} f&auml;llig</span>
+                    {% else %}
+                    <span class="badge bg-success"><i class="bi bi-check"></i></span>
+                    {% endif %}
+                </div>
+            </li>
+            {% empty %}
+            <li class="list-group-item text-muted text-center py-4">
+                Keine Lernbl&ouml;cke vorhanden.
+                <a href="{% url 'meine_lernbloecke' %}">Lernbl&ouml;cke ausw&auml;hlen</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if bloecke %}
+    <h6 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Lernmodus</h6>
+    <div class="row g-3 mb-4">
+        <div class="col-6">
+            <button type="button" class="btn btn-primary btn-lg w-100" onclick="startLernen('klassisch')">
+                <i class="bi bi-book d-block mb-1" style="font-size: 1.5rem;"></i>
+                Klassisch
+            </button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-success btn-lg w-100" onclick="startLernen('mc')">
+                <i class="bi bi-ui-radios d-block mb-1" style="font-size: 1.5rem;"></i>
+                Multiple Choice
+            </button>
+        </div>
+    </div>
+    {% endif %}
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function toggleAll() {
+        const selectAll = document.getElementById('selectAll');
+        const checkboxes = document.querySelectorAll('.block-checkbox');
+        checkboxes.forEach(cb => cb.checked = selectAll.checked);
+    }
+
+    function getSelectedBlocks() {
+        const checkboxes = document.querySelectorAll('.block-checkbox:checked');
+        return Array.from(checkboxes).map(cb => cb.value);
+    }
+
+    function startLernen(modus) {
+        const blocks = getSelectedBlocks();
+        if (blocks.length === 0) {
+            alert('Bitte w&auml;hle mindestens einen Lernblock aus.');
+            return;
+        }
+
+        const params = 'bloecke=' + blocks.join(',');
+        if (modus === 'mc') {
+            window.location.href = '{% url "lernen_kombiniert_mc" %}?' + params;
+        } else {
+            window.location.href = '{% url "lernen_kombiniert" %}?' + params;
+        }
+    }
+
+    // Update "select all" state based on individual checkboxes
+    document.querySelectorAll('.block-checkbox').forEach(cb => {
+        cb.addEventListener('change', function() {
+            const all = document.querySelectorAll('.block-checkbox');
+            const checked = document.querySelectorAll('.block-checkbox:checked');
+            document.getElementById('selectAll').checked = all.length === checked.length;
+        });
+    });
+
+    // Set initial state of "select all"
+    (function() {
+        const all = document.querySelectorAll('.block-checkbox');
+        const checked = document.querySelectorAll('.block-checkbox:checked');
+        if (all.length > 0) {
+            document.getElementById('selectAll').checked = all.length === checked.length;
+        }
+    })();
+</script>
+{% endblock %}

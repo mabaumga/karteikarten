@@ -1,0 +1,3440 @@
+{
+  "meta": {
+    "fach": "Französisch",
+    "lehrwerk": "À plus! Nouvelle édition",
+    "band": 4,
+    "klasse": 9,
+    "verlag": "Cornelsen",
+    "sprachen": [
+      "Französisch",
+      "Deutsch"
+    ],
+    "version": "1.0",
+    "quelle": "http://www.vokipedia.de/index.php?title=DEU:Franz%C3%B6sisch:%C3%80_plus!_4_Nouvelle_%C3%A9dition"
+  },
+  "felder": {
+    "vorderseite": "Français",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Unité 1",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "l'avenir m",
+              "hinten": "die Zukunft"
+            },
+            {
+              "vorne": "le métier",
+              "hinten": "der Beruf"
+            },
+            {
+              "vorne": "le dessinateur, la dessinatrice",
+              "hinten": "der/die Zeichner/in"
+            },
+            {
+              "vorne": "la passion",
+              "hinten": "die Leidenschaft"
+            },
+            {
+              "vorne": "être doué/douée pour qc",
+              "hinten": "begabt sein für etw."
+            },
+            {
+              "vorne": "le succès",
+              "hinten": "der Erfolg"
+            },
+            {
+              "vorne": "le conseiller d'orientation",
+              "hinten": "der Berufsberater"
+            },
+            {
+              "vorne": "l'article m",
+              "hinten": "der Artikel, der Zeitungsartikel"
+            },
+            {
+              "vorne": "LeÏla Bekhti",
+              "hinten": "französische Schauspielerin, (Tout ce qui brille)"
+            },
+            {
+              "vorne": "impressionner qn",
+              "hinten": "jdn beeindrucken"
+            },
+            {
+              "vorne": "le courage",
+              "hinten": "der Mut"
+            },
+            {
+              "vorne": "{[ê]} partir de rien",
+              "hinten": "von nichts ausgehen"
+            },
+            {
+              "vorne": "{[ê]} se battre",
+              "hinten": "sich (durch)schlagen, kämpfen"
+            },
+            {
+              "vorne": "battre qn/qc",
+              "hinten": "jdn schlagen, jdn besiegen"
+            },
+            {
+              "vorne": "malgré",
+              "hinten": "trotz"
+            },
+            {
+              "vorne": "modeste",
+              "hinten": "bescheiden"
+            },
+            {
+              "vorne": "ressembler à qn/qc",
+              "hinten": "jmd/etw ähneln"
+            },
+            {
+              "vorne": "Médecins du monde",
+              "hinten": "Ärzte der Welt (1)"
+            },
+            {
+              "vorne": "le médecin",
+              "hinten": "der Arzt, die Ärztin"
+            },
+            {
+              "vorne": "soigner qn/qc",
+              "hinten": "jdn/etw pflegen"
+            },
+            {
+              "vorne": "{[ê]} s'engager",
+              "hinten": "sich engagieren"
+            },
+            {
+              "vorne": "l'exclusion f",
+              "hinten": "die Ausgrenzung"
+            },
+            {
+              "vorne": "quelqu'un de bien",
+              "hinten": "ein guter Mensch (1)"
+            },
+            {
+              "vorne": "admirer qn/qc",
+              "hinten": "jdn/etw bewundern"
+            },
+            {
+              "vorne": "utile f/m adj.",
+              "hinten": "nützlich"
+            },
+            {
+              "vorne": "empêcher qn/qc de + inf.",
+              "hinten": "etw verhindern, jdn an etwas hindern"
+            },
+            {
+              "vorne": "à ta place",
+              "hinten": "an deiner Stelle"
+            },
+            {
+              "vorne": "en ligne",
+              "hinten": "online"
+            },
+            {
+              "vorne": "Ça ne me dit rien (du tout).",
+              "hinten": "Das ist (gar) nichts für mich."
+            },
+            {
+              "vorne": "le/la reporter",
+              "hinten": "der/die Reporter/in"
+            },
+            {
+              "vorne": "imaginer qc",
+              "hinten": "sich etw vorstellen"
+            },
+            {
+              "vorne": "décider de qc",
+              "hinten": "über etw bestimmen"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la responsabilité",
+              "hinten": "die Verantwortung"
+            },
+            {
+              "vorne": "n'en savoir rien",
+              "hinten": "keine Ahnung haben"
+            },
+            {
+              "vorne": "emporter qc",
+              "hinten": "etwas mitnehmen"
+            },
+            {
+              "vorne": "la montre",
+              "hinten": "die Armbanduhr"
+            },
+            {
+              "vorne": "rater qc",
+              "hinten": "etw verpassen, durchfallen"
+            },
+            {
+              "vorne": "l'examen m",
+              "hinten": "die Prüfung, auch: die ärztliche Untersuchung"
+            },
+            {
+              "vorne": "propre f/m adj.",
+              "hinten": "eigen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Sarah voudrait avoir sa propre chambre.",
+                "de": "Sarah hätte gern ihr eigenes Zimmer."
+              }
+            },
+            {
+              "vorne": "l'entreprise f",
+              "hinten": "das Unternehmen"
+            },
+            {
+              "vorne": "repasser qc",
+              "hinten": "etw wiederholen Prüfung"
+            },
+            {
+              "vorne": "poser sa candidature",
+              "hinten": "sich bewerben"
+            },
+            {
+              "vorne": "la candidature",
+              "hinten": "die Bewerbung"
+            },
+            {
+              "vorne": "l'étranger m",
+              "hinten": "das Ausland"
+            },
+            {
+              "vorne": "passionnant, passionnante",
+              "hinten": "faszinierend, fesselnd"
+            },
+            {
+              "vorne": "enrichissant, enrichissante",
+              "hinten": "bereichernd"
+            },
+            {
+              "vorne": "permettre à qn de + inf",
+              "hinten": "jdm erlauben, etw zu tun"
+            },
+            {
+              "vorne": "l'horaire m",
+              "hinten": "die Arbeitszeit, auch: der Fahrplan"
+            },
+            {
+              "vorne": "flexible m/f adj",
+              "hinten": "flexibel"
+            },
+            {
+              "vorne": "gagner de l'argent",
+              "hinten": "Geld verdienen"
+            },
+            {
+              "vorne": "l'ordre m",
+              "hinten": "der Befehl, auch: die Ordnung"
+            },
+            {
+              "vorne": "prendre une décision",
+              "hinten": "eine Entscheidung treffen, einen Entschluss fassen"
+            },
+            {
+              "vorne": "la décision",
+              "hinten": "die Entscheidung, der Entschluss"
+            },
+            {
+              "vorne": "le superhéros, la superhéroïne",
+              "hinten": "der/die Superheld/in"
+            },
+            {
+              "vorne": "sauver qn/qc",
+              "hinten": "jdn/etw retten"
+            },
+            {
+              "vorne": "la qualité",
+              "hinten": "die Qualität, der Vorzug"
+            },
+            {
+              "vorne": "être prêt/prête (à + inf.)",
+              "hinten": "bereit sein (etw. zu tun)"
+            },
+            {
+              "vorne": "prêt, prête",
+              "hinten": "bereit"
+            },
+            {
+              "vorne": "le domaine",
+              "hinten": "das Gebiet, der Bereich"
+            },
+            {
+              "vorne": "optimiste m/f adj",
+              "hinten": "optimistisch"
+            },
+            {
+              "vorne": "le concepteur de jeux vidéo, la conceptrice de jeux vidéo",
+              "hinten": "Game Conceptioner, Entwickler für Videospiele"
+            },
+            {
+              "vorne": "le traducteur, la traductrice",
+              "hinten": "der Übersetzer, die Übersetzerin"
+            },
+            {
+              "vorne": "le salaire fixe",
+              "hinten": "das Festgehalt"
+            },
+            {
+              "vorne": "le salaire",
+              "hinten": "das Gehalt"
+            },
+            {
+              "vorne": "fixe m/f adj",
+              "hinten": "fest, unveränderlich"
+            },
+            {
+              "vorne": "l'économie f",
+              "hinten": "die Wirtschaft, die BWL (= Betriebswirtschaftslehre)"
+            },
+            {
+              "vorne": "curieux, curieuse",
+              "hinten": "neugierig, merkwürdig"
+            },
+            {
+              "vorne": "l'expérience f",
+              "hinten": "die Erfahrung"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le stage",
+              "hinten": "das Praktikum"
+            },
+            {
+              "vorne": "voici",
+              "hinten": "das ist/sind, hier ist/sind"
+            },
+            {
+              "vorne": "le tuyau, les tuyaux",
+              "hinten": "der Tipp"
+            },
+            {
+              "vorne": "la lettre de motivation",
+              "hinten": "das Bewerbungsschreiben"
+            },
+            {
+              "vorne": "l'employeur, l'employeuse",
+              "hinten": "der/die Arbeitgeber/in"
+            },
+            {
+              "vorne": "la demande",
+              "hinten": "die Anfrage, die Bitte"
+            },
+            {
+              "vorne": "être intéressé/intéressée par qn/qc",
+              "hinten": "interessiert sein an jdm/etw"
+            },
+            {
+              "vorne": "de plus",
+              "hinten": "außerdem"
+            },
+            {
+              "vorne": "décorer qc",
+              "hinten": "etw dekorieren, etw (aus-)schmücken"
+            },
+            {
+              "vorne": "servir qn/qc (1)",
+              "hinten": "jdn bedienen, etw servieren"
+            },
+            {
+              "vorne": "en rajouter",
+              "hinten": "dick auftragen"
+            },
+            {
+              "vorne": "particulièrement adv",
+              "hinten": "besonders"
+            },
+            {
+              "vorne": "le service",
+              "hinten": "der Service, die Bedienung"
+            },
+            {
+              "vorne": "les connaissances f plr",
+              "hinten": "die Kenntnisse, das Wissen"
+            },
+            {
+              "vorne": "le serveur, la serveuse",
+              "hinten": "der/die Kellner/in"
+            },
+            {
+              "vorne": "motivé, motivée",
+              "hinten": "motiviert"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Dans l'attente de votre réponse, je vous prie de recevoir, Madame, Monsieur, mes salutations respectueuses (1)",
+                "de": "Mit freundlichen Grüßen"
+              }
+            },
+            {
+              "vorne": "signer",
+              "hinten": "unterschreiben"
+            },
+            {
+              "vorne": "la pièce jointe",
+              "hinten": "der Anhang"
+            },
+            {
+              "vorne": "le CV (= curriculum vitae)",
+              "hinten": "der Lebenslauf"
+            },
+            {
+              "vorne": "le document",
+              "hinten": "das Dokument, die Unterlagen"
+            },
+            {
+              "vorne": "la photo d'identité",
+              "hinten": "das Passphoto"
+            },
+            {
+              "vorne": "sourire (1)",
+              "hinten": "lächeln"
+            },
+            {
+              "vorne": "ça fait + adj",
+              "hinten": "das wirkt + Adjektiv"
+            },
+            {
+              "vorne": "la formation",
+              "hinten": "die Ausbildung"
+            },
+            {
+              "vorne": "l'échange m",
+              "hinten": "der Austausch, der Tausch"
+            },
+            {
+              "vorne": "quinze jours",
+              "hinten": "vierzehn Tage, zwei Wochen"
+            },
+            {
+              "vorne": "professionnel, professionnelle",
+              "hinten": "beruflich, Berufs-"
+            },
+            {
+              "vorne": "l'informatique f",
+              "hinten": "die Informatik"
+            },
+            {
+              "vorne": "la réponse",
+              "hinten": "die Antwort"
+            },
+            {
+              "vorne": "recevoir (1)",
+              "hinten": "empfangen, erhalten"
+            },
+            {
+              "vorne": "à l'appareil",
+              "hinten": "am Apparat"
+            },
+            {
+              "vorne": "Ne quittez pas.",
+              "hinten": "Bleiben Sie dran."
+            },
+            {
+              "vorne": "Je vous (le/la) passe.",
+              "hinten": "Ich stelle Sie (zu ihm/ihr) durch."
+            },
+            {
+              "vorne": "le patron, la patronne",
+              "hinten": "der/die Chef/in"
+            },
+            {
+              "vorne": "c'est bien ça?",
+              "hinten": "nicht wahr? Rückfrage"
+            },
+            {
+              "vorne": "l'apprenti, l'apprentie",
+              "hinten": "der/die Auszubildende/r, der Lehrling"
+            },
+            {
+              "vorne": "autonome",
+              "hinten": "selbstständig"
+            },
+            {
+              "vorne": "la réception",
+              "hinten": "die Rezeption, der Empfang"
+            },
+            {
+              "vorne": "discuter (de qc)",
+              "hinten": "reden, über etw diskutieren"
+            },
+            {
+              "vorne": "demander à parler à qn",
+              "hinten": "nach jdm fragen"
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "{[ê]} ne pas se poser de questions",
+              "hinten": "nicht groß nachdenken",
+              "beispiel": "Il ne se pose pas des questions, il prend le billet d'avion."
+            },
+            {
+              "vorne": "les petites annonces f. plr.",
+              "hinten": "die Kleinanzeigen",
+              "beispiel": "À la sortie des supermarchés, il y a souvent des petites annonces."
+            },
+            {
+              "vorne": "en général",
+              "hinten": "normalerweise, im Allgemeinen",
+              "beispiel": "En général, il n'est pas comme ça."
+            },
+            {
+              "vorne": "d'occasion",
+              "hinten": "gebraucht",
+              "beispiel": "Dans les petites annonces on trouve des vélos d'occasion."
+            },
+            {
+              "vorne": "bon marché adj. inv",
+              "hinten": "billig",
+              "beispiel": "Les vélos d'occasion sont souvent bon marché."
+            },
+            {
+              "vorne": "parfait, parfaite",
+              "hinten": "perfekt, ausgezeichnet",
+              "beispiel": "C'était un journée parfaite."
+            },
+            {
+              "vorne": "le coup de fil fam",
+              "hinten": "der Anruf",
+              "beispiel": "Tous les soirs, elle me passe un coup de fil."
+            },
+            {
+              "vorne": "la tête",
+              "hinten": "der Kopf; hier: das Gesicht",
+              "beispiel": "J'ai souvent mal à la tête."
+            },
+            {
+              "vorne": "l'intello m./f.",
+              "hinten": "der/die Streber/in",
+              "beispiel": "Ils disent que je suis un intello."
+            },
+            {
+              "vorne": "{[ê]} sortir avec qn",
+              "hinten": "mit jdm. zusammen sein in einer Beziehung",
+              "beispiel": "J'aimerais bien sortir avec Philippe, mais il a déjà une petite amie."
+            },
+            {
+              "vorne": "faire du baby-sitting",
+              "hinten": "babysitten",
+              "beispiel": "Depuis un an, je fais du baby-sitting chez les voisins."
+            },
+            {
+              "vorne": "tellement (de)",
+              "hinten": "so, so sehr, so viel (e), dermaßen (viel/e)",
+              "beispiel": "J'ai tellement de choses á te raconter, je ne suis pas par oú commencer."
+            },
+            {
+              "vorne": "servir à qc (1)",
+              "hinten": "von Nutzen sein, zu etwas dienen",
+              "beispiel": "Ça sert a quoi, ce truc?"
+            },
+            {
+              "vorne": "le ciel",
+              "hinten": "der Himmel",
+              "beispiel": "Il pleut et le ciel est gris."
+            },
+            {
+              "vorne": "les pâtes f plr.",
+              "hinten": "Nudeln",
+              "beispiel": "Les pâtes avec la sauce tomate, c'est très bon."
+            },
+            {
+              "vorne": "gagner de l'argent",
+              "hinten": "Geld verdienen",
+              "beispiel": "Avec un petit job, les jeunes peuvent gagner de l'argent."
+            },
+            {
+              "vorne": "l'impression f",
+              "hinten": "der Eindruck",
+              "beispiel": "J'ai l'impression qu'il ment."
+            },
+            {
+              "vorne": "le centimètre",
+              "hinten": "der Zentimeter"
+            },
+            {
+              "vorne": "épanouissant",
+              "hinten": "hier: interessant"
+            },
+            {
+              "vorne": "préciser",
+              "hinten": "präzisieren"
+            },
+            {
+              "vorne": "la durée",
+              "hinten": "die Dauer"
+            },
+            {
+              "vorne": "tout de même",
+              "hinten": "trotzdem"
+            },
+            {
+              "vorne": "faire le calcul",
+              "hinten": "etw. berechnen"
+            },
+            {
+              "vorne": "il me resterai de quoi + inf",
+              "hinten": "mit dem Rest könnte ich + inf"
+            },
+            {
+              "vorne": "l'intello de service",
+              "hinten": "der Streber vom Dienst"
+            },
+            {
+              "vorne": "celle qui",
+              "hinten": "diejenige, die"
+            },
+            {
+              "vorne": "le sein",
+              "hinten": "die Brust"
+            },
+            {
+              "vorne": "le soulagement",
+              "hinten": "die Erleichterung"
+            },
+            {
+              "vorne": "défiler",
+              "hinten": "marschieren, aufmarschieren"
+            },
+            {
+              "vorne": "se demander à quoi sert quoi",
+              "hinten": "sich fragen, wozu etw. nutzt"
+            },
+            {
+              "vorne": "être d'une autre trempe",
+              "hinten": "aus anderem Holz geschnitzt"
+            },
+            {
+              "vorne": "prendre dix centimètres",
+              "hinten": "um zehn Zentimeter wachsen"
+            },
+            {
+              "vorne": "le coup de téléphone",
+              "hinten": "der Telefonanruf"
+            },
+            {
+              "vorne": "langer",
+              "hinten": "wickeln"
+            },
+            {
+              "vorne": "cartonner",
+              "hinten": "großen Erfolg haben"
+            },
+            {
+              "vorne": "le succès",
+              "hinten": "der Erfolg"
+            },
+            {
+              "vorne": "le tome",
+              "hinten": "der Band"
+            },
+            {
+              "vorne": "la file d'attente",
+              "hinten": "die Warteschlange"
+            },
+            {
+              "vorne": "le chômeur, la chômeuse",
+              "hinten": "der/die Arbeitslose"
+            },
+            {
+              "vorne": "carrément fam",
+              "hinten": "total, direkt"
+            },
+            {
+              "vorne": "flipper fam",
+              "hinten": "Panik kriegen, ausflippen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 2",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le coté",
+              "hinten": "die Seite"
+            },
+            {
+              "vorne": "le Rhin",
+              "hinten": "der Rhein"
+            },
+            {
+              "vorne": "la différence",
+              "hinten": "der Unterschied"
+            },
+            {
+              "vorne": "le vasistas",
+              "hinten": "das (kleine) Klappfenster"
+            },
+            {
+              "vorne": "Karambolage",
+              "hinten": "Karambolage (1)"
+            },
+            {
+              "vorne": "faire pareil que",
+              "hinten": "etw genauso machen wie"
+            },
+            {
+              "vorne": "l'habitude f",
+              "hinten": "die Gewohnheit"
+            },
+            {
+              "vorne": "quotidien, quotidienne",
+              "hinten": "täglich"
+            },
+            {
+              "vorne": "les mouillettes f plr",
+              "hinten": "Brotstreifen zum Tunken"
+            },
+            {
+              "vorne": "l'œuf à la coque",
+              "hinten": "das (weich)gekochte Ei"
+            },
+            {
+              "vorne": "en général",
+              "hinten": "normalerweise, im Allgemeinen"
+            },
+            {
+              "vorne": "mettre qc",
+              "hinten": "hier: etw streichen"
+            },
+            {
+              "vorne": "la tranche",
+              "hinten": "die Scheibe"
+            },
+            {
+              "vorne": "découper qc",
+              "hinten": "etw schneiden, etw ausschneiden"
+            },
+            {
+              "vorne": "en plastique",
+              "hinten": "aus Plastik"
+            },
+            {
+              "vorne": "le morceau, les morceaux",
+              "hinten": "das Stück"
+            },
+            {
+              "vorne": "fin, fine",
+              "hinten": "fein, dünn"
+            },
+            {
+              "vorne": "tremper",
+              "hinten": "tunken"
+            },
+            {
+              "vorne": "drôlement",
+              "hinten": "ziemlich, ganz schön"
+            },
+            {
+              "vorne": "cuit, cuite",
+              "hinten": "gekocht"
+            },
+            {
+              "vorne": "en mettre partout",
+              "hinten": "alles voll kleckern"
+            },
+            {
+              "vorne": "dommage",
+              "hinten": "schade"
+            },
+            {
+              "vorne": "la petite cuillère",
+              "hinten": "der Teelöffel"
+            },
+            {
+              "vorne": "le plastique",
+              "hinten": "das Plastik, der Kunststoff"
+            },
+            {
+              "vorne": "le métal",
+              "hinten": "das Metall"
+            },
+            {
+              "vorne": "à la place de",
+              "hinten": "anstelle von, statt"
+            },
+            {
+              "vorne": "le cornet",
+              "hinten": "die spitze Tüte, auch: die Eiswaffel"
+            },
+            {
+              "vorne": "le carton",
+              "hinten": "der Karton"
+            },
+            {
+              "vorne": "le papier",
+              "hinten": "das Papier, das Dokument"
+            },
+            {
+              "vorne": "le ruban",
+              "hinten": "das Band"
+            },
+            {
+              "vorne": "fièrement adv",
+              "hinten": "stolz adv"
+            },
+            {
+              "vorne": "faire  qc soi-même",
+              "hinten": "etw. selbst machen"
+            },
+            {
+              "vorne": "remplir qc (1)",
+              "hinten": "etw füllen, etw ausfüllen"
+            },
+            {
+              "vorne": "Chut!",
+              "hinten": "Pst!"
+            },
+            {
+              "vorne": "le contenu",
+              "hinten": "der Inhalt"
+            },
+            {
+              "vorne": "introduire",
+              "hinten": "einführen, einleiten"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le lycée",
+              "hinten": "das Gymnasium, die gymnasiale Oberstufe"
+            },
+            {
+              "vorne": "Brigitte Sauzay",
+              "hinten": "Französische Dolmetscherin (*1947- t 2003) (1)"
+            },
+            {
+              "vorne": "revenir",
+              "hinten": "zurückkommen"
+            },
+            {
+              "vorne": "évidemment",
+              "hinten": "natürlich, selbstverständlich"
+            },
+            {
+              "vorne": "le site (web)",
+              "hinten": "die Webseite"
+            },
+            {
+              "vorne": "l'OFAJ (Office franco-allemand pour la Jeunesse) m",
+              "hinten": "das DFJW (Deutsch-französisches Jugendwerk)"
+            },
+            {
+              "vorne": "correspondre à",
+              "hinten": "entsprechen"
+            },
+            {
+              "vorne": "la seconde",
+              "hinten": "wörtl.: die zweite, erstes Jahr der Oberstufe"
+            },
+            {
+              "vorne": "la famille d'accueil",
+              "hinten": "die Gastfamilie"
+            },
+            {
+              "vorne": "absolument",
+              "hinten": "ganz, unbedingt"
+            },
+            {
+              "vorne": "gentiment adv",
+              "hinten": "netterweise adv"
+            },
+            {
+              "vorne": "mot à mot",
+              "hinten": "wortwörtlich"
+            },
+            {
+              "vorne": "même si",
+              "hinten": "auch wenn, selbst wenn"
+            },
+            {
+              "vorne": "éclater de rire",
+              "hinten": "in Lachen ausbrechen"
+            },
+            {
+              "vorne": "couramment adv",
+              "hinten": "fließend adv"
+            },
+            {
+              "vorne": "énormément adv",
+              "hinten": "sehr viel, gewaltig"
+            },
+            {
+              "vorne": "le progrès",
+              "hinten": "der Fortschritt"
+            },
+            {
+              "vorne": "le séjour",
+              "hinten": "der Aufenthalt"
+            },
+            {
+              "vorne": "différemment adv",
+              "hinten": "anders adv"
+            },
+            {
+              "vorne": "de manière",
+              "hinten": "auf... Art und Weise"
+            },
+            {
+              "vorne": "être assis, être assise",
+              "hinten": "sitzen"
+            },
+            {
+              "vorne": "faire le tour de qc",
+              "hinten": "um etw. herumgehen"
+            },
+            {
+              "vorne": "pas grand-chose",
+              "hinten": "nicht viel, nichts Besonderes"
+            },
+            {
+              "vorne": "le carnet de correspondance",
+              "hinten": "Mitteilungsheft zur Kommunikation zwischen Eltern und Schulverwaltung"
+            },
+            {
+              "vorne": "carrément adv fam",
+              "hinten": "total, direkt"
+            },
+            {
+              "vorne": "s'entendre (bien)",
+              "hinten": "sich (gut) verstehen"
+            },
+            {
+              "vorne": "pourtant",
+              "hinten": "obwohl"
+            },
+            {
+              "vorne": "passer",
+              "hinten": "hier: vorbeigehen, vergehen zeitlich"
+            },
+            {
+              "vorne": "le mal du pays",
+              "hinten": "das Heimweh"
+            },
+            {
+              "vorne": "par contre",
+              "hinten": "jedoch, allerdings"
+            },
+            {
+              "vorne": "avoir mal à",
+              "hinten": "Schmerzen haben an/am"
+            },
+            {
+              "vorne": "le ventre",
+              "hinten": "der Bauch"
+            },
+            {
+              "vorne": "l'eau gazeuse f",
+              "hinten": "das Mineralwasser mit Kohlensäure"
+            },
+            {
+              "vorne": "l'eau plate f",
+              "hinten": "das stille (Mineral-)Wasser"
+            },
+            {
+              "vorne": "manquer",
+              "hinten": "fehlen, verpassen"
+            },
+            {
+              "vorne": "se débrouiller",
+              "hinten": "zurechtkommen"
+            },
+            {
+              "vorne": "forcément adv",
+              "hinten": "zwangsläufig"
+            },
+            {
+              "vorne": "indépendant, indépendante",
+              "hinten": "unabhängig"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'en ai jusque-là!",
+                "de": "Mir steht's bis hier!"
+              }
+            },
+            {
+              "vorne": "le vin",
+              "hinten": "der Wein"
+            },
+            {
+              "vorne": "n'est-ce pas",
+              "hinten": "nicht (wahr), oder (etwa nicht)"
+            },
+            {
+              "vorne": "la pomme de terre",
+              "hinten": "die Kartoffel"
+            },
+            {
+              "vorne": "serrer la main à qn",
+              "hinten": "jdm die Hand geben"
+            },
+            {
+              "vorne": "{[ê]} se faire la bise",
+              "hinten": "sich mit Küsschen begrüßen/veranschieden"
+            },
+            {
+              "vorne": "la saucisse",
+              "hinten": "die Wurst"
+            },
+            {
+              "vorne": "{[ê]} se marrer",
+              "hinten": "Spaß haben"
+            },
+            {
+              "vorne": "l'anecdote f",
+              "hinten": "die Anekdote"
+            },
+            {
+              "vorne": "une sorte de",
+              "hinten": "eine Art (von)"
+            },
+            {
+              "vorne": "la pomme de terre",
+              "hinten": "die Kartoffel"
+            },
+            {
+              "vorne": "la saucisse",
+              "hinten": "die Wurst"
+            },
+            {
+              "vorne": "goûter",
+              "hinten": "kosten, probieren"
+            },
+            {
+              "vorne": "unique",
+              "hinten": "einzig, einzigartig"
+            },
+            {
+              "vorne": "le verre",
+              "hinten": "das Glas"
+            },
+            {
+              "vorne": "au bout de",
+              "hinten": "am Ende von"
+            },
+            {
+              "vorne": "le malentendu",
+              "hinten": "das Missverständnis"
+            },
+            {
+              "vorne": "les faux amis m plr",
+              "hinten": "wörtl: falsche Freunde, Wörter aus unterschiedlichen Sprachen, die sich sehr ähnlich sind, aber nicht dieselbe Bedeutung haben"
+            },
+            {
+              "vorne": "servir à qc (1)",
+              "hinten": "von Nutzen sein, zu etw. dienen"
+            },
+            {
+              "vorne": "il paraît que",
+              "hinten": "angeblich"
+            },
+            {
+              "vorne": "le kiwi",
+              "hinten": "die Kiwi"
+            },
+            {
+              "vorne": "Il fallait y penser!",
+              "hinten": "Darauf muss man erst mal kommen!"
+            },
+            {
+              "vorne": "rejoindre qn",
+              "hinten": "jmd. treffen, jmd. einholen"
+            },
+            {
+              "vorne": "exactement adv",
+              "hinten": "genau adv"
+            },
+            {
+              "vorne": "{[ê]} se tromper",
+              "hinten": "sich täuschen, sich irren"
+            },
+            {
+              "vorne": "avoir qc en tête",
+              "hinten": "sich etw. vorstellen, an etw. denken, wörtl: etw. im Kopf haben"
+            },
+            {
+              "vorne": "la tête",
+              "hinten": "der Kopf, auch: das Gesicht"
+            },
+            {
+              "vorne": "{[ê]} se plaindre de  (1)",
+              "hinten": "sich beklagen über"
+            },
+            {
+              "vorne": "l'oreiller m",
+              "hinten": "das Kopfkissen"
+            },
+            {
+              "vorne": "en forme de",
+              "hinten": "in Form von"
+            },
+            {
+              "vorne": "gros, grosse",
+              "hinten": "groß, dick"
+            },
+            {
+              "vorne": "la comparaison",
+              "hinten": "der Vergleich"
+            },
+            {
+              "vorne": "amusant, amusante",
+              "hinten": "lustig, unterhaltsam"
+            },
+            {
+              "vorne": "le traversin",
+              "hinten": "langes Kopfkissen in Form einer Rolle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 3",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le continent",
+              "hinten": "der Kontinent"
+            },
+            {
+              "vorne": "africain, africaine",
+              "hinten": "afrikanisch"
+            },
+            {
+              "vorne": "le Sénégal",
+              "hinten": "der Senegal"
+            },
+            {
+              "vorne": "national, nationale, nationaux m plr",
+              "hinten": "national, National-"
+            },
+            {
+              "vorne": "le wolof",
+              "hinten": "Sprache, die vor allem im Norden und Westen des Senegal gesprochen wird, Wolof"
+            },
+            {
+              "vorne": "le peul",
+              "hinten": "Fulfulde, westafrikanische Sprache, die auch im Senegal gesprochen wird"
+            },
+            {
+              "vorne": "les ressources f plr",
+              "hinten": "die Ressourcen, hier: die Bodenschätze"
+            },
+            {
+              "vorne": "l'agriculture f",
+              "hinten": "die Landwirtschaft"
+            },
+            {
+              "vorne": "l'arachide f",
+              "hinten": "die Erdnuss"
+            },
+            {
+              "vorne": "le coton",
+              "hinten": "die Baumwolle, die Watte"
+            },
+            {
+              "vorne": "la mangue",
+              "hinten": "die Mango"
+            },
+            {
+              "vorne": "le Maroc",
+              "hinten": "Marokko"
+            },
+            {
+              "vorne": "l'arabe m",
+              "hinten": "Arabisch"
+            },
+            {
+              "vorne": "le berbère",
+              "hinten": "die Berbersprache, Berberisch"
+            },
+            {
+              "vorne": "l'espagnol m",
+              "hinten": "Spanisch"
+            },
+            {
+              "vorne": "l'olive f",
+              "hinten": "die Olive"
+            },
+            {
+              "vorne": "l'élevage m",
+              "hinten": "die Zucht, die Aufzucht"
+            },
+            {
+              "vorne": "le mouton",
+              "hinten": "das Schaf"
+            },
+            {
+              "vorne": "le phosphate",
+              "hinten": "das Phosphat"
+            },
+            {
+              "vorne": "l'argent m",
+              "hinten": "das Silber"
+            },
+            {
+              "vorne": "la Côte d'Ivoire",
+              "hinten": "die Elfenbeinküste"
+            },
+            {
+              "vorne": "le baoulé",
+              "hinten": "Sprache, die im Zentrum der Elfenbeinküste gesprochen wird, Baule"
+            },
+            {
+              "vorne": "le dioula",
+              "hinten": "Sprache, die im Norden der Elfenbeinküste gesprochen wird, Dioula"
+            },
+            {
+              "vorne": "le malinké",
+              "hinten": "westafrikanische Sprache, die auch im Nordwesten der Elfenbeinküste gesprochen wird, Malinke"
+            },
+            {
+              "vorne": "le cacao",
+              "hinten": "der Kakao"
+            },
+            {
+              "vorne": "le café",
+              "hinten": "der Kaffee"
+            },
+            {
+              "vorne": "le caoutchouc",
+              "hinten": "der Kautschuk"
+            },
+            {
+              "vorne": "l'huile f",
+              "hinten": "das Öl"
+            },
+            {
+              "vorne": "l'huile de palme f",
+              "hinten": "das Palmöl"
+            },
+            {
+              "vorne": "le bois",
+              "hinten": "das Holz"
+            },
+            {
+              "vorne": "l'Algérie f",
+              "hinten": "Algerien"
+            },
+            {
+              "vorne": "la datte",
+              "hinten": "die Dattel"
+            },
+            {
+              "vorne": "le gaz",
+              "hinten": "das Gas"
+            },
+            {
+              "vorne": "le gaz naturel",
+              "hinten": "Erdgas"
+            },
+            {
+              "vorne": "le pétrole",
+              "hinten": "das Erdöl"
+            },
+            {
+              "vorne": "le désert",
+              "hinten": "die Wüste"
+            },
+            {
+              "vorne": "peuplé, peuplée",
+              "hinten": "bevölkert"
+            },
+            {
+              "vorne": "l'Asie f",
+              "hinten": "Asien"
+            },
+            {
+              "vorne": "le milliard",
+              "hinten": "die Milliarde"
+            },
+            {
+              "vorne": "la majorité",
+              "hinten": "die Mehrheit"
+            },
+            {
+              "vorne": "l'enseignement m",
+              "hinten": "der Unterricht, das Schulwesen"
+            },
+            {
+              "vorne": "la plupart de",
+              "hinten": "die meisten von"
+            },
+            {
+              "vorne": "la moitié",
+              "hinten": "die Hälfte"
+            },
+            {
+              "vorne": "l'immigré, l'immigrée",
+              "hinten": "der Einwanderer, die Einwanderin"
+            },
+            {
+              "vorne": "le tiers",
+              "hinten": "das Drittel"
+            },
+            {
+              "vorne": "le Maghreb",
+              "hinten": "der Maghreb"
+            },
+            {
+              "vorne": "subsaharien, subsaharienne",
+              "hinten": "subsaharaisch, südlich der Sahara"
+            },
+            {
+              "vorne": "l'origine f",
+              "hinten": "die Herkunft, der Ursprung"
+            },
+            {
+              "vorne": "Dakar",
+              "hinten": "Hauptstadt des Senegal"
+            },
+            {
+              "vorne": "Abidjan",
+              "hinten": "Regierungssitz und ehemalige Hauptstadt der Elfenbeinküste"
+            },
+            {
+              "vorne": "Alger",
+              "hinten": "Hauptstadt Algeriens"
+            },
+            {
+              "vorne": "Casablanca",
+              "hinten": "größte Stadt Marokkos"
+            },
+            {
+              "vorne": "le Mali",
+              "hinten": "Mali, westafrikanischer Staat"
+            },
+            {
+              "vorne": "le Burkina Faso",
+              "hinten": "Burkina Faso"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le portrait",
+              "hinten": "das Portrait"
+            },
+            {
+              "vorne": "Odienné",
+              "hinten": "Odienné, Stadt im Nordwesten der Elfenbeinküste"
+            },
+            {
+              "vorne": "le nom",
+              "hinten": "der Name, der Nachname"
+            },
+            {
+              "vorne": "Bamako",
+              "hinten": "Hauptstadt von Mali"
+            },
+            {
+              "vorne": "{[ê]} s'exiler",
+              "hinten": "ins Exil gehen"
+            },
+            {
+              "vorne": "critiquer",
+              "hinten": "kritisieren"
+            },
+            {
+              "vorne": "ivoirien, ivoirienne",
+              "hinten": "aus der Elfenbeinküste, ivorisch"
+            },
+            {
+              "vorne": "engagé, engagée",
+              "hinten": "engagiert"
+            },
+            {
+              "vorne": "la corruption",
+              "hinten": "die Korruption, die Bestechung"
+            },
+            {
+              "vorne": "la pauvreté",
+              "hinten": "die Armut"
+            },
+            {
+              "vorne": "l'organisation f",
+              "hinten": "die Organisation"
+            },
+            {
+              "vorne": "l'action f",
+              "hinten": "die Aktion, die Tat"
+            },
+            {
+              "vorne": "la faim",
+              "hinten": "der Hunger"
+            },
+            {
+              "vorne": "donner une voix à qn",
+              "hinten": "jmd. eine Stimme geben"
+            },
+            {
+              "vorne": "créer",
+              "hinten": "erschaffen, hier: gründen"
+            },
+            {
+              "vorne": "l'image f",
+              "hinten": "das Bild"
+            },
+            {
+              "vorne": "positif, positive",
+              "hinten": "positiv"
+            },
+            {
+              "vorne": "Fatym Layachi",
+              "hinten": "marokkanische Schauspielerin"
+            },
+            {
+              "vorne": "marocain, marocaine",
+              "hinten": "marokkanisch"
+            },
+            {
+              "vorne": "le bac, le baccalauréat",
+              "hinten": "das Abi, das Abitur"
+            },
+            {
+              "vorne": "le Cours Florent",
+              "hinten": "private Schauspielschule in Paris"
+            },
+            {
+              "vorne": "le Marocain, le Marocaine",
+              "hinten": "der Marokkaner, die Marokkanerin"
+            },
+            {
+              "vorne": "le symbole",
+              "hinten": "das Symbol, das Zeichen"
+            },
+            {
+              "vorne": "depuis que",
+              "hinten": "seit, seitdem"
+            },
+            {
+              "vorne": "la jeunesse",
+              "hinten": "die Jugend"
+            },
+            {
+              "vorne": "doré, dorée",
+              "hinten": "vergoldet, hier: reich"
+            },
+            {
+              "vorne": "selon",
+              "hinten": "nach, laut"
+            },
+            {
+              "vorne": "le modèle",
+              "hinten": "das Vorbild, das Modell"
+            },
+            {
+              "vorne": "occidental, occidentale, occidentaux",
+              "hinten": "westlich"
+            },
+            {
+              "vorne": "attaché (à qc/qn), attachée (à qc/qn)",
+              "hinten": "verbunden, festgemacht (an etw/jdn)"
+            },
+            {
+              "vorne": "le multiculturalisme",
+              "hinten": "die Multikulturalität"
+            },
+            {
+              "vorne": "{[ê]} s'imposer",
+              "hinten": "sich behaupten"
+            },
+            {
+              "vorne": "mettre en scène",
+              "hinten": "inszenieren"
+            },
+            {
+              "vorne": "le refus",
+              "hinten": "die Weigerung, die Ablehnung"
+            },
+            {
+              "vorne": "{[ê]} (se) poser des questions",
+              "hinten": "(sich) Fragen stellen"
+            },
+            {
+              "vorne": "la création",
+              "hinten": "die Schöpfung, das Kreieren, auch: das Werk"
+            },
+            {
+              "vorne": "la censure",
+              "hinten": "die Zensur nicht Schulnote"
+            },
+            {
+              "vorne": "l'art m",
+              "hinten": "die Kunst"
+            },
+            {
+              "vorne": "{[ê]} se développer",
+              "hinten": "sich entwickeln"
+            },
+            {
+              "vorne": "Marguerite Abouet",
+              "hinten": "ivorische Schriftstellerin"
+            },
+            {
+              "vorne": "Yopougon",
+              "hinten": "Stadtviertel in Abidjan"
+            },
+            {
+              "vorne": "le quartier populaire",
+              "hinten": "einfaches, ärmeres Stadtviertel"
+            },
+            {
+              "vorne": "faire du baby-sitting",
+              "hinten": "babysitten"
+            },
+            {
+              "vorne": "l'enfance f",
+              "hinten": "die Kindheit"
+            },
+            {
+              "vorne": "le mari",
+              "hinten": "der Ehemann, der Mann"
+            },
+            {
+              "vorne": "Clément Oubrerie",
+              "hinten": "französischer Illustrator, Comic- und Trickfilmzeichner"
+            },
+            {
+              "vorne": "il fait bon vivre",
+              "hinten": "es lebt sich gut"
+            },
+            {
+              "vorne": "{[ê]} sortir",
+              "hinten": "hier: anlaufen Film"
+            },
+            {
+              "vorne": "la bibliothèque",
+              "hinten": "die Bibliothek, die Bücherei"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "énorme m/f adj",
+              "hinten": "riesig"
+            },
+            {
+              "vorne": "{[ê]} se bousculer",
+              "hinten": "sich drängeln"
+            },
+            {
+              "vorne": "assister à",
+              "hinten": "teilnehmen, dabei sein"
+            },
+            {
+              "vorne": "tirer",
+              "hinten": "schießen, ziehen"
+            },
+            {
+              "vorne": "le clin d'œil",
+              "hinten": "der Augenblick, das Zwinkern"
+            },
+            {
+              "vorne": "en un clin d'œil",
+              "hinten": "im Handumdrehen"
+            },
+            {
+              "vorne": "{[ê]} s'asseoir",
+              "hinten": "sich hinsetzen"
+            },
+            {
+              "vorne": "s'asseoir //  <!>sich hinsetzen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je m'assois]→[nous nous asseyons]→2.→[tu t'assois]→[vous vous asseyez]→3.→[il s'assoit]→[ils s'assoient]",
+              "hinten": "<!>s'asseoir</!> //   sich hinsetzen<!>Présent</!>"
+            },
+            {
+              "vorne": "emmener",
+              "hinten": "mitnehmen"
+            },
+            {
+              "vorne": "plein, pleine",
+              "hinten": "voll"
+            },
+            {
+              "vorne": "plus bas",
+              "hinten": "weiter unten"
+            },
+            {
+              "vorne": "le fou, la folle",
+              "hinten": "der/die Verrückte, der Fan"
+            },
+            {
+              "vorne": "faire de la musculation",
+              "hinten": "Krafttraining machen"
+            },
+            {
+              "vorne": "le son",
+              "hinten": "der Ton, der Klang"
+            },
+            {
+              "vorne": "renverser",
+              "hinten": "kippen, umstoßen"
+            },
+            {
+              "vorne": "la tête",
+              "hinten": "der Kopf"
+            },
+            {
+              "vorne": "porter chance",
+              "hinten": "Glück bringen"
+            },
+            {
+              "vorne": "le combat",
+              "hinten": "der Kampf"
+            },
+            {
+              "vorne": "le public",
+              "hinten": "das Publikum"
+            },
+            {
+              "vorne": "concentré, concentrée",
+              "hinten": "konzentriert"
+            },
+            {
+              "vorne": "la terre",
+              "hinten": "der Boden, die Erde // auch: die Welt"
+            },
+            {
+              "vorne": "l'épaule f",
+              "hinten": "die Schulter"
+            },
+            {
+              "vorne": "populaire m/f adj",
+              "hinten": "beliebt, populär"
+            },
+            {
+              "vorne": "le footing",
+              "hinten": "das Joggen, das Laufen"
+            },
+            {
+              "vorne": "gaspiller",
+              "hinten": "verschwenden"
+            },
+            {
+              "vorne": "grâce à",
+              "hinten": "dank"
+            },
+            {
+              "vorne": "De quoi je me mêle?",
+              "hinten": "Was geht Dich das an?"
+            },
+            {
+              "vorne": "Tais-toi!",
+              "hinten": "Sei still!, Schweig!"
+            },
+            {
+              "vorne": "la bouche",
+              "hinten": "der Mund"
+            },
+            {
+              "vorne": "le prix, les prix",
+              "hinten": "der Preis"
+            },
+            {
+              "vorne": "l'impression f",
+              "hinten": "der Eindruck"
+            },
+            {
+              "vorne": "la Médina",
+              "hinten": "die Medina, Name der Altstadt in arabischen und (nord-)afrikanischen Städten"
+            },
+            {
+              "vorne": "accueillir",
+              "hinten": "empfangen, aufnehmen"
+            },
+            {
+              "vorne": "sénégalais, sénégalaise",
+              "hinten": "senegalisch"
+            },
+            {
+              "vorne": "le tiep-bou-diene",
+              "hinten": "traditionelles senegalesisches Gericht aus Fisch und Reis"
+            },
+            {
+              "vorne": "le poulet",
+              "hinten": "das Hähnchen"
+            },
+            {
+              "vorne": "le poulet yassa",
+              "hinten": "Hähnchen mit Zitrone nach senegalesischer Art"
+            },
+            {
+              "vorne": "le citron vert",
+              "hinten": "die Limone"
+            },
+            {
+              "vorne": "{[ê]} se balader fam",
+              "hinten": "spazieren gehen, herumlaufen"
+            },
+            {
+              "vorne": "le Plateau",
+              "hinten": "modernes Stadtviertel im Süden von Dakar"
+            },
+            {
+              "vorne": "le marché Sandaga",
+              "hinten": "großer Markt in Dakar"
+            },
+            {
+              "vorne": "l'indépendance f",
+              "hinten": "die Unabhängigkeit"
+            },
+            {
+              "vorne": "la vaisselle",
+              "hinten": "das Geschirr"
+            },
+            {
+              "vorne": "le tissu",
+              "hinten": "der Stoff"
+            },
+            {
+              "vorne": "la viande",
+              "hinten": "das Fleisch"
+            },
+            {
+              "vorne": "le boubou",
+              "hinten": "der Boubou, traditionelle Männerbekleidung in West- und Nordafrika"
+            },
+            {
+              "vorne": "marchander",
+              "hinten": "handeln, verhandeln"
+            },
+            {
+              "vorne": "être pressé, être pressée",
+              "hinten": "es eilig haben"
+            },
+            {
+              "vorne": "le franc CFA",
+              "hinten": "der CFA-Franc, Franc de la Communauté Financière d'Afrique, Währung, die hauptsächlich in frankophonen Ländern West- und Zentralafrikas genutzt wird"
+            },
+            {
+              "vorne": "{[ê]} passer pour qn/qc",
+              "hinten": "für jdn/etw gehalten werden"
+            },
+            {
+              "vorne": "jeter",
+              "hinten": "werfen, wegwerfen"
+            },
+            {
+              "vorne": "les déchets m",
+              "hinten": "der Abfall"
+            },
+            {
+              "vorne": "au lieu de",
+              "hinten": "anstelle, statt"
+            },
+            {
+              "vorne": "Saly",
+              "hinten": "touristischer Badeort südlich von Dakar"
+            },
+            {
+              "vorne": "Léopold Sédar Senghor",
+              "hinten": "sengalischer Dichter und Politiker"
+            },
+            {
+              "vorne": "le lion",
+              "hinten": "der Löwe"
+            },
+            {
+              "vorne": "les Lions du Sénégal",
+              "hinten": "Spitzname der senegalesischen Fußballnationalmannschaft der Herren"
+            },
+            {
+              "vorne": "l'éléphant m",
+              "hinten": "der Elefant"
+            },
+            {
+              "vorne": "les Éléphants de Côte d'Ivoire",
+              "hinten": "Spitzname der ivorischen Fußballnationalmannschaft der Herren"
+            },
+            {
+              "vorne": "Daara",
+              "hinten": "senegalesische Hip-Hop-/Reggae-Gruppe"
+            },
+            {
+              "vorne": "la lutte",
+              "hinten": "der Kampf, das Ringen"
+            },
+            {
+              "vorne": "la lutte sénégalaise",
+              "hinten": "westafrikanischer Kampfsport, ähnlich dem Wrestling oder Ringkampf"
+            },
+            {
+              "vorne": "traditionnel, traditionnelle",
+              "hinten": "traditionell"
+            },
+            {
+              "vorne": "dont",
+              "hinten": "hier: von dem, dessen, auch: deren Relativpronomen"
+            },
+            {
+              "vorne": "l'île de Gorée",
+              "hinten": "Gorée Insel vor der senegalesischen Küste"
+            },
+            {
+              "vorne": "la traite des Noirs",
+              "hinten": "der Sklavenhandel"
+            },
+            {
+              "vorne": "la Maison des esclaves",
+              "hinten": "wörtl: das Sklavenhaus (1)"
+            },
+            {
+              "vorne": "l'Amérique f",
+              "hinten": "Amerika (Kontinent)"
+            },
+            {
+              "vorne": "l'arme f",
+              "hinten": "die Waffe"
+            },
+            {
+              "vorne": "plein de",
+              "hinten": "viele"
+            },
+            {
+              "vorne": "le Lac rose",
+              "hinten": "senegalesischer Salzsee"
+            },
+            {
+              "vorne": "la Casamance",
+              "hinten": "Fluss und Region im Südwesten Senegals"
+            },
+            {
+              "vorne": "le parc national du Niokolo Koba",
+              "hinten": "Nationalpark im Südosten Senegals"
+            },
+            {
+              "vorne": "en détail",
+              "hinten": "ausführlich, im Einzelnen"
+            },
+            {
+              "vorne": "après-demain",
+              "hinten": "übermorgen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sonstige",
+      "bloecke": [
+        {
+          "name": "Volet Module A",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Laurent Cantet",
+              "hinten": "französischer Filmregisseur"
+            },
+            {
+              "vorne": "la synopsis",
+              "hinten": "die Kurzbeschreibung"
+            },
+            {
+              "vorne": "agressif, agressive",
+              "hinten": "aggressiv, grell"
+            },
+            {
+              "vorne": "insolent, insolente",
+              "hinten": "unverschämt, frech"
+            },
+            {
+              "vorne": "motiver",
+              "hinten": "motivieren"
+            },
+            {
+              "vorne": "prendre des risques",
+              "hinten": "Risiken eingehen"
+            },
+            {
+              "vorne": "la critique",
+              "hinten": "die Kritik"
+            },
+            {
+              "vorne": "le réalisateur, la réalisatrice",
+              "hinten": "der Regisseur, die Regisseurin"
+            },
+            {
+              "vorne": "la Palme d'or",
+              "hinten": "die goldene Palme, französischer Filmpreis, wird beim Filmfest in Cannes verliehen"
+            },
+            {
+              "vorne": "le Festival de Cannes",
+              "hinten": "internationale Filmfestspiele von Cannes"
+            },
+            {
+              "vorne": "l'adaptation f",
+              "hinten": "die Bearbeitung"
+            },
+            {
+              "vorne": "François Bégaudeau",
+              "hinten": "französischer Autor, (Entre les murs)"
+            },
+            {
+              "vorne": "ancien, ancienne",
+              "hinten": "alt, ehemalig"
+            },
+            {
+              "vorne": "le scénario",
+              "hinten": "das Drehbuch"
+            },
+            {
+              "vorne": "Robin Campillo",
+              "hinten": "französischer Filmregisseur und Cutter, (Entre les murs)"
+            },
+            {
+              "vorne": "d'ailleurs",
+              "hinten": "übrigens"
+            },
+            {
+              "vorne": "l'amateur, l'amatrice",
+              "hinten": "der Laie, die Laie"
+            },
+            {
+              "vorne": "rendre qc authentique",
+              "hinten": "etw. originalgetreu machen"
+            },
+            {
+              "vorne": "le quotidien",
+              "hinten": "der Alltag"
+            },
+            {
+              "vorne": "le goût",
+              "hinten": "der Geschmack, die Vorliebe"
+            },
+            {
+              "vorne": "à l'intérieur",
+              "hinten": "innerhalb, drinnen, hier: in den Räumen"
+            },
+            {
+              "vorne": "en particulier",
+              "hinten": "insbesondere, vor allem"
+            },
+            {
+              "vorne": "vivant, vivante",
+              "hinten": "lebendig"
+            },
+            {
+              "vorne": "à la fois",
+              "hinten": "gleichzeitig"
+            },
+            {
+              "vorne": "captiver",
+              "hinten": "fesseln"
+            },
+            {
+              "vorne": "le spectateur, la spectatrice",
+              "hinten": "der Zuschauer, die Zuschauerin"
+            },
+            {
+              "vorne": "le gros plan",
+              "hinten": "die Nahaufnahme"
+            },
+            {
+              "vorne": "le premier plan",
+              "hinten": "der Vordergrund"
+            },
+            {
+              "vorne": "l'arrière-plan m",
+              "hinten": "der Hintergrund"
+            },
+            {
+              "vorne": "le comportement",
+              "hinten": "das Verhalten"
+            },
+            {
+              "vorne": "maîtriser",
+              "hinten": "beherrschen"
+            },
+            {
+              "vorne": "la situation",
+              "hinten": "die Situation"
+            },
+            {
+              "vorne": "le dialogue",
+              "hinten": "der Dialog"
+            },
+            {
+              "vorne": "reprocher qc à qn",
+              "hinten": "jmd etwas vorwerfen"
+            },
+            {
+              "vorne": "le conseil de classe",
+              "hinten": "die Klassenkonferenz"
+            },
+            {
+              "vorne": "le moment-clé",
+              "hinten": "der Schlüsselmoment"
+            },
+            {
+              "vorne": "dégénérer",
+              "hinten": "ausarten, sich verschlechtern"
+            },
+            {
+              "vorne": "le délégué de classe, la déléguée de classe",
+              "hinten": "der Schülervertreter, die Schülervertreterin"
+            },
+            {
+              "vorne": "complètement",
+              "hinten": "ganz, vollständig"
+            },
+            {
+              "vorne": "la comédie",
+              "hinten": "die Komödie"
+            },
+            {
+              "vorne": "qui s'inspire/nt de",
+              "hinten": "nach der Vorlage von"
+            },
+            {
+              "vorne": "emmener",
+              "hinten": "mitnehmen"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module B",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le regard",
+              "hinten": "der Blick"
+            },
+            {
+              "vorne": "le siècle des Lumières",
+              "hinten": "die Aufklärung (1715-1789)"
+            },
+            {
+              "vorne": "la Prusse",
+              "hinten": "Preußen"
+            },
+            {
+              "vorne": "Frédéric II",
+              "hinten": "Friedrich II., König der Preußen, genannte Friedrich der Große (1712-1786)"
+            },
+            {
+              "vorne": "Voltaire",
+              "hinten": "französischer Philosoph (1694-1778)"
+            },
+            {
+              "vorne": "le philosophe, la philosophe",
+              "hinten": "der Philosoph, die Philosophin"
+            },
+            {
+              "vorne": "le petit-fils, la petite-fille",
+              "hinten": "der Enkel, die Enkelin"
+            },
+            {
+              "vorne": "Charlemagne",
+              "hinten": "Karl der Große, König des Fränkischen Reiches (747-814)"
+            },
+            {
+              "vorne": "le traité de Verdun (843)",
+              "hinten": "der Vertrag von Verdun"
+            },
+            {
+              "vorne": "le traité",
+              "hinten": "der Vertrag"
+            },
+            {
+              "vorne": "partager",
+              "hinten": "teilen, aufteilen"
+            },
+            {
+              "vorne": "l'Empire m",
+              "hinten": "das Kaiserreich"
+            },
+            {
+              "vorne": "la Francie occidentale",
+              "hinten": "das Westfrankenreich"
+            },
+            {
+              "vorne": "la Francie orientale",
+              "hinten": "das Ostfrankenreich"
+            },
+            {
+              "vorne": "la Lotharingie",
+              "hinten": "Lotharingien"
+            },
+            {
+              "vorne": "les accords de Schengen",
+              "hinten": "die Schengener Abkommen (1995)"
+            },
+            {
+              "vorne": "Charles De Gaulle",
+              "hinten": "französischer Politiker und Staatspräsident (1890-1970)"
+            },
+            {
+              "vorne": "le traité de l'Élysée",
+              "hinten": "der Élyséevertrag (1963)"
+            },
+            {
+              "vorne": "la Première Guerre mondiale",
+              "hinten": "der Erste Weltkrieg"
+            },
+            {
+              "vorne": "la guerre franco-prussienne",
+              "hinten": "der französisch-preußische Krieg"
+            },
+            {
+              "vorne": "la Lorraine",
+              "hinten": "Lothringen, Region im Nordosten Frankreichs"
+            },
+            {
+              "vorne": "programmé, programmée",
+              "hinten": "vorprogrammiert"
+            },
+            {
+              "vorne": "l'Édit de Nantes m",
+              "hinten": "das Edikt von Nantes (1598)"
+            },
+            {
+              "vorne": "mettre fin à qc",
+              "hinten": "etw. beenden"
+            },
+            {
+              "vorne": "la religion",
+              "hinten": "die Religion"
+            },
+            {
+              "vorne": "le catholique, la catholique",
+              "hinten": "der Katholik, die Katholikin"
+            },
+            {
+              "vorne": "le protestant, la protestante",
+              "hinten": "der Protestant, die Protestantin"
+            },
+            {
+              "vorne": "la Réforme",
+              "hinten": "die Reformation"
+            },
+            {
+              "vorne": "la paix",
+              "hinten": "der Frieden"
+            },
+            {
+              "vorne": "la révocation",
+              "hinten": "der Widerruf"
+            },
+            {
+              "vorne": "la Seconde Guerre mondiale",
+              "hinten": "der Zweite Weltkrieg"
+            },
+            {
+              "vorne": "Napoléon",
+              "hinten": "Napoleon, französischer General und Kaiser (1769-1821)"
+            },
+            {
+              "vorne": "la troupe",
+              "hinten": "die Truppe"
+            },
+            {
+              "vorne": "envahir",
+              "hinten": "einfallen in"
+            },
+            {
+              "vorne": "la partie",
+              "hinten": "der Teil"
+            },
+            {
+              "vorne": "l'ennemi, l'ennemie",
+              "hinten": "der Feind, die Feindin"
+            },
+            {
+              "vorne": "la réconciliation",
+              "hinten": "die Versöhnung"
+            },
+            {
+              "vorne": "sembler",
+              "hinten": "scheinen"
+            },
+            {
+              "vorne": "impossible",
+              "hinten": "unmöglich"
+            },
+            {
+              "vorne": "le président, la présidente",
+              "hinten": "der Präsident, die Präsidentin"
+            },
+            {
+              "vorne": "le chancelier, la chancelière",
+              "hinten": "der Kanzler, die Kanzlerin"
+            },
+            {
+              "vorne": "le tour de force",
+              "hinten": "der Kraftakt"
+            },
+            {
+              "vorne": "déclarer",
+              "hinten": "verkünden, erklären"
+            },
+            {
+              "vorne": "coopérer",
+              "hinten": "kooperieren, zusammenarbeiten"
+            },
+            {
+              "vorne": "la politique",
+              "hinten": "die Politik"
+            },
+            {
+              "vorne": "l'objectif m",
+              "hinten": "das Ziel"
+            },
+            {
+              "vorne": "rapprocher qn",
+              "hinten": "hier: einander näherbringen"
+            },
+            {
+              "vorne": "le citoyen, la citoyenne",
+              "hinten": "der Bürger, die Bürgerin"
+            },
+            {
+              "vorne": "le gouvernement",
+              "hinten": "die Regierung"
+            },
+            {
+              "vorne": "grâce à",
+              "hinten": "dank"
+            },
+            {
+              "vorne": "faire la connaissance de qn/qc",
+              "hinten": "jdn/etw. kennenlernen"
+            },
+            {
+              "vorne": "le jumelage",
+              "hinten": "die (Städte-) Partnerschaft"
+            },
+            {
+              "vorne": "la réalité",
+              "hinten": "die Realität"
+            },
+            {
+              "vorne": "le prénom",
+              "hinten": "der Vorname"
+            },
+            {
+              "vorne": "la profession",
+              "hinten": "der Beruf"
+            },
+            {
+              "vorne": "l'homme politique, la femme politique",
+              "hinten": "der Politiker, die Politikerin"
+            },
+            {
+              "vorne": "la carrière",
+              "hinten": "die Karriere, die Laufbahn"
+            },
+            {
+              "vorne": "le maire",
+              "hinten": "der Bürgermeister, die Bürgermeisterin"
+            },
+            {
+              "vorne": "le nazisme",
+              "hinten": "der Nationalsozialismus"
+            },
+            {
+              "vorne": "la République fédérale d'Allemagne (RFA)",
+              "hinten": "Bundesrepublik Deutschland"
+            },
+            {
+              "vorne": "le général",
+              "hinten": "der General"
+            },
+            {
+              "vorne": "Londres",
+              "hinten": "London"
+            },
+            {
+              "vorne": "la Résistance",
+              "hinten": "die Résistance , französische Widerstandsbewegung während der deutschen Besatzung (1940-1944)"
+            },
+            {
+              "vorne": "l'Allemagne nazie",
+              "hinten": "Nazideutschland"
+            },
+            {
+              "vorne": "provisoire m/f adj",
+              "hinten": "vorläufig, provisorisch"
+            },
+            {
+              "vorne": "confondre",
+              "hinten": "verwechseln"
+            },
+            {
+              "vorne": "avoir honte (de qc)",
+              "hinten": "sich schämen (für etw)"
+            },
+            {
+              "vorne": "l'erreur f",
+              "hinten": "der Irrtum, der Fehler"
+            },
+            {
+              "vorne": "le huguenot, la huguenote",
+              "hinten": "der Hugenotte, die Hugenottin (1)"
+            },
+            {
+              "vorne": "annoncer",
+              "hinten": "ankündigen, mitteilen"
+            },
+            {
+              "vorne": "La Rochelle",
+              "hinten": "Hafenstadt im Südwesten Frankreichs"
+            },
+            {
+              "vorne": "l'épreuve f",
+              "hinten": "die Prüfung"
+            },
+            {
+              "vorne": "pratiquer",
+              "hinten": "praktizieren, ausüben"
+            },
+            {
+              "vorne": "révoquer",
+              "hinten": "widerrufen"
+            },
+            {
+              "vorne": "le choc",
+              "hinten": "der Schock"
+            },
+            {
+              "vorne": "le soldat",
+              "hinten": "der Soldat"
+            },
+            {
+              "vorne": "convertir qn à qc (1)",
+              "hinten": "jmd. zu etwas bekehren"
+            },
+            {
+              "vorne": "huguenot, huguenote",
+              "hinten": "hugenottisch"
+            },
+            {
+              "vorne": "Que Dieu ait leur âme!",
+              "hinten": "Gott sei ihrer Seele gnädig!"
+            },
+            {
+              "vorne": "l'horreur f",
+              "hinten": "der Schrecken, das Grauen"
+            },
+            {
+              "vorne": "l'incendie m",
+              "hinten": "der Brand"
+            },
+            {
+              "vorne": "l'imprimerie f",
+              "hinten": "die Druckerei"
+            },
+            {
+              "vorne": "le drame",
+              "hinten": "das Drama"
+            },
+            {
+              "vorne": "l'exil m",
+              "hinten": "das Exil"
+            },
+            {
+              "vorne": "réformé, réformée",
+              "hinten": "reformiert, hier: protestantisch"
+            },
+            {
+              "vorne": "hélas",
+              "hinten": "leider, bedauernder Ausruf"
+            },
+            {
+              "vorne": "se cacher",
+              "hinten": "sich verstecken"
+            },
+            {
+              "vorne": "le réfugié, la réfugiée",
+              "hinten": "der Flüchtling"
+            },
+            {
+              "vorne": "financier, financière",
+              "hinten": "finanziell"
+            },
+            {
+              "vorne": "la lettre",
+              "hinten": "der Brief"
+            },
+            {
+              "vorne": "le dieu",
+              "hinten": "der Gott"
+            },
+            {
+              "vorne": "le neveu, la nièce",
+              "hinten": "der Neffe, die Nichte"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module C",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la publicité, la pub fam",
+              "hinten": "die Werbung, die Anzeige, der Werbespot"
+            },
+            {
+              "vorne": "manipuler",
+              "hinten": "manipulieren"
+            },
+            {
+              "vorne": "fonctionner",
+              "hinten": "funktionieren, arbeiten"
+            },
+            {
+              "vorne": "décoder",
+              "hinten": "dekodieren, entschlüsseln, hier: durchschauen"
+            },
+            {
+              "vorne": "en haut",
+              "hinten": "oben, nach oben"
+            },
+            {
+              "vorne": "l'attention f",
+              "hinten": "die Aufmerksamkeit"
+            },
+            {
+              "vorne": "le consommateur, la consommatrice",
+              "hinten": "der Verbraucher, die Verbraucherin, der Konsument, die Konsumentin"
+            },
+            {
+              "vorne": "suggérer",
+              "hinten": "andeuten"
+            },
+            {
+              "vorne": "polluer",
+              "hinten": "verschmutzen"
+            },
+            {
+              "vorne": "l'environnement m",
+              "hinten": "die Umwelt"
+            },
+            {
+              "vorne": "végétal, végétale, végétaux m plr",
+              "hinten": "pflanzlich"
+            },
+            {
+              "vorne": "le sous-titre",
+              "hinten": "der Untertitel"
+            },
+            {
+              "vorne": "en bas",
+              "hinten": "unten, nach unten"
+            },
+            {
+              "vorne": "le composant",
+              "hinten": "der Bestandteil, die Komponente"
+            },
+            {
+              "vorne": "l'élément m",
+              "hinten": "das Element"
+            },
+            {
+              "vorne": "le ciel",
+              "hinten": "der Himmel"
+            },
+            {
+              "vorne": "évoquer",
+              "hinten": "erinnern an"
+            },
+            {
+              "vorne": "le bien-être",
+              "hinten": "das Wohlbefinden"
+            },
+            {
+              "vorne": "l'harmonie f",
+              "hinten": "die Harmonie, der Einklang"
+            },
+            {
+              "vorne": "associer qn/qc à qc",
+              "hinten": "jdn/etw mit etw verbinden"
+            },
+            {
+              "vorne": "la protection",
+              "hinten": "der Schutz"
+            },
+            {
+              "vorne": "l'écolabel m",
+              "hinten": "das Ökolabel"
+            },
+            {
+              "vorne": "se servir de  (1)",
+              "hinten": "benutzen"
+            },
+            {
+              "vorne": "le label",
+              "hinten": "das Label, die Marke"
+            },
+            {
+              "vorne": "réel, réelle",
+              "hinten": "echt, real"
+            },
+            {
+              "vorne": "faux, fausse",
+              "hinten": "falsch"
+            },
+            {
+              "vorne": "convaincre",
+              "hinten": "überzeugen"
+            },
+            {
+              "vorne": "convaincre //  <!>überzeugen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je convaincs]→[nous convainquons]→2.→[tu convaincs]→[vous convainquez]→3.→[il convainc]→[ils convainquent]",
+              "hinten": "<!>convaincre</!> //   überzeugen<!>Présent</!>"
+            },
+            {
+              "vorne": "écologique",
+              "hinten": "umweltfreundlich, ökologisch"
+            },
+            {
+              "vorne": "la pratique",
+              "hinten": "die Praktik, die Praxis"
+            },
+            {
+              "vorne": "l'écoblanchiment m",
+              "hinten": "das Greenwashing (1)"
+            },
+            {
+              "vorne": "la répétition",
+              "hinten": "die Wiederholung"
+            },
+            {
+              "vorne": "le détail",
+              "hinten": "das Detail, die Einzelheit"
+            },
+            {
+              "vorne": "le premier plan",
+              "hinten": "der Vordergrund"
+            },
+            {
+              "vorne": "le pré",
+              "hinten": "das Feld"
+            },
+            {
+              "vorne": "l'arrière-plan",
+              "hinten": "der Hintergrund"
+            },
+            {
+              "vorne": "le volcan",
+              "hinten": "der Vulkan"
+            },
+            {
+              "vorne": "l'Auvergne f",
+              "hinten": "die Auvergne, Region in Zentralfrankreich"
+            },
+            {
+              "vorne": "la source",
+              "hinten": "die Quelle, der Ursprung"
+            },
+            {
+              "vorne": "faire partie de qc",
+              "hinten": "zu etw. gehören, Teil sein von etw."
+            },
+            {
+              "vorne": "l'engagement m",
+              "hinten": "das Engagement, die Verpflichtung"
+            },
+            {
+              "vorne": "l'écologie f",
+              "hinten": "die Ökologie"
+            },
+            {
+              "vorne": "le slogan",
+              "hinten": "der Slogan"
+            },
+            {
+              "vorne": "ironique",
+              "hinten": "ironisch"
+            },
+            {
+              "vorne": "l'association f",
+              "hinten": "die Organisation, der Verein"
+            },
+            {
+              "vorne": "dénoncer",
+              "hinten": "anprangern, denunzieren"
+            },
+            {
+              "vorne": "sensibiliser",
+              "hinten": "sensibilisieren"
+            },
+            {
+              "vorne": "provoquer",
+              "hinten": "herausfordern, provozieren"
+            },
+            {
+              "vorne": "la pollution",
+              "hinten": "die Umweltvermutzung"
+            },
+            {
+              "vorne": "le développement durable",
+              "hinten": "die Nachhaltigkeit"
+            },
+            {
+              "vorne": "la société",
+              "hinten": "die Gesellschaft"
+            },
+            {
+              "vorne": "équitable",
+              "hinten": "gerecht"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module D",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "à la carte",
+              "hinten": "nach Wunsch, wörtlich: nach der Karte"
+            },
+            {
+              "vorne": "suivant, suivante",
+              "hinten": "folgender, folgende, folgendes"
+            },
+            {
+              "vorne": "la Renaissance française",
+              "hinten": "die französische Renaissance, Kunst und Architektur im 15. und 16. Jahrhundert"
+            },
+            {
+              "vorne": "Orléans",
+              "hinten": "französische Stadt, 130 km südlich von Paris"
+            },
+            {
+              "vorne": "Angers",
+              "hinten": "französische Stadt, 300 km südwestlich von Paris"
+            },
+            {
+              "vorne": "le bon plan",
+              "hinten": "der Geheimtipp"
+            },
+            {
+              "vorne": "prestigieux, prestigieuse",
+              "hinten": "glanzvoll, renommiert"
+            },
+            {
+              "vorne": "le bassin d'Arcachon",
+              "hinten": "das Becken von Arcachon"
+            },
+            {
+              "vorne": "situé, située",
+              "hinten": "gelegen"
+            },
+            {
+              "vorne": "Bordeaux",
+              "hinten": "Stadt im Dep. Gironde"
+            },
+            {
+              "vorne": "salé, salée",
+              "hinten": "salzig, gesalzen"
+            },
+            {
+              "vorne": "l'océan Atlantique m",
+              "hinten": "der atlantische Ozean"
+            },
+            {
+              "vorne": "bronzer",
+              "hinten": "bräunen"
+            },
+            {
+              "vorne": "la dune du Pilat",
+              "hinten": "riesige Wanderdüne am Becken von Arcachon"
+            },
+            {
+              "vorne": "la dune",
+              "hinten": "die Düne"
+            },
+            {
+              "vorne": "le sable",
+              "hinten": "der Sand"
+            },
+            {
+              "vorne": "conseiller qc à qn",
+              "hinten": "jdm. etw. raten"
+            },
+            {
+              "vorne": "le coucher de soleil",
+              "hinten": "der Sonnenuntergang"
+            },
+            {
+              "vorne": "l'huître f",
+              "hinten": "die Auster"
+            },
+            {
+              "vorne": "la réserve naturelle",
+              "hinten": "das Naturschutzgebiet"
+            },
+            {
+              "vorne": "les Alpes f plr.",
+              "hinten": "die Alpen"
+            },
+            {
+              "vorne": "le sud-est",
+              "hinten": "der Südosten"
+            },
+            {
+              "vorne": "le Rhône",
+              "hinten": "die Rhone"
+            },
+            {
+              "vorne": "les gorges du Verdon f plr.",
+              "hinten": "die Verdonschlucht"
+            },
+            {
+              "vorne": "Castellane",
+              "hinten": "Castellane, französische Kleinstadt"
+            },
+            {
+              "vorne": "le lac de Sainte-Croix",
+              "hinten": "Stausee an der Verdonschlucht"
+            },
+            {
+              "vorne": "le passage",
+              "hinten": "die Passage, hier: der Durchgang"
+            },
+            {
+              "vorne": "le rafting",
+              "hinten": "Rafting, Sportart"
+            },
+            {
+              "vorne": "le Mercantour",
+              "hinten": "Nationalpark im Südosten Frankreichs"
+            },
+            {
+              "vorne": "le sentier",
+              "hinten": "der Fußweg"
+            },
+            {
+              "vorne": "le paradis",
+              "hinten": "das Paradies"
+            },
+            {
+              "vorne": "le randonneur, la randonneuse",
+              "hinten": "der Wanderer, die Wanderin"
+            },
+            {
+              "vorne": "le circuit",
+              "hinten": "die Strecke, der Rundweg"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module E",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la diversité",
+              "hinten": "die Vielfalt"
+            },
+            {
+              "vorne": "le slam",
+              "hinten": "der (Poetry-)Slam"
+            },
+            {
+              "vorne": "le racisme",
+              "hinten": "der Rassismus"
+            },
+            {
+              "vorne": "les propos m plr",
+              "hinten": "die Äußerungen"
+            },
+            {
+              "vorne": "raciste",
+              "hinten": "rassistisch"
+            },
+            {
+              "vorne": "tolérant, tolérante",
+              "hinten": "tolerant"
+            },
+            {
+              "vorne": "rejeter",
+              "hinten": "zurückweisen, ablehnen"
+            },
+            {
+              "vorne": "l'apparence f",
+              "hinten": "die äußere Erscheinung, der Anschein"
+            },
+            {
+              "vorne": "le préjugé",
+              "hinten": "das Vorurteil"
+            },
+            {
+              "vorne": "la nationalité",
+              "hinten": "die Staatsangehörigkeit"
+            },
+            {
+              "vorne": "quitter",
+              "hinten": "verlassen"
+            },
+            {
+              "vorne": "fuir la misère",
+              "hinten": "vor dem Elend flüchten"
+            },
+            {
+              "vorne": "fuir //  <!>fliehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je fuis]→[nous fuyons]→2.→[tu fuis]→[vous fuyez]→3.→[il fuit]→[ils fuient]",
+              "hinten": "<!>fuir</!> //   fliehen<!>Présent</!>"
+            },
+            {
+              "vorne": "fuir //  <!>fliehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fui]→[nous avons fui]→2.→[tu as fui]→[vous avez fui]→3.→[il a fui]→[ils ont fui]",
+              "hinten": "<!>fuir</!> //   fliehen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "représenter",
+              "hinten": "darstellen, verkörpern"
+            },
+            {
+              "vorne": "la tolérance",
+              "hinten": "die Toleranz"
+            },
+            {
+              "vorne": "l'espoir m",
+              "hinten": "die Hoffnung"
+            },
+            {
+              "vorne": "les compatriotes m plr",
+              "hinten": "die Landsleute"
+            },
+            {
+              "vorne": "parmi",
+              "hinten": "unter, von"
+            },
+            {
+              "vorne": "bilingue",
+              "hinten": "zweisprachig"
+            },
+            {
+              "vorne": "le lien",
+              "hinten": "die Verbindung"
+            },
+            {
+              "vorne": "souffrir de qc (1)",
+              "hinten": "leiden an etw"
+            },
+            {
+              "vorne": "simple",
+              "hinten": "einfach, leicht"
+            },
+            {
+              "vorne": "égal, égale, égaux m plr",
+              "hinten": "gleich"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module F",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le zoom",
+              "hinten": "der Zoom"
+            },
+            {
+              "vorne": "la valise",
+              "hinten": "der Koffer"
+            },
+            {
+              "vorne": "la poche",
+              "hinten": "die Tasche, das Innenfach z.B an Kleidung"
+            },
+            {
+              "vorne": "le livre audio",
+              "hinten": "das Hörbuch"
+            },
+            {
+              "vorne": "l'Olympe m",
+              "hinten": "der Olymp"
+            },
+            {
+              "vorne": "le héros, l'heroïne",
+              "hinten": "der Held, die Heldin"
+            },
+            {
+              "vorne": "la bande originale",
+              "hinten": "der Soundtrack, die Filmmusik"
+            },
+            {
+              "vorne": "la paix",
+              "hinten": "der Frieden"
+            },
+            {
+              "vorne": "les environs m plr",
+              "hinten": "die Umgebung"
+            },
+            {
+              "vorne": "l'encyclopédie f",
+              "hinten": "die Enzyklopädie, das Lexikon"
+            },
+            {
+              "vorne": "la cabane",
+              "hinten": "die Hütte"
+            },
+            {
+              "vorne": "le film d'animation",
+              "hinten": "der Animationsfilm"
+            },
+            {
+              "vorne": "le roi, la reine",
+              "hinten": "der König, die Königin"
+            },
+            {
+              "vorne": "l'œuvre d'art f",
+              "hinten": "das Kunstwerk"
+            },
+            {
+              "vorne": "Jacques Tardi, Jacques Martin",
+              "hinten": "französischer Comicautor"
+            },
+            {
+              "vorne": "la Grande Guerre",
+              "hinten": "der Erste Weltkrieg"
+            },
+            {
+              "vorne": "l'horreur f",
+              "hinten": "der Schrecken, das Grauen"
+            },
+            {
+              "vorne": "Louis XIV",
+              "hinten": "Ludwig XIV. (1638-1715)"
+            },
+            {
+              "vorne": "le trafic",
+              "hinten": "der Verkehr, auch: der Schmuggel"
+            },
+            {
+              "vorne": "extraordinaire m/f",
+              "hinten": "außergewöhnlich"
+            },
+            {
+              "vorne": "Patrick Sobral, Arthur de Pins",
+              "hinten": "französischer Comicautor und Zeichner"
+            },
+            {
+              "vorne": "le sorcier // la sorcière",
+              "hinten": "der Hexer, die Hexe"
+            },
+            {
+              "vorne": "congolais, congolaise",
+              "hinten": "kongolesisch"
+            },
+            {
+              "vorne": "Tembo Kash",
+              "hinten": "kongolesischer Comicautor"
+            },
+            {
+              "vorne": "le Congo, République démocratique du Congo",
+              "hinten": "der Kongo, Demokratische Republik Kongo, bis 1997 Zaïre"
+            },
+            {
+              "vorne": "le mécanicien, la mécanicienne",
+              "hinten": "der Mechaniker, die Mechanikerin"
+            },
+            {
+              "vorne": "l'homme d'affaires m",
+              "hinten": "der Geschäftsmann"
+            },
+            {
+              "vorne": "tomber amoureux, tomber amoureuse",
+              "hinten": "sich verlieben"
+            },
+            {
+              "vorne": "Dominique Roques",
+              "hinten": "französische Comicautorin"
+            },
+            {
+              "vorne": "Alexis Dormal, Christian Darasse",
+              "hinten": "französischer Comiczeichner"
+            },
+            {
+              "vorne": "Zidrou",
+              "hinten": "belgischer Comicautor"
+            },
+            {
+              "vorne": "l'adolescent, l'adolescente",
+              "hinten": "der Jugendliche, die Jugendliche"
+            },
+            {
+              "vorne": "le camarade de classe, la camarade de classe",
+              "hinten": "der Mitschüler, die Mitschülerin"
+            },
+            {
+              "vorne": "l'illustration f",
+              "hinten": "die Abbildung, die Illustration"
+            },
+            {
+              "vorne": "Hugo Pratt",
+              "hinten": "italienischer Comicautor und -zeichner (1927-1997)"
+            },
+            {
+              "vorne": "le classique",
+              "hinten": "der Klassiker"
+            },
+            {
+              "vorne": "le sud",
+              "hinten": "der Süden"
+            },
+            {
+              "vorne": "élégant, élégante",
+              "hinten": "elegant"
+            },
+            {
+              "vorne": "romantique",
+              "hinten": "romantisch"
+            },
+            {
+              "vorne": "le pirate",
+              "hinten": "der Pirat"
+            },
+            {
+              "vorne": "à bord",
+              "hinten": "an Bord"
+            },
+            {
+              "vorne": "le prisonnier, la prisonnière",
+              "hinten": "der Gefangene, die Gefangene"
+            },
+            {
+              "vorne": "mystérieux, mystérieuse",
+              "hinten": "geheimnisvoll"
+            },
+            {
+              "vorne": "le crabe",
+              "hinten": "der Krebs"
+            },
+            {
+              "vorne": "la révolution",
+              "hinten": "die Revolution"
+            },
+            {
+              "vorne": "le festival d'angoulême (Festival Internationale de la Bande Dessinée d'Angoulême)",
+              "hinten": "internationales Comicfestival von Angoulême"
+            },
+            {
+              "vorne": "Angoulême",
+              "hinten": "Hauptstadt des westfranzösischen Départements La Charente in der Region Nouvelle-Aquitaine"
+            },
+            {
+              "vorne": "simplement adv",
+              "hinten": "einfach adv"
+            },
+            {
+              "vorne": "entier, entière",
+              "hinten": "ganz"
+            },
+            {
+              "vorne": "la dédicace",
+              "hinten": "die Widmung, die (Autoren-)Signatur"
+            },
+            {
+              "vorne": "précis, précise",
+              "hinten": "genau, exakt"
+            },
+            {
+              "vorne": "l'autobiographie f",
+              "hinten": "die Autobiographie"
+            },
+            {
+              "vorne": "le regard",
+              "hinten": "der Blick"
+            },
+            {
+              "vorne": "le visteur, la visiteuse",
+              "hinten": "der Besucher, die Besucherin"
+            },
+            {
+              "vorne": "assister à",
+              "hinten": "dabei sein, teilnehmen an"
+            },
+            {
+              "vorne": "le/la scénariste",
+              "hinten": "der (Drehbuch-)Autor, die (Drehbuch-Autorin"
+            },
+            {
+              "vorne": "la bulle",
+              "hinten": "die (Sprech-)Blase"
+            },
+            {
+              "vorne": "le spectacle",
+              "hinten": "die Vorstellung, die Show"
+            },
+            {
+              "vorne": "déguisé, déguisée",
+              "hinten": "verkleidet"
+            },
+            {
+              "vorne": "le public",
+              "hinten": "das Publikum"
+            },
+            {
+              "vorne": "le jury",
+              "hinten": "die Jury"
+            },
+            {
+              "vorne": "remettre",
+              "hinten": "verleihen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "À la fin du festival on remet les prix.",
+                "de": "Am Ende des Festivals verleiht man die Preise."
+              }
+            },
+            {
+              "vorne": "c'est-à-dire",
+              "hinten": "das heißt"
+            },
+            {
+              "vorne": "récompenser",
+              "hinten": "belohnen, auszeichnen"
+            },
+            {
+              "vorne": "gràce à",
+              "hinten": "dank"
+            },
+            {
+              "vorne": "le chiffre",
+              "hinten": "die Zahl"
+            },
+            {
+              "vorne": "la production",
+              "hinten": "die Produktion"
+            },
+            {
+              "vorne": "le lecteur, la lectrice",
+              "hinten": "der Leser, die Leserin"
+            },
+            {
+              "vorne": "au cours de",
+              "hinten": "im Laufe von, im Laufe des, im Laufe der"
+            },
+            {
+              "vorne": "la tranche d'âge",
+              "hinten": "die Altersgruppe"
+            },
+            {
+              "vorne": "en moyenne",
+              "hinten": "im Durchschnitt, durchschnittlich"
+            },
+            {
+              "vorne": "fonctionner",
+              "hinten": "funktionieren, arbeiten"
+            },
+            {
+              "vorne": "la case",
+              "hinten": "das Feld, hier: das einzelne Comicbild, das Panel"
+            },
+            {
+              "vorne": "le plan-large",
+              "hinten": "die Panoramaeinstellung"
+            },
+            {
+              "vorne": "représenter",
+              "hinten": "darstellen, zeigen"
+            },
+            {
+              "vorne": "le décor",
+              "hinten": "hier: die Umgebung"
+            },
+            {
+              "vorne": "le gros-plan",
+              "hinten": "die Nahansicht"
+            },
+            {
+              "vorne": "l'inverse m",
+              "hinten": "hier: umgekehrt"
+            },
+            {
+              "vorne": "l'effet m",
+              "hinten": "die Wirkung, der Effekt"
+            },
+            {
+              "vorne": "selon",
+              "hinten": "hier: je nachdem"
+            },
+            {
+              "vorne": "le bord de case",
+              "hinten": "die Umrahmung, hier: die Panelrahmung"
+            },
+            {
+              "vorne": "généralement",
+              "hinten": "im Allgemeinen"
+            },
+            {
+              "vorne": "le système",
+              "hinten": "das Sytem"
+            },
+            {
+              "vorne": "on s'y tient",
+              "hinten": "man hält sich dran"
+            },
+            {
+              "vorne": "durant",
+              "hinten": "während"
+            },
+            {
+              "vorne": "la rupture",
+              "hinten": "der Bruch, hier: die Unterbrechung"
+            },
+            {
+              "vorne": "le flash-back",
+              "hinten": "die Rückblende"
+            },
+            {
+              "vorne": "le malaise",
+              "hinten": "das Unwohlsein"
+            },
+            {
+              "vorne": "la richesse",
+              "hinten": "der Reichtum, die Fülle"
+            },
+            {
+              "vorne": "le lettrage",
+              "hinten": "die Schriftgestaltung, das Lettering"
+            },
+            {
+              "vorne": "fondamental, fondamentale, fondamentaux m plr",
+              "hinten": "grundlegend, fundamental"
+            },
+            {
+              "vorne": "intégré, intégrée à (ou dans)",
+              "hinten": "angepasst an, integriert in"
+            },
+            {
+              "vorne": "le graphisme",
+              "hinten": "die grafische Gestaltung"
+            },
+            {
+              "vorne": "horrible",
+              "hinten": "schrecklich"
+            },
+            {
+              "vorne": "la lettre",
+              "hinten": "der Buchstabe"
+            },
+            {
+              "vorne": "enregistrer",
+              "hinten": "aufnehmen, speichern"
+            },
+            {
+              "vorne": "la fonte",
+              "hinten": "der (Schrift-)Guss"
+            },
+            {
+              "vorne": "personnalisé, personnalisée",
+              "hinten": "personalisiert"
+            },
+            {
+              "vorne": "le typo(graphie)",
+              "hinten": "die Schriftart"
+            },
+            {
+              "vorne": "faire croire que",
+              "hinten": "so tun, als ob"
+            },
+            {
+              "vorne": "chinois, chinoise",
+              "hinten": "chinesisch"
+            },
+            {
+              "vorne": "épais, épaise",
+              "hinten": "dick"
+            },
+            {
+              "vorne": "faire ressortir",
+              "hinten": "hervorheben"
+            },
+            {
+              "vorne": "le gris optique du pavé de texte",
+              "hinten": "die \"Bleiwüste\", große Textmenge ohne Absätze"
+            },
+            {
+              "vorne": "doucement",
+              "hinten": "leise"
+            },
+            {
+              "vorne": "lisible",
+              "hinten": "lesbar"
+            },
+            {
+              "vorne": "{[ê]} s'appliquer",
+              "hinten": "sich Mühe geben"
+            },
+            {
+              "vorne": "contrairement à",
+              "hinten": "im Gegensatz zu"
+            },
+            {
+              "vorne": "le spectateur, la spectatrice",
+              "hinten": "der Zuschauer, die Zuschauerin"
+            },
+            {
+              "vorne": "la complication",
+              "hinten": "die Schwierigkeit"
+            },
+            {
+              "vorne": "l'onomatopée f",
+              "hinten": "die Lautmalerei"
+            },
+            {
+              "vorne": "Verweis",
+              "hinten": "Kapitel"
+            },
+            {
+              "vorne": "1",
+              "hinten": "Unité 1\\Lecture A"
+            },
+            {
+              "vorne": "2",
+              "hinten": "Unité 1\\Lecture B"
+            },
+            {
+              "vorne": "3",
+              "hinten": "Unité 1\\Volet 1"
+            },
+            {
+              "vorne": "4",
+              "hinten": "Unité 1\\Volet 2"
+            },
+            {
+              "vorne": "5",
+              "hinten": "Unité 1\\Volet 3"
+            },
+            {
+              "vorne": "6",
+              "hinten": "Unité 2\\Lecture A"
+            },
+            {
+              "vorne": "7",
+              "hinten": "Unité 2\\Lecture B"
+            },
+            {
+              "vorne": "8",
+              "hinten": "Unité 2\\Volet 1"
+            },
+            {
+              "vorne": "9",
+              "hinten": "Unité 2\\Volet 2"
+            },
+            {
+              "vorne": "10",
+              "hinten": "Unité 2\\Volet 3"
+            },
+            {
+              "vorne": "11",
+              "hinten": "Unité 3\\Lecture  A"
+            },
+            {
+              "vorne": "12",
+              "hinten": "Unité 3\\Lecture  B"
+            },
+            {
+              "vorne": "13",
+              "hinten": "Unité 3\\Volet 1"
+            },
+            {
+              "vorne": "14",
+              "hinten": "Unité 3\\Volet 2"
+            },
+            {
+              "vorne": "15",
+              "hinten": "Unité 3\\Volet 3"
+            },
+            {
+              "vorne": "16",
+              "hinten": "Module A"
+            },
+            {
+              "vorne": "17",
+              "hinten": "Module B"
+            },
+            {
+              "vorne": "18",
+              "hinten": "Module C"
+            },
+            {
+              "vorne": "19",
+              "hinten": "Module D"
+            },
+            {
+              "vorne": "20",
+              "hinten": "Module E"
+            },
+            {
+              "vorne": "21",
+              "hinten": "Module F"
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Sprache der Zielgruppe",
+              "hinten": "Deutsch"
+            },
+            {
+              "vorne": "Software",
+              "hinten": "Mit dem Langenscheidt Vokabeltrainer (www.vokabeln.de) können Sie diesen Wortschatz mit vielen verschiedenen Funktionen trainieren (z.B. Karteikartensystem, Prüfungsmodus, Multiple Choice, Kreuzworträtsel, Superlearning und Tutorium), in unterschiedlichen Formaten drucken (z.B. Vokabelkärtchen, Vokabellisten, Vokabeltests, Kreuzworträtsel) und exportieren (z.B. auf Ihr Handy)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

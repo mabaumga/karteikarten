@@ -1,0 +1,138 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}{{ lernblock.name }} - Karteikarten{% endblock %}
+
+{% block nav_right %}
+<div class="dropdown">
+    <button class="btn btn-link text-white" type="button" data-bs-toggle="dropdown">
+        <i class="bi bi-three-dots-vertical"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="{% url 'lernblock_edit' lernblock.pk %}">
+            <i class="bi bi-pencil me-2"></i>Bearbeiten
+        </a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+            <form method="post" action="{% url 'lernblock_delete' lernblock.pk %}"
+                  onsubmit="return confirm('Lernblock wirklich l&ouml;schen?');">
+                {% csrf_token %}
+                <button type="submit" class="dropdown-item text-danger">
+                    <i class="bi bi-trash me-2"></i>L&ouml;schen
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'dashboard' %}" class="btn btn-link text-muted ps-0 mb-3">
+    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+</a>
+
+<h4 class="mb-1">{{ lernblock.name }}</h4>
+{% if lernblock.beschreibung %}
+<p class="text-muted mb-1">{{ lernblock.beschreibung }}</p>
+{% endif %}
+{% if lernblock.lehrbuch %}
+<p class="text-muted small"><i class="bi bi-book me-1"></i>{{ lernblock.lehrbuch }}</p>
+{% endif %}
+
+<!-- Statistics Card -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h6 class="card-title mb-3">
+            <i class="bi bi-bar-chart me-2"></i>Statistik
+        </h6>
+
+        <!-- Leitner Boxes -->
+        {% for fach, anzahl in karten_verteilung.items %}
+        <div class="d-flex align-items-center mb-2">
+            <span class="text-muted small" style="width: 60px;">Fach {{ fach }}</span>
+            <div class="flex-grow-1 mx-2">
+                <div class="fach-bar">
+                    {% if lernblock.anzahl_karten > 0 %}
+                    {% widthratio anzahl lernblock.anzahl_karten 100 as prozent %}
+                    <div class="fill" style="width: {{ prozent }}%"></div>
+                    {% endif %}
+                </div>
+            </div>
+            <span class="text-muted small" style="width: 30px;">{{ anzahl }}</span>
+        </div>
+        {% endfor %}
+
+        <hr>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <div class="h5 mb-0">{{ lernblock.faellige_karten }}</div>
+                <div class="small text-muted">F&auml;llig heute</div>
+            </div>
+            <div class="col-6">
+                {% if heute_stats.richtig or heute_stats.falsch %}
+                <div class="h5 mb-0">{{ heute_stats.erfolgsquote }}%</div>
+                {% else %}
+                <div class="h5 mb-0 text-muted">-</div>
+                {% endif %}
+                <div class="small text-muted">Erfolgsquote heute</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Learning Modes -->
+<h6 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Lernmodus w&auml;hlen</h6>
+
+<div class="row g-3 mb-4">
+    <div class="col-{% if lernblock.bidirektional %}4{% else %}6{% endif %}">
+        <a href="{% url 'lernen_klassisch' lernblock.pk %}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center py-4">
+                <i class="bi bi-book display-6 text-primary mb-2"></i>
+                <div class="fw-bold">Klassisch</div>
+                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+            </div>
+        </a>
+    </div>
+
+    {% if lernblock.bidirektional %}
+    <div class="col-4">
+        <a href="{% url 'lernen_rueckwaerts' lernblock.pk %}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center py-4">
+                <i class="bi bi-arrow-left-right display-6 text-info mb-2"></i>
+                <div class="fw-bold">R&uuml;ckw&auml;rts</div>
+                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+
+    <div class="col-{% if lernblock.bidirektional %}4{% else %}6{% endif %}">
+        <a href="{% url 'lernen_multiple_choice' lernblock.pk %}" class="card h-100 text-decoration-none {% if lernblock.anzahl_karten < 4 %}opacity-50{% endif %}">
+            <div class="card-body text-center py-4">
+                <i class="bi bi-ui-radios display-6 text-success mb-2"></i>
+                <div class="fw-bold">Multiple Choice</div>
+                {% if lernblock.anzahl_karten < 4 %}
+                <div class="small text-danger">Min. 4 Karten</div>
+                {% else %}
+                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+                {% endif %}
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- Card Management -->
+<h6 class="mb-3"><i class="bi bi-card-text me-2"></i>Karten verwalten</h6>
+
+<div class="d-flex gap-2 flex-wrap">
+    <a href="{% url 'karte_create' lernblock.pk %}" class="btn btn-outline-primary">
+        <i class="bi bi-plus-lg me-1"></i>Neue Karte
+    </a>
+    <a href="{% url 'csv_import' lernblock.pk %}" class="btn btn-outline-secondary">
+        <i class="bi bi-upload me-1"></i>CSV Import
+    </a>
+    <a href="{% url 'karten_liste' lernblock.pk %}" class="btn btn-outline-secondary">
+        <i class="bi bi-list me-1"></i>Alle {{ lernblock.anzahl_karten }} Karten
+    </a>
+</div>
+{% endblock %}

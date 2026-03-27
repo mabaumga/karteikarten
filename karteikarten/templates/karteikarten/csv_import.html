@@ -1,0 +1,80 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}CSV Import - {{ lernblock.name }}{% endblock %}
+
+{% block content %}
+<a href="{% url 'lernblock_detail' lernblock.pk %}" class="btn btn-link text-muted ps-0 mb-3">
+    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+</a>
+
+<h4 class="mb-4">CSV Import</h4>
+
+{% if errors %}
+<div class="alert alert-danger">
+    <h6><i class="bi bi-exclamation-triangle me-2"></i>Fehler beim Import</h6>
+    <ul class="mb-0">
+    {% for error in errors %}
+        <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% if imported > 0 %}
+<div class="alert alert-success">
+    <i class="bi bi-check-circle me-2"></i>
+    <strong>{{ imported }}</strong> Karten erfolgreich importiert!
+</div>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="mb-4">
+                <label for="csv_file" class="form-label">CSV-Datei</label>
+                <input class="form-control" type="file" id="csv_file" name="csv_file"
+                       accept=".csv,.txt" required>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="has_header"
+                       name="has_header" checked>
+                <label class="form-check-label" for="has_header">
+                    Erste Zeile ist Kopfzeile
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Format Info -->
+    <div class="card mb-4 bg-light">
+        <div class="card-body">
+            <h6 class="card-title">
+                <i class="bi bi-info-circle me-2"></i>Erwartetes Format
+            </h6>
+
+            <p class="card-text small"><strong>Minimal (nur Pflichtfelder):</strong></p>
+            <pre class="bg-white p-2 rounded small">Begriff;Definition
+Prokrastination;Das Aufschieben von Aufgaben
+Eloquent;Redegewandt, sprachgewandt</pre>
+
+            <p class="card-text small mt-3"><strong>Vollst&auml;ndig (mit optionalen Feldern):</strong></p>
+            <pre class="bg-white p-2 rounded small">Begriff;Definition;Beispiele;Zusatz-Label;Zusatz-Wert
+Prokrastination;Das Aufschieben...;Beispielsatz;Herkunft;lat. procrastinare</pre>
+
+            <ul class="small text-muted mb-0 mt-3">
+                <li>Trennzeichen: Semikolon (;)</li>
+                <li>Bereits vorhandene Begriffe werden &uuml;bersprungen</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">
+            <i class="bi bi-upload me-1"></i>Importieren
+        </button>
+    </div>
+</form>
+{% endblock %}

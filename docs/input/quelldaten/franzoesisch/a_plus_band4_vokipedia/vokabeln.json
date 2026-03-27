@@ -1,0 +1,6578 @@
+{
+  "meta": {
+    "buch": "À plus! Nouvelle édition",
+    "band": 4,
+    "sprache": "Französisch-Deutsch",
+    "quelle": "http://www.vokipedia.de/index.php?title=DEU:Franz%C3%B6sisch:%C3%80_plus!_4_Nouvelle_%C3%A9dition"
+  },
+  "vokabeln": [
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Name des Wortschatzes",
+      "deutsch": "À plus! 4 Nouvelle édition",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Sprache 1",
+      "deutsch": "Französisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Sprache 2",
+      "deutsch": "Deutsch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Inhalt",
+      "deutsch": "komplette Vokabeldatei zu À plus 4 Nouvelle édition, wird wieder im Laufe des Jahres vervollständigt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Fremdsprache / Sachgebiet",
+      "deutsch": "Französisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Sprache der Zielgruppe",
+      "deutsch": "Deutsch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": null,
+      "volet": null,
+      "franzoesisch": "Software",
+      "deutsch": "Mit dem Langenscheidt Vokabeltrainer (www.vokabeln.de) können Sie diesen Wortschatz mit vielen verschiedenen Funktionen trainieren (z.B. Karteikartensystem, Prüfungsmodus, Multiple Choice, Kreuzworträtsel, Superlearning und Tutorium), in unterschiedlichen Formaten drucken (z.B. Vokabelkärtchen, Vokabellisten, Vokabeltests, Kreuzworträtsel) und exportieren (z.B. auf Ihr Handy).",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "{[ê]} ne pas se poser de questions",
+      "deutsch": "nicht groß nachdenken",
+      "beispiel_fr": "Il ne se pose pas des questions, il prend le billet d'avion.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "les petites annonces f. plr.",
+      "deutsch": "die Kleinanzeigen",
+      "beispiel_fr": "À la sortie des supermarchés, il y a souvent des petites annonces.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "en général",
+      "deutsch": "normalerweise, im Allgemeinen",
+      "beispiel_fr": "En général, il n'est pas comme ça.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "d'occasion",
+      "deutsch": "gebraucht",
+      "beispiel_fr": "Dans les petites annonces on trouve des vélos d'occasion.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "bon marché adj. inv",
+      "deutsch": "billig",
+      "beispiel_fr": "Les vélos d'occasion sont souvent bon marché.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "parfait, parfaite",
+      "deutsch": "perfekt, ausgezeichnet",
+      "beispiel_fr": "C'était un journée parfaite.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le coup de fil fam",
+      "deutsch": "der Anruf",
+      "beispiel_fr": "Tous les soirs, elle me passe un coup de fil.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "la tête",
+      "deutsch": "der Kopf; hier: das Gesicht",
+      "beispiel_fr": "J'ai souvent mal à la tête.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "l'intello m./f.",
+      "deutsch": "der/die Streber/in",
+      "beispiel_fr": "Ils disent que je suis un intello.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "{[ê]} sortir avec qn",
+      "deutsch": "mit jdm. zusammen sein in einer Beziehung",
+      "beispiel_fr": "J'aimerais bien sortir avec Philippe, mais il a déjà une petite amie.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "faire du baby-sitting",
+      "deutsch": "babysitten",
+      "beispiel_fr": "Depuis un an, je fais du baby-sitting chez les voisins.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "tellement (de)",
+      "deutsch": "so, so sehr, so viel (e), dermaßen (viel/e)",
+      "beispiel_fr": "J'ai tellement de choses á te raconter, je ne suis pas par oú commencer.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "servir à qc (1)",
+      "deutsch": "von Nutzen sein, zu etwas dienen",
+      "beispiel_fr": "Ça sert a quoi, ce truc?",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le ciel",
+      "deutsch": "der Himmel",
+      "beispiel_fr": "Il pleut et le ciel est gris.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "les pâtes f plr.",
+      "deutsch": "Nudeln",
+      "beispiel_fr": "Les pâtes avec la sauce tomate, c'est très bon.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "gagner de l'argent",
+      "deutsch": "Geld verdienen",
+      "beispiel_fr": "Avec un petit job, les jeunes peuvent gagner de l'argent.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "l'impression f",
+      "deutsch": "der Eindruck",
+      "beispiel_fr": "J'ai l'impression qu'il ment.",
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le centimètre",
+      "deutsch": "der Zentimeter",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "épanouissant",
+      "deutsch": "hier: interessant",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "préciser",
+      "deutsch": "präzisieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "la durée",
+      "deutsch": "die Dauer",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "tout de même",
+      "deutsch": "trotzdem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "faire le calcul",
+      "deutsch": "etw. berechnen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "il me resterai de quoi + inf",
+      "deutsch": "mit dem Rest könnte ich + inf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "l'intello de service",
+      "deutsch": "der Streber vom Dienst",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "celle qui",
+      "deutsch": "diejenige, die",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le sein",
+      "deutsch": "die Brust",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le soulagement",
+      "deutsch": "die Erleichterung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "défiler",
+      "deutsch": "marschieren, aufmarschieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "se demander à quoi sert quoi",
+      "deutsch": "sich fragen, wozu etw. nutzt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "être d'une autre trempe",
+      "deutsch": "aus anderem Holz geschnitzt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "prendre dix centimètres",
+      "deutsch": "um zehn Zentimeter wachsen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le coup de téléphone",
+      "deutsch": "der Telefonanruf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "langer",
+      "deutsch": "wickeln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "cartonner",
+      "deutsch": "großen Erfolg haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le succès",
+      "deutsch": "der Erfolg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le tome",
+      "deutsch": "der Band",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "la file d'attente",
+      "deutsch": "die Warteschlange",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "le chômeur, la chômeuse",
+      "deutsch": "der/die Arbeitslose",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "carrément fam",
+      "deutsch": "total, direkt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": null,
+      "franzoesisch": "flipper fam",
+      "deutsch": "Panik kriegen, ausflippen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "l'avenir m",
+      "deutsch": "die Zukunft",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le métier",
+      "deutsch": "der Beruf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le dessinateur, la dessinatrice",
+      "deutsch": "der/die Zeichner/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "la passion",
+      "deutsch": "die Leidenschaft",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "être doué/douée pour qc",
+      "deutsch": "begabt sein für etw.",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le succès",
+      "deutsch": "der Erfolg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le conseiller d'orientation",
+      "deutsch": "der Berufsberater",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "l'article m",
+      "deutsch": "der Artikel, der Zeitungsartikel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "LeÏla Bekhti",
+      "deutsch": "französische Schauspielerin, (Tout ce qui brille)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "impressionner qn",
+      "deutsch": "jdn beeindrucken",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le courage",
+      "deutsch": "der Mut",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "{[ê]} partir de rien",
+      "deutsch": "von nichts ausgehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "{[ê]} se battre",
+      "deutsch": "sich (durch)schlagen, kämpfen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "battre qn/qc",
+      "deutsch": "jdn schlagen, jdn besiegen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "malgré",
+      "deutsch": "trotz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "modeste",
+      "deutsch": "bescheiden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "ressembler à qn/qc",
+      "deutsch": "jmd/etw ähneln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "Médecins du monde",
+      "deutsch": "Ärzte der Welt (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le médecin",
+      "deutsch": "der Arzt, die Ärztin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "soigner qn/qc",
+      "deutsch": "jdn/etw pflegen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "{[ê]} s'engager",
+      "deutsch": "sich engagieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "l'exclusion f",
+      "deutsch": "die Ausgrenzung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "quelqu'un de bien",
+      "deutsch": "ein guter Mensch (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "admirer qn/qc",
+      "deutsch": "jdn/etw bewundern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "utile f/m adj.",
+      "deutsch": "nützlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "empêcher qn/qc de + inf.",
+      "deutsch": "etw verhindern, jdn an etwas hindern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "à ta place",
+      "deutsch": "an deiner Stelle",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "en ligne",
+      "deutsch": "online",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "Ça ne me dit rien (du tout).",
+      "deutsch": "Das ist (gar) nichts für mich.",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "le/la reporter",
+      "deutsch": "der/die Reporter/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "imaginer qc",
+      "deutsch": "sich etw vorstellen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 1,
+      "franzoesisch": "décider de qc",
+      "deutsch": "über etw bestimmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la responsabilité",
+      "deutsch": "die Verantwortung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "n'en savoir rien",
+      "deutsch": "keine Ahnung haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "emporter qc",
+      "deutsch": "etwas mitnehmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la montre",
+      "deutsch": "die Armbanduhr",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "rater qc",
+      "deutsch": "etw verpassen, durchfallen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'examen m",
+      "deutsch": "die Prüfung, auch: die ärztliche Untersuchung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "propre f/m adj.",
+      "deutsch": "eigen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "~",
+      "deutsch": "~",
+      "beispiel_fr": "Sarah voudrait avoir sa propre chambre.",
+      "beispiel_de": "Sarah hätte gern ihr eigenes Zimmer."
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'entreprise f",
+      "deutsch": "das Unternehmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "repasser qc",
+      "deutsch": "etw wiederholen Prüfung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "poser sa candidature",
+      "deutsch": "sich bewerben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la candidature",
+      "deutsch": "die Bewerbung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'étranger m",
+      "deutsch": "das Ausland",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "passionnant, passionnante",
+      "deutsch": "faszinierend, fesselnd",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "enrichissant, enrichissante",
+      "deutsch": "bereichernd",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "permettre à qn de + inf",
+      "deutsch": "jdm erlauben, etw zu tun",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'horaire m",
+      "deutsch": "die Arbeitszeit, auch: der Fahrplan",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "flexible m/f adj",
+      "deutsch": "flexibel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "gagner de l'argent",
+      "deutsch": "Geld verdienen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'ordre m",
+      "deutsch": "der Befehl, auch: die Ordnung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "prendre une décision",
+      "deutsch": "eine Entscheidung treffen, einen Entschluss fassen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la décision",
+      "deutsch": "die Entscheidung, der Entschluss",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le superhéros, la superhéroïne",
+      "deutsch": "der/die Superheld/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "sauver qn/qc",
+      "deutsch": "jdn/etw retten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "la qualité",
+      "deutsch": "die Qualität, der Vorzug",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "être prêt/prête (à + inf.)",
+      "deutsch": "bereit sein (etw. zu tun)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "prêt, prête",
+      "deutsch": "bereit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le domaine",
+      "deutsch": "das Gebiet, der Bereich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "optimiste m/f adj",
+      "deutsch": "optimistisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le concepteur de jeux vidéo, la conceptrice de jeux vidéo",
+      "deutsch": "Game Conceptioner, Entwickler für Videospiele",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le traducteur, la traductrice",
+      "deutsch": "der Übersetzer, die Übersetzerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le salaire fixe",
+      "deutsch": "das Festgehalt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "le salaire",
+      "deutsch": "das Gehalt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "fixe m/f adj",
+      "deutsch": "fest, unveränderlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'économie f",
+      "deutsch": "die Wirtschaft, die BWL (= Betriebswirtschaftslehre)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "curieux, curieuse",
+      "deutsch": "neugierig, merkwürdig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 2,
+      "franzoesisch": "l'expérience f",
+      "deutsch": "die Erfahrung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le stage",
+      "deutsch": "das Praktikum",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "voici",
+      "deutsch": "das ist/sind, hier ist/sind",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le tuyau, les tuyaux",
+      "deutsch": "der Tipp",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la lettre de motivation",
+      "deutsch": "das Bewerbungsschreiben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "l'employeur, l'employeuse",
+      "deutsch": "der/die Arbeitgeber/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la demande",
+      "deutsch": "die Anfrage, die Bitte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "être intéressé/intéressée par qn/qc",
+      "deutsch": "interessiert sein an jdm/etw",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "de plus",
+      "deutsch": "außerdem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "décorer qc",
+      "deutsch": "etw dekorieren, etw (aus-)schmücken",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "servir qn/qc (1)",
+      "deutsch": "jdn bedienen, etw servieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "en rajouter",
+      "deutsch": "dick auftragen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "particulièrement adv",
+      "deutsch": "besonders",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le service",
+      "deutsch": "der Service, die Bedienung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "les connaissances f plr",
+      "deutsch": "die Kenntnisse, das Wissen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le serveur, la serveuse",
+      "deutsch": "der/die Kellner/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "motivé, motivée",
+      "deutsch": "motiviert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "~",
+      "deutsch": "~",
+      "beispiel_fr": "Dans l'attente de votre réponse, je vous prie de recevoir, Madame, Monsieur, mes salutations respectueuses (1)",
+      "beispiel_de": "Mit freundlichen Grüßen"
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "signer",
+      "deutsch": "unterschreiben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la pièce jointe",
+      "deutsch": "der Anhang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le CV (= curriculum vitae)",
+      "deutsch": "der Lebenslauf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le document",
+      "deutsch": "das Dokument, die Unterlagen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la photo d'identité",
+      "deutsch": "das Passphoto",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "sourire (1)",
+      "deutsch": "lächeln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "ça fait + adj",
+      "deutsch": "das wirkt + Adjektiv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la formation",
+      "deutsch": "die Ausbildung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "l'échange m",
+      "deutsch": "der Austausch, der Tausch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "quinze jours",
+      "deutsch": "vierzehn Tage, zwei Wochen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "professionnel, professionnelle",
+      "deutsch": "beruflich, Berufs-",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "l'informatique f",
+      "deutsch": "die Informatik",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la réponse",
+      "deutsch": "die Antwort",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "recevoir (1)",
+      "deutsch": "empfangen, erhalten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "à l'appareil",
+      "deutsch": "am Apparat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "Ne quittez pas.",
+      "deutsch": "Bleiben Sie dran.",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "Je vous (le/la) passe.",
+      "deutsch": "Ich stelle Sie (zu ihm/ihr) durch.",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "le patron, la patronne",
+      "deutsch": "der/die Chef/in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "c'est bien ça?",
+      "deutsch": "nicht wahr? Rückfrage",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "l'apprenti, l'apprentie",
+      "deutsch": "der/die Auszubildende/r, der Lehrling",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "autonome",
+      "deutsch": "selbstständig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "la réception",
+      "deutsch": "die Rezeption, der Empfang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "discuter (de qc)",
+      "deutsch": "reden, über etw diskutieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 1,
+      "volet": 3,
+      "franzoesisch": "demander à parler à qn",
+      "deutsch": "nach jdm fragen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "~",
+      "deutsch": "~",
+      "beispiel_fr": "J'en ai jusque-là!",
+      "beispiel_de": "Mir steht's bis hier!"
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le vin",
+      "deutsch": "der Wein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "n'est-ce pas",
+      "deutsch": "nicht (wahr), oder (etwa nicht)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la pomme de terre",
+      "deutsch": "die Kartoffel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "serrer la main à qn",
+      "deutsch": "jdm die Hand geben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se faire la bise",
+      "deutsch": "sich mit Küsschen begrüßen/veranschieden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la saucisse",
+      "deutsch": "die Wurst",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se marrer",
+      "deutsch": "Spaß haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le coté",
+      "deutsch": "die Seite",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le Rhin",
+      "deutsch": "der Rhein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la différence",
+      "deutsch": "der Unterschied",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le vasistas",
+      "deutsch": "das (kleine) Klappfenster",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "Karambolage",
+      "deutsch": "Karambolage (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "faire pareil que",
+      "deutsch": "etw genauso machen wie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "l'habitude f",
+      "deutsch": "die Gewohnheit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "quotidien, quotidienne",
+      "deutsch": "täglich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "les mouillettes f plr",
+      "deutsch": "Brotstreifen zum Tunken",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "l'œuf à la coque",
+      "deutsch": "das (weich)gekochte Ei",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "en général",
+      "deutsch": "normalerweise, im Allgemeinen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "mettre qc",
+      "deutsch": "hier: etw streichen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la tranche",
+      "deutsch": "die Scheibe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "découper qc",
+      "deutsch": "etw schneiden, etw ausschneiden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "en plastique",
+      "deutsch": "aus Plastik",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le morceau, les morceaux",
+      "deutsch": "das Stück",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "fin, fine",
+      "deutsch": "fein, dünn",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "tremper",
+      "deutsch": "tunken",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "drôlement",
+      "deutsch": "ziemlich, ganz schön",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "cuit, cuite",
+      "deutsch": "gekocht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "en mettre partout",
+      "deutsch": "alles voll kleckern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "dommage",
+      "deutsch": "schade",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "la petite cuillère",
+      "deutsch": "der Teelöffel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le plastique",
+      "deutsch": "das Plastik, der Kunststoff",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le métal",
+      "deutsch": "das Metall",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "à la place de",
+      "deutsch": "anstelle von, statt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le cornet",
+      "deutsch": "die spitze Tüte, auch: die Eiswaffel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le carton",
+      "deutsch": "der Karton",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le papier",
+      "deutsch": "das Papier, das Dokument",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le ruban",
+      "deutsch": "das Band",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "fièrement adv",
+      "deutsch": "stolz adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "faire  qc soi-même",
+      "deutsch": "etw. selbst machen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "remplir qc (1)",
+      "deutsch": "etw füllen, etw ausfüllen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "Chut!",
+      "deutsch": "Pst!",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "le contenu",
+      "deutsch": "der Inhalt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 1,
+      "franzoesisch": "introduire",
+      "deutsch": "einführen, einleiten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le lycée",
+      "deutsch": "das Gymnasium, die gymnasiale Oberstufe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "Brigitte Sauzay",
+      "deutsch": "Französische Dolmetscherin (*1947- t 2003) (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "revenir",
+      "deutsch": "zurückkommen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "évidemment",
+      "deutsch": "natürlich, selbstverständlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le site (web)",
+      "deutsch": "die Webseite",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "l'OFAJ (Office franco-allemand pour la Jeunesse) m",
+      "deutsch": "das DFJW (Deutsch-französisches Jugendwerk)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "correspondre à",
+      "deutsch": "entsprechen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "la seconde",
+      "deutsch": "wörtl.: die zweite, erstes Jahr der Oberstufe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "la famille d'accueil",
+      "deutsch": "die Gastfamilie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "absolument",
+      "deutsch": "ganz, unbedingt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "gentiment adv",
+      "deutsch": "netterweise adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "mot à mot",
+      "deutsch": "wortwörtlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "même si",
+      "deutsch": "auch wenn, selbst wenn",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "éclater de rire",
+      "deutsch": "in Lachen ausbrechen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "couramment adv",
+      "deutsch": "fließend adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "énormément adv",
+      "deutsch": "sehr viel, gewaltig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le progrès",
+      "deutsch": "der Fortschritt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le séjour",
+      "deutsch": "der Aufenthalt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "différemment adv",
+      "deutsch": "anders adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "de manière",
+      "deutsch": "auf... Art und Weise",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "être assis, être assise",
+      "deutsch": "sitzen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "faire le tour de qc",
+      "deutsch": "um etw. herumgehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "pas grand-chose",
+      "deutsch": "nicht viel, nichts Besonderes",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le carnet de correspondance",
+      "deutsch": "Mitteilungsheft zur Kommunikation zwischen Eltern und Schulverwaltung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "carrément adv fam",
+      "deutsch": "total, direkt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "s'entendre (bien)",
+      "deutsch": "sich (gut) verstehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "pourtant",
+      "deutsch": "obwohl",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "passer",
+      "deutsch": "hier: vorbeigehen, vergehen zeitlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le mal du pays",
+      "deutsch": "das Heimweh",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "par contre",
+      "deutsch": "jedoch, allerdings",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "avoir mal à",
+      "deutsch": "Schmerzen haben an/am",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "le ventre",
+      "deutsch": "der Bauch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "l'eau gazeuse f",
+      "deutsch": "das Mineralwasser mit Kohlensäure",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "l'eau plate f",
+      "deutsch": "das stille (Mineral-)Wasser",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "manquer",
+      "deutsch": "fehlen, verpassen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "se débrouiller",
+      "deutsch": "zurechtkommen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "forcément adv",
+      "deutsch": "zwangsläufig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 2,
+      "franzoesisch": "indépendant, indépendante",
+      "deutsch": "unabhängig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "l'anecdote f",
+      "deutsch": "die Anekdote",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "une sorte de",
+      "deutsch": "eine Art (von)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la pomme de terre",
+      "deutsch": "die Kartoffel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la saucisse",
+      "deutsch": "die Wurst",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "goûter",
+      "deutsch": "kosten, probieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "unique",
+      "deutsch": "einzig, einzigartig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le verre",
+      "deutsch": "das Glas",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "au bout de",
+      "deutsch": "am Ende von",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le malentendu",
+      "deutsch": "das Missverständnis",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "les faux amis m plr",
+      "deutsch": "wörtl: falsche Freunde, Wörter aus unterschiedlichen Sprachen, die sich sehr ähnlich sind, aber nicht dieselbe Bedeutung haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "servir à qc (1)",
+      "deutsch": "von Nutzen sein, zu etw. dienen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "il paraît que",
+      "deutsch": "angeblich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le kiwi",
+      "deutsch": "die Kiwi",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "Il fallait y penser!",
+      "deutsch": "Darauf muss man erst mal kommen!",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "rejoindre qn",
+      "deutsch": "jmd. treffen, jmd. einholen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "exactement adv",
+      "deutsch": "genau adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se tromper",
+      "deutsch": "sich täuschen, sich irren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "avoir qc en tête",
+      "deutsch": "sich etw. vorstellen, an etw. denken, wörtl: etw. im Kopf haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la tête",
+      "deutsch": "der Kopf, auch: das Gesicht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se plaindre de  (1)",
+      "deutsch": "sich beklagen über",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "l'oreiller m",
+      "deutsch": "das Kopfkissen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "en forme de",
+      "deutsch": "in Form von",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "gros, grosse",
+      "deutsch": "groß, dick",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "la comparaison",
+      "deutsch": "der Vergleich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "amusant, amusante",
+      "deutsch": "lustig, unterhaltsam",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 2,
+      "volet": 3,
+      "franzoesisch": "le traversin",
+      "deutsch": "langes Kopfkissen in Form einer Rolle",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "énorme m/f adj",
+      "deutsch": "riesig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se bousculer",
+      "deutsch": "sich drängeln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "assister à",
+      "deutsch": "teilnehmen, dabei sein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "tirer",
+      "deutsch": "schießen, ziehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le clin d'œil",
+      "deutsch": "der Augenblick, das Zwinkern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "en un clin d'œil",
+      "deutsch": "im Handumdrehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "{[ê]} s'asseoir",
+      "deutsch": "sich hinsetzen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "s'asseoir //  <!>sich hinsetzen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je m'assois]→[nous nous asseyons]→2.→[tu t'assois]→[vous vous asseyez]→3.→[il s'assoit]→[ils s'assoient]",
+      "deutsch": "<!>s'asseoir</!> //   sich hinsetzen<!>Présent</!>",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "emmener",
+      "deutsch": "mitnehmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "plein, pleine",
+      "deutsch": "voll",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "plus bas",
+      "deutsch": "weiter unten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le fou, la folle",
+      "deutsch": "der/die Verrückte, der Fan",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "faire de la musculation",
+      "deutsch": "Krafttraining machen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le son",
+      "deutsch": "der Ton, der Klang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "renverser",
+      "deutsch": "kippen, umstoßen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la tête",
+      "deutsch": "der Kopf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "porter chance",
+      "deutsch": "Glück bringen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le combat",
+      "deutsch": "der Kampf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le public",
+      "deutsch": "das Publikum",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "concentré, concentrée",
+      "deutsch": "konzentriert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la terre",
+      "deutsch": "der Boden, die Erde // auch: die Welt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'épaule f",
+      "deutsch": "die Schulter",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "populaire m/f adj",
+      "deutsch": "beliebt, populär",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le footing",
+      "deutsch": "das Joggen, das Laufen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "gaspiller",
+      "deutsch": "verschwenden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "grâce à",
+      "deutsch": "dank",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "De quoi je me mêle?",
+      "deutsch": "Was geht Dich das an?",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Tais-toi!",
+      "deutsch": "Sei still!, Schweig!",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la bouche",
+      "deutsch": "der Mund",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le continent",
+      "deutsch": "der Kontinent",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "africain, africaine",
+      "deutsch": "afrikanisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le Sénégal",
+      "deutsch": "der Senegal",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "national, nationale, nationaux m plr",
+      "deutsch": "national, National-",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le wolof",
+      "deutsch": "Sprache, die vor allem im Norden und Westen des Senegal gesprochen wird, Wolof",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le peul",
+      "deutsch": "Fulfulde, westafrikanische Sprache, die auch im Senegal gesprochen wird",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "les ressources f plr",
+      "deutsch": "die Ressourcen, hier: die Bodenschätze",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'agriculture f",
+      "deutsch": "die Landwirtschaft",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'arachide f",
+      "deutsch": "die Erdnuss",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le coton",
+      "deutsch": "die Baumwolle, die Watte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la mangue",
+      "deutsch": "die Mango",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le Maroc",
+      "deutsch": "Marokko",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'arabe m",
+      "deutsch": "Arabisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le berbère",
+      "deutsch": "die Berbersprache, Berberisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'espagnol m",
+      "deutsch": "Spanisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'olive f",
+      "deutsch": "die Olive",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'élevage m",
+      "deutsch": "die Zucht, die Aufzucht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le mouton",
+      "deutsch": "das Schaf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le phosphate",
+      "deutsch": "das Phosphat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'argent m",
+      "deutsch": "das Silber",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la Côte d'Ivoire",
+      "deutsch": "die Elfenbeinküste",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le baoulé",
+      "deutsch": "Sprache, die im Zentrum der Elfenbeinküste gesprochen wird, Baule",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le dioula",
+      "deutsch": "Sprache, die im Norden der Elfenbeinküste gesprochen wird, Dioula",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le malinké",
+      "deutsch": "westafrikanische Sprache, die auch im Nordwesten der Elfenbeinküste gesprochen wird, Malinke",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le cacao",
+      "deutsch": "der Kakao",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le café",
+      "deutsch": "der Kaffee",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le caoutchouc",
+      "deutsch": "der Kautschuk",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'huile f",
+      "deutsch": "das Öl",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'huile de palme f",
+      "deutsch": "das Palmöl",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le bois",
+      "deutsch": "das Holz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'Algérie f",
+      "deutsch": "Algerien",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la datte",
+      "deutsch": "die Dattel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le gaz",
+      "deutsch": "das Gas",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le gaz naturel",
+      "deutsch": "Erdgas",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le pétrole",
+      "deutsch": "das Erdöl",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le désert",
+      "deutsch": "die Wüste",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "peuplé, peuplée",
+      "deutsch": "bevölkert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'Asie f",
+      "deutsch": "Asien",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le milliard",
+      "deutsch": "die Milliarde",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la majorité",
+      "deutsch": "die Mehrheit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'enseignement m",
+      "deutsch": "der Unterricht, das Schulwesen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la plupart de",
+      "deutsch": "die meisten von",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "la moitié",
+      "deutsch": "die Hälfte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'immigré, l'immigrée",
+      "deutsch": "der Einwanderer, die Einwanderin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le tiers",
+      "deutsch": "das Drittel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le Maghreb",
+      "deutsch": "der Maghreb",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "subsaharien, subsaharienne",
+      "deutsch": "subsaharaisch, südlich der Sahara",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "l'origine f",
+      "deutsch": "die Herkunft, der Ursprung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "Dakar",
+      "deutsch": "Hauptstadt des Senegal",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "Abidjan",
+      "deutsch": "Regierungssitz und ehemalige Hauptstadt der Elfenbeinküste",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "Alger",
+      "deutsch": "Hauptstadt Algeriens",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "Casablanca",
+      "deutsch": "größte Stadt Marokkos",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le Mali",
+      "deutsch": "Mali, westafrikanischer Staat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 1,
+      "franzoesisch": "le Burkina Faso",
+      "deutsch": "Burkina Faso",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le portrait",
+      "deutsch": "das Portrait",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Odienné",
+      "deutsch": "Odienné, Stadt im Nordwesten der Elfenbeinküste",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le nom",
+      "deutsch": "der Name, der Nachname",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Bamako",
+      "deutsch": "Hauptstadt von Mali",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "{[ê]} s'exiler",
+      "deutsch": "ins Exil gehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "critiquer",
+      "deutsch": "kritisieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "ivoirien, ivoirienne",
+      "deutsch": "aus der Elfenbeinküste, ivorisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "engagé, engagée",
+      "deutsch": "engagiert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la corruption",
+      "deutsch": "die Korruption, die Bestechung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la pauvreté",
+      "deutsch": "die Armut",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "l'organisation f",
+      "deutsch": "die Organisation",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "l'action f",
+      "deutsch": "die Aktion, die Tat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la faim",
+      "deutsch": "der Hunger",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "donner une voix à qn",
+      "deutsch": "jmd. eine Stimme geben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "créer",
+      "deutsch": "erschaffen, hier: gründen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "l'image f",
+      "deutsch": "das Bild",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "positif, positive",
+      "deutsch": "positiv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Fatym Layachi",
+      "deutsch": "marokkanische Schauspielerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "marocain, marocaine",
+      "deutsch": "marokkanisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le bac, le baccalauréat",
+      "deutsch": "das Abi, das Abitur",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le Cours Florent",
+      "deutsch": "private Schauspielschule in Paris",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le Marocain, le Marocaine",
+      "deutsch": "der Marokkaner, die Marokkanerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le symbole",
+      "deutsch": "das Symbol, das Zeichen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "depuis que",
+      "deutsch": "seit, seitdem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la jeunesse",
+      "deutsch": "die Jugend",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "doré, dorée",
+      "deutsch": "vergoldet, hier: reich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "selon",
+      "deutsch": "nach, laut",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le modèle",
+      "deutsch": "das Vorbild, das Modell",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "occidental, occidentale, occidentaux",
+      "deutsch": "westlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "attaché (à qc/qn), attachée (à qc/qn)",
+      "deutsch": "verbunden, festgemacht (an etw/jdn)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le multiculturalisme",
+      "deutsch": "die Multikulturalität",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "{[ê]} s'imposer",
+      "deutsch": "sich behaupten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "mettre en scène",
+      "deutsch": "inszenieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le refus",
+      "deutsch": "die Weigerung, die Ablehnung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "{[ê]} (se) poser des questions",
+      "deutsch": "(sich) Fragen stellen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la création",
+      "deutsch": "die Schöpfung, das Kreieren, auch: das Werk",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la censure",
+      "deutsch": "die Zensur nicht Schulnote",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "l'art m",
+      "deutsch": "die Kunst",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "{[ê]} se développer",
+      "deutsch": "sich entwickeln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Marguerite Abouet",
+      "deutsch": "ivorische Schriftstellerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Yopougon",
+      "deutsch": "Stadtviertel in Abidjan",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le quartier populaire",
+      "deutsch": "einfaches, ärmeres Stadtviertel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "faire du baby-sitting",
+      "deutsch": "babysitten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "l'enfance f",
+      "deutsch": "die Kindheit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "le mari",
+      "deutsch": "der Ehemann, der Mann",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "Clément Oubrerie",
+      "deutsch": "französischer Illustrator, Comic- und Trickfilmzeichner",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "il fait bon vivre",
+      "deutsch": "es lebt sich gut",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "{[ê]} sortir",
+      "deutsch": "hier: anlaufen Film",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 2,
+      "franzoesisch": "la bibliothèque",
+      "deutsch": "die Bibliothek, die Bücherei",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le prix, les prix",
+      "deutsch": "der Preis",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'impression f",
+      "deutsch": "der Eindruck",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la Médina",
+      "deutsch": "die Medina, Name der Altstadt in arabischen und (nord-)afrikanischen Städten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "accueillir",
+      "deutsch": "empfangen, aufnehmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "sénégalais, sénégalaise",
+      "deutsch": "senegalisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le tiep-bou-diene",
+      "deutsch": "traditionelles senegalesisches Gericht aus Fisch und Reis",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le poulet",
+      "deutsch": "das Hähnchen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le poulet yassa",
+      "deutsch": "Hähnchen mit Zitrone nach senegalesischer Art",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le citron vert",
+      "deutsch": "die Limone",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "{[ê]} se balader fam",
+      "deutsch": "spazieren gehen, herumlaufen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le Plateau",
+      "deutsch": "modernes Stadtviertel im Süden von Dakar",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le marché Sandaga",
+      "deutsch": "großer Markt in Dakar",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'indépendance f",
+      "deutsch": "die Unabhängigkeit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la vaisselle",
+      "deutsch": "das Geschirr",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le tissu",
+      "deutsch": "der Stoff",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la viande",
+      "deutsch": "das Fleisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le boubou",
+      "deutsch": "der Boubou, traditionelle Männerbekleidung in West- und Nordafrika",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "marchander",
+      "deutsch": "handeln, verhandeln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "être pressé, être pressée",
+      "deutsch": "es eilig haben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le franc CFA",
+      "deutsch": "der CFA-Franc, Franc de la Communauté Financière d'Afrique, Währung, die hauptsächlich in frankophonen Ländern West- und Zentralafrikas genutzt wird",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "{[ê]} passer pour qn/qc",
+      "deutsch": "für jdn/etw gehalten werden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "jeter",
+      "deutsch": "werfen, wegwerfen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "les déchets m",
+      "deutsch": "der Abfall",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "au lieu de",
+      "deutsch": "anstelle, statt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Saly",
+      "deutsch": "touristischer Badeort südlich von Dakar",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Léopold Sédar Senghor",
+      "deutsch": "sengalischer Dichter und Politiker",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le lion",
+      "deutsch": "der Löwe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "les Lions du Sénégal",
+      "deutsch": "Spitzname der senegalesischen Fußballnationalmannschaft der Herren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'éléphant m",
+      "deutsch": "der Elefant",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "les Éléphants de Côte d'Ivoire",
+      "deutsch": "Spitzname der ivorischen Fußballnationalmannschaft der Herren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "Daara",
+      "deutsch": "senegalesische Hip-Hop-/Reggae-Gruppe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la lutte",
+      "deutsch": "der Kampf, das Ringen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la lutte sénégalaise",
+      "deutsch": "westafrikanischer Kampfsport, ähnlich dem Wrestling oder Ringkampf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "traditionnel, traditionnelle",
+      "deutsch": "traditionell",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "dont",
+      "deutsch": "hier: von dem, dessen, auch: deren Relativpronomen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'île de Gorée",
+      "deutsch": "Gorée Insel vor der senegalesischen Küste",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la traite des Noirs",
+      "deutsch": "der Sklavenhandel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la Maison des esclaves",
+      "deutsch": "wörtl: das Sklavenhaus (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'Amérique f",
+      "deutsch": "Amerika (Kontinent)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "l'arme f",
+      "deutsch": "die Waffe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "plein de",
+      "deutsch": "viele",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le Lac rose",
+      "deutsch": "senegalesischer Salzsee",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "la Casamance",
+      "deutsch": "Fluss und Region im Südwesten Senegals",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "le parc national du Niokolo Koba",
+      "deutsch": "Nationalpark im Südosten Senegals",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "en détail",
+      "deutsch": "ausführlich, im Einzelnen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 3,
+      "volet": 3,
+      "franzoesisch": "après-demain",
+      "deutsch": "übermorgen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "Laurent Cantet",
+      "deutsch": "französischer Filmregisseur",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "la synopsis",
+      "deutsch": "die Kurzbeschreibung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "agressif, agressive",
+      "deutsch": "aggressiv, grell",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "insolent, insolente",
+      "deutsch": "unverschämt, frech",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "motiver",
+      "deutsch": "motivieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "prendre des risques",
+      "deutsch": "Risiken eingehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "la critique",
+      "deutsch": "die Kritik",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le réalisateur, la réalisatrice",
+      "deutsch": "der Regisseur, die Regisseurin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "la Palme d'or",
+      "deutsch": "die goldene Palme, französischer Filmpreis, wird beim Filmfest in Cannes verliehen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le Festival de Cannes",
+      "deutsch": "internationale Filmfestspiele von Cannes",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "l'adaptation f",
+      "deutsch": "die Bearbeitung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "François Bégaudeau",
+      "deutsch": "französischer Autor, (Entre les murs)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "ancien, ancienne",
+      "deutsch": "alt, ehemalig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le scénario",
+      "deutsch": "das Drehbuch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "Robin Campillo",
+      "deutsch": "französischer Filmregisseur und Cutter, (Entre les murs)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "d'ailleurs",
+      "deutsch": "übrigens",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "l'amateur, l'amatrice",
+      "deutsch": "der Laie, die Laie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "rendre qc authentique",
+      "deutsch": "etw. originalgetreu machen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le quotidien",
+      "deutsch": "der Alltag",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le goût",
+      "deutsch": "der Geschmack, die Vorliebe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "à l'intérieur",
+      "deutsch": "innerhalb, drinnen, hier: in den Räumen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "en particulier",
+      "deutsch": "insbesondere, vor allem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "vivant, vivante",
+      "deutsch": "lebendig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "à la fois",
+      "deutsch": "gleichzeitig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "captiver",
+      "deutsch": "fesseln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le spectateur, la spectatrice",
+      "deutsch": "der Zuschauer, die Zuschauerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le gros plan",
+      "deutsch": "die Nahaufnahme",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le premier plan",
+      "deutsch": "der Vordergrund",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "l'arrière-plan m",
+      "deutsch": "der Hintergrund",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le comportement",
+      "deutsch": "das Verhalten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "maîtriser",
+      "deutsch": "beherrschen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "la situation",
+      "deutsch": "die Situation",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le dialogue",
+      "deutsch": "der Dialog",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "reprocher qc à qn",
+      "deutsch": "jmd etwas vorwerfen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le conseil de classe",
+      "deutsch": "die Klassenkonferenz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le moment-clé",
+      "deutsch": "der Schlüsselmoment",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "dégénérer",
+      "deutsch": "ausarten, sich verschlechtern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "le délégué de classe, la déléguée de classe",
+      "deutsch": "der Schülervertreter, die Schülervertreterin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "complètement",
+      "deutsch": "ganz, vollständig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "la comédie",
+      "deutsch": "die Komödie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "qui s'inspire/nt de",
+      "deutsch": "nach der Vorlage von",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module A",
+      "franzoesisch": "emmener",
+      "deutsch": "mitnehmen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le regard",
+      "deutsch": "der Blick",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le siècle des Lumières",
+      "deutsch": "die Aufklärung (1715-1789)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Prusse",
+      "deutsch": "Preußen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Frédéric II",
+      "deutsch": "Friedrich II., König der Preußen, genannte Friedrich der Große (1712-1786)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Voltaire",
+      "deutsch": "französischer Philosoph (1694-1778)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le philosophe, la philosophe",
+      "deutsch": "der Philosoph, die Philosophin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le petit-fils, la petite-fille",
+      "deutsch": "der Enkel, die Enkelin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Charlemagne",
+      "deutsch": "Karl der Große, König des Fränkischen Reiches (747-814)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le traité de Verdun (843)",
+      "deutsch": "der Vertrag von Verdun",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le traité",
+      "deutsch": "der Vertrag",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "partager",
+      "deutsch": "teilen, aufteilen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'Empire m",
+      "deutsch": "das Kaiserreich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Francie occidentale",
+      "deutsch": "das Westfrankenreich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Francie orientale",
+      "deutsch": "das Ostfrankenreich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Lotharingie",
+      "deutsch": "Lotharingien",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "les accords de Schengen",
+      "deutsch": "die Schengener Abkommen (1995)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Charles De Gaulle",
+      "deutsch": "französischer Politiker und Staatspräsident (1890-1970)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le traité de l'Élysée",
+      "deutsch": "der Élyséevertrag (1963)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Première Guerre mondiale",
+      "deutsch": "der Erste Weltkrieg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la guerre franco-prussienne",
+      "deutsch": "der französisch-preußische Krieg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Lorraine",
+      "deutsch": "Lothringen, Region im Nordosten Frankreichs",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "programmé, programmée",
+      "deutsch": "vorprogrammiert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'Édit de Nantes m",
+      "deutsch": "das Edikt von Nantes (1598)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "mettre fin à qc",
+      "deutsch": "etw. beenden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la religion",
+      "deutsch": "die Religion",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le catholique, la catholique",
+      "deutsch": "der Katholik, die Katholikin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le protestant, la protestante",
+      "deutsch": "der Protestant, die Protestantin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Réforme",
+      "deutsch": "die Reformation",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la paix",
+      "deutsch": "der Frieden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la révocation",
+      "deutsch": "der Widerruf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Seconde Guerre mondiale",
+      "deutsch": "der Zweite Weltkrieg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Napoléon",
+      "deutsch": "Napoleon, französischer General und Kaiser (1769-1821)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la troupe",
+      "deutsch": "die Truppe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "envahir",
+      "deutsch": "einfallen in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la partie",
+      "deutsch": "der Teil",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'ennemi, l'ennemie",
+      "deutsch": "der Feind, die Feindin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la réconciliation",
+      "deutsch": "die Versöhnung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "sembler",
+      "deutsch": "scheinen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "impossible",
+      "deutsch": "unmöglich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le président, la présidente",
+      "deutsch": "der Präsident, die Präsidentin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le chancelier, la chancelière",
+      "deutsch": "der Kanzler, die Kanzlerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le tour de force",
+      "deutsch": "der Kraftakt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "déclarer",
+      "deutsch": "verkünden, erklären",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "coopérer",
+      "deutsch": "kooperieren, zusammenarbeiten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la politique",
+      "deutsch": "die Politik",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'objectif m",
+      "deutsch": "das Ziel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "rapprocher qn",
+      "deutsch": "hier: einander näherbringen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le citoyen, la citoyenne",
+      "deutsch": "der Bürger, die Bürgerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le gouvernement",
+      "deutsch": "die Regierung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "grâce à",
+      "deutsch": "dank",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "faire la connaissance de qn/qc",
+      "deutsch": "jdn/etw. kennenlernen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le jumelage",
+      "deutsch": "die (Städte-) Partnerschaft",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la réalité",
+      "deutsch": "die Realität",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le prénom",
+      "deutsch": "der Vorname",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la profession",
+      "deutsch": "der Beruf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'homme politique, la femme politique",
+      "deutsch": "der Politiker, die Politikerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la carrière",
+      "deutsch": "die Karriere, die Laufbahn",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le maire",
+      "deutsch": "der Bürgermeister, die Bürgermeisterin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le nazisme",
+      "deutsch": "der Nationalsozialismus",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la République fédérale d'Allemagne (RFA)",
+      "deutsch": "Bundesrepublik Deutschland",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le général",
+      "deutsch": "der General",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Londres",
+      "deutsch": "London",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la Résistance",
+      "deutsch": "die Résistance , französische Widerstandsbewegung während der deutschen Besatzung (1940-1944)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'Allemagne nazie",
+      "deutsch": "Nazideutschland",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "provisoire m/f adj",
+      "deutsch": "vorläufig, provisorisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "confondre",
+      "deutsch": "verwechseln",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "avoir honte (de qc)",
+      "deutsch": "sich schämen (für etw)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'erreur f",
+      "deutsch": "der Irrtum, der Fehler",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le huguenot, la huguenote",
+      "deutsch": "der Hugenotte, die Hugenottin (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "annoncer",
+      "deutsch": "ankündigen, mitteilen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "La Rochelle",
+      "deutsch": "Hafenstadt im Südwesten Frankreichs",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'épreuve f",
+      "deutsch": "die Prüfung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "pratiquer",
+      "deutsch": "praktizieren, ausüben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "révoquer",
+      "deutsch": "widerrufen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le choc",
+      "deutsch": "der Schock",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le soldat",
+      "deutsch": "der Soldat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "convertir qn à qc (1)",
+      "deutsch": "jmd. zu etwas bekehren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "huguenot, huguenote",
+      "deutsch": "hugenottisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "Que Dieu ait leur âme!",
+      "deutsch": "Gott sei ihrer Seele gnädig!",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'horreur f",
+      "deutsch": "der Schrecken, das Grauen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'incendie m",
+      "deutsch": "der Brand",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'imprimerie f",
+      "deutsch": "die Druckerei",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le drame",
+      "deutsch": "das Drama",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "l'exil m",
+      "deutsch": "das Exil",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "réformé, réformée",
+      "deutsch": "reformiert, hier: protestantisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "hélas",
+      "deutsch": "leider, bedauernder Ausruf",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "se cacher",
+      "deutsch": "sich verstecken",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le réfugié, la réfugiée",
+      "deutsch": "der Flüchtling",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "financier, financière",
+      "deutsch": "finanziell",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "la lettre",
+      "deutsch": "der Brief",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le dieu",
+      "deutsch": "der Gott",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module B",
+      "franzoesisch": "le neveu, la nièce",
+      "deutsch": "der Neffe, die Nichte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la publicité, la pub fam",
+      "deutsch": "die Werbung, die Anzeige, der Werbespot",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "manipuler",
+      "deutsch": "manipulieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "fonctionner",
+      "deutsch": "funktionieren, arbeiten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "décoder",
+      "deutsch": "dekodieren, entschlüsseln, hier: durchschauen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "en haut",
+      "deutsch": "oben, nach oben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'attention f",
+      "deutsch": "die Aufmerksamkeit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le consommateur, la consommatrice",
+      "deutsch": "der Verbraucher, die Verbraucherin, der Konsument, die Konsumentin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "suggérer",
+      "deutsch": "andeuten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "polluer",
+      "deutsch": "verschmutzen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'environnement m",
+      "deutsch": "die Umwelt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "végétal, végétale, végétaux m plr",
+      "deutsch": "pflanzlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le sous-titre",
+      "deutsch": "der Untertitel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "en bas",
+      "deutsch": "unten, nach unten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le composant",
+      "deutsch": "der Bestandteil, die Komponente",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'élément m",
+      "deutsch": "das Element",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le ciel",
+      "deutsch": "der Himmel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "évoquer",
+      "deutsch": "erinnern an",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le bien-être",
+      "deutsch": "das Wohlbefinden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'harmonie f",
+      "deutsch": "die Harmonie, der Einklang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "associer qn/qc à qc",
+      "deutsch": "jdn/etw mit etw verbinden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la protection",
+      "deutsch": "der Schutz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'écolabel m",
+      "deutsch": "das Ökolabel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "se servir de  (1)",
+      "deutsch": "benutzen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le label",
+      "deutsch": "das Label, die Marke",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "réel, réelle",
+      "deutsch": "echt, real",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "faux, fausse",
+      "deutsch": "falsch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "convaincre",
+      "deutsch": "überzeugen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "convaincre //  <!>überzeugen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je convaincs]→[nous convainquons]→2.→[tu convaincs]→[vous convainquez]→3.→[il convainc]→[ils convainquent]",
+      "deutsch": "<!>convaincre</!> //   überzeugen<!>Présent</!>",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "écologique",
+      "deutsch": "umweltfreundlich, ökologisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la pratique",
+      "deutsch": "die Praktik, die Praxis",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'écoblanchiment m",
+      "deutsch": "das Greenwashing (1)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la répétition",
+      "deutsch": "die Wiederholung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le détail",
+      "deutsch": "das Detail, die Einzelheit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le premier plan",
+      "deutsch": "der Vordergrund",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le pré",
+      "deutsch": "das Feld",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'arrière-plan",
+      "deutsch": "der Hintergrund",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le volcan",
+      "deutsch": "der Vulkan",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'Auvergne f",
+      "deutsch": "die Auvergne, Region in Zentralfrankreich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la source",
+      "deutsch": "die Quelle, der Ursprung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "faire partie de qc",
+      "deutsch": "zu etw. gehören, Teil sein von etw.",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'engagement m",
+      "deutsch": "das Engagement, die Verpflichtung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'écologie f",
+      "deutsch": "die Ökologie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le slogan",
+      "deutsch": "der Slogan",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "ironique",
+      "deutsch": "ironisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "l'association f",
+      "deutsch": "die Organisation, der Verein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "dénoncer",
+      "deutsch": "anprangern, denunzieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "sensibiliser",
+      "deutsch": "sensibilisieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "provoquer",
+      "deutsch": "herausfordern, provozieren",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la pollution",
+      "deutsch": "die Umweltvermutzung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "le développement durable",
+      "deutsch": "die Nachhaltigkeit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "la société",
+      "deutsch": "die Gesellschaft",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module C",
+      "franzoesisch": "équitable",
+      "deutsch": "gerecht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "à la carte",
+      "deutsch": "nach Wunsch, wörtlich: nach der Karte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "suivant, suivante",
+      "deutsch": "folgender, folgende, folgendes",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "la Renaissance française",
+      "deutsch": "die französische Renaissance, Kunst und Architektur im 15. und 16. Jahrhundert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "Orléans",
+      "deutsch": "französische Stadt, 130 km südlich von Paris",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "Angers",
+      "deutsch": "französische Stadt, 300 km südwestlich von Paris",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le bon plan",
+      "deutsch": "der Geheimtipp",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "prestigieux, prestigieuse",
+      "deutsch": "glanzvoll, renommiert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le bassin d'Arcachon",
+      "deutsch": "das Becken von Arcachon",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "situé, située",
+      "deutsch": "gelegen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "Bordeaux",
+      "deutsch": "Stadt im Dep. Gironde",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "salé, salée",
+      "deutsch": "salzig, gesalzen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "l'océan Atlantique m",
+      "deutsch": "der atlantische Ozean",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "bronzer",
+      "deutsch": "bräunen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "la dune du Pilat",
+      "deutsch": "riesige Wanderdüne am Becken von Arcachon",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "la dune",
+      "deutsch": "die Düne",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le sable",
+      "deutsch": "der Sand",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "conseiller qc à qn",
+      "deutsch": "jdm. etw. raten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le coucher de soleil",
+      "deutsch": "der Sonnenuntergang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "l'huître f",
+      "deutsch": "die Auster",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "la réserve naturelle",
+      "deutsch": "das Naturschutzgebiet",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "les Alpes f plr.",
+      "deutsch": "die Alpen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le sud-est",
+      "deutsch": "der Südosten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le Rhône",
+      "deutsch": "die Rhone",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "les gorges du Verdon f plr.",
+      "deutsch": "die Verdonschlucht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "Castellane",
+      "deutsch": "Castellane, französische Kleinstadt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le lac de Sainte-Croix",
+      "deutsch": "Stausee an der Verdonschlucht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le passage",
+      "deutsch": "die Passage, hier: der Durchgang",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le rafting",
+      "deutsch": "Rafting, Sportart",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le Mercantour",
+      "deutsch": "Nationalpark im Südosten Frankreichs",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le sentier",
+      "deutsch": "der Fußweg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le paradis",
+      "deutsch": "das Paradies",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le randonneur, la randonneuse",
+      "deutsch": "der Wanderer, die Wanderin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module D",
+      "franzoesisch": "le circuit",
+      "deutsch": "die Strecke, der Rundweg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "la diversité",
+      "deutsch": "die Vielfalt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "le slam",
+      "deutsch": "der (Poetry-)Slam",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "le racisme",
+      "deutsch": "der Rassismus",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "les propos m plr",
+      "deutsch": "die Äußerungen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "raciste",
+      "deutsch": "rassistisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "tolérant, tolérante",
+      "deutsch": "tolerant",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "rejeter",
+      "deutsch": "zurückweisen, ablehnen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "l'apparence f",
+      "deutsch": "die äußere Erscheinung, der Anschein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "le préjugé",
+      "deutsch": "das Vorurteil",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "la nationalité",
+      "deutsch": "die Staatsangehörigkeit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "quitter",
+      "deutsch": "verlassen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "fuir la misère",
+      "deutsch": "vor dem Elend flüchten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "fuir //  <!>fliehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je fuis]→[nous fuyons]→2.→[tu fuis]→[vous fuyez]→3.→[il fuit]→[ils fuient]",
+      "deutsch": "<!>fuir</!> //   fliehen<!>Présent</!>",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "fuir //  <!>fliehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fui]→[nous avons fui]→2.→[tu as fui]→[vous avez fui]→3.→[il a fui]→[ils ont fui]",
+      "deutsch": "<!>fuir</!> //   fliehen<!>Passé composé</!>",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "représenter",
+      "deutsch": "darstellen, verkörpern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "la tolérance",
+      "deutsch": "die Toleranz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "l'espoir m",
+      "deutsch": "die Hoffnung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "les compatriotes m plr",
+      "deutsch": "die Landsleute",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "parmi",
+      "deutsch": "unter, von",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "bilingue",
+      "deutsch": "zweisprachig",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "le lien",
+      "deutsch": "die Verbindung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "souffrir de qc (1)",
+      "deutsch": "leiden an etw",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "simple",
+      "deutsch": "einfach, leicht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module E",
+      "franzoesisch": "égal, égale, égaux m plr",
+      "deutsch": "gleich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le zoom",
+      "deutsch": "der Zoom",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la valise",
+      "deutsch": "der Koffer",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la poche",
+      "deutsch": "die Tasche, das Innenfach z.B an Kleidung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le livre audio",
+      "deutsch": "das Hörbuch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'Olympe m",
+      "deutsch": "der Olymp",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le héros, l'heroïne",
+      "deutsch": "der Held, die Heldin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la bande originale",
+      "deutsch": "der Soundtrack, die Filmmusik",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la paix",
+      "deutsch": "der Frieden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "les environs m plr",
+      "deutsch": "die Umgebung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'encyclopédie f",
+      "deutsch": "die Enzyklopädie, das Lexikon",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la cabane",
+      "deutsch": "die Hütte",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le film d'animation",
+      "deutsch": "der Animationsfilm",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le roi, la reine",
+      "deutsch": "der König, die Königin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'œuvre d'art f",
+      "deutsch": "das Kunstwerk",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Jacques Tardi, Jacques Martin",
+      "deutsch": "französischer Comicautor",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la Grande Guerre",
+      "deutsch": "der Erste Weltkrieg",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'horreur f",
+      "deutsch": "der Schrecken, das Grauen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Louis XIV",
+      "deutsch": "Ludwig XIV. (1638-1715)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le trafic",
+      "deutsch": "der Verkehr, auch: der Schmuggel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "extraordinaire m/f",
+      "deutsch": "außergewöhnlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Patrick Sobral, Arthur de Pins",
+      "deutsch": "französischer Comicautor und Zeichner",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le sorcier // la sorcière",
+      "deutsch": "der Hexer, die Hexe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "congolais, congolaise",
+      "deutsch": "kongolesisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Tembo Kash",
+      "deutsch": "kongolesischer Comicautor",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le Congo, République démocratique du Congo",
+      "deutsch": "der Kongo, Demokratische Republik Kongo, bis 1997 Zaïre",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le mécanicien, la mécanicienne",
+      "deutsch": "der Mechaniker, die Mechanikerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'homme d'affaires m",
+      "deutsch": "der Geschäftsmann",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "tomber amoureux, tomber amoureuse",
+      "deutsch": "sich verlieben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Dominique Roques",
+      "deutsch": "französische Comicautorin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Alexis Dormal, Christian Darasse",
+      "deutsch": "französischer Comiczeichner",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Zidrou",
+      "deutsch": "belgischer Comicautor",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'adolescent, l'adolescente",
+      "deutsch": "der Jugendliche, die Jugendliche",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le camarade de classe, la camarade de classe",
+      "deutsch": "der Mitschüler, die Mitschülerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'illustration f",
+      "deutsch": "die Abbildung, die Illustration",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Hugo Pratt",
+      "deutsch": "italienischer Comicautor und -zeichner (1927-1997)",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le classique",
+      "deutsch": "der Klassiker",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le sud",
+      "deutsch": "der Süden",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "élégant, élégante",
+      "deutsch": "elegant",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "romantique",
+      "deutsch": "romantisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le pirate",
+      "deutsch": "der Pirat",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "à bord",
+      "deutsch": "an Bord",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le prisonnier, la prisonnière",
+      "deutsch": "der Gefangene, die Gefangene",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "mystérieux, mystérieuse",
+      "deutsch": "geheimnisvoll",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le crabe",
+      "deutsch": "der Krebs",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la révolution",
+      "deutsch": "die Revolution",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le festival d'angoulême (Festival Internationale de la Bande Dessinée d'Angoulême)",
+      "deutsch": "internationales Comicfestival von Angoulême",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Angoulême",
+      "deutsch": "Hauptstadt des westfranzösischen Départements La Charente in der Region Nouvelle-Aquitaine",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "simplement adv",
+      "deutsch": "einfach adv",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "entier, entière",
+      "deutsch": "ganz",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la dédicace",
+      "deutsch": "die Widmung, die (Autoren-)Signatur",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "précis, précise",
+      "deutsch": "genau, exakt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'autobiographie f",
+      "deutsch": "die Autobiographie",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le regard",
+      "deutsch": "der Blick",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le visteur, la visiteuse",
+      "deutsch": "der Besucher, die Besucherin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "assister à",
+      "deutsch": "dabei sein, teilnehmen an",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le/la scénariste",
+      "deutsch": "der (Drehbuch-)Autor, die (Drehbuch-Autorin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la bulle",
+      "deutsch": "die (Sprech-)Blase",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le spectacle",
+      "deutsch": "die Vorstellung, die Show",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "déguisé, déguisée",
+      "deutsch": "verkleidet",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le public",
+      "deutsch": "das Publikum",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le jury",
+      "deutsch": "die Jury",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "remettre",
+      "deutsch": "verleihen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "~",
+      "deutsch": "~",
+      "beispiel_fr": "À la fin du festival on remet les prix.",
+      "beispiel_de": "Am Ende des Festivals verleiht man die Preise."
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "c'est-à-dire",
+      "deutsch": "das heißt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "récompenser",
+      "deutsch": "belohnen, auszeichnen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "gràce à",
+      "deutsch": "dank",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le chiffre",
+      "deutsch": "die Zahl",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la production",
+      "deutsch": "die Produktion",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le lecteur, la lectrice",
+      "deutsch": "der Leser, die Leserin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "au cours de",
+      "deutsch": "im Laufe von, im Laufe des, im Laufe der",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la tranche d'âge",
+      "deutsch": "die Altersgruppe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "en moyenne",
+      "deutsch": "im Durchschnitt, durchschnittlich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "fonctionner",
+      "deutsch": "funktionieren, arbeiten",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la case",
+      "deutsch": "das Feld, hier: das einzelne Comicbild, das Panel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le plan-large",
+      "deutsch": "die Panoramaeinstellung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "représenter",
+      "deutsch": "darstellen, zeigen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le décor",
+      "deutsch": "hier: die Umgebung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le gros-plan",
+      "deutsch": "die Nahansicht",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'inverse m",
+      "deutsch": "hier: umgekehrt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'effet m",
+      "deutsch": "die Wirkung, der Effekt",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "selon",
+      "deutsch": "hier: je nachdem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le bord de case",
+      "deutsch": "die Umrahmung, hier: die Panelrahmung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "généralement",
+      "deutsch": "im Allgemeinen",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le système",
+      "deutsch": "das Sytem",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "on s'y tient",
+      "deutsch": "man hält sich dran",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "durant",
+      "deutsch": "während",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la rupture",
+      "deutsch": "der Bruch, hier: die Unterbrechung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le flash-back",
+      "deutsch": "die Rückblende",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le malaise",
+      "deutsch": "das Unwohlsein",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la richesse",
+      "deutsch": "der Reichtum, die Fülle",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le lettrage",
+      "deutsch": "die Schriftgestaltung, das Lettering",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "fondamental, fondamentale, fondamentaux m plr",
+      "deutsch": "grundlegend, fundamental",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "intégré, intégrée à (ou dans)",
+      "deutsch": "angepasst an, integriert in",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le graphisme",
+      "deutsch": "die grafische Gestaltung",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "horrible",
+      "deutsch": "schrecklich",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la lettre",
+      "deutsch": "der Buchstabe",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "enregistrer",
+      "deutsch": "aufnehmen, speichern",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la fonte",
+      "deutsch": "der (Schrift-)Guss",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "personnalisé, personnalisée",
+      "deutsch": "personalisiert",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le typo(graphie)",
+      "deutsch": "die Schriftart",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "faire croire que",
+      "deutsch": "so tun, als ob",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "chinois, chinoise",
+      "deutsch": "chinesisch",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "épais, épaise",
+      "deutsch": "dick",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "faire ressortir",
+      "deutsch": "hervorheben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le gris optique du pavé de texte",
+      "deutsch": "die \"Bleiwüste\", große Textmenge ohne Absätze",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "doucement",
+      "deutsch": "leise",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "lisible",
+      "deutsch": "lesbar",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "{[ê]} s'appliquer",
+      "deutsch": "sich Mühe geben",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "contrairement à",
+      "deutsch": "im Gegensatz zu",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "le spectateur, la spectatrice",
+      "deutsch": "der Zuschauer, die Zuschauerin",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "la complication",
+      "deutsch": "die Schwierigkeit",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "l'onomatopée f",
+      "deutsch": "die Lautmalerei",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "Verweis",
+      "deutsch": "Kapitel",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "1",
+      "deutsch": "Unité 1\\Lecture A",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "2",
+      "deutsch": "Unité 1\\Lecture B",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "3",
+      "deutsch": "Unité 1\\Volet 1",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "4",
+      "deutsch": "Unité 1\\Volet 2",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "5",
+      "deutsch": "Unité 1\\Volet 3",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "6",
+      "deutsch": "Unité 2\\Lecture A",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "7",
+      "deutsch": "Unité 2\\Lecture B",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "8",
+      "deutsch": "Unité 2\\Volet 1",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "9",
+      "deutsch": "Unité 2\\Volet 2",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "10",
+      "deutsch": "Unité 2\\Volet 3",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "11",
+      "deutsch": "Unité 3\\Lecture  A",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "12",
+      "deutsch": "Unité 3\\Lecture  B",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "13",
+      "deutsch": "Unité 3\\Volet 1",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "14",
+      "deutsch": "Unité 3\\Volet 2",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "15",
+      "deutsch": "Unité 3\\Volet 3",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "16",
+      "deutsch": "Module A",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "17",
+      "deutsch": "Module B",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "18",
+      "deutsch": "Module C",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "19",
+      "deutsch": "Module D",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "20",
+      "deutsch": "Module E",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    },
+    {
+      "unite": 0,
+      "volet": "Module F",
+      "franzoesisch": "21",
+      "deutsch": "Module F",
+      "beispiel_fr": null,
+      "beispiel_de": null
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "fach": "Chemie",
+    "lehrwerk": "Elemente Chemie",
+    "band": "Oberstufe",
+    "klasse": 13,
+    "verlag": "Klett",
+    "version": "1.0"
+  },
+  "felder": {
+    "vorderseite": "Begriff",
+    "rueckseite": "Definition",
+    "zusatzfelder": [
+      {"name": "formel", "label": "Formel"},
+      {"name": "beispiel", "label": "Beispiel"}
+    ]
+  },
+  "inhalt": [
+    {
+      "name": "Säuren und Basen",
+      "bloecke": [
+        {
+          "name": "Grundbegriffe",
+          "bidirektional": false,
+          "karten": [
+            {
+              "vorne": "Brønsted-Säure",
+              "hinten": "Protonendonator - ein Teilchen, das Protonen (H⁺) abgibt",
+              "zusatz": {"formel": "HA → H⁺ + A⁻"},
+              "beispiel": "HCl → H⁺ + Cl⁻"
+            },
+            {
+              "vorne": "Brønsted-Base",
+              "hinten": "Protonenakzeptor - ein Teilchen, das Protonen (H⁺) aufnimmt",
+              "zusatz": {"formel": "B + H⁺ → BH⁺"},
+              "beispiel": "NH₃ + H⁺ → NH₄⁺"
+            },
+            {
+              "vorne": "pH-Wert",
+              "hinten": "Negativer dekadischer Logarithmus der Wasserstoffionen-Konzentration",
+              "zusatz": {"formel": "pH = -lg[H₃O⁺]"}
+            }
+          ]
+        },
+        {
+          "name": "Puffersysteme",
+          "bidirektional": false,
+          "karten": [
+            {
+              "vorne": "Pufferlösung",
+              "hinten": "Lösung, die ihren pH-Wert bei Zugabe von Säure oder Base nur geringfügig ändert",
+              "beispiel": "Essigsäure/Acetat-Puffer"
+            },
+            {
+              "vorne": "Henderson-Hasselbalch-Gleichung",
+              "hinten": "Berechnet den pH-Wert einer Pufferlösung",
+              "zusatz": {"formel": "pH = pKs + lg([A⁻]/[HA])"}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

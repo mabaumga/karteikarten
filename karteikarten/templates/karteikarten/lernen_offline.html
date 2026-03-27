@@ -1,0 +1,211 @@
+{% extends "karteikarten/base.html" %}
+
+{% block title %}Offline Lernen - Karteikarten{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0">
+                <i class="bi bi-cloud-offline me-2"></i>Offline Lernen
+            </h4>
+            <div id="connection-status">
+                <span class="badge bg-secondary">
+                    <i class="bi bi-circle-fill me-1"></i>
+                    <span id="status-text">Prüfe...</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Block-Auswahl -->
+        <div id="block-selection" class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Lernblöcke auswählen</h5>
+                <div id="block-list" class="mb-3">
+                    <div class="text-center py-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Laden...</span>
+                        </div>
+                        <p class="text-muted mt-2 mb-0">Lade Lernblöcke...</p>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Lernmodus</label>
+                    <select id="modus-select" class="form-select">
+                        <option value="klassisch">Klassisch (Begriff → Definition)</option>
+                        <option value="rueckwaerts">Rückwärts (Definition → Begriff)</option>
+                    </select>
+                </div>
+
+                <button id="start-learning" class="btn btn-primary btn-lg w-100" disabled>
+                    <i class="bi bi-play-fill me-2"></i>Lernen starten
+                </button>
+            </div>
+        </div>
+
+        <!-- Lern-Container -->
+        <div id="offline-learning-container" style="display: none;">
+        </div>
+
+        <!-- Sync-Info -->
+        <div id="sync-info" class="card mt-4">
+            <div class="card-body">
+                <h6 class="card-title">
+                    <i class="bi bi-arrow-repeat me-2"></i>Synchronisation
+                </h6>
+                <p class="card-text small text-muted mb-2">
+                    <span id="last-sync">Letzter Sync: Nie</span>
+                </p>
+                <p class="card-text small text-muted mb-0">
+                    <span id="pending-sync">Ausstehende Änderungen: 0</span>
+                </p>
+                <button id="manual-sync" class="btn btn-outline-primary btn-sm mt-2">
+                    <i class="bi bi-cloud-upload me-1"></i>Jetzt synchronisieren
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% url 'js_db' %}"></script>
+<script src="{% url 'js_sync' %}"></script>
+<script src="{% url 'js_offline_learning' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    const blockList = document.getElementById('block-list');
+    const startBtn = document.getElementById('start-learning');
+    const blockSelection = document.getElementById('block-selection');
+    const learningContainer = document.getElementById('offline-learning-container');
+    const statusBadge = document.querySelector('#connection-status .badge');
+    const statusText = document.getElementById('status-text');
+
+    // Verbindungsstatus aktualisieren
+    function updateConnectionStatus() {
+        if (navigator.onLine) {
+            statusBadge.className = 'badge bg-success';
+            statusText.textContent = 'Online';
+        } else {
+            statusBadge.className = 'badge bg-warning';
+            statusText.textContent = 'Offline';
+        }
+    }
+
+    window.addEventListener('online', updateConnectionStatus);
+    window.addEventListener('offline', updateConnectionStatus);
+    updateConnectionStatus();
+
+    // Lernblöcke laden
+    async function loadBlocks() {
+        try {
+            const blocks = await window.karteikartenDB.getLernbloecke();
+
+            if (blocks.length === 0) {
+                blockList.innerHTML = `
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Keine Offline-Daten verfügbar. Bitte erst online synchronisieren.
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            for (const block of blocks) {
+                const karten = await window.karteikartenDB.getKartenByLernblock(block.id);
+                const faellige = await window.karteikartenDB.getFaelligeKarten([block.id]);
+
+                html += `
+                    <div class="form-check mb-2">
+                        <input class="form-check-input block-checkbox" type="checkbox"
+                               value="${block.id}" id="block-${block.id}"
+                               data-faellig="${faellige.length}">
+                        <label class="form-check-label d-flex justify-content-between w-100" for="block-${block.id}">
+                            <span>${block.name}</span>
+                            <span class="badge ${faellige.length > 0 ? 'bg-primary' : 'bg-secondary'}">
+                                ${faellige.length} fällig
+                            </span>
+                        </label>
+                    </div>
+                `;
+            }
+
+            blockList.innerHTML = html;
+
+            // Event Listener für Checkboxen
+            document.querySelectorAll('.block-checkbox').forEach(cb => {
+                cb.addEventListener('change', updateStartButton);
+            });
+
+        } catch (error) {
+            console.error('Fehler beim Laden der Blöcke:', error);
+            blockList.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Fehler beim Laden der Daten.
+                </div>
+            `;
+        }
+    }
+
+    // Start-Button Status
+    function updateStartButton() {
+        const checked = document.querySelectorAll('.block-checkbox:checked');
+        let totalFaellig = 0;
+        checked.forEach(cb => {
+            totalFaellig += parseInt(cb.dataset.faellig) || 0;
+        });
+
+        startBtn.disabled = checked.length === 0 || totalFaellig === 0;
+
+        if (totalFaellig > 0) {
+            startBtn.innerHTML = `<i class="bi bi-play-fill me-2"></i>${totalFaellig} Karten lernen`;
+        } else {
+            startBtn.innerHTML = `<i class="bi bi-play-fill me-2"></i>Lernen starten`;
+        }
+    }
+
+    // Lernen starten
+    startBtn.addEventListener('click', async () => {
+        const checked = document.querySelectorAll('.block-checkbox:checked');
+        const blockIds = Array.from(checked).map(cb => parseInt(cb.value));
+        const modus = document.getElementById('modus-select').value;
+
+        blockSelection.style.display = 'none';
+        learningContainer.style.display = 'block';
+
+        window.offlineLearningUI = new OfflineLearningUI('#offline-learning-container');
+        await window.offlineLearningUI.start(blockIds, modus);
+    });
+
+    // Sync-Info aktualisieren
+    async function updateSyncInfo() {
+        const lastSync = await window.karteikartenDB.getMeta('lastSync');
+        const pendingCount = await window.karteikartenSync.getPendingSyncCount();
+
+        document.getElementById('last-sync').textContent = lastSync
+            ? `Letzter Sync: ${new Date(lastSync).toLocaleString('de-DE')}`
+            : 'Letzter Sync: Nie';
+
+        document.getElementById('pending-sync').textContent = `Ausstehende Änderungen: ${pendingCount}`;
+    }
+
+    // Manueller Sync
+    document.getElementById('manual-sync').addEventListener('click', async () => {
+        if (navigator.onLine) {
+            await window.karteikartenSync.syncAll();
+            await loadBlocks();
+            await updateSyncInfo();
+        } else {
+            alert('Keine Internetverbindung verfügbar.');
+        }
+    });
+
+    // Initial laden
+    await loadBlocks();
+    await updateSyncInfo();
+});
+</script>
+{% endblock %}

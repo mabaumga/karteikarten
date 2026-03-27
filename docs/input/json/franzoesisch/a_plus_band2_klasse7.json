@@ -1,0 +1,6130 @@
+{
+  "meta": {
+    "fach": "Französisch",
+    "lehrwerk": "À plus! Nouvelle édition",
+    "band": 2,
+    "klasse": 7,
+    "verlag": "Cornelsen",
+    "sprachen": [
+      "Französisch",
+      "Deutsch"
+    ],
+    "version": "1.0",
+    "quelle": "http://www.vokipedia.de/index.php?title=DEU:Franz%C3%B6sisch:%C3%80_plus_2_nouvelle_edition"
+  },
+  "felder": {
+    "vorderseite": "Français",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Unité 1",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Bienvenue!",
+              "hinten": "Willkommen!, Herzlich willkommen!"
+            },
+            {
+              "vorne": "Montpellier",
+              "hinten": "Stadt im Dep. Hérault"
+            },
+            {
+              "vorne": "la vieille ville",
+              "hinten": "die Altstadt"
+            },
+            {
+              "vorne": "la rue piétonne",
+              "hinten": "die Fußgängerzone"
+            },
+            {
+              "vorne": "la place de la Canourgue",
+              "hinten": "historischer Platz in Montpellier"
+            },
+            {
+              "vorne": "jouer de qc",
+              "hinten": "spielen (Instrument)"
+            },
+            {
+              "vorne": "l'instrument m",
+              "hinten": "das Instrument"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je ne joue d'aucun [instrument].",
+                "de": "Ich spiele kein [Instrument]."
+              }
+            },
+            {
+              "vorne": "le piano",
+              "hinten": "das Klavier, das Piano"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'admire les gens qui savent bien jouer du [piano].",
+                "de": "Ich bewundere Leute, die gut [Klavier] spielen können."
+              }
+            },
+            {
+              "vorne": "la chorale",
+              "hinten": "der Chor"
+            },
+            {
+              "vorne": "la natation",
+              "hinten": "der °Schwimmsportdas °Schwimmen"
+            },
+            {
+              "vorne": "le club de natation",
+              "hinten": "der Schwimmverein"
+            },
+            {
+              "vorne": "le club",
+              "hinten": "der Verein"
+            },
+            {
+              "vorne": "célèbre m./f. adj.",
+              "hinten": "berühmt"
+            },
+            {
+              "vorne": "Camille Muffat",
+              "hinten": "französische Schwimmerin"
+            },
+            {
+              "vorne": "venir //  <!>kommen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je viens]→[nous venons]→2.→[tu viens]→[vous venez]→3.→[il vient]→[ils viennent]",
+              "hinten": "<!>venir</!> //   kommen<!>Présent</!>"
+            },
+            {
+              "vorne": "le cahier de vacances",
+              "hinten": "das Ferienheft (1)"
+            },
+            {
+              "vorne": "la place de la Comédie",
+              "hinten": "beliebter Platz in Montpellier"
+            },
+            {
+              "vorne": "douze ans et demi",
+              "hinten": "zwölfeinhalb (Jahre)"
+            },
+            {
+              "vorne": "Djerba",
+              "hinten": "tunesische Insel"
+            },
+            {
+              "vorne": "la Tunisie",
+              "hinten": "Tunesien"
+            },
+            {
+              "vorne": "être né/née (à/le)",
+              "hinten": "geboren sein (in/am)"
+            },
+            {
+              "vorne": "Antigone",
+              "hinten": "Viertel in Montpellier"
+            },
+            {
+              "vorne": "la physique",
+              "hinten": "die Physik"
+            },
+            {
+              "vorne": "jouer à v",
+              "hinten": "spielen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu veux bien [jouer au] scrabble avec moi?",
+                "de": "Möchtest du mit mir Scrabble [spielen]?"
+              }
+            },
+            {
+              "vorne": "le °ping-pong (1)",
+              "hinten": "das °Tischtennis"
+            },
+            {
+              "vorne": "le handball",
+              "hinten": "Handball Sportart"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Au [handball], il faut lancer le ballon dans le but.",
+                "de": "Beim [Handball] muss man den Ball in das Tor werfen."
+              }
+            },
+            {
+              "vorne": "William Accambray",
+              "hinten": "französischer Handballspieler"
+            },
+            {
+              "vorne": "au bord de",
+              "hinten": "am Ufer von"
+            },
+            {
+              "vorne": "Rome",
+              "hinten": "Rom"
+            },
+            {
+              "vorne": "le beach-volley",
+              "hinten": "Beach-Volleyball"
+            },
+            {
+              "vorne": "l'°accordéon m",
+              "hinten": "MUS das °Akkordeondie °Ziehharmonika"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig en [accordéon]",
+                "de": "chaussettes Falten werfend"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "circulation f en [accordéon]",
+                "de": "Stop-and-go-Verkehr m"
+              }
+            },
+            {
+              "vorne": "Bruxelles",
+              "hinten": "Brüssel"
+            },
+            {
+              "vorne": "depuis",
+              "hinten": "seit; seitdem"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ils sont mariés [depuis] le 27 octobre.",
+                "de": "Sie sind [seit] dem 27. Oktober verheiratet."
+              }
+            },
+            {
+              "vorne": "rayer v/t (1)",
+              "hinten": "meuble,_voiture °zerkratzen (a disque)verschrammenmot °(durch)streichen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "sur des formulaires [rayer] la mention inutile",
+                "de": "Nichtzutreffendes streichen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig [rayer] qc de sa mémoire",
+                "de": "etwas aus seinem Gedächtnis streichen, auslöschen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "(lettre f) [majuscule]",
+                "de": "f Großbuchstabe m; großer Buchstabe"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "un A [majuscule]",
+                "de": "ein großes A"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "quelque chose se trouve",
+              "hinten": "etw. befindet sich/liegt"
+            },
+            {
+              "vorne": "la région (1)",
+              "hinten": "die Gegend, die Region"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La [région] est célèbre pour ses fruits de mer.",
+                "de": "Die [Gegend] ist berühmt für ihre Meeresfrüchte."
+              }
+            },
+            {
+              "vorne": "la mer Méditérranée",
+              "hinten": "das Mittelmeer"
+            },
+            {
+              "vorne": "les Cévennes f pl.",
+              "hinten": "Mittelgebirge im Süden Frankreichs"
+            },
+            {
+              "vorne": "partir en week-end",
+              "hinten": "ins Wochenende fahren"
+            },
+            {
+              "vorne": "la Camarque",
+              "hinten": "Naturschutzgebiet an der Mündung der Rhône"
+            },
+            {
+              "vorne": "partir en randonnée",
+              "hinten": "wandern gehen"
+            },
+            {
+              "vorne": "Palavas-les-Flots",
+              "hinten": "Stadt und beliebter Badeort am Mittelmeer südlich von Montpellier"
+            },
+            {
+              "vorne": "qui pron",
+              "hinten": "der, [die], [das]"
+            },
+            {
+              "vorne": "attirer qn",
+              "hinten": "jdn anziehen, anlocken"
+            },
+            {
+              "vorne": "moderne m/f adj",
+              "hinten": "modern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le parquet est [pratique], moderne et naturel.",
+                "de": "Das Parkett ist [praktisch], modern und natürlich."
+              }
+            },
+            {
+              "vorne": "branché/branchée adj. fam",
+              "hinten": "angesagt"
+            },
+            {
+              "vorne": "les gens m,_Pl",
+              "hinten": "die Leute"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Les gens] ne se détendent pas assez.",
+                "de": "[Die Leute] entspannen sich nicht genug."
+              }
+            },
+            {
+              "vorne": "sortir v",
+              "hinten": "ausgehen, hinausgehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cette semaine je suis [sorti] tous les soirs. Je suis épuisé!",
+                "de": "Diese Woche bin ich jeden Abend [ausgegangen]. Ich bin kaputt!"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mais tu ne peux pas [sortir] comme ça avec tes cheveux trempés!",
+                "de": "Mit so nassen Haaren kannst du doch nicht [hinausgehen]!"
+              }
+            },
+            {
+              "vorne": "le festival",
+              "hinten": "das Festival"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "En mai, il y a à Cannes un grand [festival] de cinéma.",
+                "de": "Im Mai gibt es in Cannes ein großes [Filmfestival]."
+              }
+            },
+            {
+              "vorne": "que pron",
+              "hinten": "den, [die], [das]"
+            },
+            {
+              "vorne": "le musée Fabre",
+              "hinten": "Museum für bildende Kunst in Montpellier"
+            },
+            {
+              "vorne": "proposer",
+              "hinten": "anbieten; vorschlagen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La radio en Autriche [propose] des émissions culturelles en français.",
+                "de": "Der Rundfunk in Österreich [bietet] kulturelle Sendungen auf Französisch [an]."
+              }
+            },
+            {
+              "vorne": "l'exposition f",
+              "hinten": "die Ausstellung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'après-midi, visite de l'[exposition].",
+                "de": "Besichtigung der [Ausstellung] am Nachmittag."
+              }
+            },
+            {
+              "vorne": "le planétarium",
+              "hinten": "das °Planetarium"
+            },
+            {
+              "vorne": "fantastique",
+              "hinten": "fantastisch; großartig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Quand j'étais petite, une télévision était un luxe [fantastique].",
+                "de": "Als ich klein war, war ein Fernsehen ein [fantastischer] Luxus."
+              }
+            },
+            {
+              "vorne": "l'étoile f",
+              "hinten": "der Stern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On voit les [étoiles]; il fera beau demain.",
+                "de": "Man sieht die [Sterne]. Morgen wird es schön."
+              }
+            },
+            {
+              "vorne": "l' aquarium m",
+              "hinten": "das °Aquarium"
+            },
+            {
+              "vorne": "voir //  <!>sehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je vois]→[nous voyons]→2.→[tu vois]→[vous voyez]→3.→[il voit]→[ils voient]",
+              "hinten": "<!>voir</!> //   sehen<!>Présent</!>"
+            },
+            {
+              "vorne": "magnifique",
+              "hinten": "adj °herrlichprächtigprachtvollgroßartig; wunderschön"
+            },
+            {
+              "vorne": "dehors adv",
+              "hinten": "draußen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On pourrait manger [dehors].",
+                "de": "Wir könnten [draußen] essen."
+              }
+            },
+            {
+              "vorne": "par exemple/p.ex.",
+              "hinten": "zum Beispiel/z.B."
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il y a des sports de tradition, [par exemple], la pétanque.",
+                "de": "Es gibt Traditionssportarten, [zum Beispiel] das Boulespiel."
+              }
+            },
+            {
+              "vorne": "l'exemple m",
+              "hinten": "das Beispiel"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu pourrais donner un [exemple] ?",
+                "de": "Könntest du ein [Beispiel] geben?"
+              }
+            },
+            {
+              "vorne": "la terrasse",
+              "hinten": "die Terrasse"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La [terrasse] du restaurant n'est pas ouverte.",
+                "de": "Die [Terrasse] des Restaurants ist nicht geöffnet."
+              }
+            },
+            {
+              "vorne": "pour + inf",
+              "hinten": "um ... zu + inf"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il fait un régime [pour] maigrir.",
+                "de": "Er macht eine Diät, [um abzunehmen]."
+              }
+            },
+            {
+              "vorne": "prendre qc",
+              "hinten": "etw. zu sich nehmen"
+            },
+            {
+              "vorne": "quelque chose pron",
+              "hinten": "etwas"
+            },
+            {
+              "vorne": "le shopping",
+              "hinten": "der Einkaufsbummel"
+            },
+            {
+              "vorne": "idéal/idéale",
+              "hinten": "ideal"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cet hôtel est [idéal].",
+                "de": "Dieses Hotel ist [ideal]."
+              }
+            },
+            {
+              "vorne": "parfois adv",
+              "hinten": "manchmal"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je fais encore [parfois] des fautes, mais je m'améliore.",
+                "de": "Ich mache [manchmal] noch Fehler, aber ich werde besser."
+              }
+            },
+            {
+              "vorne": "le Polygone",
+              "hinten": "Einkaufszentrum in Montpellier"
+            },
+            {
+              "vorne": "partir //  <!>weggehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je pars]→[nous partons]→2.→[tu pars]→[vous partez]→3.→[il part]→[ils partent]",
+              "hinten": "<!>partir</!> //   weggehen<!>Présent</!>"
+            },
+            {
+              "vorne": "Carnon",
+              "hinten": "Badeort am Mittelmeer"
+            },
+            {
+              "vorne": "corriger v",
+              "hinten": "verbessern, korrigieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pouvez-vous me [corriger] quand je fais des fautes?",
+                "de": "Können Sie mich [verbessern], wenn ich Fehler mache?"
+              }
+            },
+            {
+              "vorne": "J'ai oublié quelque chose.",
+              "hinten": "Ich habe etwas vergessen."
+            },
+            {
+              "vorne": "Je n'ai pas compris.",
+              "hinten": "Ich habe (es) nicht verstanden."
+            },
+            {
+              "vorne": "J'ai fait un autre exercice.",
+              "hinten": "Ich habe eine andere Übung gemacht."
+            },
+            {
+              "vorne": "autre pron",
+              "hinten": "anderer (1), [andere], [anderes]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Avec lui, ce sont toujours les [autres] qui ont tort.",
+                "de": "Bei ihm haben immer die [anderen] unrecht."
+              }
+            },
+            {
+              "vorne": "Qu'est-ce que tu as écrit?",
+              "hinten": "Was hast du geschrieben?"
+            },
+            {
+              "vorne": "J'ai écrit autre chose.",
+              "hinten": "Ich habe etwas anderes geschrieben."
+            },
+            {
+              "vorne": "lire //  <!>lesen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je lis]→[nous lisons]→2.→[tu lis]→[vous lisez]→3.→[il lit]→[ils lisent]",
+              "hinten": "<!>lire</!> //   lesen<!>Présent</!>"
+            },
+            {
+              "vorne": "lire //  <!>lesen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai lu]→[nous avons lu]→2.→[tu as lu]→[vous avez lu]→3.→[il a lu]→[ils ont lu]",
+              "hinten": "<!>lire</!> //   lesen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "la fois/les fois",
+              "hinten": "das Mal"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "C'est arrivé une seule [fois].",
+                "de": "Das ist nur ein [Mal] passiert."
+              }
+            },
+            {
+              "vorne": "mettre le son plus fort",
+              "hinten": "den Ton lauter stellen"
+            },
+            {
+              "vorne": "la feuille",
+              "hinten": "das Blatt"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Beaucoup d'arbres perdent leur [feuilles] en automne.",
+                "de": "Viele Bäume verlieren im Herbst ihre [Blätter]."
+              }
+            },
+            {
+              "vorne": "le numéro",
+              "hinten": "die Nummer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Votre chambre a le [numéro] 220.",
+                "de": "Ihr Zimmer hat die [Nummer] 220."
+              }
+            },
+            {
+              "vorne": "C'est à quelle page?",
+              "hinten": "Auf welcher Seite ist/steht das?"
+            },
+            {
+              "vorne": "C'est à la page 25.",
+              "hinten": "Das ist/steht auf Seite 25."
+            },
+            {
+              "vorne": "en silence",
+              "hinten": "still"
+            },
+            {
+              "vorne": "Qu'est-ce qu'il faut faire?",
+              "hinten": "Was sollen wir machen?"
+            },
+            {
+              "vorne": "expliquer v",
+              "hinten": "erklären"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous pouvez m'[expliquer] la fin du film?",
+                "de": "Können Sie mir das Ende des Films [erklären]?"
+              }
+            },
+            {
+              "vorne": "la °tâche",
+              "hinten": "(devoir) die °Aufgabe(travail) die °Arbeit"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "accomplir sa [tâche], s'acquitter d'une [tâche], remplir une [tâche]",
+                "de": "seine ou eine [Aufgabe] erfüllen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "à la [tâche]",
+                "de": "im Akkord; Akkord..."
+              }
+            },
+            {
+              "vorne": "différent, différente",
+              "hinten": "verschieden, unterschiedlich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tous ont des métiers très [différents].",
+                "de": "Alle haben sehr [unterschiedliche] Berufe."
+              }
+            },
+            {
+              "vorne": "Vous avez fini?",
+              "hinten": "Seid ihr fertig?"
+            },
+            {
+              "vorne": "la minute",
+              "hinten": "die Minute"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu viens une [minute] ?",
+                "de": "Kommst du eine [Minute]?"
+              }
+            },
+            {
+              "vorne": "Je n'ai pas fini!",
+              "hinten": "Ich bin noch nicht fertig!"
+            },
+            {
+              "vorne": "C'est à qui?",
+              "hinten": "Wer ist dran?"
+            },
+            {
+              "vorne": "C'est à moi.",
+              "hinten": "Ich bin dran."
+            },
+            {
+              "vorne": "C'est à ...",
+              "hinten": "... ist dran."
+            },
+            {
+              "vorne": "apprendre",
+              "hinten": "lernen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai [appris] l'anglais et l'espagnol.",
+                "de": "Ich habe Englisch und Spanisch [gelernt]."
+              }
+            },
+            {
+              "vorne": "le vocabulaire",
+              "hinten": "der Wortschatz"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je parle facilement, mais je manque de [vocabulaire].",
+                "de": "Das Sprechen fällt mir leicht, aber mir fehlt der [Wortschatz]."
+              }
+            },
+            {
+              "vorne": "l' unité f",
+              "hinten": "die Lektion"
+            },
+            {
+              "vorne": "prochain, prochaine",
+              "hinten": "nächste(r)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'année [prochaine] je serai à Paris.",
+                "de": "[Nächstes] Jahr werde ich in Paris sein."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 2",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le temps libre",
+              "hinten": "die Freizeit"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Entre l'école et les devoirs, il n'y a plus beaucoup de temps libre.",
+                "de": "Zwischen der Schule und den Hausaufgaben ist nicht mehr viel Freizeit."
+              }
+            },
+            {
+              "vorne": "libre m./f. adj.",
+              "hinten": "frei"
+            },
+            {
+              "vorne": "dessiner v/t",
+              "hinten": "zeichnencontours °hervortreten lassen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [dessiner]",
+                "de": "sich abzeichnen (à l'horizon am Horizont) (a fig)"
+              }
+            },
+            {
+              "vorne": "hier adv",
+              "hinten": "gestern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu as déjà oublié ta promesse d'[hier] soir?",
+                "de": "Hast du dein Versprechen von [gestern] Abend schon vergessen?"
+              }
+            },
+            {
+              "vorne": "terminé",
+              "hinten": "beendet"
+            },
+            {
+              "vorne": "terminer v",
+              "hinten": "beenden, abschließen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour bien [terminer] l'année, nous avons organisé une fête.",
+                "de": "Um das Jahr gut zu [beenden], haben wir eine Feier organisiert."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour [terminer] l'année, nous avons organisé une grande fête.",
+                "de": "Um das Jahr zu [beenden], haben wir ein großes Fest organisiert."
+              }
+            },
+            {
+              "vorne": "entre prép",
+              "hinten": "lieu,_temps °zwischen (+ dat; question \"wohin?\" + acc)(parmi) °unter (+ dat)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[entre] autres",
+                "de": "[unter] anderem"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "(soit dit) [entre] nous",
+                "de": "[unter] uns (gesagt)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[entre] amis",
+                "de": "[unter] Freunden"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "qui d'[entre] vous?",
+                "de": "wer von euch?"
+              }
+            },
+            {
+              "vorne": "le sandwich (1)",
+              "hinten": "das Sandwich, das belegte Baguette"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je voudrais un [sandwich] au jambon.",
+                "de": "Ich hätte gern ein [Sandwich] mit Schinken."
+              }
+            },
+            {
+              "vorne": "le °pique-nique→[pique-niques]",
+              "hinten": "das °Picknick"
+            },
+            {
+              "vorne": "faire //  <!>tun,_machen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fait]→[nous avons fait]→2.→[tu as fait]→[vous avez fait]→3.→[il a fait]→[ils ont fait]",
+              "hinten": "<!>faire</!> //   tun, machen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "ne...jamais",
+              "hinten": "nie"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[énerver] qn",
+                "de": "jemanden nervös machen; jemandem auf die Nerven gehen; fam jemanden nerven"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "s'[énerver]",
+                "de": "sich auf-, erregen; nervös werden"
+              }
+            },
+            {
+              "vorne": "enfin",
+              "hinten": "schließlich, endlich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai décidé d'apprendre [enfin] le français.",
+                "de": "Ich habe mich [endlich] entschlossen, Französisch zu lernen."
+              }
+            },
+            {
+              "vorne": "Allez !",
+              "hinten": "Na los!"
+            },
+            {
+              "vorne": "descendre v (1)",
+              "hinten": "nach unten bringen, hinuntergehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut [descendre] tous les meubles à la cave.",
+                "de": "Wir müssen alle Möbel [nach unten] in den Keller [bringen]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Papa est [descendu] à la cave pour aller chercher du vin.",
+                "de": "Papa ist in den Keller [hinuntergegangen], um Wein zu holen."
+              }
+            },
+            {
+              "vorne": "on descend",
+              "hinten": "wir gehen hinunter"
+            },
+            {
+              "vorne": "raconter v",
+              "hinten": "erzählen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Qui a [raconté] à mes parents que j'ai un nouveau copain?",
+                "de": "Wer hat meinen Eltern [erzählt], dass ich einen neuen Freund habe?"
+              }
+            },
+            {
+              "vorne": "oublier",
+              "hinten": "vergessen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous ne nous [oubliez] pas ?",
+                "de": "[Vergessen] Sie uns nicht?"
+              }
+            },
+            {
+              "vorne": "ne...rien",
+              "hinten": "nichts"
+            },
+            {
+              "vorne": "entrer",
+              "hinten": "hineingehen, betreten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle [entre] dans la boutique pour acheter une jupe.",
+                "de": "Sie [betritt] die Boutique, um einen Rock zu kaufen."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le journal",
+              "hinten": "das Tagebuch, die Zeitung"
+            },
+            {
+              "vorne": "d'habitude",
+              "hinten": "gewöhnlich; normalerweise"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Aujourd'hui, je me suis réveillée plus tard que [d'habitude].",
+                "de": "Heute bin ich später als [gewöhnlich] aufgewacht."
+              }
+            },
+            {
+              "vorne": "Minerve",
+              "hinten": "malerisches Dorf in der Region Languedoc-Roussillon"
+            },
+            {
+              "vorne": "être //  <!>sein</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai été]→[nous avons été]→2.→[tu as été]→[vous avez été]→3.→[il a été]→[ils ont été]",
+              "hinten": "<!>être</!> //   sein<!>Passé composé</!>"
+            },
+            {
+              "vorne": "malade",
+              "hinten": "krank"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle est [malade].",
+                "de": "Sie ist [krank]."
+              }
+            },
+            {
+              "vorne": "ranger",
+              "hinten": "aufräumen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je dois [ranger] ma chambre.",
+                "de": "Ich muss mein Zimmer [aufräumen]."
+              }
+            },
+            {
+              "vorne": "devoir //  <!>müssen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je dois]→[nous devons]→2.→[tu dois]→[vous devez]→3.→[il doit]→[ils doivent]",
+              "hinten": "<!>devoir</!> //   müssen<!>Présent</!>"
+            },
+            {
+              "vorne": "tous les samedis",
+              "hinten": "jeden Samstag"
+            },
+            {
+              "vorne": "le sac n",
+              "hinten": "die Tasche n, die Tüte n, der Sack n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ne porte pas ce [sac], il est trop lourd pour toi.",
+                "de": "Trag diesen [Sack] nicht, er ist zu schwer für dich."
+              }
+            },
+            {
+              "vorne": "midi",
+              "hinten": "12 Uhr mittags"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il est [midi].",
+                "de": "Es ist [12 Uhr mittags]."
+              }
+            },
+            {
+              "vorne": "partir //  <!>weggehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[je suis parti]→[nous sommes partis]→2.→[tu es parti]→[vous êtes partis]→3.→[il est parti]→[ils sont partis]",
+              "hinten": "<!>partir</!> //   weggehen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "aller //  <!>gehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[je suis allé]→[nous sommes allés]→2.→[tu es allé]→[vous êtes allés]→3.→[il est allé]→[ils sont allés]",
+              "hinten": "<!>aller</!> //   gehen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "rencontrer",
+              "hinten": "treffen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le samedi, elle [rencontre] des amis.",
+                "de": "Samstags [trifft] sie Freunde."
+              }
+            },
+            {
+              "vorne": "venir //  <!>kommen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[je suis venu]→[nous sommes venus]→2.→[tu es venu]→[vous êtes venus]→3.→[il est venu]→[ils sont venus]",
+              "hinten": "<!>venir</!> //   kommen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "le citron",
+              "hinten": "die Zitrone"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le [citron] a un goût acide.",
+                "de": "Die [Zitrone] hat einen sauren Geschmack."
+              }
+            },
+            {
+              "vorne": "la catastrophe n",
+              "hinten": "die Katastrophe n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cette [catastrophe] est due aux changements climatiques.",
+                "de": "Diese [Katastrophe] ist auf den Klimawandel zurückzuführen."
+              }
+            },
+            {
+              "vorne": "le pic Saint-Loup",
+              "hinten": "Berg in der Region Languedoc-Roussillon"
+            },
+            {
+              "vorne": "le repas",
+              "hinten": "die Mahlzeit"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut se préparer des [repas] légers.",
+                "de": "Man muss sich leichte [Mahlzeiten] zubereiten."
+              }
+            },
+            {
+              "vorne": "le film",
+              "hinten": "der Spielfilm"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je connaissais les [films] de Besson et de Spielberg par cœur.",
+                "de": "Ich kannte die [Spielfilme] von Besson und Spielberg auswendig."
+              }
+            },
+            {
+              "vorne": "dormir //  <!>schlafen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai dormi]→[nous avons dormi]→2.→[tu as dormi]→[vous avez dormi]→3.→[il a dormi]→[ils ont dormi]",
+              "hinten": "<!>dormir</!> //   schlafen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "dormir //  <!>schlafen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je dors]→[nous dormons]→2.→[tu dors]→[vous dormez]→3.→[il dort]→[ils dorment]",
+              "hinten": "<!>dormir</!> //   schlafen<!>Présent</!>"
+            },
+            {
+              "vorne": "longtemps adv",
+              "hinten": "lange zeitlich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ça fait [longtemps] que je ne fume plus!",
+                "de": "Ich rauche schon [lange] nicht mehr."
+              }
+            },
+            {
+              "vorne": "c'était trop tard",
+              "hinten": "es war zu spät"
+            },
+            {
+              "vorne": "à propos adv",
+              "hinten": "übrigens"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[À propos], tu connais la nouvelle?",
+                "de": "[Übrigens], weißt du schon das Neueste?"
+              }
+            },
+            {
+              "vorne": "déjà",
+              "hinten": "schon; bereits"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le temps passe vite : il est [déjà] midi !",
+                "de": "Die Zeit vergeht schnell: es ist [schon] Mittag!"
+              }
+            },
+            {
+              "vorne": "fatigué, fatiguée",
+              "hinten": "müde"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je suis [fatigué].",
+                "de": "Ich bin [müde]."
+              }
+            },
+            {
+              "vorne": "la fin",
+              "hinten": "der Schluss , das Ende"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "À la [fin] du film, tout le monde pleurait.",
+                "de": "Am [Schluss] des Films weinten alle. (1)"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "l'aventure f",
+              "hinten": "das Abenteuer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous aimez l'[aventure] ?",
+                "de": "Sie mögen das [Abenteuer]?"
+              }
+            },
+            {
+              "vorne": "incroyable adj",
+              "hinten": "unglaublich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu as vu la une des journaux? [Incroyable]!",
+                "de": "Hast du die Titelseiten der Zeitungen gesehen? [Unglaublich]!"
+              }
+            },
+            {
+              "vorne": "pouvoir //  <!>können</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai pu]→[nous avons pu]→2.→[tu as pu]→[vous avez pu]→3.→[il a pu]→[ils ont pu]",
+              "hinten": "<!>pouvoir</!> //   können<!>Passé composé</!>"
+            },
+            {
+              "vorne": "vouloir //  <!>wollen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai voulu]→[nous avons voulu]→2.→[tu as voulu]→[vous avez voulu]→3.→[il a voulu]→[ils ont voulu]",
+              "hinten": "<!>vouloir</!> //   wollen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "rendez-vous + Ort/Zeit",
+              "hinten": "wir treffen uns in/im/am..."
+            },
+            {
+              "vorne": "la voiture",
+              "hinten": "das Auto"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je prends la [voiture].",
+                "de": "Ich fahre mit dem [Auto]."
+              }
+            },
+            {
+              "vorne": "voir //  <!>sehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai vu]→[nous avons vu]→2.→[tu as vu]→[vous avez vu]→3.→[il a vu]→[ils ont vu]",
+              "hinten": "<!>voir</!> //   sehen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "le taureau  (1)",
+              "hinten": "der Stier"
+            },
+            {
+              "vorne": "le champ",
+              "hinten": "das Feld"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tous ces [champs], c'est beau, mais ce n'est pas varié.",
+                "de": "All diese [Felder] sind schön, aber nicht sehr abwechslungsreich."
+              }
+            },
+            {
+              "vorne": "avoir //  <!>haben</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai eu]→[nous avons eu]→2.→[tu as eu]→[vous avez eu]→3.→[il a eu]→[ils ont eu]",
+              "hinten": "<!>avoir</!> //   haben<!>Passé composé</!>"
+            },
+            {
+              "vorne": "idiot adj (1)",
+              "hinten": "dummtörichtfam °blöd(sinnig)fam °idiotisch"
+            },
+            {
+              "vorne": "photographier v",
+              "hinten": "fotografieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je ne [photographie] jamais de monuments.",
+                "de": "Ich [fotografiere] nie Denkmäler."
+              }
+            },
+            {
+              "vorne": "le toréro",
+              "hinten": "der Torero"
+            },
+            {
+              "vorne": "tout à coup adv",
+              "hinten": "plötzlich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'orage est venu [tout à coup].",
+                "de": "Das Gewitter ist ganz [plötzlich] hereingebrochen."
+              }
+            },
+            {
+              "vorne": "tomber",
+              "hinten": "(hin)fallen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Et puis, ma fille Lydia a couru sur des rochers et elle est [tombée].",
+                "de": "Und dann ist meine Tochter Lydia über die Felsen gelaufen und sie ist [gefallen]."
+              }
+            },
+            {
+              "vorne": "venir droit sur qn",
+              "hinten": "direkt auf jdn. zukommen"
+            },
+            {
+              "vorne": "avoir peur",
+              "hinten": "Angst haben, Angst bekommen"
+            },
+            {
+              "vorne": "la peur",
+              "hinten": "die Angst"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "De [peur] de rater son train, il est arrivé tôt à la gare.",
+                "de": "Aus [Angst], den Zug zu verpassen, ist er früh am Bahnhof gewesen."
+              }
+            },
+            {
+              "vorne": "C'était l'horreur!",
+              "hinten": "Das war der Horror!"
+            },
+            {
+              "vorne": "juste adj",
+              "hinten": "(serré) °knapp; gerade noch"
+            },
+            {
+              "vorne": "à cause de ça",
+              "hinten": "deswegen"
+            },
+            {
+              "vorne": "à cause de prep",
+              "hinten": "wegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a raté son examen [à cause de] la physique.",
+                "de": "Er ist [wegen] Physik durch die Prüfung gefallen."
+              }
+            },
+            {
+              "vorne": "faire attention",
+              "hinten": "aufpassen"
+            },
+            {
+              "vorne": "prendre //  <!>nehmen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai pris]→[nous avons pris]→2.→[tu as pris]→[vous avez pris]→3.→[il a pris]→[ils ont pris]",
+              "hinten": "<!>prendre</!> //   nehmen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "mauvais, [mauvaise adj]",
+              "hinten": "schlecht; hier: falsch"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Presque toute la classe est [mauvaise] en histoire.",
+                "de": "Fast die ganze Klasse ist [schlecht] in Geschichte."
+              }
+            },
+            {
+              "vorne": "demander son chemin (à qn)",
+              "hinten": "(jdn) nach dem Weg fragen"
+            },
+            {
+              "vorne": "le chemin",
+              "hinten": "der Weg"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous avons fait la moitié du [chemin].",
+                "de": "Wir haben die Hälfte des [Weges] zurückgelegt."
+              }
+            },
+            {
+              "vorne": "devoir //  <!>müssen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai dû]→[nous avons dû]→2.→[tu as dû]→[vous avez dû]→3.→[il a dû]→[ils ont dû]",
+              "hinten": "<!>devoir</!> //   müssen<!>Passé composé</!>"
+            },
+            {
+              "vorne": "perdu p/p -> perdre et adj→[perdue]",
+              "hinten": "verlorenobjet a °verloren gegangentemps a °vertanoccasion °verpasstlieu °entlegenabgelegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "balle [perdue]",
+                "de": "verirrte Kugel"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "à tes moments [perdus]",
+                "de": "in deinen Mußestunden"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "malade être [perdu]",
+                "de": "nicht mehr zu retten sein"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig je suis [perdu]",
+                "de": "ich finde mich nicht mehr zurecht; ich weiß mir nicht mehr zu helfen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "emballage [perdu]",
+                "de": "Einwegverpackung f; Wegwerfpackung f"
+              }
+            },
+            {
+              "vorne": "perdre v (1)",
+              "hinten": "verlieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La France a [perdu] par deux buts à un.",
+                "de": "Frankreich hat zwei zu eins [verloren]."
+              }
+            },
+            {
+              "vorne": "répondre v (1)",
+              "hinten": "antworten, sich melden, ans Telefon gehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il n'a pas [répondu] à son père.",
+                "de": "Er hat seinem Vater nicht [geantwortet]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le téléphone sonne, mais personne ne [répond].",
+                "de": "Das Telefon klingelt, aber es [meldet] sich niemand."
+              }
+            },
+            {
+              "vorne": "répondu",
+              "hinten": "geantwortet (1)"
+            },
+            {
+              "vorne": "rien de spécial",
+              "hinten": "nichts Besonderes"
+            },
+            {
+              "vorne": "insister v",
+              "hinten": "darauf bestehen; hier: nachhaken"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Si tu [insistes] vraiment, je veux bien t'accompagner.",
+                "de": "Wenn du wirklich [darauf bestehst], begleite ich dich gern."
+              }
+            },
+            {
+              "vorne": "Il faut que je te dise un truc!",
+              "hinten": "Ich muss dir was sagen! , Ich muss dir was erzählen!"
+            },
+            {
+              "vorne": "il y a prep",
+              "hinten": "vor zeitlich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je suis déjà venu en France [il y a] trois ans.",
+                "de": "Ich war [vor] drei Jahren schon einmal in Frankreich."
+              }
+            },
+            {
+              "vorne": "prendre ses jambes à son cou",
+              "hinten": "die Beine in die Hand nehmen"
+            },
+            {
+              "vorne": "la jambe",
+              "hinten": "das Bein"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a les [jambes] longues.",
+                "de": "Sie hat lange [Beine]."
+              }
+            },
+            {
+              "vorne": "le cou",
+              "hinten": "der Hals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 3",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le monde",
+              "hinten": "die Welt"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il connaît le [monde] entier",
+                "de": "Er kennt die ganze [Welt]."
+              }
+            },
+            {
+              "vorne": "le test",
+              "hinten": "der Test"
+            },
+            {
+              "vorne": "calme adj",
+              "hinten": "ruhig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il reste [calme] même quand les choses vont mal.",
+                "de": "Er bleibt [ruhig], auch wenn es schlecht läuft."
+              }
+            },
+            {
+              "vorne": "le bus",
+              "hinten": "der Bus"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle prend le [bus] pour aller au bureau.",
+                "de": "Sie nimmt den [Bus], um ins Büro zu fahren."
+              }
+            },
+            {
+              "vorne": "le magazine",
+              "hinten": "die Zeitschrift"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Quand j'étais jeune je voulais ressembler aux filles des [magazines].",
+                "de": "Als ich jung war, wollte ich den Mädchen in den [Zeitschriften] ähnlich sehen."
+              }
+            },
+            {
+              "vorne": "le texto n",
+              "hinten": "die SMS n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "C'est le troisième [texto] qu'il m'envoie aujourd'hui.",
+                "de": "Das ist schon die dritte [SMS], die er mir heute schickt."
+              }
+            },
+            {
+              "vorne": "quel (1), [quelle pron]",
+              "hinten": "welcher, [welche], [welches]"
+            },
+            {
+              "vorne": "la couleur",
+              "hinten": "die Farbe"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "De quelle [couleur] sont ses yeux ?",
+                "de": "Welche [Farbe] haben seine Augen?"
+              }
+            },
+            {
+              "vorne": "rouge",
+              "hinten": "rot"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle corrige le texte au crayon [rouge].",
+                "de": "Sie korrigiert den Text mit einem [roten] Farbstift."
+              }
+            },
+            {
+              "vorne": "bleu, bleue",
+              "hinten": "blau"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a les yeux [bleus].",
+                "de": "Sie hat [blaue] Augen."
+              }
+            },
+            {
+              "vorne": "l'°idole f",
+              "hinten": "REL der °Götze, das °Götzenbilddas °Idolfig der °Abgottdas °Idoldie °Kultfigur"
+            },
+            {
+              "vorne": "l'acteur, [l'actrice n-m/f]",
+              "hinten": "der Schauspieler, [die Schauspielerin n]"
+            },
+            {
+              "vorne": "sportif adj (1)",
+              "hinten": "(relatif au sport) °Sport...personne,_allure °sportlich(beau joueur) °sportlichfair"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[sportif], sportive",
+                "de": "m,f Sportler(in) m(f)"
+              }
+            },
+            {
+              "vorne": "télécharger v/t (1)",
+              "hinten": "INFORM vers l'internaute °herunterladen"
+            },
+            {
+              "vorne": "le titre n",
+              "hinten": "der Titel n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je cherche désespérément le [titre] d'un roman depuis hier.",
+                "de": "Seit gestern suche ich verzweifelt den [Titel] eines Romans."
+              }
+            },
+            {
+              "vorne": "l'électro f",
+              "hinten": "die Elektromusik"
+            },
+            {
+              "vorne": "le °hip-hop m (1)",
+              "hinten": "MUS der °Hip-Hop"
+            },
+            {
+              "vorne": "les vêtements m,_Pl",
+              "hinten": "die Kleider, die Kleidungsstücke"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je veux m'acheter des [vêtements] d'été.",
+                "de": "Ich will mir [Sommerkleidung] kaufen."
+              }
+            },
+            {
+              "vorne": "porter",
+              "hinten": "tragen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il [porte] une moustache et une barbe.",
+                "de": "Er [trägt] einen Schnurrbart und einen Bart."
+              }
+            },
+            {
+              "vorne": "le pantalon",
+              "hinten": "die Hose"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ce [pantalon] est trop décontracté.",
+                "de": "Diese [Hose] ist zu leger."
+              }
+            },
+            {
+              "vorne": "la chemise",
+              "hinten": "das Hemd"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il porte une [chemise] blanche.",
+                "de": "Er trägt ein weißes [Hemd]."
+              }
+            },
+            {
+              "vorne": "le jean",
+              "hinten": "die Jeans"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai lavé tes [jeans].",
+                "de": "Ich habe deine [Jeans] gewaschen."
+              }
+            },
+            {
+              "vorne": "le tee-shirt n",
+              "hinten": "das T-Shirt n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "C'est moi qui ai dessiné le [tee-shirt] du lycée.",
+                "de": "Das [T-Shirt] des Gymnasiums habe ich entworfen."
+              }
+            },
+            {
+              "vorne": "l'objet n-m",
+              "hinten": "der Gegenstand n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le grenier de mes grands-parents est plein de vieux [objets].",
+                "de": "Der Dachboden meiner Großeltern ist voll alter [Gegenstände]."
+              }
+            },
+            {
+              "vorne": "le °porte-bonheur (1)",
+              "hinten": "der °Glücksbringer"
+            },
+            {
+              "vorne": "le °casque",
+              "hinten": "der °Helm (a MIL)d'ouvrier der °Schutzhelmde motard der °Sturzhelm(sèche-cheveux) die °TrockenhaubeÉLECTRON der °Kopfhörer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig les [casques] bleus",
+                "de": "die Blauhelme m/pl (UNO-Soldaten)"
+              }
+            },
+            {
+              "vorne": "le résultat",
+              "hinten": "das Ergebnis"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous attendons les [résultats].",
+                "de": "Wir warten auf die [Ergebnisse]."
+              }
+            },
+            {
+              "vorne": "plus",
+              "hinten": "mehr"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous en voulez un peu [plus] ?",
+                "de": "Wollen Sie ein bisschen [mehr]?"
+              }
+            },
+            {
+              "vorne": "plutôt adv",
+              "hinten": "lieber; eher"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'aime bien le théâtre, mais j'irais [plutôt] au cinéma.",
+                "de": "Ich mag das Theater, aber ich würde [lieber] ins Kino gehen."
+              }
+            },
+            {
+              "vorne": "bouger v (1)",
+              "hinten": "sich bewegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Allez, il faut [bouger] un peu, sinon on va prendre froid!",
+                "de": "Los, wir müssen uns etwas [bewegen], sonst wird uns kalt!"
+              }
+            },
+            {
+              "vorne": "le stress n",
+              "hinten": "der Stress n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le [stress] n'est pas bon pour votre bébé.",
+                "de": "Der [Stress] schadet Ihrem Baby."
+              }
+            },
+            {
+              "vorne": "le bon d'achat",
+              "hinten": "Kaufgutschein"
+            },
+            {
+              "vorne": "lever le doigt",
+              "hinten": "sich melden"
+            },
+            {
+              "vorne": "Nous avons passé un bon moment.",
+              "hinten": "Wir hatten eine gute Zeit."
+            },
+            {
+              "vorne": "le prospectus",
+              "hinten": "der °(Werbe)Prospekt"
+            },
+            {
+              "vorne": "le °sommet",
+              "hinten": "d'une montagne der °Gipfel (a fig)d'un arbre der °Wipfeld'une tour,_d'un rocher die °SpitzeMATH der °Scheitel"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[sommet]",
+                "de": "[Gipfel](konferenz) m(f)"
+              }
+            },
+            {
+              "vorne": "l' altitude f",
+              "hinten": "die °Höhe (über dem Meeresspiegel)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "voler à basse [altitude]",
+                "de": "in geringer [Höhe]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "en [altitude]",
+                "de": "in großer [Höhe]"
+              }
+            },
+            {
+              "vorne": "le sac à dos",
+              "hinten": "der Rucksack"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je voyage avec le [sac à dos], il est plus léger qu'une valise.",
+                "de": "Ich reise mit dem [Rucksack], er ist leichter als ein Koffer."
+              }
+            },
+            {
+              "vorne": "l'°araignée f",
+              "hinten": "die °Spinne→[Spinne]→[Spinnen]"
+            },
+            {
+              "vorne": "le °sondage",
+              "hinten": "TECH die °Sondierungforage die °Probebohrung(enquête) die °Umfrage"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[sondage] d'opinion",
+                "de": "Meinungsumfrage f; science Meinungsforschung f; Demoskopie f"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "faire, effectuer un [sondage] (d'opinion)",
+                "de": "eine Meinungsumfrage durchführen"
+              }
+            },
+            {
+              "vorne": "relier v/t",
+              "hinten": "livre °(ein)binden(joindre) °(miteinander) verbinden"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[relier] qc à qc",
+                "de": "etwas mit etwas [verbinden], verknüpfen"
+              }
+            },
+            {
+              "vorne": "surtout",
+              "hinten": "vor allem"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'aime [surtout] la poésie et la chanson.",
+                "de": "Ich liebe [vor allem] die Dichtung und das Chanson."
+              }
+            },
+            {
+              "vorne": "moi-même pr/pers",
+              "hinten": "emphatique °(ich) selbstréfléchi °mich selbst"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "de [moi-même]",
+                "de": "von [selbst]; von mir aus"
+              }
+            },
+            {
+              "vorne": "je m'en fiche",
+              "hinten": "fam. das ist mir schnuppe"
+            },
+            {
+              "vorne": "enlever v",
+              "hinten": "ausziehen, entfernen, wegnehmen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai trop chaud; j'[enlève] ma veste.",
+                "de": "Mir ist zu warm, ich [ziehe] meine Jacke [aus]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Enlevez] le couvercle avec un petit tournevis.",
+                "de": "[Entfernen] Sie den Deckel mit einem kleinen Schraubenzieher."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Enlève] tes pieds de là!",
+                "de": "[Nimm] deine Füße da [weg]!"
+              }
+            },
+            {
+              "vorne": "la °façon",
+              "hinten": "die °Artdie °Art und Weisedie °WeiseCOUT die °Fassondie °Ausführungdie °Verarbeitung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[façon] d'être",
+                "de": "[Art], sich zu geben"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[façon] de procéder",
+                "de": "Verfahrensweise f"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "à ma, sa [façon]",
+                "de": "auf meine, seine [Weise], [Art]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "à la [façon] de",
+                "de": "nach [Art] von (ou + gén)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "de toute [façon]",
+                "de": "auf alle Fälle; auf jeden Fall; jedenfalls; sowieso"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "d'une [façon] ou d'une autre",
+                "de": "auf die eine oder andere [Art]; irgendwie"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "d'une [façon] générale",
+                "de": "allgemein; im Allgemeinen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "de [façon] (à ce) que ...",
+                "de": "(+ subj) so ..., dass ..."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "s'y prendre de telle [façon] que ...",
+                "de": "es so anstellen, dass ..."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "en aucune [façon]",
+                "de": "in keiner [Weise]; keineswegs; durchaus nicht"
+              }
+            },
+            {
+              "vorne": "ça te va",
+              "hinten": "das steht dir"
+            },
+            {
+              "vorne": "se changer v",
+              "hinten": "sich umziehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je vais me [changer] en vitesse pour ne pas prendre froid.",
+                "de": "Ich [ziehe] mich schnell [um], damit ich mich nicht erkälte."
+              }
+            },
+            {
+              "vorne": "passer",
+              "hinten": "hier: geben"
+            },
+            {
+              "vorne": "piquer qc",
+              "hinten": "fam. etw. klauen"
+            },
+            {
+              "vorne": "taire (1)",
+              "hinten": "v/t °verschweigen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [taire]",
+                "de": "(être silencieux) schweigen (sur über + acc); still sein; (cesser) verstummen (a choses)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "tais-toi!",
+                "de": "halt den Mund!"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "faire [taire] qn",
+                "de": "jemanden zum Schweigen bringen; jemanden auffordern, ruhig zu sein"
+              }
+            },
+            {
+              "vorne": "marrant adj fam (1)",
+              "hinten": "(rigolo) °lustigspaßigfam °ulkig(bizarre) °komischfam °ulkig"
+            },
+            {
+              "vorne": "l'°intrus m, intruse",
+              "hinten": "f der °Eindringlingungebetener Gast"
+            },
+            {
+              "vorne": "être bien dans ses baskets",
+              "hinten": "sich wohl fühlen"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "l'°enquête f",
+              "hinten": "die °Untersuchungdie °Erhebung(sondage) die °Umfragedie °BefragungJUR die °Ermittlungen f/pldie °Untersuchung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "faire sa petite [enquête]",
+                "de": "sich umhören"
+              }
+            },
+            {
+              "vorne": "le style n",
+              "hinten": "der Stil n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Au début, Van Gogh imitait le [style] de Millet.",
+                "de": "Zu Anfang hat Van Gogh den [Stil] Millets imitiert."
+              }
+            },
+            {
+              "vorne": "le look",
+              "hinten": "der °Lookdas °Aussehen"
+            },
+            {
+              "vorne": "mettre qc",
+              "hinten": "hier: etw. tragen, anziehen, auch: setzen, stellen, legen, legen"
+            },
+            {
+              "vorne": "la marque n",
+              "hinten": "die Marke n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mes parents achètent toujours la même [marque] de voitures.",
+                "de": "Meine Eltern kaufen bei Autos immer dieselbe [Marke]."
+              }
+            },
+            {
+              "vorne": "les baskets f plr",
+              "hinten": "die Turnschuhe"
+            },
+            {
+              "vorne": "important, importante",
+              "hinten": "wichtig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On en a besoin pour ranger les catalogues et les papiers [importants].",
+                "de": "Wir brauchen es, um die Kataloge und die [wichtigen] Papiere aufzuräumen."
+              }
+            },
+            {
+              "vorne": "Soprano",
+              "hinten": "französischer Rapper"
+            },
+            {
+              "vorne": "nouveau/nouvel m, nouvelle f, nouveaux m pl., nouvelles f pl.",
+              "hinten": "neu"
+            },
+            {
+              "vorne": "la °sonnerie",
+              "hinten": "(son) das °Klingelndas °LäutenMIL,_CH das °(Horn-,_Trompeten)Signalmécanisme die °Klingel(anlage)d'une horloge das °Schlagwerkd'un réveil das °Läut(e)werk; hier: der Klingelton"
+            },
+            {
+              "vorne": "être accro à qc",
+              "hinten": "nach etwas süchtig sein"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Isabelle est accro au chocolat.",
+                "de": "Isabelle ist süchtig nach Schokolade."
+              }
+            },
+            {
+              "vorne": "le R&B",
+              "hinten": "der R&B Rhythm & Blues"
+            },
+            {
+              "vorne": "Tal",
+              "hinten": "französische Sängerin (Le sens de la vie)"
+            },
+            {
+              "vorne": "beau/bel m, belle f, beaux m pl., belles f pl.",
+              "hinten": "schön"
+            },
+            {
+              "vorne": "la voix (1)",
+              "hinten": "die Stimme"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je l'ai reconnue à sa [voix].",
+                "de": "Ich habe sie an ihrer [Stimme] erkannt."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Lors d'une élection, chaque [voix] compte.",
+                "de": "Bei einer Wahl zählt jede [Stimme]."
+              }
+            },
+            {
+              "vorne": "aussi...que",
+              "hinten": "so...wie"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mehdi est aussi sportif que son frère.",
+                "de": "Mehdi ist so sportlich wie sein Bruder."
+              }
+            },
+            {
+              "vorne": "le pull-over",
+              "hinten": "der Pullover"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je me suis acheté un [pull-over] rouge.",
+                "de": "Ich habe mir einen roten [Pullover] gekauft."
+              }
+            },
+            {
+              "vorne": "le pull n",
+              "hinten": "der Pulli n"
+            },
+            {
+              "vorne": "orange adj (1)",
+              "hinten": "orange(farben) (2)"
+            },
+            {
+              "vorne": "vert, verte",
+              "hinten": "grün"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a les yeux [verts].",
+                "de": "Sie hat [grüne] Augen."
+              }
+            },
+            {
+              "vorne": "Ça me plaît.",
+              "hinten": "Das gefällt mir."
+            },
+            {
+              "vorne": "la mode",
+              "hinten": "die Mode"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Paris joue un grand rôle dans le monde de la [mode].",
+                "de": "Paris spielt eine große Rolle in der Welt der [Mode]."
+              }
+            },
+            {
+              "vorne": "la robe",
+              "hinten": "das Kleid"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Qu'elle est jolie avec sa [robe] blanche !",
+                "de": "Wie hübsch sie ist mit dem weißen [Kleid]!"
+              }
+            },
+            {
+              "vorne": "dépenser v",
+              "hinten": "ausgeben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'argent, c'est fait pour être [dépensé].",
+                "de": "Geld ist dazu da, dass es [ausgegeben] wird."
+              }
+            },
+            {
+              "vorne": "cent-cinquante",
+              "hinten": "hundertfünfzig"
+            },
+            {
+              "vorne": "deux cents",
+              "hinten": "zweihundert"
+            },
+            {
+              "vorne": "les affaires f pl",
+              "hinten": "die Sachen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous avez vos affaires de Sport?",
+                "de": "Habt Ihr Eure Sportsachen?"
+              }
+            },
+            {
+              "vorne": "moins...que",
+              "hinten": "weniger...als"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le film est moins intéressant que le livre.",
+                "de": "Der Film ist weniger interessant als das Buch."
+              }
+            },
+            {
+              "vorne": "plus...que",
+              "hinten": "mehr...als"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le livre est plus intéressant que le film",
+                "de": "Das Buch ist interessanter als der Film."
+              }
+            },
+            {
+              "vorne": "l'album m",
+              "hinten": "das Album, das Fotoalbum"
+            },
+            {
+              "vorne": "Nolwenn Leroy",
+              "hinten": "französische Sängerin (Mna na Heireann)"
+            },
+            {
+              "vorne": "Barrio Populo",
+              "hinten": "französische Rockgruppe (Il est des jours sans toi)"
+            },
+            {
+              "vorne": "le rythme n",
+              "hinten": "der Rhythmus n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le groupe joue bien, mais ça manque de [rythme].",
+                "de": "Die Band spielt gut, aber sie hat keinen richtigen [Rhythmus]."
+              }
+            },
+            {
+              "vorne": "la batterie n",
+              "hinten": "das Schlagzeug n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Va jouer de la [batterie] dans la cave pour ne gêner personne.",
+                "de": "Geh im Keller [Schlagzeug] spielen, um niemanden zu stören."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "il faut + inf.",
+              "hinten": "man muss; wir müssen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Il faut] prendre la première rue à gauche.",
+                "de": "[Man muss] die erste Straße links nehmen."
+              }
+            },
+            {
+              "vorne": "il ne faut pas + inf",
+              "hinten": "wir dürfen/sollten nicht, man darf/sollte nicht"
+            },
+            {
+              "vorne": "exagérer",
+              "hinten": "übertreiben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je crois que tu [exagères].",
+                "de": "Ich glaube, dass du [übertreibst]."
+              }
+            },
+            {
+              "vorne": "avoir raison",
+              "hinten": "Recht haben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu [as] peut-être [raison].",
+                "de": "Du [hast] vielleicht [Recht]."
+              }
+            },
+            {
+              "vorne": "confisquer",
+              "hinten": "v/t °beschlagnahmen; wegnehmen"
+            },
+            {
+              "vorne": "trouver que",
+              "hinten": "finden, dass"
+            },
+            {
+              "vorne": "rappeler (1)",
+              "hinten": "zurückrufen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle vous [rappelle] cet après-midi.",
+                "de": "Sie wird Sie [zurückrufen]."
+              }
+            },
+            {
+              "vorne": "le téléphone",
+              "hinten": "das Telefon"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Chaque chambre est climatisée et dispose d'un [téléphone].",
+                "de": "Jedes Zimmer ist klimatisiert und verfügt über ein [Telefon]."
+              }
+            },
+            {
+              "vorne": "Á table!",
+              "hinten": "Essen!,_Zu Tisch!"
+            },
+            {
+              "vorne": "la note n",
+              "hinten": "die Note n, die Notiz n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a toujours de bonnes [notes].",
+                "de": "Sie hat immer gute [Noten]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La secrétaire prend des [notes] au cours de la réunion.",
+                "de": "Die Sekretärin macht während des Meetings [Notizen]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Notre voisin est chanteur, mais il ne sait pas lire les [notes].",
+                "de": "Unser Nachbar ist Sänger, aber er kann keine [Noten] lesen."
+              }
+            },
+            {
+              "vorne": "catastrophique",
+              "hinten": "adj °katastrophal, verheerend (a fam péj)"
+            },
+            {
+              "vorne": "dernier, dernière",
+              "hinten": "letzte(r)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le 31 décembre est le [dernier] jour de l'année.",
+                "de": "Der 31. Dezember ist der [letzte] Tag des Jahres."
+              }
+            },
+            {
+              "vorne": "vrai, [vraie adj]",
+              "hinten": "wahr"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Est-ce [vraie] que ce quotidien a écrit sur lui?",
+                "de": "Ist es [wahr], was diese Tageszeitung über ihn geschrieben hat?"
+              }
+            },
+            {
+              "vorne": "dire //  <!>sagen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je dis]→[nous disons]→2.→[tu dis]→[vous dites]→3.→[il dit]→[ils disent]",
+              "hinten": "<!>dire</!> //   sagen<!>Présent</!>"
+            },
+            {
+              "vorne": "passer son temps à + inf",
+              "hinten": "die ganze Zeit etw. tun, wörtlich: seine Zeit damit verbringen, etw. zu tun"
+            },
+            {
+              "vorne": "envoyer //  <!>senden</!><!>Présent</!>→ →Sing.→Pl.→1.→[j'envoie]→[nous envoyons]→2.→[tu envoies]→[vous envoyez]→3.→[il envoie]→[ils envoient]",
+              "hinten": "<!>envoyer</!> //   senden<!>Présent</!>"
+            },
+            {
+              "vorne": "envoyer",
+              "hinten": "(ver)schicken"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai [envoyé] ma candidature.",
+                "de": "Ich habe meine Bewerbung [verschickt]."
+              }
+            },
+            {
+              "vorne": "être privé/privée de qc",
+              "hinten": "-verbot haben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle est privée de téle´pendant un mois.",
+                "de": "Sie hat einen Monat Fernsehverbot."
+              }
+            },
+            {
+              "vorne": "la discussion n",
+              "hinten": "die Diskussion n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu te souviens de notre [discussion] sur la télé?",
+                "de": "Erinnerst du dich an unsere [Diskussion] über das Fernsehen?"
+              }
+            },
+            {
+              "vorne": "reparler de qc à qn",
+              "hinten": "noch einmal mit jdm über etwas sprechen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Hugo reparle de l'interro à son prof.",
+                "de": "Hugo spricht mit seinem Lehrer nochmal über den schriftlichen Test."
+              }
+            },
+            {
+              "vorne": "penser que",
+              "hinten": "denken, dass"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nathan pense qu'il faut parler au prof.",
+                "de": "Nathan denkt, dass er mit dem Lehrer sprechen muss."
+              }
+            },
+            {
+              "vorne": "le meilleur/la meilleure adj (1)",
+              "hinten": "der/die/das beste"
+            },
+            {
+              "vorne": "la solution n",
+              "hinten": "die Lösung n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ça fait une heure que je cherche la [solution] de cet exercice.",
+                "de": "Seit einer Stunde suche ich nach der [Lösung] dieser Übung."
+              }
+            },
+            {
+              "vorne": "à mon avis",
+              "hinten": "meiner Meinung nach"
+            },
+            {
+              "vorne": "l'avis n-m",
+              "hinten": "die Ansicht n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "À mon [avis], on ne devrait pas l'envoyer en pension.",
+                "de": "Meiner [Ansicht] nach sollten wir ihn nicht aufs Internat schicken."
+              }
+            },
+            {
+              "vorne": "grave",
+              "hinten": "schlimm; ernst"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ce n'est pas [grave], tu ne pouvais pas prévoir.",
+                "de": "Es ist nicht [schlimm], du konntest nicht damit rechnen."
+              }
+            },
+            {
+              "vorne": "terrible adj",
+              "hinten": "schrecklich; furchtbar"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'accident a été [terrible] et a fait plusieurs morts.",
+                "de": "Der Unfall war [schrecklich] und es gab mehrere Tote."
+              }
+            },
+            {
+              "vorne": "baisser les bras",
+              "hinten": "aufgeben, wörtlich: die Arme senken"
+            },
+            {
+              "vorne": "le bras",
+              "hinten": "der Arm"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Levez les [bras].",
+                "de": "Hebt die [Arme]!"
+              }
+            },
+            {
+              "vorne": "l'argument m",
+              "hinten": "das °Argument"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "tirer [argument] de qc",
+                "de": "etwas als [Argument] benützen"
+              }
+            },
+            {
+              "vorne": "récupérer v/t (1)",
+              "hinten": "wiedererlangen, -bekommenheures de travail °nachholen, -arbeitenengin spatial °bergenferraille,_etc °(wieder)verwerten(ramasser) °sammelnchaleur,_énergie °zurückgewinnenfam (aller chercher)délinquants,_drogués °wieder eingliedernresozialisierenPOL °(für sich) vereinnahmen; etw. zurückbekommen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[récupérer] ses forces",
+                "de": "wieder zu Kräften kommen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[récupérer] qn",
+                "de": "jemanden (ab)holen"
+              }
+            },
+            {
+              "vorne": "récupérer (1)",
+              "hinten": "v/i °sich erholenwieder zu Kräften kommen; etw. zurückbekommen"
+            },
+            {
+              "vorne": "Bonne chance!",
+              "hinten": "Viel Glück!"
+            },
+            {
+              "vorne": "la chance",
+              "hinten": "das Glück"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Avec un peu de [chance], vous vous pourriez y rencontrer des Français.",
+                "de": "Mit ein bisschen [Glück] können Sie dort Franzosen finden."
+              }
+            },
+            {
+              "vorne": "peut-être",
+              "hinten": "vielleicht"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu as [peut-être] raison.",
+                "de": "Du hast [vielleicht] Recht."
+              }
+            },
+            {
+              "vorne": "limiter v",
+              "hinten": "begrenzen; beschränken"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le gouvernement veut [limiter] le temps de travail.",
+                "de": "Die Regierung möchte die Arbeitszeit [begrenzen]."
+              }
+            },
+            {
+              "vorne": "l'appel m (1)",
+              "hinten": "der Anruf"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'attends un [appel] d'Allemagne.",
+                "de": "Ich erwarte einen [Anruf] aus Deutschland."
+              }
+            },
+            {
+              "vorne": "essayer (1)",
+              "hinten": "versuchen; (an)probieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Avec un livre de cuisine, on peut [essayer] de faire une mousse au chocolat.",
+                "de": "Mit einem Kochbuch können wir [versuchen], eine Schokoladencreme zu machen."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 4",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la Belgique",
+              "hinten": "Belgien"
+            },
+            {
+              "vorne": "l'auberge de jeunesse f",
+              "hinten": "die Jugendherberge"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Fini les [auberges de jeunesse], je veux dormir dans un hôtel !",
+                "de": "Mir reicht es mit den [Jugendherbergen], ich will im Hotel übernachten!"
+              }
+            },
+            {
+              "vorne": "le tournoi",
+              "hinten": "das Turnier"
+            },
+            {
+              "vorne": "avoir lieu",
+              "hinten": "stattfinden"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour communiquer de chez vous, vous pouvez participer activement aux débats qui [ont lieu] sur internet.",
+                "de": "Um von zu Hause aus zu kommunizieren, können Sie an Diskussionen teilnehmen, die im Internet [stattfinden]."
+              }
+            },
+            {
+              "vorne": "Liège",
+              "hinten": "das °Lüttich"
+            },
+            {
+              "vorne": "l'équipe f",
+              "hinten": "die Mannschaft"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Depuis les années 80, les Français ne pratiquent presque plus les sports d'[équipe].",
+                "de": "Seit den [achtziger Jahren] treiben die Franzosen fast keine [Mannschaftssportarten] mehr."
+              }
+            },
+            {
+              "vorne": "le train",
+              "hinten": "der Zug"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je prends le [train].",
+                "de": "Ich fahre mit dem [Zug]."
+              }
+            },
+            {
+              "vorne": "participer à qc",
+              "hinten": "an etw. teilnehmen"
+            },
+            {
+              "vorne": "le match",
+              "hinten": "das Spiel, der Wettkampf"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On regarde les [matchs] ensemble à la télévision.",
+                "de": "Wir schauen uns im Fernsehen zusammen die [Spiele] an."
+              }
+            },
+            {
+              "vorne": "l'entraîneur m, l'entraîneuse f",
+              "hinten": "der °Trainer, die °Trainerin"
+            },
+            {
+              "vorne": "la place du Marché",
+              "hinten": "ältester Platz in Lüttich"
+            },
+            {
+              "vorne": "le Carré",
+              "hinten": "eines der ältesten Viertel in Lüttich"
+            },
+            {
+              "vorne": "penser à v",
+              "hinten": "denken an"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Pensez] bien [à] éteindre la lumière avant de partir!",
+                "de": "[Denkt daran], vor dem Weggehen das Licht auszumachen!"
+              }
+            },
+            {
+              "vorne": "le carrefour",
+              "hinten": "die Kreuzung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut continuer tout droit jusqu'au [carrefour].",
+                "de": "Man muss geradeaus bis zur [Kreuzung] weitergehen."
+              }
+            },
+            {
+              "vorne": "tourner",
+              "hinten": "abbiegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Vous allez jusqu'au feu et vous [tournez] à droite.",
+                "de": "Sie gehen bis zur Ampel und Sie [biegen] rechts [ab]."
+              }
+            },
+            {
+              "vorne": "tout droit",
+              "hinten": "geradeaus"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut continuer [tout droit] jusqu'au carrefour.",
+                "de": "Man muss [geradeaus] bis zur Kreuzung weitergehen."
+              }
+            },
+            {
+              "vorne": "le plan",
+              "hinten": "der Plan"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous regardons le [plan] de notre nouvel appartement.",
+                "de": "Wir schauen uns den [Plan] unserer neuen Wohnung an."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "idiot(e)",
+                "de": "m(f) Dummkopf m; Idiot(in) m(f) (a MÉD); fam Depp m"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "idiot du village",
+                "de": "Dorftrottel m"
+              }
+            },
+            {
+              "vorne": "laisser",
+              "hinten": "hinterlassen; lassen; liegen lassen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je t'ai [laissé] un message.",
+                "de": "Ich habe dir eine Nachricht [hinterlassen]."
+              }
+            },
+            {
+              "vorne": "le GPS",
+              "hinten": "das GPS"
+            },
+            {
+              "vorne": "le °réseau→[réseaux]",
+              "hinten": "das °Netz (a INFORM)ANAT a das °Geflecht"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[réseau] routier",
+                "de": "Straßennetz n"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[réseau] d'espionnage",
+                "de": "Spionagenetz n, -ring m"
+              }
+            },
+            {
+              "vorne": "on pourrait",
+              "hinten": "wir könnten, man könnte"
+            },
+            {
+              "vorne": "quelqu'un pron",
+              "hinten": "jemand"
+            },
+            {
+              "vorne": "Georges Simenon",
+              "hinten": "belgischer Schriftsteller (Inspector Maigret)"
+            },
+            {
+              "vorne": "troisième",
+              "hinten": "dritte(r)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Les Aziz habitent au [troisième] étage.",
+                "de": "Die Aziz wohnen im [dritten] Stock."
+              }
+            },
+            {
+              "vorne": "le feu rouge",
+              "hinten": "die Ampel"
+            },
+            {
+              "vorne": "deuxième",
+              "hinten": "zweite(r)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'habite au [deuxième] étage.",
+                "de": "Ich wohne im [zweiten] Stock."
+              }
+            },
+            {
+              "vorne": "la place Saint-Lambert",
+              "hinten": "zentraler Platz in Lüttich"
+            },
+            {
+              "vorne": "traverser",
+              "hinten": "überqueren, gehen über, fahren über"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Au carrefour, vous [traversez] la Seine et le musée est en face.",
+                "de": "Auf der Kreuzung [überqueren] Sie die Seine und gegenüber ist das Museum."
+              }
+            },
+            {
+              "vorne": "la gare",
+              "hinten": "der Bahnhof"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mon ami m'attend à la [gare].",
+                "de": "Mein Freund wartet auf mich am [Bahnhof]."
+              }
+            },
+            {
+              "vorne": "redemander",
+              "hinten": "noch einmal fragen"
+            },
+            {
+              "vorne": "tout à l'heure",
+              "hinten": "vorhin"
+            },
+            {
+              "vorne": "adv °tout à l'heureà l'instant",
+              "hinten": "vorhin"
+            },
+            {
+              "vorne": "l'°organisateur m, organisatrice",
+              "hinten": "f der °Organisator, die °Organisatorinder (die) °Veranstalter(in) m(f)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "talent m d'[organisateur] ou d'[organisatrice]",
+                "de": "[Organisationstalent] n"
+              }
+            },
+            {
+              "vorne": "vous y êtes",
+              "hinten": "ihr seid da"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le joueur, [la joueuse]",
+              "hinten": "der Spieler, [die Spielerin]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On peut remplacer des [joueurs] pendant le match.",
+                "de": "Man kann [Spieler] während des Spiels auswechseln."
+              }
+            },
+            {
+              "vorne": "l'arbitre m",
+              "hinten": "der Schiedsrichter, [die Schiedsrichterin]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "L'[arbitre] a sorti le carton rouge.",
+                "de": "Der [Schiedsrichter] hat die rote Karte gezogen."
+              }
+            },
+            {
+              "vorne": "le ballon  (1)",
+              "hinten": "der Ball"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Les enfants, allez jouer au [ballon] dehors!",
+                "de": "Kinder, spielt draußen [Ball]!"
+              }
+            },
+            {
+              "vorne": "le score",
+              "hinten": "der Spielstand"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Quel est le [score]?",
+                "de": "Wie ist der [Spielstand]?"
+              }
+            },
+            {
+              "vorne": "le gardien de but, la gardienne de but",
+              "hinten": "der/die Torwart/in"
+            },
+            {
+              "vorne": "le carton jaune",
+              "hinten": "die gelbe Karte"
+            },
+            {
+              "vorne": "la faute",
+              "hinten": "der Fehler"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Si on ne fait pas une seule [faute] en dictée, on a vingt.",
+                "de": "Wenn man im Diktat keinen [Fehler] macht, hat man zwanzig Punkte."
+              }
+            },
+            {
+              "vorne": "marquer un but",
+              "hinten": "ein Tor schießen, einen Treffer erzielen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Quand il a [marqué un but], il a hurlé de joie.",
+                "de": "Als er ein [Tor geschossen] hat, hat er vor Freude geschrien."
+              }
+            },
+            {
+              "vorne": "le but",
+              "hinten": "das Ziel , das Tor"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ils voulaient être champions du monde et ont atteint leur [but].",
+                "de": "Sie wollten Weltmeister werden und haben ihr [Ziel] erreicht."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le [but] a été refusé par l'arbitre.",
+                "de": "Der Schiedsrichter hat das [Tor] nicht gegeben."
+              }
+            },
+            {
+              "vorne": "le °petit-déjeuner→[petits-déjeuners]",
+              "hinten": "das °Frühstück"
+            },
+            {
+              "vorne": "recommencer (1)",
+              "hinten": "v/t °wieder beginnen (qc etwas; à + inf zu + inf)noch einmal von vorn anfangen (a abs)(refaire) °noch einmal machen"
+            },
+            {
+              "vorne": "recommencer (1)",
+              "hinten": "v/i °wieder beginnen, anfangen"
+            },
+            {
+              "vorne": "gagner v",
+              "hinten": "verdienen, gewinnen, siegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je préfère [gagner] moins et avoir un peu de temps libre.",
+                "de": "Lieber [verdiene] ich weniger und habe etwas Freizeit."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Hier au foot, les Russes ont [gagné] contre les Espagnols.",
+                "de": "Im Fußball haben die Russen gestern gegen die Spanier [gesiegt]."
+              }
+            },
+            {
+              "vorne": "contre prep",
+              "hinten": "gegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai toujours été [contre] la peine de mort, et vous?",
+                "de": "Ich war schon immer [gegen] die Todesstrafe, und Sie?"
+              }
+            },
+            {
+              "vorne": "Fribourg",
+              "hinten": "das °Freiburg"
+            },
+            {
+              "vorne": "encourager v/t (1)",
+              "hinten": "talent,_projet °fördern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[encourager] qn",
+                "de": "jemanden ermutigen; jemandem Mut machen; SPORTS jemanden anfeuern"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[encourager] qn à (faire) qc",
+                "de": "jemanden zu etwas ermutigen, ermuntern"
+              }
+            },
+            {
+              "vorne": "formidable adj",
+              "hinten": "toll"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je viens d'avoir une idée [formidable].",
+                "de": "Ich habe da eine [tolle] Idee."
+              }
+            },
+            {
+              "vorne": "facile",
+              "hinten": "leicht"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ce n'est pas [facile] pour les jeunes.",
+                "de": "Es ist nicht [leicht] für die Jungendlichen."
+              }
+            },
+            {
+              "vorne": "lutter",
+              "hinten": "v/i °kämpfenringen (a SPORTS, fig)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[lutter] contre qc, qn",
+                "de": "gegen etwas, jemanden [kämpfen]; etwas, jemanden bekämpfen"
+              }
+            },
+            {
+              "vorne": "jusqu'au bout",
+              "hinten": "bis zum Ende, hier: bis zum bitteren Ende"
+            },
+            {
+              "vorne": "la défense",
+              "hinten": "die Verteidigung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La meilleure [défense], c'est l'attaque.",
+                "de": "Angriff ist die beste [Verteidigung]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[réagir] à",
+                "de": "reagieren auf (+ acc) (a CHIM, etc)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[réagir] contre",
+                "de": "sich wehren gegen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "abs il faut [réagir]!",
+                "de": "Kopf hoch!; man muss etwas dagegen unternehmen!"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[réagir] sur",
+                "de": "zurückwirken auf (+ acc)"
+              }
+            },
+            {
+              "vorne": "réagi",
+              "hinten": "reagiert Parizip Perfect von réagir"
+            },
+            {
+              "vorne": "réagir //  <!>reagieren</!><!>Présent</!>→ →Sing.→Pl.→1.→[je réagis]→[nous réagissons]→2.→[tu réagis]→[vous réagissez]→3.→[il réagit]→[ils réagissent]",
+              "hinten": "<!>réagir</!> //   reagieren<!>Présent</!>"
+            },
+            {
+              "vorne": "l'attaque f",
+              "hinten": "der Angriff"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Malgré les [attaques] répétées, Verdun a tenu.",
+                "de": "Trotz der wiederholten [Angriffe] hielt Verdun stand."
+              }
+            },
+            {
+              "vorne": "applaudir v",
+              "hinten": "klatschen; wird wie réagir konjugiert"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je n'aime pas quand les gens [applaudissent] pendant les chansons.",
+                "de": "Ich mag es nicht, wenn die Leute mitten im Lied [klatschen]."
+              }
+            },
+            {
+              "vorne": "fort/ forte adj (1)",
+              "hinten": "starkpersonne a °kräftigvent,_coup a °heftigvoix °kräftiglautfièvre a °hochfromage °scharfmonnaie °starkhart(corpulent) °stark"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[forte] tête",
+                "de": "Rebell m; eigenwilliger Mensch"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "au sens [fort] du mot",
+                "de": "in des Wortes voller Bedeutung"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "ça a été plus [fort] que moi",
+                "de": "das war stärker als ich; ich konnte nicht anders"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se faire [fort] de (1)",
+                "de": "(+ inf) sich anheischig machen zu (+ inf)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "être [fort] en maths",
+                "de": "in Mathe gut sein"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "il a trouvé plus [fort] que lui",
+                "de": "er hat seinen Meister gefunden"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig fam c'est un peu [fort]!",
+                "de": "das geht zu weit!; das ist ein [starkes] Stück!"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "iron le plus [fort], c'est que ...",
+                "de": "das (Aller)Schönste ist, dass ..."
+              }
+            },
+            {
+              "vorne": "fort adv",
+              "hinten": "starkkräftigheftigfestfam fig(très) °sehr"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "y aller [fort]",
+                "de": "zu weit gehen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "parler [fort]",
+                "de": "laut sprechen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "il aura [fort] à faire pour",
+                "de": "(+ inf) es wird schwer für ihn sein zu (+ inf)"
+              }
+            },
+            {
+              "vorne": "le °fort",
+              "hinten": "der °Starke(r)d'une personne die °Stärkestarke SeiteMIL das °Fort"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "un [fort] en anglais",
+                "de": "ein Ass n in Englisch"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "iron un [fort] en thème",
+                "de": "ein Musterschüler m"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "au plus [fort] de",
+                "de": "mitten in (+ dat); auf dem Höhepunkt (+ gén)"
+              }
+            },
+            {
+              "vorne": "rapide m./f. adj (1)",
+              "hinten": "schnell"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le voyage de retour a été très [rapide].",
+                "de": "Die Rückfahrt war sehr [schnell]."
+              }
+            },
+            {
+              "vorne": "agir v",
+              "hinten": "handeln; wird wie réagir konjugiert"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut [agir] tout de suite, sinon il sera trop tard.",
+                "de": "Wir müssen sofort [handeln], sonst ist es zu spät."
+              }
+            },
+            {
+              "vorne": "tout/toute adj.",
+              "hinten": "ganzer/ganze/ganzes"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a fait une photo de toute l'équipe.",
+                "de": "Er hat ein Foto von der ganzen Mannschaft gemacht."
+              }
+            },
+            {
+              "vorne": "tous/toutes adj. pl.",
+              "hinten": "alle, jeder, jede, jedes"
+            },
+            {
+              "vorne": "donner qc à qn v",
+              "hinten": "jdm etw. geben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Attends, je vais te [donner] mon adresse!",
+                "de": "Warte, ich [gebe] dir meine Adresse!"
+              }
+            },
+            {
+              "vorne": "finir",
+              "hinten": "beenden"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La guerre était [finie].",
+                "de": "Der Krieg war zu Ende (wörtl.: war [beendet])."
+              }
+            },
+            {
+              "vorne": "finir //  <!>beenden</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fini]→[nous avons fini]→2.→[tu as fini]→[vous avez fini]→3.→[il a fini]→[ils ont fini]",
+              "hinten": "<!>finir</!> //   beenden<!>Passé composé</!>"
+            },
+            {
+              "vorne": "finir //  <!>beenden</!><!>Présent</!>→ →Sing.→Pl.→1.→[je finis]→[nous finissons]→2.→[tu finis]→[vous finissez]→3.→[il finit]→[ils finissent]",
+              "hinten": "<!>finir</!> //   beenden<!>Présent</!>"
+            },
+            {
+              "vorne": "adv °tout à l'heureà l'instant",
+              "hinten": "vorhin; gleich, in Kürze"
+            },
+            {
+              "vorne": "la °demi-finale",
+              "hinten": "SPORTS das °Halb-, Semifinale"
+            },
+            {
+              "vorne": "belge",
+              "hinten": "adj °belgisch"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Belge]",
+                "de": "m,f Belgier(in) m(f)"
+              }
+            },
+            {
+              "vorne": "Namur",
+              "hinten": "Stadt in Belgien"
+            },
+            {
+              "vorne": "montrer qc à qn",
+              "hinten": "jdm. etw. zeigen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai [montré] tes photos aux clients.",
+                "de": "Ich habe den Kunden deine Fotos [gezeigt]."
+              }
+            },
+            {
+              "vorne": "le point fort",
+              "hinten": "die Stärke"
+            },
+            {
+              "vorne": "garder v",
+              "hinten": "behalten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je [garde] ma vieille voiture tant qu'elle roule.",
+                "de": "Ich [behalte] mein altes Auto, solange es fährt."
+              }
+            },
+            {
+              "vorne": "la finale n",
+              "hinten": "das Endspiel n, das Finale n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "À ton avis, qui va gagner la [finale]?",
+                "de": "Wer wird deiner Meinung nach das [Endspiel] gewinnen?"
+              }
+            },
+            {
+              "vorne": "possible",
+              "hinten": "möglich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ce n'est plus [possible].",
+                "de": "Es ist nicht mehr [möglich]."
+              }
+            },
+            {
+              "vorne": "compter sur v",
+              "hinten": "zählen auf, sich verlassen auf"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Puis-je [compter sur] toi pour me remplacer au bureau?",
+                "de": "Kann ich mich [auf] dich [verlassen], dass du mich im Büro vertrittst?"
+              }
+            },
+            {
+              "vorne": "réussir",
+              "hinten": "v/t °erfolgreich durchführenzustande bringenexamen °bestehen; wird konjugiert wie réagir"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "qn [réussit] qc",
+                "de": "a etwas gelingt jemandem (gut)"
+              }
+            },
+            {
+              "vorne": "connaître  //  <!>kennen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je connais]→[nous connaissons]→2.→[tu connais]→[vous connaissez]→3.→[il connaît]→[ils connaissent]",
+              "hinten": "<!>connaître</!> //   kennen<!>Présent</!>"
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "quelques",
+              "hinten": "einige, ein paar"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il reste encore [quelques] détails à régler.",
+                "de": "Es sind noch [einige] Details zu klären."
+              }
+            },
+            {
+              "vorne": "Zurich",
+              "hinten": "Zürich"
+            },
+            {
+              "vorne": "monter qc",
+              "hinten": "etw. aufbauen, errichten"
+            },
+            {
+              "vorne": "installer qc",
+              "hinten": "etw. aufbauen"
+            },
+            {
+              "vorne": "la sardine",
+              "hinten": "die °Sardine; hier: der (Zelt-)Hering"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[sardines] à l'huile",
+                "de": "Ölsardinen f/pl"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fam être serrés comme des [sardines] fam",
+                "de": "wie die [Sardinen], Heringe stehen ou sitzen"
+              }
+            },
+            {
+              "vorne": "poser v/t",
+              "hinten": "objet °(hin)stellen, (-)setzen, (-)legen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[poser] qc par terre",
+                "de": "etwas auf den Boden stellen, setzen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[poser] son regard sur",
+                "de": "seinen Blick richten auf (+ acc)"
+              }
+            },
+            {
+              "vorne": "le plat",
+              "hinten": "die Platte"
+            },
+            {
+              "vorne": "quoi pron",
+              "hinten": "was"
+            },
+            {
+              "vorne": "connaître (1)",
+              "hinten": "kennen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je ne [connais] pas ce mot.",
+                "de": "Ich [kenne] dieses Wort nicht."
+              }
+            },
+            {
+              "vorne": "la tarte au riz",
+              "hinten": "der Milchreiskuchen"
+            },
+            {
+              "vorne": "la tarte",
+              "hinten": "der Kuchen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Une part de [tarte] à l'oignon s'il vous plaît !",
+                "de": "Ein Stück [Zwiebelkuchen] bitte!"
+              }
+            },
+            {
+              "vorne": "le riz",
+              "hinten": "der Reis"
+            },
+            {
+              "vorne": "la spécialité",
+              "hinten": "die Spezialität"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Voulez-vous goûter notre [spécialité] du jour ?",
+                "de": "Wollen Sie unsere [Spezialität] des Tages probieren?"
+              }
+            },
+            {
+              "vorne": "sonner",
+              "hinten": "läuten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nathalie, le téléphone [sonne] !",
+                "de": "Nathalie, das Telefon [läutet]!"
+              }
+            },
+            {
+              "vorne": "il/elle veut savoir si",
+              "hinten": "er/sie will wissen, ob"
+            },
+            {
+              "vorne": "il faut",
+              "hinten": "hier: man braucht"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour faire des crêpes, [il faut] juste quelques ingrédients.",
+                "de": "Um Crêpes zu machen, [braucht man] nur wenige Zutaten."
+              }
+            },
+            {
+              "vorne": "la boisson",
+              "hinten": "das Getränk"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Voulez-vous une [boisson] ?",
+                "de": "Wollen Sie ein [Getränk]?"
+              }
+            },
+            {
+              "vorne": "le Coca(-Cola)",
+              "hinten": "die (Coca-)Cola"
+            },
+            {
+              "vorne": "l'eau minérale f",
+              "hinten": "das Mineralwasser"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je prends une [eau minérale].",
+                "de": "Ich nehme ein [Mineralwasser]."
+              }
+            },
+            {
+              "vorne": "demander à qn si",
+              "hinten": "jdn fragen, ob"
+            },
+            {
+              "vorne": "avoir l'air",
+              "hinten": "aussehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il [a l'air] malicieux.",
+                "de": "Er [sieht] pfiffig [aus]."
+              }
+            },
+            {
+              "vorne": "le fromage",
+              "hinten": "der Käse"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Plus de 300 sortes de [fromages] sont produits en France.",
+                "de": "Mehr als 300 Sorten [Käse] werden in Frankreich hergestellt."
+              }
+            },
+            {
+              "vorne": "la charcuterie",
+              "hinten": "die Metzgerei, die Wurstwaren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On a acheté un rôti de porc à la [charcuterie].",
+                "de": "Wir haben in der [Metzgerei] einen Schweinebraten gekauft."
+              }
+            },
+            {
+              "vorne": "les boulettes (à la liégeoise) f pl",
+              "hinten": "die Hackbällchen"
+            },
+            {
+              "vorne": "la remise des médailles",
+              "hinten": "die Siegerehrung"
+            },
+            {
+              "vorne": "Il faut qu'on y aille!",
+              "hinten": "Wir müssen los!"
+            },
+            {
+              "vorne": "le vestiaire",
+              "hinten": "die Garderobe; der Umkleideraum"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je vous ai installé un [vestiaire] supplémentaire.",
+                "de": "Ich habe Ihnen eine zusätzliche [Garderobe] aufgestellt."
+              }
+            },
+            {
+              "vorne": "ajouter v",
+              "hinten": "hinzufügen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Ajoutez] un peu de crème fraîche juste avant de servir.",
+                "de": "[Fügen] Sie kurz vor dem Servieren ein wenig Crème fraîche [hinzu]."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 5",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la solidarité",
+              "hinten": "die °Solidarität"
+            },
+            {
+              "vorne": "la nouvelle",
+              "hinten": "die Nachricht, die Novelle , die Kurzgeschichte"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai une bonne [nouvelle] pour toi.",
+                "de": "Ich habe eine gute [Nachricht] für dich."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a écrit des contes et des [nouvelles].",
+                "de": "Er hat Erzählungen und [Novellen] geschrieben."
+              }
+            },
+            {
+              "vorne": "la loi",
+              "hinten": "das Gesetz"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La [loi] interdit la publicité pour le tabac.",
+                "de": "Das [Gesetz] verbietet Werbung für Tabakwaren."
+              }
+            },
+            {
+              "vorne": "la personnalité",
+              "hinten": "die Persönlichkeit n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cette actrice a une [personnalité] un peu compliquée.",
+                "de": "Diese Schauspielerin hat eine etwas schwierige [Persönlichkeit]."
+              }
+            },
+            {
+              "vorne": "l'humour m",
+              "hinten": "der Humor n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu n'as vraiment pas le sens de l'[humour]!",
+                "de": "Du hast wirklich keinen Sinn für [Humor]!"
+              }
+            },
+            {
+              "vorne": "seul, [seule adj]",
+              "hinten": "einsam, allein, einzig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je me sens moins [seule] depuis que j'ai fait leur connaissance.",
+                "de": "Ich fühle mich weniger [einsam], seit ich sie kennengelernt habe."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour le moment, je suis allé une [seule] fois en France.",
+                "de": "Bis jetzt war ich nur ein [einziges] Mal in Frankreich."
+              }
+            },
+            {
+              "vorne": "la star (1)",
+              "hinten": "der °Filmstar"
+            },
+            {
+              "vorne": "surveiller",
+              "hinten": "v/t °überwachenbeaufsichtigen (a enfant)SPORTS adversaire °bewachen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[surveiller] sa ligne",
+                "de": "auf seine Linie achten"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [surveiller]",
+                "de": "sich in Acht nehmen"
+              }
+            },
+            {
+              "vorne": "la °brute",
+              "hinten": "der °Rohlingp/fort die °Bestie; der Grobian"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[brute] épaisse",
+                "de": "Banause m; fam Hohlkopf m"
+              }
+            },
+            {
+              "vorne": "la °bagarre",
+              "hinten": "die °Schlägereidie °Prügeleidie °Raufereifam fig °harter Kampffam das °Gerangel"
+            },
+            {
+              "vorne": "la victime",
+              "hinten": "das Opfer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La femme de la [victime] a avoué le meurtre.",
+                "de": "Die Frau des [Opfers] hat den Mord gestanden."
+              }
+            },
+            {
+              "vorne": "timide",
+              "hinten": "adj °schüchternzaghaft"
+            },
+            {
+              "vorne": "timide",
+              "hinten": "m,f °schüchterner Mensch"
+            },
+            {
+              "vorne": "signaler qc à qn",
+              "hinten": "jmd etw. melden"
+            },
+            {
+              "vorne": "le/la chef",
+              "hinten": "der/die Chef/in"
+            },
+            {
+              "vorne": "le °médiateur, médiatrice",
+              "hinten": "f der °Vermittler, die °Vermittlerinder (die) °Schlichter(in) m(f)"
+            },
+            {
+              "vorne": "le conflit",
+              "hinten": "der Konflikt"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le traité de Versailles a mis fin au [conflit] de 1914-1918.",
+                "de": "Der Versailler Vertrag hat den [Konflikt] von 1914-1918 beendet."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[confier] qc, qn à qn",
+                "de": "jemandem etwas, jemanden anvertrauen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [confier] à qn",
+                "de": "sich jemandem anvertrauen"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Au secours!",
+              "hinten": "Hilfe!"
+            },
+            {
+              "vorne": "agresser v/t",
+              "hinten": "überfallenanfallen(gêner) °belästigenMÉD °belasten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "verbalement [agresser] qn",
+                "de": "jemanden angreifen"
+              }
+            },
+            {
+              "vorne": "casser la figure à qn fam",
+              "hinten": "jdn verhauen fam"
+            },
+            {
+              "vorne": "toucher v",
+              "hinten": "bewegen, rühren, berühren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'étais vraiment [touché], à la limite de pleurer.",
+                "de": "Ich war wirklich [bewegt] und den Tränen nahe."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Prière de ne [toucher] à rien.",
+                "de": "Bitte nichts [berühren]."
+              }
+            },
+            {
+              "vorne": "faire peur à (1)",
+              "hinten": "erschrecken; Angst machen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ne criez pas, vous allez lui [faire peur]!",
+                "de": "Schreit nicht, ihr werdet ihn [erschrecken]!"
+              }
+            },
+            {
+              "vorne": "tenir qn par le bras",
+              "hinten": "jmd am Arm festhalten"
+            },
+            {
+              "vorne": "tenir (1)",
+              "hinten": "halten, festhalten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu pourrais [tenir] ce tableau, s'il te plaît ?",
+                "de": "Kannst du bitte dieses Bild [halten]?"
+              }
+            },
+            {
+              "vorne": "faire mal à qn",
+              "hinten": "jdm wehtun"
+            },
+            {
+              "vorne": "Aïe !",
+              "hinten": "Au!"
+            },
+            {
+              "vorne": "comme ça",
+              "hinten": "so"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Regarde, c'est [comme ça].",
+                "de": "Schau, es ist [so]."
+              }
+            },
+            {
+              "vorne": "arrêter",
+              "hinten": "aufhören"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu n'[arrêtes] pas le sport, j'espère !",
+                "de": "Du [hörst] nicht mit dem Sport [auf], hoffe ich!"
+              }
+            },
+            {
+              "vorne": "mal finir",
+              "hinten": "schlecht ausgehen"
+            },
+            {
+              "vorne": "mal",
+              "hinten": "schlecht Adverb"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle va [mal].",
+                "de": "Es geht ihr [schlecht]."
+              }
+            },
+            {
+              "vorne": "malheureux, [malheureuse adj]",
+              "hinten": "unglücklich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu as l'air [malheureux]; ça ne va pas?",
+                "de": "Du siehst [unglücklich] aus; stimmt etwas nicht?"
+              }
+            },
+            {
+              "vorne": "pleurer",
+              "hinten": "weinen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mon frère [pleure] et rit en même temps.",
+                "de": "Mein Bruder [weint] und lacht gleichzeitig."
+              }
+            },
+            {
+              "vorne": "frapper qn",
+              "hinten": "jdn schlagen"
+            },
+            {
+              "vorne": "voler qc à qn v",
+              "hinten": ", jmd etw. stehlen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "On m'a [volé] mon portefeuille dans le métro.",
+                "de": "Man hat mir in der U-Bahn die Brieftasche [gestohlen]."
+              }
+            },
+            {
+              "vorne": "courageux, [courageuse adj]",
+              "hinten": "mutig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Si j'étais plus [courageux], je lui dirais ce que je pense.",
+                "de": "Wenn ich [mutiger] wäre, würde ich ihr sagen, was ich denke."
+              }
+            },
+            {
+              "vorne": "hésiter",
+              "hinten": "zögern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pour l'entrée, j'[hésite] un peu...",
+                "de": "Was die Vorspeise angeht, [zögere] ich ein bisschen..."
+              }
+            },
+            {
+              "vorne": "à deux contre un",
+              "hinten": "zwei gegen einen"
+            },
+            {
+              "vorne": "'honteux adj (1)",
+              "hinten": "(déshonorant) °schändlichbeschämendcapitulation °schmachvoll(qui a honte) °verschämtschamhaft"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "être '[honteux] de qc",
+                "de": "sich für etwas schämen"
+              }
+            },
+            {
+              "vorne": "J'y vais!",
+              "hinten": "Ich gehe hin!"
+            },
+            {
+              "vorne": "aller chercher v (1)",
+              "hinten": "abholen; holen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'irai te [chercher] à l'aéroport.",
+                "de": "Ich [hole] dich am Flughafen [ab]."
+              }
+            },
+            {
+              "vorne": "prévenir v (1)",
+              "hinten": "Bescheid sagen; verständigen, benachrichtigen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Préviens]-moi suffisamment tôt!",
+                "de": "[Sag] mir rechtzeitig [Bescheid]."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Volet 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la violence",
+              "hinten": "die Gewalt"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La [violence] dans les banlieues est un grave problème.",
+                "de": "Die [Gewalt] in den Vorstädten ist ein großes Problem."
+              }
+            },
+            {
+              "vorne": "frapper à la porte",
+              "hinten": "an die Tür klopfen"
+            },
+            {
+              "vorne": "ne... personne pron (1)",
+              "hinten": "niemand"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ici, je [ne] connais [personne].",
+                "de": "Hier kenne ich [niemanden]."
+              }
+            },
+            {
+              "vorne": "l'histoire f",
+              "hinten": "die Geschichte n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "As-tu aimé cette [histoire]?",
+                "de": "Hat dir diese [Geschichte] gefallen?"
+              }
+            },
+            {
+              "vorne": "l'agresseur m",
+              "hinten": "der °Angreifer (a MIL)der °TäterMIL a der °Aggressor"
+            },
+            {
+              "vorne": "consoler",
+              "hinten": "v/t °trösten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [consoler]",
+                "de": "sich trösten"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [consoler] de qc",
+                "de": "über etwas (acc) hinwegkommen; etwas verschmerzen"
+              }
+            },
+            {
+              "vorne": "blessé adj (1)",
+              "hinten": "verletztsoldat °verwundet"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[blessé](e)",
+                "de": "m(f) Verletzte(r) f(m); soldat Verwundete(r) m"
+              }
+            },
+            {
+              "vorne": "dénoncer v/t (1)",
+              "hinten": "anzeigen (à la police bei der Polizei)bassement °denunzierenfig abus, etc °anprangernaccord °(auf)kündigen"
+            },
+            {
+              "vorne": "sinon conj",
+              "hinten": "sonst"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut mettre le riz dans beaucoup d'eau, [sinon] il colle.",
+                "de": "Reis muss man in viel Wasser kochen, [sonst] klebt er."
+              }
+            },
+            {
+              "vorne": "'harceler v/t (1)",
+              "hinten": "bedrängen; hier: mobben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "'[harceler] qn de questions",
+                "de": "jemanden mit Fragen [bedrängen]; jemandem mit Fragen zusetzen"
+              }
+            },
+            {
+              "vorne": "avoir //  <!>haben</!><!>Impératif</!>→[aie]→[ayons]→[ayez]",
+              "hinten": "<!>avoir</!> //   haben<!>Impératif</!>"
+            },
+            {
+              "vorne": "oser",
+              "hinten": "wagen, sich trauen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il veut une poupée mais il n'[ose] pas demander parce que c'est un garçon.",
+                "de": "Er will eine Puppe, aber er [traut sich] nicht zu fragen, weil er ein Junge ist."
+              }
+            },
+            {
+              "vorne": "menacer v",
+              "hinten": "bedrohen, drohen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le cambrioleur nous a [menacés] avec son couteau.",
+                "de": "Der Einbrecher hat uns mit seinem Messer [bedroht]."
+              }
+            },
+            {
+              "vorne": "la boxe",
+              "hinten": "das °Boxender °Boxsport"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "combat m",
+                "de": "Boxkampf m"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "match m de [boxe]",
+                "de": "Boxkampf m"
+              }
+            },
+            {
+              "vorne": "violent, [violente adj]",
+              "hinten": "gewalttätig"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Certains jeunes deviennent [violents] parce qu'ils sont désespérés.",
+                "de": "Manche Jugendliche werden [gewalttätig], weil sie verzweifelt sind."
+              }
+            },
+            {
+              "vorne": "faible adj",
+              "hinten": "schwach (a élève,_lumière,_vent)personne fig (sans énergie) °charakterschwach(indulgent) °zu nachsichtigbruit,_voix a °leisepluie °leichtraisonnement °auf schwachen Füßen stehendhauteur,_poids,_coût °geringniedrigmonnaie °weich"
+            },
+            {
+              "vorne": "le °faible",
+              "hinten": "der °Schwache(r)péj der °Schwächling(penchant) die °Schwäche, das °Faible (pour für)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "les économiquement [faibles]",
+                "de": "die sozial [Schwachen]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "un [faible] d'esprit",
+                "de": "ein geistig Beschränkter"
+              }
+            },
+            {
+              "vorne": "lâche adj",
+              "hinten": "feige"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il est trop [lâche] pour me dire la vérité en face.",
+                "de": "Er ist zu [feige], um mir die Wahrheit ins Gesicht zu sagen."
+              }
+            },
+            {
+              "vorne": "le témoin",
+              "hinten": "der Zeuge, [die Zeugin]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Une femme a été [témoin] de l'accident.",
+                "de": "Eine Frau war [Zeugin] des Unfalls."
+              }
+            },
+            {
+              "vorne": "l'°agression f",
+              "hinten": "MIL der °Angriffdie °Aggression (a PSYCH)der °Überfall (a contre une personne)par des nuisances die °BelästigungMÉD die °Belastung"
+            },
+            {
+              "vorne": "le principal (1), [la principale ]",
+              "hinten": "der Rektor, [die Rektorin]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Notre lycée change de [principal] tous les cinq ans.",
+                "de": "Unser Gymnasium wechselt alle fünf Jahre seinen [Rektor]."
+              }
+            },
+            {
+              "vorne": "la police",
+              "hinten": "die Polizei"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Si on fait trop de bruit, les voisins vont appeler la [police].",
+                "de": "Wenn wir zu viel Lärm machen, rufen die Nachbarn die [Polizei]."
+              }
+            },
+            {
+              "vorne": "être //  <!>sein</!><!>Impératif</!>→[sois]→[soyons]→[soyez]",
+              "hinten": "<!>être</!> //   sein<!>Impératif</!>"
+            },
+            {
+              "vorne": "rassuré adj→[rassurée]",
+              "hinten": "beruhigt"
+            },
+            {
+              "vorne": "laisser qn tranquille",
+              "hinten": "jmd in Ruhe lassen"
+            },
+            {
+              "vorne": "écrire //  <!>schreiben</!><!>Présent</!>→ →Sing.→Pl.→1.→[j'écris]→[nous écrivons]→2.→[tu écris]→[vous écrivez]→3.→[il écrit]→[ils écrivent]",
+              "hinten": "<!>écrire</!> //   schreiben<!>Présent</!>"
+            },
+            {
+              "vorne": "écrire //  <!>schreiben</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai écrit]→[nous avons écrit]→2.→[tu as écrit]→[vous avez écrit]→3.→[il a écrit]→[ils ont écrit]",
+              "hinten": "<!>écrire</!> //   schreiben<!>Passé composé</!>"
+            },
+            {
+              "vorne": "la °charte",
+              "hinten": "JUR,_POL die °ChartaHIST die °Urkunde; hier: Regeln für das Zusammenleben"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unité 6",
+      "bloecke": [
+        {
+          "name": "Volet 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "le Languedoc-Roussillon",
+              "hinten": "Region in Südfrankreich mit Montpellier als Hauptstadt"
+            },
+            {
+              "vorne": "mille num",
+              "hinten": "eintausend, tausend"
+            },
+            {
+              "vorne": "le visage n (1)",
+              "hinten": "das Gesicht n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Son [visage] me dit quelque chose.",
+                "de": "Sein [Gesicht] kommt mir bekannt vor."
+              }
+            },
+            {
+              "vorne": "la capitale",
+              "hinten": "die Hauptstadt"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tu connais la [capitale] de Madagascar?",
+                "de": "Kennst du die [Hauptstadt] von Madagaskar?"
+              }
+            },
+            {
+              "vorne": "l'habitant, [l'habitante m/f]",
+              "hinten": "der Einwohner, [die Einwohnerin]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Paris compte neuf millions d'[habitants] avec la banlieue.",
+                "de": "Mit den Vororten hat Paris neun Millionen [Einwohner]."
+              }
+            },
+            {
+              "vorne": "le paysage",
+              "hinten": "die Landschaft"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'adore les [paysages] enneigés.",
+                "de": "Ich liebe verschneite [Landschaften]."
+              }
+            },
+            {
+              "vorne": "le million",
+              "hinten": "die °Million f"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "un [million] d'hommes",
+                "de": "eine [Million] Menschen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "1,5 [million]",
+                "de": "(sg!) 1,5 [Millionen]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "riche à [millions]",
+                "de": "steinreich; fam millionenschwer"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "se [baigner]",
+                "de": "(sich) baden"
+              }
+            },
+            {
+              "vorne": "vous vous baignez",
+              "hinten": "ihr badet (1)"
+            },
+            {
+              "vorne": "la station balnéaire",
+              "hinten": "der Badeort"
+            },
+            {
+              "vorne": "la Grande-Motte",
+              "hinten": "Badeort in der Nähe von Montpellier"
+            },
+            {
+              "vorne": "construit/construite adj.",
+              "hinten": "erbaut"
+            },
+            {
+              "vorne": "le rugby",
+              "hinten": "Rugby"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous avons vu un match de [rugby].",
+                "de": "Wir haben ein [Rugbyspiel] gesehen."
+              }
+            },
+            {
+              "vorne": "le Montpellier Hérault Rugby",
+              "hinten": "erster Rugbyclub von Montpellier"
+            },
+            {
+              "vorne": "s'entraîner v",
+              "hinten": "trainieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cette semaine, je me suis [entraînée] sur la plage.",
+                "de": "Diese Woche habe ich am Strand [trainiert]."
+              }
+            },
+            {
+              "vorne": "devenir v (1)",
+              "hinten": "werden (2)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Quand j'étais petit, je voulais [devenir] astronaute.",
+                "de": "Als ich klein war, wollte ich Astronaut [werden]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il est plus difficile qu'avant de [devenir] Français.",
+                "de": "Es ist schwieriger als früher, Franzose zu [werden]."
+              }
+            },
+            {
+              "vorne": "le °champion, la °championne",
+              "hinten": "SPORTS der °Meister, die °Meisterinder °Championder (die) °(Vor)Kämpfer(in) m(f) (d'une cause für eine Sache)der (die) °Verfechter(in) m(f) (einer Sache)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[champion], [championne] olympique",
+                "de": "Olympiasieger(in) m(f)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[champion], [championne] du monde",
+                "de": "Weltmeister(in) m(f)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "adjt équipe [championne]",
+                "de": "[Meistermannschaft] f"
+              }
+            },
+            {
+              "vorne": "le monument",
+              "hinten": "das Denkmal, die Sehenswürdigkeit, das Bauwerk"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'aime visiter des [monuments] historiques.",
+                "de": "Ich besichtige gern historische [Denkmäler]."
+              }
+            },
+            {
+              "vorne": "romain/romaine adj",
+              "hinten": "römisch"
+            },
+            {
+              "vorne": "le pont du Gard",
+              "hinten": "römischer Aquädukt in Südfrankreich"
+            },
+            {
+              "vorne": "les arènes de Nîmes",
+              "hinten": "römisches Amphitheater in der französischen Stadt Nîmes"
+            },
+            {
+              "vorne": "les arènes f pl",
+              "hinten": "die Arena"
+            },
+            {
+              "vorne": "Nîmes",
+              "hinten": "französisches Stadt in der Region Languedoc-Roussillon"
+            },
+            {
+              "vorne": "l'époque f",
+              "hinten": "die Epoche; die Zeit"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Napoléon et Goethe ont vécu à la même [époque].",
+                "de": "Napoléon und Goethe haben in derselben [Epoche] gelebt."
+              }
+            },
+            {
+              "vorne": "amener qn/qc (1)",
+              "hinten": "jdn/etw. mitbringen, hier: leiten"
+            },
+            {
+              "vorne": "le gladiateur",
+              "hinten": "der °Gladiator"
+            },
+            {
+              "vorne": "la personne",
+              "hinten": "die Person"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Pascal réserve une table pour deux [personnes].",
+                "de": "Pascal reserviert einen Tisch für zwei [Personen]."
+              }
+            },
+            {
+              "vorne": "le/la même m-f pron",
+              "hinten": "derselbe, [dieselbe], [dasselbe]; der/die/das gleiche; sogar"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tiens, j'ai une raquette de la [même] marque que toi!",
+                "de": "Sieh mal an, ich habe [dieselbe] Schlägermarke wie du."
+              }
+            },
+            {
+              "vorne": "la °corrida",
+              "hinten": "der °Stierkampffig fam der °Zirkusfam das °Theater"
+            },
+            {
+              "vorne": "le concert",
+              "hinten": "das Konzert"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Le vendredi, elle va au [concert].",
+                "de": "Freitags geht sie ins [Konzert]."
+              }
+            },
+            {
+              "vorne": "la cité de Carcasonne",
+              "hinten": "mittelalterliche Festungsstadt in der Region Languedoc-Roussillon"
+            },
+            {
+              "vorne": "la cité",
+              "hinten": "die Stadt"
+            },
+            {
+              "vorne": "exister",
+              "hinten": "existieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Bien des gens se demandent si Dieu [existe].",
+                "de": "Viele Menschen fragen sich, ob Gott [existiert]."
+              }
+            },
+            {
+              "vorne": "se trouver",
+              "hinten": "sich befinden, liegen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Notre-Dame de Paris [se trouve] sur une île.",
+                "de": "Notre-Dame de Paris [befindet] sich auf einer Insel."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Cette ville se [trouve] au milieu de la France.",
+                "de": "Diese Stadt [liegt] mitten in Frankreich."
+              }
+            },
+            {
+              "vorne": "la forteresse",
+              "hinten": "die °Festung"
+            },
+            {
+              "vorne": "l'Europe f",
+              "hinten": "Europa"
+            },
+            {
+              "vorne": "le °rempart",
+              "hinten": "FORTIF die °Befestigungsanlaged'une ville a die °Stadtmauerfig das °Bollwerk"
+            },
+            {
+              "vorne": "le kilomètre, Abk. km",
+              "hinten": "der Kilometer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous allons sept [kilomètres] à pied.",
+                "de": "Wir laufen sieben [Kilometer] zu Fuß."
+              }
+            },
+            {
+              "vorne": "se promener",
+              "hinten": "spazieren gehen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il faut [se promener] souvent.",
+                "de": "Man muss oft [spazieren gehen]."
+              }
+            },
+            {
+              "vorne": "le mur",
+              "hinten": "die Mauer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je me souviens aussi de la Chute du [Mur] de Berlin.",
+                "de": "Ich erinnere mich auch an den [Mauerfall] in Berlin."
+              }
+            },
+            {
+              "vorne": "la tradition",
+              "hinten": "die Tradition"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'aime les sports de [tradition], comme la pétanque.",
+                "de": "Ich mag [Traditionssportarten] wie das Boulespiel."
+              }
+            },
+            {
+              "vorne": "la féria",
+              "hinten": "Straßenfest in Südfrankreich mit spanischen Einflüssen"
+            },
+            {
+              "vorne": "Béziers",
+              "hinten": "Stadt im Dep. Hérault"
+            },
+            {
+              "vorne": "plusieurs",
+              "hinten": "mehrere"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je lui ai téléphoné [plusieurs] fois.",
+                "de": "Ich habe sie [mehrere] Male angerufen."
+              }
+            },
+            {
+              "vorne": "s'amuser",
+              "hinten": "sich amüsieren"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ici, je ne [m' amuse] pas beaucoup.",
+                "de": "Hier [amüsiere] ich [mich] nicht sehr."
+              }
+            },
+            {
+              "vorne": "lâcher qn/qc",
+              "hinten": "jdn/etw. loslassen"
+            },
+            {
+              "vorne": "se retrouver",
+              "hinten": "sich treffen"
+            },
+            {
+              "vorne": "le Festival International des Sports Extrêmes",
+              "hinten": "internationale Veranstaltung für Extremsportarten"
+            }
+          ]
+        },
+        {
+          "name": "Volet 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la °légende",
+              "hinten": "(conte) die °Legendedie °Saged'une illustration die °Bildunterschriftd'une carte die °Zeichenerklärungdie °Legende"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "entrer dans la [légende]",
+                "de": "zur [Legende], legendär werden"
+              }
+            },
+            {
+              "vorne": "marchand, le/la °marchande",
+              "hinten": "der °Händler, die °Händlerin"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[marchand], [marchande] de journaux",
+                "de": "Zeitungshändler(in) m(f)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[marchand], [marchande] des quatre-saisons",
+                "de": "Obst- und Gemüsehändler(in) m(f) (auf der Straße)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "enf [marchand] de sable",
+                "de": "Sandmännchen n"
+              }
+            },
+            {
+              "vorne": "la °cage",
+              "hinten": "der °Käfigà oiseaux a das °Bauer"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[cage] à lapin",
+                "de": "Kaninchenstall m; fig enge, kleine Wohnung"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "TECH [cage] d'ascenseur",
+                "de": "Aufzugsschacht m"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[cage] d'escalier",
+                "de": "Treppenhaus n"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "PHYS [cage] de Faraday",
+                "de": "faradayscher [Käfig]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "ANAT [cage] thoracique",
+                "de": "Brustkorb m"
+              }
+            },
+            {
+              "vorne": "le chateau de Margon",
+              "hinten": "Schloss im Languedoc Roussillon,_südwestlich von Montpellier"
+            },
+            {
+              "vorne": "se souvenir (de qc)",
+              "hinten": "sich (an etw.) erinnern"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je [me souviens] aussi [de] la Chute du Mur de Berlin.",
+                "de": "Ich [erinnere mich] auch [an] den Mauerfall in Berlin."
+              }
+            },
+            {
+              "vorne": "se passer",
+              "hinten": "geschehen, spielen"
+            },
+            {
+              "vorne": "jeune m/f",
+              "hinten": "jung"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il est encore très [jeune].",
+                "de": "Er ist noch sehr [jung]."
+              }
+            },
+            {
+              "vorne": "l'homme m, les hommes",
+              "hinten": "der Mann, der Mensch"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il y a un [homme] et une femme dans le magasin.",
+                "de": "Es gibt einen [Mann] und eine Frau im Laden."
+              }
+            },
+            {
+              "vorne": "s'appeler",
+              "hinten": "heißen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je [m'appelle] Véronique.",
+                "de": "Ich [heiße] Véronique."
+              }
+            },
+            {
+              "vorne": "vendre",
+              "hinten": "verkaufen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous [vendons] notre maison.",
+                "de": "Wir [verkaufen] unser Haus."
+              }
+            },
+            {
+              "vorne": "l'oiseau n-m (1)",
+              "hinten": "der Vogel n"
+            },
+            {
+              "vorne": "le marché n",
+              "hinten": "der Markt n"
+            },
+            {
+              "vorne": "pauvre m/f",
+              "hinten": "arm"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ils sont des gens très [pauvres].",
+                "de": "Sie sind sehr [arme] Leute."
+              }
+            },
+            {
+              "vorne": "le printemps n",
+              "hinten": "der Frühling n, das Frühjahr n"
+            },
+            {
+              "vorne": "se poser",
+              "hinten": "sich niederlassen"
+            },
+            {
+              "vorne": "je t'offre",
+              "hinten": "ich schenke dir"
+            },
+            {
+              "vorne": "offrir v/t (1)",
+              "hinten": "en cadeau °schenken (qc à qn jemandem etwas)(proposer) °anbieten (qc à qn jemandem etwas)récompense °aussetzenavantages,_difficultés °bietenspectacle °(dar)bieten"
+            },
+            {
+              "vorne": "s'°offrir v/pr (1)",
+              "hinten": "personne °sich anbietenoccasion °sich bietenvue °sich darbieten"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "s'[offrir] à faire qc",
+                "de": "sich [erbieten], etwas zu tun"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "s'[offrir] qc",
+                "de": "(se payer qc) sich (dat) etwas leisten, gönnen"
+              }
+            },
+            {
+              "vorne": "bien d'autres choses",
+              "hinten": "noch viel mehr"
+            },
+            {
+              "vorne": "disparaître v/i (1)",
+              "hinten": "verschwindenobjets a °abhandenkommentache a °weggehendouleurs,_soucis °vergehenespèce °aussterben(mourir) °dahingehensterben"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "faire [disparaître]",
+                "de": "document [verschwinden] lassen; tache, douleur, fig personne beseitigen"
+              }
+            },
+            {
+              "vorne": "cela",
+              "hinten": "das"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Cela] dépend.",
+                "de": "[Das] kommt darauf an."
+              }
+            },
+            {
+              "vorne": "le mariage n",
+              "hinten": "die Hochzeit n, die Trauung n, die Ehe n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mon frère ne voulait pas de [mariage] à l'église.",
+                "de": "Mein Bruder wollte keine kirchliche [Hochzeit]."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Malgré quelques disputes, c'est un [mariage] heureux.",
+                "de": "Trotz einiger Auseinandersetzungen ist es eine glückliche [Ehe]."
+              }
+            },
+            {
+              "vorne": "l'invité, [l'invitée n-m/f]",
+              "hinten": "der Gast n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "À mon mariage, il y avait plus de cent [invités].",
+                "de": "Auf meiner Hochzeit waren mehr als hundert [Gäste]."
+              }
+            },
+            {
+              "vorne": "le musicien, [la musicienne n]",
+              "hinten": "der Musiker, [die Musikerin n]"
+            },
+            {
+              "vorne": "le marié n",
+              "hinten": "der Bräutigam n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Mon fils est le meilleur ami du [marié].",
+                "de": "Mein Sohn ist der beste Freund des [Bräutigams]."
+              }
+            },
+            {
+              "vorne": "la mariée n",
+              "hinten": "die Braut n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La jeune [mariée] était très jolie.",
+                "de": "Die junge [Braut] war sehr hübsch."
+              }
+            },
+            {
+              "vorne": "la scène n",
+              "hinten": "die Szene n, die Bühne n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je n'ai pas bien compris certaines [scènes] de la pièce.",
+                "de": "Manche [Szenen] des Stücks habe ich nicht richtig verstanden."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Sur [scène], Jacques Brel était extraordinaire.",
+                "de": "Auf der [Bühne] war Jacques Brel außergewöhnlich gut."
+              }
+            },
+            {
+              "vorne": "la proposition n",
+              "hinten": "der Vorschlag n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous sommes tous d'accord avec ta [proposition].",
+                "de": "Wir sind alle mit deinem [Vorschlag] einverstanden."
+              }
+            },
+            {
+              "vorne": "échanger qc contre qc (1)",
+              "hinten": "etwas gegen etwas tauschen"
+            },
+            {
+              "vorne": "magique",
+              "hinten": "adj °magisch (a fig)Zauber..."
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "baguette f [magique]",
+                "de": "Zauberstab m"
+              }
+            },
+            {
+              "vorne": "furieux, [furieuse adj]",
+              "hinten": "zornig, wütend"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il est [furieux] d'être arrivé seulement deuxième.",
+                "de": "Er ist [wütend], weil er nur Zweiter geworden ist."
+              }
+            },
+            {
+              "vorne": "épouser v/t",
+              "hinten": "fig (adopter) °sich (dat) zu eigen machen(se modeler sur) °sich anpassen, anschmiegen (qc dat)"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[épouser] qn",
+                "de": "jemanden heiraten"
+              }
+            },
+            {
+              "vorne": "l'œil n-m (1)",
+              "hinten": "das Auge n"
+            },
+            {
+              "vorne": "les cheveux m,_Pl",
+              "hinten": "das Haar"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a les [cheveux] très courts sur la photo.",
+                "de": "Er hat sehr kurzes [Haar] auf dem Foto."
+              }
+            },
+            {
+              "vorne": "l'or m",
+              "hinten": "das Gold"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ce bijou en [or] est très élégant.",
+                "de": "Dieser Schmuck aus [Gold] ist sehr elegant."
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "(retenir l'attention) [intéresser] qn",
+                "de": "jemanden interessieren"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "(concerner) [intéresser] qc, qn",
+                "de": "etwas, jemanden betreffen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "ÉCON [intéresser] qn",
+                "de": "jemanden beteiligen (aux bénéfices am Gewinn)"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "s'[intéresser] à qn, qc",
+                "de": "sich für jemanden, etwas interessieren; an jemandem, etwas interessiert sein"
+              }
+            },
+            {
+              "vorne": "heureux, heureuse",
+              "hinten": "glücklich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Bonne et [heureuse] année !",
+                "de": "Ein [glückliches] neues Jahr!"
+              }
+            },
+            {
+              "vorne": "riche m/f adj",
+              "hinten": "reich"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Des milliers de gens rêvent de devenir [riches] un jour .",
+                "de": "Tausende von Menschen träumen davon, eines Tages [reich] zu werden."
+              }
+            },
+            {
+              "vorne": "s'énerver",
+              "hinten": "sich aufregen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ils [s'énervent] sur la route.",
+                "de": "Sie [regen sich] auf der Fahrt [auf]."
+              }
+            },
+            {
+              "vorne": "être capable de + inf.",
+              "hinten": "fähig sein, etw. zu tun"
+            },
+            {
+              "vorne": "ouvrir",
+              "hinten": "öffnen"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "[Ouvre] vite ton cadeau !",
+                "de": "[Öffne] schnell dein Geschenk!"
+              }
+            },
+            {
+              "vorne": "s'envoler",
+              "hinten": "davonfliegen"
+            },
+            {
+              "vorne": "Verweis",
+              "hinten": "Kapitel"
+            },
+            {
+              "vorne": "1",
+              "hinten": "Unité 1\\Volet1"
+            },
+            {
+              "vorne": "2",
+              "hinten": "Unité 1\\Volet 2"
+            },
+            {
+              "vorne": "3",
+              "hinten": "Unité 1\\Le francais en classe"
+            },
+            {
+              "vorne": "4",
+              "hinten": "Unité 2\\Volet 1"
+            },
+            {
+              "vorne": "5",
+              "hinten": "Unité 2\\Volet 2"
+            },
+            {
+              "vorne": "6",
+              "hinten": "Unité 2\\Volet 3"
+            },
+            {
+              "vorne": "7",
+              "hinten": "Unité 3\\Volet 1"
+            },
+            {
+              "vorne": "8",
+              "hinten": "Unité 3\\Volet 2"
+            },
+            {
+              "vorne": "9",
+              "hinten": "Unité 3\\Volet 3"
+            },
+            {
+              "vorne": "10",
+              "hinten": "Unité 4\\Volet 1"
+            },
+            {
+              "vorne": "11",
+              "hinten": "Unité 4\\Volet 2"
+            },
+            {
+              "vorne": "12",
+              "hinten": "Unité 4\\Volet 3"
+            },
+            {
+              "vorne": "13",
+              "hinten": "Module facultatif 1"
+            },
+            {
+              "vorne": "14",
+              "hinten": "Unité 5\\Volet 1"
+            },
+            {
+              "vorne": "15",
+              "hinten": "Unité 5\\Volet 2"
+            },
+            {
+              "vorne": "16",
+              "hinten": "Unité 5\\Volet 3"
+            },
+            {
+              "vorne": "17",
+              "hinten": "Der Körper"
+            },
+            {
+              "vorne": "18",
+              "hinten": "Unité 6\\Volet 1"
+            },
+            {
+              "vorne": "19",
+              "hinten": "Unité 6\\Volet 2"
+            },
+            {
+              "vorne": "Verweis",
+              "hinten": "Wortart"
+            },
+            {
+              "vorne": "s",
+              "hinten": "Substantive"
+            },
+            {
+              "vorne": "v",
+              "hinten": "Verben"
+            },
+            {
+              "vorne": "ad",
+              "hinten": "Adjektive und Adverbien"
+            },
+            {
+              "vorne": "al",
+              "hinten": "Sonstiges"
+            },
+            {
+              "vorne": "phr",
+              "hinten": "Phrasen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sonstige",
+      "bloecke": [
+        {
+          "name": "Volet Der Körper",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la tête",
+              "hinten": "der Kopf"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Tournez la [tête] à droite.",
+                "de": "Dreht den [Kopf] nach rechts."
+              }
+            },
+            {
+              "vorne": "les cheveux m pl",
+              "hinten": "das Haar , die Haare  pl"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "En ce moment, les garçons ont plutôt les [cheveux] courts.",
+                "de": "Zurzeit haben die Jungen eher kurze [Haare]."
+              }
+            },
+            {
+              "vorne": "le nez",
+              "hinten": "die Nase"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a un petit [nez] et des taches de rousseur.",
+                "de": "Sie hat eine kleine [Nase] und Sommersprossen."
+              }
+            },
+            {
+              "vorne": "l'oreille n-f",
+              "hinten": "das Ohr n"
+            },
+            {
+              "vorne": "l'œil m, Pl: les yeux",
+              "hinten": "das Auge"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a les [yeux] verts.",
+                "de": "Sie hat grüne [Augen]."
+              }
+            },
+            {
+              "vorne": "la bouche n",
+              "hinten": "der Mund n"
+            },
+            {
+              "vorne": "le front n",
+              "hinten": "die Stirn n"
+            },
+            {
+              "vorne": "la joue n",
+              "hinten": "die Wange n, die Backe n"
+            },
+            {
+              "vorne": "la lèvre n",
+              "hinten": "die Lippe n"
+            },
+            {
+              "vorne": "le menton n",
+              "hinten": "das Kinn n"
+            },
+            {
+              "vorne": "le cou n",
+              "hinten": "der Hals n"
+            },
+            {
+              "vorne": "l'épaule f",
+              "hinten": "die Schulter"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai mal aux [épaules].",
+                "de": "Die [Schultern] tun mir weh."
+              }
+            },
+            {
+              "vorne": "ANAT la °poitrine(Brustkorb) le °thoraxder Frau le °seinCUIS (Geflügelbrust) le °blanc(Rinderbrust,_Kalbsbrust) la °poitrine",
+              "hinten": "die °Brust→[Brust]→[Brüste]"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "bomber le torse",
+                "de": "sich in die [Brust] werfen"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "à gorge déployée; à pleine gorge",
+                "de": "aus voller [Brust]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "100 m brasse",
+                "de": "SCHWIMMEN 100 m [Brust]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "a [poitrine] f",
+                "de": "pl [Brüste]"
+              }
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "donner le [sein], donner à téter à un enfant",
+                "de": "einem Kind die [Brust] geben"
+              }
+            },
+            {
+              "vorne": "le dos",
+              "hinten": "der Rücken"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai mal au [dos].",
+                "de": "Ich habe [Rückenschmerzen]."
+              }
+            },
+            {
+              "vorne": "le ventre",
+              "hinten": "der Bauch"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Rentrez le [ventre].",
+                "de": "Zieht den [Bauch] ein!"
+              }
+            },
+            {
+              "vorne": "le genou, Pl: les genoux",
+              "hinten": "das Knie"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Plie bien les [genoux].",
+                "de": "Geh in die [Knie]!"
+              }
+            },
+            {
+              "vorne": "la main n",
+              "hinten": "die Hand n"
+            },
+            {
+              "vorne": "le pied",
+              "hinten": "der Fuß"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous allons sept kilomètres à [pied].",
+                "de": "Wir laufen sieben Kilometer zu [Fuß]."
+              }
+            },
+            {
+              "vorne": "le doigt n",
+              "hinten": "der Finger n"
+            },
+            {
+              "vorne": "le doigt de pied n",
+              "hinten": "der Zeh n"
+            }
+          ]
+        },
+        {
+          "name": "Volet Module facultatif 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "la casquette",
+              "hinten": "die °(Schirm)Mütze"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "fig porter plusieurs [casquettes]",
+                "de": "mehrere Funktionen innehaben"
+              }
+            },
+            {
+              "vorne": "la botte n",
+              "hinten": "der Stiefel n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Les gendarmes portent des [bottes] noires.",
+                "de": "Polizisten tragen schwarze [Stiefel]."
+              }
+            },
+            {
+              "vorne": "la jupe",
+              "hinten": "der Rock"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a mis une [jupe] longue.",
+                "de": "Sie hat einen langen [Rock] angezogen."
+              }
+            },
+            {
+              "vorne": "les lunettes de soleil f,_Pl",
+              "hinten": "die Sonnenbrille"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il porte toujours des [lunettes de soleil].",
+                "de": "Er hat immer eine [Sonnenbrille] auf."
+              }
+            },
+            {
+              "vorne": "la veste",
+              "hinten": "die Jacke"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a une tache à la [veste] de son costume.",
+                "de": "Er hat einen Fleck auf der [Jacke] seines Anzugs."
+              }
+            },
+            {
+              "vorne": "le foulard",
+              "hinten": "das Tuch, der Schal"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Elle a un [foulard] autour du cou.",
+                "de": "Sie hat ein [Tuch] um den Hals."
+              }
+            },
+            {
+              "vorne": "la ceinture n",
+              "hinten": "der Gürtel n"
+            },
+            {
+              "vorne": "le bonnet n",
+              "hinten": "die Mütze n, die Kappe n"
+            },
+            {
+              "vorne": "gris, [grise adj]",
+              "hinten": "grau"
+            },
+            {
+              "vorne": "jaune",
+              "hinten": "gelb"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "La mimosa a des fleurs [jaunes]",
+                "de": "Die Mimose hat [gelbe] Blüten."
+              }
+            },
+            {
+              "vorne": "marron unv.",
+              "hinten": "braun"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a les yeux [marron].",
+                "de": "Er hat [braune] Augen."
+              }
+            },
+            {
+              "vorne": "blanc, blanche",
+              "hinten": "weiß"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Ta robe [blanche] est très belle.",
+                "de": "Dein [weißes] Kleid ist sehr schön."
+              }
+            },
+            {
+              "vorne": "orange adj (1)",
+              "hinten": "orangeorangefarben"
+            },
+            {
+              "vorne": "rose unv.",
+              "hinten": "rosa"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Nous avons mangé des crevettes [roses].",
+                "de": "Wir haben [rosa] Garnelen gegessen."
+              }
+            },
+            {
+              "vorne": "noir, noire",
+              "hinten": "schwarz"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "J'ai vu un chat [noir] dans la rue.",
+                "de": "Ich habe eine [schwarze] Katze auf der Straße gesehen."
+              }
+            },
+            {
+              "vorne": "violet, violette",
+              "hinten": "violett"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Il a les mains [violettes] de froid.",
+                "de": "Er hat vor Kälte [violette] Hände."
+              }
+            },
+            {
+              "vorne": "la devinette n",
+              "hinten": "das Rätsel n"
+            },
+            {
+              "vorne": "~",
+              "hinten": "~",
+              "beispiel": {
+                "fr": "Je vais vous donner quelques [devinettes] pas simples.",
+                "de": "Ich werde euch ein paar [Rätsel] aufgeben, die nicht einfach sind."
+              }
+            },
+            {
+              "vorne": "trucmuche",
+              "hinten": "Dingsbums"
+            }
+          ]
+        },
+        {
+          "name": "Allgemein",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Sprache der Zielgruppe",
+              "hinten": "Deutsch"
+            },
+            {
+              "vorne": "Software",
+              "hinten": "Mit dem Langenscheidt Vokabeltrainer (www.vokabeln.de) können Sie diesen Wortschatz mit vielen verschiedenen Funktionen trainieren (z.B. Karteikartensystem, Prüfungsmodus, Multiple Choice, Kreuzworträtsel, Superlearning und Tutorium), in unterschiedlichen Formaten drucken (z.B. Vokabelkärtchen, Vokabellisten, Vokabeltests, Kreuzworträtsel) und exportieren (z.B. auf Ihr Handy)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

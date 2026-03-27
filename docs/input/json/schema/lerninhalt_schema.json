@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lerninhalt",
+  "description": "Schema für importierbare Lerninhalte (Vokabeln, Formeln, Fakten, etc.)",
+  "type": "object",
+  "required": ["meta", "inhalt"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Metadaten zum Lehrwerk und zur Klassifizierung",
+      "required": ["fach", "lehrwerk"],
+      "properties": {
+        "fach": {
+          "type": "string",
+          "description": "Schulfach (z.B. Französisch, Englisch, Chemie)",
+          "examples": ["Französisch", "Englisch", "Chemie", "Deutsch"]
+        },
+        "lehrwerk": {
+          "type": "string",
+          "description": "Name des Lehrwerks/Buches",
+          "examples": ["À plus! Nouvelle édition", "Green Line G9", "Access"]
+        },
+        "band": {
+          "type": ["integer", "string"],
+          "description": "Band-/Buchnummer",
+          "examples": [1, 2, 3, "Oberstufe"]
+        },
+        "klasse": {
+          "type": "integer",
+          "description": "Jahrgangsstufe (5-13)",
+          "minimum": 5,
+          "maximum": 13
+        },
+        "verlag": {
+          "type": "string",
+          "description": "Verlag des Lehrwerks",
+          "examples": ["Cornelsen", "Klett", "Westermann"]
+        },
+        "sprachen": {
+          "type": "array",
+          "description": "Beteiligte Sprachen [Fremdsprache, Muttersprache]",
+          "items": {"type": "string"},
+          "examples": [["Französisch", "Deutsch"], ["Englisch", "Deutsch"]]
+        },
+        "version": {
+          "type": "string",
+          "description": "Schema-Version für Kompatibilität",
+          "default": "1.0"
+        },
+        "quelle": {
+          "type": "string",
+          "description": "Herkunft der Daten (URL, Buch, etc.)"
+        }
+      }
+    },
+    "felder": {
+      "type": "object",
+      "description": "Definition der Kartenfelder (optional, für Nicht-Vokabel-Inhalte)",
+      "properties": {
+        "vorderseite": {
+          "type": "string",
+          "description": "Label für die Vorderseite der Karte",
+          "default": "Begriff"
+        },
+        "rueckseite": {
+          "type": "string",
+          "description": "Label für die Rückseite der Karte",
+          "default": "Definition"
+        },
+        "zusatzfelder": {
+          "type": "array",
+          "description": "Zusätzliche Felder pro Karte",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "label": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "inhalt": {
+      "type": "array",
+      "description": "Liste der Units/Kapitel",
+      "items": {
+        "type": "object",
+        "required": ["name", "bloecke"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name der Unit/des Kapitels",
+            "examples": ["Unité 1", "Unit 4", "Kapitel 3: Säuren und Basen"]
+          },
+          "beschreibung": {
+            "type": "string",
+            "description": "Optionale Beschreibung der Unit"
+          },
+          "bloecke": {
+            "type": "array",
+            "description": "Lernblöcke innerhalb der Unit (je ~20-50 Karten)",
+            "items": {
+              "type": "object",
+              "required": ["name", "karten"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name des Lernblocks",
+                  "examples": ["Volet 1", "Part A", "Grundbegriffe"]
+                },
+                "beschreibung": {
+                  "type": "string"
+                },
+                "bidirektional": {
+                  "type": "boolean",
+                  "description": "Kann in beide Richtungen gelernt werden",
+                  "default": true
+                },
+                "karten": {
+                  "type": "array",
+                  "description": "Die eigentlichen Karteikarten",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["vorne", "hinten"],
+                    "properties": {
+                      "vorne": {
+                        "type": "string",
+                        "description": "Vorderseite (Frage/Begriff/Fremdsprache)"
+                      },
+                      "hinten": {
+                        "type": "string",
+                        "description": "Rückseite (Antwort/Definition/Übersetzung)"
+                      },
+                      "beispiel": {
+                        "type": ["string", "object"],
+                        "description": "Beispielsatz oder -sätze",
+                        "examples": [
+                          "Je vais à l'école.",
+                          {"fr": "Je vais à l'école.", "de": "Ich gehe zur Schule."}
+                        ]
+                      },
+                      "zusatz": {
+                        "type": "object",
+                        "description": "Beliebige Zusatzinformationen",
+                        "additionalProperties": true,
+                        "examples": [
+                          {"wortart": "Verb", "konjugation": "je vais, tu vas, il va"},
+                          {"herkunft": "Latein", "synonym": "Metapher"}
+                        ]
+                      },
+                      "tags": {
+                        "type": "array",
+                        "description": "Tags für Filterung/Gruppierung",
+                        "items": {"type": "string"},
+                        "examples": [["Verb", "unregelmäßig"], ["Nomen", "maskulin"]]
+                      },
+                      "seite": {
+                        "type": ["integer", "string"],
+                        "description": "Seitenzahl im Lehrbuch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
