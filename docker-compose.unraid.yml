@@ -1,6 +1,6 @@
 services:
   karteikarten:
-    image: docker-registry.baumgartner.online/karteikarten:latest
+    image: ghcr.io/mabaumga/karteikarten:latest
     container_name: karteikarten
     hostname: karteikarten
 

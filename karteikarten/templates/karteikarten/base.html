@@ -297,5 +297,8 @@
         updateOfflineIndicator();
     </script>
     {% block extra_js %}{% endblock %}
+    <footer class="text-center text-muted small py-3">
+        <span>Karteikarten v{{ app_version }}{% if build_commit %} · {{ build_commit }}{% endif %}</span>
+    </footer>
 </body>
 </html>

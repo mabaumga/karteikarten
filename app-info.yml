@@ -1,0 +1,49 @@
+# app-info.yml — Metadaten & Skill-Provenienz der Anwendung
+#
+# Maschinenlesbar. Haelt fest, wann welcher Skill zuletzt ueber diese App gelaufen ist
+# und mit welchem Ergebnis. Wird von den Skills selbst gepflegt.
+
+app:
+  name: karteikarten
+  stack: python-django
+  version_source: requirements.txt
+
+  # Produktiv-Deployment — wo laeuft die App?
+  deployment:
+    platform: unraid              # Homeserver Baumgartner (privat)
+    ssh_host: unbekannt
+    url: https://karteikarten.baumgartner.online
+    container: karteikarten
+    image: ghcr.io/mabaumga/karteikarten:latest
+    compose_path: /mnt/user/appdata/karteikarten (Unraid)
+    deploy_cmd: "make release -> GitHub Actions (release.yml, semantic-release + ghcr-Push); auf Unraid: docker compose pull && up -d"
+    notes: "Docker-Standalone, SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import"
+
+skills:
+  app-rahmen:
+    last_run: 2026-06-04T00:00:00+02:00
+    skill_version: 1
+    mode: retrofit
+    status: ok
+    # Pro Baustein: ok | partial | missing | na
+    bausteine:
+      make_targets: ok           # setup/run/migrate/seed/init/check/release/deploy
+      version: ok                # __version__ + Context-Processor + Footer
+      release: ok                # semantic-release + release.yml + pyproject + CHANGELOG
+      system_menu: missing       # bewusst ausgelassen (Bastelprojekt)
+      health: ok                 # /health/ (DB + Disk) nach Contract
+      hardware: missing          # bewusst ausgelassen
+      pre_commit: missing        # bewusst ausgelassen (keine Tests)
+      claude_md: ok              # Betrieb/Rahmen + AGENTS.md-Regel + Django-6-Fix
+      dev_container: missing     # bewusst ausgelassen
+    result: "Retrofit: Versionsanzeige, /health/, Make init/check/release/deploy, Release-Pipeline (semantic-release + ghcr + CHANGELOG), Registry vereinheitlicht auf ghcr.io/mabaumga, Deployment-URL ermittelt."
+    offen: "Bewusst offen: System-Menue, Hardware, Pre-commit, Dev-Container. Baseline-Tag v1.0.0 + erstes Release noch ausstehend (Bestaetigung Nutzer)."
+
+  agents-md:
+    last_run: 2026-06-03T23:07:06+02:00
+    skill_version: 1
+    mode: write
+    status: ok
+    target: AGENTS.md
+    result: "AGENTS.md neu angelegt (Zweck, Stack, Architektur, Struktur, Import, Deployment)."
+    offen: "Versions-Drift: CLAUDE.md nennt Django 4.2+, requirements.txt hat 6.0.5 — CLAUDE.md nachziehen. Prod-URL unbekannt."

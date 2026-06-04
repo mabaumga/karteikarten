@@ -1,8 +1,13 @@
-.PHONY: run migrate setup clean help
+.PHONY: run migrate setup init check release deploy seed clean help
 .PHONY: docker-build docker-run docker-stop docker-logs docker-shell docker-migrate docker-push
 
-# Registry
-REGISTRY := docker-registry.baumgartner.online
+# Auto-venv: PYTHON zeigt auf .venv/bin/python falls vorhanden, sonst system-python3.
+# So laeuft `make check` lokal (mit venv) und in CI (System-Python) gleichermassen.
+VENV := .venv
+PYTHON ?= $(shell test -x $(VENV)/bin/python && echo $(VENV)/bin/python || echo python3)
+
+# Registry (einheitlich ghcr.io — siehe release.yml + docker-compose.unraid.yml)
+REGISTRY := ghcr.io/mabaumga
 IMAGE := karteikarten
 TAG := latest
 
@@ -21,6 +26,20 @@ setup: ## Create venv and install dependencies
 	python -m venv .venv
 	.venv/bin/pip install -r requirements.txt
 	mkdir -p data
+
+init: ## Idempotent: Migrationen + Static (auch vom docker-entrypoint genutzt)
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py migrate --noinput
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py collectstatic --noinput
+
+check: ## Quality-Gate: Django System-Checks (keine Tests im Projekt)
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
+
+release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
+	gh workflow run release.yml
+
+deploy: ## Hinweis: Deployment laeuft ueber das Release (ghcr.io) + Pull auf Unraid
+	@echo "Kein direktes Deployment. 'make release' baut+pusht das Image nach ghcr.io;"
+	@echo "auf Unraid danach: docker compose pull && docker compose up -d (karteikarten)."
 
 seed: ## Seed database with Stilmittel
 	DJANGO_SETTINGS_MODULE=config.settings .venv/bin/python scripts/seed_stilmittel.py

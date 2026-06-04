@@ -55,6 +55,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'config.context_processors.version_context',
             ],
         },
     },
@@ -86,7 +87,8 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
 
 # Ensure data directory exists
-(BASE_DIR / 'data').mkdir(exist_ok=True)
+DATA_DIR = BASE_DIR / 'data'
+DATA_DIR.mkdir(exist_ok=True)
 
 # =============================================================================
 # Karteikarten Import Settings

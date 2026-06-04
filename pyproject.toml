@@ -1,0 +1,24 @@
+# Konfiguration fuer python-semantic-release.
+# Single Source der Version ist karteikarten/__init__.py:__version__.
+# Release laeuft ueber `make release` -> GitHub Actions (.github/workflows/release.yml).
+# Version NIEMALS manuell bumpen — semantic-release leitet sie aus Conventional Commits ab.
+
+[tool.semantic_release]
+version_variables = ["karteikarten/__init__.py:__version__"]
+branch = "main"
+upload_to_pypi = false
+build_command = ""
+tag_format = "v{version}"
+commit_message = "chore(release): {version} [skip ci]"
+major_on_zero = false
+
+[tool.semantic_release.changelog]
+default_templates = { changelog_file = "CHANGELOG.md" }
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["feat", "fix", "refactor", "perf", "docs", "style", "test", "chore", "ci"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "refactor", "perf"]
+
+[tool.semantic_release.remote]
+type = "github"
