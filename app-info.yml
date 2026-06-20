@@ -10,14 +10,18 @@ app:
 
   # Produktiv-Deployment — wo laeuft die App?
   deployment:
-    platform: unraid              # Homeserver Baumgartner (privat)
-    ssh_host: unbekannt
+    platform: hetzner-cpx22       # produktiv auf Hetzner; oeffentliche DNS karteikarten.baumgartner.online -> 178.105.222.1
+    ssh_host: root@178.105.222.1
     url: https://karteikarten.baumgartner.online
     container: karteikarten
     image: ghcr.io/mabaumga/karteikarten:latest
-    compose_path: /mnt/user/appdata/karteikarten (Unraid)
-    deploy_cmd: "make release -> GitHub Actions (release.yml, semantic-release + ghcr-Push); auf Unraid: docker compose pull && up -d"
-    notes: "Docker-Standalone, SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import"
+    compose_path: /opt/hetzner/karteikarten/docker-compose.yml
+    deploy_cmd: "make release -> GitHub Actions (release.yml: semantic-release + ghcr-Push); dann: ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten' (sops-decrypt -> compose pull -> up -d). KEIN Auto-Deploy."
+    notes: >-
+      Caddy (proxy/) -> karteikarten:8000 (gunicorn); SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import.
+      Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
+      HINWEIS: Alt-Instanz auf Unraid (/mnt/user/appdata/karteikarten, compose.manager-Projekt "Karteikarten")
+      laeuft noch mit eigener SQLite-DB (Stand 2026-03-08) — durch Hetzner abgeloest, sollte stillgelegt werden.
 
 skills:
   app-rahmen:
