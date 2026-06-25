@@ -26,9 +26,10 @@ app:
       Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
       HINWEIS: Alt-Instanz auf Unraid (/mnt/user/appdata/karteikarten, compose.manager-Projekt "Karteikarten")
       laeuft noch mit eigener SQLite-DB (Stand 2026-03-08) — durch Hetzner abgeloest, sollte stillgelegt werden.
-    backup:
-      required: true
-      borg_config: hetzner-karteikarten
+
+backup:
+  required: true
+  borg_config: hetzner-karteikarten
 
 skills:
   app-rahmen:
