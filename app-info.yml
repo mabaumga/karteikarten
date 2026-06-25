@@ -8,6 +8,10 @@ app:
   stack: python-django
   version_source: requirements.txt
 
+  plane:
+    project: "Karteikarten"
+    project_id: "52b0657b-4283-4c65-9a13-d6f33839b06a"
+
   # Produktiv-Deployment — wo laeuft die App?
   deployment:
     platform: hetzner-cpx22       # produktiv auf Hetzner; oeffentliche DNS karteikarten.baumgartner.online -> 178.105.222.1
@@ -22,6 +26,9 @@ app:
       Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
       HINWEIS: Alt-Instanz auf Unraid (/mnt/user/appdata/karteikarten, compose.manager-Projekt "Karteikarten")
       laeuft noch mit eigener SQLite-DB (Stand 2026-03-08) — durch Hetzner abgeloest, sollte stillgelegt werden.
+    backup:
+      required: true
+      borg_config: hetzner-karteikarten
 
 skills:
   app-rahmen:
