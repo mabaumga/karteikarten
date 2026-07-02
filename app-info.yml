@@ -30,6 +30,10 @@ app:
 backup:
   required: true
   borg_config: hetzner-karteikarten
+  database:
+    engine: sqlite
+  paths: [data]
+  exclude: []
 
 skills:
   app-rahmen:
