@@ -30,6 +30,7 @@ app:
 backup:
   required: true
   borg_config: hetzner-karteikarten
+  paths: [data]
 
 skills:
   app-rahmen:
