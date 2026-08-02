@@ -17,6 +17,14 @@ app:
     platform: hetzner-cpx22       # produktiv auf Hetzner; oeffentliche DNS karteikarten.baumgartner.online -> 178.105.222.1
     ssh_host: root@178.105.222.1
     url: https://karteikarten.baumgartner.online
+
+    # Quelle fuer die Uptime-Kuma-Monitore (siehe app-rahmen/reference/uptime-kuma.md).
+    # Je Basis-URL entstehen zwei Monitore: Verfuegbarkeit + Health.
+    monitoring:
+      healthcheck: included       # included | excluded (dann reason pflicht)
+      health_path: /health/       # null = App hat keinen Health-Endpoint
+      instances: []
+
     container: karteikarten
     image: ghcr.io/mabaumga/karteikarten:latest
     compose_path: /opt/hetzner/karteikarten/docker-compose.yml
