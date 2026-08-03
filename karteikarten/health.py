@@ -19,7 +19,11 @@ class HealthStatus(str, Enum):
     UNHEALTHY = "unhealthy"
 
 
-_SEVERITY = {HealthStatus.HEALTHY: 0, HealthStatus.DEGRADED: 1, HealthStatus.UNHEALTHY: 2}
+_SEVERITY = {
+    HealthStatus.HEALTHY: 0,
+    HealthStatus.DEGRADED: 1,
+    HealthStatus.UNHEALTHY: 2,
+}
 
 
 @dataclass
@@ -68,6 +72,10 @@ def build_report(results: list[CheckResult], version: str) -> tuple[dict, int]:
     overall = aggregate(results)
     report = {
         "status": overall.value,
+        "degraded_checks": ", ".join(
+            r.name for r in results if r.status is not HealthStatus.HEALTHY
+        )
+        or "-",
         "version": version,
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "checks": {r.name: r.as_dict() for r in results},
