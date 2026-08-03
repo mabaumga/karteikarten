@@ -2,6 +2,12 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (zeigt nur die naechste Version, released nicht)"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   release:
@@ -35,18 +41,30 @@ jobs:
       - name: python-semantic-release installieren
         run: pip install python-semantic-release
 
+      - name: Dry Run — naechste Version anzeigen
+        if: inputs.dry_run == true
+        run: |
+          echo "Aktuelle Version:"
+          semantic-release version --print-last-released || echo "(Kein vorheriges Release)"
+          echo ""
+          echo "Naechste Version:"
+          semantic-release version --print || echo "(Keine release-wuerdigen Commits)"
+
       - name: Release erstellen (Version + Tag + CHANGELOG)
+        if: inputs.dry_run != true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: semantic-release version --push --tag --commit --changelog
 
       - name: Version auslesen
+        if: inputs.dry_run != true
         id: version
         run: |
           VERSION=$(python -c "import karteikarten; print(karteikarten.__version__)")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Docker anmelden (ghcr.io)
+        if: inputs.dry_run != true
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -54,6 +72,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker Image bauen und pushen
+        if: inputs.dry_run != true
         uses: docker/build-push-action@v6
         with:
           context: .

@@ -37,6 +37,10 @@ check: ## Quality-Gate: Django System-Checks (keine Tests im Projekt)
 release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
 	gh workflow run release.yml
 
+release-dry-run: ## Zeigt die nächste Version, ohne zu releasen
+	gh workflow run release.yml -f dry_run=true
+	@echo "Dry-Run gestartet — Ergebnis: gh run watch"
+
 deploy: ## Hinweis: Deployment laeuft ueber das Release (ghcr.io) + Pull auf Unraid
 	@echo "Kein direktes Deployment. 'make release' baut+pusht das Image nach ghcr.io;"
 	@echo "auf Unraid danach: docker compose pull && docker compose up -d (karteikarten)."
