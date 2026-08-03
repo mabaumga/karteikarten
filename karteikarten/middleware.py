@@ -1,6 +1,5 @@
 """Custom middleware for Karteikarten application."""
 from django.shortcuts import redirect
-from django.urls import reverse
 
 
 class PasswordChangeRequiredMiddleware:

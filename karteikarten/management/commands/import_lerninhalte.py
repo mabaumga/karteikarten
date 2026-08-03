@@ -144,7 +144,7 @@ class Command(BaseCommand):
 
         self.stdout.write("")
         self.stdout.write("=" * 50)
-        self.stdout.write(f"Import abgeschlossen:")
+        self.stdout.write("Import abgeschlossen:")
         self.stdout.write(f"  Erfolgreich: {success}")
         self.stdout.write(f"  Uebersprungen: {skipped}")
         self.stdout.write(f"  Fehler: {errors}")

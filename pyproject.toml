@@ -22,3 +22,14 @@ patch_tags = ["fix", "refactor", "perf"]
 
 [tool.semantic_release.remote]
 type = "github"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff.lint.per-file-ignores]
+# Django-Seed-Skripte muessen django.setup() ausfuehren, BEVOR sie Models importieren —
+# ein Import am Dateianfang wuerde mit ImproperlyConfigured abbrechen. E402 ist hier
+# also kein Maengel, sondern die einzige funktionierende Reihenfolge.
+"scripts/seed_*.py" = ["E402"]

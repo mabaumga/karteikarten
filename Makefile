@@ -31,8 +31,22 @@ init: ## Idempotent: Migrationen + Static (auch vom docker-entrypoint genutzt)
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py migrate --noinput
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py collectstatic --noinput
 
-check: ## Quality-Gate: Django System-Checks (keine Tests im Projekt)
+test: ## Tests ausfuehren
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) -m pytest tests/ -q
+
+lint: ## Linting (im Gate)
+	$(PYTHON) -m ruff check .
+
+format: ## Formatierung anwenden
+	$(PYTHON) -m ruff format .
+
+# `ruff format --check` ist bewusst NICHT im Gate: 31 Dateien wurden nie mit ruff
+# formatiert. Das nachzuholen ist ein Massen-Diff und gehoert in einen eigenen Commit,
+# sonst begraebt es jede inhaltliche Aenderung.
+check: ## Quality-Gate: Django System-Checks + Lint + Tests
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
+	$(MAKE) lint
+	$(MAKE) test
 
 release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
 	gh workflow run release.yml

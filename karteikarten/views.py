@@ -201,7 +201,7 @@ def lernblock_hinzufuegen(request, pk):
     query_string = request.GET.urlencode()
     url = 'meine_lernbloecke'
     if query_string:
-        return redirect(f"{{% url '{url}' %}}?{query_string}".replace("{{% url '{url}' %}}", f"/meine-lernbloecke/"))
+        return redirect(f"{{% url '{url}' %}}?{query_string}".replace("{{% url '{url}' %}}", "/meine-lernbloecke/"))
     return redirect(url)
 
 
