@@ -31,8 +31,19 @@ init: ## Idempotent: Migrationen + Static (auch vom docker-entrypoint genutzt)
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py migrate --noinput
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py collectstatic --noinput
 
-check: ## Quality-Gate: Django System-Checks (keine Tests im Projekt)
+test: ## Tests ausfuehren
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) -m pytest tests/ -q
+
+# Noch NICHT im Gate: das Repo hat 16 vorbestehende Befunde (5x E402, 5x F401,
+# 5x F541, 1x F841). Die aufzuraeumen ist eine eigene Aufgabe — bis dahin wuerde
+# ein gegatetes lint jeden PR blockieren.
+lint: ## Linting + Format-Pruefung (informativ, nicht im Gate)
+	$(PYTHON) -m ruff check .
+	$(PYTHON) -m ruff format --check .
+
+check: ## Quality-Gate: Django System-Checks + Tests
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
+	$(MAKE) test
 
 release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
 	gh workflow run release.yml

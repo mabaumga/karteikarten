@@ -22,3 +22,8 @@ patch_tags = ["fix", "refactor", "perf"]
 
 [tool.semantic_release.remote]
 type = "github"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
