@@ -37,7 +37,7 @@ def get_or_create_schulfach():
         defaults={'beschreibung': 'Englisch als Fremdsprache'}
     )
     if created:
-        print(f"  Schulfach 'Englisch' erstellt")
+        print("  Schulfach 'Englisch' erstellt")
     return schulfach
 
 

@@ -34,15 +34,18 @@ init: ## Idempotent: Migrationen + Static (auch vom docker-entrypoint genutzt)
 test: ## Tests ausfuehren
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) -m pytest tests/ -q
 
-# Noch NICHT im Gate: das Repo hat 16 vorbestehende Befunde (5x E402, 5x F401,
-# 5x F541, 1x F841). Die aufzuraeumen ist eine eigene Aufgabe — bis dahin wuerde
-# ein gegatetes lint jeden PR blockieren.
-lint: ## Linting + Format-Pruefung (informativ, nicht im Gate)
+lint: ## Linting (im Gate)
 	$(PYTHON) -m ruff check .
-	$(PYTHON) -m ruff format --check .
 
-check: ## Quality-Gate: Django System-Checks + Tests
+format: ## Formatierung anwenden
+	$(PYTHON) -m ruff format .
+
+# `ruff format --check` ist bewusst NICHT im Gate: 31 Dateien wurden nie mit ruff
+# formatiert. Das nachzuholen ist ein Massen-Diff und gehoert in einen eigenen Commit,
+# sonst begraebt es jede inhaltliche Aenderung.
+check: ## Quality-Gate: Django System-Checks + Lint + Tests
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
+	$(MAKE) lint
 	$(MAKE) test
 
 release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions

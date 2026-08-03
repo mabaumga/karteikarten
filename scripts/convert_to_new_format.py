@@ -3,7 +3,6 @@
 Convert old vocabulary JSON formats to the new lerninhalt schema.
 """
 import json
-import os
 from pathlib import Path
 from collections import defaultdict
 
@@ -112,7 +111,6 @@ def convert_a_plus_manual(input_file: Path, output_file: Path, band: int, klasse
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    meta = data.get('meta', {})
     vokabeln = data.get('vokabeln', [])
 
     # Group by unite

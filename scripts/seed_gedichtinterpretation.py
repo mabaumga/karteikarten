@@ -472,7 +472,7 @@ def main():
         stilmittel.schulfach = deutsch
         stilmittel.jahrgangsstufe = klasse_13
         stilmittel.save()
-        print(f"\n  Lernblock 'Deutsch - Stilmittel' kategorisiert")
+        print("\n  Lernblock 'Deutsch - Stilmittel' kategorisiert")
     except Lernblock.DoesNotExist:
         pass
 

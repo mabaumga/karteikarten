@@ -97,5 +97,11 @@ def test_unhealthy_ist_http_503():
 
 def test_report_traegt_die_contract_felder():
     report = _report(CheckResult("datenbank", HealthStatus.HEALTHY))
-    assert set(report) >= {"status", "degraded_checks", "version", "timestamp", "checks"}
+    assert set(report) >= {
+        "status",
+        "degraded_checks",
+        "version",
+        "timestamp",
+        "checks",
+    }
     assert report["version"] == "1.0.0"
