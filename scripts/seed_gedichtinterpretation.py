@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Seed database with Gedichtinterpretation content from PDF."""
+
 import os
 import sys
 import django
 
 # Setup Django
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 from karteikarten.models import Schulfach, Jahrgangsstufe, Lernblock, Karteikarte
@@ -15,7 +16,7 @@ from karteikarten.models import Schulfach, Jahrgangsstufe, Lernblock, Karteikart
 # Stammdaten
 # =============================================================================
 
-SCHULFAECHER = ['Deutsch', 'Mathematik', 'Biologie', 'Englisch', 'Geschichte']
+SCHULFAECHER = ["Deutsch", "Mathematik", "Biologie", "Englisch", "Geschichte"]
 JAHRGANGSSTUFEN = list(range(5, 14))  # 5-13
 
 # =============================================================================
@@ -84,7 +85,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Kontrast Romantik",
                 "zusatz_wert": "Romantik: Regelmäßiges Metrum erzeugt Harmonie, Herzschlag",
             },
-        ]
+        ],
     },
     {
         "name": "Reimformen",
@@ -133,7 +134,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Wirkung",
                 "zusatz_wert": "Überlänge, ausufernde Gefühle; epische, erzählende Momente",
             },
-        ]
+        ],
     },
     {
         "name": "Gedichtformen",
@@ -168,7 +169,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Wirkung",
                 "zusatz_wert": "Durchgängiger Gedankenfluss; Bewegung, Spannung, Unruhe",
             },
-        ]
+        ],
     },
     {
         "name": "Sprachliche Analyse",
@@ -238,7 +239,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Wirkung",
                 "zusatz_wert": "Lärm = Hektik, Angst; Stille = Einsamkeit, Frieden, Leere",
             },
-        ]
+        ],
     },
     {
         "name": "Epochen",
@@ -345,7 +346,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Frage",
                 "zusatz_wert": "Wie wirkt die Wirklichkeit auf das Innere des Menschen?",
             },
-        ]
+        ],
     },
     {
         "name": "Aufbau & Formulierungen",
@@ -401,7 +402,7 @@ LERNBLOECKE = [
                 "zusatz_label": "Aspekte",
                 "zusatz_wert": "Ort, Person, Gefühl, Gegenstand, Stimmung, Thema, Perspektive",
             },
-        ]
+        ],
     },
 ]
 
@@ -420,7 +421,7 @@ def main():
     print(f"  {len(JAHRGANGSSTUFEN)} Jahrgangsstufen erstellt/aktualisiert")
 
     # Get Deutsch and Klasse 13
-    deutsch = Schulfach.objects.get(name='Deutsch')
+    deutsch = Schulfach.objects.get(name="Deutsch")
     klasse_13 = Jahrgangsstufe.objects.get(stufe=13)
 
     print("\nErstelle Lernblöcke...")
@@ -434,7 +435,7 @@ def main():
                 "thema": "Gedichtsinterpretation",
                 "schulfach": deutsch,
                 "jahrgangsstufe": klasse_13,
-            }
+            },
         )
 
         if not created:
@@ -458,7 +459,7 @@ def main():
                     "beispiele": karte_data.get("beispiele", ""),
                     "zusatz_label": karte_data.get("zusatz_label", ""),
                     "zusatz_wert": karte_data.get("zusatz_wert", ""),
-                }
+                },
             )
             if card_created:
                 created_count += 1

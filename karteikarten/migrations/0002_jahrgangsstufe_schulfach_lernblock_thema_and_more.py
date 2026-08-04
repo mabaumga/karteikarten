@@ -5,51 +5,82 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('karteikarten', '0001_initial'),
+        ("karteikarten", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Jahrgangsstufe',
+            name="Jahrgangsstufe",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('stufe', models.IntegerField(unique=True)),
-                ('bezeichnung', models.CharField(blank=True, max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("stufe", models.IntegerField(unique=True)),
+                ("bezeichnung", models.CharField(blank=True, max_length=50)),
             ],
             options={
-                'verbose_name': 'Jahrgangsstufe',
-                'verbose_name_plural': 'Jahrgangsstufen',
-                'ordering': ['stufe'],
+                "verbose_name": "Jahrgangsstufe",
+                "verbose_name_plural": "Jahrgangsstufen",
+                "ordering": ["stufe"],
             },
         ),
         migrations.CreateModel(
-            name='Schulfach',
+            name="Schulfach",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, unique=True)),
-                ('beschreibung', models.TextField(blank=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, unique=True)),
+                ("beschreibung", models.TextField(blank=True)),
             ],
             options={
-                'verbose_name': 'Schulfach',
-                'verbose_name_plural': 'Schulfächer',
-                'ordering': ['name'],
+                "verbose_name": "Schulfach",
+                "verbose_name_plural": "Schulfächer",
+                "ordering": ["name"],
             },
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='thema',
-            field=models.CharField(blank=True, help_text='Übergeordnetes Thema (z.B. Gedichtsinterpretation)', max_length=100),
+            model_name="lernblock",
+            name="thema",
+            field=models.CharField(
+                blank=True,
+                help_text="Übergeordnetes Thema (z.B. Gedichtsinterpretation)",
+                max_length=100,
+            ),
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='jahrgangsstufe',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='lernbloecke', to='karteikarten.jahrgangsstufe'),
+            model_name="lernblock",
+            name="jahrgangsstufe",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="lernbloecke",
+                to="karteikarten.jahrgangsstufe",
+            ),
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='schulfach',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='lernbloecke', to='karteikarten.schulfach'),
+            model_name="lernblock",
+            name="schulfach",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="lernbloecke",
+                to="karteikarten.schulfach",
+            ),
         ),
     ]

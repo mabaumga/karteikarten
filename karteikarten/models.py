@@ -1,4 +1,5 @@
 """Models for Karteikarten application."""
+
 from datetime import date, timedelta
 from django.db import models
 from django.contrib.auth.models import User
@@ -11,9 +12,9 @@ class Schulfach(models.Model):
     beschreibung = models.TextField(blank=True)
 
     class Meta:
-        ordering = ['name']
-        verbose_name = 'Schulfach'
-        verbose_name_plural = 'Schulfächer'
+        ordering = ["name"]
+        verbose_name = "Schulfach"
+        verbose_name_plural = "Schulfächer"
 
     def __str__(self):
         return self.name
@@ -26,9 +27,9 @@ class Jahrgangsstufe(models.Model):
     bezeichnung = models.CharField(max_length=50, blank=True)
 
     class Meta:
-        ordering = ['stufe']
-        verbose_name = 'Jahrgangsstufe'
-        verbose_name_plural = 'Jahrgangsstufen'
+        ordering = ["stufe"]
+        verbose_name = "Jahrgangsstufe"
+        verbose_name_plural = "Jahrgangsstufen"
 
     def __str__(self):
         if self.bezeichnung:
@@ -40,34 +41,34 @@ class Lehrwerk(models.Model):
     """A textbook/course book (e.g., À plus!, Green Line, Access)."""
 
     name = models.CharField(max_length=100)
-    band = models.CharField(max_length=20, blank=True, help_text="Band/Ausgabe (z.B. '2', 'Oberstufe')")
+    band = models.CharField(
+        max_length=20, blank=True, help_text="Band/Ausgabe (z.B. '2', 'Oberstufe')"
+    )
     verlag = models.CharField(max_length=100, blank=True)
     schulfach = models.ForeignKey(
         Schulfach,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='lehrwerke'
+        related_name="lehrwerke",
     )
     jahrgangsstufe = models.ForeignKey(
         Jahrgangsstufe,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='lehrwerke'
+        related_name="lehrwerke",
     )
     sprachen = models.JSONField(
-        default=list,
-        blank=True,
-        help_text="Sprachen [Fremdsprache, Muttersprache]"
+        default=list, blank=True, help_text="Sprachen [Fremdsprache, Muttersprache]"
     )
     erstellt_am = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['name', 'band']
-        verbose_name = 'Lehrwerk'
-        verbose_name_plural = 'Lehrwerke'
-        unique_together = ['name', 'band']
+        ordering = ["name", "band"]
+        verbose_name = "Lehrwerk"
+        verbose_name_plural = "Lehrwerke"
+        unique_together = ["name", "band"]
 
     def __str__(self):
         if self.band:
@@ -80,26 +81,30 @@ class Lehrwerk(models.Model):
 
     @property
     def anzahl_karten(self):
-        return sum(block.anzahl_karten for unit in self.units.all() for block in unit.lernbloecke.all())
+        return sum(
+            block.anzahl_karten
+            for unit in self.units.all()
+            for block in unit.lernbloecke.all()
+        )
 
 
 class LehrwerkUnit(models.Model):
     """A unit/chapter within a textbook (e.g., Unité 1, Unit 4)."""
 
     lehrwerk = models.ForeignKey(
-        Lehrwerk,
-        on_delete=models.CASCADE,
-        related_name='units'
+        Lehrwerk, on_delete=models.CASCADE, related_name="units"
     )
-    name = models.CharField(max_length=100, help_text="z.B. 'Unité 1', 'Unit 4', 'Kapitel 3'")
+    name = models.CharField(
+        max_length=100, help_text="z.B. 'Unité 1', 'Unit 4', 'Kapitel 3'"
+    )
     beschreibung = models.TextField(blank=True)
     reihenfolge = models.IntegerField(default=0, help_text="Sortierreihenfolge")
 
     class Meta:
-        ordering = ['lehrwerk', 'reihenfolge', 'name']
-        verbose_name = 'Lehrwerk-Unit'
-        verbose_name_plural = 'Lehrwerk-Units'
-        unique_together = ['lehrwerk', 'name']
+        ordering = ["lehrwerk", "reihenfolge", "name"]
+        verbose_name = "Lehrwerk-Unit"
+        verbose_name_plural = "Lehrwerk-Units"
+        unique_together = ["lehrwerk", "name"]
 
     def __str__(self):
         return f"{self.lehrwerk} - {self.name}"
@@ -121,7 +126,7 @@ class Lernblock(models.Model):
     thema = models.CharField(
         max_length=100,
         blank=True,
-        help_text="Übergeordnetes Thema (z.B. Gedichtsinterpretation)"
+        help_text="Übergeordnetes Thema (z.B. Gedichtsinterpretation)",
     )
 
     # Legacy fields (for backwards compatibility)
@@ -130,19 +135,19 @@ class Lernblock(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='lernbloecke'
+        related_name="lernbloecke",
     )
     jahrgangsstufe = models.ForeignKey(
         Jahrgangsstufe,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='lernbloecke'
+        related_name="lernbloecke",
     )
     lehrbuch = models.CharField(
         max_length=200,
         blank=True,
-        help_text="Legacy: Angabe des Lehrbuchs (deprecated, use lehrwerk_unit)"
+        help_text="Legacy: Angabe des Lehrbuchs (deprecated, use lehrwerk_unit)",
     )
 
     # New hierarchical structure
@@ -151,41 +156,36 @@ class Lernblock(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='lernbloecke',
-        help_text="Zugehörige Unit im Lehrwerk"
+        related_name="lernbloecke",
+        help_text="Zugehörige Unit im Lehrwerk",
     )
 
     bidirektional = models.BooleanField(
-        default=False,
-        help_text="Auch rückwärts lernen (Definition → Begriff)"
+        default=False, help_text="Auch rückwärts lernen (Definition → Begriff)"
     )
 
     # Field customization (stored as JSON)
     feld_konfiguration = models.JSONField(
-        default=dict,
-        blank=True,
-        help_text="Anpassung der Feldbezeichnungen"
+        default=dict, blank=True, help_text="Anpassung der Feldbezeichnungen"
     )
 
     # Import tracking
     import_quelle = models.CharField(
-        max_length=255,
-        blank=True,
-        help_text="Quelldatei des Imports"
+        max_length=255, blank=True, help_text="Quelldatei des Imports"
     )
     import_hash = models.CharField(
         max_length=64,
         blank=True,
-        help_text="SHA256-Hash der Quelldatei für Duplikaterkennung"
+        help_text="SHA256-Hash der Quelldatei für Duplikaterkennung",
     )
 
     erstellt_am = models.DateTimeField(auto_now_add=True)
     aktualisiert_am = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['name']
-        verbose_name = 'Lernblock'
-        verbose_name_plural = 'Lernblöcke'
+        ordering = ["name"]
+        verbose_name = "Lernblock"
+        verbose_name_plural = "Lernblöcke"
 
     def __str__(self):
         if self.lehrwerk_unit:
@@ -212,12 +212,12 @@ class Lernblock(models.Model):
     @property
     def vorderseite_label(self):
         """Label for the front of cards."""
-        return self.feld_konfiguration.get('vorderseite', 'Begriff')
+        return self.feld_konfiguration.get("vorderseite", "Begriff")
 
     @property
     def rueckseite_label(self):
         """Label for the back of cards."""
-        return self.feld_konfiguration.get('rueckseite', 'Definition')
+        return self.feld_konfiguration.get("rueckseite", "Definition")
 
     # Computed properties for display
     @property
@@ -237,16 +237,16 @@ class Lernblock(models.Model):
     @property
     def display_seiten(self):
         """Get page range from cards (e.g., '192-194')."""
-        seiten = self.karten.exclude(seite='').values_list('seite', flat=True)
+        seiten = self.karten.exclude(seite="").values_list("seite", flat=True)
         if not seiten:
             return None
         # Parse page numbers and find min/max
         alle_seiten = []
         for s in seiten:
             # Handle ranges like "192-194" and single pages like "192"
-            if '-' in s:
+            if "-" in s:
                 try:
-                    start, end = s.split('-')
+                    start, end = s.split("-")
                     alle_seiten.extend(range(int(start.strip()), int(end.strip()) + 1))
                 except (ValueError, AttributeError):
                     pass
@@ -268,17 +268,15 @@ class Karteikarte(models.Model):
     """A single flashcard with front (Begriff) and back (Definition)."""
 
     LEITNER_INTERVALLE = {
-        1: 1,   # Fach 1: täglich
-        2: 2,   # Fach 2: alle 2 Tage
-        3: 4,   # Fach 3: alle 4 Tage
-        4: 7,   # Fach 4: alle 7 Tage
+        1: 1,  # Fach 1: täglich
+        2: 2,  # Fach 2: alle 2 Tage
+        3: 4,  # Fach 3: alle 4 Tage
+        4: 7,  # Fach 4: alle 7 Tage
         5: 14,  # Fach 5: alle 14 Tage
     }
 
     lernblock = models.ForeignKey(
-        Lernblock,
-        on_delete=models.CASCADE,
-        related_name='karten'
+        Lernblock, on_delete=models.CASCADE, related_name="karten"
     )
     begriff = models.CharField(max_length=500)  # Increased for longer terms
     definition = models.TextField()
@@ -288,54 +286,42 @@ class Karteikarte(models.Model):
     beispiel_json = models.JSONField(
         default=dict,
         blank=True,
-        help_text="Strukturierte Beispiele {fr: '...', de: '...'}"
+        help_text="Strukturierte Beispiele {fr: '...', de: '...'}",
     )
 
     # Legacy zusatz fields
     zusatz_label = models.CharField(
         max_length=50,
         blank=True,
-        help_text="Name des Zusatzfeldes (z.B. 'Herkunft', 'Synonym')"
+        help_text="Name des Zusatzfeldes (z.B. 'Herkunft', 'Synonym')",
     )
-    zusatz_wert = models.TextField(
-        blank=True,
-        help_text="Inhalt des Zusatzfeldes"
-    )
+    zusatz_wert = models.TextField(blank=True, help_text="Inhalt des Zusatzfeldes")
 
     # New flexible zusatz as JSON
     zusatz_json = models.JSONField(
-        default=dict,
-        blank=True,
-        help_text="Beliebige Zusatzinformationen als JSON"
+        default=dict, blank=True, help_text="Beliebige Zusatzinformationen als JSON"
     )
 
     # Tags for filtering
-    tags = models.JSONField(
-        default=list,
-        blank=True,
-        help_text="Tags für Filterung"
-    )
+    tags = models.JSONField(default=list, blank=True, help_text="Tags für Filterung")
 
     # Book reference
     seite = models.CharField(
-        max_length=20,
-        blank=True,
-        help_text="Seitenzahl im Lehrbuch"
+        max_length=20, blank=True, help_text="Seitenzahl im Lehrbuch"
     )
 
     fach = models.IntegerField(
-        default=1,
-        choices=[(i, f"Fach {i}") for i in range(1, 6)]
+        default=1, choices=[(i, f"Fach {i}") for i in range(1, 6)]
     )
     naechste_wiederholung = models.DateField(default=date.today)
     erstellt_am = models.DateTimeField(auto_now_add=True)
     aktualisiert_am = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['begriff']
-        verbose_name = 'Karteikarte'
-        verbose_name_plural = 'Karteikarten'
-        unique_together = ['lernblock', 'begriff']
+        ordering = ["begriff"]
+        verbose_name = "Karteikarte"
+        verbose_name_plural = "Karteikarten"
+        unique_together = ["lernblock", "begriff"]
 
     def __str__(self):
         return f"{self.begriff} ({self.lernblock.name})"
@@ -349,10 +335,7 @@ class Karteikarte(models.Model):
         self.save()
 
         # Record result
-        Lernergebnis.objects.create(
-            karte=self,
-            richtig=True
-        )
+        Lernergebnis.objects.create(karte=self, richtig=True)
 
     def falsch_beantwortet(self):
         """Move card back to box 1 and set review for today (immediately available)."""
@@ -361,10 +344,7 @@ class Karteikarte(models.Model):
         self.save()
 
         # Record result
-        Lernergebnis.objects.create(
-            karte=self,
-            richtig=False
-        )
+        Lernergebnis.objects.create(karte=self, richtig=False)
 
     @property
     def ist_faellig(self):
@@ -391,9 +371,9 @@ class ImportLog(models.Model):
     """Log of imported JSON files."""
 
     STATUS_CHOICES = [
-        ('success', 'Erfolgreich'),
-        ('error', 'Fehler'),
-        ('skipped', 'Übersprungen (bereits importiert)'),
+        ("success", "Erfolgreich"),
+        ("error", "Fehler"),
+        ("skipped", "Übersprungen (bereits importiert)"),
     ]
 
     dateiname = models.CharField(max_length=255)
@@ -406,17 +386,19 @@ class ImportLog(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='import_logs'
+        related_name="import_logs",
     )
     anzahl_karten = models.IntegerField(default=0)
     anzahl_bloecke = models.IntegerField(default=0)
     importiert_am = models.DateTimeField(auto_now_add=True)
-    archiv_pfad = models.CharField(max_length=500, blank=True, help_text="Pfad zur archivierten Datei")
+    archiv_pfad = models.CharField(
+        max_length=500, blank=True, help_text="Pfad zur archivierten Datei"
+    )
 
     class Meta:
-        ordering = ['-importiert_am']
-        verbose_name = 'Import-Log'
-        verbose_name_plural = 'Import-Logs'
+        ordering = ["-importiert_am"]
+        verbose_name = "Import-Log"
+        verbose_name_plural = "Import-Logs"
 
     def __str__(self):
         return f"{self.dateiname} ({self.status}) - {self.importiert_am}"
@@ -426,35 +408,29 @@ class Lernergebnis(models.Model):
     """Individual learning result for statistics."""
 
     MODUS_CHOICES = [
-        ('klassisch', 'Klassisch'),
-        ('rueckwaerts', 'Rückwärts'),
-        ('multiple_choice', 'Multiple Choice'),
+        ("klassisch", "Klassisch"),
+        ("rueckwaerts", "Rückwärts"),
+        ("multiple_choice", "Multiple Choice"),
     ]
 
     benutzer = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='lernergebnisse',
+        related_name="lernergebnisse",
         null=True,
-        blank=True
+        blank=True,
     )
     karte = models.ForeignKey(
-        Karteikarte,
-        on_delete=models.CASCADE,
-        related_name='ergebnisse'
+        Karteikarte, on_delete=models.CASCADE, related_name="ergebnisse"
     )
-    modus = models.CharField(
-        max_length=20,
-        choices=MODUS_CHOICES,
-        default='klassisch'
-    )
+    modus = models.CharField(max_length=20, choices=MODUS_CHOICES, default="klassisch")
     richtig = models.BooleanField()
     zeitstempel = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-zeitstempel']
-        verbose_name = 'Lernergebnis'
-        verbose_name_plural = 'Lernergebnisse'
+        ordering = ["-zeitstempel"]
+        verbose_name = "Lernergebnis"
+        verbose_name_plural = "Lernergebnisse"
 
     def __str__(self):
         status = "richtig" if self.richtig else "falsch"
@@ -467,14 +443,12 @@ class TagesStatistik(models.Model):
     benutzer = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='tagesstatistiken',
+        related_name="tagesstatistiken",
         null=True,
-        blank=True
+        blank=True,
     )
     lernblock = models.ForeignKey(
-        Lernblock,
-        on_delete=models.CASCADE,
-        related_name='tagesstatistiken'
+        Lernblock, on_delete=models.CASCADE, related_name="tagesstatistiken"
     )
     datum = models.DateField(default=date.today)
     gelernt = models.IntegerField(default=0)
@@ -482,10 +456,10 @@ class TagesStatistik(models.Model):
     falsch = models.IntegerField(default=0)
 
     class Meta:
-        ordering = ['-datum']
-        verbose_name = 'Tagesstatistik'
-        verbose_name_plural = 'Tagesstatistiken'
-        unique_together = ['benutzer', 'lernblock', 'datum']
+        ordering = ["-datum"]
+        verbose_name = "Tagesstatistik"
+        verbose_name_plural = "Tagesstatistiken"
+        unique_together = ["benutzer", "lernblock", "datum"]
 
     def __str__(self):
         return f"{self.lernblock.name} - {self.datum}"
@@ -506,8 +480,8 @@ class GlobaleStatistik(models.Model):
     streak = models.IntegerField(default=0)
 
     class Meta:
-        verbose_name = 'Globale Statistik'
-        verbose_name_plural = 'Globale Statistik'
+        verbose_name = "Globale Statistik"
+        verbose_name_plural = "Globale Statistik"
 
     @classmethod
     def get_instance(cls):
@@ -536,25 +510,22 @@ class GlobaleStatistik(models.Model):
 # User-specific models
 # =============================================================================
 
+
 class BenutzerLernblock(models.Model):
     """Junction table: which learning blocks a user has selected."""
 
     benutzer = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='lernbloecke'
+        User, on_delete=models.CASCADE, related_name="lernbloecke"
     )
     lernblock = models.ForeignKey(
-        Lernblock,
-        on_delete=models.CASCADE,
-        related_name='benutzer_zuordnungen'
+        Lernblock, on_delete=models.CASCADE, related_name="benutzer_zuordnungen"
     )
     hinzugefuegt_am = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ['benutzer', 'lernblock']
-        verbose_name = 'Benutzer-Lernblock'
-        verbose_name_plural = 'Benutzer-Lernblöcke'
+        unique_together = ["benutzer", "lernblock"]
+        verbose_name = "Benutzer-Lernblock"
+        verbose_name_plural = "Benutzer-Lernblöcke"
 
     def __str__(self):
         return f"{self.benutzer.username} → {self.lernblock.name}"
@@ -564,33 +535,28 @@ class BenutzerKarteStatus(models.Model):
     """Per-user card status for Leitner system."""
 
     LEITNER_INTERVALLE = {
-        1: 1,   # Fach 1: täglich
-        2: 2,   # Fach 2: alle 2 Tage
-        3: 4,   # Fach 3: alle 4 Tage
-        4: 7,   # Fach 4: alle 7 Tage
+        1: 1,  # Fach 1: täglich
+        2: 2,  # Fach 2: alle 2 Tage
+        3: 4,  # Fach 3: alle 4 Tage
+        4: 7,  # Fach 4: alle 7 Tage
         5: 14,  # Fach 5: alle 14 Tage
     }
 
     benutzer = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='karten_status'
+        User, on_delete=models.CASCADE, related_name="karten_status"
     )
     karte = models.ForeignKey(
-        Karteikarte,
-        on_delete=models.CASCADE,
-        related_name='benutzer_status'
+        Karteikarte, on_delete=models.CASCADE, related_name="benutzer_status"
     )
     fach = models.IntegerField(
-        default=1,
-        choices=[(i, f"Fach {i}") for i in range(1, 6)]
+        default=1, choices=[(i, f"Fach {i}") for i in range(1, 6)]
     )
     naechste_wiederholung = models.DateField(default=date.today)
 
     class Meta:
-        unique_together = ['benutzer', 'karte']
-        verbose_name = 'Benutzer-Kartenstatus'
-        verbose_name_plural = 'Benutzer-Kartenstatus'
+        unique_together = ["benutzer", "karte"]
+        verbose_name = "Benutzer-Kartenstatus"
+        verbose_name_plural = "Benutzer-Kartenstatus"
 
     def __str__(self):
         return f"{self.benutzer.username}: {self.karte.begriff} (Fach {self.fach})"
@@ -620,10 +586,7 @@ class BenutzerKarteStatus(models.Model):
         status, created = cls.objects.get_or_create(
             benutzer=benutzer,
             karte=karte,
-            defaults={
-                'fach': 1,
-                'naechste_wiederholung': date.today()
-            }
+            defaults={"fach": 1, "naechste_wiederholung": date.today()},
         )
         return status
 
@@ -632,9 +595,7 @@ class BenutzerStatistik(models.Model):
     """Per-user statistics and profile settings."""
 
     benutzer = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-        related_name='statistik'
+        User, on_delete=models.CASCADE, related_name="statistik"
     )
     # Profile settings
     bevorzugte_jahrgangsstufe = models.ForeignKey(
@@ -642,13 +603,13 @@ class BenutzerStatistik(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='benutzer_bevorzugt',
-        help_text="Wird als Standard-Filter vorausgewaehlt"
+        related_name="benutzer_bevorzugt",
+        help_text="Wird als Standard-Filter vorausgewaehlt",
     )
     # Security
     muss_passwort_aendern = models.BooleanField(
         default=False,
-        help_text="Benutzer muss beim naechsten Login sein Passwort aendern"
+        help_text="Benutzer muss beim naechsten Login sein Passwort aendern",
     )
     # Statistics
     letzter_lerntag = models.DateField(null=True, blank=True)
@@ -657,8 +618,8 @@ class BenutzerStatistik(models.Model):
     gesamt_richtig = models.IntegerField(default=0)
 
     class Meta:
-        verbose_name = 'Benutzerstatistik'
-        verbose_name_plural = 'Benutzerstatistiken'
+        verbose_name = "Benutzerstatistik"
+        verbose_name_plural = "Benutzerstatistiken"
 
     def __str__(self):
         return f"Statistik: {self.benutzer.username}"

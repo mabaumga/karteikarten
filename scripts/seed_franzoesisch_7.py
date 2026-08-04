@@ -12,7 +12,7 @@ import django
 
 # Django Setup
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 from karteikarten.models import Lernblock, Karteikarte, Schulfach, Jahrgangsstufe
@@ -22,17 +22,20 @@ def load_vokabeln():
     """Lade Vokabeln aus der JSON-Datei."""
     json_path = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        'docs', 'input', '7', 'a plus', 'vokabeln.json'
+        "docs",
+        "input",
+        "7",
+        "a plus",
+        "vokabeln.json",
     )
-    with open(json_path, 'r', encoding='utf-8') as f:
+    with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def get_or_create_schulfach():
     """Hole oder erstelle das Schulfach Französisch."""
     schulfach, created = Schulfach.objects.get_or_create(
-        name='Französisch',
-        defaults={'beschreibung': 'Französisch als Fremdsprache'}
+        name="Französisch", defaults={"beschreibung": "Französisch als Fremdsprache"}
     )
     if created:
         print("✓ Schulfach 'Französisch' erstellt")
@@ -55,11 +58,11 @@ def gruppiere_vokabeln(vokabeln):
     bloecke = {}
 
     for vok in vokabeln:
-        unite = vok['unite']
-        volet = vok['volet']
+        unite = vok["unite"]
+        volet = vok["volet"]
 
         # Bestimme Block-Schlüssel
-        if volet and isinstance(volet, str) and volet.startswith('Module'):
+        if volet and isinstance(volet, str) and volet.startswith("Module"):
             # Module als separater Block
             key = f"module_{unite}"
             block_name = f"Französisch 7 - {volet}"
@@ -71,13 +74,9 @@ def gruppiere_vokabeln(vokabeln):
             thema = f"Unité {unite}"
 
         if key not in bloecke:
-            bloecke[key] = {
-                'name': block_name,
-                'thema': thema,
-                'vokabeln': []
-            }
+            bloecke[key] = {"name": block_name, "thema": thema, "vokabeln": []}
 
-        bloecke[key]['vokabeln'].append(vok)
+        bloecke[key]["vokabeln"].append(vok)
 
     return bloecke
 
@@ -86,10 +85,10 @@ def erstelle_lernbloecke(bloecke, schulfach, jahrgangsstufe):
     """Erstelle Lernblöcke und Karteikarten in der Datenbank."""
 
     # Sortiere Blöcke nach Reihenfolge (Unités vor Modulen)
-    sorted_keys = sorted(bloecke.keys(), key=lambda k: (
-        0 if k.startswith('unite') else 1,
-        int(k.split('_')[1])
-    ))
+    sorted_keys = sorted(
+        bloecke.keys(),
+        key=lambda k: (0 if k.startswith("unite") else 1, int(k.split("_")[1])),
+    )
 
     gesamt_karten = 0
 
@@ -98,15 +97,15 @@ def erstelle_lernbloecke(bloecke, schulfach, jahrgangsstufe):
 
         # Erstelle oder aktualisiere Lernblock
         lernblock, created = Lernblock.objects.get_or_create(
-            name=block_data['name'],
+            name=block_data["name"],
             defaults={
-                'beschreibung': f"Vokabeln aus À plus! Klasse 7 - {block_data['thema']}",
-                'thema': block_data['thema'],
-                'schulfach': schulfach,
-                'jahrgangsstufe': jahrgangsstufe,
-                'bidirektional': True,  # Vokabeln in beide Richtungen lernen
-                'lehrbuch': 'À plus! 3 (Cornelsen)'
-            }
+                "beschreibung": f"Vokabeln aus À plus! Klasse 7 - {block_data['thema']}",
+                "thema": block_data["thema"],
+                "schulfach": schulfach,
+                "jahrgangsstufe": jahrgangsstufe,
+                "bidirektional": True,  # Vokabeln in beide Richtungen lernen
+                "lehrbuch": "À plus! 3 (Cornelsen)",
+            },
         )
 
         if not created:
@@ -117,9 +116,9 @@ def erstelle_lernbloecke(bloecke, schulfach, jahrgangsstufe):
 
         # Erstelle Karteikarten
         karten_erstellt = 0
-        for vok in block_data['vokabeln']:
+        for vok in block_data["vokabeln"]:
             # Bestimme Volet-Info für Zusatzfeld
-            volet = vok['volet']
+            volet = vok["volet"]
             if volet is None:
                 volet_info = "Vocabulaire thématique"
             elif isinstance(volet, int):
@@ -129,11 +128,11 @@ def erstelle_lernbloecke(bloecke, schulfach, jahrgangsstufe):
 
             Karteikarte.objects.create(
                 lernblock=lernblock,
-                begriff=vok['franzoesisch'],
-                definition=vok['deutsch'],
-                beispiele=vok['beispiel'] or '',
-                zusatz_label='Abschnitt',
-                zusatz_wert=volet_info
+                begriff=vok["franzoesisch"],
+                definition=vok["deutsch"],
+                beispiele=vok["beispiel"] or "",
+                zusatz_label="Abschnitt",
+                zusatz_wert=volet_info,
             )
             karten_erstellt += 1
 
@@ -153,7 +152,7 @@ def main():
     # Lade Vokabeln
     print("Lade Vokabeln aus JSON-Datei...")
     data = load_vokabeln()
-    vokabeln = data['vokabeln']
+    vokabeln = data["vokabeln"]
     print(f"  → {len(vokabeln)} Vokabeln gefunden")
     print()
 
@@ -174,7 +173,10 @@ def main():
     # Zeige Übersicht
     print("Lernblock-Übersicht:")
     print("-" * 40)
-    for key in sorted(bloecke.keys(), key=lambda k: (0 if k.startswith('unite') else 1, int(k.split('_')[1]))):
+    for key in sorted(
+        bloecke.keys(),
+        key=lambda k: (0 if k.startswith("unite") else 1, int(k.split("_")[1])),
+    ):
         block = bloecke[key]
         print(f"  {block['name']}: {len(block['vokabeln'])} Vokabeln")
     print("-" * 40)
@@ -190,5 +192,5 @@ def main():
     print("=" * 60)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

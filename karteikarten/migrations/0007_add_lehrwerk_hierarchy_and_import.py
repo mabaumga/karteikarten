@@ -5,121 +5,252 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('karteikarten', '0006_add_lehrbuch_to_lernblock'),
+        ("karteikarten", "0006_add_lehrbuch_to_lernblock"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Lehrwerk',
+            name="Lehrwerk",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('band', models.CharField(blank=True, help_text="Band/Ausgabe (z.B. '2', 'Oberstufe')", max_length=20)),
-                ('verlag', models.CharField(blank=True, max_length=100)),
-                ('sprachen', models.JSONField(blank=True, default=list, help_text='Sprachen [Fremdsprache, Muttersprache]')),
-                ('erstellt_am', models.DateTimeField(auto_now_add=True)),
-                ('jahrgangsstufe', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='lehrwerke', to='karteikarten.jahrgangsstufe')),
-                ('schulfach', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='lehrwerke', to='karteikarten.schulfach')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                (
+                    "band",
+                    models.CharField(
+                        blank=True,
+                        help_text="Band/Ausgabe (z.B. '2', 'Oberstufe')",
+                        max_length=20,
+                    ),
+                ),
+                ("verlag", models.CharField(blank=True, max_length=100)),
+                (
+                    "sprachen",
+                    models.JSONField(
+                        blank=True,
+                        default=list,
+                        help_text="Sprachen [Fremdsprache, Muttersprache]",
+                    ),
+                ),
+                ("erstellt_am", models.DateTimeField(auto_now_add=True)),
+                (
+                    "jahrgangsstufe",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="lehrwerke",
+                        to="karteikarten.jahrgangsstufe",
+                    ),
+                ),
+                (
+                    "schulfach",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="lehrwerke",
+                        to="karteikarten.schulfach",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Lehrwerk',
-                'verbose_name_plural': 'Lehrwerke',
-                'ordering': ['name', 'band'],
-                'unique_together': {('name', 'band')},
+                "verbose_name": "Lehrwerk",
+                "verbose_name_plural": "Lehrwerke",
+                "ordering": ["name", "band"],
+                "unique_together": {("name", "band")},
             },
         ),
         migrations.AddField(
-            model_name='karteikarte',
-            name='beispiel_json',
-            field=models.JSONField(blank=True, default=dict, help_text="Strukturierte Beispiele {fr: '...', de: '...'}"),
+            model_name="karteikarte",
+            name="beispiel_json",
+            field=models.JSONField(
+                blank=True,
+                default=dict,
+                help_text="Strukturierte Beispiele {fr: '...', de: '...'}",
+            ),
         ),
         migrations.AddField(
-            model_name='karteikarte',
-            name='seite',
-            field=models.CharField(blank=True, help_text='Seitenzahl im Lehrbuch', max_length=20),
+            model_name="karteikarte",
+            name="seite",
+            field=models.CharField(
+                blank=True, help_text="Seitenzahl im Lehrbuch", max_length=20
+            ),
         ),
         migrations.AddField(
-            model_name='karteikarte',
-            name='tags',
-            field=models.JSONField(blank=True, default=list, help_text='Tags für Filterung'),
+            model_name="karteikarte",
+            name="tags",
+            field=models.JSONField(
+                blank=True, default=list, help_text="Tags für Filterung"
+            ),
         ),
         migrations.AddField(
-            model_name='karteikarte',
-            name='zusatz_json',
-            field=models.JSONField(blank=True, default=dict, help_text='Beliebige Zusatzinformationen als JSON'),
+            model_name="karteikarte",
+            name="zusatz_json",
+            field=models.JSONField(
+                blank=True,
+                default=dict,
+                help_text="Beliebige Zusatzinformationen als JSON",
+            ),
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='feld_konfiguration',
-            field=models.JSONField(blank=True, default=dict, help_text='Anpassung der Feldbezeichnungen'),
+            model_name="lernblock",
+            name="feld_konfiguration",
+            field=models.JSONField(
+                blank=True, default=dict, help_text="Anpassung der Feldbezeichnungen"
+            ),
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='import_hash',
-            field=models.CharField(blank=True, help_text='SHA256-Hash der Quelldatei für Duplikaterkennung', max_length=64),
+            model_name="lernblock",
+            name="import_hash",
+            field=models.CharField(
+                blank=True,
+                help_text="SHA256-Hash der Quelldatei für Duplikaterkennung",
+                max_length=64,
+            ),
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='import_quelle',
-            field=models.CharField(blank=True, help_text='Quelldatei des Imports', max_length=255),
+            model_name="lernblock",
+            name="import_quelle",
+            field=models.CharField(
+                blank=True, help_text="Quelldatei des Imports", max_length=255
+            ),
         ),
         migrations.AlterField(
-            model_name='karteikarte',
-            name='begriff',
+            model_name="karteikarte",
+            name="begriff",
             field=models.CharField(max_length=500),
         ),
         migrations.AlterField(
-            model_name='lernblock',
-            name='lehrbuch',
-            field=models.CharField(blank=True, help_text='Legacy: Angabe des Lehrbuchs (deprecated, use lehrwerk_unit)', max_length=200),
+            model_name="lernblock",
+            name="lehrbuch",
+            field=models.CharField(
+                blank=True,
+                help_text="Legacy: Angabe des Lehrbuchs (deprecated, use lehrwerk_unit)",
+                max_length=200,
+            ),
         ),
         migrations.AlterField(
-            model_name='lernblock',
-            name='name',
+            model_name="lernblock",
+            name="name",
             field=models.CharField(max_length=100),
         ),
         migrations.CreateModel(
-            name='LehrwerkUnit',
+            name="LehrwerkUnit",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(help_text="z.B. 'Unité 1', 'Unit 4', 'Kapitel 3'", max_length=100)),
-                ('beschreibung', models.TextField(blank=True)),
-                ('reihenfolge', models.IntegerField(default=0, help_text='Sortierreihenfolge')),
-                ('lehrwerk', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='units', to='karteikarten.lehrwerk')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        help_text="z.B. 'Unité 1', 'Unit 4', 'Kapitel 3'",
+                        max_length=100,
+                    ),
+                ),
+                ("beschreibung", models.TextField(blank=True)),
+                (
+                    "reihenfolge",
+                    models.IntegerField(default=0, help_text="Sortierreihenfolge"),
+                ),
+                (
+                    "lehrwerk",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="units",
+                        to="karteikarten.lehrwerk",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Lehrwerk-Unit',
-                'verbose_name_plural': 'Lehrwerk-Units',
-                'ordering': ['lehrwerk', 'reihenfolge', 'name'],
-                'unique_together': {('lehrwerk', 'name')},
+                "verbose_name": "Lehrwerk-Unit",
+                "verbose_name_plural": "Lehrwerk-Units",
+                "ordering": ["lehrwerk", "reihenfolge", "name"],
+                "unique_together": {("lehrwerk", "name")},
             },
         ),
         migrations.CreateModel(
-            name='ImportLog',
+            name="ImportLog",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('dateiname', models.CharField(max_length=255)),
-                ('dateipfad', models.CharField(max_length=500)),
-                ('datei_hash', models.CharField(help_text='SHA256-Hash der Datei', max_length=64)),
-                ('status', models.CharField(choices=[('success', 'Erfolgreich'), ('error', 'Fehler'), ('skipped', 'Übersprungen (bereits importiert)')], max_length=20)),
-                ('nachricht', models.TextField(blank=True)),
-                ('anzahl_karten', models.IntegerField(default=0)),
-                ('anzahl_bloecke', models.IntegerField(default=0)),
-                ('importiert_am', models.DateTimeField(auto_now_add=True)),
-                ('archiv_pfad', models.CharField(blank=True, help_text='Pfad zur archivierten Datei', max_length=500)),
-                ('lehrwerk', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='import_logs', to='karteikarten.lehrwerk')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("dateiname", models.CharField(max_length=255)),
+                ("dateipfad", models.CharField(max_length=500)),
+                (
+                    "datei_hash",
+                    models.CharField(help_text="SHA256-Hash der Datei", max_length=64),
+                ),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[
+                            ("success", "Erfolgreich"),
+                            ("error", "Fehler"),
+                            ("skipped", "Übersprungen (bereits importiert)"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                ("nachricht", models.TextField(blank=True)),
+                ("anzahl_karten", models.IntegerField(default=0)),
+                ("anzahl_bloecke", models.IntegerField(default=0)),
+                ("importiert_am", models.DateTimeField(auto_now_add=True)),
+                (
+                    "archiv_pfad",
+                    models.CharField(
+                        blank=True,
+                        help_text="Pfad zur archivierten Datei",
+                        max_length=500,
+                    ),
+                ),
+                (
+                    "lehrwerk",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="import_logs",
+                        to="karteikarten.lehrwerk",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Import-Log',
-                'verbose_name_plural': 'Import-Logs',
-                'ordering': ['-importiert_am'],
+                "verbose_name": "Import-Log",
+                "verbose_name_plural": "Import-Logs",
+                "ordering": ["-importiert_am"],
             },
         ),
         migrations.AddField(
-            model_name='lernblock',
-            name='lehrwerk_unit',
-            field=models.ForeignKey(blank=True, help_text='Zugehörige Unit im Lehrwerk', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='lernbloecke', to='karteikarten.lehrwerkunit'),
+            model_name="lernblock",
+            name="lehrwerk_unit",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Zugehörige Unit im Lehrwerk",
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="lernbloecke",
+                to="karteikarten.lehrwerkunit",
+            ),
         ),
     ]
