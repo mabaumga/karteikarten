@@ -30,6 +30,7 @@ logger = logging.getLogger(__name__)
 
 class ImportError(Exception):
     """Custom exception for import errors."""
+
     pass
 
 
@@ -56,8 +57,12 @@ class JSONImporter:
             import_dir: Directory to scan for JSON files
             archive_dir: Directory to move imported files to
         """
-        self.import_dir = Path(import_dir) if import_dir else self._get_default_import_dir()
-        self.archive_dir = Path(archive_dir) if archive_dir else self._get_default_archive_dir()
+        self.import_dir = (
+            Path(import_dir) if import_dir else self._get_default_import_dir()
+        )
+        self.archive_dir = (
+            Path(archive_dir) if archive_dir else self._get_default_archive_dir()
+        )
 
         # Ensure directories exist
         self.import_dir.mkdir(parents=True, exist_ok=True)
@@ -66,33 +71,30 @@ class JSONImporter:
     def _get_default_import_dir(self) -> Path:
         """Get default import directory from settings or environment."""
         return Path(
-            os.environ.get('KARTEIKARTEN_IMPORT_DIR', '') or
-            getattr(settings, 'KARTEIKARTEN_IMPORT_DIR', '') or
-            settings.BASE_DIR / 'data' / 'import'
+            os.environ.get("KARTEIKARTEN_IMPORT_DIR", "")
+            or getattr(settings, "KARTEIKARTEN_IMPORT_DIR", "")
+            or settings.BASE_DIR / "data" / "import"
         )
 
     def _get_default_archive_dir(self) -> Path:
         """Get default archive directory from settings or environment."""
         return Path(
-            os.environ.get('KARTEIKARTEN_ARCHIVE_DIR', '') or
-            getattr(settings, 'KARTEIKARTEN_ARCHIVE_DIR', '') or
-            settings.BASE_DIR / 'data' / 'archive'
+            os.environ.get("KARTEIKARTEN_ARCHIVE_DIR", "")
+            or getattr(settings, "KARTEIKARTEN_ARCHIVE_DIR", "")
+            or settings.BASE_DIR / "data" / "archive"
         )
 
     def calculate_file_hash(self, filepath: Path) -> str:
         """Calculate SHA256 hash of a file."""
         sha256 = hashlib.sha256()
-        with open(filepath, 'rb') as f:
-            for chunk in iter(lambda: f.read(8192), b''):
+        with open(filepath, "rb") as f:
+            for chunk in iter(lambda: f.read(8192), b""):
                 sha256.update(chunk)
         return sha256.hexdigest()
 
     def is_already_imported(self, file_hash: str) -> bool:
         """Check if a file with this hash was already imported."""
-        return ImportLog.objects.filter(
-            datei_hash=file_hash,
-            status='success'
-        ).exists()
+        return ImportLog.objects.filter(datei_hash=file_hash, status="success").exists()
 
     def validate_json(self, data: dict) -> tuple[bool, str]:
         """
@@ -102,22 +104,22 @@ class JSONImporter:
             Tuple of (is_valid, error_message)
         """
         # Check required fields
-        if 'meta' not in data:
+        if "meta" not in data:
             return False, "Fehlendes 'meta' Feld"
 
-        if 'inhalt' not in data:
+        if "inhalt" not in data:
             return False, "Fehlendes 'inhalt' Feld"
 
-        meta = data['meta']
+        meta = data["meta"]
 
-        if 'fach' not in meta:
+        if "fach" not in meta:
             return False, "Fehlendes 'meta.fach' Feld"
 
-        if 'lehrwerk' not in meta:
+        if "lehrwerk" not in meta:
             return False, "Fehlendes 'meta.lehrwerk' Feld"
 
         # Validate content structure
-        inhalt = data['inhalt']
+        inhalt = data["inhalt"]
         if not isinstance(inhalt, list):
             return False, "'inhalt' muss eine Liste sein"
 
@@ -125,70 +127,77 @@ class JSONImporter:
             return False, "'inhalt' darf nicht leer sein"
 
         for i, unit in enumerate(inhalt):
-            if 'name' not in unit:
+            if "name" not in unit:
                 return False, f"Unit {i}: Fehlendes 'name' Feld"
 
-            if 'bloecke' not in unit:
+            if "bloecke" not in unit:
                 return False, f"Unit {i}: Fehlendes 'bloecke' Feld"
 
-            for j, block in enumerate(unit.get('bloecke', [])):
-                if 'name' not in block:
+            for j, block in enumerate(unit.get("bloecke", [])):
+                if "name" not in block:
                     return False, f"Unit {i}, Block {j}: Fehlendes 'name' Feld"
 
-                if 'karten' not in block:
+                if "karten" not in block:
                     return False, f"Unit {i}, Block {j}: Fehlendes 'karten' Feld"
 
-                karten = block.get('karten', [])
+                karten = block.get("karten", [])
                 if len(karten) < self.MIN_CARDS_PER_BLOCK:
-                    return False, f"Unit {i}, Block {j}: Mindestens {self.MIN_CARDS_PER_BLOCK} Karte(n) erforderlich"
+                    return (
+                        False,
+                        f"Unit {i}, Block {j}: Mindestens {self.MIN_CARDS_PER_BLOCK} Karte(n) erforderlich",
+                    )
 
                 for k, karte in enumerate(karten):
-                    if 'vorne' not in karte:
-                        return False, f"Unit {i}, Block {j}, Karte {k}: Fehlendes 'vorne' Feld"
-                    if 'hinten' not in karte:
-                        return False, f"Unit {i}, Block {j}, Karte {k}: Fehlendes 'hinten' Feld"
+                    if "vorne" not in karte:
+                        return (
+                            False,
+                            f"Unit {i}, Block {j}, Karte {k}: Fehlendes 'vorne' Feld",
+                        )
+                    if "hinten" not in karte:
+                        return (
+                            False,
+                            f"Unit {i}, Block {j}, Karte {k}: Fehlendes 'hinten' Feld",
+                        )
 
         return True, ""
 
     def get_or_create_schulfach(self, name: str) -> Schulfach:
         """Get or create a Schulfach."""
         schulfach, _ = Schulfach.objects.get_or_create(
-            name=name,
-            defaults={'beschreibung': ''}
+            name=name, defaults={"beschreibung": ""}
         )
         return schulfach
 
     def get_or_create_jahrgangsstufe(self, klasse: int) -> Jahrgangsstufe:
         """Get or create a Jahrgangsstufe."""
         jahrgangsstufe, _ = Jahrgangsstufe.objects.get_or_create(
-            stufe=klasse,
-            defaults={'bezeichnung': ''}
+            stufe=klasse, defaults={"bezeichnung": ""}
         )
         return jahrgangsstufe
 
     def get_or_create_lehrwerk(self, meta: dict) -> Lehrwerk:
         """Get or create a Lehrwerk from meta information."""
-        name = meta['lehrwerk']
-        band = str(meta.get('band', '')) if meta.get('band') else ''
+        name = meta["lehrwerk"]
+        band = str(meta.get("band", "")) if meta.get("band") else ""
 
         # Get related objects
         schulfach = None
-        if meta.get('fach'):
-            schulfach = self.get_or_create_schulfach(meta['fach'])
+        if meta.get("fach"):
+            schulfach = self.get_or_create_schulfach(meta["fach"])
 
         jahrgangsstufe = None
-        if meta.get('klasse'):
-            jahrgangsstufe = self.get_or_create_jahrgangsstufe(meta['klasse'])
+        if meta.get("klasse"):
+            jahrgangsstufe = self.get_or_create_jahrgangsstufe(meta["klasse"])
 
         lehrwerk, created = Lehrwerk.objects.get_or_create(
             name=name,
             band=band,
             defaults={
-                'verlag': meta.get('verlag', ''),
-                'schulfach': schulfach,
-                'jahrgangsstufe': jahrgangsstufe,
-                'sprachen': meta.get('sprachen', []),
-            }
+                "verlag": meta.get("verlag", ""),
+                "schulfach": schulfach,
+                "jahrgangsstufe": jahrgangsstufe,
+                "sprachen": meta.get("sprachen", []),
+            },
         )
 
         # Update if already exists
@@ -197,27 +206,29 @@ class JSONImporter:
                 lehrwerk.schulfach = schulfach
             if jahrgangsstufe:
                 lehrwerk.jahrgangsstufe = jahrgangsstufe
-            if meta.get('verlag'):
-                lehrwerk.verlag = meta['verlag']
-            if meta.get('sprachen'):
-                lehrwerk.sprachen = meta['sprachen']
+            if meta.get("verlag"):
+                lehrwerk.verlag = meta["verlag"]
+            if meta.get("sprachen"):
+                lehrwerk.sprachen = meta["sprachen"]
             lehrwerk.save()
 
         return lehrwerk
 
-    def get_or_create_unit(self, lehrwerk: Lehrwerk, unit_data: dict, reihenfolge: int) -> LehrwerkUnit:
+    def get_or_create_unit(
+        self, lehrwerk: Lehrwerk, unit_data: dict, reihenfolge: int
+    ) -> LehrwerkUnit:
         """Get or create a LehrwerkUnit."""
         unit, created = LehrwerkUnit.objects.get_or_create(
             lehrwerk=lehrwerk,
-            name=unit_data['name'],
+            name=unit_data["name"],
             defaults={
-                'beschreibung': unit_data.get('beschreibung', ''),
-                'reihenfolge': reihenfolge,
-            }
+                "beschreibung": unit_data.get("beschreibung", ""),
+                "reihenfolge": reihenfolge,
+            },
         )
 
         if not created:
-            unit.beschreibung = unit_data.get('beschreibung', '')
+            unit.beschreibung = unit_data.get("beschreibung", "")
             unit.reihenfolge = reihenfolge
             unit.save()
 
@@ -229,7 +240,7 @@ class JSONImporter:
         block_data: dict,
         felder_config: dict,
         import_quelle: str,
-        import_hash: str
+        import_hash: str,
     ) -> tuple[Lernblock, int]:
         """
         Create or update a Lernblock with its cards.
@@ -237,18 +248,17 @@ class JSONImporter:
         Returns:
             Tuple of (Lernblock, number of cards created)
         """
-        block_name = block_data['name']
+        block_name = block_data["name"]
 
         # Try to find existing block by unit and name
         lernblock = Lernblock.objects.filter(
-            lehrwerk_unit=unit,
-            name=block_name
+            lehrwerk_unit=unit, name=block_name
         ).first()
 
         if lernblock:
             # Update existing block
-            lernblock.beschreibung = block_data.get('beschreibung', '')
-            lernblock.bidirektional = block_data.get('bidirektional', True)
+            lernblock.beschreibung = block_data.get("beschreibung", "")
+            lernblock.bidirektional = block_data.get("bidirektional", True)
             lernblock.feld_konfiguration = felder_config
             lernblock.import_quelle = import_quelle
             lernblock.import_hash = import_hash
@@ -260,9 +270,9 @@ class JSONImporter:
             # Create new block
             lernblock = Lernblock.objects.create(
                 name=block_name,
-                beschreibung=block_data.get('beschreibung', ''),
+                beschreibung=block_data.get("beschreibung", ""),
                 lehrwerk_unit=unit,
-                bidirektional=block_data.get('bidirektional', True),
+                bidirektional=block_data.get("bidirektional", True),
                 feld_konfiguration=felder_config,
                 import_quelle=import_quelle,
                 import_hash=import_hash,
@@ -273,7 +283,7 @@ class JSONImporter:
 
         # Create cards
         cards_created = 0
-        for karte_data in block_data.get('karten', []):
+        for karte_data in block_data.get("karten", []):
             self.create_karteikarte(lernblock, karte_data)
             cards_created += 1
 
@@ -282,8 +292,8 @@ class JSONImporter:
     def create_karteikarte(self, lernblock: Lernblock, karte_data: dict) -> Karteikarte:
         """Create a single Karteikarte."""
         # Handle beispiel (can be string or object)
-        beispiel = karte_data.get('beispiel', '')
-        beispiele_text = ''
+        beispiel = karte_data.get("beispiel", "")
+        beispiele_text = ""
         beispiel_json = {}
 
         if isinstance(beispiel, str):
@@ -291,51 +301,51 @@ class JSONImporter:
         elif isinstance(beispiel, dict):
             beispiel_json = beispiel
             # Also create text version for display
-            beispiele_text = ' / '.join(f"{k}: {v}" for k, v in beispiel.items())
+            beispiele_text = " / ".join(f"{k}: {v}" for k, v in beispiel.items())
 
         # Handle zusatz (can be dict)
-        zusatz = karte_data.get('zusatz', {})
+        zusatz = karte_data.get("zusatz", {})
         zusatz_json = zusatz if isinstance(zusatz, dict) else {}
 
         # Legacy zusatz fields (use first key-value pair if available)
-        zusatz_label = ''
-        zusatz_wert = ''
+        zusatz_label = ""
+        zusatz_wert = ""
         if zusatz_json:
             first_key = list(zusatz_json.keys())[0]
             zusatz_label = first_key
             zusatz_wert = str(zusatz_json[first_key])
 
         # Tags
-        tags = karte_data.get('tags', [])
+        tags = karte_data.get("tags", [])
         if not isinstance(tags, list):
             tags = [tags] if tags else []
 
         # Create card (use get_or_create to handle duplicates)
         karte, created = Karteikarte.objects.get_or_create(
             lernblock=lernblock,
-            begriff=karte_data['vorne'],
+            begriff=karte_data["vorne"],
             defaults={
-                'definition': karte_data['hinten'],
-                'beispiele': beispiele_text,
-                'beispiel_json': beispiel_json,
-                'zusatz_label': zusatz_label,
-                'zusatz_wert': zusatz_wert,
-                'zusatz_json': zusatz_json,
-                'tags': tags,
-                'seite': str(karte_data.get('seite', '')),
-            }
+                "definition": karte_data["hinten"],
+                "beispiele": beispiele_text,
+                "beispiel_json": beispiel_json,
+                "zusatz_label": zusatz_label,
+                "zusatz_wert": zusatz_wert,
+                "zusatz_json": zusatz_json,
+                "tags": tags,
+                "seite": str(karte_data.get("seite", "")),
+            },
         )
 
         if not created:
             # Update existing card
-            karte.definition = karte_data['hinten']
+            karte.definition = karte_data["hinten"]
             karte.beispiele = beispiele_text
             karte.beispiel_json = beispiel_json
             karte.zusatz_label = zusatz_label
             karte.zusatz_wert = zusatz_wert
             karte.zusatz_json = zusatz_json
             karte.tags = tags
-            karte.seite = str(karte_data.get('seite', ''))
+            karte.seite = str(karte_data.get("seite", ""))
             karte.save()
 
         return karte
@@ -351,8 +361,8 @@ class JSONImporter:
         Returns:
             Archive path as string
         """
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        status_prefix = 'success' if success else 'error'
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        status_prefix = "success" if success else "error"
         archive_name = f"{status_prefix}_{timestamp}_{filepath.name}"
         archive_path = self.archive_dir / archive_name
 
@@ -383,15 +393,15 @@ class JSONImporter:
                 dateiname=filepath.name,
                 dateipfad=str(filepath),
                 datei_hash=file_hash,
-                status='skipped',
-                nachricht='Datei wurde bereits importiert (gleicher Hash)',
+                status="skipped",
+                nachricht="Datei wurde bereits importiert (gleicher Hash)",
                 archiv_pfad=archive_path,
             )
             return log
 
         try:
             # Load JSON
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
 
             # Validate BEFORE starting transaction
@@ -401,9 +411,9 @@ class JSONImporter:
 
             # Import data in transaction
             with transaction.atomic():
-                meta = data['meta']
-                felder = data.get('felder', {})
-                inhalt = data['inhalt']
+                meta = data["meta"]
+                felder = data.get("felder", {})
+                inhalt = data["inhalt"]
 
                 # Create/get Lehrwerk
                 lehrwerk = self.get_or_create_lehrwerk(meta)
@@ -415,7 +425,7 @@ class JSONImporter:
                 for unit_idx, unit_data in enumerate(inhalt):
                     unit = self.get_or_create_unit(lehrwerk, unit_data, unit_idx)
 
-                    for block_data in unit_data.get('bloecke', []):
+                    for block_data in unit_data.get("bloecke", []):
                         lernblock, cards_count = self.create_or_update_lernblock(
                             unit=unit,
                             block_data=block_data,
@@ -434,7 +444,7 @@ class JSONImporter:
                 dateiname=filepath.name,
                 dateipfad=str(filepath),
                 datei_hash=file_hash,
-                status='success',
+                status="success",
                 nachricht=f"Erfolgreich importiert: {total_blocks} Blöcke, {total_cards} Karten",
                 lehrwerk=lehrwerk,
                 anzahl_karten=total_cards,
@@ -442,7 +452,9 @@ class JSONImporter:
                 archiv_pfad=archive_path,
             )
 
-            logger.info(f"Successfully imported {filepath}: {total_blocks} blocks, {total_cards} cards")
+            logger.info(
+                f"Successfully imported {filepath}: {total_blocks} blocks, {total_cards} cards"
+            )
             return log
 
         except Exception as e:
@@ -460,7 +472,7 @@ class JSONImporter:
                 dateiname=filepath.name,
                 dateipfad=str(filepath),
                 datei_hash=file_hash,
-                status='error',
+                status="error",
                 nachricht=str(e),
                 archiv_pfad=archive_path,
             )
@@ -479,7 +491,7 @@ class JSONImporter:
         results = []
 
         # Find all JSON files
-        json_files = list(self.import_dir.glob('*.json'))
+        json_files = list(self.import_dir.glob("*.json"))
 
         logger.info(f"Found {len(json_files)} JSON file(s)")
 
@@ -502,10 +514,12 @@ class JSONImporter:
         for filepath in self.archive_dir.iterdir():
             if filepath.is_file():
                 stat = filepath.stat()
-                files.append({
-                    'name': filepath.name,
-                    'path': str(filepath),
-                    'size': stat.st_size,
-                    'modified': datetime.fromtimestamp(stat.st_mtime),
-                })
-        return sorted(files, key=lambda x: x['modified'], reverse=True)
+                files.append(
+                    {
+                        "name": filepath.name,
+                        "path": str(filepath),
+                        "size": stat.st_size,
+                        "modified": datetime.fromtimestamp(stat.st_mtime),
+                    }
+                )
+        return sorted(files, key=lambda x: x["modified"], reverse=True)

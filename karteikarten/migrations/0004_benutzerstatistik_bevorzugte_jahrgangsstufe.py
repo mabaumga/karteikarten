@@ -5,15 +5,21 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('karteikarten', '0003_alter_tagesstatistik_unique_together_and_more'),
+        ("karteikarten", "0003_alter_tagesstatistik_unique_together_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='benutzerstatistik',
-            name='bevorzugte_jahrgangsstufe',
-            field=models.ForeignKey(blank=True, help_text='Wird als Standard-Filter vorausgewaehlt', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='benutzer_bevorzugt', to='karteikarten.jahrgangsstufe'),
+            model_name="benutzerstatistik",
+            name="bevorzugte_jahrgangsstufe",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Wird als Standard-Filter vorausgewaehlt",
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="benutzer_bevorzugt",
+                to="karteikarten.jahrgangsstufe",
+            ),
         ),
     ]

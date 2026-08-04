@@ -4,15 +4,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('karteikarten', '0005_add_muss_passwort_aendern'),
+        ("karteikarten", "0005_add_muss_passwort_aendern"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='lernblock',
-            name='lehrbuch',
-            field=models.CharField(blank=True, help_text='Optionale Angabe des verwendeten Lehrbuchs', max_length=200),
+            model_name="lernblock",
+            name="lehrbuch",
+            field=models.CharField(
+                blank=True,
+                help_text="Optionale Angabe des verwendeten Lehrbuchs",
+                max_length=200,
+            ),
         ),
     ]

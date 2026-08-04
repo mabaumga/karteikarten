@@ -28,7 +28,9 @@ class DatabaseCheck(HealthCheck):
         with connections[self.alias].cursor() as cursor:
             cursor.execute("SELECT 1")
             cursor.fetchone()
-        return CheckResult(self.name, HealthStatus.HEALTHY, {"details": "Verbindung erfolgreich"})
+        return CheckResult(
+            self.name, HealthStatus.HEALTHY, {"details": "Verbindung erfolgreich"}
+        )
 
 
 class DiskSpaceCheck(HealthCheck):
@@ -37,7 +39,9 @@ class DiskSpaceCheck(HealthCheck):
     name = "speicher"
     critical = True
 
-    def __init__(self, path: Any = None, warn_pct: int = 80, crit_pct: int = 95) -> None:
+    def __init__(
+        self, path: Any = None, warn_pct: int = 80, crit_pct: int = 95
+    ) -> None:
         self.path = path or getattr(settings, "DATA_DIR", settings.BASE_DIR)
         self.warn_pct = warn_pct
         self.crit_pct = crit_pct

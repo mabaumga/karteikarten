@@ -14,7 +14,7 @@ import django
 
 # Django Setup
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 from karteikarten.models import Lernblock, Karteikarte, Schulfach, Jahrgangsstufe
@@ -24,17 +24,18 @@ def load_vokabeln():
     """Lade Vokabeln aus der JSON-Datei."""
     json_path = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        'docs', 'input', 'vokabeln_neu.json'
+        "docs",
+        "input",
+        "vokabeln_neu.json",
     )
-    with open(json_path, 'r', encoding='utf-8') as f:
+    with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def get_or_create_schulfach():
     """Hole oder erstelle das Schulfach Englisch."""
     schulfach, created = Schulfach.objects.get_or_create(
-        name='Englisch',
-        defaults={'beschreibung': 'Englisch als Fremdsprache'}
+        name="Englisch", defaults={"beschreibung": "Englisch als Fremdsprache"}
     )
     if created:
         print("  Schulfach 'Englisch' erstellt")
@@ -49,21 +50,21 @@ def get_jahrgangsstufe():
 def erstelle_vokabel_lernblock(data, schulfach, jahrgangsstufe):
     """Erstelle Lernblock für die Vokabeln aus Access 3, Unit 4."""
 
-    meta = data['meta']
-    vokabeln = data['vokabeln']
+    meta = data["meta"]
+    vokabeln = data["vokabeln"]
 
     block_name = f"Englisch 7 - {meta['buch']} Unit {meta['unit']}"
 
     lernblock, created = Lernblock.objects.get_or_create(
         name=block_name,
         defaults={
-            'beschreibung': f"Vokabeln aus {meta['buch']}, Unit {meta['unit']} (Chapter 1-3)",
-            'thema': f"Unit {meta['unit']}",
-            'schulfach': schulfach,
-            'jahrgangsstufe': jahrgangsstufe,
-            'bidirektional': True,
-            'lehrbuch': f"{meta['buch']} (Cornelsen)"
-        }
+            "beschreibung": f"Vokabeln aus {meta['buch']}, Unit {meta['unit']} (Chapter 1-3)",
+            "thema": f"Unit {meta['unit']}",
+            "schulfach": schulfach,
+            "jahrgangsstufe": jahrgangsstufe,
+            "bidirektional": True,
+            "lehrbuch": f"{meta['buch']} (Cornelsen)",
+        },
     )
 
     if not created:
@@ -75,11 +76,11 @@ def erstelle_vokabel_lernblock(data, schulfach, jahrgangsstufe):
     for vok in vokabeln:
         Karteikarte.objects.create(
             lernblock=lernblock,
-            begriff=vok['englisch'],
-            definition=vok['deutsch'],
-            beispiele='',
-            zusatz_label='Chapter/Page',
-            zusatz_wert=f"Chapter {vok['chapter']}, p. {vok['page']}"
+            begriff=vok["englisch"],
+            definition=vok["deutsch"],
+            beispiele="",
+            zusatz_label="Chapter/Page",
+            zusatz_wert=f"Chapter {vok['chapter']}, p. {vok['page']}",
         )
         karten_erstellt += 1
 
@@ -92,20 +93,20 @@ def erstelle_vokabel_lernblock(data, schulfach, jahrgangsstufe):
 def erstelle_emotionen_lernblock(data, schulfach, jahrgangsstufe):
     """Erstelle Lernblock für die Emotionswörter (Inside Out)."""
 
-    emotionen = data['emotionen']
+    emotionen = data["emotionen"]
 
     block_name = "Englisch 7 - Emotions (Inside Out)"
 
     lernblock, created = Lernblock.objects.get_or_create(
         name=block_name,
         defaults={
-            'beschreibung': 'Gefuehlswoerter nach Kategorien aus dem Film Inside Out',
-            'thema': 'Emotions & Feelings',
-            'schulfach': schulfach,
-            'jahrgangsstufe': jahrgangsstufe,
-            'bidirektional': True,
-            'lehrbuch': 'Access 3 (Cornelsen)'
-        }
+            "beschreibung": "Gefuehlswoerter nach Kategorien aus dem Film Inside Out",
+            "thema": "Emotions & Feelings",
+            "schulfach": schulfach,
+            "jahrgangsstufe": jahrgangsstufe,
+            "bidirektional": True,
+            "lehrbuch": "Access 3 (Cornelsen)",
+        },
     )
 
     if not created:
@@ -114,16 +115,16 @@ def erstelle_emotionen_lernblock(data, schulfach, jahrgangsstufe):
         print(f"    {alte_karten} alte Karten geloescht")
 
     karten_erstellt = 0
-    for kategorie in emotionen['kategorien']:
-        emotion = kategorie['emotion']
-        for wort in kategorie['woerter']:
+    for kategorie in emotionen["kategorien"]:
+        emotion = kategorie["emotion"]
+        for wort in kategorie["woerter"]:
             Karteikarte.objects.create(
                 lernblock=lernblock,
-                begriff=wort['englisch'],
-                definition=wort['deutsch'],
-                beispiele='',
-                zusatz_label='Emotion',
-                zusatz_wert=emotion
+                begriff=wort["englisch"],
+                definition=wort["deutsch"],
+                beispiele="",
+                zusatz_label="Emotion",
+                zusatz_wert=emotion,
             )
             karten_erstellt += 1
 
@@ -144,8 +145,10 @@ def main():
     data = load_vokabeln()
     print(f"  {len(data['vokabeln'])} Vokabeln gefunden")
 
-    gesamt_emotionen = sum(len(k['woerter']) for k in data['emotionen']['kategorien'])
-    print(f"  {gesamt_emotionen} Emotionswoerter in {len(data['emotionen']['kategorien'])} Kategorien")
+    gesamt_emotionen = sum(len(k["woerter"]) for k in data["emotionen"]["kategorien"])
+    print(
+        f"  {gesamt_emotionen} Emotionswoerter in {len(data['emotionen']['kategorien'])} Kategorien"
+    )
     print()
 
     # Hole/erstelle Schulfach und Jahrgangsstufe
@@ -173,5 +176,5 @@ def main():
     print("=" * 60)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

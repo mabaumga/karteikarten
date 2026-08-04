@@ -4,6 +4,7 @@ Background scheduler for automatic JSON import.
 Scans the import directory periodically and imports new files automatically.
 Uses a file lock to prevent multiple workers from importing simultaneously.
 """
+
 import fcntl
 import logging
 import os
@@ -12,7 +13,7 @@ from pathlib import Path
 
 from django.conf import settings
 
-logger = logging.getLogger('karteikarten')
+logger = logging.getLogger("karteikarten")
 
 # Global state
 _scheduler_thread = None
@@ -24,9 +25,9 @@ def _acquire_lock() -> bool:
     """Try to acquire the import lock. Returns True if acquired."""
     global _lock_file
 
-    lock_path = Path(settings.KARTEIKARTEN_IMPORT_DIR) / '.import.lock'
+    lock_path = Path(settings.KARTEIKARTEN_IMPORT_DIR) / ".import.lock"
     try:
-        _lock_file = open(lock_path, 'w')
+        _lock_file = open(lock_path, "w")
         fcntl.flock(_lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         _lock_file.write(str(os.getpid()))
         _lock_file.flush()
@@ -60,16 +61,20 @@ def scan_and_import():
     import_dir = Path(settings.KARTEIKARTEN_IMPORT_DIR)
 
     if not import_dir.exists():
-        logger.warning(f"[ImportScheduler] Import directory does not exist: {import_dir}")
+        logger.warning(
+            f"[ImportScheduler] Import directory does not exist: {import_dir}"
+        )
         return
 
-    json_files = list(import_dir.glob('*.json'))
+    json_files = list(import_dir.glob("*.json"))
     if not json_files:
         return
 
     # Try to acquire lock - if another worker has it, skip this scan
     if not _acquire_lock():
-        logger.debug("[ImportScheduler] Another worker is importing, skipping this scan")
+        logger.debug(
+            "[ImportScheduler] Another worker is importing, skipping this scan"
+        )
         return
 
     try:
@@ -83,13 +88,13 @@ def scan_and_import():
             try:
                 log = importer.import_file(json_file)
 
-                if log.status == 'success':
+                if log.status == "success":
                     logger.info(
                         f"[ImportScheduler] Imported {json_file.name}: "
                         f"{log.anzahl_bloecke} blocks, {log.anzahl_karten} cards - "
                         f"archived to {log.archiv_pfad}"
                     )
-                elif log.status == 'skipped':
+                elif log.status == "skipped":
                     logger.info(
                         f"[ImportScheduler] Skipped {json_file.name}: "
                         f"Already imported (hash match) - archived to {log.archiv_pfad}"
@@ -119,7 +124,7 @@ def _scheduler_loop(interval_seconds: int):
     while not _stop_event.is_set():
         scan_count += 1
         try:
-            json_files = list(import_dir.glob('*.json')) if import_dir.exists() else []
+            json_files = list(import_dir.glob("*.json")) if import_dir.exists() else []
             if json_files:
                 logger.info(
                     f"[ImportScheduler] Scan #{scan_count}: Found {len(json_files)} file(s) - "
@@ -160,7 +165,7 @@ def start_scheduler(interval_seconds: int = 60):
         target=_scheduler_loop,
         args=(interval_seconds,),
         daemon=True,
-        name="ImportScheduler"
+        name="ImportScheduler",
     )
     _scheduler_thread.start()
 

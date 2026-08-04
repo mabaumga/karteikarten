@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Seed database with Chemistry flashcards for Jahrgangsstufe 13."""
+
 import os
 import sys
 import django
 
 # Setup Django
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 from karteikarten.models import Lernblock, Karteikarte, Schulfach, Jahrgangsstufe
@@ -371,14 +372,15 @@ def main():
     # Get or create Schulfach "Chemie"
     chemie, _ = Schulfach.objects.get_or_create(
         name="Chemie",
-        defaults={"beschreibung": "Naturwissenschaft der Stoffe und ihrer Umwandlungen"}
+        defaults={
+            "beschreibung": "Naturwissenschaft der Stoffe und ihrer Umwandlungen"
+        },
     )
     print(f"Schulfach: {chemie}")
 
     # Get or create Jahrgangsstufe 13
     stufe13, _ = Jahrgangsstufe.objects.get_or_create(
-        stufe=13,
-        defaults={"bezeichnung": "Q3/Q4"}
+        stufe=13, defaults={"bezeichnung": "Q3/Q4"}
     )
     print(f"Jahrgangsstufe: {stufe13}")
 
@@ -393,7 +395,7 @@ def main():
             "schulfach": chemie,
             "jahrgangsstufe": stufe13,
             "bidirektional": True,
-        }
+        },
     )
 
     if created:
@@ -416,7 +418,7 @@ def main():
                 "beispiele": card_data["beispiele"],
                 "zusatz_label": card_data["zusatz_label"],
                 "zusatz_wert": card_data["zusatz_wert"],
-            }
+            },
         )
         if created:
             created_count += 1
@@ -438,7 +440,7 @@ def main():
             "schulfach": chemie,
             "jahrgangsstufe": stufe13,
             "bidirektional": True,
-        }
+        },
     )
 
     if created:
@@ -461,7 +463,7 @@ def main():
                 "beispiele": card_data["beispiele"],
                 "zusatz_label": card_data["zusatz_label"],
                 "zusatz_wert": card_data["zusatz_wert"],
-            }
+            },
         )
         if created:
             created_count += 1

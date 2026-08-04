@@ -35,15 +35,17 @@ class JSONExporter:
         Args:
             backup_dir: Directory for backup files
         """
-        self.backup_dir = Path(backup_dir) if backup_dir else self._get_default_backup_dir()
+        self.backup_dir = (
+            Path(backup_dir) if backup_dir else self._get_default_backup_dir()
+        )
         self.backup_dir.mkdir(parents=True, exist_ok=True)
 
     def _get_default_backup_dir(self) -> Path:
         """Get default backup directory from settings or environment."""
         return Path(
-            os.environ.get('KARTEIKARTEN_BACKUP_DIR', '') or
-            getattr(settings, 'KARTEIKARTEN_BACKUP_DIR', '') or
-            settings.BASE_DIR / 'data' / 'backup'
+            os.environ.get("KARTEIKARTEN_BACKUP_DIR", "")
+            or getattr(settings, "KARTEIKARTEN_BACKUP_DIR", "")
+            or settings.BASE_DIR / "data" / "backup"
         )
 
     def _karte_to_dict(self, karte: Karteikarte) -> dict:
@@ -152,37 +154,39 @@ class JSONExporter:
         """Sanitize a string for use as filename."""
         # Replace problematic characters
         replacements = {
-            ' ': '_',
-            '/': '_',
-            '\\': '_',
-            ':': '_',
-            '!': '',
-            '?': '',
-            '+': 'plus',
-            'ä': 'ae',
-            'ö': 'oe',
-            'ü': 'ue',
-            'ß': 'ss',
-            'Ä': 'Ae',
-            'Ö': 'Oe',
-            'Ü': 'Ue',
-            'é': 'e',
-            'è': 'e',
-            'ê': 'e',
-            'à': 'a',
-            'â': 'a',
-            'ô': 'o',
-            'î': 'i',
-            'ç': 'c',
+            " ": "_",
+            "/": "_",
+            "\\": "_",
+            ":": "_",
+            "!": "",
+            "?": "",
+            "+": "plus",
+            "ä": "ae",
+            "ö": "oe",
+            "ü": "ue",
+            "ß": "ss",
+            "Ä": "Ae",
+            "Ö": "Oe",
+            "Ü": "Ue",
+            "é": "e",
+            "è": "e",
+            "ê": "e",
+            "à": "a",
+            "â": "a",
+            "ô": "o",
+            "î": "i",
+            "ç": "c",
         }
         result = name
         for old, new in replacements.items():
             result = result.replace(old, new)
         # Remove any remaining problematic characters
-        result = ''.join(c for c in result if c.isalnum() or c in '_-')
+        result = "".join(c for c in result if c.isalnum() or c in "_-")
         return result.lower()
 
-    def backup_lehrwerk(self, lehrwerk: Lehrwerk, include_timestamp: bool = True) -> Path:
+    def backup_lehrwerk(
+        self, lehrwerk: Lehrwerk, include_timestamp: bool = True
+    ) -> Path:
         """
         Backup a single Lehrwerk to a JSON file.
 
@@ -205,22 +209,22 @@ class JSONExporter:
         filename = "_".join(name_parts)
 
         if include_timestamp:
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"{filename}_{timestamp}"
 
         filepath = self.backup_dir / f"{filename}.json"
 
-        with open(filepath, 'w', encoding='utf-8') as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
         # Count cards
         total_cards = sum(
-            len(b['karten'])
-            for u in data['inhalt']
-            for b in u['bloecke']
+            len(b["karten"]) for u in data["inhalt"] for b in u["bloecke"]
         )
 
-        logger.info(f"Backed up {lehrwerk}: {len(data['inhalt'])} units, {total_cards} cards -> {filepath}")
+        logger.info(
+            f"Backed up {lehrwerk}: {len(data['inhalt'])} units, {total_cards} cards -> {filepath}"
+        )
 
         return filepath
 
@@ -268,34 +272,38 @@ class JSONExporter:
             all_data.append(self.export_lehrwerk(lehrwerk))
 
         if not filename:
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"karteikarten_komplett_{timestamp}"
 
         filepath = self.backup_dir / f"{filename}.json"
 
-        with open(filepath, 'w', encoding='utf-8') as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(all_data, f, ensure_ascii=False, indent=2)
 
         total_cards = sum(
-            len(b['karten'])
+            len(b["karten"])
             for lw in all_data
-            for u in lw['inhalt']
-            for b in u['bloecke']
+            for u in lw["inhalt"]
+            for b in u["bloecke"]
         )
 
-        logger.info(f"Backed up all: {len(all_data)} Lehrwerke, {total_cards} cards -> {filepath}")
+        logger.info(
+            f"Backed up all: {len(all_data)} Lehrwerke, {total_cards} cards -> {filepath}"
+        )
 
         return filepath
 
     def list_backups(self) -> list[dict]:
         """List all backup files."""
         files = []
-        for filepath in self.backup_dir.glob('*.json'):
+        for filepath in self.backup_dir.glob("*.json"):
             stat = filepath.stat()
-            files.append({
-                'name': filepath.name,
-                'path': str(filepath),
-                'size': stat.st_size,
-                'modified': datetime.fromtimestamp(stat.st_mtime),
-            })
-        return sorted(files, key=lambda x: x['modified'], reverse=True)
+            files.append(
+                {
+                    "name": filepath.name,
+                    "path": str(filepath),
+                    "size": stat.st_size,
+                    "modified": datetime.fromtimestamp(stat.st_mtime),
+                }
+            )
+        return sorted(files, key=lambda x: x["modified"], reverse=True)

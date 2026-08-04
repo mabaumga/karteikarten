@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Seed database with Stilmittel from PDF."""
+
 import os
 import sys
 import django
 
 # Setup Django
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 django.setup()
 
 from karteikarten.models import Lernblock, Karteikarte
@@ -211,7 +212,7 @@ def main():
         defaults={
             "beschreibung": "Rhetorische Stilmittel für die Gedichtinterpretation",
             "bidirektional": True,
-        }
+        },
     )
 
     if created:
@@ -230,7 +231,7 @@ def main():
                 "beispiele": stilmittel["beispiele"],
                 "zusatz_label": stilmittel["zusatz_label"],
                 "zusatz_wert": stilmittel["zusatz_wert"],
-            }
+            },
         )
         if created:
             created_count += 1

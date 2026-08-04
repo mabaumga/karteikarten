@@ -4,15 +4,17 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('karteikarten', '0004_benutzerstatistik_bevorzugte_jahrgangsstufe'),
+        ("karteikarten", "0004_benutzerstatistik_bevorzugte_jahrgangsstufe"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='benutzerstatistik',
-            name='muss_passwort_aendern',
-            field=models.BooleanField(default=False, help_text='Benutzer muss beim naechsten Login sein Passwort aendern'),
+            model_name="benutzerstatistik",
+            name="muss_passwort_aendern",
+            field=models.BooleanField(
+                default=False,
+                help_text="Benutzer muss beim naechsten Login sein Passwort aendern",
+            ),
         ),
     ]
