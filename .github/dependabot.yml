@@ -1,0 +1,29 @@
+# Dependabot — GitHub-nativer Dependency-Fluss (Standards-Review 2026-08 §9).
+# Ersetzt den selbstgebauten dependency-check.yml-Workflow. Kein Auto-Merge.
+
+version: 2
+
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      python-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
