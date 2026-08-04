@@ -4,6 +4,10 @@
 # und mit welchem Ergebnis. Wird von den Skills selbst gepflegt.
 
 app:
+  # Pflichtfelder Klassifikation (Decision Note Standards-Review 2026-08 §1).
+  # Welche Bausteine daraus Soll werden: app-rahmen/reference/soll-matrix.md.
+  typ: software
+  lifecycle: bastel
   name: karteikarten
   stack: python-django
   version_source: requirements.txt
