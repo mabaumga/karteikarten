@@ -1,5 +1,7 @@
 # Dependabot — GitHub-nativer Dependency-Fluss (Standards-Review 2026-08 §9).
 # Ersetzt den selbstgebauten dependency-check.yml-Workflow. Kein Auto-Merge.
+# Gruppierung: minor/patch gebuendelt (klein + mergebar), MAJOR einzeln —
+# ein Sammel-PR ueber alle Updates scheitert an ResolutionImpossible.
 
 version: 2
 
@@ -10,8 +12,9 @@ updates:
       interval: weekly
       day: monday
     groups:
-      python-deps:
+      python-deps-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: github-actions
     directory: /
@@ -19,8 +22,9 @@ updates:
       interval: weekly
       day: monday
     groups:
-      actions:
+      actions-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: docker
     directory: /
