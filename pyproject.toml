@@ -28,6 +28,14 @@ DJANGO_SETTINGS_MODULE = "config.settings"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 
+[tool.ruff.lint]
+# Regelsatz explizit statt implizit: ruff 0.16 aktiviert deutlich mehr Default-Regeln
+# als 0.15 (RUF012, DTZ, BLE, EXE ... — 150 Treffer im Bestand). Fuer ein Bastelprojekt
+# ist ein Regel-Sprung dieser Groesse kein Gewinn; die bisher geltenden Regeln werden
+# hier festgeschrieben, damit Lint-Verhalten nicht mehr an der ruff-Version haengt.
+# Erweiterung jederzeit moeglich — dann bewusst und mit Aufraeumen in einem eigenen PR.
+select = ["E4", "E7", "E9", "F"]
+
 [tool.ruff.lint.per-file-ignores]
 # Django-Seed-Skripte muessen django.setup() ausfuehren, BEVOR sie Models importieren —
 # ein Import am Dateianfang wuerde mit ImproperlyConfigured abbrechen. E402 ist hier
