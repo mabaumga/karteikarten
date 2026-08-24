@@ -1,0 +1,43 @@
+# Pre-commit-Hooks.
+#
+# Zwei Stufen mit unterschiedlichem Tempo: beim **Commit** laufen nur schnelle
+# Autofixes, beim **Push** das volle Gate `make check`. So bleiben Commits
+# fluessig, und trotzdem verlaesst nichts Ungeprueftes den Rechner.
+#
+# Das ist seit dem 12.08.2026 die einzige automatische Pruefung: GitHub hat die
+# Actions wegen einer fehlgeschlagenen Zahlung gestoppt. Der letzte CI-Lauf in
+# diesem Repo liegt entsprechend zurueck — ohne diesen Hook liefe hier gar kein
+# Test mehr.
+#
+# Installieren:  pre-commit install --hook-type pre-commit --hook-type pre-push
+# Umgehen:       git push --no-verify   (nur mit gutem Grund)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  # rev muss zur ruff-Version im venv passen. Laufen die auseinander,
+  # formatiert der Hook gegen das, was `make lint` durchwinkt.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.3
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: make-check
+        name: make check (Django-Checks + Lint + Tests)
+        entry: make check
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
