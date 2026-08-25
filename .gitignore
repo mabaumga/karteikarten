@@ -29,3 +29,10 @@ db.sqlite3
 # OS
 .DS_Store
 Thumbs.db
+
+# **Auch jede Variante.** Einzelne Endungen aufzuzaehlen laesst genau die durch,
+# an die niemand gedacht hat — am 25.08.2026 ist in immobilien eine Kopie
+# `.env.vor-portalfix` mit OIDC-Secret und API-Token in einen Commit geraten.
+.env
+.env.*
+!.env.example
