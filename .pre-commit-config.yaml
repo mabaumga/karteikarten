@@ -25,6 +25,20 @@ repos:
 
   # rev muss zur ruff-Version im venv passen. Laufen die auseinander,
   # formatiert der Hook gegen das, was `make lint` durchwinkt.
+  # **Secret-Scan als Hook, nicht nur als Action.** Die Actions dieser Flotte
+  # sind bis September 2026 abgeschaltet — ein Scan, der nur dort laeuft, laeuft
+  # gar nicht. Am 25.08.2026 ist deshalb eine `.env`-Sicherungskopie mit
+  # OIDC-Secret und API-Token in einen Commit gelangt, an sechs bestandenen
+  # Hooks vorbei.
+  #
+  # Der Hook prueft die *bereitgestellten* Aenderungen, nicht die Historie.
+  # Einen Fund raeumt man nicht mit `--no-verify` weg: Der Zugang gilt ab dem
+  # Moment als offengelegt und muss gewechselt werden.
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.16.4
     hooks:
