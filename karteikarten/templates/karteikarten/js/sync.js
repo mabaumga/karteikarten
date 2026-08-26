@@ -11,10 +11,11 @@ class KarteikartenSync {
         window.addEventListener('online', () => this.handleOnline());
         window.addEventListener('offline', () => this.handleOffline());
 
-        // Initiale Sync wenn online
-        if (this.isOnline) {
-            this.syncFromServer();
-        }
+        // Kein Sync im Konstruktor. Frueher lief hier ein syncFromServer() ohne
+        // await los, waehrend die Seite parallel die Bloecke aus der IndexedDB
+        // rendert -- beim ersten Besuch stand deshalb "Keine Offline-Daten
+        // verfuegbar", obwohl der Download gerade lief. Die Seite entscheidet
+        // jetzt selbst, wann sie abgleicht, und wartet darauf.
     }
 
     handleOnline() {
@@ -98,48 +99,81 @@ class KarteikartenSync {
         }
     }
 
+    /**
+     * Genau die angegebenen Bloecke vom Server holen und lokal ablegen --
+     * "einen Schwung herunterladen".
+     */
+    async downloadBloecke(blockIds) {
+        if (!blockIds || blockIds.length === 0) return { karten: 0 };
+        if (!this.isOnline) throw new Error('Offline -- Download nicht moeglich');
+
+        const daten = await this.holeVomServer(blockIds);
+        return { karten: daten.karten?.length || 0 };
+    }
+
+    /**
+     * Einen heruntergeladenen Block wieder entfernen.
+     */
+    async entferneBlock(blockId) {
+        return window.karteikartenDB.deleteLernblockKomplett(blockId);
+    }
+
+    /**
+     * Bereits heruntergeladene Bloecke auffrischen. Bewusst nur diese: sonst
+     * zoege jeder Abgleich den gesamten Bestand wieder herein und die gezielte
+     * Auswahl waere hinfaellig.
+     */
     async syncFromServer() {
         if (!this.isOnline) return;
 
-        try {
-            const response = await fetch('/api/sync/pull/', {
-                method: 'GET',
-                credentials: 'same-origin',
-                headers: {
-                    'Accept': 'application/json',
-                }
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-
-            const data = await response.json();
-
-            // Daten lokal speichern
-            if (data.lernbloecke) {
-                await window.karteikartenDB.saveLernbloecke(data.lernbloecke);
-            }
-            if (data.karten) {
-                await window.karteikartenDB.saveKarten(data.karten);
-            }
-            if (data.status) {
-                await window.karteikartenDB.saveKartenStatus(data.status);
-            }
-
-            // Letzten Sync-Zeitpunkt speichern
-            await window.karteikartenDB.setMeta('lastSync', Date.now());
-
-            console.log('Sync vom Server abgeschlossen:', {
-                lernbloecke: data.lernbloecke?.length || 0,
-                karten: data.karten?.length || 0,
-                status: data.status?.length || 0
-            });
-
-        } catch (error) {
-            console.error('Fehler beim Sync vom Server:', error);
-            throw error;
+        const vorhanden = await window.karteikartenDB.getLernblockIds();
+        if (vorhanden.length === 0) {
+            console.log('Keine heruntergeladenen Bloecke -- nichts aufzufrischen');
+            return;
         }
+
+        await this.holeVomServer(vorhanden);
+    }
+
+    async holeVomServer(blockIds) {
+        const query = blockIds && blockIds.length
+            ? `?bloecke=${blockIds.join(',')}`
+            : '';
+
+        const response = await fetch(`/api/sync/pull/${query}`, {
+            method: 'GET',
+            credentials: 'same-origin',
+            headers: {
+                'Accept': 'application/json',
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Daten lokal speichern
+        if (data.lernbloecke) {
+            await window.karteikartenDB.saveLernbloecke(data.lernbloecke);
+        }
+        if (data.karten) {
+            await window.karteikartenDB.saveKarten(data.karten);
+        }
+        if (data.status) {
+            await window.karteikartenDB.saveKartenStatus(data.status);
+        }
+
+        await window.karteikartenDB.setMeta('lastSync', Date.now());
+
+        console.log('Vom Server geholt:', {
+            lernbloecke: data.lernbloecke?.length || 0,
+            karten: data.karten?.length || 0,
+            status: data.status?.length || 0
+        });
+
+        return data;
     }
 
     async pushToServer() {

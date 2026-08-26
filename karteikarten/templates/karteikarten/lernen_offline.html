@@ -17,10 +17,13 @@
             </div>
         </div>
 
-        <!-- Block-Auswahl -->
+        <!-- Auf dem Gerät verfügbar -->
         <div id="block-selection" class="card mb-4">
             <div class="card-body">
-                <h5 class="card-title mb-3">Lernblöcke auswählen</h5>
+                <h5 class="card-title mb-1">Auf diesem Gerät</h5>
+                <p class="card-text small text-muted mb-3">
+                    Diese Lernblöcke liegen lokal und funktionieren ohne Netz.
+                </p>
                 <div id="block-list" class="mb-3">
                     <div class="text-center py-3">
                         <div class="spinner-border text-primary" role="status">
@@ -31,7 +34,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Lernmodus</label>
+                    <label class="form-label" for="modus-select">Lernmodus</label>
                     <select id="modus-select" class="form-select">
                         <option value="klassisch">Klassisch (Begriff → Definition)</option>
                         <option value="rueckwaerts">Rückwärts (Definition → Begriff)</option>
@@ -41,6 +44,17 @@
                 <button id="start-learning" class="btn btn-primary btn-lg w-100" disabled>
                     <i class="bi bi-play-fill me-2"></i>Lernen starten
                 </button>
+            </div>
+        </div>
+
+        <!-- Herunterladen -->
+        <div id="download-section" class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-1">Herunterladen</h5>
+                <p class="card-text small text-muted mb-3">
+                    Einen Schwung Karteikarten aufs Gerät holen — danach geht es ohne Verbindung.
+                </p>
+                <div id="download-list"></div>
             </div>
         </div>
 
@@ -70,19 +84,29 @@
 {% endblock %}
 
 {% block extra_js %}
+{{ verfuegbare_bloecke|json_script:"verfuegbare-bloecke" }}
 <script src="{% url 'js_db' %}"></script>
 <script src="{% url 'js_sync' %}"></script>
 <script src="{% url 'js_offline_learning' %}"></script>
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
     const blockList = document.getElementById('block-list');
+    const downloadList = document.getElementById('download-list');
     const startBtn = document.getElementById('start-learning');
     const blockSelection = document.getElementById('block-selection');
     const learningContainer = document.getElementById('offline-learning-container');
     const statusBadge = document.querySelector('#connection-status .badge');
     const statusText = document.getElementById('status-text');
 
-    // Verbindungsstatus aktualisieren
+    // Die Liste kommt serverseitig mit; offline ist es die zuletzt gesehene Fassung.
+    const verfuegbar = JSON.parse(document.getElementById('verfuegbare-bloecke').textContent);
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
     function updateConnectionStatus() {
         if (navigator.onLine) {
             statusBadge.className = 'badge bg-success';
@@ -91,24 +115,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             statusBadge.className = 'badge bg-warning';
             statusText.textContent = 'Offline';
         }
+        zeichneDownloadListe();
     }
 
     window.addEventListener('online', updateConnectionStatus);
     window.addEventListener('offline', updateConnectionStatus);
-    updateConnectionStatus();
 
-    // Lernblöcke laden
+    let geladeneIds = [];
+
+    // === Auf dem Gerät ===
+
     async function loadBlocks() {
         try {
             const blocks = await window.karteikartenDB.getLernbloecke();
+            geladeneIds = blocks.map(b => b.id);
 
             if (blocks.length === 0) {
                 blockList.innerHTML = `
-                    <div class="alert alert-info">
+                    <div class="alert alert-info mb-0">
                         <i class="bi bi-info-circle me-2"></i>
-                        Keine Offline-Daten verfügbar. Bitte erst online synchronisieren.
+                        Noch nichts auf dem Gerät. Lade unten einen Lernblock herunter.
                     </div>
                 `;
+                updateStartButton();
                 return;
             }
 
@@ -118,31 +147,43 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const faellige = await window.karteikartenDB.getFaelligeKarten([block.id]);
 
                 html += `
-                    <div class="form-check mb-2">
-                        <input class="form-check-input block-checkbox" type="checkbox"
-                               value="${block.id}" id="block-${block.id}"
-                               data-faellig="${faellige.length}">
-                        <label class="form-check-label d-flex justify-content-between w-100" for="block-${block.id}">
-                            <span>${block.name}</span>
-                            <span class="badge ${faellige.length > 0 ? 'bg-primary' : 'bg-secondary'}">
-                                ${faellige.length} fällig
-                            </span>
-                        </label>
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="form-check flex-grow-1 mb-0">
+                            <input class="form-check-input block-checkbox" type="checkbox"
+                                   value="${block.id}" id="block-${block.id}"
+                                   data-faellig="${faellige.length}">
+                            <label class="form-check-label d-flex justify-content-between w-100" for="block-${block.id}">
+                                <span>${escapeHtml(block.name)}
+                                    <span class="text-muted small">· ${karten.length} Karten</span>
+                                </span>
+                                <span class="badge ${faellige.length > 0 ? 'bg-primary' : 'bg-secondary'}">
+                                    ${faellige.length} fällig
+                                </span>
+                            </label>
+                        </div>
+                        <button class="btn btn-sm btn-outline-danger block-entfernen"
+                                data-id="${block.id}" data-name="${escapeHtml(block.name)}"
+                                title="Vom Gerät entfernen">
+                            <i class="bi bi-trash"></i>
+                        </button>
                     </div>
                 `;
             }
 
             blockList.innerHTML = html;
 
-            // Event Listener für Checkboxen
             document.querySelectorAll('.block-checkbox').forEach(cb => {
                 cb.addEventListener('change', updateStartButton);
             });
+            document.querySelectorAll('.block-entfernen').forEach(btn => {
+                btn.addEventListener('click', () => entferneBlock(btn));
+            });
+            updateStartButton();
 
         } catch (error) {
             console.error('Fehler beim Laden der Blöcke:', error);
             blockList.innerHTML = `
-                <div class="alert alert-danger">
+                <div class="alert alert-danger mb-0">
                     <i class="bi bi-exclamation-triangle me-2"></i>
                     Fehler beim Laden der Daten.
                 </div>
@@ -150,7 +191,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Start-Button Status
+    async function entferneBlock(btn) {
+        const id = parseInt(btn.dataset.id);
+        if (!confirm(`"${btn.dataset.name}" vom Gerät entfernen? Der Lernstand auf dem Server bleibt erhalten.`)) {
+            return;
+        }
+        btn.disabled = true;
+        await window.karteikartenSync.entferneBlock(id);
+        await loadBlocks();
+        zeichneDownloadListe();
+    }
+
     function updateStartButton() {
         const checked = document.querySelectorAll('.block-checkbox:checked');
         let totalFaellig = 0;
@@ -167,20 +218,95 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Lernen starten
+    // === Herunterladen ===
+
+    function zeichneDownloadListe() {
+        const offen = verfuegbar.filter(b => !geladeneIds.includes(b.id));
+
+        if (verfuegbar.length === 0) {
+            downloadList.innerHTML = `
+                <div class="alert alert-info mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Du hast noch keine Lernblöcke ausgewählt.
+                    <a href="{% url 'meine_lernbloecke' %}" class="alert-link">Jetzt auswählen</a>
+                </div>
+            `;
+            return;
+        }
+
+        if (offen.length === 0) {
+            downloadList.innerHTML = `
+                <p class="text-success small mb-0">
+                    <i class="bi bi-check-circle me-1"></i>
+                    Alle deine Lernblöcke liegen auf dem Gerät.
+                </p>
+            `;
+            return;
+        }
+
+        const gesperrt = !navigator.onLine;
+        let html = '';
+        for (const block of offen) {
+            html += `
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span>${escapeHtml(block.name)}
+                        <span class="text-muted small">· ${block.karten_anzahl} Karten</span>
+                    </span>
+                    <button class="btn btn-sm btn-outline-primary block-laden"
+                            data-id="${block.id}" ${gesperrt ? 'disabled' : ''}>
+                        <i class="bi bi-download me-1"></i>Laden
+                    </button>
+                </div>
+            `;
+        }
+        if (gesperrt) {
+            html += `<p class="text-muted small mb-0 mt-2">
+                <i class="bi bi-wifi-off me-1"></i>Zum Herunterladen brauchst du eine Verbindung.
+            </p>`;
+        }
+        downloadList.innerHTML = html;
+
+        document.querySelectorAll('.block-laden').forEach(btn => {
+            btn.addEventListener('click', () => ladeBlock(btn));
+        });
+    }
+
+    async function ladeBlock(btn) {
+        const id = parseInt(btn.dataset.id);
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Lade...';
+
+        try {
+            const ergebnis = await window.karteikartenSync.downloadBloecke([id]);
+            await loadBlocks();
+            zeichneDownloadListe();
+            await updateSyncInfo();
+            window.karteikartenSync.showStatus('online', `${ergebnis.karten} Karten sind jetzt offline verfügbar`);
+        } catch (error) {
+            console.error('Download fehlgeschlagen:', error);
+            btn.disabled = false;
+            btn.innerHTML = '<i class="bi bi-download me-1"></i>Laden';
+            window.karteikartenSync.showStatus('error', 'Download fehlgeschlagen');
+        }
+    }
+
+    // === Lernen ===
+
     startBtn.addEventListener('click', async () => {
         const checked = document.querySelectorAll('.block-checkbox:checked');
         const blockIds = Array.from(checked).map(cb => parseInt(cb.value));
         const modus = document.getElementById('modus-select').value;
 
         blockSelection.style.display = 'none';
+        document.getElementById('download-section').style.display = 'none';
         learningContainer.style.display = 'block';
 
         window.offlineLearningUI = new OfflineLearningUI('#offline-learning-container');
         await window.offlineLearningUI.start(blockIds, modus);
     });
 
-    // Sync-Info aktualisieren
+    // === Sync ===
+
     async function updateSyncInfo() {
         const lastSync = await window.karteikartenDB.getMeta('lastSync');
         const pendingCount = await window.karteikartenSync.getPendingSyncCount();
@@ -192,19 +318,29 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('pending-sync').textContent = `Ausstehende Änderungen: ${pendingCount}`;
     }
 
-    // Manueller Sync
     document.getElementById('manual-sync').addEventListener('click', async () => {
         if (navigator.onLine) {
             await window.karteikartenSync.syncAll();
             await loadBlocks();
+            zeichneDownloadListe();
             await updateSyncInfo();
         } else {
             alert('Keine Internetverbindung verfügbar.');
         }
     });
 
-    // Initial laden
+    // Erst abgleichen, dann zeichnen -- sonst steht beim ersten Aufruf
+    // "nichts auf dem Gerät", waehrend der Abgleich noch laeuft.
+    if (navigator.onLine) {
+        try {
+            await window.karteikartenSync.syncFromServer();
+        } catch (error) {
+            console.error('Abgleich beim Öffnen fehlgeschlagen:', error);
+        }
+    }
+    updateConnectionStatus();
     await loadBlocks();
+    zeichneDownloadListe();
     await updateSyncInfo();
 });
 </script>

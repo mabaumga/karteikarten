@@ -2,10 +2,12 @@
 
 import csv
 import io
+import json
 import random
 from datetime import date
 from functools import wraps
 
+from django.db.models import Count
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
@@ -917,7 +919,22 @@ def js_offline_learning(request):
 @login_required
 def lernen_offline(request):
     """Offline learning page."""
-    return render(request, "karteikarten/lernen_offline.html")
+    bloecke = (
+        Lernblock.objects.filter(benutzer_zuordnungen__benutzer=request.user)
+        .annotate(karten_anzahl=Count("karten"))
+        .order_by("name")
+    )
+    # Die Liste kommt serverseitig mit, damit die Seite keinen zweiten Endpunkt
+    # braucht. Offline liefert der Service Worker die zuletzt gesehene Fassung --
+    # heruntergeladene Bloecke zeigt die Seite ohnehin aus der IndexedDB.
+    verfuegbar = [
+        {"id": b.id, "name": b.name, "karten_anzahl": b.karten_anzahl} for b in bloecke
+    ]
+    return render(
+        request,
+        "karteikarten/lernen_offline.html",
+        {"verfuegbare_bloecke": verfuegbar},
+    )
 
 
 # =============================================================================
@@ -925,17 +942,42 @@ def lernen_offline(request):
 # =============================================================================
 
 
+def _block_ids_aus_parameter(rohwert):
+    """`?bloecke=3,7,12` in eine Liste von IDs uebersetzen, Unsinn stillschweigend weglassen."""
+    ids = []
+    for teil in rohwert.split(","):
+        teil = teil.strip()
+        if teil.isdigit():
+            ids.append(int(teil))
+    return ids
+
+
 @login_required
 def sync_pull(request):
-    """Pull all data for offline use."""
+    """Karten fuer die Offline-Nutzung ausliefern.
+
+    Ohne Parameter kommt alles, was der Benutzer sich zugeordnet hat -- das ist der
+    Abgleich bereits geladener Bloecke. Mit `?bloecke=3,7` kommen genau diese, damit
+    man einen einzelnen Schwung herunterladen kann, statt jedes Mal den gesamten
+    Bestand zu ziehen.
+    """
     user = request.user
 
-    # Alle Lernblöcke des Benutzers
-    lernbloecke = Lernblock.objects.filter(benutzer_zuordnungen__benutzer=user).values(
+    gewuenscht = _block_ids_aus_parameter(request.GET.get("bloecke", ""))
+    if gewuenscht:
+        # Jeder angemeldete Benutzer darf jeden Block ansehen (siehe lernblock_detail),
+        # also darf er ihn auch mit nach offline nehmen.
+        lernbloecke = Lernblock.objects.filter(id__in=gewuenscht)
+    else:
+        lernbloecke = Lernblock.objects.filter(benutzer_zuordnungen__benutzer=user)
+
+    lernbloecke = lernbloecke.values(
         "id", "name", "beschreibung", "thema", "bidirektional"
     )
 
-    # Alle Karten aus diesen Blöcken
+    # Alle Karten aus diesen Blöcken. Die JSON-Felder muessen mit: bei Camden Town
+    # stehen Lautschrift, Sprachverwandtschaften und Buchseite genau dort, und ohne
+    # sie waere die Karte offline aermer als online.
     lernblock_ids = [b["id"] for b in lernbloecke]
     karten = Karteikarte.objects.filter(lernblock_id__in=lernblock_ids).values(
         "id",
@@ -943,8 +985,12 @@ def sync_pull(request):
         "begriff",
         "definition",
         "beispiele",
+        "beispiel_json",
         "zusatz_label",
         "zusatz_wert",
+        "zusatz_json",
+        "tags",
+        "seite",
     )
 
     # Benutzer-Status für alle Karten
@@ -980,8 +1026,6 @@ def sync_pull(request):
 @require_POST
 def sync_push(request):
     """Push offline changes to server."""
-    import json
-
     user = request.user
 
     try:

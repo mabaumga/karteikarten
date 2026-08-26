@@ -104,6 +104,33 @@ class KarteikartenDB {
         });
     }
 
+    async getLernblockIds() {
+        const bloecke = await this.getLernbloecke();
+        return bloecke.map(b => b.id);
+    }
+
+    /**
+     * Einen heruntergeladenen Block wieder loswerden: Block, Karten und deren
+     * Lernstand. Die Sync-Queue bleibt unangetastet -- noch nicht hochgeladene
+     * Antworten gehoeren dem Server, nicht dem Block.
+     */
+    async deleteLernblockKomplett(id) {
+        const db = await this.ensureReady();
+        const karten = await this.getKartenByLernblock(id);
+
+        const tx = db.transaction(['lernbloecke', 'karten', 'kartenstatus'], 'readwrite');
+        tx.objectStore('lernbloecke').delete(id);
+        for (const karte of karten) {
+            tx.objectStore('karten').delete(karte.id);
+            tx.objectStore('kartenstatus').delete(karte.id);
+        }
+
+        return new Promise((resolve, reject) => {
+            tx.oncomplete = () => resolve(karten.length);
+            tx.onerror = () => reject(tx.error);
+        });
+    }
+
     // === KARTEIKARTEN ===
 
     async saveKarten(karten) {
@@ -201,19 +228,21 @@ class KarteikartenDB {
             };
         }
 
-        // Leitner-System: Fächer 1-5
+        // Leitner-System: Fächer 1-5, Intervalle wie in BenutzerKarteStatus
         const intervalle = [1, 2, 4, 7, 14]; // Tage pro Fach
 
         if (richtig) {
             status.fach = Math.min(5, status.fach + 1);
+            const naechsteDatum = new Date();
+            naechsteDatum.setDate(naechsteDatum.getDate() + intervalle[status.fach - 1]);
+            status.naechste_wiederholung = naechsteDatum.toISOString().split('T')[0];
         } else {
+            // Wie auf dem Server: zurueck in Fach 1 und sofort wieder faellig.
+            // Rechnete man hier einen Tag drauf, verschwaende eine falsch
+            // beantwortete Karte offline bis morgen -- online kommt sie sofort wieder.
             status.fach = 1;
+            status.naechste_wiederholung = heute;
         }
-
-        // Nächste Wiederholung berechnen
-        const naechsteDatum = new Date();
-        naechsteDatum.setDate(naechsteDatum.getDate() + intervalle[status.fach - 1]);
-        status.naechste_wiederholung = naechsteDatum.toISOString().split('T')[0];
 
         const tx = db.transaction('kartenstatus', 'readwrite');
         const store = tx.objectStore('kartenstatus');
