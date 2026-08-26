@@ -9,7 +9,7 @@
       "Französisch",
       "Deutsch"
     ],
-    "version": "1.0",
+    "version": "1.1",
     "quelle": "http://www.vokipedia.de/index.php?title=DEU:Franz%C3%B6sisch:%C3%80_plus!_4_Nouvelle_%C3%A9dition"
   },
   "felder": {
@@ -69,12 +69,18 @@
               "hinten": "der Mut"
             },
             {
-              "vorne": "{[ê]} partir de rien",
-              "hinten": "von nichts ausgehen"
+              "vorne": "partir de rien",
+              "hinten": "von nichts ausgehen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
-              "vorne": "{[ê]} se battre",
-              "hinten": "sich (durch)schlagen, kämpfen"
+              "vorne": "se battre",
+              "hinten": "sich (durch)schlagen, kämpfen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "battre qn/qc",
@@ -105,8 +111,11 @@
               "hinten": "jdn/etw pflegen"
             },
             {
-              "vorne": "{[ê]} s'engager",
-              "hinten": "sich engagieren"
+              "vorne": "s'engager",
+              "hinten": "sich engagieren",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "l'exclusion f",
@@ -185,14 +194,6 @@
             {
               "vorne": "propre f/m adj.",
               "hinten": "eigen"
-            },
-            {
-              "vorne": "~",
-              "hinten": "~",
-              "beispiel": {
-                "fr": "Sarah voudrait avoir sa propre chambre.",
-                "de": "Sarah hätte gern ihr eigenes Zimmer."
-              }
             },
             {
               "vorne": "l'entreprise f",
@@ -353,7 +354,7 @@
               "hinten": "etw dekorieren, etw (aus-)schmücken"
             },
             {
-              "vorne": "servir qn/qc (1)",
+              "vorne": "servir qn/qc",
               "hinten": "jdn bedienen, etw servieren"
             },
             {
@@ -381,14 +382,6 @@
               "hinten": "motiviert"
             },
             {
-              "vorne": "~",
-              "hinten": "~",
-              "beispiel": {
-                "fr": "Dans l'attente de votre réponse, je vous prie de recevoir, Madame, Monsieur, mes salutations respectueuses (1)",
-                "de": "Mit freundlichen Grüßen"
-              }
-            },
-            {
               "vorne": "signer",
               "hinten": "unterschreiben"
             },
@@ -409,7 +402,7 @@
               "hinten": "das Passphoto"
             },
             {
-              "vorne": "sourire (1)",
+              "vorne": "sourire",
               "hinten": "lächeln"
             },
             {
@@ -441,7 +434,7 @@
               "hinten": "die Antwort"
             },
             {
-              "vorne": "recevoir (1)",
+              "vorne": "recevoir",
               "hinten": "empfangen, erhalten"
             },
             {
@@ -491,9 +484,12 @@
           "bidirektional": true,
           "karten": [
             {
-              "vorne": "{[ê]} ne pas se poser de questions",
+              "vorne": "ne pas se poser de questions",
               "hinten": "nicht groß nachdenken",
-              "beispiel": "Il ne se pose pas des questions, il prend le billet d'avion."
+              "beispiel": "Il ne se pose pas des questions, il prend le billet d'avion.",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "les petites annonces f. plr.",
@@ -536,9 +532,12 @@
               "beispiel": "Ils disent que je suis un intello."
             },
             {
-              "vorne": "{[ê]} sortir avec qn",
+              "vorne": "sortir avec qn",
               "hinten": "mit jdm. zusammen sein in einer Beziehung",
-              "beispiel": "J'aimerais bien sortir avec Philippe, mais il a déjà une petite amie."
+              "beispiel": "J'aimerais bien sortir avec Philippe, mais il a déjà une petite amie.",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "faire du baby-sitting",
@@ -551,7 +550,7 @@
               "beispiel": "J'ai tellement de choses á te raconter, je ne suis pas par oú commencer."
             },
             {
-              "vorne": "servir à qc (1)",
+              "vorne": "servir à qc",
               "hinten": "von Nutzen sein, zu etwas dienen",
               "beispiel": "Ça sert a quoi, ce truc?"
             },
@@ -807,11 +806,11 @@
               "hinten": "stolz adv"
             },
             {
-              "vorne": "faire  qc soi-même",
+              "vorne": "faire qc soi-même",
               "hinten": "etw. selbst machen"
             },
             {
-              "vorne": "remplir qc (1)",
+              "vorne": "remplir qc",
               "hinten": "etw füllen, etw ausfüllen"
             },
             {
@@ -991,14 +990,6 @@
           "bidirektional": true,
           "karten": [
             {
-              "vorne": "~",
-              "hinten": "~",
-              "beispiel": {
-                "fr": "J'en ai jusque-là!",
-                "de": "Mir steht's bis hier!"
-              }
-            },
-            {
               "vorne": "le vin",
               "hinten": "der Wein"
             },
@@ -1015,16 +1006,22 @@
               "hinten": "jdm die Hand geben"
             },
             {
-              "vorne": "{[ê]} se faire la bise",
-              "hinten": "sich mit Küsschen begrüßen/veranschieden"
+              "vorne": "se faire la bise",
+              "hinten": "sich mit Küsschen begrüßen/veranschieden",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "la saucisse",
               "hinten": "die Wurst"
             },
             {
-              "vorne": "{[ê]} se marrer",
-              "hinten": "Spaß haben"
+              "vorne": "se marrer",
+              "hinten": "Spaß haben",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "l'anecdote f",
@@ -1033,14 +1030,6 @@
             {
               "vorne": "une sorte de",
               "hinten": "eine Art (von)"
-            },
-            {
-              "vorne": "la pomme de terre",
-              "hinten": "die Kartoffel"
-            },
-            {
-              "vorne": "la saucisse",
-              "hinten": "die Wurst"
             },
             {
               "vorne": "goûter",
@@ -1067,7 +1056,7 @@
               "hinten": "wörtl: falsche Freunde, Wörter aus unterschiedlichen Sprachen, die sich sehr ähnlich sind, aber nicht dieselbe Bedeutung haben"
             },
             {
-              "vorne": "servir à qc (1)",
+              "vorne": "servir à qc",
               "hinten": "von Nutzen sein, zu etw. dienen"
             },
             {
@@ -1091,8 +1080,11 @@
               "hinten": "genau adv"
             },
             {
-              "vorne": "{[ê]} se tromper",
-              "hinten": "sich täuschen, sich irren"
+              "vorne": "se tromper",
+              "hinten": "sich täuschen, sich irren",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "avoir qc en tête",
@@ -1103,8 +1095,11 @@
               "hinten": "der Kopf, auch: das Gesicht"
             },
             {
-              "vorne": "{[ê]} se plaindre de  (1)",
-              "hinten": "sich beklagen über"
+              "vorne": "se plaindre de",
+              "hinten": "sich beklagen über",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "l'oreiller m",
@@ -1380,8 +1375,11 @@
               "hinten": "Hauptstadt von Mali"
             },
             {
-              "vorne": "{[ê]} s'exiler",
-              "hinten": "ins Exil gehen"
+              "vorne": "s'exiler",
+              "hinten": "ins Exil gehen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "critiquer",
@@ -1488,8 +1486,11 @@
               "hinten": "die Multikulturalität"
             },
             {
-              "vorne": "{[ê]} s'imposer",
-              "hinten": "sich behaupten"
+              "vorne": "s'imposer",
+              "hinten": "sich behaupten",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "mettre en scène",
@@ -1500,8 +1501,11 @@
               "hinten": "die Weigerung, die Ablehnung"
             },
             {
-              "vorne": "{[ê]} (se) poser des questions",
-              "hinten": "(sich) Fragen stellen"
+              "vorne": "(se) poser des questions",
+              "hinten": "(sich) Fragen stellen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "la création",
@@ -1516,8 +1520,11 @@
               "hinten": "die Kunst"
             },
             {
-              "vorne": "{[ê]} se développer",
-              "hinten": "sich entwickeln"
+              "vorne": "se développer",
+              "hinten": "sich entwickeln",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "Marguerite Abouet",
@@ -1552,8 +1559,11 @@
               "hinten": "es lebt sich gut"
             },
             {
-              "vorne": "{[ê]} sortir",
-              "hinten": "hier: anlaufen Film"
+              "vorne": "sortir",
+              "hinten": "hier: anlaufen Film",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "la bibliothèque",
@@ -1570,8 +1580,11 @@
               "hinten": "riesig"
             },
             {
-              "vorne": "{[ê]} se bousculer",
-              "hinten": "sich drängeln"
+              "vorne": "se bousculer",
+              "hinten": "sich drängeln",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "assister à",
@@ -1590,12 +1603,15 @@
               "hinten": "im Handumdrehen"
             },
             {
-              "vorne": "{[ê]} s'asseoir",
-              "hinten": "sich hinsetzen"
+              "vorne": "s'asseoir",
+              "hinten": "sich hinsetzen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
-              "vorne": "s'asseoir //  <!>sich hinsetzen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je m'assois]→[nous nous asseyons]→2.→[tu t'assois]→[vous vous asseyez]→3.→[il s'assoit]→[ils s'assoient]",
-              "hinten": "<!>s'asseoir</!> //   sich hinsetzen<!>Présent</!>"
+              "vorne": "s'asseoir // <!>sich hinsetzen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je m'assois]→[nous nous asseyons]→2.→[tu t'assois]→[vous vous asseyez]→3.→[il s'assoit]→[ils s'assoient]",
+              "hinten": "<!>s'asseoir</!> // sich hinsetzen<!>Présent</!>"
             },
             {
               "vorne": "emmener",
@@ -1718,8 +1734,11 @@
               "hinten": "die Limone"
             },
             {
-              "vorne": "{[ê]} se balader fam",
-              "hinten": "spazieren gehen, herumlaufen"
+              "vorne": "se balader fam",
+              "hinten": "spazieren gehen, herumlaufen",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "le Plateau",
@@ -1762,8 +1781,11 @@
               "hinten": "der CFA-Franc, Franc de la Communauté Financière d'Afrique, Währung, die hauptsächlich in frankophonen Ländern West- und Zentralafrikas genutzt wird"
             },
             {
-              "vorne": "{[ê]} passer pour qn/qc",
-              "hinten": "für jdn/etw gehalten werden"
+              "vorne": "passer pour qn/qc",
+              "hinten": "für jdn/etw gehalten werden",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "jeter",
@@ -2355,7 +2377,7 @@
               "hinten": "der Soldat"
             },
             {
-              "vorne": "convertir qn à qc (1)",
+              "vorne": "convertir qn à qc",
               "hinten": "jmd. zu etwas bekehren"
             },
             {
@@ -2513,7 +2535,7 @@
               "hinten": "das Ökolabel"
             },
             {
-              "vorne": "se servir de  (1)",
+              "vorne": "se servir de",
               "hinten": "benutzen"
             },
             {
@@ -2533,8 +2555,8 @@
               "hinten": "überzeugen"
             },
             {
-              "vorne": "convaincre //  <!>überzeugen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je convaincs]→[nous convainquons]→2.→[tu convaincs]→[vous convainquez]→3.→[il convainc]→[ils convainquent]",
-              "hinten": "<!>convaincre</!> //   überzeugen<!>Présent</!>"
+              "vorne": "convaincre // <!>überzeugen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je convaincs]→[nous convainquons]→2.→[tu convaincs]→[vous convainquez]→3.→[il convainc]→[ils convainquent]",
+              "hinten": "<!>convaincre</!> // überzeugen<!>Présent</!>"
             },
             {
               "vorne": "écologique",
@@ -2825,12 +2847,12 @@
               "hinten": "vor dem Elend flüchten"
             },
             {
-              "vorne": "fuir //  <!>fliehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je fuis]→[nous fuyons]→2.→[tu fuis]→[vous fuyez]→3.→[il fuit]→[ils fuient]",
-              "hinten": "<!>fuir</!> //   fliehen<!>Présent</!>"
+              "vorne": "fuir // <!>fliehen</!><!>Présent</!>→ →Sing.→Pl.→1.→[je fuis]→[nous fuyons]→2.→[tu fuis]→[vous fuyez]→3.→[il fuit]→[ils fuient]",
+              "hinten": "<!>fuir</!> // fliehen<!>Présent</!>"
             },
             {
-              "vorne": "fuir //  <!>fliehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fui]→[nous avons fui]→2.→[tu as fui]→[vous avez fui]→3.→[il a fui]→[ils ont fui]",
-              "hinten": "<!>fuir</!> //   fliehen<!>Passé composé</!>"
+              "vorne": "fuir // <!>fliehen</!><!>Passé composé</!>→ →Sing.→Pl.→1.→[j'ai fui]→[nous avons fui]→2.→[tu as fui]→[vous avez fui]→3.→[il a fui]→[ils ont fui]",
+              "hinten": "<!>fuir</!> // fliehen<!>Passé composé</!>"
             },
             {
               "vorne": "représenter",
@@ -2861,7 +2883,7 @@
               "hinten": "die Verbindung"
             },
             {
-              "vorne": "souffrir de qc (1)",
+              "vorne": "souffrir de qc",
               "hinten": "leiden an etw"
             },
             {
@@ -3127,14 +3149,6 @@
               "hinten": "verleihen"
             },
             {
-              "vorne": "~",
-              "hinten": "~",
-              "beispiel": {
-                "fr": "À la fin du festival on remet les prix.",
-                "de": "Am Ende des Festivals verleiht man die Preise."
-              }
-            },
-            {
               "vorne": "c'est-à-dire",
               "hinten": "das heißt"
             },
@@ -3311,8 +3325,11 @@
               "hinten": "lesbar"
             },
             {
-              "vorne": "{[ê]} s'appliquer",
-              "hinten": "sich Mühe geben"
+              "vorne": "s'appliquer",
+              "hinten": "sich Mühe geben",
+              "zusatz": {
+                "hilfsverb": "être"
+              }
             },
             {
               "vorne": "contrairement à",
@@ -3376,11 +3393,11 @@
             },
             {
               "vorne": "11",
-              "hinten": "Unité 3\\Lecture  A"
+              "hinten": "Unité 3\\Lecture A"
             },
             {
               "vorne": "12",
-              "hinten": "Unité 3\\Lecture  B"
+              "hinten": "Unité 3\\Lecture B"
             },
             {
               "vorne": "13",
