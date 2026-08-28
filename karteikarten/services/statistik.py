@@ -130,26 +130,39 @@ def _verlauf(benutzer, lernblock):
     return tage
 
 
-def block_fortschritt(benutzer, lernblock):
-    """Vollstaendige Auswertung eines Lernblocks fuer einen Benutzer."""
-    karten = list(lernblock.karten.all())
+def kartenmenge_fortschritt(benutzer, karten, verlauf_fuer=None):
+    """Auswertung einer beliebigen Kartenmenge.
+
+    Woher die Karten stammen, spielt keine Rolle — ein Lernblock oder ein frei
+    zusammengestellter Test. Nur der Tagesverlauf haengt an einem Block: die
+    Tagessummen werden je Block gefuehrt, fuer eine gemischte Menge gibt es
+    keinen. Dann bleibt der Verlauf leer, statt eine falsche Kurve zu zeichnen.
+    """
     erste = erste_antwort_je_karte(benutzer, [karte.pk for karte in karten])
     richtig = sum(1 for wert in erste.values() if wert)
 
     zuletzt = Lernergebnis.objects.filter(
-        benutzer=benutzer, karte__lernblock=lernblock
+        benutzer=benutzer, karte__in=karten
     ).aggregate(zeitpunkt=Max("zeitstempel"))["zeitpunkt"]
 
     return {
-        "lernblock": lernblock,
         "anzahl_karten": len(karten),
         "erstversuch_richtig": richtig,
         "erstversuch_gesamt": len(erste),
         "erstversuch_quote": _quote(richtig, len(erste)),
         "problemkarten": _problemkarten(benutzer, karten),
-        "verlauf": _verlauf(benutzer, lernblock),
+        "verlauf": _verlauf(benutzer, verlauf_fuer) if verlauf_fuer else [],
         "zuletzt_gelernt": zuletzt,
         **_kartenzustand(benutzer, karten, set(erste)),
+    }
+
+
+def block_fortschritt(benutzer, lernblock):
+    """Vollstaendige Auswertung eines Lernblocks fuer einen Benutzer."""
+    karten = list(lernblock.karten.all())
+    return {
+        "lernblock": lernblock,
+        **kartenmenge_fortschritt(benutzer, karten, verlauf_fuer=lernblock),
     }
 
 

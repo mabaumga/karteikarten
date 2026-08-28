@@ -19,6 +19,7 @@ from django.contrib import messages
 from .services.antwortpruefung import FAST, RICHTIG, pruefe_antwort
 from .services.statistik import (
     block_fortschritt,
+    kartenmenge_fortschritt,
     gegliederter_fortschritt,
     kurzfortschritt,
 )
@@ -28,6 +29,7 @@ from .models import (
     LehrwerkUnit,
     Lernblock,
     Schulfach,
+    Test,
     Karteikarte,
     TagesStatistik,
     Lernergebnis,
@@ -801,15 +803,19 @@ def _naechste_karte(request, faellige):
     return karte, status
 
 
-def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
-    """Faellige Karten eines Blocks — niedriges Fach zuerst, sonst zufaellig.
+def _faellige_aus_karten(user, karten, limit, nur_karten=None):
+    """Faellige Karten aus einer beliebigen Menge — die Grundform.
 
-    nur_karten: Menge von Karten-IDs (temporaere Auswahl) oder None fuer den
-    ganzen Block. Der Filter greift vor get_or_create_for_user — fuer abgewaehlte
-    Karten entsteht also kein Status-Datensatz.
+    Woher die Karten stammen, ist hier egal: ein Lernblock, mehrere Bloecke oder
+    ein frei zusammengestellter Test. Genau deshalb steht die Auswahl hier und
+    nicht im Blockmodell.
+
+    nur_karten: Menge von Karten-IDs (temporaere Auswahl) oder None. Der Filter
+    greift vor get_or_create_for_user — fuer abgewaehlte Karten entsteht also
+    kein Status-Datensatz.
     """
     faellige = []
-    for karte in lernblock.karten.all():
+    for karte in karten:
         if nur_karten is not None and karte.pk not in nur_karten:
             continue
         status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
@@ -819,16 +825,36 @@ def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
     return _mischen_nach_fach(faellige, limit)
 
 
+def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
+    """Faellige Karten eines Blocks — niedriges Fach zuerst, sonst zufaellig."""
+    return _faellige_aus_karten(user, lernblock.karten.all(), limit, nur_karten)
+
+
 def _get_faellige_karten_multi(user, lernbloecke, limit=50):
     """Faellige Karten mehrerer Bloecke — niedriges Fach zuerst, sonst zufaellig."""
-    faellige = []
-    for lernblock in lernbloecke:
-        for karte in lernblock.karten.all():
-            status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
-            if status.ist_faellig:
-                faellige.append((karte, status))
+    karten = [karte for block in lernbloecke for karte in block.karten.all()]
+    return _faellige_aus_karten(user, karten, limit)
 
-    return _mischen_nach_fach(faellige, limit)
+
+def _quelle_block(lernblock):
+    """Name und Ziel-URLs einer Blockabfrage — was die Vorlagen brauchen."""
+    return {
+        "quelle_name": lernblock.name,
+        "abbrechen_url": reverse("lernblock_detail", args=[lernblock.pk]),
+        "zuruecksetzen_url": reverse("karten_zuruecksetzen", args=[lernblock.pk]),
+    }
+
+
+def _mc_optionen(karte, alle_karten):
+    """Die richtige Antwort und bis zu drei Ablenker, in zufaelliger Reihenfolge."""
+    andere = [k for k in alle_karten if k.pk != karte.pk]
+    optionen = [{"text": karte.definition, "korrekt": True, "karte_id": karte.pk}]
+    optionen += [
+        {"text": ablenker.definition, "korrekt": False, "karte_id": ablenker.pk}
+        for ablenker in random.sample(andere, min(3, len(andere)))
+    ]
+    random.shuffle(optionen)
+    return optionen
 
 
 def _tipp_loesung(karte, richtung):
@@ -872,6 +898,7 @@ def lernen_tippen(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "tippen",
+                **_quelle_block(lernblock),
                 **_auswahl_context(request, lernblock),
             },
         )
@@ -884,6 +911,7 @@ def lernen_tippen(request, pk):
             request, f"block-{lernblock.pk}-tippen", len(faellige)
         ),
         "blockfortschritt": kurzfortschritt(request.user, lernblock),
+        **_quelle_block(lernblock),
         **_tipp_kontext(
             karte,
             status,
@@ -1205,6 +1233,284 @@ def kapitel_loeschen(request, pk):
     return redirect("buch_detail", pk=lehrwerk_id)
 
 
+# --- Tests: frei zusammengestellte Uebungssets --------------------------------------
+
+
+def _eigener_test(request, pk):
+    """Ein Test gehoert genau einer Person — fremde sind unsichtbar, nicht verboten."""
+    return get_object_or_404(Test, pk=pk, benutzer=request.user)
+
+
+def _test_karten(test):
+    """Die Karten eines Tests, nach Herkunftsblock sortiert."""
+    return list(
+        test.karten.select_related("lernblock").order_by("lernblock__name", "begriff")
+    )
+
+
+@login_required
+def test_liste(request):
+    """Alle Tests des Benutzers."""
+    tests = [
+        {
+            "test": test,
+            "anzahl": test.anzahl_karten,
+            "faellig": len(
+                _faellige_aus_karten(request.user, test.karten.all(), limit=999)
+            ),
+        }
+        for test in Test.objects.filter(benutzer=request.user).prefetch_related(
+            "karten"
+        )
+    ]
+    return render(request, "karteikarten/test_liste.html", {"tests": tests})
+
+
+@login_required
+def test_create(request):
+    """Neuen Test anlegen — Karten kommen anschliessend dazu."""
+    if request.method == "POST":
+        name = request.POST.get("name", "").strip()
+        if not name:
+            messages.error(request, "Der Test braucht einen Namen.")
+        elif Test.objects.filter(benutzer=request.user, name=name).exists():
+            messages.error(request, f"„{name}“ gibt es schon.")
+        else:
+            test = Test.objects.create(
+                benutzer=request.user,
+                name=name,
+                beschreibung=request.POST.get("beschreibung", "").strip(),
+            )
+            messages.success(
+                request, "Test angelegt. Jetzt Karten aus einem Lernblock übernehmen."
+            )
+            return redirect("test_detail", pk=test.pk)
+
+    return render(request, "karteikarten/test_form.html", {"aktion": "Anlegen"})
+
+
+@login_required
+def test_edit(request, pk):
+    """Namen und Beschreibung aendern."""
+    test = _eigener_test(request, pk)
+
+    if request.method == "POST":
+        name = request.POST.get("name", "").strip()
+        doppelt = (
+            Test.objects.filter(benutzer=request.user, name=name)
+            .exclude(pk=test.pk)
+            .exists()
+        )
+        if not name:
+            messages.error(request, "Der Test braucht einen Namen.")
+        elif doppelt:
+            messages.error(request, f"„{name}“ gibt es schon.")
+        else:
+            test.name = name
+            test.beschreibung = request.POST.get("beschreibung", "").strip()
+            test.save()
+            return redirect("test_detail", pk=test.pk)
+
+    return render(
+        request, "karteikarten/test_form.html", {"test": test, "aktion": "Speichern"}
+    )
+
+
+@login_required
+@require_POST
+def test_loeschen(request, pk):
+    """Test loeschen — die Karten selbst bleiben unberuehrt."""
+    test = _eigener_test(request, pk)
+    name = test.name
+    test.delete()
+    messages.success(request, f"Test „{name}“ gelöscht. Die Karten selbst bleiben.")
+    return redirect("test_liste")
+
+
+@login_required
+def test_detail(request, pk):
+    """Ein Test mit seinen Karten, nach Herkunft gruppiert."""
+    test = _eigener_test(request, pk)
+    karten = _test_karten(test)
+
+    nach_block = {}
+    for karte in karten:
+        nach_block.setdefault(karte.lernblock, []).append(karte)
+
+    context = {
+        "test": test,
+        "gruppen": [
+            {"lernblock": block, "karten": liste} for block, liste in nach_block.items()
+        ],
+        "anzahl": len(karten),
+        "faellig": len(_faellige_aus_karten(request.user, karten, limit=999)),
+        "modus": _bevorzugter_modus_fuer_test(request.user, test),
+    }
+    return render(request, "karteikarten/test_detail.html", context)
+
+
+def _bevorzugter_modus_fuer_test(user, test):
+    """Wie bei Bloecken — nur dass "Rueckwaerts" an allen Karten haengt."""
+    stats = BenutzerStatistik.get_or_create_for_user(user)
+    modus = MODI_NACH_SCHLUESSEL.get(stats.bevorzugter_modus, LERNMODI[0])
+    if modus.get("braucht_beide_richtungen") and not test.bidirektional:
+        return LERNMODI[0]
+    if test.anzahl_karten < modus.get("mindestkarten", 0):
+        return LERNMODI[0]
+    return modus
+
+
+@login_required
+@require_POST
+def test_karten_uebernehmen(request, pk):
+    """Karten aus einem Lernblock in einen Test uebernehmen.
+
+    Der Einstieg liegt bewusst in der Kartenauswahl eines Blocks: dort sieht man,
+    welche Woerter Muehe machen, und genau die gehoeren in den Test.
+    """
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    karten_ids = {int(k) for k in request.POST.getlist("karten") if k.isdigit()}
+    karten = lernblock.karten.filter(pk__in=karten_ids)
+
+    if not karten.exists():
+        messages.error(request, "Keine Karten ausgewählt.")
+        return redirect("kartenauswahl", pk=lernblock.pk)
+
+    ziel = request.POST.get("test", "")
+    if ziel == "neu":
+        name = request.POST.get("neuer_name", "").strip()
+        if not name:
+            messages.error(request, "Der neue Test braucht einen Namen.")
+            return redirect("kartenauswahl", pk=lernblock.pk)
+        test, _ = Test.objects.get_or_create(benutzer=request.user, name=name)
+    else:
+        test = get_object_or_404(Test, pk=ziel, benutzer=request.user)
+
+    vorher = test.anzahl_karten
+    test.karten.add(*karten)
+    dazu = test.anzahl_karten - vorher
+
+    messages.success(
+        request,
+        f"{dazu} Karten zu „{test.name}“ hinzugefügt."
+        if dazu
+        else f"Alle gewählten Karten waren schon in „{test.name}“.",
+    )
+    return redirect("test_detail", pk=test.pk)
+
+
+@login_required
+@require_POST
+def test_karte_entfernen(request, pk, karte_pk):
+    """Eine Karte aus dem Test nehmen — die Karte selbst bleibt."""
+    test = _eigener_test(request, pk)
+    test.karten.remove(get_object_or_404(Karteikarte, pk=karte_pk))
+    return redirect("test_detail", pk=test.pk)
+
+
+@login_required
+def test_lernen(request, pk):
+    """Startet die Abfrage des Tests im gewaehlten Modus."""
+    test = _eigener_test(request, pk)
+    modus = _bevorzugter_modus_fuer_test(request.user, test)
+    return redirect("test_lernen_modus", pk=test.pk, modus=modus["schluessel"])
+
+
+@login_required
+def test_lernen_modus(request, pk, modus):
+    """Abfrage eines Tests — dieselben Modi wie bei einem Lernblock.
+
+    Ein Test ist fuer die Abfrage nichts anderes als eine Kartenmenge; deshalb
+    laeuft er durch dieselben Vorlagen und verbucht ueber denselben Weg.
+    """
+    test = _eigener_test(request, pk)
+    if modus not in MODI_NACH_SCHLUESSEL:
+        return redirect("test_lernen", pk=test.pk)
+    if modus == "rueckwaerts" and not test.bidirektional:
+        return redirect("test_lernen_modus", pk=test.pk, modus="klassisch")
+
+    alle_karten = _test_karten(test)
+    if modus == "multiple_choice" and len(alle_karten) < 4:
+        return render(
+            request,
+            "karteikarten/lernen_fertig.html",
+            {
+                "quelle_name": test.name,
+                "abbrechen_url": reverse("test_detail", args=[test.pk]),
+                "error": "Mindestens 4 Karten für Multiple Choice benötigt.",
+            },
+        )
+
+    faellige = _faellige_aus_karten(request.user, alle_karten, limit=50)
+    gemeinsam = {
+        "quelle_name": test.name,
+        "abbrechen_url": reverse("test_detail", args=[test.pk]),
+        "zuruecksetzen_url": reverse("test_zuruecksetzen", args=[test.pk]),
+    }
+
+    if not faellige:
+        return render(
+            request,
+            "karteikarten/lernen_fertig.html",
+            {"modus": modus, **gemeinsam},
+        )
+
+    karte, status = _naechste_karte(request, faellige)
+    context = {
+        "karte": karte,
+        "status": status,
+        "modus": modus,
+        "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"test-{test.pk}-{modus}", len(faellige)
+        ),
+        "blockfortschritt": kurzfortschritt(request.user, karte.lernblock),
+        **gemeinsam,
+    }
+
+    if modus == "multiple_choice":
+        context["optionen"] = _mc_optionen(karte, alle_karten)
+        return render(request, "karteikarten/lernen_multiple_choice.html", context)
+
+    if modus == "tippen":
+        context.update(
+            {
+                "richtung": "",
+                "frage": karte.begriff,
+                "gefragt_label": karte.lernblock.rueckseite_label,
+            }
+        )
+        return render(request, "karteikarten/lernen_tippen.html", context)
+
+    return render(request, "karteikarten/lernen_karte.html", context)
+
+
+@login_required
+@require_POST
+def test_zuruecksetzen(request, pk):
+    """Alle Karten des Tests wieder auf heute faellig stellen."""
+    test = _eigener_test(request, pk)
+    for karte in test.karten.all():
+        status = BenutzerKarteStatus.get_or_create_for_user(request.user, karte)
+        status.naechste_wiederholung = date.today()
+        status.save()
+    return redirect("test_lernen", pk=test.pk)
+
+
+@login_required
+def test_fortschritt(request, pk):
+    """Fortschritt eines Tests — dieselben Kennzahlen wie bei einem Block."""
+    test = _eigener_test(request, pk)
+    return render(
+        request,
+        "karteikarten/test_fortschritt.html",
+        {
+            "test": test,
+            "auswertung": kartenmenge_fortschritt(request.user, _test_karten(test)),
+        },
+    )
+
+
 @login_required
 def mehr(request):
     """Alles, was nicht zum Lernen gehoert — inklusive der Verwaltung."""
@@ -1319,6 +1625,7 @@ def kartenauswahl(request, pk):
         "lernblock": lernblock,
         "karten_mit_status": karten_mit_status,
         "gruppen": [gruppe for gruppe in gruppen.values() if gruppe["anzahl"]],
+        "tests": Test.objects.filter(benutzer=request.user),
         "anzahl_problemkarten": sum(1 for wert in falsch_je_karte.values() if wert),
         "vorauswahl": vorauswahl,
         **_auswahl_context(request, lernblock),
@@ -1355,6 +1662,7 @@ def lernen_klassisch(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "klassisch",
+                **_quelle_block(lernblock),
                 **_auswahl_context(request, lernblock),
             },
         )
@@ -1371,6 +1679,7 @@ def lernen_klassisch(request, pk):
             request, f"block-{lernblock.pk}-klassisch", len(faellige)
         ),
         "blockfortschritt": kurzfortschritt(user, lernblock),
+        **_quelle_block(lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -1396,6 +1705,7 @@ def lernen_rueckwaerts(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "rueckwaerts",
+                **_quelle_block(lernblock),
                 **_auswahl_context(request, lernblock),
             },
         )
@@ -1412,6 +1722,7 @@ def lernen_rueckwaerts(request, pk):
             request, f"block-{lernblock.pk}-rueckwaerts", len(faellige)
         ),
         "blockfortschritt": kurzfortschritt(user, lernblock),
+        **_quelle_block(lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -1433,6 +1744,7 @@ def lernen_multiple_choice(request, pk):
                 "lernblock": lernblock,
                 "modus": "multiple_choice",
                 "error": "Mindestens 4 Karten für Multiple Choice benötigt.",
+                **_quelle_block(lernblock),
             },
         )
 
@@ -1447,34 +1759,25 @@ def lernen_multiple_choice(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "multiple_choice",
+                **_quelle_block(lernblock),
                 **_auswahl_context(request, lernblock),
             },
         )
 
     karte, status = _naechste_karte(request, faellige)
 
-    # Get 3 distractors
-    andere_karten = [k for k in alle_karten if k.pk != karte.pk]
-    distraktoren = random.sample(andere_karten, min(3, len(andere_karten)))
-
-    # Build answer options
-    optionen = [{"text": karte.definition, "korrekt": True, "karte_id": karte.pk}]
-    for d in distraktoren:
-        optionen.append({"text": d.definition, "korrekt": False, "karte_id": d.pk})
-
-    random.shuffle(optionen)
-
     context = {
         "lernblock": lernblock,
         "karte": karte,
         "status": status,
-        "optionen": optionen,
+        "optionen": _mc_optionen(karte, alle_karten),
         "modus": "multiple_choice",
         "verbleibend": len(faellige),
         "fortschritt": _sitzungsfortschritt(
             request, f"block-{lernblock.pk}-mc", len(faellige)
         ),
         "blockfortschritt": kurzfortschritt(user, lernblock),
+        **_quelle_block(lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_multiple_choice.html", context)
@@ -1703,23 +2006,12 @@ def lernen_kombiniert_mc(request):
 
     karte, status = _naechste_karte(request, faellige)
 
-    # Get 3 distractors from all blocks
-    andere_karten = [k for k in alle_karten if k.pk != karte.pk]
-    distraktoren = random.sample(andere_karten, min(3, len(andere_karten)))
-
-    # Build answer options
-    optionen = [{"text": karte.definition, "korrekt": True, "karte_id": karte.pk}]
-    for d in distraktoren:
-        optionen.append({"text": d.definition, "korrekt": False, "karte_id": d.pk})
-
-    random.shuffle(optionen)
-
     context = {
         "lernbloecke": lernbloecke,
         "block_ids": block_ids,
         "karte": karte,
         "status": status,
-        "optionen": optionen,
+        "optionen": _mc_optionen(karte, alle_karten),
         "modus": "multiple_choice",
         "verbleibend": len(faellige),
         "fortschritt": _sitzungsfortschritt(

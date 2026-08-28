@@ -507,6 +507,41 @@ Blöcke ohne Kapitel verschwinden nicht, sondern stehen am Ende unter „Ohne Bu
 
 ---
 
+### 4.4b Tests — frei zusammengestellte Übungssets
+
+Vor einer Klassenarbeit zählt selten ein ganzer Lernblock, sondern eine Handvoll
+Wörter aus zwei Kapiteln. Ein **Test** bündelt genau die, über Buch- und
+Blockgrenzen hinweg, und wird abgefragt wie jedes andere Modul — dieselben vier
+Modi, dasselbe Leitner-System, eigene Statistik.
+
+**Karten werden verwiesen, nicht kopiert.** Eine Antwort im Test stellt dieselbe
+Stufe weiter wie eine Antwort im Herkunftsblock; ein gelöschter Test nimmt keine
+Karte mit. Alles andere wäre doppelte Buchführung über dieselbe Vokabel.
+
+**Zusammenstellen** läuft über die Kartenauswahl eines Blocks: dort sieht man,
+welche Wörter Mühe machen, und genau die gehören in den Test. Die Auswahl geht
+per `formaction` an ein zweites Ziel — dieselben Häkchen, ein anderer Knopf. Ein
+Test lässt sich so aus mehreren Blöcken füllen; im Test selbst sind die Karten
+nach Herkunftsblock gruppiert und einzeln wieder entfernbar.
+
+Ein Test gehört genau einer Person (`unique_together` auf Benutzer + Name);
+fremde Tests sind unsichtbar, nicht verboten — der Aufruf endet in einem 404.
+
+**Grenzen, die sich aus den Karten ergeben:**
+
+| Modus | Bedingung |
+|---|---|
+| Rückwärts | nur wenn *jede* Karte aus einem beidseitigen Block stammt |
+| Multiple Choice | mindestens 4 Karten im Test |
+
+Passt der bevorzugte Modus nicht, fällt die Abfrage still auf „Klassisch" zurück.
+
+**Statistik** wie bei einem Block, mit einer Ausnahme: der Tagesverlauf wird je
+Lernblock geführt (`TagesStatistik`), und für eine gemischte Menge gibt es keinen.
+Statt eine falsche Kurve zu zeichnen, bleibt er leer und die Seite sagt warum.
+
+---
+
 ### 4.5 Fortschritt
 
 Zwei Ebenen: der Reiter **Fortschritt** über alle Blöcke, und je Block eine eigene
@@ -688,6 +723,13 @@ Die App wird als Progressive Web App implementiert:
 | GET/POST | `/lernblock/<id>/modus/` | Lernmodus wählen (gilt für alle Blöcke) |
 | GET | `/lernblock/<id>/lernen/` | Startet die Abfrage im gewählten Modus |
 | GET | `/lernen/alles/` | Alle eigenen Blöcke zusammen, im gewählten Modus |
+| GET | `/tests/` | Eigene Tests |
+| GET/POST | `/tests/neu/` · `/tests/<id>/bearbeiten/` | Test anlegen, bearbeiten |
+| GET | `/tests/<id>/` | Test mit Karten nach Herkunft |
+| POST | `/lernblock/<id>/in-test/` | Kartenauswahl in einen Test übernehmen |
+| GET | `/tests/<id>/lernen/` · `/tests/<id>/lernen/<modus>/` | Test abfragen |
+| GET | `/tests/<id>/fortschritt/` | Statistik eines Tests |
+| GET | `/buecher/` … | Bücher und Kapitel verwalten (staff) |
 | GET | `/lernblock/<id>/lernen/klassisch/` | Klassischer Modus |
 | GET | `/lernblock/<id>/lernen/rueckwaerts/` | Rückwärts-Modus |
 | GET | `/lernblock/<id>/lernen/multiple-choice/` | Multiple-Choice |
@@ -749,6 +791,8 @@ Folgende Features sind **nicht** Teil des MVP:
 | **Stufe 1–5** | Leitner-Fach in der Oberfläche. Heißt bewusst nicht mehr „Fach" — das meint dort das Schulfach |
 | **Schulfach** | Englisch, Französisch, Deutsch … — der Filter auf der Startseite |
 | **Erstversuchsquote** | Anteil der Karten, die beim allerersten Mal richtig beantwortet wurden |
+| **Test** | Frei zusammengestelltes Übungsset über Block- und Buchgrenzen hinweg; verweist auf Karten, kopiert sie nicht |
+| **Buch / Kapitel** | `Lehrwerk` und `LehrwerkUnit` — die Gliederung über den Lernblöcken |
 | **PWA** | Progressive Web App - installierbare Webanwendung |
 | **Streak** | Anzahl aufeinanderfolgender Lerntage |
 | **Bidirektional** | Lernen in beide Richtungen (Begriff↔Definition) |

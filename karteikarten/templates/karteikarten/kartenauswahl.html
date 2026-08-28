@@ -111,6 +111,32 @@
     {% endif %}
 
     {% if karten_mit_status %}
+    <!-- Dieselbe Auswahl, zweites Ziel: die gewaehlten Karten in einen Test legen.
+         formaction statt eigenem Formular — sonst muesste die Auswahl doppelt
+         im Markup stehen. -->
+    <details class="card mb-3">
+        <summary class="card-body py-3 d-flex align-items-center gap-2" style="cursor: pointer;">
+            <i class="bi bi-clipboard-check text-body-secondary"></i>
+            <span class="flex-grow-1">Auswahl in einen Test &uuml;bernehmen</span>
+            <i class="bi bi-chevron-down text-body-secondary small"></i>
+        </summary>
+        <div class="card-body border-top d-flex flex-column gap-2">
+            <label for="test" class="form-label small text-body-secondary mb-0">Ziel</label>
+            <select class="form-select" id="test" name="test">
+                {% for test in tests %}
+                <option value="{{ test.pk }}">{{ test.name }} ({{ test.anzahl_karten }} Karten)</option>
+                {% endfor %}
+                <option value="neu">Neuer Test &hellip;</option>
+            </select>
+            <input type="text" class="form-control" name="neuer_name"
+                   placeholder="Name des neuen Tests" autocomplete="off">
+            <button type="submit" class="btn btn-outline-primary"
+                    formaction="{% url 'test_karten_uebernehmen' lernblock.pk %}">
+                <i class="bi bi-plus-lg me-1"></i>&Uuml;bernehmen
+            </button>
+        </div>
+    </details>
+
     <div class="aktionsleiste">
         <button type="submit" class="btn btn-primary btn-lg w-100">
             <span id="anzahl-gewaehlt">0</span> Karten &uuml;ben

@@ -1,11 +1,11 @@
 {% extends 'karteikarten/lernansicht.html' %}
 
-{% block title %}Lernen - {{ lernblock.name }}{% endblock %}
+{% block title %}Lernen - {{ quelle_name }}{% endblock %}
 
 {% block kopf_titel %}{% if modus == 'rueckwaerts' %}Rückwärts{% else %}Klassisch{% endif %}{% endblock %}
 
 {% block kopf_aktion %}
-<a href="{% url 'lernblock_detail' lernblock.pk %}" class="text-white" aria-label="Abbrechen">
+<a href="{{ abbrechen_url }}" class="text-white" aria-label="Abbrechen">
     <i class="bi bi-x-lg fs-5"></i>
 </a>
 {% endblock %}

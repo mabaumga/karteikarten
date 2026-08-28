@@ -25,6 +25,36 @@ urlpatterns = [
         views.lernbloecke_speichern,
         name="lernbloecke_speichern",
     ),
+    # Tests (frei zusammengestellte Uebungssets)
+    path("tests/", views.test_liste, name="test_liste"),
+    path("tests/neu/", views.test_create, name="test_create"),
+    path("tests/<int:pk>/", views.test_detail, name="test_detail"),
+    path("tests/<int:pk>/bearbeiten/", views.test_edit, name="test_edit"),
+    path("tests/<int:pk>/loeschen/", views.test_loeschen, name="test_loeschen"),
+    path("tests/<int:pk>/lernen/", views.test_lernen, name="test_lernen"),
+    path(
+        "tests/<int:pk>/lernen/<str:modus>/",
+        views.test_lernen_modus,
+        name="test_lernen_modus",
+    ),
+    path(
+        "tests/<int:pk>/zuruecksetzen/",
+        views.test_zuruecksetzen,
+        name="test_zuruecksetzen",
+    ),
+    path(
+        "tests/<int:pk>/fortschritt/", views.test_fortschritt, name="test_fortschritt"
+    ),
+    path(
+        "tests/<int:pk>/karte/<int:karte_pk>/entfernen/",
+        views.test_karte_entfernen,
+        name="test_karte_entfernen",
+    ),
+    path(
+        "lernblock/<int:pk>/in-test/",
+        views.test_karten_uebernehmen,
+        name="test_karten_uebernehmen",
+    ),
     # Buecher und Kapitel (Verwaltung)
     path("buecher/", views.buecher, name="buecher"),
     path("buecher/neu/", views.buch_create, name="buch_create"),
