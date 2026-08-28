@@ -17,7 +17,11 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 
 from .services.antwortpruefung import FAST, RICHTIG, pruefe_antwort
-from .services.statistik import block_fortschritt, gesamt_fortschritt
+from .services.statistik import (
+    block_fortschritt,
+    gegliederter_fortschritt,
+    kurzfortschritt,
+)
 from .models import (
     Lernblock,
     Karteikarte,
@@ -44,6 +48,20 @@ def staff_required(view_func):
 
 # Farben fuer die Fachmarke links an jeder Blockzeile. Fest zugeordnet ueber den
 # Namen: dasselbe Fach soll auf jedem Geraet dieselbe Farbe haben.
+def _gewaehlte_bloecke(user):
+    """Die Bloecke, die der Benutzer sich ausgesucht hat — sonst keine.
+
+    Einzige Antwort auf diese Frage; Startseite, Fortschritt und "alles zusammen"
+    haben sie vorher jeweils selbst gestellt.
+    """
+    return [
+        zuordnung.lernblock
+        for zuordnung in BenutzerLernblock.objects.filter(benutzer=user).select_related(
+            "lernblock"
+        )
+    ]
+
+
 # Umfang des Fortschrittsrings (2 * pi * r bei r = 21) — das Template kann nicht rechnen.
 RING_UMFANG = 132
 
@@ -110,12 +128,7 @@ def dashboard(request):
     """Main dashboard with user's learning blocks."""
     user = request.user
 
-    # Get user's selected blocks
-    benutzer_bloecke = BenutzerLernblock.objects.filter(benutzer=user).select_related(
-        "lernblock"
-    )
-
-    lernbloecke = [bl.lernblock for bl in benutzer_bloecke]
+    lernbloecke = _gewaehlte_bloecke(user)
 
     # Schulfach-Filter. Gemeint ist das Schulfach (Englisch, Franzoesisch), nicht das
     # Leitner-Fach 1-5 — im Code heisst beides "Fach". display_schulfach folgt der
@@ -809,6 +822,7 @@ def lernen_tippen(request, pk):
         "fortschritt": _sitzungsfortschritt(
             request, f"block-{lernblock.pk}-tippen", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(request.user, lernblock),
         **_tipp_kontext(
             karte,
             status,
@@ -863,8 +877,7 @@ def lernen_alles(request):
     die Einstellung.
     """
     block_ids = ",".join(
-        str(zuordnung.lernblock_id)
-        for zuordnung in BenutzerLernblock.objects.filter(benutzer=request.user)
+        str(lernblock.pk) for lernblock in _gewaehlte_bloecke(request.user)
     )
     if not block_ids:
         return redirect("meine_lernbloecke")
@@ -876,18 +889,16 @@ def lernen_alles(request):
 
 @login_required
 def fortschritt(request):
-    """Fortschritt ueber alle Bloecke, mit einer Zeile je Block."""
-    lernbloecke = [
-        zuordnung.lernblock
-        for zuordnung in BenutzerLernblock.objects.filter(
-            benutzer=request.user
-        ).select_related("lernblock")
-    ]
-    stats = BenutzerStatistik.get_or_create_for_user(request.user)
+    """Fortschritt ueber die *ausgewaehlten* Bloecke, nach Schulfach und Lehrwerk.
 
+    Wer im Februar Unit 1 waehlt und im April Unit 2 dazunimmt, soll im Februar
+    keine Zahlen zu Unit 2 sehen: gezaehlt wird nur, was in `BenutzerLernblock`
+    steht, nicht was es in der Datenbank gibt.
+    """
+    lernbloecke = _gewaehlte_bloecke(request.user)
     context = {
-        "auswertung": gesamt_fortschritt(request.user, lernbloecke),
-        "stats": stats,
+        "auswertung": gegliederter_fortschritt(request.user, lernbloecke),
+        "stats": BenutzerStatistik.get_or_create_for_user(request.user),
     }
     return render(request, "karteikarten/fortschritt.html", context)
 
@@ -1068,6 +1079,7 @@ def lernen_klassisch(request, pk):
         "fortschritt": _sitzungsfortschritt(
             request, f"block-{lernblock.pk}-klassisch", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(user, lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -1108,6 +1120,7 @@ def lernen_rueckwaerts(request, pk):
         "fortschritt": _sitzungsfortschritt(
             request, f"block-{lernblock.pk}-rueckwaerts", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(user, lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -1170,6 +1183,7 @@ def lernen_multiple_choice(request, pk):
         "fortschritt": _sitzungsfortschritt(
             request, f"block-{lernblock.pk}-mc", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(user, lernblock),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_multiple_choice.html", context)
@@ -1352,6 +1366,7 @@ def lernen_kombiniert(request):
         "fortschritt": _sitzungsfortschritt(
             request, f"kombiniert-{block_ids}-klassisch", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(request.user, karte.lernblock),
     }
     return render(request, "karteikarten/lernen_kombiniert_karte.html", context)
 
@@ -1419,6 +1434,7 @@ def lernen_kombiniert_mc(request):
         "fortschritt": _sitzungsfortschritt(
             request, f"kombiniert-{block_ids}-mc", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(request.user, karte.lernblock),
     }
     return render(request, "karteikarten/lernen_kombiniert_mc.html", context)
 
@@ -1452,6 +1468,7 @@ def lernen_kombiniert_tippen(request):
         "fortschritt": _sitzungsfortschritt(
             request, f"kombiniert-{block_ids}-tippen", len(faellige)
         ),
+        "blockfortschritt": kurzfortschritt(request.user, karte.lernblock),
         **_tipp_kontext(
             karte,
             status,

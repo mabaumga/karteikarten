@@ -18,7 +18,11 @@ from karteikarten.models import (
     Lernergebnis,
     TagesStatistik,
 )
-from karteikarten.services.statistik import block_fortschritt, gesamt_fortschritt
+from karteikarten.services.statistik import (
+    block_fortschritt,
+    gegliederter_fortschritt,
+    kurzfortschritt,
+)
 
 
 @pytest.fixture
@@ -171,9 +175,123 @@ def test_gesamt_summiert_ueber_bloecke(benutzer, block, db):
     _antwort(benutzer, block.karten.first(), richtig=True)
     _antwort(benutzer, karte, richtig=False)
 
-    auswertung = gesamt_fortschritt(benutzer, [block, zweiter])
+    auswertung = gegliederter_fortschritt(benutzer, [block, zweiter])
 
     assert auswertung["anzahl_karten"] == 5
     assert auswertung["erstversuch_gesamt"] == 2
     assert auswertung["erstversuch_quote"] == 50
     assert len(auswertung["bloecke"]) == 2
+
+
+def test_nur_uebergebene_bloecke_zaehlen(benutzer, block, db):
+    """Was der Benutzer sich nicht ausgesucht hat, taucht nirgends auf."""
+    fremd = Lernblock.objects.create(name="Unit 9")
+    Karteikarte.objects.create(lernblock=fremd, begriff="cat", definition="Katze")
+
+    auswertung = gegliederter_fortschritt(benutzer, [block])
+
+    assert auswertung["anzahl_karten"] == 4
+    assert [e["lernblock"] for e in auswertung["bloecke"]] == [block]
+
+
+# --- Gliederung nach Schulfach und Lehrwerk ----------------------------------------
+
+
+@pytest.fixture
+def lehrwerke(db):
+    """Zwei Sprachen, drei Buecher — wie in einem echten Schuljahr."""
+    from karteikarten.models import Lehrwerk, LehrwerkUnit, Schulfach
+
+    englisch = Schulfach.objects.create(name="Englisch")
+    franzoesisch = Schulfach.objects.create(name="Französisch")
+
+    gebaut = {}
+    for name, fach in (
+        ("Camden Town 10", englisch),
+        ("Green Line 2", englisch),
+        ("À plus 1", franzoesisch),
+    ):
+        lehrwerk = Lehrwerk.objects.create(name=name, schulfach=fach)
+        gebaut[name] = LehrwerkUnit.objects.create(lehrwerk=lehrwerk, name="Unit 1")
+    return gebaut
+
+
+def _block_mit_karten(unit, name, anzahl):
+    lernblock = Lernblock.objects.create(name=name, lehrwerk_unit=unit)
+    for i in range(anzahl):
+        Karteikarte.objects.create(
+            lernblock=lernblock, begriff=f"{name}-{i}", definition=f"Bedeutung {i}"
+        )
+    return lernblock
+
+
+def test_quoten_je_schulfach_und_lehrwerk(benutzer, lehrwerke):
+    """Genau der Fall aus der Praxis: 100 % Französisch, 50 % Englisch, 75 % gesamt."""
+    franz = _block_mit_karten(lehrwerke["À plus 1"], "Unité 1", 2)
+    engl = _block_mit_karten(lehrwerke["Camden Town 10"], "Wortliste 1", 2)
+
+    for karte in franz.karten.all():
+        _antwort(benutzer, karte, richtig=True)
+    karten = list(engl.karten.all())
+    _antwort(benutzer, karten[0], richtig=True)
+    _antwort(benutzer, karten[1], richtig=False)
+
+    auswertung = gegliederter_fortschritt(benutzer, [franz, engl])
+    je_fach = {fach["name"]: fach for fach in auswertung["schulfaecher"]}
+
+    assert auswertung["erstversuch_quote"] == 75
+    assert je_fach["Französisch"]["erstversuch_quote"] == 100
+    assert je_fach["Englisch"]["erstversuch_quote"] == 50
+
+
+def test_mehrere_lehrwerke_eines_fachs_bleiben_getrennt(benutzer, lehrwerke):
+    camden = _block_mit_karten(lehrwerke["Camden Town 10"], "Wortliste 1", 2)
+    green = _block_mit_karten(lehrwerke["Green Line 2"], "Unit 1", 2)
+
+    for karte in camden.karten.all():
+        _antwort(benutzer, karte, richtig=True)
+    for karte in green.karten.all():
+        _antwort(benutzer, karte, richtig=False)
+
+    auswertung = gegliederter_fortschritt(benutzer, [camden, green])
+    englisch = auswertung["schulfaecher"][0]
+    je_buch = {buch["name"]: buch for buch in englisch["lehrwerke"]}
+
+    assert englisch["name"] == "Englisch"
+    assert len(englisch["lehrwerke"]) == 2
+    assert je_buch["Camden Town 10"]["erstversuch_quote"] == 100
+    assert je_buch["Green Line 2"]["erstversuch_quote"] == 0
+
+
+def test_bloecke_ohne_lehrwerk_bekommen_eigene_gruppen(benutzer, block):
+    auswertung = gegliederter_fortschritt(benutzer, [block])
+
+    fach = auswertung["schulfaecher"][0]
+    assert fach["name"] == "Ohne Schulfach"
+    assert fach["lehrwerke"][0]["name"] == "Ohne Lehrwerk"
+    assert fach["lehrwerke"][0]["bloecke"][0]["lernblock"] == block
+
+
+# --- Kurzfortschritt fuer die Abfrage ----------------------------------------------
+
+
+def test_kurzfortschritt_zaehlt_die_sicheren_karten(benutzer, block):
+    karten = list(block.karten.all())
+    for karte in karten[:1]:
+        status = BenutzerKarteStatus.get_or_create_for_user(benutzer, karte)
+        status.fach = 5
+        status.save()
+
+    kurz = kurzfortschritt(benutzer, block)
+
+    assert kurz["sitzt"] == 1
+    assert kurz["anzahl"] == 4
+    assert kurz["prozent"] == 25
+
+
+def test_kurzfortschritt_ohne_karten_bleibt_bei_null(benutzer, db):
+    leer = Lernblock.objects.create(name="Leer")
+
+    kurz = kurzfortschritt(benutzer, leer)
+
+    assert kurz == {"lernblock": leer, "sitzt": 0, "anzahl": 0, "prozent": 0}

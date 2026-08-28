@@ -492,6 +492,21 @@ Antwort je Karte; spätere Wiederholungen ändern sie nicht.
 | Problemkarten | Anzahl `richtig=False` je Karte | die fünf mit den meisten Fehlern, mit Weg ins gezielte Üben |
 | Letzte 7 Tage | `TagesStatistik` | Antworten pro Tag, davon richtig; Lücken als Nulltage |
 
+**Gezählt wird nur, was ausgewählt ist.** Grundlage ist immer `BenutzerLernblock`,
+nie der Datenbestand: Wer im Februar Unit 1 wählt und im April Unit 2 dazunimmt,
+sieht im Februar keine Zahlen zu Unit 2. Ein Ort beantwortet diese Frage
+(`_gewaehlte_bloecke`), Startseite und Fortschritt teilen ihn sich.
+
+**Gegliedert nach Schulfach und Lehrbuch.** Die Gesamtquote allein verwischt, was
+den Lernenden interessiert: 75 % können 100 % in Französisch und 50 % in Englisch
+heißen. Die Ansicht zeigt deshalb drei Ebenen — Gesamt, je Schulfach, je Lehrwerk
+— und darin die einzelnen Blöcke. Lehrwerke mit mehreren Blöcken sind eingeklappt
+(`<details>`, kein JavaScript).
+
+**Während der Abfrage** steht unter jeder Karte leise, wie weit ihr Block ist
+(`kurzfortschritt`: wie viele Karten Stufe 5 erreicht haben). Im kombinierten
+Modus gehört die Anzeige zum Block der gerade gezeigten Karte.
+
 Implementierung: `karteikarten/services/statistik.py`. Die Erstversuchs-Auswahl
 läuft bewusst in Python — SQLite kennt kein `DISTINCT ON`, und bei diesen
 Datenmengen ist die offensichtlich richtige Lösung die bessere.

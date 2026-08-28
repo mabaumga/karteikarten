@@ -155,3 +155,40 @@ def test_normale_seite_zeigt_die_navigation(angemeldet, block):
     inhalt = angemeldet.get(reverse("dashboard")).content.decode()
 
     assert 'aria-label="Hauptnavigation"' in inhalt
+
+
+# --- Fortschritt in der Abfrage -----------------------------------------------------
+
+
+def test_abfrage_zeigt_den_blockfortschritt(angemeldet, block):
+    """Sichtbar, aber leise: Blockname und wie viele Karten sitzen."""
+    inhalt = angemeldet.get(
+        reverse("lernen_klassisch", args=[block.pk])
+    ).content.decode()
+
+    assert "0 von 5 sitzen" in inhalt
+    assert block.name in inhalt
+
+
+def test_kombinierte_abfrage_zeigt_den_block_der_karte(angemeldet, block, schueler):
+    zweiter = Lernblock.objects.create(name="Unit 5")
+    Karteikarte.objects.create(lernblock=zweiter, begriff="cat", definition="Katze")
+    BenutzerLernblock.objects.create(benutzer=schueler, lernblock=zweiter)
+
+    antwort = angemeldet.get(
+        reverse("lernen_kombiniert"), {"bloecke": f"{block.pk},{zweiter.pk}"}
+    )
+
+    gezeigt = antwort.context["karte"].lernblock
+    assert antwort.context["blockfortschritt"]["lernblock"] == gezeigt
+
+
+def test_fortschritt_zaehlt_nur_ausgewaehlte_bloecke(angemeldet, block, db):
+    """Ein Block, den niemand gewaehlt hat, taucht in der Auswertung nicht auf."""
+    fremd = Lernblock.objects.create(name="Nicht gewaehlt")
+    Karteikarte.objects.create(lernblock=fremd, begriff="dog", definition="Hund")
+
+    auswertung = angemeldet.get(reverse("fortschritt")).context["auswertung"]
+
+    assert [e["lernblock"] for e in auswertung["bloecke"]] == [block]
+    assert auswertung["anzahl_karten"] == 5

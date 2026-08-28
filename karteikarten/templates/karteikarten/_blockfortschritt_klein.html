@@ -1,0 +1,20 @@
+{% comment %}
+Wie weit der Block insgesamt ist, während man ihn übt. Bewusst leise: ein Wert am
+Rand, der Zuversicht gibt, ohne von der Karte abzulenken.
+
+Erwartet: blockfortschritt
+{% endcomment %}
+{% if blockfortschritt.anzahl %}
+<div class="mx-auto mt-3" style="max-width: 320px;">
+    <div class="d-flex justify-content-between small text-body-secondary mb-1">
+        <span class="text-truncate">{{ blockfortschritt.lernblock.name }}</span>
+        <span class="flex-shrink-0 ms-2">{{ blockfortschritt.sitzt }} von {{ blockfortschritt.anzahl }} sitzen</span>
+    </div>
+    <div class="progress" style="height: 4px;"
+         role="progressbar" aria-label="Fortschritt in diesem Lernblock"
+         aria-valuenow="{{ blockfortschritt.sitzt }}" aria-valuemin="0"
+         aria-valuemax="{{ blockfortschritt.anzahl }}">
+        <div class="progress-bar bg-success" style="width: {{ blockfortschritt.prozent }}%"></div>
+    </div>
+</div>
+{% endif %}
