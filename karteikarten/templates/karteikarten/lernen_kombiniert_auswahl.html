@@ -66,8 +66,14 @@
             </button>
         </div>
         <div class="col-6">
+            <button type="button" class="btn btn-warning btn-lg w-100" onclick="startLernen('tippen')">
+                <i class="bi bi-keyboard d-block mb-1" style="font-size: 1.5rem;"></i>
+                Eintippen
+            </button>
+        </div>
+        <div class="col-12">
             <button type="button" class="btn btn-success btn-lg w-100" onclick="startLernen('mc')">
-                <i class="bi bi-ui-radios d-block mb-1" style="font-size: 1.5rem;"></i>
+                <i class="bi bi-ui-radios me-1"></i>
                 Multiple Choice
             </button>
         </div>
@@ -97,11 +103,12 @@
         }
 
         const params = 'bloecke=' + blocks.join(',');
-        if (modus === 'mc') {
-            window.location.href = '{% url "lernen_kombiniert_mc" %}?' + params;
-        } else {
-            window.location.href = '{% url "lernen_kombiniert" %}?' + params;
-        }
+        const ziele = {
+            mc: '{% url "lernen_kombiniert_mc" %}',
+            tippen: '{% url "lernen_kombiniert_tippen" %}',
+            klassisch: '{% url "lernen_kombiniert" %}',
+        };
+        window.location.href = (ziele[modus] || ziele.klassisch) + '?' + params;
     }
 
     // Update "select all" state based on individual checkboxes
