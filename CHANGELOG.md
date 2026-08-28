@@ -9,6 +9,19 @@ Conventional Commits generiert.
 
 <!-- version list -->
 
+## v1.5.0 (2026-08-28)
+
+### Features
+
+- **struktur**: Buecher und Kapitel pflegen, Blockauswahl als Baum
+  ([#47](https://github.com/mabaumga/karteikarten/pull/47),
+  [`e7cf600`](https://github.com/mabaumga/karteikarten/commit/e7cf600db95db1b5ba26e10973e13fbb5c7203fd))
+
+- **tests**: Frei zusammengestellte Uebungssets ueber Block- und Buchgrenzen
+  ([#48](https://github.com/mabaumga/karteikarten/pull/48),
+  [`aed7565`](https://github.com/mabaumga/karteikarten/commit/aed75658130a7bac3833d7c08e5a5c7aa3195649))
+
+
 ## v1.4.0 (2026-08-28)
 
 ### Features
