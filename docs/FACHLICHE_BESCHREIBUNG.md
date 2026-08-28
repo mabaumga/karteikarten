@@ -245,6 +245,50 @@ Vier Antwortmöglichkeiten, eine ist richtig:
 - Richtige Antwort: Grün markiert, Karte wandert ein Fach nach rechts
 - Falsche Antwort: Gewählte Antwort rot, richtige Antwort grün, Karte zu Fach 1
 
+### 3.4 Tippmodus (Eintippen)
+Die Antwort wird eingetippt statt nur aufgedeckt. Wer selbst formulieren muss,
+behält mehr — Wiedererkennen ist leichter als Erinnern.
+
+```
+┌────────────────────────────────────┐
+│         KARTEIKARTE                │
+│                                    │
+│         le chien                   │
+│                                    │
+│  Definition eintippen              │
+│  ┌──────────────────────────────┐  │
+│  │ der Hund                     │  │
+│  └──────────────────────────────┘  │
+│                                    │
+│         [ Prüfen ]                 │
+│                                    │
+└────────────────────────────────────┘
+```
+
+**Ablauf:**
+1. Vorderseite wird angezeigt
+2. Nutzer tippt die Rückseite ein, Enter oder "Prüfen"
+3. Die App bewertet — keine Selbsteinschätzung
+4. Lösung wird eingeblendet, Enter geht zur nächsten Karte
+
+**Bewertung** (serverseitig, `karteikarten/services/antwortpruefung.py`):
+
+| Ergebnis | Bedeutung | Zählt als |
+|---|---|---|
+| `richtig` | Antwort stimmt | richtig |
+| `fast` | Vokabel gewusst, ein Detail daneben | richtig, mit Hinweis auf die Schreibweise |
+| `falsch` | andere Vokabel oder leer | falsch |
+
+Nicht gewertet werden Groß-/Kleinschreibung, Leerzeichen, Satzzeichen am Rand und
+Klammerzusätze. Enthält die Lösung Alternativen (`gehen / laufen`, `der Hund, das
+Tier`, `eventuell oder vielleicht`), genügt eine davon. Als `fast` gelten fehlende
+Akzente (`eleve` statt `élève`) und ein fehlender Artikel (`Hund` statt `der Hund`,
+`go` statt `to go`) — auf einer deutschen Handytastatur wäre Strenge hier
+frustrierend statt lehrreich.
+
+**Richtung:** Bei bidirektionalen Lernblöcken lässt sich im Modus zwischen
+Vorder- und Rückseite umschalten.
+
 ---
 
 ## 4. Benutzeroberfläche
@@ -299,12 +343,14 @@ Vier Antwortmöglichkeiten, eine ist richtig:
 │  └─────────────────────────────────────────────────────┘   │
 │                                                             │
 │  🎯 Lernmodus wählen                                        │
-│  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐     │
-│  │   📖          │ │   🔄          │ │   📝          │     │
-│  │  Klassisch    │ │  Rückwärts    │ │   Multiple    │     │
-│  │               │ │               │ │   Choice      │     │
-│  │  15 fällig    │ │  15 fällig    │ │  15 fällig    │     │
-│  └───────────────┘ └───────────────┘ └───────────────┘     │
+│  ┌────────────────────────┐ ┌────────────────────────┐     │
+│  │   📖  Klassisch        │ │   ⌨️  Eintippen        │     │
+│  │       15 fällig        │ │       15 fällig        │     │
+│  └────────────────────────┘ └────────────────────────┘     │
+│  ┌────────────────────────┐ ┌────────────────────────┐     │
+│  │   🔄  Rückwärts        │ │   📝  Multiple Choice  │     │
+│  │       15 fällig        │ │       15 fällig        │     │
+│  └────────────────────────┘ └────────────────────────┘     │
 │                                                             │
 │  📚 Karten verwalten                                        │
 │  ┌─────────────────────────────────────────────────────┐   │
@@ -481,7 +527,7 @@ Die App wird als Progressive Web App implementiert:
 |------|-----|--------------|
 | id | Integer, PK | Primärschlüssel |
 | karte_id | FK → Karteikarte | Gelernte Karte |
-| modus | String | 'klassisch', 'rueckwaerts', 'multiple_choice' |
+| modus | String | 'klassisch', 'rueckwaerts', 'multiple_choice', 'tippen' |
 | richtung | String | 'vorwaerts', 'rueckwaerts' |
 | richtig | Boolean | Richtig beantwortet? |
 | zeitstempel | DateTime | Wann gelernt |
@@ -515,8 +561,10 @@ Die App wird als Progressive Web App implementiert:
 | GET | `/lernblock/<id>/lernen/` | Lernmodus-Auswahl |
 | GET | `/lernblock/<id>/lernen/klassisch/` | Klassischer Modus |
 | GET | `/lernblock/<id>/lernen/rueckwaerts/` | Rückwärts-Modus |
-| GET | `/lernblock/<id>/lernen/multiplechoice/` | Multiple-Choice |
-| POST | `/api/karte/<id>/antwort/` | Antwort speichern |
+| GET | `/lernblock/<id>/lernen/multiple-choice/` | Multiple-Choice |
+| GET | `/lernblock/<id>/lernen/tippen/` | Tippmodus (`?richtung=rueckwaerts`) |
+| POST | `/api/karte/<id>/antwort/` | Selbstbewertung speichern |
+| POST | `/api/karte/<id>/tippen/` | Eingetippte Antwort prüfen und speichern |
 | GET | `/karte/<id>/` | Karte anzeigen |
 | POST | `/karte/<id>/bearbeiten/` | Karte bearbeiten |
 | POST | `/karte/<id>/loeschen/` | Karte löschen |

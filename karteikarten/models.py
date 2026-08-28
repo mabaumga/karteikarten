@@ -411,6 +411,7 @@ class Lernergebnis(models.Model):
         ("klassisch", "Klassisch"),
         ("rueckwaerts", "Rückwärts"),
         ("multiple_choice", "Multiple Choice"),
+        ("tippen", "Eintippen"),
     ]
 
     benutzer = models.ForeignKey(

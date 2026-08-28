@@ -64,6 +64,11 @@ urlpatterns = [
         name="lernen_multiple_choice",
     ),
     path(
+        "lernblock/<int:pk>/lernen/tippen/",
+        views.lernen_tippen,
+        name="lernen_tippen",
+    ),
+    path(
         "lernblock/<int:pk>/lernen/zuruecksetzen/",
         views.karten_zuruecksetzen,
         name="karten_zuruecksetzen",
@@ -81,12 +86,22 @@ urlpatterns = [
         name="lernen_kombiniert_mc",
     ),
     path(
+        "lernen/kombiniert/tippen/",
+        views.lernen_kombiniert_tippen,
+        name="lernen_kombiniert_tippen",
+    ),
+    path(
         "lernen/kombiniert/zuruecksetzen/",
         views.karten_zuruecksetzen_kombiniert,
         name="karten_zuruecksetzen_kombiniert",
     ),
     # API
     path("api/karte/<int:pk>/antwort/", views.karte_antwort, name="karte_antwort"),
+    path(
+        "api/karte/<int:pk>/tippen/",
+        views.karte_tippen_antwort,
+        name="karte_tippen_antwort",
+    ),
     path("api/sync/pull/", views.sync_pull, name="sync_pull"),
     path("api/sync/push/", views.sync_push, name="sync_push"),
     # PWA
