@@ -7,6 +7,8 @@ Dieses Projekt verwendet [Semantic Versioning](https://semver.org/lang/de/).
 Einträge ab Version 1.0.0 werden von python-semantic-release aus den
 Conventional Commits generiert.
 
+<!-- version list -->
+
 ## [Unreleased]
 
 ### Added
