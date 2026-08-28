@@ -12,10 +12,12 @@ from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.db.models import Count, Max
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 
 from .services.antwortpruefung import FAST, RICHTIG, pruefe_antwort
+from .services.statistik import block_fortschritt, gesamt_fortschritt
 from .models import (
     Lernblock,
     Karteikarte,
@@ -38,6 +40,69 @@ def staff_required(view_func):
         return view_func(request, *args, **kwargs)
 
     return wrapper
+
+
+# Farben fuer die Fachmarke links an jeder Blockzeile. Fest zugeordnet ueber den
+# Namen: dasselbe Fach soll auf jedem Geraet dieselbe Farbe haben.
+# Umfang des Fortschrittsrings (2 * pi * r bei r = 21) — das Template kann nicht rechnen.
+RING_UMFANG = 132
+
+_FACHFARBEN = [
+    ("#DBEAFE", "#1D4ED8"),
+    ("#FCE7F3", "#9D174D"),
+    ("#DCFCE7", "#166534"),
+    ("#FEF3C7", "#92400E"),
+    ("#EDE9FE", "#5B21B6"),
+    ("#CFFAFE", "#155E75"),
+]
+
+
+def _schulfach_marke(lernblock):
+    """Kuerzel und Farbe des Schulfachs — die Marke links an der Blockzeile."""
+    fach = lernblock.display_schulfach
+    if fach is None:
+        return {
+            "kuerzel": lernblock.name[:2].upper(),
+            "farbe": "#E5E7EB",
+            "schrift": "#374151",
+        }
+    hintergrund, schrift = _FACHFARBEN[sum(fach.name.encode()) % len(_FACHFARBEN)]
+    return {"kuerzel": fach.name[:2].upper(), "farbe": hintergrund, "schrift": schrift}
+
+
+def _blockzustand(faellig, anzahl, naechste_faelligkeit):
+    """Was in der Blockzeile steht: was ansteht, und wann sonst.
+
+    Drei Zustaende, weil sie sich fuer den Lernenden wirklich unterscheiden:
+    heute dran, heute schon geschafft, und erst spaeter wieder faellig.
+    """
+    if faellig:
+        prozent = round(faellig / anzahl * 100) if anzahl else 0
+        return {
+            "zustand": "faellig",
+            "titel": "Heute üben",
+            "ring_prozent": prozent,
+            "ring_versatz": round(RING_UMFANG * (1 - prozent / 100)),
+            "tage_bis_faellig": 0,
+        }
+    if naechste_faelligkeit is None:
+        return {
+            "zustand": "leer",
+            "titel": "Noch keine Karten",
+            "ring_prozent": 0,
+            "ring_versatz": RING_UMFANG,
+            "tage_bis_faellig": 0,
+        }
+    tage = (naechste_faelligkeit - date.today()).days
+    if tage <= 0:
+        tage = 1
+    return {
+        "zustand": "wartet",
+        "titel": "Heute geschafft" if tage == 1 else f"In {tage} Tagen fällig",
+        "ring_prozent": 0,
+        "ring_versatz": RING_UMFANG,
+        "tage_bis_faellig": tage,
+    }
 
 
 @login_required
@@ -82,10 +147,13 @@ def dashboard(request):
     for lernblock in lernbloecke:
         karten = list(lernblock.karten.all())
         faellig = 0
+        naechste = None
         for karte in karten:
             karten_status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
             if karten_status.ist_faellig:
                 faellig += 1
+            elif naechste is None or karten_status.naechste_wiederholung < naechste:
+                naechste = karten_status.naechste_wiederholung
         total_karten += len(karten)
         total_faellig += faellig
         bloecke_mit_status.append(
@@ -93,6 +161,8 @@ def dashboard(request):
                 "lernblock": lernblock,
                 "faellig": faellig,
                 "anzahl": len(karten),
+                **_blockzustand(faellig, len(karten), naechste),
+                **_schulfach_marke(lernblock),
             }
         )
 
@@ -116,6 +186,7 @@ def dashboard(request):
         "heute_falsch": heute_falsch,
         "schulfaecher": schulfaecher,
         "filter_fach": filter_fach,
+        "modus": _bevorzugter_modus(user),
     }
     return render(request, "karteikarten/dashboard.html", context)
 
@@ -258,32 +329,32 @@ def lernblock_detail(request, pk):
         benutzer=user, lernblock=lernblock
     ).exists()
 
-    # Calculate user-specific card distribution
     auswahl = _kartenauswahl(request, lernblock)
-    karten_verteilung = {i: 0 for i in range(1, 6)}
+    anzahl_karten = 0
     faellig_gesamt = 0
     faellig_auswahl = 0
     for karte in lernblock.karten.all():
+        anzahl_karten += 1
         status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
-        karten_verteilung[status.fach] += 1
         if status.ist_faellig:
             faellig_gesamt += 1
             if auswahl is None or karte.pk in auswahl:
                 faellig_auswahl += 1
 
-    # Today's stats for this block and user
-    heute_stats, _ = TagesStatistik.objects.get_or_create(
-        benutzer=user,
-        lernblock=lernblock,
-        datum=date.today(),
-    )
+    zuletzt_gelernt = Lernergebnis.objects.filter(
+        benutzer=user, karte__lernblock=lernblock
+    ).aggregate(zeitpunkt=Max("zeitstempel"))["zeitpunkt"]
+
+    anteil = round(faellig_auswahl / anzahl_karten * 100) if anzahl_karten else 0
 
     context = {
         "lernblock": lernblock,
-        "karten_verteilung": karten_verteilung,
         "faellig_gesamt": faellig_gesamt,
         "faellig_auswahl": faellig_auswahl,
-        "heute_stats": heute_stats,
+        "ring_versatz": round(RING_UMFANG * (1 - anteil / 100)),
+        "zuletzt_gelernt": zuletzt_gelernt,
+        "modus": _bevorzugter_modus(user, lernblock),
+        "marke": _schulfach_marke(lernblock),
         "hat_block": hat_block,
         **_auswahl_context(request, lernblock),
     }
@@ -505,6 +576,81 @@ def csv_import(request, pk):
 # Lernblock in der Datenbank anzufassen und ohne die URL zu sprengen (ein Block
 # kann mehrere hundert Karten haben).
 
+# Die Lernmodi mit dem Satz, der sie unterscheidet. Eine Liste statt vier
+# Template-Bloecke: die Erklaerung soll ueberall dieselbe sein, wo ein Modus
+# angeboten wird — auf der Blockseite wie in der Modusauswahl.
+LERNMODI = [
+    {
+        "schluessel": "klassisch",
+        "name": "Klassisch",
+        "erklaerung": "Umdrehen und selbst einschaetzen",
+        "symbol": "bi-book",
+        "url": "lernen_klassisch",
+        "kombiniert_url": "lernen_kombiniert",
+    },
+    {
+        "schluessel": "tippen",
+        "name": "Eintippen",
+        "erklaerung": "Antwort schreiben, die App prueft",
+        "symbol": "bi-keyboard",
+        "url": "lernen_tippen",
+        "kombiniert_url": "lernen_kombiniert_tippen",
+    },
+    {
+        "schluessel": "rueckwaerts",
+        "name": "Rueckwaerts",
+        "erklaerung": "Von der Bedeutung zum Wort",
+        "symbol": "bi-arrow-left-right",
+        "url": "lernen_rueckwaerts",
+        "kombiniert_url": None,
+        "braucht_beide_richtungen": True,
+    },
+    {
+        "schluessel": "multiple_choice",
+        "name": "Multiple Choice",
+        "erklaerung": "Aus vier Antworten waehlen",
+        "symbol": "bi-ui-radios",
+        "url": "lernen_multiple_choice",
+        "kombiniert_url": "lernen_kombiniert_mc",
+        "mindestkarten": 4,
+    },
+]
+
+MODI_NACH_SCHLUESSEL = {modus["schluessel"]: modus for modus in LERNMODI}
+
+
+def _bevorzugter_modus(user, lernblock=None):
+    """Der zuletzt gewaehlte Modus — oder der naechstbeste, der hier passt.
+
+    Ein Block ohne Rueckseite kennt keinen Rueckwaerts-Modus, einer mit drei
+    Karten kein Multiple Choice. Statt einer Fehlermeldung faellt die Auswahl
+    dann auf "klassisch" zurueck.
+    """
+    stats = BenutzerStatistik.get_or_create_for_user(user)
+    modus = MODI_NACH_SCHLUESSEL.get(stats.bevorzugter_modus, LERNMODI[0])
+    if lernblock is not None and not _modus_moeglich(modus, lernblock):
+        return LERNMODI[0]
+    return modus
+
+
+def _modus_moeglich(modus, lernblock):
+    if modus.get("braucht_beide_richtungen") and not lernblock.bidirektional:
+        return False
+    return lernblock.anzahl_karten >= modus.get("mindestkarten", 0)
+
+
+def _modi_fuer_block(lernblock, gewaehlt):
+    """Alle Modi mit dem, was das Template zum Anzeigen braucht."""
+    return [
+        {
+            **modus,
+            "moeglich": _modus_moeglich(modus, lernblock),
+            "gewaehlt": modus["schluessel"] == gewaehlt,
+        }
+        for modus in LERNMODI
+    ]
+
+
 SESSION_KARTENAUSWAHL = "kartenauswahl"
 
 
@@ -524,6 +670,32 @@ def _auswahl_context(request, lernblock):
 
 
 SESSION_LETZTE_KARTE = "letzte_karte"
+SESSION_SITZUNG = "lernsitzung"
+
+
+def _sitzungsfortschritt(request, schluessel, verbleibend):
+    """Wie weit die laufende Abfrage ist — fuer die Leiste in der Kopfzeile.
+
+    Die Gesamtzahl wird beim ersten Aufruf einer Sitzung festgehalten. Sie steigt
+    nur, wenn nachtraeglich mehr Karten faellig werden (etwa nach "Noch mal von
+    vorn") — sonst bliebe die Leiste stehen oder liefe rueckwaerts. Falsch
+    beantwortete Karten bringen die Leiste bewusst nicht voran: sie sind nicht
+    erledigt.
+    """
+    sitzung = request.session.get(SESSION_SITZUNG) or {}
+    if sitzung.get("schluessel") != schluessel:
+        sitzung = {"schluessel": schluessel, "gesamt": verbleibend}
+    elif verbleibend > sitzung.get("gesamt", 0):
+        sitzung["gesamt"] = verbleibend
+    request.session[SESSION_SITZUNG] = sitzung
+
+    gesamt = sitzung["gesamt"] or 1
+    erledigt = max(gesamt - verbleibend, 0)
+    return {
+        "gesamt": sitzung["gesamt"],
+        "erledigt": erledigt,
+        "prozent": round(erledigt / gesamt * 100),
+    }
 
 
 def _mischen_nach_fach(faellige, limit):
@@ -634,6 +806,9 @@ def lernen_tippen(request, pk):
 
     context = {
         "lernblock": lernblock,
+        "fortschritt": _sitzungsfortschritt(
+            request, f"block-{lernblock.pk}-tippen", len(faellige)
+        ),
         **_tipp_kontext(
             karte,
             status,
@@ -645,6 +820,93 @@ def lernen_tippen(request, pk):
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_tippen.html", context)
+
+
+@login_required
+def modus_waehlen(request, pk):
+    """Den Lernmodus einmal waehlen statt bei jedem Start.
+
+    Die Wahl gilt fuer alle Bloecke und haelt ueber die Sitzung hinaus — sie
+    gehoert zur Person, nicht zum Block.
+    """
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    stats = BenutzerStatistik.get_or_create_for_user(request.user)
+
+    if request.method == "POST":
+        gewaehlt = request.POST.get("modus", "")
+        if gewaehlt in MODI_NACH_SCHLUESSEL:
+            stats.bevorzugter_modus = gewaehlt
+            stats.save(update_fields=["bevorzugter_modus"])
+        return redirect("lernblock_detail", pk=pk)
+
+    context = {
+        "lernblock": lernblock,
+        "modi": _modi_fuer_block(lernblock, stats.bevorzugter_modus),
+    }
+    return render(request, "karteikarten/modus_waehlen.html", context)
+
+
+@login_required
+def lernen_starten(request, pk):
+    """Startet die Abfrage im gewaehlten Modus — ein Weg statt vier Kacheln."""
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    modus = _bevorzugter_modus(request.user, lernblock)
+    return redirect(modus["url"], pk=lernblock.pk)
+
+
+@login_required
+def lernen_alles(request):
+    """Alle Bloecke des Benutzers zusammen, im gewaehlten Modus.
+
+    Der Weg von der Startseite ins Lernen ohne Zwischenfrage: welche Bloecke und
+    welcher Modus stehen bereits fest — Bloecke sind die eigenen, der Modus ist
+    die Einstellung.
+    """
+    block_ids = ",".join(
+        str(zuordnung.lernblock_id)
+        for zuordnung in BenutzerLernblock.objects.filter(benutzer=request.user)
+    )
+    if not block_ids:
+        return redirect("meine_lernbloecke")
+
+    modus = _bevorzugter_modus(request.user)
+    ziel = modus["kombiniert_url"] or LERNMODI[0]["kombiniert_url"]
+    return redirect(f"{reverse(ziel)}?bloecke={block_ids}")
+
+
+@login_required
+def fortschritt(request):
+    """Fortschritt ueber alle Bloecke, mit einer Zeile je Block."""
+    lernbloecke = [
+        zuordnung.lernblock
+        for zuordnung in BenutzerLernblock.objects.filter(
+            benutzer=request.user
+        ).select_related("lernblock")
+    ]
+    stats = BenutzerStatistik.get_or_create_for_user(request.user)
+
+    context = {
+        "auswertung": gesamt_fortschritt(request.user, lernbloecke),
+        "stats": stats,
+    }
+    return render(request, "karteikarten/fortschritt.html", context)
+
+
+@login_required
+def lernblock_fortschritt(request, pk):
+    """Fortschritt eines einzelnen Blocks."""
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    context = {
+        "lernblock": lernblock,
+        "auswertung": block_fortschritt(request.user, lernblock),
+    }
+    return render(request, "karteikarten/lernblock_fortschritt.html", context)
+
+
+@login_required
+def mehr(request):
+    """Alles, was nicht zum Lernen gehoert — inklusive der Verwaltung."""
+    return render(request, "karteikarten/mehr.html")
 
 
 @login_required
@@ -709,18 +971,54 @@ def kartenauswahl(request, pk):
             return redirect("lernblock_detail", pk=lernblock.pk)
 
     auswahl = _kartenauswahl(request, lernblock)
+    falsch_je_karte = dict(
+        Lernergebnis.objects.filter(
+            benutzer=request.user, karte__in=karten, richtig=False
+        )
+        .values_list("karte_id")
+        .annotate(anzahl=Count("pk"))
+    )
+
+    # Vorauswahl per Link, etwa aus der Fortschrittsansicht ("Gezielt ueben").
+    vorauswahl = request.GET.get("nur", "")
+    if vorauswahl == "problem":
+        gewuenscht = {pk for pk, anzahl in falsch_je_karte.items() if anzahl}
+    else:
+        gewuenscht = None
+
+    # Gruppiert nach Leitner-Stufe: das ist die Ordnung, die der Lernende ohnehin
+    # ueberall sieht — und sie sagt, wo Arbeit liegt.
+    gruppen = {stufe: {"stufe": stufe, "karten": []} for stufe in range(1, 6)}
+    for karte in karten:
+        status = BenutzerKarteStatus.get_or_create_for_user(request.user, karte)
+        if gewuenscht is not None:
+            gewaehlt = karte.pk in gewuenscht
+        else:
+            gewaehlt = auswahl is None or karte.pk in auswahl
+        gruppen[status.fach]["karten"].append(
+            {
+                "karte": karte,
+                "status": status,
+                "gewaehlt": gewaehlt,
+                "falsch": falsch_je_karte.get(karte.pk, 0),
+            }
+        )
+
+    for gruppe in gruppen.values():
+        gruppe["karten"].sort(key=lambda eintrag: -eintrag["falsch"])
+        gruppe["anzahl"] = len(gruppe["karten"])
+        gruppe["gewaehlt"] = sum(1 for e in gruppe["karten"] if e["gewaehlt"])
+
     karten_mit_status = [
-        {
-            "karte": karte,
-            "status": BenutzerKarteStatus.get_or_create_for_user(request.user, karte),
-            "gewaehlt": auswahl is None or karte.pk in auswahl,
-        }
-        for karte in karten
+        eintrag for gruppe in gruppen.values() for eintrag in gruppe["karten"]
     ]
 
     context = {
         "lernblock": lernblock,
         "karten_mit_status": karten_mit_status,
+        "gruppen": [gruppe for gruppe in gruppen.values() if gruppe["anzahl"]],
+        "anzahl_problemkarten": sum(1 for wert in falsch_je_karte.values() if wert),
+        "vorauswahl": vorauswahl,
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/kartenauswahl.html", context)
@@ -767,6 +1065,9 @@ def lernen_klassisch(request, pk):
         "status": status,
         "modus": "klassisch",
         "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"block-{lernblock.pk}-klassisch", len(faellige)
+        ),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -804,6 +1105,9 @@ def lernen_rueckwaerts(request, pk):
         "status": status,
         "modus": "rueckwaerts",
         "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"block-{lernblock.pk}-rueckwaerts", len(faellige)
+        ),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
@@ -863,6 +1167,9 @@ def lernen_multiple_choice(request, pk):
         "optionen": optionen,
         "modus": "multiple_choice",
         "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"block-{lernblock.pk}-mc", len(faellige)
+        ),
         **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_multiple_choice.html", context)
@@ -985,7 +1292,10 @@ def lernen_kombiniert_auswahl(request):
             }
         )
 
+    modus = _bevorzugter_modus(user)
     context = {
+        "modus": modus,
+        "modus_url": reverse(modus["kombiniert_url"] or LERNMODI[0]["kombiniert_url"]),
         "bloecke": bloecke,
         "total_faellig": total_faellig,
     }
@@ -1016,6 +1326,7 @@ def lernen_kombiniert(request):
     if not lernbloecke:
         return redirect("lernen_kombiniert_auswahl")
 
+    block_ids = ",".join(str(b.pk) for b in lernbloecke)
     faellige = _get_faellige_karten_multi(request.user, lernbloecke)
 
     if not faellige:
@@ -1024,7 +1335,7 @@ def lernen_kombiniert(request):
             "karteikarten/lernen_kombiniert_fertig.html",
             {
                 "lernbloecke": lernbloecke,
-                "block_ids": ",".join(str(b.pk) for b in lernbloecke),
+                "block_ids": block_ids,
                 "modus": "klassisch",
             },
         )
@@ -1033,11 +1344,14 @@ def lernen_kombiniert(request):
 
     context = {
         "lernbloecke": lernbloecke,
-        "block_ids": ",".join(str(b.pk) for b in lernbloecke),
+        "block_ids": block_ids,
         "karte": karte,
         "status": status,
         "modus": "klassisch",
         "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"kombiniert-{block_ids}-klassisch", len(faellige)
+        ),
     }
     return render(request, "karteikarten/lernen_kombiniert_karte.html", context)
 
@@ -1048,6 +1362,8 @@ def lernen_kombiniert_mc(request):
     lernbloecke = _kombinierte_bloecke(request)
     if not lernbloecke:
         return redirect("lernen_kombiniert_auswahl")
+
+    block_ids = ",".join(str(b.pk) for b in lernbloecke)
 
     # Get all cards from all blocks for distractors
     alle_karten = []
@@ -1074,7 +1390,7 @@ def lernen_kombiniert_mc(request):
             "karteikarten/lernen_kombiniert_fertig.html",
             {
                 "lernbloecke": lernbloecke,
-                "block_ids": ",".join(str(b.pk) for b in lernbloecke),
+                "block_ids": block_ids,
                 "modus": "multiple_choice",
             },
         )
@@ -1094,12 +1410,15 @@ def lernen_kombiniert_mc(request):
 
     context = {
         "lernbloecke": lernbloecke,
-        "block_ids": ",".join(str(b.pk) for b in lernbloecke),
+        "block_ids": block_ids,
         "karte": karte,
         "status": status,
         "optionen": optionen,
         "modus": "multiple_choice",
         "verbleibend": len(faellige),
+        "fortschritt": _sitzungsfortschritt(
+            request, f"kombiniert-{block_ids}-mc", len(faellige)
+        ),
     }
     return render(request, "karteikarten/lernen_kombiniert_mc.html", context)
 
@@ -1130,6 +1449,9 @@ def lernen_kombiniert_tippen(request):
     context = {
         "lernbloecke": lernbloecke,
         "block_ids": block_ids,
+        "fortschritt": _sitzungsfortschritt(
+            request, f"kombiniert-{block_ids}-tippen", len(faellige)
+        ),
         **_tipp_kontext(
             karte,
             status,

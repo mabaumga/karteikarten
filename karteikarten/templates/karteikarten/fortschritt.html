@@ -1,0 +1,55 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Fortschritt - Karteikarten{% endblock %}
+
+{% block kopf_titel %}Fortschritt{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-body d-flex justify-content-between text-center">
+        <div>
+            <div class="h5 mb-0 text-warning">{{ stats.streak }}</div>
+            <div class="small text-body-secondary">Tage am St&uuml;ck</div>
+        </div>
+        <div>
+            <div class="h5 mb-0">{{ auswertung.anzahl_karten }}</div>
+            <div class="small text-body-secondary">Karten gesamt</div>
+        </div>
+        <div>
+            <div class="h5 mb-0 text-primary">{{ auswertung.faellig }}</div>
+            <div class="small text-body-secondary">heute f&auml;llig</div>
+        </div>
+    </div>
+</div>
+
+{% include 'karteikarten/_erstversuch.html' %}
+{% include 'karteikarten/_kartenzustand.html' %}
+
+<h2 class="h6 mb-3">Je Lernblock</h2>
+{% for block in auswertung.bloecke %}
+<a href="{% url 'lernblock_fortschritt' block.lernblock.pk %}" class="card mb-2 text-decoration-none text-body">
+    <div class="card-body d-flex align-items-center gap-3 py-3">
+        <span class="flex-grow-1 overflow-hidden">
+            <span class="d-block fw-semibold text-truncate">{{ block.lernblock.name }}</span>
+            <span class="d-block small text-body-secondary">
+                {{ block.sitzt }} von {{ block.anzahl_karten }} sitzen sicher
+            </span>
+        </span>
+        {% if block.erstversuch_gesamt %}
+        <span class="fw-bold {% if block.erstversuch_quote >= 70 %}text-success{% elif block.erstversuch_quote >= 40 %}text-warning{% else %}text-danger{% endif %}">
+            {{ block.erstversuch_quote }}&thinsp;%
+        </span>
+        {% else %}
+        <span class="small text-body-secondary">noch nichts</span>
+        {% endif %}
+        <i class="bi bi-chevron-right text-body-secondary small"></i>
+    </div>
+</a>
+{% empty %}
+<div class="text-center py-4">
+    <i class="bi bi-inbox display-4 text-body-secondary"></i>
+    <p class="text-body-secondary mt-3">Noch keine Lernbl&ouml;cke ausgew&auml;hlt.</p>
+    <a href="{% url 'meine_lernbloecke' %}" class="btn btn-primary">Bl&ouml;cke ausw&auml;hlen</a>
+</div>
+{% endfor %}
+{% endblock %}

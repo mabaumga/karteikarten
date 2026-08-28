@@ -1,0 +1,24 @@
+{% comment %}
+Die Erstversuchsquote. Erwartet: auswertung, ueberschrift (optional)
+Bewusst prominent: die laufende Erfolgsquote steigt zwangsläufig, weil jede Karte
+so lange wiederkommt, bis sie sitzt. Der erste Versuch sagt, was wirklich saß.
+{% endcomment %}
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="small text-body-secondary">Beim ersten Versuch richtig</div>
+        {% if auswertung.erstversuch_gesamt %}
+        <div class="d-flex align-items-baseline gap-2">
+            <span class="fw-bold text-success" style="font-size: 2.125rem; line-height: 1.1;">{{ auswertung.erstversuch_quote }}&thinsp;%</span>
+            <span class="text-body-secondary">{{ auswertung.erstversuch_richtig }} von {{ auswertung.erstversuch_gesamt }} Karten</span>
+        </div>
+        <div class="fach-bar mt-3">
+            <div class="fill" style="width: {{ auswertung.erstversuch_quote }}%; background: var(--success);"></div>
+        </div>
+        <p class="small text-body-secondary mt-2 mb-0">
+            Gez&auml;hlt wird die allererste Antwort je Karte &ndash; sp&auml;tere Wiederholungen &auml;ndern sie nicht.
+        </p>
+        {% else %}
+        <p class="text-body-secondary mb-0 mt-2">Noch keine Karte beantwortet.</p>
+        {% endif %}
+    </div>
+</div>

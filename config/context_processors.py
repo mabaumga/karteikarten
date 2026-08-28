@@ -1,4 +1,4 @@
-"""Context-Processor fuer die Versionsanzeige.
+"""Context-Processor fuer Versionsanzeige und Navigation.
 
 Single Source of Truth ist ``karteikarten.__version__``. Optional ergaenzt um
 Build-Metadaten aus ``BASE_DIR/.build_info`` (eine Zeile ``<commit> <iso-timestamp>``),
@@ -32,3 +32,52 @@ def version_context(request) -> dict:
         "build_commit": commit,
         "build_time": build_time,
     }
+
+
+# Welcher der vier Reiter gehoert zu welcher Seite. Die Zuordnung liegt hier und
+# nicht in den Views: sonst muesste jede einzelne View einen Wert mitschleppen,
+# den nur das Basis-Template braucht.
+_REITER_JE_SEITE = {
+    "start": {"dashboard"},
+    "bloecke": {
+        "meine_lernbloecke",
+        "lernblock_detail",
+        "lernblock_create",
+        "lernblock_edit",
+        "karten_liste",
+        "karte_create",
+        "karte_edit",
+        "csv_import",
+        "kartenauswahl",
+        "modus_waehlen",
+        "lernen_kombiniert_auswahl",
+    },
+    "fortschritt": {"fortschritt", "lernblock_fortschritt"},
+    "mehr": {
+        "mehr",
+        "profil",
+        "passwort_aendern",
+        "lernen_offline",
+        "benutzer_liste",
+        "benutzer_erstellen",
+        "benutzer_bearbeiten",
+        "backup_liste",
+    },
+}
+
+_REITER_JE_URL = {
+    url_name: reiter
+    for reiter, url_names in _REITER_JE_SEITE.items()
+    for url_name in url_names
+}
+
+
+def navigation_context(request) -> dict:
+    """Markiert den Reiter, der zur aktuellen Seite gehoert.
+
+    Ohne Treffer bleibt der Wert leer — Lernansichten blenden die Navigation
+    ohnehin aus, dort waere jede Markierung falsch.
+    """
+    treffer = getattr(request, "resolver_match", None)
+    url_name = treffer.url_name if treffer else None
+    return {"aktiver_reiter": _REITER_JE_URL.get(url_name, "")}

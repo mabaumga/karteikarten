@@ -1,0 +1,46 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Modus w&auml;hlen - Karteikarten{% endblock %}
+
+{% block kopf_titel %}Modus w&auml;hlen{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% url 'lernblock_detail' lernblock.pk %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<p class="small text-body-secondary">Gilt f&uuml;r alle Bl&ouml;cke, bis du ihn wieder &auml;nderst.</p>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% for modus in modi %}
+    <label class="card mb-2 d-block {% if not modus.moeglich %}opacity-50{% endif %}"
+           style="cursor: pointer; {% if modus.gewaehlt %}border: 2px solid var(--primary);{% else %}border: 2px solid transparent;{% endif %}">
+        <span class="card-body d-flex align-items-center gap-3 py-3">
+            <input type="radio" name="modus" value="{{ modus.schluessel }}" class="form-check-input mt-0"
+                   {% if modus.gewaehlt %}checked{% endif %} {% if not modus.moeglich %}disabled{% endif %}>
+            <i class="bi {{ modus.symbol }} fs-4 text-body-secondary"></i>
+            <span class="flex-grow-1">
+                <span class="d-block fw-semibold">{{ modus.name }}</span>
+                <span class="d-block small text-body-secondary">
+                    {% if modus.moeglich %}
+                    {{ modus.erklaerung }}
+                    {% elif modus.braucht_beide_richtungen %}
+                    Dieser Block wird nur in eine Richtung gelernt
+                    {% else %}
+                    Braucht mindestens {{ modus.mindestkarten }} Karten
+                    {% endif %}
+                </span>
+            </span>
+        </span>
+    </label>
+    {% endfor %}
+
+    <div class="aktionsleiste">
+        <button type="submit" class="btn btn-primary btn-lg w-100">&Uuml;bernehmen</button>
+    </div>
+</form>
+{% endblock %}

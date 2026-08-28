@@ -39,7 +39,9 @@ scripts/                   # Seed-Skripte
 
 - **Lernblock**: Thematische Sammlung von Karteikarten
 - **Karteikarte**: Vorderseite (Begriff) + Rueckseite (Definition) + optionale Zusatzinfos
-- **Leitner-System**: 5 Faecher mit steigenden Wiederholungsintervallen (1, 3, 7, 14, 30 Tage)
+- **Leitner-System**: 5 Faecher mit steigenden Wiederholungsintervallen (1, 3, 7, 14, 30 Tage).
+  In der Oberflaeche heissen sie **Stufe 1-5** — "Fach" ist dort das Schulfach.
+  Angezeigt wird immer `BenutzerKarteStatus.fach` (persoenlich), nie `Karteikarte.fach`.
 - **Bidirektional**: Karten koennen in beide Richtungen gelernt werden
 
 ---
@@ -65,7 +67,7 @@ make setup     # venv + Dependencies
 make run       # Django Dev Server (Port 8000)
 make migrate   # Migrationen erstellen + ausfuehren
 make init      # Idempotent: migrate --noinput + collectstatic (auch im Docker-Entrypoint)
-make check     # Quality-Gate: Django System-Checks (keine Tests im Projekt)
+make check     # Quality-Gate: Django System-Checks + Lint + Tests
 make seed      # Beispieldaten laden
 ```
 
@@ -92,7 +94,8 @@ make docker-push    # Image in Registry pushen
 - Einfach halten — kein Over-Engineering
 - SQLite als Datenbank (kein PostgreSQL noetig)
 - Mobile-first Design (Bootstrap 5)
-- Keine Tests vorhanden (Bastelprojekt)
+- Tests mit pytest unter `tests/`; Fachlogik (Antwortpruefung, Statistik) hat
+  eigene Tests, Seiten einen Rauchtest (`tests/test_seiten.py`)
 - `DJANGO_SETTINGS_MODULE=config.settings`
 - **AGENTS.md aktuell halten:** Der KI-Steckbrief `AGENTS.md` (Zweck, Stack, Architektur,
   Einstiegspunkte) wird **immer mitgepflegt** — bei Aenderung an Zweck, Tech-Stack, Architektur,

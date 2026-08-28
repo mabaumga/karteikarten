@@ -293,72 +293,122 @@ Vorder- und Rückseite umschalten.
 
 ## 4. Benutzeroberfläche
 
+### 4.0 Aufbau und Navigation
+
+Die App hat **vier Bereiche**, erreichbar über eine beschriftete Navigation. Alles
+andere sind Unterseiten davon.
+
+| Reiter | Was dort liegt |
+|---|---|
+| **Start** | Was heute ansteht — je Lernblock eine Zeile, plus „Alles zusammen üben" |
+| **Blöcke** | Welche Lernblöcke auf der Startseite erscheinen, und der Weg in mehrere zugleich |
+| **Fortschritt** | Erstversuchsquote, Kartenzustand, Problemkarten, Verlauf |
+| **Mehr** | Profil, offline lernen, Passwort — und für Verwalter die Verwaltung |
+
+**Zwei Rollen, ein Aufbau.** Lernende sehen nur den Lernweg. Alles Verwaltende
+(Blöcke anlegen, Karten bearbeiten, CSV-Import, Benutzer, Backup) ist mit
+`is_staff` bedingt und steht in eigenen, beschrifteten Abschnitten — nie zwischen
+den Lernaktionen.
+
+**Abfrageansichten laufen ohne Navigation** (`lernansicht.html`): während einer
+Abfrage gibt es eine Aufgabe und einen Ausgang, keine vier Reiter. Die Kopfzeile
+trägt dort Modusnamen, Fortschrittsleiste und Abbrechen.
+
+#### Mobile first — dieselbe Struktur auf drei Breiten
+
+| | Handy `< 768` | iPad `≥ 768` | Desktop `≥ 992` |
+|---|---|---|---|
+| Navigation | unten, vier Reiter | unten, unverändert | links als Schiene |
+| Inhaltsbreite | voll, 16 px Rand | max. 720 px | max. 900 px |
+| Blocklisten | eine Spalte | zwei Spalten | zwei Spalten |
+| Hauptaktion | fest am unteren Rand | fest am unteren Rand | oben neben der Überschrift |
+| Abfragekarte | volle Breite | max. 560 px | max. 560 px |
+
+Tippziele bleiben auf allen Breiten mindestens 44 px hoch.
+
+Die Umschaltung läuft über Bootstrap-Klassen (`d-lg-none` für die untere Leiste,
+`d-none d-lg-flex` für die Seitenschiene, `col-12 col-md-6` für Listen) — beide
+Navigationen stehen im selben Markup, es gibt kein zweites Layout und kein
+JavaScript dafür.
+
+**Mehr Platz zeigt mehr auf einmal, nicht dasselbe breiter.** Die Abfragekarte
+bleibt bei 560 px gedeckelt: eine über 1000 px breite Vokabelkarte liest sich
+schlechter, nicht besser.
+
 ### 4.1 Startseite / Dashboard
+
+Jede Zeile sagt **zuerst, was zu tun ist**, dann erst, worum es geht. Rechts ein
+Ring mit der Anzahl fälliger Karten.
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  🎴 Karteikarten                                    [PWA ⚡] │
+│                        Lina                            📊   │
 ├─────────────────────────────────────────────────────────────┤
+│  [ Alle ] [ Englisch ] [ Französisch ]                      │
 │                                                             │
-│  📊 Dein Fortschritt                                        │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │  🔥 12 Tage Streak    📚 156 Karten    ✅ 78% Quote │   │
+│  │ EN   Heute üben                              ( 15 ) │   │
+│  │      Access 3 · Unit 4 – At the market              │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                                                             │
-│  📋 Heute fällig: 23 Karten                                 │
-│                                                             │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │ 📁 Deutsch - Fremdwörter                            │   │
-│  │    15 fällig │ 45 Karten │ Fach ▁▂▃▄▅              │   │
-│  │    [ Lernen ]                                       │   │
+│  │ FR   Heute üben                              (  8 ) │   │
+│  │      Découvertes 2 · Unité 2 – La famille           │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                                                             │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │ 📁 Deutsch - Stilmittel                             │   │
-│  │    8 fällig │ 32 Karten │ Fach ▁▂▃▄▅               │   │
-│  │    [ Lernen ]                                       │   │
+│  │ DE   Heute geschafft                         ( ✓  ) │   │
+│  │      Stilmittel · 32 Karten                         │   │
 │  └─────────────────────────────────────────────────────┘   │
 │                                                             │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │ ➕ Neuen Lernblock erstellen                        │   │
+│  │ ▶  Alles zusammen üben (23)                         │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                                                             │
+│      Modus: Klassisch · 156 Karten insgesamt                │
+├─────────────────────────────────────────────────────────────┤
+│    Start    │   Blöcke   │  Fortschritt  │      Mehr        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
+Drei Zustände je Zeile, weil sie sich für den Lernenden wirklich unterscheiden:
+**Heute üben** (Ring mit Anzahl), **Heute geschafft** (Haken), **In N Tagen
+fällig** (gestrichelter Ring mit Uhr).
+
+„Alles zusammen üben" startet **direkt** — welche Blöcke (die eigenen) und welcher
+Modus (die Einstellung) stehen bereits fest.
+
+
 ### 4.2 Lernblock-Detailansicht
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ← Zurück          Deutsch - Fremdwörter          ⚙️ ✏️ 🗑️ │
+│  ‹            Unit 4 – At the market                        │
 ├─────────────────────────────────────────────────────────────┤
+│  ┌───────────┐ ┌───────────┐ ┌───────────┐                 │
+│  │    EN     │ │  ( 15 )   │ │    📊     │                 │
+│  │ Access 3  │ │Heute fällig│ │Fortschritt│                 │
+│  └───────────┘ └───────────┘ └───────────┘                 │
 │                                                             │
-│  📊 Statistik                                               │
+│  Zuletzt gelernt: 28. August · 45 Karten insgesamt          │
+│                                                             │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │  Fach 1: ████████████████ 25                        │   │
-│  │  Fach 2: ████████ 12                                │   │
-│  │  Fach 3: ████ 5                                     │   │
-│  │  Fach 4: ██ 2                                       │   │
-│  │  Fach 5: █ 1                                        │   │
-│  │                                                     │   │
-│  │  Erfolgsquote: 72%    Heute: 8/10 richtig          │   │
+│  │ 📖  Modus                          Klassisch     ›  │   │
+│  │ ▽   Karten                          Alle 45      ›  │   │
 │  └─────────────────────────────────────────────────────┘   │
 │                                                             │
-│  🎯 Lernmodus wählen                                        │
-│  ┌────────────────────────┐ ┌────────────────────────┐     │
-│  │   📖  Klassisch        │ │   ⌨️  Eintippen        │     │
-│  │       15 fällig        │ │       15 fällig        │     │
-│  └────────────────────────┘ └────────────────────────┘     │
-│  ┌────────────────────────┐ ┌────────────────────────┐     │
-│  │   🔄  Rückwärts        │ │   📝  Multiple Choice  │     │
-│  │       15 fällig        │ │       15 fällig        │     │
-│  └────────────────────────┘ └────────────────────────┘     │
-│                                                             │
-│  📚 Karten verwalten                                        │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │ [ ➕ Neue Karte ] [ 📤 CSV Import ] [ 📋 Alle ]    │   │
+│  │ ▶  Üben starten (15)                                │   │
 │  └─────────────────────────────────────────────────────┘   │
-│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+**Ein Weg ins Lernen.** Modus und Kartenumfang sind Einstellungen mit sichtbarem
+Wert, keine konkurrierenden Einstiege. Der Knopf tut, was er sagt: er startet die
+Abfrage — früher führte „Lernen" zu einer weiteren Auswahl.
+
+Der Modus gilt **für alle Blöcke** und hält über die Sitzung hinaus
+(`BenutzerStatistik.bevorzugter_modus`). Passt er zu einem Block nicht — Rückwärts
+ohne bidirektionalen Block, Multiple Choice unter vier Karten — fällt die Abfrage
+still auf „Klassisch" zurück, statt eine Fehlermeldung zu zeigen.
+
 
 ### 4.3 Karten-Verwaltung
 ```
@@ -420,6 +470,31 @@ Vorder- und Rückseite umschalten.
 │                              [ Importieren ]                │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+### 4.5 Fortschritt
+
+Zwei Ebenen: der Reiter **Fortschritt** über alle Blöcke, und je Block eine eigene
+Ansicht (`/lernblock/<id>/fortschritt/`).
+
+**Beim ersten Versuch richtig** ist die Leitzahl. Die laufende Erfolgsquote steigt
+zwangsläufig, weil jede Karte so lange wiederkommt, bis sie sitzt — der erste
+Versuch dagegen sagt, was wirklich gelernt wurde. Gezählt wird die früheste
+Antwort je Karte; spätere Wiederholungen ändern sie nicht.
+
+| Kennzahl | Woraus | Bedeutung |
+|---|---|---|
+| Erstversuchsquote | erstes `Lernergebnis` je Karte | Anteil der Karten, die gleich saßen |
+| Sitzt sicher | `BenutzerKarteStatus.fach == 5` | durch alle Stufen gelaufen |
+| In Arbeit | beantwortet, Stufe 1–4 | angefangen, noch nicht sicher |
+| Noch nie geübt | keine Antwort vorhanden | *nicht* am Status abgelesen — ein Status entsteht schon beim Anzeigen |
+| Problemkarten | Anzahl `richtig=False` je Karte | die fünf mit den meisten Fehlern, mit Weg ins gezielte Üben |
+| Letzte 7 Tage | `TagesStatistik` | Antworten pro Tag, davon richtig; Lücken als Nulltage |
+
+Implementierung: `karteikarten/services/statistik.py`. Die Erstversuchs-Auswahl
+läuft bewusst in Python — SQLite kennt kein `DISTINCT ON`, und bei diesen
+Datenmengen ist die offensichtlich richtige Lösung die bessere.
 
 ---
 
@@ -558,7 +633,12 @@ Die App wird als Progressive Web App implementiert:
 | GET | `/lernblock/<id>/karten/` | Karten des Lernblocks |
 | POST | `/lernblock/<id>/karten/neu/` | Neue Karte erstellen |
 | POST | `/lernblock/<id>/karten/import/` | CSV-Import |
-| GET | `/lernblock/<id>/lernen/` | Lernmodus-Auswahl |
+| GET | `/fortschritt/` | Fortschritt über alle Blöcke |
+| GET | `/mehr/` | Profil, Offline, Verwaltung |
+| GET | `/lernblock/<id>/fortschritt/` | Fortschritt eines Blocks |
+| GET/POST | `/lernblock/<id>/modus/` | Lernmodus wählen (gilt für alle Blöcke) |
+| GET | `/lernblock/<id>/lernen/` | Startet die Abfrage im gewählten Modus |
+| GET | `/lernen/alles/` | Alle eigenen Blöcke zusammen, im gewählten Modus |
 | GET | `/lernblock/<id>/lernen/klassisch/` | Klassischer Modus |
 | GET | `/lernblock/<id>/lernen/rueckwaerts/` | Rückwärts-Modus |
 | GET | `/lernblock/<id>/lernen/multiple-choice/` | Multiple-Choice |
@@ -617,6 +697,9 @@ Folgende Features sind **nicht** Teil des MVP:
 | **Fach** | Position im Leitner-System (1-5) |
 | **Fällige Karte** | Karte, deren Wiederholungsdatum erreicht ist |
 | **Distraktor** | Falsche Antwortmöglichkeit bei Multiple Choice |
+| **Stufe 1–5** | Leitner-Fach in der Oberfläche. Heißt bewusst nicht mehr „Fach" — das meint dort das Schulfach |
+| **Schulfach** | Englisch, Französisch, Deutsch … — der Filter auf der Startseite |
+| **Erstversuchsquote** | Anteil der Karten, die beim allerersten Mal richtig beantwortet wurden |
 | **PWA** | Progressive Web App - installierbare Webanwendung |
 | **Streak** | Anzahl aufeinanderfolgender Lerntage |
 | **Bidirektional** | Lernen in beide Richtungen (Begriff↔Definition) |

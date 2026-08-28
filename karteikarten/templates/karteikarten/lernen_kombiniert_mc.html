@@ -1,10 +1,12 @@
-{% extends 'karteikarten/base.html' %}
+{% extends 'karteikarten/lernansicht.html' %}
 
-{% block title %}Gemeinsam lernen - Multiple Choice{% endblock %}
+{% block title %}Alles zusammen üben - Multiple Choice{% endblock %}
 
-{% block nav_right %}
-<a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-link text-white">
-    <i class="bi bi-x-lg"></i>
+{% block kopf_titel %}Multiple Choice{% endblock %}
+
+{% block kopf_aktion %}
+<a href="{% url 'lernen_kombiniert_auswahl' %}" class="text-white" aria-label="Abbrechen">
+    <i class="bi bi-x-lg fs-5"></i>
 </a>
 {% endblock %}
 
@@ -45,7 +47,7 @@
 
 <!-- Card Info -->
 <div class="text-center mt-4">
-    <span class="badge bg-secondary">Fach {{ status.fach }}</span>
+    <span class="badge text-bg-secondary">Stufe {{ status.fach }} von 5</span>
 </div>
 {% endblock %}
 
