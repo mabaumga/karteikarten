@@ -9,6 +9,15 @@ Conventional Commits generiert.
 
 <!-- version list -->
 
+## v1.4.0 (2026-08-28)
+
+### Features
+
+- **fortschritt**: Nach Schulfach und Lehrbuch gliedern, Blockstand in der Abfrage
+  ([#46](https://github.com/mabaumga/karteikarten/pull/46),
+  [`f6f5fd8`](https://github.com/mabaumga/karteikarten/commit/f6f5fd80779c50f358cab780b77fc264f7137cc3))
+
+
 ## v1.3.0 (2026-08-28)
 
 ### Bug Fixes
