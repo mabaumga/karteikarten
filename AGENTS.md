@@ -77,11 +77,14 @@ scripts/                   # Seed-Skripte
 
 ## Deployment
 
-Docker-Standalone auf **Unraid** (Homeserver Baumgartner, privat), URL
+Docker-Standalone auf dem **Hetzner-Server** (`root@178.105.222.1`), URL
 `https://karteikarten.baumgartner.online`. Image `ghcr.io/mabaumga/karteikarten:latest`,
-Container `karteikarten`, Port 8080→8000, persistente Volumes (`data`/`import`/`archive`).
+Container `karteikarten`, persistentes Volume `./data` (SQLite + `import`/`archive`).
+Deploy: `ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'`.
+Die Alt-Instanz auf Unraid ist seit dem 20.06.2026 stillgelegt.
 **Release:** `make release` → GitHub Actions (`release.yml`) mit python-semantic-release
-(Version + CHANGELOG + Tag) und Docker-Push nach ghcr.io.
+(Version + CHANGELOG + Tag) und Docker-Push nach ghcr.io. Solange Actions deaktiviert ist:
+`make release-local`.
 
 ## Mehr Kontext
 

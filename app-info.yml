@@ -36,8 +36,9 @@ app:
     notes: >-
       Caddy (proxy/) -> karteikarten:8000 (gunicorn); SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import.
       Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
-      HINWEIS: Alt-Instanz auf Unraid (/mnt/user/appdata/karteikarten, compose.manager-Projekt "Karteikarten")
-      laeuft noch mit eigener SQLite-DB (Stand 2026-03-08) — durch Hetzner abgeloest, sollte stillgelegt werden.
+      Die frueher erwaehnte Alt-Instanz auf Unraid ist am 20.06.2026 stillgelegt worden:
+      kein Container, kein /mnt/user/appdata/karteikarten, kein compose.manager-Projekt mehr.
+      Ihre Daten sind vollstaendig in der Hetzner-DB enthalten (Abgleich am 28.08.2026).
 
 backup:
   required: true

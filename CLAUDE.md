@@ -10,7 +10,7 @@
 **Karteikarten** — Mobile-optimierte Webanwendung zum Lernen mit digitalen Karteikarten (Leitner-System).
 
 - **Stack:** Python 3.12, Django 6.0.5, SQLite, Bootstrap 5, Alpine.js, HTMX
-- **Deployment:** Docker (Standalone-Container), Unraid via docker-compose
+- **Deployment:** Docker (Standalone-Container) auf dem Hetzner-Server via docker-compose
 - **Benutzer:** Login vorhanden (Django-Auth); Staff-Rolle (`is_staff`) fuer Userverwaltung
 - **PWA:** Progressive Web App fuer Offline-Nutzung
 
@@ -111,8 +111,9 @@ make docker-push    # Image in Registry pushen
   `[tool.semantic_release]`.
 - **Health-Endpoint:** `GET /health/` (JSON-Contract, ohne Auth) → Docker/Uptime Kuma.
   Liveness-Checks: Datenbank + Speicher (`karteikarten/health.py` + `checks.py`).
-- **Deployment:** Docker-Standalone auf Unraid (Homeserver Baumgartner, privat),
+- **Deployment:** Docker-Standalone auf dem **Hetzner-Server** (`root@178.105.222.1`),
   URL `https://karteikarten.baumgartner.online`. Image `ghcr.io/mabaumga/karteikarten:latest`
-  (einheitliche Registry). Auf Unraid: `docker compose pull && up -d`.
+  (einheitliche Registry). Deploy: `ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'`.
+  Die Alt-Instanz auf Unraid ist seit dem 20.06.2026 stillgelegt.
 - **Skill-Provenienz:** `app-info.yml` (wann lief welcher Skill, mit welchem Status).
 - **Nicht umgesetzt** (Bastelprojekt, bewusst): System-Menue, Hardware-Status, Pre-commit-Gate, Dev-Container.
