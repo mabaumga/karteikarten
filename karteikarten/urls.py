@@ -21,15 +21,19 @@ urlpatterns = [
     path("profil/", views.profil, name="profil"),
     path("meine-lernbloecke/", views.meine_lernbloecke, name="meine_lernbloecke"),
     path(
-        "lernblock/<int:pk>/hinzufuegen/",
-        views.lernblock_hinzufuegen,
-        name="lernblock_hinzufuegen",
+        "meine-lernbloecke/speichern/",
+        views.lernbloecke_speichern,
+        name="lernbloecke_speichern",
     ),
-    path(
-        "lernblock/<int:pk>/entfernen/",
-        views.lernblock_entfernen,
-        name="lernblock_entfernen",
-    ),
+    # Buecher und Kapitel (Verwaltung)
+    path("buecher/", views.buecher, name="buecher"),
+    path("buecher/neu/", views.buch_create, name="buch_create"),
+    path("buecher/<int:pk>/", views.buch_detail, name="buch_detail"),
+    path("buecher/<int:pk>/bearbeiten/", views.buch_edit, name="buch_edit"),
+    path("buecher/<int:pk>/loeschen/", views.buch_loeschen, name="buch_loeschen"),
+    path("buecher/<int:pk>/kapitel/neu/", views.kapitel_create, name="kapitel_create"),
+    path("kapitel/<int:pk>/bearbeiten/", views.kapitel_edit, name="kapitel_edit"),
+    path("kapitel/<int:pk>/loeschen/", views.kapitel_loeschen, name="kapitel_loeschen"),
     # Lernblock CRUD
     path("lernblock/neu/", views.lernblock_create, name="lernblock_create"),
     path("lernblock/<int:pk>/", views.lernblock_detail, name="lernblock_detail"),

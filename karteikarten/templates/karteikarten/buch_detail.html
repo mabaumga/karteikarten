@@ -1,0 +1,73 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}{{ lehrwerk }} - Karteikarten{% endblock %}
+
+{% block kopf_titel %}{{ lehrwerk }}{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% url 'buecher' %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
+
+{% block kopf_aktion %}
+<a href="{% url 'buch_edit' lehrwerk.pk %}" class="text-white" aria-label="Buch bearbeiten">
+    <i class="bi bi-pencil fs-5"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<p class="small text-body-secondary">
+    {% if lehrwerk.schulfach %}{{ lehrwerk.schulfach }}{% endif %}
+    {% if lehrwerk.jahrgangsstufe %}&middot; {{ lehrwerk.jahrgangsstufe }}{% endif %}
+    {% if lehrwerk.verlag %}&middot; {{ lehrwerk.verlag }}{% endif %}
+</p>
+
+{% if messages %}
+<div class="mb-3">
+    {% for message in messages %}
+    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% for eintrag in kapitel %}
+<details class="card mb-2">
+    <summary class="card-body py-3 d-flex align-items-center gap-3" style="cursor: pointer;">
+        <span class="flex-grow-1 overflow-hidden">
+            <span class="d-block fw-semibold text-truncate">{{ eintrag.unit.name }}</span>
+            <span class="d-block small text-body-secondary">{{ eintrag.bloecke|length }} Lernbl&ouml;cke</span>
+        </span>
+        <a href="{% url 'kapitel_edit' eintrag.unit.pk %}" class="text-body-secondary" aria-label="Kapitel bearbeiten">
+            <i class="bi bi-pencil"></i>
+        </a>
+    </summary>
+    <div class="list-group list-group-flush border-top">
+        {% for block in eintrag.bloecke %}
+        <a href="{% url 'lernblock_detail' block.pk %}"
+           class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+            <span class="flex-grow-1 text-truncate">{{ block.name }}</span>
+            <span class="small text-body-secondary flex-shrink-0">{{ block.anzahl_karten }} Karten</span>
+            <i class="bi bi-chevron-right text-body-secondary small flex-shrink-0"></i>
+        </a>
+        {% empty %}
+        <div class="list-group-item small text-body-secondary">Noch keine Lernbl&ouml;cke in diesem Kapitel.</div>
+        {% endfor %}
+    </div>
+</details>
+{% empty %}
+<div class="text-center py-4">
+    <i class="bi bi-list-nested display-4 text-body-secondary"></i>
+    <p class="text-body-secondary mt-3">Dieses Buch hat noch keine Kapitel.</p>
+</div>
+{% endfor %}
+
+<div class="aktionsleiste">
+    <a href="{% url 'kapitel_create' lehrwerk.pk %}" class="btn btn-primary btn-lg w-100">
+        <i class="bi bi-plus-lg me-1"></i>Neues Kapitel
+    </a>
+</div>
+{% endblock %}

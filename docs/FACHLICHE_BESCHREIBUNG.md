@@ -473,6 +473,40 @@ still auf „Klassisch" zurück, statt eine Fehlermeldung zu zeigen.
 
 ---
 
+### 4.4a Bücher, Kapitel und die Blockauswahl
+
+Die Hierarchie **Buch → Kapitel → Lernblock** gab es im Datenmodell (`Lehrwerk` →
+`LehrwerkUnit` → `Lernblock.lehrwerk_unit`) von Anfang an, füllen konnte sie aber
+nur der JSON-Import. Damit blieb sie für alle unsichtbar, die ihre Vokabeln von
+Hand pflegen.
+
+**Verwaltung** (staff, unter *Mehr → Bücher und Kapitel*): Bücher anlegen und
+bearbeiten (Name, Band, Schulfach, Jahrgangsstufe, Verlag), Kapitel darin anlegen
+und sortieren. Gelöscht wird nur, was leer ist — ein Buch mit belegten Kapiteln
+und ein Kapitel mit Blöcken bleiben stehen, mit Hinweis welche das sind. Sonst
+verlören Blöcke stillschweigend ihre Einordnung.
+
+Name + Band eines Buchs sind zusammen eindeutig, Kapitelnamen innerhalb eines
+Buchs ebenfalls. Beim Anlegen eines Lernblocks wählt man das Kapitel aus einer
+nach Büchern gruppierten Liste (`<optgroup>`).
+
+**Blockauswahl als Baum.** Eine flache Liste aus achtzig Blöcken ist keine
+Auswahl, sondern eine Suche. Die Seite *Blöcke* zeigt deshalb Buch → Kapitel →
+Lernblock, jede Ebene aufklappbar (`<details>`), mit Zähler `gewählt / gesamt` je
+Buch und Kapitel. Ein Kapitel lässt sich als Ganzes an- und abwählen.
+
+Gespeichert wird in einem Zug (`lernbloecke_speichern`) statt Block für Block.
+Zwei Eigenschaften sind dabei wichtig:
+
+- **Abwählen löscht keinen Lernstand.** `BenutzerKarteStatus` hängt an der Karte,
+  nicht am Block — wer einen Block später wieder dazunimmt, findet seine Stufen vor.
+- **Ein aktiver Filter wählt nichts ab.** Das Formular schickt neben der Auswahl
+  mit, was überhaupt sichtbar war; entschieden wird nur darüber.
+
+Blöcke ohne Kapitel verschwinden nicht, sondern stehen am Ende unter „Ohne Buch".
+
+---
+
 ### 4.5 Fortschritt
 
 Zwei Ebenen: der Reiter **Fortschritt** über alle Blöcke, und je Block eine eigene

@@ -23,7 +23,11 @@ from .services.statistik import (
     kurzfortschritt,
 )
 from .models import (
+    Jahrgangsstufe,
+    Lehrwerk,
+    LehrwerkUnit,
     Lernblock,
+    Schulfach,
     Karteikarte,
     TagesStatistik,
     Lernergebnis,
@@ -256,7 +260,9 @@ def meine_lernbloecke(request):
     nur_ausgewaehlt = request.GET.get("ausgewaehlt", "") == "1"
 
     # Get all available blocks
-    alle_bloecke = Lernblock.objects.select_related("schulfach", "jahrgangsstufe")
+    alle_bloecke = Lernblock.objects.select_related(
+        "schulfach", "jahrgangsstufe", "lehrwerk_unit__lehrwerk"
+    )
 
     # Apply filters
     if fach_id:
@@ -271,64 +277,104 @@ def meine_lernbloecke(request):
         )
     )
 
-    # Mark blocks as selected or not
     bloecke = []
     for block in alle_bloecke:
         ist_ausgewaehlt = block.id in benutzer_block_ids
         if nur_ausgewaehlt and not ist_ausgewaehlt:
             continue
-        bloecke.append(
-            {
-                "lernblock": block,
-                "ausgewaehlt": ist_ausgewaehlt,
-            }
-        )
-
-    # Get filter options
-    schulfaecher = Schulfach.objects.all()
-    jahrgangsstufen = Jahrgangsstufe.objects.all()
+        bloecke.append({"lernblock": block, "ausgewaehlt": ist_ausgewaehlt})
 
     context = {
-        "bloecke": bloecke,
-        "schulfaecher": schulfaecher,
-        "jahrgangsstufen": jahrgangsstufen,
+        "baum": _blockbaum(bloecke),
+        "schulfaecher": Schulfach.objects.all(),
+        "jahrgangsstufen": Jahrgangsstufe.objects.all(),
         "filter_fach": fach_id,
         "filter_stufe": stufe_id,
         "filter_ausgewaehlt": nur_ausgewaehlt,
         "anzahl_ausgewaehlt": len(benutzer_block_ids),
+        "anzahl_sichtbar": len(bloecke),
     }
     return render(request, "karteikarten/meine_lernbloecke.html", context)
 
 
-@login_required
-@require_POST
-def lernblock_hinzufuegen(request, pk):
-    """Add a learning block to user's selection."""
-    lernblock = get_object_or_404(Lernblock, pk=pk)
-    BenutzerLernblock.objects.get_or_create(benutzer=request.user, lernblock=lernblock)
-    # Preserve filter parameters
-    query_string = request.GET.urlencode()
-    url = "meine_lernbloecke"
-    if query_string:
-        return redirect(
-            f"{{% url '{url}' %}}?{query_string}".replace(
-                "{{% url '{url}' %}}", "/meine-lernbloecke/"
+def _blockbaum(eintraege):
+    """Buch -> Kapitel -> Lernblock, in genau dieser Reihenfolge.
+
+    Eine flache Liste aus achtzig Bloecken ist keine Auswahl, sondern eine Suche.
+    Der Baum bildet ab, wie ein Schuljahr tatsaechlich aussieht: ein Buch, darin
+    Kapitel, darin die Vokabellisten. Bloecke ohne Einordnung fallen nicht unter
+    den Tisch — sie landen sichtbar unter "Ohne Buch", ganz am Ende.
+    """
+    buecher = {}
+    for eintrag in eintraege:
+        unit = eintrag["lernblock"].lehrwerk_unit
+        buch = unit.lehrwerk if unit else None
+        kapitel = buecher.setdefault(buch, {})
+        kapitel.setdefault(unit, []).append(eintrag)
+
+    baum = []
+    for buch in sorted(buecher, key=lambda b: (b is None, str(b) if b else "")):
+        kapitel_liste = []
+        for unit in sorted(
+            buecher[buch],
+            key=lambda u: (u is None, u.reihenfolge if u else 0, u.name if u else ""),
+        ):
+            gruppe = buecher[buch][unit]
+            kapitel_liste.append(
+                {
+                    "unit": unit,
+                    "name": unit.name if unit else "Ohne Kapitel",
+                    "bloecke": gruppe,
+                    "anzahl": len(gruppe),
+                    "gewaehlt": sum(1 for e in gruppe if e["ausgewaehlt"]),
+                }
             )
+        baum.append(
+            {
+                "lehrwerk": buch,
+                "name": str(buch) if buch else "Ohne Buch",
+                "kapitel": kapitel_liste,
+                "anzahl": sum(k["anzahl"] for k in kapitel_liste),
+                "gewaehlt": sum(k["gewaehlt"] for k in kapitel_liste),
+            }
         )
-    return redirect(url)
+    return baum
 
 
 @login_required
 @require_POST
-def lernblock_entfernen(request, pk):
-    """Remove a learning block from user's selection."""
-    BenutzerLernblock.objects.filter(benutzer=request.user, lernblock_id=pk).delete()
-    # Preserve filter parameters
-    query_string = request.GET.urlencode()
-    url = "meine_lernbloecke"
-    if query_string:
-        return redirect(f"/meine-lernbloecke/?{query_string}")
-    return redirect(url)
+def lernbloecke_speichern(request):
+    """Die Auswahl in einem Zug setzen statt Block fuer Block.
+
+    Abwaehlen loescht nur die Zuordnung, nicht den Lernstand: `BenutzerKarteStatus`
+    haengt an der Karte, nicht am Block. Wer einen Block spaeter wieder dazunimmt,
+    findet seine Stufen vor.
+    """
+    gewaehlt = {int(pk) for pk in request.POST.getlist("bloecke") if pk.isdigit()}
+    sichtbar = {int(pk) for pk in request.POST.getlist("sichtbar") if pk.isdigit()}
+
+    # Nur ueber das entscheiden, was auf der Seite stand — ein aktiver Filter darf
+    # nicht die Bloecke abwaehlen, die er gerade ausblendet.
+    gewaehlt &= sichtbar
+    vorhanden = set(
+        BenutzerLernblock.objects.filter(
+            benutzer=request.user, lernblock_id__in=sichtbar
+        ).values_list("lernblock_id", flat=True)
+    )
+
+    BenutzerLernblock.objects.filter(
+        benutzer=request.user, lernblock_id__in=vorhanden - gewaehlt
+    ).delete()
+    BenutzerLernblock.objects.bulk_create(
+        [
+            BenutzerLernblock(benutzer=request.user, lernblock_id=pk)
+            for pk in gewaehlt - vorhanden
+        ]
+    )
+
+    anzahl = BenutzerLernblock.objects.filter(benutzer=request.user).count()
+    messages.success(request, f"Gespeichert — du lernst jetzt {anzahl} Blöcke.")
+    return redirect("meine_lernbloecke")
 
 
 @login_required
@@ -374,6 +420,11 @@ def lernblock_detail(request, pk):
     return render(request, "karteikarten/lernblock_detail.html", context)
 
 
+def _buecher_mit_kapiteln():
+    """Buecher mit ihren Kapiteln — Vorlage fuer die Auswahl im Blockformular."""
+    return Lehrwerk.objects.prefetch_related("units").all()
+
+
 @login_required
 def lernblock_create(request):
     """Create a new learning block."""
@@ -389,12 +440,17 @@ def lernblock_create(request):
                 beschreibung=beschreibung,
                 lehrbuch=lehrbuch,
                 bidirektional=bidirektional,
+                lehrwerk_unit=_wahl(LehrwerkUnit, request.POST.get("lehrwerk_unit")),
             )
             # Automatically add to user's blocks
             BenutzerLernblock.objects.create(benutzer=request.user, lernblock=lernblock)
             return redirect("lernblock_detail", pk=lernblock.pk)
 
-    return render(request, "karteikarten/lernblock_form.html", {"action": "Erstellen"})
+    return render(
+        request,
+        "karteikarten/lernblock_form.html",
+        {"action": "Erstellen", "buecher": _buecher_mit_kapiteln()},
+    )
 
 
 @login_required
@@ -407,13 +463,18 @@ def lernblock_edit(request, pk):
         lernblock.beschreibung = request.POST.get("beschreibung", "").strip()
         lernblock.lehrbuch = request.POST.get("lehrbuch", "").strip()
         lernblock.bidirektional = request.POST.get("bidirektional") == "on"
+        lernblock.lehrwerk_unit = _wahl(LehrwerkUnit, request.POST.get("lehrwerk_unit"))
         lernblock.save()
         return redirect("lernblock_detail", pk=lernblock.pk)
 
     return render(
         request,
         "karteikarten/lernblock_form.html",
-        {"lernblock": lernblock, "action": "Bearbeiten"},
+        {
+            "lernblock": lernblock,
+            "action": "Bearbeiten",
+            "buecher": _buecher_mit_kapiteln(),
+        },
     )
 
 
@@ -912,6 +973,236 @@ def lernblock_fortschritt(request, pk):
         "auswertung": block_fortschritt(request.user, lernblock),
     }
     return render(request, "karteikarten/lernblock_fortschritt.html", context)
+
+
+# --- Buecher und Kapitel -----------------------------------------------------------
+# Die Hierarchie Buch -> Kapitel -> Lernblock gab es im Datenmodell laengst, aber
+# nur der JSON-Import konnte sie fuellen. Damit blieb sie fuer alle unsichtbar,
+# die ihre Vokabeln von Hand pflegen.
+
+
+@staff_required
+def buecher(request):
+    """Alle Buecher mit ihren Kapiteln."""
+    gebunden = (
+        Lehrwerk.objects.select_related("schulfach", "jahrgangsstufe")
+        .prefetch_related("units__lernbloecke")
+        .all()
+    )
+    buchliste = [
+        {
+            "lehrwerk": lehrwerk,
+            "kapitel": [
+                {"unit": unit, "anzahl_bloecke": unit.lernbloecke.count()}
+                for unit in lehrwerk.units.all()
+            ],
+        }
+        for lehrwerk in gebunden
+    ]
+
+    context = {
+        "buecher": buchliste,
+        "ohne_buch": Lernblock.objects.filter(lehrwerk_unit__isnull=True).count(),
+    }
+    return render(request, "karteikarten/buecher.html", context)
+
+
+def _buch_speichern(request, lehrwerk):
+    """Felder aus dem Formular uebernehmen. Gibt einen Fehlertext zurueck oder None."""
+    name = request.POST.get("name", "").strip()
+    if not name:
+        return "Das Buch braucht einen Namen."
+
+    band = request.POST.get("band", "").strip()
+    doppelt = Lehrwerk.objects.filter(name=name, band=band).exclude(pk=lehrwerk.pk)
+    if doppelt.exists():
+        return f"„{name}“ mit diesem Band gibt es schon."
+
+    lehrwerk.name = name
+    lehrwerk.band = band
+    lehrwerk.verlag = request.POST.get("verlag", "").strip()
+    lehrwerk.schulfach = _wahl(Schulfach, request.POST.get("schulfach"))
+    lehrwerk.jahrgangsstufe = _wahl(Jahrgangsstufe, request.POST.get("jahrgangsstufe"))
+    lehrwerk.save()
+    return None
+
+
+def _wahl(modell, roh):
+    """Ein optionales Auswahlfeld in ein Objekt uebersetzen — leer heisst None."""
+    if not roh or not str(roh).isdigit():
+        return None
+    return modell.objects.filter(pk=int(roh)).first()
+
+
+def _buch_kontext(lehrwerk=None):
+    return {
+        "lehrwerk": lehrwerk,
+        "schulfaecher": Schulfach.objects.all(),
+        "jahrgangsstufen": Jahrgangsstufe.objects.all(),
+    }
+
+
+@staff_required
+def buch_create(request):
+    """Neues Buch anlegen."""
+    if request.method == "POST":
+        lehrwerk = Lehrwerk()
+        fehler = _buch_speichern(request, lehrwerk)
+        if fehler is None:
+            messages.success(request, f"Buch „{lehrwerk}“ angelegt.")
+            return redirect("buch_detail", pk=lehrwerk.pk)
+        messages.error(request, fehler)
+
+    return render(
+        request,
+        "karteikarten/buch_form.html",
+        {"aktion": "Anlegen", **_buch_kontext()},
+    )
+
+
+@staff_required
+def buch_edit(request, pk):
+    """Buch bearbeiten."""
+    lehrwerk = get_object_or_404(Lehrwerk, pk=pk)
+
+    if request.method == "POST":
+        fehler = _buch_speichern(request, lehrwerk)
+        if fehler is None:
+            messages.success(request, "Buch gespeichert.")
+            return redirect("buch_detail", pk=lehrwerk.pk)
+        messages.error(request, fehler)
+
+    return render(
+        request,
+        "karteikarten/buch_form.html",
+        {"aktion": "Speichern", **_buch_kontext(lehrwerk)},
+    )
+
+
+@staff_required
+def buch_detail(request, pk):
+    """Ein Buch mit seinen Kapiteln und deren Bloecken."""
+    lehrwerk = get_object_or_404(Lehrwerk, pk=pk)
+    kapitel = [
+        {"unit": unit, "bloecke": list(unit.lernbloecke.all())}
+        for unit in lehrwerk.units.all()
+    ]
+    return render(
+        request,
+        "karteikarten/buch_detail.html",
+        {"lehrwerk": lehrwerk, "kapitel": kapitel},
+    )
+
+
+@staff_required
+@require_POST
+def buch_loeschen(request, pk):
+    """Buch loeschen — nur, solange kein Kapitel Bloecke traegt.
+
+    Ein Buch zu loeschen wuerde ueber die Kaskade alle Kapitel mitnehmen; die
+    Lernbloecke blieben zwar erhalten (ihr Verweis wird auf NULL gesetzt), aber
+    ihre Einordnung waere weg. Das passiert nicht aus Versehen.
+    """
+    lehrwerk = get_object_or_404(Lehrwerk, pk=pk)
+    belegte = [unit for unit in lehrwerk.units.all() if unit.lernbloecke.exists()]
+    if belegte:
+        messages.error(
+            request,
+            f"„{lehrwerk}“ hat noch Kapitel mit Lernblöcken "
+            f"({', '.join(unit.name for unit in belegte)}). Erst die Blöcke umhängen.",
+        )
+        return redirect("buch_detail", pk=pk)
+
+    name = str(lehrwerk)
+    lehrwerk.delete()
+    messages.success(request, f"Buch „{name}“ gelöscht.")
+    return redirect("buecher")
+
+
+@staff_required
+def kapitel_create(request, pk):
+    """Kapitel in einem Buch anlegen."""
+    lehrwerk = get_object_or_404(Lehrwerk, pk=pk)
+
+    if request.method == "POST":
+        fehler = _kapitel_speichern(request, LehrwerkUnit(lehrwerk=lehrwerk))
+        if fehler is None:
+            return redirect("buch_detail", pk=lehrwerk.pk)
+        messages.error(request, fehler)
+
+    return render(
+        request,
+        "karteikarten/kapitel_form.html",
+        {
+            "lehrwerk": lehrwerk,
+            "aktion": "Anlegen",
+            # Neue Kapitel hinten anstellen, statt bei 0 zu beginnen
+            "reihenfolge": lehrwerk.units.count() + 1,
+        },
+    )
+
+
+@staff_required
+def kapitel_edit(request, pk):
+    """Kapitel bearbeiten."""
+    unit = get_object_or_404(LehrwerkUnit, pk=pk)
+
+    if request.method == "POST":
+        fehler = _kapitel_speichern(request, unit)
+        if fehler is None:
+            return redirect("buch_detail", pk=unit.lehrwerk_id)
+        messages.error(request, fehler)
+
+    return render(
+        request,
+        "karteikarten/kapitel_form.html",
+        {
+            "lehrwerk": unit.lehrwerk,
+            "unit": unit,
+            "aktion": "Speichern",
+            "reihenfolge": unit.reihenfolge,
+        },
+    )
+
+
+def _kapitel_speichern(request, unit):
+    name = request.POST.get("name", "").strip()
+    if not name:
+        return "Das Kapitel braucht einen Namen."
+
+    doppelt = LehrwerkUnit.objects.filter(lehrwerk=unit.lehrwerk, name=name).exclude(
+        pk=unit.pk
+    )
+    if doppelt.exists():
+        return f"„{name}“ gibt es in diesem Buch schon."
+
+    reihenfolge = request.POST.get("reihenfolge", "").strip()
+    unit.name = name
+    unit.beschreibung = request.POST.get("beschreibung", "").strip()
+    unit.reihenfolge = int(reihenfolge) if reihenfolge.isdigit() else 0
+    unit.save()
+    messages.success(request, f"Kapitel „{name}“ gespeichert.")
+    return None
+
+
+@staff_required
+@require_POST
+def kapitel_loeschen(request, pk):
+    """Kapitel loeschen — nur, solange keine Bloecke daran haengen."""
+    unit = get_object_or_404(LehrwerkUnit, pk=pk)
+    anzahl = unit.lernbloecke.count()
+    if anzahl:
+        messages.error(
+            request,
+            f"„{unit.name}“ trägt noch {anzahl} Lernblöcke. Erst die Blöcke umhängen.",
+        )
+        return redirect("buch_detail", pk=unit.lehrwerk_id)
+
+    lehrwerk_id = unit.lehrwerk_id
+    name = unit.name
+    unit.delete()
+    messages.success(request, f"Kapitel „{name}“ gelöscht.")
+    return redirect("buch_detail", pk=lehrwerk_id)
 
 
 @login_required
