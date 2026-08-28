@@ -1,3 +1,3 @@
 """Karteikarten-App. Single Source of Truth fuer die App-Version."""
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"

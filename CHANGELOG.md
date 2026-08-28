@@ -9,6 +9,42 @@ Conventional Commits generiert.
 
 <!-- version list -->
 
+## v1.3.0 (2026-08-28)
+
+### Bug Fixes
+
+- **lernen**: Karten zufaellig statt in fester Reihenfolge abfragen
+  ([#42](https://github.com/mabaumga/karteikarten/pull/42),
+  [`30c4089`](https://github.com/mabaumga/karteikarten/commit/30c40899b13f035e2049b238f1d8552040d82df0))
+
+- **release**: Semantic-release wieder lauffaehig machen
+  ([#40](https://github.com/mabaumga/karteikarten/pull/40),
+  [`c2c7fc8`](https://github.com/mabaumga/karteikarten/commit/c2c7fc8ad45201e4d47478d17c910ccf29c6dc9d))
+
+- **release**: Semantic-release wieder lauffähig machen
+  ([#40](https://github.com/mabaumga/karteikarten/pull/40),
+  [`c2c7fc8`](https://github.com/mabaumga/karteikarten/commit/c2c7fc8ad45201e4d47478d17c910ccf29c6dc9d))
+
+### Documentation
+
+- Unraid-Altinstanz aus der Doku entfernen ([#41](https://github.com/mabaumga/karteikarten/pull/41),
+  [`d5f0e63`](https://github.com/mabaumga/karteikarten/commit/d5f0e63794b5c41f65cb0ebc0ecb19e838cdb548))
+
+- **makefile**: Deploy-Hinweis zeigt auf Hetzner statt Unraid
+  ([#40](https://github.com/mabaumga/karteikarten/pull/40),
+  [`c2c7fc8`](https://github.com/mabaumga/karteikarten/commit/c2c7fc8ad45201e4d47478d17c910ccf29c6dc9d))
+
+### Features
+
+- **lernen**: Tippmodus — die Antwort wird eingetippt statt aufgedeckt
+  ([#45](https://github.com/mabaumga/karteikarten/pull/45),
+  [`909e532`](https://github.com/mabaumga/karteikarten/commit/909e532ef96409310090ec0c83ea10ac52d5ce17))
+
+- **ui**: Neustrukturierung — vier Bereiche, ein Weg ins Lernen, Fortschritt
+  ([#44](https://github.com/mabaumga/karteikarten/pull/44),
+  [`40c0915`](https://github.com/mabaumga/karteikarten/commit/40c09154bdd88d659f5087ffc8125f0f1e23f90d))
+
+
 ## v1.2.0 (2026-08-28)
 
 ### Bug Fixes
