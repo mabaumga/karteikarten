@@ -1,0 +1,35 @@
+{% comment %}Wo die Karten stehen. Erwartet: auswertung{% endcomment %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h2 class="h6 mb-3">Wo deine Karten stehen</h2>
+        {% if auswertung.anzahl_karten %}
+        {% widthratio auswertung.sitzt auswertung.anzahl_karten 100 as anteil_sitzt %}
+        {% widthratio auswertung.in_arbeit auswertung.anzahl_karten 100 as anteil_arbeit %}
+        {% widthratio auswertung.nie_geuebt auswertung.anzahl_karten 100 as anteil_neu %}
+        <div class="d-flex rounded-pill overflow-hidden" style="height: 12px;">
+            <div style="width: {{ anteil_sitzt }}%; background: var(--success);"></div>
+            <div style="width: {{ anteil_arbeit }}%; background: #60A5FA;"></div>
+            <div style="width: {{ anteil_neu }}%; background: #E5E7EB;"></div>
+        </div>
+        <ul class="list-unstyled mt-3 mb-0 d-flex flex-column gap-2">
+            <li class="d-flex align-items-center gap-2">
+                <span class="rounded" style="width: 10px; height: 10px; background: var(--success);"></span>
+                <span class="flex-grow-1">Sitzt sicher &middot; Stufe 5</span>
+                <span class="fw-semibold">{{ auswertung.sitzt }}</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+                <span class="rounded" style="width: 10px; height: 10px; background: #60A5FA;"></span>
+                <span class="flex-grow-1">In Arbeit &middot; Stufe 1&ndash;4</span>
+                <span class="fw-semibold">{{ auswertung.in_arbeit }}</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+                <span class="rounded" style="width: 10px; height: 10px; background: #E5E7EB;"></span>
+                <span class="flex-grow-1">Noch nie ge&uuml;bt</span>
+                <span class="fw-semibold">{{ auswertung.nie_geuebt }}</span>
+            </li>
+        </ul>
+        {% else %}
+        <p class="text-body-secondary mb-0">Noch keine Karten vorhanden.</p>
+        {% endif %}
+    </div>
+</div>

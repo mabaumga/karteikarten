@@ -14,6 +14,9 @@ urlpatterns = [
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
     # Dashboard
     path("", views.dashboard, name="dashboard"),
+    # Reiter der Hauptnavigation
+    path("fortschritt/", views.fortschritt, name="fortschritt"),
+    path("mehr/", views.mehr, name="mehr"),
     # User profile and block selection
     path("profil/", views.profil, name="profil"),
     path("meine-lernbloecke/", views.meine_lernbloecke, name="meine_lernbloecke"),
@@ -47,7 +50,18 @@ urlpatterns = [
         views.kartenauswahl_aufheben,
         name="kartenauswahl_aufheben",
     ),
+    path(
+        "lernblock/<int:pk>/fortschritt/",
+        views.lernblock_fortschritt,
+        name="lernblock_fortschritt",
+    ),
+    path("lernblock/<int:pk>/modus/", views.modus_waehlen, name="modus_waehlen"),
     # Learning modes
+    path(
+        "lernblock/<int:pk>/lernen/",
+        views.lernen_starten,
+        name="lernen_starten",
+    ),
     path(
         "lernblock/<int:pk>/lernen/klassisch/",
         views.lernen_klassisch,
@@ -79,6 +93,7 @@ urlpatterns = [
         views.lernen_kombiniert_auswahl,
         name="lernen_kombiniert_auswahl",
     ),
+    path("lernen/alles/", views.lernen_alles, name="lernen_alles"),
     path("lernen/kombiniert/", views.lernen_kombiniert, name="lernen_kombiniert"),
     path(
         "lernen/kombiniert/multiple-choice/",

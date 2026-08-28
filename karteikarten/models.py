@@ -607,6 +607,12 @@ class BenutzerStatistik(models.Model):
         related_name="benutzer_bevorzugt",
         help_text="Wird als Standard-Filter vorausgewaehlt",
     )
+    bevorzugter_modus = models.CharField(
+        max_length=20,
+        choices=Lernergebnis.MODUS_CHOICES,
+        default="klassisch",
+        help_text="Womit die Abfrage startet, ohne dass jedes Mal gefragt wird",
+    )
     # Security
     muss_passwort_aendern = models.BooleanField(
         default=False,

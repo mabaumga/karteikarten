@@ -62,7 +62,7 @@ skills:
       system_menu: missing       # bewusst ausgelassen (Bastelprojekt)
       health: ok                 # /health/ (DB + Disk) nach Contract
       hardware: missing          # bewusst ausgelassen
-      pre_commit: missing        # bewusst ausgelassen (keine Tests)
+      pre_commit: missing        # bewusst ausgelassen; Gate laeuft ueber `make check`
       claude_md: ok              # Betrieb/Rahmen + AGENTS.md-Regel + Django-6-Fix
       dev_container: missing     # bewusst ausgelassen
     result: "Retrofit: Versionsanzeige, /health/, Make init/check/release/deploy, Release-Pipeline (semantic-release + ghcr + CHANGELOG), Registry vereinheitlicht auf ghcr.io/mabaumga, Deployment-URL ermittelt."

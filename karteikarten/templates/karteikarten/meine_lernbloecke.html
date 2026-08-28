@@ -2,15 +2,16 @@
 
 {% block title %}Meine Lernbloecke - Karteikarten{% endblock %}
 
+{% block kopf_titel %}Meine Bl&ouml;cke{% endblock %}
+
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h4 class="mb-0">
-        <i class="bi bi-collection me-2"></i>Lernbloecke auswaehlen
-    </h4>
-    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
-        <i class="bi bi-arrow-left me-1"></i>Zurueck
-    </a>
-</div>
+<p class="small text-body-secondary">
+    Hier w&auml;hlst du, welche Bl&ouml;cke auf deiner Startseite auftauchen.
+</p>
+
+<a href="{% url 'lernen_kombiniert_auswahl' %}" class="btn btn-outline-primary w-100 mb-3">
+    <i class="bi bi-collection me-1"></i>Mehrere Bl&ouml;cke zusammen &uuml;ben
+</a>
 
 <!-- Filter Card -->
 <div class="card mb-4">
@@ -149,10 +150,12 @@
 </div>
 {% endfor %}
 
-<!-- Create new block -->
+{% if user.is_staff %}
 <div class="mt-4 pt-3 border-top">
-    <a href="{% url 'lernblock_create' %}" class="btn btn-outline-primary w-100">
-        <i class="bi bi-plus-lg me-1"></i>Neuen Lernblock erstellen
+    <div class="small text-body-secondary text-uppercase mb-2" style="letter-spacing: .04em;">Nur f&uuml;r Verwalter</div>
+    <a href="{% url 'lernblock_create' %}" class="btn btn-outline-secondary w-100">
+        <i class="bi bi-plus-lg me-1"></i>Neuen Lernblock anlegen
     </a>
 </div>
+{% endif %}
 {% endblock %}

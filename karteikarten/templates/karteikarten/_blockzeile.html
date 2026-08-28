@@ -1,0 +1,46 @@
+{% comment %}
+Eine Zeile der Blockliste. Zuerst steht, was zu tun ist ("Heute üben"), dann erst,
+worum es geht — die Zeile soll sich selbst erklären, ohne dass man den Blocknamen
+deuten muss. Rechts der Ring mit der Anzahl fälliger Karten.
+
+Erwartet: item (aus dashboard), ziel_url
+{% endcomment %}
+<a href="{{ ziel_url }}" class="card mb-3 text-decoration-none text-body">
+    <div class="card-body d-flex align-items-center gap-3 py-3">
+        <span class="fachmarke flex-shrink-0"
+              style="background: {{ item.farbe }}; color: {{ item.schrift }};">{{ item.kuerzel }}</span>
+
+        <span class="flex-grow-1 overflow-hidden">
+            <span class="d-block fw-semibold {% if item.zustand == 'faellig' %}text-primary{% else %}text-body-secondary{% endif %}"
+                  style="font-size: 1.0625rem;">{{ item.titel }}</span>
+            <span class="d-block small text-body-secondary text-truncate">
+                {% if item.lernblock.lehrwerk_unit %}{{ item.lernblock.lehrwerk_unit.lehrwerk }} &middot; {% endif %}{{ item.lernblock.name }}
+                {% if item.zustand != 'faellig' %}&middot; {{ item.anzahl }} Karten{% endif %}
+            </span>
+        </span>
+
+        {% if item.zustand == 'faellig' %}
+        <svg width="52" height="52" viewBox="0 0 52 52" class="flex-shrink-0" role="img"
+             aria-label="{{ item.faellig }} von {{ item.anzahl }} Karten fällig">
+            <circle cx="26" cy="26" r="21" fill="none" stroke="#E5E7EB" stroke-width="4"></circle>
+            <circle cx="26" cy="26" r="21" fill="none" stroke="var(--primary)" stroke-width="4"
+                    stroke-linecap="round" stroke-dasharray="132 132"
+                    stroke-dashoffset="{{ item.ring_versatz }}" transform="rotate(-90 26 26)"></circle>
+            <text x="26" y="31" text-anchor="middle" font-size="16" font-weight="700"
+                  fill="#2563EB">{{ item.faellig }}</text>
+        </svg>
+        {% elif item.zustand == 'wartet' and item.tage_bis_faellig == 1 %}
+        <svg width="52" height="52" viewBox="0 0 52 52" class="flex-shrink-0" role="img" aria-label="Heute geschafft">
+            <circle cx="26" cy="26" r="21" fill="none" stroke="#D1FAE5" stroke-width="4"></circle>
+            <path d="M18.5 26.5l5 5 10-10" fill="none" stroke="var(--success)" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        {% else %}
+        <svg width="52" height="52" viewBox="0 0 52 52" class="flex-shrink-0" role="img" aria-label="Noch nicht fällig">
+            <circle cx="26" cy="26" r="21" fill="none" stroke="#D1D5DB" stroke-width="4" stroke-dasharray="5 6"></circle>
+            <path d="M26 18v8.5l5 3" fill="none" stroke="#6B7280" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        {% endif %}
+    </div>
+</a>

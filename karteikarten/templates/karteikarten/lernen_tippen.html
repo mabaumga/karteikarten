@@ -1,6 +1,6 @@
 {% extends 'karteikarten/base.html' %}
 
-{% block title %}Eintippen - {% if lernblock %}{{ lernblock.name }}{% else %}Gemeinsam lernen{% endif %}{% endblock %}
+{% block title %}Eintippen - {% if lernblock %}{{ lernblock.name }}{% else %}Alles zusammen üben{% endif %}{% endblock %}
 
 {% block nav_right %}
 <a href="{{ abbrechen_url }}" class="btn btn-link text-white">
@@ -91,7 +91,7 @@
 
 <!-- Karten-Info -->
 <div class="text-center mt-4">
-    <span class="badge bg-secondary">Fach {{ status.fach }}</span>
+    <span class="badge text-bg-secondary">Stufe {{ status.fach }} von 5</span>
 </div>
 {% endblock %}
 
