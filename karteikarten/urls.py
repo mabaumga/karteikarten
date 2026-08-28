@@ -40,6 +40,13 @@ urlpatterns = [
     path("lernblock/<int:pk>/karten/import/", views.csv_import, name="csv_import"),
     path("karte/<int:pk>/bearbeiten/", views.karte_edit, name="karte_edit"),
     path("karte/<int:pk>/loeschen/", views.karte_delete, name="karte_delete"),
+    # Kartenauswahl (temporaerer Subblock)
+    path("lernblock/<int:pk>/auswahl/", views.kartenauswahl, name="kartenauswahl"),
+    path(
+        "lernblock/<int:pk>/auswahl/aufheben/",
+        views.kartenauswahl_aufheben,
+        name="kartenauswahl_aufheben",
+    ),
     # Learning modes
     path(
         "lernblock/<int:pk>/lernen/klassisch/",

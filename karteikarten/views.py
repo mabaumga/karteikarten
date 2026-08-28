@@ -241,10 +241,17 @@ def lernblock_detail(request, pk):
     ).exists()
 
     # Calculate user-specific card distribution
+    auswahl = _kartenauswahl(request, lernblock)
     karten_verteilung = {i: 0 for i in range(1, 6)}
+    faellig_gesamt = 0
+    faellig_auswahl = 0
     for karte in lernblock.karten.all():
         status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
         karten_verteilung[status.fach] += 1
+        if status.ist_faellig:
+            faellig_gesamt += 1
+            if auswahl is None or karte.pk in auswahl:
+                faellig_auswahl += 1
 
     # Today's stats for this block and user
     heute_stats, _ = TagesStatistik.objects.get_or_create(
@@ -256,8 +263,11 @@ def lernblock_detail(request, pk):
     context = {
         "lernblock": lernblock,
         "karten_verteilung": karten_verteilung,
+        "faellig_gesamt": faellig_gesamt,
+        "faellig_auswahl": faellig_auswahl,
         "heute_stats": heute_stats,
         "hat_block": hat_block,
+        **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernblock_detail.html", context)
 
@@ -470,10 +480,42 @@ def csv_import(request, pk):
 # Learning modes
 
 
-def _get_faellige_karten(user, lernblock, limit=20):
-    """Get due cards for a user, sorted by box (lower first)."""
+# --- Temporaere Kartenauswahl ("Subblock") -----------------------------------
+#
+# Die Auswahl lebt in der Session, je Lernblock: {"<block_pk>": [karte_pk, ...]}.
+# Damit ueberlebt sie das window.location.reload() nach jeder Antwort, ohne den
+# Lernblock in der Datenbank anzufassen und ohne die URL zu sprengen (ein Block
+# kann mehrere hundert Karten haben).
+
+SESSION_KARTENAUSWAHL = "kartenauswahl"
+
+
+def _kartenauswahl(request, lernblock):
+    """IDs der ausgewaehlten Karten — None, wenn der ganze Block gelernt wird."""
+    ids = request.session.get(SESSION_KARTENAUSWAHL, {}).get(str(lernblock.pk))
+    return set(ids) if ids is not None else None
+
+
+def _auswahl_context(request, lernblock):
+    """Kontext fuer das Auswahl-Abzeichen in Lern- und Detailansichten."""
+    auswahl = _kartenauswahl(request, lernblock)
+    return {
+        "auswahl_aktiv": auswahl is not None,
+        "auswahl_anzahl": len(auswahl) if auswahl is not None else 0,
+    }
+
+
+def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
+    """Get due cards for a user, sorted by box (lower first).
+
+    nur_karten: Menge von Karten-IDs (temporaere Auswahl) oder None fuer den
+    ganzen Block. Der Filter greift vor get_or_create_for_user — fuer abgewaehlte
+    Karten entsteht also kein Status-Datensatz.
+    """
     faellige = []
     for karte in lernblock.karten.all():
+        if nur_karten is not None and karte.pk not in nur_karten:
+            continue
         status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
         if status.ist_faellig:
             faellige.append((karte, status))
@@ -504,8 +546,11 @@ def karten_zuruecksetzen(request, pk):
     lernblock = get_object_or_404(Lernblock, pk=pk)
     user = request.user
 
-    # Reset all card statuses to today
+    # Reset card statuses to today — bei aktiver Auswahl nur die ausgewaehlten
+    auswahl = _kartenauswahl(request, lernblock)
     for karte in lernblock.karten.all():
+        if auswahl is not None and karte.pk not in auswahl:
+            continue
         status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
         status.naechste_wiederholung = date.today()
         status.save()
@@ -520,12 +565,78 @@ def karten_zuruecksetzen(request, pk):
 
 
 @login_required
+def kartenauswahl(request, pk):
+    """Temporaere Kartenauswahl fuer einen Lernblock ("Subblock").
+
+    Aendert den Lernblock nicht — die Auswahl liegt in der Session und gilt bis
+    sie aufgehoben wird oder die Session endet.
+    """
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    karten = list(lernblock.karten.all())
+
+    if request.method == "POST":
+        gewaehlt = {int(k) for k in request.POST.getlist("karten") if k.isdigit()}
+        gewaehlt &= {karte.pk for karte in karten}
+        if not gewaehlt:
+            messages.error(request, "Mindestens eine Karte auswaehlen.")
+        else:
+            auswahl = request.session.get(SESSION_KARTENAUSWAHL, {})
+            if len(gewaehlt) == len(karten):
+                # Vollstaendige Auswahl ist keine Auswahl — sonst zeigte das
+                # Abzeichen dauerhaft "40 von 40".
+                auswahl.pop(str(lernblock.pk), None)
+                messages.success(
+                    request,
+                    "Auswahl aufgehoben — es wird wieder der ganze Block gelernt.",
+                )
+            else:
+                auswahl[str(lernblock.pk)] = sorted(gewaehlt)
+                messages.success(
+                    request,
+                    f"Auswahl gespeichert: {len(gewaehlt)} von {len(karten)} Karten.",
+                )
+            request.session[SESSION_KARTENAUSWAHL] = auswahl
+            return redirect("lernblock_detail", pk=lernblock.pk)
+
+    auswahl = _kartenauswahl(request, lernblock)
+    karten_mit_status = [
+        {
+            "karte": karte,
+            "status": BenutzerKarteStatus.get_or_create_for_user(request.user, karte),
+            "gewaehlt": auswahl is None or karte.pk in auswahl,
+        }
+        for karte in karten
+    ]
+
+    context = {
+        "lernblock": lernblock,
+        "karten_mit_status": karten_mit_status,
+        **_auswahl_context(request, lernblock),
+    }
+    return render(request, "karteikarten/kartenauswahl.html", context)
+
+
+@login_required
+@require_POST
+def kartenauswahl_aufheben(request, pk):
+    """Temporaere Auswahl verwerfen — es wird wieder der ganze Block gelernt."""
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    auswahl = request.session.get(SESSION_KARTENAUSWAHL, {})
+    if auswahl.pop(str(lernblock.pk), None) is not None:
+        request.session[SESSION_KARTENAUSWAHL] = auswahl
+        messages.success(request, "Auswahl aufgehoben.")
+    return redirect("lernblock_detail", pk=lernblock.pk)
+
+
+@login_required
 def lernen_klassisch(request, pk):
     """Classic learning mode: show term, reveal definition."""
     lernblock = get_object_or_404(Lernblock, pk=pk)
     user = request.user
 
-    faellige = _get_faellige_karten(user, lernblock)
+    faellige = _get_faellige_karten(
+        user, lernblock, nur_karten=_kartenauswahl(request, lernblock)
+    )
 
     if not faellige:
         return render(
@@ -534,6 +645,7 @@ def lernen_klassisch(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "klassisch",
+                **_auswahl_context(request, lernblock),
             },
         )
 
@@ -545,6 +657,7 @@ def lernen_klassisch(request, pk):
         "status": status,
         "modus": "klassisch",
         "verbleibend": len(faellige),
+        **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
 
@@ -558,7 +671,9 @@ def lernen_rueckwaerts(request, pk):
     if not lernblock.bidirektional:
         return redirect("lernblock_detail", pk=pk)
 
-    faellige = _get_faellige_karten(user, lernblock)
+    faellige = _get_faellige_karten(
+        user, lernblock, nur_karten=_kartenauswahl(request, lernblock)
+    )
 
     if not faellige:
         return render(
@@ -567,6 +682,7 @@ def lernen_rueckwaerts(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "rueckwaerts",
+                **_auswahl_context(request, lernblock),
             },
         )
 
@@ -578,6 +694,7 @@ def lernen_rueckwaerts(request, pk):
         "status": status,
         "modus": "rueckwaerts",
         "verbleibend": len(faellige),
+        **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_karte.html", context)
 
@@ -601,7 +718,9 @@ def lernen_multiple_choice(request, pk):
             },
         )
 
-    faellige = _get_faellige_karten(user, lernblock)
+    faellige = _get_faellige_karten(
+        user, lernblock, nur_karten=_kartenauswahl(request, lernblock)
+    )
 
     if not faellige:
         return render(
@@ -610,6 +729,7 @@ def lernen_multiple_choice(request, pk):
             {
                 "lernblock": lernblock,
                 "modus": "multiple_choice",
+                **_auswahl_context(request, lernblock),
             },
         )
 
@@ -633,6 +753,7 @@ def lernen_multiple_choice(request, pk):
         "optionen": optionen,
         "modus": "multiple_choice",
         "verbleibend": len(faellige),
+        **_auswahl_context(request, lernblock),
     }
     return render(request, "karteikarten/lernen_multiple_choice.html", context)
 

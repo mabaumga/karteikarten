@@ -30,6 +30,17 @@
     <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
 </a>
 
+{% if messages %}
+<div class="mb-3">
+    {% for message in messages %}
+    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
 <h4 class="mb-1">{{ lernblock.name }}</h4>
 {% if lernblock.beschreibung %}
 <p class="text-muted mb-1">{{ lernblock.beschreibung }}</p>
@@ -65,7 +76,7 @@
 
         <div class="row text-center">
             <div class="col-6">
-                <div class="h5 mb-0">{{ lernblock.faellige_karten }}</div>
+                <div class="h5 mb-0">{{ faellig_gesamt }}</div>
                 <div class="small text-muted">F&auml;llig heute</div>
             </div>
             <div class="col-6">
@@ -81,7 +92,25 @@
 </div>
 
 <!-- Learning Modes -->
-<h6 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Lernmodus w&auml;hlen</h6>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h6 class="mb-0"><i class="bi bi-mortarboard me-2"></i>Lernmodus w&auml;hlen</h6>
+    <a href="{% url 'kartenauswahl' lernblock.pk %}" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-funnel me-1"></i>Karten w&auml;hlen
+    </a>
+</div>
+
+{% if auswahl_aktiv %}
+<div class="alert alert-secondary d-flex justify-content-between align-items-center py-2">
+    <div class="small">
+        <i class="bi bi-funnel-fill me-1"></i>
+        Auswahl aktiv: <strong>{{ auswahl_anzahl }}</strong> von {{ lernblock.anzahl_karten }} Karten
+    </div>
+    <form method="post" action="{% url 'kartenauswahl_aufheben' lernblock.pk %}" class="ms-2">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-link btn-sm p-0 text-decoration-none">Aufheben</button>
+    </form>
+</div>
+{% endif %}
 
 <div class="row g-3 mb-4">
     <div class="col-{% if lernblock.bidirektional %}4{% else %}6{% endif %}">
@@ -89,7 +118,7 @@
             <div class="card-body text-center py-4">
                 <i class="bi bi-book display-6 text-primary mb-2"></i>
                 <div class="fw-bold">Klassisch</div>
-                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+                <div class="small text-muted">{{ faellig_auswahl }} f&auml;llig</div>
             </div>
         </a>
     </div>
@@ -100,7 +129,7 @@
             <div class="card-body text-center py-4">
                 <i class="bi bi-arrow-left-right display-6 text-info mb-2"></i>
                 <div class="fw-bold">R&uuml;ckw&auml;rts</div>
-                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+                <div class="small text-muted">{{ faellig_auswahl }} f&auml;llig</div>
             </div>
         </a>
     </div>
@@ -114,7 +143,7 @@
                 {% if lernblock.anzahl_karten < 4 %}
                 <div class="small text-danger">Min. 4 Karten</div>
                 {% else %}
-                <div class="small text-muted">{{ lernblock.faellige_karten }} f&auml;llig</div>
+                <div class="small text-muted">{{ faellig_auswahl }} f&auml;llig</div>
                 {% endif %}
             </div>
         </a>
