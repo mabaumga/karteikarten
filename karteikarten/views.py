@@ -8,12 +8,14 @@ from functools import wraps
 
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 
+from .services.antwortpruefung import FAST, RICHTIG, pruefe_antwort
 from .models import (
     Lernblock,
     Karteikarte,
@@ -583,6 +585,68 @@ def _get_faellige_karten_multi(user, lernbloecke, limit=50):
     return _mischen_nach_fach(faellige, limit)
 
 
+def _tipp_loesung(karte, richtung):
+    """Die Seite, die eingetippt werden muss."""
+    return karte.begriff if richtung == "rueckwaerts" else karte.definition
+
+
+def _tipp_kontext(karte, status, lernblock, richtung, verbleibend, abbrechen_url):
+    """Kontext der Tippansicht — fuer einen Block wie fuer mehrere gleich."""
+    rueckwaerts = richtung == "rueckwaerts"
+    return {
+        "karte": karte,
+        "status": status,
+        "modus": "tippen",
+        "richtung": richtung,
+        "frage": karte.definition if rueckwaerts else karte.begriff,
+        "gefragt_label": (
+            lernblock.vorderseite_label if rueckwaerts else lernblock.rueckseite_label
+        ),
+        "verbleibend": verbleibend,
+        "abbrechen_url": abbrechen_url,
+    }
+
+
+@login_required
+def lernen_tippen(request, pk):
+    """Tippmodus: die Antwort wird eingetippt statt nur aufgedeckt."""
+    lernblock = get_object_or_404(Lernblock, pk=pk)
+    richtung = request.GET.get("richtung", "")
+    if richtung == "rueckwaerts" and not lernblock.bidirektional:
+        richtung = ""
+
+    faellige = _get_faellige_karten(
+        request.user, lernblock, nur_karten=_kartenauswahl(request, lernblock)
+    )
+
+    if not faellige:
+        return render(
+            request,
+            "karteikarten/lernen_fertig.html",
+            {
+                "lernblock": lernblock,
+                "modus": "tippen",
+                **_auswahl_context(request, lernblock),
+            },
+        )
+
+    karte, status = _naechste_karte(request, faellige)
+
+    context = {
+        "lernblock": lernblock,
+        **_tipp_kontext(
+            karte,
+            status,
+            lernblock,
+            richtung,
+            len(faellige),
+            reverse("lernblock_detail", args=[lernblock.pk]),
+        ),
+        **_auswahl_context(request, lernblock),
+    }
+    return render(request, "karteikarten/lernen_tippen.html", context)
+
+
 @login_required
 @require_POST
 def karten_zuruecksetzen(request, pk):
@@ -605,6 +669,8 @@ def karten_zuruecksetzen(request, pk):
         return redirect("lernen_rueckwaerts", pk=pk)
     elif modus == "multiple_choice":
         return redirect("lernen_multiple_choice", pk=pk)
+    elif modus == "tippen":
+        return redirect("lernen_tippen", pk=pk)
     return redirect("lernen_klassisch", pk=pk)
 
 
@@ -802,30 +868,22 @@ def lernen_multiple_choice(request, pk):
     return render(request, "karteikarten/lernen_multiple_choice.html", context)
 
 
-@login_required
-@require_POST
-def karte_antwort(request, pk):
-    """Process answer for a card (AJAX endpoint)."""
-    karte = get_object_or_404(Karteikarte, pk=pk)
-    user = request.user
-    richtig = request.POST.get("richtig") == "true"
-    modus = request.POST.get("modus", "klassisch")
+def _antwort_verbuchen(user, karte, richtig, modus):
+    """Leitner-Fach weiterstellen und die Statistiken fortschreiben.
 
-    # Get user's card status
+    Gemeinsamer Weg fuer alle Lernmodi: wer die Antwort selbst bewertet
+    (klassisch, rueckwaerts, Multiple Choice) und wer sie eintippt, landet hier.
+    """
     status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
-
-    # Update status based on answer
     if richtig:
         status.richtig_beantwortet()
     else:
         status.falsch_beantwortet()
 
-    # Record result
     Lernergebnis.objects.create(
         benutzer=user, karte=karte, modus=modus, richtig=richtig
     )
 
-    # Update daily stats
     stats, _ = TagesStatistik.objects.get_or_create(
         benutzer=user,
         lernblock=karte.lernblock,
@@ -838,7 +896,6 @@ def karte_antwort(request, pk):
         stats.falsch += 1
     stats.save()
 
-    # Update user statistics
     benutzer_stats = BenutzerStatistik.get_or_create_for_user(user)
     benutzer_stats.gesamt_gelernt += 1
     if richtig:
@@ -846,9 +903,50 @@ def karte_antwort(request, pk):
         benutzer_stats.update_streak()
     benutzer_stats.save()
 
+    return status
+
+
+@login_required
+@require_POST
+def karte_antwort(request, pk):
+    """Process answer for a card (AJAX endpoint)."""
+    karte = get_object_or_404(Karteikarte, pk=pk)
+    richtig = request.POST.get("richtig") == "true"
+    modus = request.POST.get("modus", "klassisch")
+
+    status = _antwort_verbuchen(request.user, karte, richtig, modus)
+
     return JsonResponse(
         {
             "success": True,
+            "neues_fach": status.fach,
+            "naechste_wiederholung": str(status.naechste_wiederholung),
+        }
+    )
+
+
+@login_required
+@require_POST
+def karte_tippen_antwort(request, pk):
+    """Eingetippte Antwort pruefen, verbuchen und die Loesung zurueckmelden.
+
+    Die Pruefung laeuft bewusst serverseitig: so steht die Loesung erst nach der
+    Antwort im Browser, und die Nachsicht bei Akzenten und Artikeln liegt an einer
+    Stelle statt in JavaScript.
+    """
+    karte = get_object_or_404(Karteikarte, pk=pk)
+    loesung = _tipp_loesung(karte, request.POST.get("richtung", ""))
+    ergebnis = pruefe_antwort(request.POST.get("eingabe", ""), loesung)
+    richtig = ergebnis in (RICHTIG, FAST)
+
+    status = _antwort_verbuchen(request.user, karte, richtig, "tippen")
+
+    return JsonResponse(
+        {
+            "success": True,
+            "ergebnis": ergebnis,
+            "richtig": richtig,
+            "loesung": loesung,
             "neues_fach": status.fach,
             "naechste_wiederholung": str(status.naechste_wiederholung),
         }
@@ -894,27 +992,31 @@ def lernen_kombiniert_auswahl(request):
     return render(request, "karteikarten/lernen_kombiniert_auswahl.html", context)
 
 
+def _kombinierte_bloecke(request):
+    """Die per `?bloecke=` gewaehlten Bloecke — nur die, die dem Benutzer gehoeren.
+
+    Leere Liste heisst: zurueck zur Blockauswahl.
+    """
+    block_ids = [
+        int(bid) for bid in request.GET.get("bloecke", "").split(",") if bid.isdigit()
+    ]
+    if not block_ids:
+        return []
+    return list(
+        Lernblock.objects.filter(
+            pk__in=block_ids, benutzer_zuordnungen__benutzer=request.user
+        )
+    )
+
+
 @login_required
 def lernen_kombiniert(request):
     """Combined learning mode for multiple blocks (classic mode)."""
-    user = request.user
-
-    # Get block IDs from query params
-    block_ids = request.GET.get("bloecke", "").split(",")
-    block_ids = [int(bid) for bid in block_ids if bid.isdigit()]
-
-    if not block_ids:
-        return redirect("lernen_kombiniert_auswahl")
-
-    # Get blocks that user has access to
-    lernbloecke = list(
-        Lernblock.objects.filter(pk__in=block_ids, benutzer_zuordnungen__benutzer=user)
-    )
-
+    lernbloecke = _kombinierte_bloecke(request)
     if not lernbloecke:
         return redirect("lernen_kombiniert_auswahl")
 
-    faellige = _get_faellige_karten_multi(user, lernbloecke)
+    faellige = _get_faellige_karten_multi(request.user, lernbloecke)
 
     if not faellige:
         return render(
@@ -943,20 +1045,7 @@ def lernen_kombiniert(request):
 @login_required
 def lernen_kombiniert_mc(request):
     """Combined learning mode for multiple blocks (multiple choice)."""
-    user = request.user
-
-    # Get block IDs from query params
-    block_ids = request.GET.get("bloecke", "").split(",")
-    block_ids = [int(bid) for bid in block_ids if bid.isdigit()]
-
-    if not block_ids:
-        return redirect("lernen_kombiniert_auswahl")
-
-    # Get blocks that user has access to
-    lernbloecke = list(
-        Lernblock.objects.filter(pk__in=block_ids, benutzer_zuordnungen__benutzer=user)
-    )
-
+    lernbloecke = _kombinierte_bloecke(request)
     if not lernbloecke:
         return redirect("lernen_kombiniert_auswahl")
 
@@ -977,7 +1066,7 @@ def lernen_kombiniert_mc(request):
             },
         )
 
-    faellige = _get_faellige_karten_multi(user, lernbloecke)
+    faellige = _get_faellige_karten_multi(request.user, lernbloecke)
 
     if not faellige:
         return render(
@@ -1016,6 +1105,44 @@ def lernen_kombiniert_mc(request):
 
 
 @login_required
+def lernen_kombiniert_tippen(request):
+    """Tippmodus ueber mehrere Lernbloecke hinweg."""
+    lernbloecke = _kombinierte_bloecke(request)
+    if not lernbloecke:
+        return redirect("lernen_kombiniert_auswahl")
+
+    block_ids = ",".join(str(b.pk) for b in lernbloecke)
+    faellige = _get_faellige_karten_multi(request.user, lernbloecke)
+
+    if not faellige:
+        return render(
+            request,
+            "karteikarten/lernen_kombiniert_fertig.html",
+            {
+                "lernbloecke": lernbloecke,
+                "block_ids": block_ids,
+                "modus": "tippen",
+            },
+        )
+
+    karte, status = _naechste_karte(request, faellige)
+
+    context = {
+        "lernbloecke": lernbloecke,
+        "block_ids": block_ids,
+        **_tipp_kontext(
+            karte,
+            status,
+            karte.lernblock,
+            "",
+            len(faellige),
+            reverse("lernen_kombiniert_auswahl"),
+        ),
+    }
+    return render(request, "karteikarten/lernen_tippen.html", context)
+
+
+@login_required
 @require_POST
 def karten_zuruecksetzen_kombiniert(request):
     """Reset all cards in selected blocks to be available for learning today."""
@@ -1037,8 +1164,12 @@ def karten_zuruecksetzen_kombiniert(request):
     block_param = ",".join(str(bid) for bid in block_ids)
 
     if modus == "multiple_choice":
-        return redirect(f"/lernen/kombiniert/multiple-choice/?bloecke={block_param}")
-    return redirect(f"/lernen/kombiniert/?bloecke={block_param}")
+        ziel = reverse("lernen_kombiniert_mc")
+    elif modus == "tippen":
+        ziel = reverse("lernen_kombiniert_tippen")
+    else:
+        ziel = reverse("lernen_kombiniert")
+    return redirect(f"{ziel}?bloecke={block_param}")
 
 
 # PWA
