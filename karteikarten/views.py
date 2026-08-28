@@ -521,8 +521,40 @@ def _auswahl_context(request, lernblock):
     }
 
 
+SESSION_LETZTE_KARTE = "letzte_karte"
+
+
+def _mischen_nach_fach(faellige, limit):
+    """Niedriges Fach zuerst, innerhalb eines Fachs zufaellig.
+
+    Der Shuffle laeuft bei *jedem* Aufruf neu; die Reihenfolge wird bewusst nicht
+    einmalig zu Sitzungsbeginn festgelegt. Die Lernansichten laden sich nach jeder
+    Antwort komplett neu — eine feste Reihenfolge spuelte deshalb immer wieder
+    dieselbe Karte nach oben, allen voran die gerade falsch beantwortete, die
+    zurueck in Fach 1 faellt und damit sofort wieder faellig ist.
+    """
+    random.shuffle(faellige)
+    faellige.sort(key=lambda eintrag: eintrag[1].fach)
+    return faellige[:limit]
+
+
+def _naechste_karte(request, faellige):
+    """Naechste abzufragende Karte, mit Sperre gegen sofortige Wiederholung.
+
+    `faellige` ist bereits gemischt, hier faellt nur noch die Sperre an: die zuletzt
+    gezeigte Karte kommt nicht direkt noch einmal dran, solange es eine Alternative
+    gibt. Ohne sie waere gegen Ende einer Sitzung — wenn nur noch wenige Karten
+    faellig sind — jede zweite Frage eine Wiederholung der vorigen.
+    """
+    letzte = request.session.get(SESSION_LETZTE_KARTE)
+    kandidaten = [e for e in faellige if e[0].pk != letzte] or faellige
+    karte, status = kandidaten[0]
+    request.session[SESSION_LETZTE_KARTE] = karte.pk
+    return karte, status
+
+
 def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
-    """Get due cards for a user, sorted by box (lower first).
+    """Faellige Karten eines Blocks — niedriges Fach zuerst, sonst zufaellig.
 
     nur_karten: Menge von Karten-IDs (temporaere Auswahl) oder None fuer den
     ganzen Block. Der Filter greift vor get_or_create_for_user — fuer abgewaehlte
@@ -536,13 +568,11 @@ def _get_faellige_karten(user, lernblock, limit=20, nur_karten=None):
         if status.ist_faellig:
             faellige.append((karte, status))
 
-    # Sort by box (lower first)
-    faellige.sort(key=lambda x: x[1].fach)
-    return faellige[:limit]
+    return _mischen_nach_fach(faellige, limit)
 
 
 def _get_faellige_karten_multi(user, lernbloecke, limit=50):
-    """Get due cards from multiple blocks for a user, sorted by box (lower first)."""
+    """Faellige Karten mehrerer Bloecke — niedriges Fach zuerst, sonst zufaellig."""
     faellige = []
     for lernblock in lernbloecke:
         for karte in lernblock.karten.all():
@@ -550,9 +580,7 @@ def _get_faellige_karten_multi(user, lernbloecke, limit=50):
             if status.ist_faellig:
                 faellige.append((karte, status))
 
-    # Sort by box (lower first), then shuffle within same box for variety
-    faellige.sort(key=lambda x: (x[1].fach, random.random()))
-    return faellige[:limit]
+    return _mischen_nach_fach(faellige, limit)
 
 
 @login_required
@@ -665,7 +693,7 @@ def lernen_klassisch(request, pk):
             },
         )
 
-    karte, status = faellige[0]
+    karte, status = _naechste_karte(request, faellige)
 
     context = {
         "lernblock": lernblock,
@@ -702,7 +730,7 @@ def lernen_rueckwaerts(request, pk):
             },
         )
 
-    karte, status = faellige[0]
+    karte, status = _naechste_karte(request, faellige)
 
     context = {
         "lernblock": lernblock,
@@ -749,7 +777,7 @@ def lernen_multiple_choice(request, pk):
             },
         )
 
-    karte, status = faellige[0]
+    karte, status = _naechste_karte(request, faellige)
 
     # Get 3 distractors
     andere_karten = [k for k in alle_karten if k.pk != karte.pk]
@@ -899,7 +927,7 @@ def lernen_kombiniert(request):
             },
         )
 
-    karte, status = faellige[0]
+    karte, status = _naechste_karte(request, faellige)
 
     context = {
         "lernbloecke": lernbloecke,
@@ -962,7 +990,7 @@ def lernen_kombiniert_mc(request):
             },
         )
 
-    karte, status = faellige[0]
+    karte, status = _naechste_karte(request, faellige)
 
     # Get 3 distractors from all blocks
     andere_karten = [k for k in alle_karten if k.pk != karte.pk]
