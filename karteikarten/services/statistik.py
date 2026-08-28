@@ -153,21 +153,95 @@ def block_fortschritt(benutzer, lernblock):
     }
 
 
-def gesamt_fortschritt(benutzer, lernbloecke):
-    """Auswertung ueber mehrere Bloecke, plus eine Zeile je Block."""
-    je_block = [block_fortschritt(benutzer, block) for block in lernbloecke]
-
-    richtig = sum(block["erstversuch_richtig"] for block in je_block)
-    gesamt = sum(block["erstversuch_gesamt"] for block in je_block)
-
+def _summe(auswertungen):
+    """Mehrere Auswertungen zu einer zusammenziehen."""
+    richtig = sum(eintrag["erstversuch_richtig"] for eintrag in auswertungen)
+    gesamt = sum(eintrag["erstversuch_gesamt"] for eintrag in auswertungen)
     return {
-        "bloecke": je_block,
-        "anzahl_karten": sum(block["anzahl_karten"] for block in je_block),
+        "anzahl_karten": sum(eintrag["anzahl_karten"] for eintrag in auswertungen),
         "erstversuch_richtig": richtig,
         "erstversuch_gesamt": gesamt,
         "erstversuch_quote": _quote(richtig, gesamt),
-        "sitzt": sum(block["sitzt"] for block in je_block),
-        "in_arbeit": sum(block["in_arbeit"] for block in je_block),
-        "nie_geuebt": sum(block["nie_geuebt"] for block in je_block),
-        "faellig": sum(block["faellig"] for block in je_block),
+        "sitzt": sum(eintrag["sitzt"] for eintrag in auswertungen),
+        "in_arbeit": sum(eintrag["in_arbeit"] for eintrag in auswertungen),
+        "nie_geuebt": sum(eintrag["nie_geuebt"] for eintrag in auswertungen),
+        "faellig": sum(eintrag["faellig"] for eintrag in auswertungen),
+    }
+
+
+def _gruppieren(auswertungen, schluessel):
+    """Nach einem Merkmal buendeln, Reihenfolge des ersten Auftretens erhalten."""
+    gruppen = {}
+    for auswertung in auswertungen:
+        gruppen.setdefault(schluessel(auswertung["lernblock"]), []).append(auswertung)
+    return gruppen
+
+
+def gegliederter_fortschritt(benutzer, lernbloecke):
+    """Fortschritt nach Schulfach und Lehrwerk gegliedert.
+
+    Ein Schueler lernt selten "irgendwelche Karten", sondern Englisch und
+    Franzoesisch, und darin ein Lehrbuch nach dem anderen. Die Gesamtquote allein
+    verwischt genau das: 75 Prozent koennen 100 in Franzoesisch und 50 in Englisch
+    heissen. Deshalb wird auf beiden Ebenen zusammengezaehlt.
+
+    Gezaehlt wird ausschliesslich, was der Benutzer sich ausgesucht hat — die
+    Bloecke kommen bereits gefiltert herein.
+    """
+    je_block = [block_fortschritt(benutzer, block) for block in lernbloecke]
+
+    schulfaecher = []
+    nach_fach = _gruppieren(je_block, lambda block: block.display_schulfach)
+    for fach in sorted(nach_fach, key=lambda f: (f is None, f.name if f else "")):
+        bloecke_des_fachs = nach_fach[fach]
+
+        lehrwerke = []
+        nach_lehrwerk = _gruppieren(
+            bloecke_des_fachs,
+            lambda block: block.lehrwerk_unit.lehrwerk if block.lehrwerk_unit else None,
+        )
+        for lehrwerk in sorted(
+            nach_lehrwerk, key=lambda lw: (lw is None, str(lw) if lw else "")
+        ):
+            gruppe = nach_lehrwerk[lehrwerk]
+            lehrwerke.append(
+                {
+                    "lehrwerk": lehrwerk,
+                    "name": str(lehrwerk) if lehrwerk else "Ohne Lehrwerk",
+                    "bloecke": gruppe,
+                    **_summe(gruppe),
+                }
+            )
+
+        schulfaecher.append(
+            {
+                "schulfach": fach,
+                "name": fach.name if fach else "Ohne Schulfach",
+                "lehrwerke": lehrwerke,
+                **_summe(bloecke_des_fachs),
+            }
+        )
+
+    return {
+        "bloecke": je_block,
+        "schulfaecher": schulfaecher,
+        **_summe(je_block),
+    }
+
+
+def kurzfortschritt(benutzer, lernblock):
+    """Wie viel eines Blocks sicher sitzt — die kleine Zeile waehrend der Abfrage.
+
+    Absichtlich schmal gehalten: waehrend des Lernens zaehlt eine Zahl, nicht die
+    ganze Auswertung. Zwei Abfragen statt eines Durchlaufs ueber alle Karten.
+    """
+    anzahl = lernblock.karten.count()
+    sitzt = BenutzerKarteStatus.objects.filter(
+        benutzer=benutzer, karte__lernblock=lernblock, fach=HOECHSTE_STUFE
+    ).count()
+    return {
+        "lernblock": lernblock,
+        "sitzt": sitzt,
+        "anzahl": anzahl,
+        "prozent": _quote(sitzt, anzahl),
     }
