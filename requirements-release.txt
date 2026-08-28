@@ -1,0 +1,21 @@
+# Werkzeuge fuer das Release. Weder im Produktions-Image (requirements.txt) noch im
+# Quality-Gate (requirements-dev.txt) — deshalb eine eigene Datei und ein eigenes venv.
+
+python-semantic-release==10.6.1
+
+# GitPython bewusst zurueckgehalten.
+#
+# python-semantic-release validiert den Commit-Author ueber `git.Actor.name_email_regex`
+# (semantic_release/cli/config.py:745). GitPython hat das Attribut in 3.1.59 entfernt.
+# Seitdem stirbt jeder Release-Lauf sofort mit
+#
+#     ::ERROR:: type object 'Actor' has no attribute 'name_email_regex'
+#
+# 10.6.1 ist die neueste PSR-Version (Stand 2026-08-28) — es gibt also kein Update, das
+# den Fehler behebt. Der Pin IST der Fix, nicht eine Verzoegerung davon.
+#
+# Beim naechsten PSR-Release pruefen, ob die Obergrenze fallen kann:
+#   .venv-release/bin/pip install -U python-semantic-release GitPython
+#   .venv-release/bin/semantic-release version --print
+# Laeuft das durch, kann die Zeile hier weg.
+GitPython<3.1.59

@@ -39,7 +39,10 @@ jobs:
         run: make check
 
       - name: python-semantic-release installieren
-        run: pip install python-semantic-release
+        # Gepinnt ueber requirements-release.txt — ein blankes
+        # `pip install python-semantic-release` zieht ein GitPython, mit dem PSR
+        # nicht mehr startet (siehe Kommentar in der Datei).
+        run: pip install -r requirements-release.txt
 
       - name: Dry Run — naechste Version anzeigen
         if: inputs.dry_run == true
