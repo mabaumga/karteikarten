@@ -85,9 +85,10 @@ release-local: $(SEMANTIC_RELEASE) ## Release ohne Actions: Gate + Version + Tag
 	  docker push $(REGISTRY)/$(IMAGE):latest; \
 	  echo "Deploy: ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'"
 
-deploy: ## Hinweis: Deployment laeuft ueber das Release (ghcr.io) + Pull auf Unraid
-	@echo "Kein direktes Deployment. 'make release' baut+pusht das Image nach ghcr.io;"
-	@echo "auf Unraid danach: docker compose pull && docker compose up -d (karteikarten)."
+deploy: ## Hinweis: Deployment laeuft ueber das Release (ghcr.io) + deploy.sh auf Hetzner
+	@echo "Kein direktes Deployment. Das Release baut+pusht das Image nach ghcr.io;"
+	@echo "danach auf dem Hetzner-Server:"
+	@echo "  ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'"
 
 seed: ## Seed database with Stilmittel
 	DJANGO_SETTINGS_MODULE=config.settings .venv/bin/python scripts/seed_stilmittel.py
