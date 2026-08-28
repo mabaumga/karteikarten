@@ -1,0 +1,60 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Test {{ aktion }} - Karteikarten{% endblock %}
+
+{% block kopf_titel %}Test {{ aktion }}{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% if test %}{% url 'test_detail' test.pk %}{% else %}{% url 'test_liste' %}{% endif %}"
+   class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+{% if messages %}
+<div class="mb-3">
+    {% for message in messages %}
+    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="card mb-3">
+        <div class="card-body d-flex flex-column gap-3">
+            <div>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required
+                       value="{{ test.name|default:'' }}" placeholder="z. B. Klassenarbeit 12. September">
+            </div>
+            <div>
+                <label for="beschreibung" class="form-label">Beschreibung <span class="text-body-secondary">(optional)</span></label>
+                <textarea class="form-control" id="beschreibung" name="beschreibung" rows="2">{{ test.beschreibung|default:'' }}</textarea>
+            </div>
+        </div>
+    </div>
+
+    {% if not test %}
+    <p class="small text-body-secondary">
+        Karten f&uuml;gst du danach hinzu: Lernblock &ouml;ffnen &rarr; <em>Karten</em> &rarr;
+        gew&uuml;nschte W&ouml;rter w&auml;hlen &rarr; <em>In Test &uuml;bernehmen</em>.
+    </p>
+    {% endif %}
+
+    <div class="aktionsleiste">
+        <button type="submit" class="btn btn-primary btn-lg w-100">{{ aktion }}</button>
+    </div>
+</form>
+
+{% if test %}
+<form method="post" action="{% url 'test_loeschen' test.pk %}" class="mt-3"
+      onsubmit="return confirm('Test wirklich l&ouml;schen? Die Karten selbst bleiben.');">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-danger w-100">
+        <i class="bi bi-trash me-1"></i>Test l&ouml;schen
+    </button>
+</form>
+{% endif %}
+{% endblock %}

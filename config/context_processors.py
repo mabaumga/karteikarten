@@ -51,8 +51,12 @@ _REITER_JE_SEITE = {
         "kartenauswahl",
         "modus_waehlen",
         "lernen_kombiniert_auswahl",
+        "test_liste",
+        "test_create",
+        "test_detail",
+        "test_edit",
     },
-    "fortschritt": {"fortschritt", "lernblock_fortschritt"},
+    "fortschritt": {"fortschritt", "lernblock_fortschritt", "test_fortschritt"},
     "mehr": {
         "mehr",
         "profil",
@@ -62,6 +66,12 @@ _REITER_JE_SEITE = {
         "benutzer_erstellen",
         "benutzer_bearbeiten",
         "backup_liste",
+        "buecher",
+        "buch_create",
+        "buch_detail",
+        "buch_edit",
+        "kapitel_create",
+        "kapitel_edit",
     },
 }
 

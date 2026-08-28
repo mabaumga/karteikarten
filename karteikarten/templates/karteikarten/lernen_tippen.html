@@ -1,6 +1,6 @@
 {% extends 'karteikarten/base.html' %}
 
-{% block title %}Eintippen - {% if lernblock %}{{ lernblock.name }}{% else %}Alles zusammen üben{% endif %}{% endblock %}
+{% block title %}Eintippen - {{ quelle_name }}{% endblock %}
 
 {% block nav_right %}
 <a href="{{ abbrechen_url }}" class="btn btn-link text-white">
