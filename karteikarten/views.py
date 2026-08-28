@@ -50,46 +50,60 @@ def dashboard(request):
 
     lernbloecke = [bl.lernblock for bl in benutzer_bloecke]
 
+    # Schulfach-Filter. Gemeint ist das Schulfach (Englisch, Franzoesisch), nicht das
+    # Leitner-Fach 1-5 — im Code heisst beides "Fach". display_schulfach folgt der
+    # Lehrwerk-Hierarchie und ist deshalb eine Python-Property, keine Spalte: die
+    # Auswahlliste und der Filter laufen in Python, nicht im ORM.
+    schulfaecher = sorted(
+        {b.display_schulfach for b in lernbloecke if b.display_schulfach},
+        key=lambda fach: fach.name,
+    )
+    filter_fach = request.GET.get("fach", "")
+    if filter_fach.isdigit():
+        gewaehltes_fach = int(filter_fach)
+        lernbloecke = [
+            b
+            for b in lernbloecke
+            if b.display_schulfach and b.display_schulfach.pk == gewaehltes_fach
+        ]
+    else:
+        filter_fach = ""
+
     # Get user statistics
     stats = BenutzerStatistik.get_or_create_for_user(user)
 
-    # Calculate user-specific stats
+    # Kennzahlen und Blockliste in einem Durchgang — der Kartenstatus wurde vorher
+    # je Karte zweimal geholt, einmal fuer die Summen und einmal fuer die Liste.
     total_karten = 0
     total_faellig = 0
-
+    bloecke_mit_status = []
     for lernblock in lernbloecke:
-        karten = lernblock.karten.all()
-        total_karten += karten.count()
-
-        # Count due cards for this user
+        karten = list(lernblock.karten.all())
+        faellig = 0
         for karte in karten:
             karten_status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
             if karten_status.ist_faellig:
-                total_faellig += 1
-
-    # Today's results for this user
-    heute_richtig = Lernergebnis.objects.filter(
-        benutzer=user, zeitstempel__date=date.today(), richtig=True
-    ).count()
-    heute_falsch = Lernergebnis.objects.filter(
-        benutzer=user, zeitstempel__date=date.today(), richtig=False
-    ).count()
-
-    # Prepare blocks with user-specific due count
-    bloecke_mit_status = []
-    for lernblock in lernbloecke:
-        faellig = 0
-        for karte in lernblock.karten.all():
-            status = BenutzerKarteStatus.get_or_create_for_user(user, karte)
-            if status.ist_faellig:
                 faellig += 1
+        total_karten += len(karten)
+        total_faellig += faellig
         bloecke_mit_status.append(
             {
                 "lernblock": lernblock,
                 "faellig": faellig,
-                "anzahl": lernblock.anzahl_karten,
+                "anzahl": len(karten),
             }
         )
+
+    # Today's results for this user — bei aktivem Filter nur die sichtbaren Bloecke,
+    # damit Kennzahlen und Liste dasselbe beschreiben. Der Streak bleibt global: er
+    # gehoert zur Person, nicht zum Fach.
+    ergebnisse = Lernergebnis.objects.filter(
+        benutzer=user, zeitstempel__date=date.today()
+    )
+    if filter_fach:
+        ergebnisse = ergebnisse.filter(karte__lernblock__in=lernbloecke)
+    heute_richtig = ergebnisse.filter(richtig=True).count()
+    heute_falsch = ergebnisse.filter(richtig=False).count()
 
     context = {
         "bloecke_mit_status": bloecke_mit_status,
@@ -98,6 +112,8 @@ def dashboard(request):
         "total_faellig": total_faellig,
         "heute_richtig": heute_richtig,
         "heute_falsch": heute_falsch,
+        "schulfaecher": schulfaecher,
+        "filter_fach": filter_fach,
     }
     return render(request, "karteikarten/dashboard.html", context)
 

@@ -3,6 +3,23 @@
 {% block title %}Dashboard - Karteikarten{% endblock %}
 
 {% block content %}
+<!-- Schulfach-Filter -->
+{% if schulfaecher|length > 1 %}
+<form method="get" class="mb-4">
+    <label class="form-label small text-muted" for="fach-filter">
+        <i class="bi bi-book me-1"></i>Fach
+    </label>
+    <select name="fach" id="fach-filter" class="form-select" onchange="this.form.submit()">
+        <option value="">Alle F&auml;cher</option>
+        {% for fach in schulfaecher %}
+        <option value="{{ fach.id }}" {% if filter_fach == fach.id|stringformat:"i" %}selected{% endif %}>
+            {{ fach.name }}
+        </option>
+        {% endfor %}
+    </select>
+</form>
+{% endif %}
+
 <!-- Stats Overview -->
 <div class="card mb-4">
     <div class="card-body">
@@ -27,6 +44,13 @@
                 <div class="small text-muted">Heute</div>
             </div>
         </div>
+
+        {% if filter_fach %}
+        <div class="text-center small text-muted mt-3">
+            <i class="bi bi-funnel-fill me-1"></i>Karten und &bdquo;Heute&ldquo; z&auml;hlen nur
+            das gew&auml;hlte Fach &mdash; der Streak z&auml;hlt weiter alles.
+        </div>
+        {% endif %}
     </div>
 </div>
 
@@ -126,11 +150,19 @@
 </div>
 {% empty %}
 <div class="text-center py-5">
+    {% if filter_fach %}
+    <i class="bi bi-funnel display-1 text-muted"></i>
+    <p class="text-muted mt-3">Keine Lernbl&ouml;cke in diesem Fach.</p>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-x-lg me-1"></i>Filter zur&uuml;cksetzen
+    </a>
+    {% else %}
     <i class="bi bi-inbox display-1 text-muted"></i>
     <p class="text-muted mt-3">Du hast noch keine Lernbloecke ausgewaehlt.</p>
     <a href="{% url 'meine_lernbloecke' %}" class="btn btn-primary">
         <i class="bi bi-plus-lg me-1"></i>Lernbloecke auswaehlen
     </a>
+    {% endif %}
 </div>
 {% endfor %}
 
