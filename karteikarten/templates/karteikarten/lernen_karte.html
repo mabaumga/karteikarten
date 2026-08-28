@@ -18,7 +18,14 @@
         <i class="bi bi-book me-1"></i>Klassisch
         {% endif %}
     </span>
-    <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+    <span>
+        {% if auswahl_aktiv %}
+        <span class="badge bg-secondary me-1" title="Nur die ausgew&auml;hlten Karten">
+            <i class="bi bi-funnel-fill me-1"></i>{{ auswahl_anzahl }} von {{ lernblock.anzahl_karten }}
+        </span>
+        {% endif %}
+        <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+    </span>
 </div>
 
 <!-- Flashcard -->

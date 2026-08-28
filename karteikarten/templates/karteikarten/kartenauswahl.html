@@ -1,0 +1,110 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Karten ausw&auml;hlen - {{ lernblock.name }}{% endblock %}
+
+{% block content %}
+<a href="{% url 'lernblock_detail' lernblock.pk %}" class="btn btn-link text-muted ps-0 mb-3">
+    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
+</a>
+
+<h4 class="mb-1">Karten ausw&auml;hlen</h4>
+<p class="text-muted small">
+    Abgew&auml;hlte Karten bleiben beim Lernen dieses Blocks au&szlig;en vor. Der Lernblock
+    selbst bleibt unver&auml;ndert &mdash; die Auswahl gilt nur f&uuml;r dich und nur so
+    lange, bis du sie aufhebst.
+</p>
+
+{% if messages %}
+<div class="mb-3">
+    {% for message in messages %}
+    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form method="post" id="auswahl-form">
+    {% csrf_token %}
+
+    {% if karten_mit_status %}
+    <div class="d-flex gap-2 align-items-center mb-3">
+        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="alleSetzen(true)">
+            <i class="bi bi-check-all me-1"></i>Alle
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="alleSetzen(false)">
+            <i class="bi bi-x-lg me-1"></i>Keine
+        </button>
+        <span class="ms-auto text-muted small">
+            <span id="anzahl-gewaehlt">0</span> von {{ karten_mit_status|length }} gew&auml;hlt
+        </span>
+    </div>
+    {% endif %}
+
+    {% for item in karten_mit_status %}
+    <label class="card mb-2 d-block" style="cursor: pointer;">
+        <div class="card-body py-2">
+            <div class="d-flex align-items-start gap-2">
+                <input class="form-check-input mt-1 auswahl-box" type="checkbox"
+                       name="karten" value="{{ item.karte.pk }}"
+                       {% if item.gewaehlt %}checked{% endif %}>
+                <div class="flex-grow-1">
+                    <div class="fw-semibold">{{ item.karte.begriff }}</div>
+                    <div class="text-muted small">{{ item.karte.definition|truncatewords:15 }}</div>
+                </div>
+                <div class="text-end flex-shrink-0">
+                    <span class="badge bg-{% if item.status.fach == 5 %}success{% elif item.status.fach >= 3 %}info{% else %}secondary{% endif %}">
+                        Fach {{ item.status.fach }}
+                    </span>
+                    {% if item.status.ist_faellig %}
+                    <div class="small text-warning mt-1">f&auml;llig</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </label>
+    {% empty %}
+    <div class="text-center py-5">
+        <i class="bi bi-card-text display-1 text-muted"></i>
+        <p class="text-muted mt-3">Dieser Lernblock hat noch keine Karten.</p>
+    </div>
+    {% endfor %}
+
+    {% if karten_mit_status %}
+    <div class="d-grid mt-4 mb-2">
+        <button type="submit" class="btn btn-primary btn-lg">
+            <i class="bi bi-check-lg me-1"></i>Auswahl &uuml;bernehmen
+        </button>
+    </div>
+    {% endif %}
+</form>
+
+{% if auswahl_aktiv %}
+<form method="post" action="{% url 'kartenauswahl_aufheben' lernblock.pk %}" class="d-grid mb-3">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-counterclockwise me-1"></i>Auswahl aufheben &mdash; ganzen Block lernen
+    </button>
+</form>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function zaehlen() {
+        const n = document.querySelectorAll('.auswahl-box:checked').length;
+        document.getElementById('anzahl-gewaehlt').textContent = n;
+    }
+
+    function alleSetzen(wert) {
+        document.querySelectorAll('.auswahl-box').forEach(box => { box.checked = wert; });
+        zaehlen();
+    }
+
+    document.querySelectorAll('.auswahl-box').forEach(box => {
+        box.addEventListener('change', zaehlen);
+    });
+    zaehlen();
+</script>
+{% endblock %}
