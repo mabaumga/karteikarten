@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from .models import (
     Schulfach,
     Jahrgangsstufe,
+    Lehrwerk,
+    LehrwerkUnit,
     Lernblock,
     Karteikarte,
     BenutzerLernblock,
@@ -20,6 +22,20 @@ from .models import (
 class SchulfachAdmin(admin.ModelAdmin):
     list_display = ["name", "beschreibung"]
     search_fields = ["name"]
+
+
+@admin.register(Lehrwerk)
+class LehrwerkAdmin(admin.ModelAdmin):
+    list_display = ("name", "band", "schulfach", "jahrgangsstufe", "anzahl_units")
+    list_filter = ("schulfach", "jahrgangsstufe")
+    search_fields = ("name", "band", "verlag")
+
+
+@admin.register(LehrwerkUnit)
+class LehrwerkUnitAdmin(admin.ModelAdmin):
+    list_display = ("name", "lehrwerk", "reihenfolge", "anzahl_bloecke")
+    list_filter = ("lehrwerk",)
+    search_fields = ("name",)
 
 
 @admin.register(Jahrgangsstufe)

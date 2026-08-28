@@ -77,3 +77,27 @@ def test_lernen_starten_fuehrt_in_den_gewaehlten_modus(angemeldet, block, benutz
     antwort = angemeldet.get(reverse("lernen_starten", args=[block.pk]))
     assert antwort.status_code == 302
     assert antwort.url == reverse("lernen_tippen", args=[block.pk])
+
+
+def test_buecherseiten_rendern(client, db):
+    """Rauchtest fuer die Buecherverwaltung."""
+    from karteikarten.models import Lehrwerk, LehrwerkUnit
+
+    verwalter = User.objects.create_user(
+        username="verwalter", password="geheim123", is_staff=True
+    )
+    client.force_login(verwalter)
+
+    lehrwerk = Lehrwerk.objects.create(name="À plus !", band="4")
+    unit = LehrwerkUnit.objects.create(lehrwerk=lehrwerk, name="Unité 1")
+
+    seiten = [
+        reverse("buecher"),
+        reverse("buch_create"),
+        reverse("buch_detail", args=[lehrwerk.pk]),
+        reverse("buch_edit", args=[lehrwerk.pk]),
+        reverse("kapitel_create", args=[lehrwerk.pk]),
+        reverse("kapitel_edit", args=[unit.pk]),
+    ]
+    for seite in seiten:
+        assert client.get(seite).status_code == 200, seite
