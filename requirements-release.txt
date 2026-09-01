@@ -1,7 +1,7 @@
 # Werkzeuge fuer das Release. Weder im Produktions-Image (requirements.txt) noch im
 # Quality-Gate (requirements-dev.txt) — deshalb eine eigene Datei und ein eigenes venv.
 
-python-semantic-release==10.6.1
+python-semantic-release==10.6.2
 
 # GitPython bewusst zurueckgehalten.
 #
