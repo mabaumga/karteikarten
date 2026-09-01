@@ -1,6 +1,14 @@
 {% extends 'karteikarten/base.html' %}
 
-{% block title %}Fertig! - {{ lernblock.name }}{% endblock %}
+{% block title %}Fertig! - {{ quelle_name }}{% endblock %}
+
+{% block kopf_titel %}Geschafft{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{{ abbrechen_url }}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
 
 {% block content %}
 <div class="text-center py-5">
@@ -11,22 +19,32 @@
     <i class="bi bi-trophy display-1 text-warning"></i>
     <h4 class="mt-4">Geschafft!</h4>
     <p class="text-muted">
-        Keine f&auml;lligen Karten mehr in diesem Lernblock.
+        {% if auswahl_aktiv %}
+        Keine f&auml;lligen Karten mehr in deiner Auswahl
+        ({{ auswahl_anzahl }} von {{ lernblock.anzahl_karten }} Karten).
+        {% else %}
+        Keine f&auml;lligen Karten mehr in &bdquo;{{ quelle_name }}&ldquo;.
+        {% endif %}
     </p>
     {% endif %}
 
     <div class="d-grid gap-2 mt-4" style="max-width: 400px; margin: 0 auto;">
         {% if not error %}
-        <form action="{% url 'karten_zuruecksetzen' lernblock.pk %}" method="post">
+        <form action="{{ zuruecksetzen_url }}" method="post">
             {% csrf_token %}
             <input type="hidden" name="modus" value="{{ modus }}">
             <button type="submit" class="btn btn-success btn-lg w-100">
-                <i class="bi bi-arrow-repeat me-1"></i>Weiter &uuml;ben
+                <i class="bi bi-arrow-repeat me-1"></i>Noch mal von vorn
+                {% if auswahl_aktiv %}<span class="small">(Auswahl)</span>{% endif %}
             </button>
+            <div class="small text-body-secondary mt-2">
+                Stellt alle{% if auswahl_aktiv %} ausgew&auml;hlten{% endif %} Karten wieder auf
+                &bdquo;heute f&auml;llig&ldquo;. Die Stufen bleiben, wie sie sind.
+            </div>
         </form>
         {% endif %}
-        <a href="{% url 'lernblock_detail' lernblock.pk %}" class="btn btn-primary btn-lg">
-            <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck zum Lernblock
+        <a href="{{ abbrechen_url }}" class="btn btn-primary btn-lg">
+            <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
         </a>
         <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
             <i class="bi bi-house me-1"></i>Zum Dashboard

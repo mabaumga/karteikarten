@@ -1,10 +1,12 @@
-{% extends 'karteikarten/base.html' %}
+{% extends 'karteikarten/lernansicht.html' %}
 
-{% block title %}Multiple Choice - {{ lernblock.name }}{% endblock %}
+{% block title %}Multiple Choice - {{ quelle_name }}{% endblock %}
 
-{% block nav_right %}
-<a href="{% url 'lernblock_detail' lernblock.pk %}" class="btn btn-link text-white">
-    <i class="bi bi-x-lg"></i>
+{% block kopf_titel %}Multiple Choice{% endblock %}
+
+{% block kopf_aktion %}
+<a href="{{ abbrechen_url }}" class="text-white" aria-label="Abbrechen">
+    <i class="bi bi-x-lg fs-5"></i>
 </a>
 {% endblock %}
 
@@ -14,7 +16,14 @@
     <span class="text-muted small">
         <i class="bi bi-ui-radios me-1"></i>Multiple Choice
     </span>
-    <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+    <span>
+        {% if auswahl_aktiv %}
+        <span class="badge bg-secondary me-1" title="Nur die ausgew&auml;hlten Karten">
+            <i class="bi bi-funnel-fill me-1"></i>{{ auswahl_anzahl }} von {{ lernblock.anzahl_karten }}
+        </span>
+        {% endif %}
+        <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+    </span>
 </div>
 
 <!-- Question -->
@@ -35,8 +44,10 @@
 
 <!-- Card Info -->
 <div class="text-center mt-4">
-    <span class="badge bg-secondary">Fach {{ karte.fach }}</span>
+    <span class="badge text-bg-secondary">Stufe {{ status.fach }} von 5</span>
 </div>
+
+{% include "karteikarten/_blockfortschritt_klein.html" %}
 {% endblock %}
 
 {% block extra_js %}

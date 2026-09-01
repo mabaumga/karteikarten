@@ -22,7 +22,7 @@ Single-User (kein Login), mobile-first, als Progressive Web App offline nutzbar.
 ## Architektur
 
 Einfache, flache **Django-App-Struktur** — bewusst **kein** hexagonales Layout
-(erklärtes „Bastelprojekt", keine Tests). `config/` ist das Django-Projektpaket,
+(erklärtes „Bastelprojekt"). `config/` ist das Django-Projektpaket,
 die gesamte Fachlichkeit liegt in der einzelnen App `karteikarten/`.
 
 ## Struktur & Einstiegspunkte
@@ -63,11 +63,26 @@ scripts/                   # Seed-Skripte
 - **Auto-Import:** Dateien in `/app/data/import` werden periodisch eingelesen
   (`KARTEIKARTEN_IMPORT_INTERVAL`, Default 60s) und nach `/app/data/archive` verschoben.
 
+## Oberfläche
+
+Vier Bereiche über eine beschriftete Navigation: **Start · Blöcke · Fortschritt · Mehr**.
+Mobile first — die Navigation sitzt unten und wandert ab `lg` (≥ 992 px) nach links als
+Schiene; beides steht im selben Markup, umgeschaltet über `d-lg-none` / `d-none d-lg-flex`.
+Abfrageansichten erben von `lernansicht.html` und laufen ohne Navigation.
+
+Verwaltung (Blöcke, Karten, Import, Benutzer, Backup) ist mit `is_staff` bedingt und steht
+in eigenen, beschrifteten Abschnitten — nie zwischen den Lernaktionen. Details:
+`docs/FACHLICHE_BESCHREIBUNG.md` §4.
+
 ## Konventionen (Kurz)
 
-- Domänenbegriffe Deutsch (Lernblock, Karteikarte, Fach), IT-Begriffe Englisch, Doku Deutsch.
+- Domänenbegriffe Deutsch (Lernblock, Karteikarte), IT-Begriffe Englisch, Doku Deutsch.
+- **In der Oberfläche heißt das Leitner-Fach „Stufe"**, „Fach" ist dort das Schulfach.
+  Das Modellfeld heißt weiter `fach` — beim Anzeigen immer `BenutzerKarteStatus.fach`
+  (persönlich), nie `Karteikarte.fach` (das alte globale Feld).
 - Einfach halten, kein Over-Engineering. SQLite statt PostgreSQL. Mobile-first (Bootstrap 5).
-- Keine Tests (Bastelprojekt). `DJANGO_SETTINGS_MODULE=config.settings`.
+- Tests mit pytest unter `tests/` (`make test`), Gate über `make check`.
+  `DJANGO_SETTINGS_MODULE=config.settings`.
 
 → Vollständig: `CLAUDE.md`.
 
@@ -77,11 +92,14 @@ scripts/                   # Seed-Skripte
 
 ## Deployment
 
-Docker-Standalone auf **Unraid** (Homeserver Baumgartner, privat), URL
+Docker-Standalone auf dem **Hetzner-Server** (`root@178.105.222.1`), URL
 `https://karteikarten.baumgartner.online`. Image `ghcr.io/mabaumga/karteikarten:latest`,
-Container `karteikarten`, Port 8080→8000, persistente Volumes (`data`/`import`/`archive`).
+Container `karteikarten`, persistentes Volume `./data` (SQLite + `import`/`archive`).
+Deploy: `ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'`.
+Die Alt-Instanz auf Unraid ist seit dem 20.06.2026 stillgelegt.
 **Release:** `make release` → GitHub Actions (`release.yml`) mit python-semantic-release
-(Version + CHANGELOG + Tag) und Docker-Push nach ghcr.io.
+(Version + CHANGELOG + Tag) und Docker-Push nach ghcr.io. Solange Actions deaktiviert ist:
+`make release-local`.
 
 ## Mehr Kontext
 

@@ -1,0 +1,53 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Fortschritt: {{ test.name }}{% endblock %}
+
+{% block kopf_titel %}Fortschritt{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% url 'test_detail' test.pk %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<p class="small text-body-secondary">
+    {{ test.name }} &middot; {{ auswertung.anzahl_karten }} Karten
+    {% if auswertung.zuletzt_gelernt %}&middot; zuletzt {{ auswertung.zuletzt_gelernt|date:"j. F" }}{% endif %}
+</p>
+
+{% include 'karteikarten/_erstversuch.html' %}
+{% include 'karteikarten/_kartenzustand.html' %}
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h2 class="h6 mb-2">Diese machen dir M&uuml;he</h2>
+        {% if auswertung.problemkarten %}
+        <ul class="list-unstyled mb-0">
+            {% for eintrag in auswertung.problemkarten %}
+            <li class="d-flex align-items-center gap-2 py-2 {% if not forloop.last %}border-bottom{% endif %}">
+                <span class="flex-grow-1 overflow-hidden">
+                    <span class="d-block fw-semibold text-truncate">{{ eintrag.karte.begriff }}</span>
+                    <span class="d-block small text-body-secondary text-truncate">{{ eintrag.karte.definition }}</span>
+                </span>
+                <span class="badge text-bg-danger">{{ eintrag.falsch }}&times; falsch</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="text-body-secondary mb-0">Noch keine falschen Antworten &ndash; weiter so.</p>
+        {% endif %}
+    </div>
+</div>
+
+<p class="small text-body-secondary">
+    Ein Tagesverlauf wird je Lernblock gef&uuml;hrt. Ein Test mischt Karten aus mehreren
+    Bl&ouml;cken &mdash; deshalb steht hier keine Kurve, die es so nicht gibt.
+</p>
+
+<div class="aktionsleiste">
+    <a href="{% url 'test_lernen' test.pk %}" class="btn btn-primary btn-lg w-100">
+        <i class="bi bi-play-fill me-1"></i>Weiter &uuml;ben
+    </a>
+</div>
+{% endblock %}

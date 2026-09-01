@@ -1,14 +1,17 @@
 {% extends 'karteikarten/base.html' %}
 
-{% block title %}Gemeinsam lernen - Karteikarten{% endblock %}
+{% block title %}Alles zusammen üben - Karteikarten{% endblock %}
+
+{% block kopf_titel %}Alles zusammen &uuml;ben{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% url 'dashboard' %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
 
 {% block content %}
-<a href="{% url 'dashboard' %}" class="btn btn-link text-muted ps-0 mb-3">
-    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
-</a>
-
-<h4 class="mb-2"><i class="bi bi-collection me-2"></i>Gemeinsam lernen</h4>
-<p class="text-muted mb-4">W&auml;hle mehrere Lernbl&ouml;cke aus, um sie zusammen abzufragen.</p>
+<p class="small text-body-secondary">W&auml;hle die Bl&ouml;cke aus, die zusammen abgefragt werden sollen.</p>
 
 {% if total_faellig > 0 %}
 <div class="alert alert-info mb-4">
@@ -57,20 +60,11 @@
     </div>
 
     {% if bloecke %}
-    <h6 class="mb-3"><i class="bi bi-mortarboard me-2"></i>Lernmodus</h6>
-    <div class="row g-3 mb-4">
-        <div class="col-6">
-            <button type="button" class="btn btn-primary btn-lg w-100" onclick="startLernen('klassisch')">
-                <i class="bi bi-book d-block mb-1" style="font-size: 1.5rem;"></i>
-                Klassisch
-            </button>
-        </div>
-        <div class="col-6">
-            <button type="button" class="btn btn-success btn-lg w-100" onclick="startLernen('mc')">
-                <i class="bi bi-ui-radios d-block mb-1" style="font-size: 1.5rem;"></i>
-                Multiple Choice
-            </button>
-        </div>
+    <div class="aktionsleiste">
+        <button type="button" class="btn btn-primary btn-lg w-100" onclick="startLernen()">
+            <i class="bi bi-play-fill me-1"></i>Los geht&rsquo;s
+        </button>
+        <div class="text-center small text-body-secondary mt-2">Modus: {{ modus.name }}</div>
     </div>
     {% endif %}
 </form>
@@ -89,19 +83,13 @@
         return Array.from(checkboxes).map(cb => cb.value);
     }
 
-    function startLernen(modus) {
+    function startLernen() {
         const blocks = getSelectedBlocks();
         if (blocks.length === 0) {
-            alert('Bitte w&auml;hle mindestens einen Lernblock aus.');
+            alert('Bitte wähle mindestens einen Lernblock aus.');
             return;
         }
-
-        const params = 'bloecke=' + blocks.join(',');
-        if (modus === 'mc') {
-            window.location.href = '{% url "lernen_kombiniert_mc" %}?' + params;
-        } else {
-            window.location.href = '{% url "lernen_kombiniert" %}?' + params;
-        }
+        window.location.href = '{{ modus_url }}?bloecke=' + blocks.join(',');
     }
 
     // Update "select all" state based on individual checkboxes

@@ -158,6 +158,141 @@
             border-width: 3px;
         }
 
+        /* --- Rahmen -----------------------------------------------------------
+           Mobile first: die Navigation sitzt unten, wo der Daumen sie erreicht.
+           Ab lg wandert sie nach links — mit der Maus ist der untere Fensterrand
+           der schlechteste Ort. Beide stehen im selben Markup, umgeschaltet nur
+           ueber Bootstrap-Klassen, damit es kein zweites Layout gibt. */
+
+        .kopfzeile {
+            background: linear-gradient(135deg, var(--primary), #2563EB);
+            color: #FFFFFF;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            padding-top: env(safe-area-inset-top);
+        }
+
+        .kopf-titel {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Zurueck und Aktion sind gleich breit, damit der Titel wirklich mittig steht */
+        .kopf-rand {
+            width: 44px;
+            flex-shrink: 0;
+        }
+
+        .unterleiste {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1030;
+            background: var(--card-bg);
+            border-top: 1px solid #E5E7EB;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .unterleiste a {
+            color: rgba(33, 37, 41, 0.75);
+            text-decoration: none;
+            padding: 0.5rem 0 0.625rem;
+            min-height: 44px;
+        }
+
+        .unterleiste a.aktiv {
+            color: #2563EB;
+            font-weight: 600;
+        }
+
+        .seitenschiene {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 240px;
+            z-index: 1030;
+            background: linear-gradient(160deg, var(--primary), #2563EB);
+            padding: 1.25rem 0.875rem;
+        }
+
+        .seitenschiene a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 0.6875rem 0.75rem;
+            min-height: 44px;
+        }
+
+        .seitenschiene a.aktiv {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        .seitenschiene a:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+        }
+
+        /* Platz fuer die untere Leiste, damit nichts darunter verschwindet */
+        .inhalt {
+            padding-bottom: 5.5rem;
+        }
+
+        /* Die eine Hauptaktion einer Seite klebt beim Scrollen am unteren Rand */
+        .aktionsleiste {
+            position: sticky;
+            bottom: 0.5rem;
+            padding-top: 1rem;
+            background: linear-gradient(to bottom, rgba(243, 244, 246, 0), var(--bg) 35%);
+        }
+
+        @media (min-width: 992px) {
+            body {
+                padding-left: 240px;
+            }
+
+            /* Abfrageansichten laufen ohne Schiene — eine Aufgabe, ein Ausgang */
+            body.ohne-schiene {
+                padding-left: 0;
+            }
+
+            .container {
+                max-width: 900px;
+            }
+
+            .inhalt {
+                padding-bottom: 2rem;
+            }
+
+            /* Am Desktop steht die Hauptaktion oben neben der Ueberschrift */
+            .aktionsleiste {
+                position: static;
+                background: none;
+                padding-top: 0;
+            }
+        }
+
+        /* Fachmarke links an jeder Blockzeile — ersetzt die Buchcover, die es hier
+           nicht gibt, und macht Englisch von Franzoesisch im Vorbeigehen unterscheidbar. */
+        .fachmarke {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9375rem;
+            font-weight: 700;
+        }
+
         /* Mobile optimizations */
         @media (max-width: 576px) {
             .flashcard {
@@ -183,49 +318,76 @@
     </style>
     {% block extra_css %}{% endblock %}
 </head>
-<body>
-    <nav class="navbar navbar-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{% url 'dashboard' %}">
-                <i class="bi bi-card-text me-2"></i>
-                Karteikarten
+<body class="{% block body_klasse %}{% endblock %}">
+    {% if user.is_authenticated %}
+    {% block navigation %}
+    <!-- Ab lg: Navigation links als Schiene -->
+    <nav class="seitenschiene d-none d-lg-flex flex-column gap-4" aria-label="Hauptnavigation">
+        <a href="{% url 'dashboard' %}" class="d-flex align-items-center gap-2 fs-5 fw-semibold text-white px-2">
+            <i class="bi bi-card-text"></i>Karteikarten
+        </a>
+        <div class="d-flex flex-column gap-1">
+            <a href="{% url 'dashboard' %}" class="d-flex align-items-center gap-3{% if aktiver_reiter == 'start' %} aktiv{% endif %}">
+                <i class="bi bi-house"></i>Start
             </a>
-            {% if user.is_authenticated %}
-            <div class="d-flex align-items-center">
-                <a href="{% url 'profil' %}" class="text-white-50 text-decoration-none me-3 d-none d-sm-inline" title="Profil bearbeiten">
-                    {% if user.first_name %}{{ user.first_name }} {{ user.last_name }}{% else %}{{ user.username }}{% endif %}
-                </a>
-                {% if user.is_staff %}
-                <a href="{% url 'benutzer_liste' %}" class="btn btn-outline-warning btn-sm me-2" title="Benutzerverwaltung">
-                    <i class="bi bi-people-fill"></i>
-                    <span class="d-none d-md-inline ms-1">Benutzer</span>
-                </a>
-                <a href="{% url 'backup_liste' %}" class="btn btn-outline-warning btn-sm me-2" title="Backup">
-                    <i class="bi bi-cloud-download"></i>
-                    <span class="d-none d-lg-inline ms-1">Backup</span>
-                </a>
-                {% endif %}
-                <a href="{% url 'profil' %}" class="btn btn-outline-light btn-sm me-2" title="Mein Profil">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-                <a href="{% url 'meine_lernbloecke' %}" class="btn btn-outline-light btn-sm me-2" title="Meine Lernbloecke">
-                    <i class="bi bi-collection"></i>
-                </a>
-                <form action="{% url 'logout' %}" method="post" class="d-inline">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-outline-light btn-sm" title="Abmelden">
-                        <i class="bi bi-box-arrow-right"></i>
-                    </button>
-                </form>
-            </div>
-            {% endif %}
-            {% block nav_right %}{% endblock %}
+            <a href="{% url 'meine_lernbloecke' %}" class="d-flex align-items-center gap-3{% if aktiver_reiter == 'bloecke' %} aktiv{% endif %}">
+                <i class="bi bi-collection"></i>Bl&ouml;cke
+            </a>
+            <a href="{% url 'fortschritt' %}" class="d-flex align-items-center gap-3{% if aktiver_reiter == 'fortschritt' %} aktiv{% endif %}">
+                <i class="bi bi-bar-chart"></i>Fortschritt
+            </a>
+            <a href="{% url 'mehr' %}" class="d-flex align-items-center gap-3{% if aktiver_reiter == 'mehr' %} aktiv{% endif %}">
+                <i class="bi bi-list"></i>Mehr
+            </a>
+        </div>
+        <div class="mt-auto border-top border-white border-opacity-25 pt-3">
+            <a href="{% url 'profil' %}" class="d-flex align-items-center gap-2">
+                <i class="bi bi-person-circle"></i>
+                {% if user.first_name %}{{ user.first_name }}{% else %}{{ user.username }}{% endif %}
+            </a>
         </div>
     </nav>
+    {% endblock %}
+    {% endif %}
 
-    <main class="container pb-4">
+    <header class="kopfzeile">
+        <div class="container d-flex align-items-center gap-2 py-2">
+            <div class="kopf-rand">{% block kopf_zurueck %}{% endblock %}</div>
+            <div class="kopf-titel flex-grow-1">{% block kopf_titel %}Karteikarten{% endblock %}</div>
+            <div class="kopf-rand text-end">{% block kopf_aktion %}{% endblock %}</div>
+        </div>
+        {% block kopf_zusatz %}{% endblock %}
+    </header>
+
+    <main class="container inhalt pt-4">
         {% block content %}{% endblock %}
     </main>
+
+    {% if user.is_authenticated %}
+    {% block navigation_unten %}
+    <!-- Bis lg: Navigation unten, wo der Daumen sie erreicht -->
+    <nav class="unterleiste d-lg-none" aria-label="Hauptnavigation">
+        <div class="container d-grid" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
+            <a href="{% url 'dashboard' %}" class="d-flex flex-column align-items-center{% if aktiver_reiter == 'start' %} aktiv{% endif %}">
+                <i class="bi bi-house fs-5"></i>
+                <span class="small">Start</span>
+            </a>
+            <a href="{% url 'meine_lernbloecke' %}" class="d-flex flex-column align-items-center{% if aktiver_reiter == 'bloecke' %} aktiv{% endif %}">
+                <i class="bi bi-collection fs-5"></i>
+                <span class="small">Bl&ouml;cke</span>
+            </a>
+            <a href="{% url 'fortschritt' %}" class="d-flex flex-column align-items-center{% if aktiver_reiter == 'fortschritt' %} aktiv{% endif %}">
+                <i class="bi bi-bar-chart fs-5"></i>
+                <span class="small">Fortschritt</span>
+            </a>
+            <a href="{% url 'mehr' %}" class="d-flex flex-column align-items-center{% if aktiver_reiter == 'mehr' %} aktiv{% endif %}">
+                <i class="bi bi-list fs-5"></i>
+                <span class="small">Mehr</span>
+            </a>
+        </div>
+    </nav>
+    {% endblock %}
+    {% endif %}
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

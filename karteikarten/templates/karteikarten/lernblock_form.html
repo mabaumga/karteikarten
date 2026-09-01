@@ -2,11 +2,15 @@
 
 {% block title %}Lernblock {{ action }} - Karteikarten{% endblock %}
 
-{% block content %}
-<a href="{% url 'dashboard' %}" class="btn btn-link text-muted ps-0 mb-3">
-    <i class="bi bi-arrow-left me-1"></i>Zur&uuml;ck
-</a>
+{% block kopf_titel %}Lernblock{% endblock %}
 
+{% block kopf_zurueck %}
+<a href="{% url 'dashboard' %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
+
+{% block content %}
 <h4 class="mb-4">Lernblock {{ action }}</h4>
 
 <form method="post">
@@ -28,11 +32,29 @@
             </div>
 
             <div class="mb-3">
-                <label for="lehrbuch" class="form-label">Lehrbuch</label>
+                <label for="lehrwerk_unit" class="form-label">Kapitel</label>
+                <select class="form-select" id="lehrwerk_unit" name="lehrwerk_unit">
+                    <option value="">Ohne Buch</option>
+                    {% for buch in buecher %}
+                    <optgroup label="{{ buch }}">
+                        {% for unit in buch.units.all %}
+                        <option value="{{ unit.pk }}" {% if lernblock.lehrwerk_unit_id == unit.pk %}selected{% endif %}>{{ unit.name }}</option>
+                        {% endfor %}
+                    </optgroup>
+                    {% endfor %}
+                </select>
+                <div class="form-text">
+                    Ordnet den Block in ein Buch ein &mdash; das gliedert Auswahl und Fortschritt.
+                    <a href="{% url 'buecher' %}">B&uuml;cher verwalten</a>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="lehrbuch" class="form-label">Lehrbuch als Freitext <span class="text-body-secondary">(optional)</span></label>
                 <input type="text" class="form-control" id="lehrbuch" name="lehrbuch"
                        value="{{ lernblock.lehrbuch|default:'' }}"
                        placeholder="z.B. Deutschbuch 7, Cornelsen">
-                <div class="form-text">Optionale Angabe des verwendeten Lehrbuchs.</div>
+                <div class="form-text">Nur f&uuml;r Bl&ouml;cke ohne Buch; sonst reicht das Kapitel oben.</div>
             </div>
 
             <div class="form-check">
@@ -40,7 +62,7 @@
                        name="bidirektional" {% if lernblock.bidirektional %}checked{% endif %}>
                 <label class="form-check-label" for="bidirektional">
                     <i class="bi bi-arrow-left-right me-1"></i>
-                    Bidirektional (auch r&uuml;ckw&auml;rts lernen)
+                    Beide Richtungen (auch r&uuml;ckw&auml;rts abfragen)
                 </label>
                 <div class="form-text">
                     Aktiviere diese Option, um auch von Definition zu Begriff zu lernen.

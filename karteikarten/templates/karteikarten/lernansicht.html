@@ -1,0 +1,24 @@
+{% extends 'karteikarten/base.html' %}
+
+{% comment %}
+Rahmen der Abfrageansichten. Sie laufen bewusst ohne Navigation: waehrend einer
+Abfrage gibt es eine Aufgabe und einen Ausgang, nicht vier Reiter.
+{% endcomment %}
+
+{% block body_klasse %}ohne-schiene{% endblock %}
+{% block navigation %}{% endblock %}
+{% block navigation_unten %}{% endblock %}
+
+{% block kopf_zusatz %}
+{% if fortschritt %}
+<div class="container pb-2">
+    <div class="progress" style="height: 5px; background: rgba(255,255,255,.3);">
+        <div class="progress-bar bg-white" role="progressbar"
+             style="width: {{ fortschritt.prozent }}%"
+             aria-valuenow="{{ fortschritt.erledigt }}" aria-valuemin="0"
+             aria-valuemax="{{ fortschritt.gesamt }}"
+             aria-label="{{ fortschritt.erledigt }} von {{ fortschritt.gesamt }} Karten"></div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

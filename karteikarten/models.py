@@ -367,6 +367,59 @@ class Karteikarte(models.Model):
         return result
 
 
+class Test(models.Model):
+    """Ein frei zusammengestelltes Uebungsset — ein virtuelles Modul.
+
+    Vor einer Klassenarbeit zaehlt selten ein ganzer Lernblock, sondern eine
+    Handvoll Woerter aus zwei Kapiteln. Ein Test buendelt genau die, ueber
+    Buch- und Blockgrenzen hinweg, und wird abgefragt wie jedes andere Modul.
+
+    Die Karten werden **verwiesen, nicht kopiert**: eine Antwort im Test stellt
+    dieselbe Leitner-Stufe weiter wie eine Antwort im Herkunftsblock. Alles
+    andere waere doppelte Buchfuehrung ueber dieselbe Vokabel.
+    """
+
+    # Der fachliche Begriff ist "Test" — pytest wuerde die Klasse sonst einsammeln.
+    __test__ = False
+
+    benutzer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="tests")
+    name = models.CharField(max_length=200)
+    beschreibung = models.TextField(blank=True)
+    karten = models.ManyToManyField(Karteikarte, related_name="tests", blank=True)
+    erstellt_am = models.DateTimeField(auto_now_add=True)
+    aktualisiert_am = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["name"]
+        unique_together = ["benutzer", "name"]
+        verbose_name = "Test"
+        verbose_name_plural = "Tests"
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def anzahl_karten(self):
+        return self.karten.count()
+
+    @property
+    def bidirektional(self):
+        """Rueckwaerts nur, wenn jede Karte aus einem beidseitigen Block stammt.
+
+        Ein Test kann Karten aus Bloecken mischen, von denen nur manche eine
+        brauchbare Rueckseite haben. Im Zweifel bleibt die Richtung gesperrt.
+        """
+        return (
+            self.karten.exists()
+            and not self.karten.filter(lernblock__bidirektional=False).exists()
+        )
+
+    @property
+    def herkunft(self):
+        """Die Lernbloecke, aus denen die Karten stammen."""
+        return Lernblock.objects.filter(karten__tests=self).distinct().order_by("name")
+
+
 class ImportLog(models.Model):
     """Log of imported JSON files."""
 
@@ -411,6 +464,7 @@ class Lernergebnis(models.Model):
         ("klassisch", "Klassisch"),
         ("rueckwaerts", "Rückwärts"),
         ("multiple_choice", "Multiple Choice"),
+        ("tippen", "Eintippen"),
     ]
 
     benutzer = models.ForeignKey(
@@ -605,6 +659,12 @@ class BenutzerStatistik(models.Model):
         blank=True,
         related_name="benutzer_bevorzugt",
         help_text="Wird als Standard-Filter vorausgewaehlt",
+    )
+    bevorzugter_modus = models.CharField(
+        max_length=20,
+        choices=Lernergebnis.MODUS_CHOICES,
+        default="klassisch",
+        help_text="Womit die Abfrage startet, ohne dass jedes Mal gefragt wird",
     )
     # Security
     muss_passwort_aendern = models.BooleanField(

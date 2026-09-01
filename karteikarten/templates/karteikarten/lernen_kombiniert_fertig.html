@@ -1,6 +1,14 @@
 {% extends 'karteikarten/base.html' %}
 
-{% block title %}Fertig! - Gemeinsam lernen{% endblock %}
+{% block title %}Fertig! - Alles zusammen üben{% endblock %}
+
+{% block kopf_titel %}Geschafft{% endblock %}
+
+{% block kopf_zurueck %}
+<a href="{% url 'dashboard' %}" class="text-white" aria-label="Zur&uuml;ck">
+    <i class="bi bi-chevron-left fs-5"></i>
+</a>
+{% endblock %}
 
 {% block content %}
 <div class="text-center py-5">
@@ -29,7 +37,7 @@
             <input type="hidden" name="bloecke" value="{{ block_ids }}">
             <input type="hidden" name="modus" value="{{ modus }}">
             <button type="submit" class="btn btn-success btn-lg w-100">
-                <i class="bi bi-arrow-repeat me-1"></i>Weiter &uuml;ben
+                <i class="bi bi-arrow-repeat me-1"></i>Noch mal von vorn
             </button>
         </form>
         {% endif %}

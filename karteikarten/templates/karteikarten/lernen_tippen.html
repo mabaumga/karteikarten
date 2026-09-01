@@ -1,0 +1,167 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Eintippen - {{ quelle_name }}{% endblock %}
+
+{% block nav_right %}
+<a href="{{ abbrechen_url }}" class="btn btn-link text-white">
+    <i class="bi bi-x-lg"></i>
+</a>
+{% endblock %}
+
+{% block content %}
+<!-- Fortschritt -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted small">
+        <i class="bi bi-keyboard me-1"></i>Eintippen
+    </span>
+    <span>
+        {% if auswahl_aktiv %}
+        <span class="badge bg-secondary me-1" title="Nur die ausgew&auml;hlten Karten">
+            <i class="bi bi-funnel-fill me-1"></i>{{ auswahl_anzahl }} von {{ lernblock.anzahl_karten }}
+        </span>
+        {% endif %}
+        <span class="badge bg-primary">{{ verbleibend }} &uuml;brig</span>
+    </span>
+</div>
+
+{% if lernbloecke %}
+<div class="mb-2">
+    <span class="badge bg-secondary">
+        <i class="bi bi-folder2 me-1"></i>{{ karte.lernblock.name }}
+    </span>
+</div>
+{% endif %}
+
+<!-- Frage -->
+<div class="flashcard mb-3" id="flashcard">
+    <div class="begriff">{{ frage }}</div>
+
+    <div id="loesung-block" style="display: none;">
+        <div class="definition" id="loesung"></div>
+
+        {% if karte.beispiele %}
+        <div class="beispiele">
+            <i class="bi bi-quote me-1"></i>{{ karte.beispiele }}
+        </div>
+        {% endif %}
+
+        {% if karte.zusatz_label and karte.zusatz_wert %}
+        <div class="zusatz">
+            <span class="zusatz-label">{{ karte.zusatz_label }}:</span>
+            {{ karte.zusatz_wert }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Eingabe -->
+<div class="mb-3">
+    <label for="eingabe" class="form-label text-muted small">{{ gefragt_label }} eintippen</label>
+    <input type="text" class="form-control form-control-lg" id="eingabe"
+           autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+           enterkeyhint="done" autofocus>
+    <div id="rueckmeldung" class="form-text" style="display: none;"></div>
+</div>
+
+<div id="pruefen-section">
+    <button type="button" class="btn btn-primary btn-lg w-100" onclick="pruefen()">
+        <i class="bi bi-check2 me-1"></i>Pr&uuml;fen
+    </button>
+</div>
+
+<div id="weiter-section" style="display: none;">
+    <button type="button" class="btn btn-lg w-100" id="weiter-btn" onclick="weiter()">
+        <i class="bi bi-arrow-right me-1"></i>Weiter
+    </button>
+</div>
+
+{% if lernblock.bidirektional %}
+<div class="text-center mt-3">
+    {% if richtung == 'rueckwaerts' %}
+    <a href="{% url 'lernen_tippen' lernblock.pk %}" class="btn btn-link btn-sm text-muted">
+        <i class="bi bi-arrow-left-right me-1"></i>{{ lernblock.rueckseite_label }} eintippen
+    </a>
+    {% else %}
+    <a href="{% url 'lernen_tippen' lernblock.pk %}?richtung=rueckwaerts" class="btn btn-link btn-sm text-muted">
+        <i class="bi bi-arrow-left-right me-1"></i>{{ lernblock.vorderseite_label }} eintippen
+    </a>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- Karten-Info -->
+<div class="text-center mt-4">
+    <span class="badge text-bg-secondary">Stufe {{ status.fach }} von 5</span>
+</div>
+
+{% include "karteikarten/_blockfortschritt_klein.html" %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let beantwortet = false;
+
+    const eingabeFeld = document.getElementById('eingabe');
+    const rueckmeldung = document.getElementById('rueckmeldung');
+
+    function pruefen() {
+        if (beantwortet || eingabeFeld.value.trim() === '') return;
+        beantwortet = true;
+        eingabeFeld.readOnly = true;
+
+        fetch('{% url "karte_tippen_antwort" karte.pk %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrftoken,
+            },
+            body: 'eingabe=' + encodeURIComponent(eingabeFeld.value)
+                + '&richtung={{ richtung }}'
+        })
+        .then(response => response.json())
+        .then(zeigeErgebnis)
+        .catch(err => {
+            console.error(err);
+            window.location.reload();
+        });
+    }
+
+    function zeigeErgebnis(data) {
+        document.getElementById('loesung').textContent = data.loesung;
+        document.getElementById('loesung-block').style.display = 'block';
+
+        const farbe = data.richtig ? 'var(--success)' : 'var(--danger)';
+        document.getElementById('flashcard').style.borderLeft = '4px solid ' + farbe;
+
+        eingabeFeld.classList.add(data.richtig ? 'is-valid' : 'is-invalid');
+        if (data.ergebnis === 'fast') {
+            rueckmeldung.className = 'form-text text-warning';
+            rueckmeldung.textContent = 'Fast — genau geschrieben: ' + data.loesung;
+        } else if (data.richtig) {
+            rueckmeldung.className = 'form-text text-success';
+            rueckmeldung.textContent = 'Richtig!';
+        } else {
+            rueckmeldung.className = 'form-text text-danger';
+            rueckmeldung.textContent = 'Richtig wäre: ' + data.loesung;
+        }
+        rueckmeldung.style.display = 'block';
+
+        document.getElementById('pruefen-section').style.display = 'none';
+        const weiterBtn = document.getElementById('weiter-btn');
+        weiterBtn.classList.add(data.richtig ? 'btn-success' : 'btn-danger');
+        document.getElementById('weiter-section').style.display = 'block';
+        weiterBtn.focus();
+    }
+
+    function weiter() {
+        window.location.reload();
+    }
+
+    // Enter pr&uuml;ft, der zweite Enter geht weiter — Tippen ohne Mausgriff.
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter') return;
+        e.preventDefault();
+        beantwortet ? weiter() : pruefen();
+    });
+</script>
+{% endblock %}

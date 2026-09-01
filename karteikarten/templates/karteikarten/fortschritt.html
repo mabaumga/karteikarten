@@ -1,0 +1,98 @@
+{% extends 'karteikarten/base.html' %}
+
+{% block title %}Fortschritt - Karteikarten{% endblock %}
+
+{% block kopf_titel %}Fortschritt{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-body d-flex justify-content-between text-center">
+        <div>
+            <div class="h5 mb-0 text-warning">{{ stats.streak }}</div>
+            <div class="small text-body-secondary">Tage am St&uuml;ck</div>
+        </div>
+        <div>
+            <div class="h5 mb-0">{{ auswertung.anzahl_karten }}</div>
+            <div class="small text-body-secondary">Karten gesamt</div>
+        </div>
+        <div>
+            <div class="h5 mb-0 text-primary">{{ auswertung.faellig }}</div>
+            <div class="small text-body-secondary">heute f&auml;llig</div>
+        </div>
+    </div>
+</div>
+
+{% include 'karteikarten/_erstversuch.html' %}
+{% include 'karteikarten/_kartenzustand.html' %}
+
+<!-- Nach Schulfach und Lehrbuch: 75 % gesamt koennen 100 in Franzoesisch
+     und 50 in Englisch heissen — die Gesamtquote allein verwischt das. -->
+{% for fach in auswertung.schulfaecher %}
+<div class="d-flex align-items-baseline justify-content-between mt-4 mb-2">
+    <h2 class="h6 mb-0">{{ fach.name }}</h2>
+    {% if fach.erstversuch_gesamt %}
+    <span class="fw-bold {% if fach.erstversuch_quote >= 70 %}text-success{% elif fach.erstversuch_quote >= 40 %}text-warning{% else %}text-danger{% endif %}">
+        {{ fach.erstversuch_quote }}&thinsp;%
+    </span>
+    {% else %}
+    <span class="small text-body-secondary">noch nichts ge&uuml;bt</span>
+    {% endif %}
+</div>
+
+{% for lehrwerk in fach.lehrwerke %}
+<details class="card mb-2"{% if fach.lehrwerke|length == 1 %} open{% endif %}>
+    <summary class="card-body py-3 d-flex align-items-center gap-3" style="cursor: pointer;">
+        <span class="flex-grow-1 overflow-hidden">
+            <span class="d-block fw-semibold text-truncate">{{ lehrwerk.name }}</span>
+            <span class="d-block small text-body-secondary">
+                {{ lehrwerk.bloecke|length }} Bl&ouml;cke &middot; {{ lehrwerk.sitzt }} von {{ lehrwerk.anzahl_karten }} sitzen
+            </span>
+        </span>
+        {% if lehrwerk.erstversuch_gesamt %}
+        <span class="fw-bold flex-shrink-0 {% if lehrwerk.erstversuch_quote >= 70 %}text-success{% elif lehrwerk.erstversuch_quote >= 40 %}text-warning{% else %}text-danger{% endif %}">
+            {{ lehrwerk.erstversuch_quote }}&thinsp;%
+        </span>
+        {% else %}
+        <span class="small text-body-secondary flex-shrink-0">&ndash;</span>
+        {% endif %}
+    </summary>
+
+    <div class="list-group list-group-flush border-top">
+        {% for block in lehrwerk.bloecke %}
+        <a href="{% url 'lernblock_fortschritt' block.lernblock.pk %}"
+           class="list-group-item list-group-item-action d-flex align-items-center gap-3 py-2">
+            <span class="flex-grow-1 overflow-hidden">
+                <span class="d-block text-truncate">{{ block.lernblock.name }}</span>
+                <span class="d-block small text-body-secondary">
+                    {{ block.sitzt }} von {{ block.anzahl_karten }} sitzen
+                    {% if block.faellig %}&middot; {{ block.faellig }} f&auml;llig{% endif %}
+                </span>
+            </span>
+            {% if block.erstversuch_gesamt %}
+            <span class="small fw-semibold flex-shrink-0 {% if block.erstversuch_quote >= 70 %}text-success{% elif block.erstversuch_quote >= 40 %}text-warning{% else %}text-danger{% endif %}">
+                {{ block.erstversuch_quote }}&thinsp;%
+            </span>
+            {% else %}
+            <span class="small text-body-secondary flex-shrink-0">&ndash;</span>
+            {% endif %}
+            <i class="bi bi-chevron-right text-body-secondary small flex-shrink-0"></i>
+        </a>
+        {% endfor %}
+    </div>
+</details>
+{% endfor %}
+{% empty %}
+<div class="text-center py-4">
+    <i class="bi bi-inbox display-4 text-body-secondary"></i>
+    <p class="text-body-secondary mt-3">Noch keine Lernbl&ouml;cke ausgew&auml;hlt.</p>
+    <a href="{% url 'meine_lernbloecke' %}" class="btn btn-primary">Bl&ouml;cke ausw&auml;hlen</a>
+</div>
+{% endfor %}
+
+{% if auswertung.bloecke %}
+<p class="small text-body-secondary mt-4 mb-0">
+    Gez&auml;hlt wird nur, was du dir unter <a href="{% url 'meine_lernbloecke' %}">Bl&ouml;cke</a>
+    ausgesucht hast &ndash; nicht alles, was es gibt.
+</p>
+{% endif %}
+{% endblock %}
