@@ -1,0 +1,4354 @@
+{
+  "meta": {
+    "fach": "Englisch",
+    "lehrwerk": "Camden Town – Allgemeine Ausgabe 2020 für Gymnasien",
+    "band": 10,
+    "klasse": 10,
+    "verlag": "Westermann",
+    "sprachen": [
+      "Englisch",
+      "Deutsch"
+    ],
+    "version": "1.0",
+    "quelle": "Textbook 10, ISBN 978-3-14-149225-5, Word lists S. 221–239 (Fotos der Buchseiten)"
+  },
+  "felder": {
+    "vorderseite": "English",
+    "rueckseite": "Deutsch"
+  },
+  "inhalt": [
+    {
+      "name": "Theme 1: Canada",
+      "bloecke": [
+        {
+          "name": "Wortliste 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "Canadian",
+              "hinten": "Kanadier/in, kanadisch",
+              "beispiel": "People from Canada are called Canadians.",
+              "seite": 10
+            },
+            {
+              "vorne": "beaver",
+              "hinten": "Biber(pelz)",
+              "beispiel": "Beavers are small brown animals that live by rivers and build dams."
+            },
+            {
+              "vorne": "bear",
+              "hinten": "Bär(en-)",
+              "beispiel": "You can see bears in the forests and mountains.",
+              "zusatz": {
+                "lautschrift": "/beə/"
+              }
+            },
+            {
+              "vorne": "First Nations",
+              "hinten": "Ureinwohner-, die einheimische Bevölkerung betreffend",
+              "beispiel": "The First Nations people lived in Canada long before Europeans.",
+              "zusatz": {
+                "lautschrift": "/ˌfɜːst ˈneɪʃ(ə)nz/"
+              }
+            },
+            {
+              "vorne": "breathtaking",
+              "hinten": "atemberaubend",
+              "beispiel": "Amira thought the views from the mountain were breathtaking.",
+              "zusatz": {
+                "lautschrift": "/ˈbreθˌteɪkɪŋ/"
+              }
+            },
+            {
+              "vorne": "to be eager to do sth (irr)",
+              "hinten": "etw unbedingt tun wollen",
+              "beispiel": "Nimi was eager to finish the challenge before the others.",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ˈiːgə tə ˈduː/"
+              }
+            },
+            {
+              "vorne": "scenery (no pl)",
+              "hinten": "Landschaft",
+              "beispiel": "Canada is famous for its beautiful scenery.",
+              "zusatz": {
+                "lautschrift": "/ˈsiːnəri/"
+              }
+            },
+            {
+              "vorne": "atmosphere",
+              "hinten": "Atmosphäre, Stimmung",
+              "beispiel": "There was a lively atmosphere when Jorge walked in.",
+              "zusatz": {
+                "lautschrift": "/ˈætməsˌfɪə/"
+              }
+            },
+            {
+              "vorne": "tranquil",
+              "hinten": "ruhig",
+              "zusatz": {
+                "lautschrift": "/ˈtræŋkwɪl/"
+              }
+            },
+            {
+              "vorne": "tense",
+              "hinten": "spannungsgeladen, angespannt",
+              "beispiel": "Ellie felt tense as she tried to work out who, or what, was approaching her.",
+              "zusatz": {
+                "lautschrift": "/tens/"
+              }
+            },
+            {
+              "vorne": "terrifying",
+              "hinten": "entsetzlich, Angst erregend, Furcht einflößend",
+              "beispiel": "Falling off the mountain was a terrifying thought.",
+              "zusatz": {
+                "lautschrift": "/ˈterəˌfaɪɪŋ/"
+              }
+            },
+            {
+              "vorne": "fear",
+              "hinten": "Angst, Furcht, Befürchtung",
+              "beispiel": "Lotta felt fear when the bear appeared.",
+              "zusatz": {
+                "lautschrift": "/fɪə/"
+              }
+            },
+            {
+              "vorne": "calm",
+              "hinten": "Ruhe, (Wind)stille",
+              "beispiel": "Fin felt a sense of calm when he sat by the river.",
+              "zusatz": {
+                "lautschrift": "/kɑːm/"
+              }
+            },
+            {
+              "vorne": "landscape",
+              "hinten": "Landschaft(s-)",
+              "beispiel": "Kamal enjoyed looking at the beautiful landscape.",
+              "zusatz": {
+                "lautschrift": "/ˈlændˌskeɪp/"
+              }
+            },
+            {
+              "vorne": "maple leaf",
+              "hinten": "Ahornblatt",
+              "beispiel": "There is a maple leaf on Canada's flag.",
+              "seite": 11,
+              "zusatz": {
+                "lautschrift": "/ˈmeɪp(ə)l ˌliːf/"
+              }
+            },
+            {
+              "vorne": "maple (tree)",
+              "hinten": "Ahorn",
+              "beispiel": "Maple syrup comes from maple trees.",
+              "zusatz": {
+                "lautschrift": "/ˈmeɪp(ə)l triː/"
+              }
+            },
+            {
+              "vorne": "including",
+              "hinten": "einschließlich",
+              "beispiel": "Many activities are on offer, including hiking, swimming and canoeing.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈkluːdɪŋ/"
+              }
+            },
+            {
+              "vorne": "to relate to",
+              "hinten": "sich beziehen auf, in Beziehung stehen zu",
+              "beispiel": "Jess didn't understand how the story related to her.",
+              "seite": 12,
+              "zusatz": {
+                "lautschrift": "/rɪˈleɪt tʊ/"
+              }
+            },
+            {
+              "vorne": "to correspond with/to sth",
+              "hinten": "mit etw übereinstimmen, etw entsprechen",
+              "beispiel": "The green line corresponds to where the group walked.",
+              "zusatz": {
+                "lautschrift": "/ˌkɒrɪˈspɒnd wɪð/tʊ/"
+              }
+            },
+            {
+              "vorne": "depiction",
+              "hinten": "Darstellung",
+              "beispiel": "This cartoon is a great depiction of the city.",
+              "zusatz": {
+                "lautschrift": "/dɪˈpɪkʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "to correlate with sth",
+              "hinten": "mit etw in Beziehung stehen, etw entsprechen",
+              "beispiel": "The description doesn't correlate with what the graph shows.",
+              "zusatz": {
+                "lautschrift": "/ˈkɒrəleɪt wɪð/"
+              }
+            },
+            {
+              "vorne": "to contradict",
+              "hinten": "widersprechen, in Widerspruch stehen zu",
+              "beispiel": "Malik's beautiful photos contradict his negative description of the trip.",
+              "zusatz": {
+                "lautschrift": "/ˌkɒntrəˈdɪkt/"
+              }
+            },
+            {
+              "vorne": "to confirm",
+              "hinten": "bestätigen",
+              "beispiel": "Matt's trip confirmed that he wanted to move to Canada.",
+              "zusatz": {
+                "lautschrift": "/kənˈfɜːm/"
+              }
+            },
+            {
+              "vorne": "to explore",
+              "hinten": "erforschen, untersuchen",
+              "beispiel": "The girls wanted to explore the woods.",
+              "zusatz": {
+                "lautschrift": "/ɪkˈsplɔː/",
+                "verwandt": "Frz. explorer, Sp. explorar, Lat. explōrāre"
+              }
+            },
+            {
+              "vorne": "skyscraper",
+              "hinten": "Wolkenkratzer",
+              "beispiel": "The tops of skyscrapers are sometimes hidden among the clouds.",
+              "zusatz": {
+                "lautschrift": "/ˈskaɪˌskreɪpə/"
+              }
+            },
+            {
+              "vorne": "rugged",
+              "hinten": "wild, zerklüftet, uneben",
+              "zusatz": {
+                "lautschrift": "/ˈrʌgɪd/"
+              }
+            },
+            {
+              "vorne": "vibrant",
+              "hinten": "lebhaft, dynamisch, lebendig",
+              "beispiel": "The city is vibrant and full of life.",
+              "zusatz": {
+                "lautschrift": "/ˈvaɪbrənt/"
+              }
+            },
+            {
+              "vorne": "root",
+              "hinten": "Wurzel, Ursprung",
+              "beispiel": "Idris was born in England but has roots in Sierra Leone.",
+              "zusatz": {
+                "lautschrift": "/ruːt/"
+              }
+            },
+            {
+              "vorne": "globe",
+              "hinten": "Erde, Globus",
+              "beispiel": "Faisal wants to travel the globe.",
+              "zusatz": {
+                "lautschrift": "/gləʊb/",
+                "verwandt": "Frz. globe, Sp. globo, Lat. globus"
+              }
+            },
+            {
+              "vorne": "oil",
+              "hinten": "(Erd)öl(-)",
+              "beispiel": "Oil can be used to heat buildings.",
+              "zusatz": {
+                "lautschrift": "/ɔɪl/"
+              }
+            },
+            {
+              "vorne": "leader",
+              "hinten": "Leiter/in, Führer/in",
+              "beispiel": "The leader gave the group instructions.",
+              "zusatz": {
+                "lautschrift": "/ˈliːdə/"
+              }
+            },
+            {
+              "vorne": "transition",
+              "hinten": "Übergang, Wechsel",
+              "beispiel": "Louis made the transition from gas to electric.",
+              "zusatz": {
+                "lautschrift": "/trænˈzɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "fuel",
+              "hinten": "Brennstoff, Benzin, Kraftstoff",
+              "beispiel": "My grandma's car needs fuel to run.",
+              "zusatz": {
+                "lautschrift": "/ˈfjuːəl/"
+              }
+            },
+            {
+              "vorne": "treasure",
+              "hinten": "Schatz",
+              "beispiel": "The lake is a real hidden treasure.",
+              "zusatz": {
+                "lautschrift": "/ˈtreʒə/"
+              }
+            },
+            {
+              "vorne": "wilderness (no pl)",
+              "hinten": "Wildnis, Wüste",
+              "beispiel": "It can be dangerous to get lost in the wilderness.",
+              "zusatz": {
+                "lautschrift": "/ˈwɪldənəs/"
+              }
+            },
+            {
+              "vorne": "to establish",
+              "hinten": "gründen, einführen, schaffen",
+              "beispiel": "The group established their company in 2015.",
+              "zusatz": {
+                "lautschrift": "/ɪˈstæblɪʃ/",
+                "hinweis": "Achte auf die Aussprache."
+              }
+            },
+            {
+              "vorne": "approximately",
+              "hinten": "ungefähr, etwa, circa",
+              "beispiel": "There are approximately 39 million people living in Canada.",
+              "zusatz": {
+                "lautschrift": "/əˈprɒksɪmətli/"
+              }
+            },
+            {
+              "vorne": "square",
+              "hinten": "Quadrat(-)",
+              "beispiel": "Canada has an area of 9.98 million square kilometres.",
+              "zusatz": {
+                "lautschrift": "/skweə/"
+              }
+            },
+            {
+              "vorne": "awe-inspiring",
+              "hinten": "Ehrfurcht gebietend, erhaben",
+              "zusatz": {
+                "lautschrift": "/ˈɔːr ɪnˌspaɪərɪŋ/"
+              }
+            },
+            {
+              "vorne": "picturesque",
+              "hinten": "malerisch, pittoresk",
+              "zusatz": {
+                "lautschrift": "/ˌpɪktʃəˈresk/"
+              }
+            },
+            {
+              "vorne": "glacial",
+              "hinten": "Gletscher-, eisig, feindlich",
+              "zusatz": {
+                "lautschrift": "/ˈgleɪʃ(ə)l/"
+              }
+            },
+            {
+              "vorne": "towering",
+              "hinten": "hoch aufragend, überragend",
+              "zusatz": {
+                "lautschrift": "/ˈtaʊərɪŋ/"
+              }
+            },
+            {
+              "vorne": "peak",
+              "hinten": "Gipfel, (Berg)spitze, Höhepunkt",
+              "beispiel": "Janosch reached the peak early to watch the sunrise.",
+              "zusatz": {
+                "lautschrift": "/piːk/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "habitat",
+              "hinten": "Lebensraum, Habitat",
+              "seite": 11,
+              "zusatz": {
+                "lautschrift": "/ˈhæbɪtæt/"
+              }
+            },
+            {
+              "vorne": "to head (for/to)",
+              "hinten": "zusteuern (auf), gehen (zu)",
+              "beispiel": "Daisy headed to the wrong building.",
+              "zusatz": {
+                "lautschrift": "/ˈhed fɔː/tʊ/"
+              }
+            },
+            {
+              "vorne": "vast",
+              "hinten": "gewaltig, riesig",
+              "zusatz": {
+                "lautschrift": "/vɑːst/"
+              }
+            },
+            {
+              "vorne": "biodiversity (no pl)",
+              "hinten": "Artenvielfalt",
+              "beispiel": "Biodiversity means lots of variation in nature.",
+              "zusatz": {
+                "lautschrift": "/ˌbaɪəʊdaɪˈvɜːsəti/"
+              }
+            },
+            {
+              "vorne": "preservation",
+              "hinten": "Erhaltung, Be(wahrung), Schutz",
+              "beispiel": "The preservation of nature is very important.",
+              "seite": 12,
+              "zusatz": {
+                "lautschrift": "/ˌprezəˈveɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "unless",
+              "hinten": "außer wenn, es sei denn",
+              "beispiel": "Unless Wilbur leaves right now, he will be late.",
+              "zusatz": {
+                "lautschrift": "/ənˈles/"
+              }
+            },
+            {
+              "vorne": "avalanche",
+              "hinten": "Lawine, Flut",
+              "zusatz": {
+                "lautschrift": "/ˈævəlɑːnʃ/"
+              }
+            },
+            {
+              "vorne": "drive",
+              "hinten": "(Ein)fahrt",
+              "beispiel": "My mum parks her car on our drive.",
+              "zusatz": {
+                "lautschrift": "/draɪv/"
+              }
+            },
+            {
+              "vorne": "dark",
+              "hinten": "dunkel",
+              "beispiel": "It gets very dark at nighttime.",
+              "zusatz": {
+                "lautschrift": "/dɑːk/"
+              }
+            },
+            {
+              "vorne": "iconic",
+              "hinten": "ikonisch, hier: kultig, Kult-",
+              "zusatz": {
+                "lautschrift": "/aɪˈkɒnɪk/"
+              }
+            },
+            {
+              "vorne": "glacier",
+              "hinten": "Gletscher",
+              "zusatz": {
+                "lautschrift": "/ˈglæsiə/"
+              }
+            },
+            {
+              "vorne": "a range of",
+              "hinten": "eine Reihe von, zahlreiche",
+              "beispiel": "Sara saw a range of animals in the park.",
+              "zusatz": {
+                "lautschrift": "/ə ˈreɪndʒ əv/"
+              }
+            },
+            {
+              "vorne": "escape",
+              "hinten": "Flucht, Entkommen",
+              "beispiel": "Going hiking is Lily's escape from her busy city life.",
+              "zusatz": {
+                "lautschrift": "/ɪˈskeɪp/"
+              }
+            },
+            {
+              "vorne": "survival (no pl)",
+              "hinten": "Überleben",
+              "beispiel": "Wilderness survival is about learning to live in nature.",
+              "seite": 13,
+              "zusatz": {
+                "lautschrift": "/səˈvaɪv(ə)l/"
+              }
+            },
+            {
+              "vorne": "benefit",
+              "hinten": "Nutzen, Vorteil",
+              "beispiel": "There are lots of benefits to knowing how to start a fire.",
+              "zusatz": {
+                "lautschrift": "/ˈbenɪfɪt/"
+              }
+            },
+            {
+              "vorne": "downside",
+              "hinten": "Kehrseite, Schattenseite",
+              "beispiel": "Being cold is a downside to being outside in winter.",
+              "zusatz": {
+                "lautschrift": "/ˈdaʊnˌsaɪd/"
+              }
+            },
+            {
+              "vorne": "confidence (no pl)",
+              "hinten": "(Selbst)vertrauen, Zuversicht",
+              "beispiel": "Noor has the confidence to speak in front of a big audience.",
+              "zusatz": {
+                "lautschrift": "/ˈkɒnfɪd(ə)ns/"
+              }
+            },
+            {
+              "vorne": "to appreciate",
+              "hinten": "schätzen, zu schätzen wissen",
+              "beispiel": "Dara really appreciates a good book.",
+              "zusatz": {
+                "lautschrift": "/əˈpriːʃiˌeɪt/",
+                "verwandt": "Frz. apprécier, Sp. apreciar"
+              }
+            },
+            {
+              "vorne": "to handle",
+              "hinten": "anfassen, regeln, umgehen mit",
+              "beispiel": "Manu is used to handling tricky situations.",
+              "zusatz": {
+                "lautschrift": "/ˈhænd(ə)l/"
+              }
+            },
+            {
+              "vorne": "to master",
+              "hinten": "meistern",
+              "beispiel": "Ayra has mastered the art of cooking.",
+              "zusatz": {
+                "lautschrift": "/ˈmɑːstə/"
+              }
+            },
+            {
+              "vorne": "limited",
+              "hinten": "begrenzt, eingeschränkt",
+              "beispiel": "Food is limited so don't eat too much at once.",
+              "zusatz": {
+                "lautschrift": "/ˈlɪmɪtɪd/",
+                "verwandt": "Frz. limité(e), Sp. limitado (-a)"
+              }
+            },
+            {
+              "vorne": "beneficial",
+              "hinten": "nützlich, vorteilhaft",
+              "beispiel": "Fresh air is beneficial to your health.",
+              "zusatz": {
+                "lautschrift": "/ˌbenɪˈfɪʃ(ə)l/"
+              }
+            },
+            {
+              "vorne": "demanding",
+              "hinten": "anstrengend, anspruchsvoll",
+              "beispiel": "Hiking all day is a physically demanding activity.",
+              "zusatz": {
+                "lautschrift": "/dɪˈmɑːndɪŋ/"
+              }
+            },
+            {
+              "vorne": "risk",
+              "hinten": "Risiko",
+              "beispiel": "There are some risks associated with camping alone.",
+              "zusatz": {
+                "lautschrift": "/rɪsk/",
+                "verwandt": "Frz. risque, Sp. riesgo"
+              }
+            },
+            {
+              "vorne": "affordable",
+              "hinten": "erschwinglich",
+              "beispiel": "Kayaking is a very affordable adventure.",
+              "zusatz": {
+                "lautschrift": "/əˈfɔːdəb(ə)l/"
+              }
+            },
+            {
+              "vorne": "claim",
+              "hinten": "Behauptung, Forderung, Anspruch",
+              "beispiel": "Suki made a claim that everyone likes animals.",
+              "zusatz": {
+                "lautschrift": "/kleɪm/"
+              }
+            },
+            {
+              "vorne": "frontier",
+              "hinten": "Grenze",
+              "zusatz": {
+                "lautschrift": "/frʌnˈtɪə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "resilience (no pl)",
+              "hinten": "Widerstandskraft, Durchhaltevermögen, Elastizität",
+              "zusatz": {
+                "lautschrift": "/rɪˈzɪliəns/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to thrive",
+              "hinten": "gedeihen, florieren, blühen",
+              "zusatz": {
+                "lautschrift": "/θraɪv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "seasoned",
+              "hinten": "erfahren",
+              "zusatz": {
+                "lautschrift": "/ˈsiːznd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "shelter",
+              "hinten": "Schutz, Zufluchtsort",
+              "zusatz": {
+                "lautschrift": "/ˈʃeltə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "friction",
+              "hinten": "Reibung, Reiberei(en)",
+              "zusatz": {
+                "lautschrift": "/ˈfrɪkʃ(ə)n/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to forage",
+              "hinten": "nach etwas Essbarem/Futter suchen",
+              "zusatz": {
+                "lautschrift": "/ˈfɒrɪdʒ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "edible",
+              "hinten": "essbar, genießbar",
+              "zusatz": {
+                "lautschrift": "/ˈedɪb(ə)l/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to appear",
+              "hinten": "erscheinen, auftauchen, hier: scheinen",
+              "beispiel": "It appears that there's a café on the way.",
+              "seite": 14,
+              "zusatz": {
+                "lautschrift": "/əˈpɪə/",
+                "verwandt": "Frz. apparaître, Sp. aparecer, Lat. appārēre"
+              }
+            },
+            {
+              "vorne": "meaningful",
+              "hinten": "bedeutsam, wichtig, bedeutungsvoll",
+              "beispiel": "The speech was meaningful and inspired the audience.",
+              "zusatz": {
+                "lautschrift": "/ˈmiːnɪŋf(ə)l/"
+              }
+            },
+            {
+              "vorne": "passage",
+              "hinten": "(Text)passage, Abschnitt",
+              "beispiel": "The teacher told the class to read the passage carefully.",
+              "zusatz": {
+                "lautschrift": "/ˈpæsɪdʒ/"
+              }
+            },
+            {
+              "vorne": "symbolic",
+              "hinten": "symbolisch, symbolhaft",
+              "beispiel": "What is the symbolic meaning of the compass in this extract?",
+              "zusatz": {
+                "lautschrift": "/sɪmˈbɒlɪk/"
+              }
+            },
+            {
+              "vorne": "personality",
+              "hinten": "Persönlichkeit, Charakter",
+              "beispiel": "Helen's friendly personality means she is very popular.",
+              "seite": 16,
+              "zusatz": {
+                "lautschrift": "/ˌpɜːsəˈnæləti/"
+              }
+            },
+            {
+              "vorne": "to track sb/sth down",
+              "hinten": "jdn/etw aufspüren",
+              "zusatz": {
+                "lautschrift": "/ˌtræk ˈdaʊn/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "foster",
+              "hinten": "Pflege-",
+              "zusatz": {
+                "lautschrift": "/ˈfɒstə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "additional",
+              "hinten": "zusätzlich",
+              "beispiel": "Omar had to make space for additional guests.",
+              "seite": 18,
+              "zusatz": {
+                "lautschrift": "/əˈdɪʃ(ə)nəl/"
+              }
+            },
+            {
+              "vorne": "to interpret",
+              "hinten": "deuten, auslegen, wiedergeben",
+              "beispiel": "Clara's friend tried to interpret her dream but it made no sense.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈtɜːprɪt/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to stay put",
+              "hinten": "stehen bleiben, sitzen bleiben, sich nicht vom Fleck rühren",
+              "zusatz": {
+                "lautschrift": "/ˌsteɪ ˈpʊt/"
+              }
+            },
+            {
+              "vorne": "to doubt",
+              "hinten": "misstrauen, (be)zweifeln",
+              "beispiel": "Duska doubted that there would actually be a problem.",
+              "zusatz": {
+                "lautschrift": "/daʊt/"
+              }
+            },
+            {
+              "vorne": "unresolved",
+              "hinten": "ungelöst, unentschlossen, unschlüssig",
+              "zusatz": {
+                "lautschrift": "/ˌʌnrɪˈzɒlvd/"
+              }
+            },
+            {
+              "vorne": "outcome",
+              "hinten": "Ergebnis, Resultat, hier: Ausgang",
+              "beispiel": "Tamika wasn't happy about the outcome of the story.",
+              "zusatz": {
+                "lautschrift": "/ˈaʊtˌkʌm/"
+              }
+            },
+            {
+              "vorne": "characterization",
+              "hinten": "(Personen)beschreibung",
+              "beispiel": "Mr Aziz asked the class to write a characterization of their favourite book character.",
+              "zusatz": {
+                "lautschrift": "/ˌkærɪktəraɪˈzeɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "competitive",
+              "hinten": "konkurrierend, kampfbereit, hier: Wettbewerbs-",
+              "beispiel": "Lara is not interested in participating in competitive sports.",
+              "seite": 20,
+              "zusatz": {
+                "lautschrift": "/kəmˈpetətɪv/"
+              }
+            },
+            {
+              "vorne": "to count",
+              "hinten": "(ab)zählen, mitzählen, auszählen",
+              "beispiel": "Yara cheated so her work didn't count.",
+              "zusatz": {
+                "lautschrift": "/kaʊnt/"
+              }
+            },
+            {
+              "vorne": "loss",
+              "hinten": "Verlust",
+              "zusatz": {
+                "lautschrift": "/lɒs/"
+              }
+            },
+            {
+              "vorne": "abusive",
+              "hinten": "beleidigend, ausfallend werdend, misshandelnd",
+              "beispiel": "Alberto's language was abusive and upset the crowd.",
+              "zusatz": {
+                "lautschrift": "/əˈbjuːsɪv/"
+              }
+            },
+            {
+              "vorne": "to rage",
+              "hinten": "toben, wüten",
+              "beispiel": "Don began to rage because of the unfairness.",
+              "zusatz": {
+                "lautschrift": "/reɪdʒ/"
+              }
+            },
+            {
+              "vorne": "rink",
+              "hinten": "(Schlittschuh)bahn, Rollschuhbahn",
+              "zusatz": {
+                "lautschrift": "/rɪŋk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "code of conduct",
+              "hinten": "Verhaltenskodex",
+              "beispiel": "A code of conduct tells you how to behave.",
+              "zusatz": {
+                "lautschrift": "/ˌkəʊd əv ˈkɒndʌkt/"
+              }
+            },
+            {
+              "vorne": "to take sth into consideration (irr)",
+              "hinten": "etw berücksichtigen, etw in Betracht ziehen",
+              "beispiel": "The teacher took Rory's situation into consideration.",
+              "zusatz": {
+                "lautschrift": "/ˌteɪk ˌɪntʊ kənˌsɪdəˈreɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "to encourage",
+              "hinten": "ermutigen, ermuntern, fördern",
+              "beispiel": "Tala encouraged her friends to go on a walk.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈkʌrɪdʒ/"
+              }
+            },
+            {
+              "vorne": "to resolve",
+              "hinten": "(auf)lösen, klären, beschließen",
+              "beispiel": "The children managed to resolve the argument without their parents' help.",
+              "zusatz": {
+                "lautschrift": "/rɪˈzɒlv/"
+              }
+            },
+            {
+              "vorne": "to resort to sth",
+              "hinten": "auf etw zurückgreifen, etw anwenden",
+              "beispiel": "Miriam couldn't find a key so she resorted to breaking down the door.",
+              "zusatz": {
+                "lautschrift": "/rɪˈzɔːt tə/"
+              }
+            },
+            {
+              "vorne": "hostility",
+              "hinten": "Feindseligkeit",
+              "zusatz": {
+                "lautschrift": "/hɒˈstɪləti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to ridicule",
+              "hinten": "verspotten",
+              "zusatz": {
+                "lautschrift": "/ˈrɪdɪˌkjuːl/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to yell",
+              "hinten": "(gellend) schreien",
+              "zusatz": {
+                "lautschrift": "/jel/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "judg(e)ment",
+              "hinten": "Urteil, Ansicht, Meinung",
+              "beispiel": "The official's judgement is final.",
+              "zusatz": {
+                "lautschrift": "/ˈdʒʌdʒmənt/"
+              }
+            },
+            {
+              "vorne": "honesty (no pl)",
+              "hinten": "Ehrlichkeit",
+              "beispiel": "Honesty involves being truthful, fair and sincere.",
+              "zusatz": {
+                "lautschrift": "/ˈɒnəsti/"
+              }
+            },
+            {
+              "vorne": "to pursue",
+              "hinten": "verfolgen, verwirklichen wollen",
+              "beispiel": "Billy pursued his dream of becoming a ballet dancer.",
+              "seite": 21,
+              "zusatz": {
+                "lautschrift": "/pəˈsjuː/"
+              }
+            },
+            {
+              "vorne": "to anticipate",
+              "hinten": "erwarten, rechnen mit, vorhersehen",
+              "beispiel": "The teacher didn't anticipate all the students knowing the answer.",
+              "zusatz": {
+                "lautschrift": "/ænˈtɪsɪpeɪt/"
+              }
+            },
+            {
+              "vorne": "to distinguish",
+              "hinten": "unterscheiden",
+              "beispiel": "It is very hard to distinguish one twin from the other.",
+              "seite": 22,
+              "zusatz": {
+                "lautschrift": "/dɪˈstɪŋgwɪʃ/"
+              }
+            },
+            {
+              "vorne": "significant",
+              "hinten": "beachtlich, bedeutend, bedeutsam",
+              "beispiel": "There has been significant change in migration patterns over time.",
+              "zusatz": {
+                "lautschrift": "/sɪgˈnɪfɪkənt/"
+              }
+            },
+            {
+              "vorne": "to account for sth",
+              "hinten": "etw erklären, etw ausmachen",
+              "beispiel": "Immigrants from Asia account for more than 60% of immigrants in Canada.",
+              "zusatz": {
+                "lautschrift": "/əˈkaʊnt fɔː/"
+              }
+            },
+            {
+              "vorne": "roughly",
+              "hinten": "grob, ungefähr, schätzungsweise",
+              "beispiel": "Masur guessed there were roughly 80 sweets in the jar.",
+              "zusatz": {
+                "lautschrift": "/ˈrʌfli/"
+              }
+            },
+            {
+              "vorne": "to note",
+              "hinten": "beachten, hier: feststellen",
+              "beispiel": "It is important to note how unreliable some research can be.",
+              "zusatz": {
+                "lautschrift": "/nəʊt/"
+              }
+            },
+            {
+              "vorne": "parliament",
+              "hinten": "Parlament",
+              "beispiel": "The parliament of a country passes laws.",
+              "zusatz": {
+                "lautschrift": "/ˈpɑːləmənt/"
+              }
+            },
+            {
+              "vorne": "to affirm",
+              "hinten": "versichern, bekräftigen",
+              "beispiel": "Sadie affirmed she would go to the prom.",
+              "zusatz": {
+                "lautschrift": "/əˈfɜːm/"
+              }
+            },
+            {
+              "vorne": "nature",
+              "hinten": "Naturell, Art, Wesen",
+              "beispiel": "It is in Hidir's nature to be kind to others.",
+              "zusatz": {
+                "lautschrift": "/ˈneɪtʃə/"
+              }
+            },
+            {
+              "vorne": "ethnic",
+              "hinten": "ethnisch, Volks-",
+              "beispiel": "This part of town is home to people from many different ethnic backgrounds.",
+              "zusatz": {
+                "lautschrift": "/ˈeθnɪk/"
+              }
+            },
+            {
+              "vorne": "to preserve",
+              "hinten": "erhalten, bewahren",
+              "beispiel": "Music can be used to preserve culture.",
+              "zusatz": {
+                "lautschrift": "/prɪˈzɜːv/"
+              }
+            },
+            {
+              "vorne": "to stress",
+              "hinten": "betonen",
+              "beispiel": "Ishan stresses the importance of mental health.",
+              "zusatz": {
+                "lautschrift": "/stres/"
+              }
+            },
+            {
+              "vorne": "human rights (pl)",
+              "hinten": "Menschenrechte",
+              "beispiel": "It is very important to protect human rights.",
+              "zusatz": {
+                "lautschrift": "/ˌhjuːmən ˈraɪts/"
+              }
+            },
+            {
+              "vorne": "commitment",
+              "hinten": "Engagement, Verpflichtung",
+              "beispiel": "Governments must show commitment to their citizens.",
+              "zusatz": {
+                "lautschrift": "/kəˈmɪtmənt/"
+              }
+            },
+            {
+              "vorne": "to serve",
+              "hinten": "servieren, dienen",
+              "beispiel": "Schools serve as a place of education.",
+              "seite": 24,
+              "zusatz": {
+                "lautschrift": "/sɜːv/"
+              }
+            },
+            {
+              "vorne": "to indicate",
+              "hinten": "(an)zeigen, hindeuten",
+              "beispiel": "The photo indicates that they are friends.",
+              "zusatz": {
+                "lautschrift": "/ˈɪndɪkeɪt/",
+                "verwandt": "Frz. indiquer, Sp. indicar, Lat. indicāre"
+              }
+            },
+            {
+              "vorne": "to keep in mind (irr)",
+              "hinten": "nicht vergessen, im Gedächtnis behalten",
+              "beispiel": "The students had to keep the context of the photo in mind.",
+              "zusatz": {
+                "lautschrift": "/ˌkiːp ɪn ˈmaɪnd/"
+              }
+            },
+            {
+              "vorne": "to stand for, stood for, stood for",
+              "hinten": "stehen für",
+              "beispiel": "This party stands for equality, justice and freedom.",
+              "zusatz": {
+                "lautschrift": "/stænd fɔː, stʊd fɔː, stʊd fɔː/"
+              }
+            },
+            {
+              "vorne": "to depict",
+              "hinten": "darstellen, beschreiben",
+              "beispiel": "The image depicts a large building surrounded by trees.",
+              "zusatz": {
+                "lautschrift": "/dɪˈpɪkt/"
+              }
+            },
+            {
+              "vorne": "to consist of sth",
+              "hinten": "aus etw bestehen",
+              "beispiel": "A story consists of a beginning, middle and end.",
+              "seite": 26,
+              "zusatz": {
+                "lautschrift": "/kənˈsɪst əv/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Mountain Runaways – extract 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "except",
+              "hinten": "außer",
+              "zusatz": {
+                "lautschrift": "/ɪkˈsept/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "log house",
+              "hinten": "Blockhaus, Blockhütte",
+              "zusatz": {
+                "lautschrift": "/ˈlɒg haʊs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "mist",
+              "hinten": "(leichter) Nebel",
+              "zusatz": {
+                "lautschrift": "/mɪst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to squint",
+              "hinten": "blinzeln, schielen",
+              "zusatz": {
+                "lautschrift": "/skwɪnt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "siblings (pl)",
+              "hinten": "Geschwister",
+              "zusatz": {
+                "lautschrift": "/ˈsɪblɪŋz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "visibility (no pl)",
+              "hinten": "Sichtbarkeit, Sicht(weite)",
+              "zusatz": {
+                "lautschrift": "/ˌvɪzəˈbɪləti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to stay put",
+              "hinten": "stehen bleiben, sitzen bleiben, sich nicht vom Fleck rühren",
+              "zusatz": {
+                "lautschrift": "/ˌsteɪ ˈpʊt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to prove",
+              "hinten": "beweisen, sich erweisen",
+              "zusatz": {
+                "lautschrift": "/pruːv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to plop",
+              "hinten": "platschen, plumpsen",
+              "zusatz": {
+                "lautschrift": "/plɒp/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Mountain Runaways – extract 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to frown",
+              "hinten": "die Stirn runzeln",
+              "seite": 15,
+              "zusatz": {
+                "lautschrift": "/fraʊn/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "fog",
+              "hinten": "Nebel",
+              "zusatz": {
+                "lautschrift": "/fɒg/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "apology",
+              "hinten": "Entschuldigung, Bedauern",
+              "zusatz": {
+                "lautschrift": "/əˈpɒlədʒi/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "previous",
+              "hinten": "vor(her)ig, vorhergehend",
+              "zusatz": {
+                "lautschrift": "/ˈpriːviəs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to recur",
+              "hinten": "wieder auftreten, sich wiederholen, wieder einfallen",
+              "zusatz": {
+                "lautschrift": "/rɪˈkɜː/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to ditch",
+              "hinten": "wegwerfen, entlassen, aufgeben",
+              "zusatz": {
+                "lautschrift": "/dɪtʃ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "freezing",
+              "hinten": "frostig, eiskalt",
+              "zusatz": {
+                "lautschrift": "/ˈfriːzɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to make out (with sb)",
+              "hinten": "(mit jdm) rummachen",
+              "zusatz": {
+                "lautschrift": "/ˌmeɪk ˈaʊt wɪð/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "wrapped",
+              "hinten": "eingepackt, verpackt",
+              "zusatz": {
+                "lautschrift": "/ræpt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "cloud",
+              "hinten": "Wolke",
+              "zusatz": {
+                "lautschrift": "/klaʊd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to graduate",
+              "hinten": "einen akademischen Grad erwerben, die (Schul)abschlussprüfung bestehen",
+              "zusatz": {
+                "lautschrift": "/ˈgrædʒueɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to cling to sth",
+              "hinten": "sich an etw klammern",
+              "zusatz": {
+                "lautschrift": "/ˈklɪŋ tʊ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "emergency medical technician (EMT)",
+              "hinten": "Rettungssanitäter/in",
+              "zusatz": {
+                "lautschrift": "/ɪˌmɜːdʒ(ə)nsi ˌmedɪk(ə)l tekˈnɪʃ(ə)n, ˌiː em ˈtiː/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to envelop",
+              "hinten": "einhüllen",
+              "zusatz": {
+                "lautschrift": "/ɪnˈveləp/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "in debt",
+              "hinten": "verschuldet, Schulden habend",
+              "zusatz": {
+                "lautschrift": "/ɪn ˈdet/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to figure (informal)",
+              "hinten": "denken, annehmen",
+              "zusatz": {
+                "lautschrift": "/ˈfɪgə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to escort",
+              "hinten": "(bewachend) geleiten, begleiten",
+              "zusatz": {
+                "lautschrift": "/ɪˈskɔːt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "pit",
+              "hinten": "Grube, (Erd)loch, Höhle",
+              "zusatz": {
+                "lautschrift": "/pɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "shovel",
+              "hinten": "Schaufel",
+              "zusatz": {
+                "lautschrift": "/ˈʃʌv(ə)l/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Mountain Runaways – extract 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to backtrack",
+              "hinten": "wieder zurückgehen, einlenken",
+              "zusatz": {
+                "lautschrift": "/ˈbæktræk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "hunting (no pl)",
+              "hinten": "Jagen, Jagd(-)",
+              "zusatz": {
+                "lautschrift": "/ˈhʌntɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "skinny",
+              "hinten": "dünn, mager",
+              "zusatz": {
+                "lautschrift": "/ˈskɪni/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "moose",
+              "hinten": "Elch(-)",
+              "zusatz": {
+                "lautschrift": "/muːs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "meat",
+              "hinten": "Fleisch",
+              "zusatz": {
+                "lautschrift": "/miːt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "stove",
+              "hinten": "Ofen, Herd",
+              "zusatz": {
+                "lautschrift": "/stəʊv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to drag",
+              "hinten": "ziehen, schleifen, hier: sich schleppen",
+              "zusatz": {
+                "lautschrift": "/dræg/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "jolly",
+              "hinten": "fröhlich, lustig, vergnügt",
+              "zusatz": {
+                "lautschrift": "/ˈdʒɒli/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "pale",
+              "hinten": "blass, bleich",
+              "zusatz": {
+                "lautschrift": "/peɪl/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "shaky",
+              "hinten": "zittrig, wack(e)lig, schwankend",
+              "zusatz": {
+                "lautschrift": "/ˈʃeɪki/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "blister",
+              "hinten": "Blase",
+              "zusatz": {
+                "lautschrift": "/ˈblɪstə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "sinus",
+              "hinten": "Nasennebenhöhle",
+              "zusatz": {
+                "lautschrift": "/ˈsaɪnəs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "fever",
+              "hinten": "Fieber, Aufregung",
+              "zusatz": {
+                "lautschrift": "/ˈfiːvə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "stomach",
+              "hinten": "Magen, Bauch",
+              "zusatz": {
+                "lautschrift": "/ˈstʌmək/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "ridge",
+              "hinten": "Grat, (Berg)kamm",
+              "zusatz": {
+                "lautschrift": "/rɪdʒ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "streamlet",
+              "hinten": "Rinnsal, Bächlein",
+              "zusatz": {
+                "lautschrift": "/ˈstriːmlət/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "dizzy",
+              "hinten": "schwind(e)lig",
+              "zusatz": {
+                "lautschrift": "/ˈdɪzi/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "forehead",
+              "hinten": "Stirn",
+              "zusatz": {
+                "lautschrift": "/ˈfɔːhed, ˈfɒrɪd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "tingling (no pl)",
+              "hinten": "Kribbeln",
+              "zusatz": {
+                "lautschrift": "/ˈtɪŋglɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "stage",
+              "hinten": "Etappe, Station, Phase",
+              "zusatz": {
+                "lautschrift": "/steɪdʒ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "dehydration (no pl)",
+              "hinten": "(Aus)trocknung",
+              "zusatz": {
+                "lautschrift": "/ˌdiːhaɪˈdreɪʃ(ə)n/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "deafness (no pl)",
+              "hinten": "Taubheit",
+              "zusatz": {
+                "lautschrift": "/ˈdefnəs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "irritability (no pl)",
+              "hinten": "Reizbarkeit, Gereiztheit",
+              "zusatz": {
+                "lautschrift": "/ˌɪrɪtəˈbɪləti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "nausea (no pl)",
+              "hinten": "Übelkeit",
+              "zusatz": {
+                "lautschrift": "/ˈnɔːziə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "plenty of",
+              "hinten": "viel",
+              "zusatz": {
+                "lautschrift": "/ˈplenti əv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to curse",
+              "hinten": "(ver)fluchen",
+              "zusatz": {
+                "lautschrift": "/kɜːs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to be lost (irr)",
+              "hinten": "sich verirrt haben, sich verlaufen haben",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ˈlɒst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to rest",
+              "hinten": "(aus)ruhen",
+              "zusatz": {
+                "lautschrift": "/rest/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "thirst (no pl)",
+              "hinten": "Durst",
+              "zusatz": {
+                "lautschrift": "/θɜːst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "exhausted",
+              "hinten": "erschöpft, aufgebraucht",
+              "zusatz": {
+                "lautschrift": "/ɪgˈzɔːstɪd/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Textwortschatz S. 24",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to pray",
+              "hinten": "beten",
+              "zusatz": {
+                "lautschrift": "/preɪ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to endure",
+              "hinten": "ertragen, fortdauern",
+              "zusatz": {
+                "lautschrift": "/ɪnˈdjʊə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "beating",
+              "hinten": "Prügel, Schläge",
+              "zusatz": {
+                "lautschrift": "/ˈbiːtɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "survivor",
+              "hinten": "Überlebende/r",
+              "zusatz": {
+                "lautschrift": "/səˈvaɪvə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "forcibly",
+              "hinten": "gewaltsam, mit Gewalt",
+              "zusatz": {
+                "lautschrift": "/ˈfɔːsəbli/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to separate",
+              "hinten": "trennen, abspalten, (sich) scheiden (lassen)",
+              "zusatz": {
+                "lautschrift": "/ˈsepəreɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "genocide",
+              "hinten": "Völkermord",
+              "zusatz": {
+                "lautschrift": "/ˈdʒenəsaɪd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "remains (pl)",
+              "hinten": "Überbleibsel, Überreste",
+              "zusatz": {
+                "lautschrift": "/rɪˈmeɪnz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to bury",
+              "hinten": "begraben, vergraben",
+              "zusatz": {
+                "lautschrift": "/ˈberi/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to remove",
+              "hinten": "entfernen, hier: wegnehmen",
+              "zusatz": {
+                "lautschrift": "/rɪˈmuːv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "on behalf of sb",
+              "hinten": "im Namen einer Person, im Auftrag von jdm",
+              "zusatz": {
+                "lautschrift": "/ˌɒn bɪˈhɑːf əv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "federal",
+              "hinten": "Bundes-, bundesstaatlich",
+              "zusatz": {
+                "lautschrift": "/ˈfed(ə)rəl/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "malnourished",
+              "hinten": "unterernährt",
+              "zusatz": {
+                "lautschrift": "/ˌmælˈnʌrɪʃt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to beat, beat, beaten",
+              "hinten": "schlagen, besiegen, übertreffen",
+              "zusatz": {
+                "lautschrift": "/biːt, biːt, ˈbiːtən/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to abuse",
+              "hinten": "missbrauchen",
+              "zusatz": {
+                "lautschrift": "/əˈbjuːz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "significance (no pl)",
+              "hinten": "Wichtigkeit, Bedeutung, Belang",
+              "zusatz": {
+                "lautschrift": "/sɪgˈnɪfɪkəns/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "nun",
+              "hinten": "Nonne",
+              "zusatz": {
+                "lautschrift": "/nʌn/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "domestic service",
+              "hinten": "Hauswirtschaft",
+              "zusatz": {
+                "lautschrift": "/dəˌmestɪk ˈsɜːvɪs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to be touted as sth (irr)",
+              "hinten": "als etw gepriesen werden",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ˈtaʊtɪd æz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "chore",
+              "hinten": "Routinearbeit, Hausarbeit",
+              "zusatz": {
+                "lautschrift": "/tʃɔː/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to reopen",
+              "hinten": "wieder aufnehmen, wieder (er)öffnen",
+              "zusatz": {
+                "lautschrift": "/ˌriːˈəʊpən/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "lack (of) (no pl)",
+              "hinten": "Mangel (an)",
+              "zusatz": {
+                "lautschrift": "/ˈlæk əv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "accountability (no pl)",
+              "hinten": "Verantwortlichkeit",
+              "zusatz": {
+                "lautschrift": "/əˌkaʊntəˈbɪləti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "ties (pl)",
+              "hinten": "Bande, Beziehungen",
+              "zusatz": {
+                "lautschrift": "/taɪz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to mourn",
+              "hinten": "(be)trauern, beklagen",
+              "zusatz": {
+                "lautschrift": "/mɔːn/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Say it in English – Theme 1",
+          "bidirektional": false,
+          "karten": [
+            {
+              "vorne": "So kannst du über Fotos sprechen",
+              "hinten": "Photo no. … appeals to me the most because … · The scenery in photo … seems so peaceful/idyllic. · The scene in photo no. … reminds me of … · The atmosphere in photo no. … looks tranquil/tense/terrifying. · Photo no. … conveys a sense of fear/calm. · My photo was taken in/on … · In the foreground/background … · The central focus of the photo is … · … indicates/suggests that … · If you take a closer look, you … · The photo highlights … · The photo creates an atmosphere of … · The general impression is one of … · … represents/stands for … · My photo seems to depict …"
+            },
+            {
+              "vorne": "So kannst du Gelerntes mit neuen Informationen in Beziehung setzen",
+              "hinten": "From what I know about …, I think that … · Considering what I have learned about … · Keeping in mind what I know about …"
+            },
+            {
+              "vorne": "So kannst du Informationen aus einem Text mit einer Landkarte in Beziehung setzen",
+              "hinten": "… on the map corresponds with the description of … · Features like … on the map come to life in the depiction of … · The text only mentions … whereas the map shows that … · The text illustrates how … · Alberta's … correlates with … · The idea that living in Alberta means … is reflected in … · The impression of … as … is contradicted/confirmed by …"
+            },
+            {
+              "vorne": "So kannst du Vermutungen (über ein Buchcover) anstellen",
+              "hinten": "I imagine that … · It seems likely that … · My guess is that … · It's quite possible that … · There is a good chance that … · The … on the cover suggests that … · From the … on the cover, it appears that …"
+            },
+            {
+              "vorne": "So kannst du deine Meinung äußern",
+              "hinten": "In my opinion … · I am convinced that … · In view of … · Taking into consideration … · Given that … · Based on my experience …"
+            },
+            {
+              "vorne": "So kannst du die Aussage eines Cartoons kommentieren",
+              "hinten": "The cartoon brilliantly tackles the issue of … · The cartoon speaks volumes about … · The cartoonist skilfully captures the … · The cartoon conveys the meaningful message that … · While the cartoon is …, I feel that … · In my opinion, the message is somewhat lost because … · I feel that the cartoon oversimplifies the …"
+            },
+            {
+              "vorne": "So kannst du über Statistiken sprechen",
+              "hinten": "My chart deals with/shows … · It distinguishes between … · The numbers in … are well below … They hardly change during … · However, in … there is a significant increase/decrease. · By 1911, the number of … has risen to … · The number reaches a peak in … · The number rises/falls steadily from … to … · At this time, there are … accounting for …% of … · They account for …% of … · In 1971, people born in … made up …% of … · The proportion of immigrants from … is roughly the same in … · There are significantly fewer … · It is interesting to note that … · This is the area with the highest concentration of … · In comparison to …, the number of Indigenous people …"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Theme 2: The North of England",
+      "bloecke": [
+        {
+          "name": "Wortliste 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "architectural",
+              "hinten": "architektonisch",
+              "beispiel": "Manchester Cathedral is one of the city's architectural highlights.",
+              "seite": 44,
+              "zusatz": {
+                "lautschrift": "/ˌɑːkɪˈtektʃ(ə)rəl/"
+              }
+            },
+            {
+              "vorne": "iconic",
+              "hinten": "ikonisch, hier: kultig, Kult-",
+              "beispiel": "The Beatles are an iconic band from the UK.",
+              "zusatz": {
+                "lautschrift": "/aɪˈkɒnɪk/"
+              }
+            },
+            {
+              "vorne": "vibrant",
+              "hinten": "lebhaft, dynamisch, lebendig",
+              "beispiel": "This place is so vibrant; there's all sorts of music being played.",
+              "zusatz": {
+                "lautschrift": "/ˈvaɪbrənt/"
+              }
+            },
+            {
+              "vorne": "documentary",
+              "hinten": "Dokumentation, Dokumentarfilm",
+              "beispiel": "Callum enjoyed watching a documentary about his favourite band.",
+              "zusatz": {
+                "lautschrift": "/ˌdɒkjʊˈment(ə)ri/"
+              }
+            },
+            {
+              "vorne": "itinerary",
+              "hinten": "Reiseroute, Reiseplan",
+              "beispiel": "According to the itinerary, we're going to the museum next.",
+              "seite": 45,
+              "zusatz": {
+                "lautschrift": "/aɪˈtɪnərəri/",
+                "verwandt": "Frz. itinéraire, Sp. itinerario"
+              }
+            },
+            {
+              "vorne": "accommodation (no pl)",
+              "hinten": "Unterkunft",
+              "beispiel": "We have booked our train tickets but we still have to find accommodation.",
+              "zusatz": {
+                "lautschrift": "/əˌkɒməˈdeɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "to vote",
+              "hinten": "wählen, hier: abstimmen",
+              "beispiel": "The Grey family voted to decide where their next holiday would be.",
+              "zusatz": {
+                "lautschrift": "/vəʊt/"
+              }
+            },
+            {
+              "vorne": "flight",
+              "hinten": "Flug",
+              "beispiel": "Ravi is scared of flying, but the flight from Berlin to Manchester wasn't too bad.",
+              "zusatz": {
+                "lautschrift": "/flaɪt/"
+              }
+            },
+            {
+              "vorne": "the Industrial Revolution",
+              "hinten": "die industrielle Revolution",
+              "beispiel": "The Industrial Revolution changed how we produce things.",
+              "seite": 46,
+              "zusatz": {
+                "lautschrift": "/ðiː ɪnˌdʌstriəl revəˈluːʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "cotton mill",
+              "hinten": "Baumwollspinnerei",
+              "zusatz": {
+                "lautschrift": "/ˈkɒt(ə)n mɪl/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "birth",
+              "hinten": "Geburt(s-), Abstammung, Herkunft",
+              "beispiel": "My place of birth is London, but now I live in Manchester.",
+              "zusatz": {
+                "lautschrift": "/bɜːθ/"
+              }
+            },
+            {
+              "vorne": "before",
+              "hinten": "zuvor, vorher, früher",
+              "beispiel": "Zola moved to Leeds in 2023. She had finished her studies the year before.",
+              "zusatz": {
+                "lautschrift": "/bɪˈfɔː/"
+              }
+            },
+            {
+              "vorne": "invention",
+              "hinten": "Erfindung",
+              "beispiel": "The radio was a brilliant invention.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈvenʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "machine",
+              "hinten": "Maschine, Apparat",
+              "beispiel": "Machines reduced the amount of work people had to do by hand.",
+              "zusatz": {
+                "lautschrift": "/məˈʃiːn/"
+              }
+            },
+            {
+              "vorne": "to spin, spun, spun",
+              "hinten": "rotieren, drehen, hier: spinnen",
+              "beispiel": "To make cloth, you have to start by spinning thread.",
+              "zusatz": {
+                "lautschrift": "/spɪn, spʌn, spʌn/"
+              }
+            },
+            {
+              "vorne": "thread",
+              "hinten": "Garn, Zwirn, Faden",
+              "zusatz": {
+                "lautschrift": "/θred/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "cloth",
+              "hinten": "Tuch, Stoff",
+              "zusatz": {
+                "lautschrift": "/klɒθ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "dramatically",
+              "hinten": "dramatisch, beträchtlich, drastisch",
+              "beispiel": "The weather changed dramatically: it was sunny but now it is windy and rainy.",
+              "zusatz": {
+                "lautschrift": "/drəˈmætɪkli/"
+              }
+            },
+            {
+              "vorne": "rapid",
+              "hinten": "schnell, plötzlich, rasch",
+              "beispiel": "To fight climate change we must take rapid action.",
+              "zusatz": {
+                "lautschrift": "/ˈræpɪd/"
+              }
+            },
+            {
+              "vorne": "wealth (no pl)",
+              "hinten": "Reichtum, Vermögen, Fülle",
+              "beispiel": "Lisa is generous with her wealth and gives money to charity.",
+              "zusatz": {
+                "lautschrift": "/welθ/"
+              }
+            },
+            {
+              "vorne": "to refer (back) to",
+              "hinten": "(zurück)verweisen auf, sich beziehen auf, hier: nennen, bezeichnen",
+              "beispiel": "Manchester is sometimes referred to as the capital of the North.",
+              "zusatz": {
+                "lautschrift": "/rɪˌfɜː ˈbæk tʊ/"
+              }
+            },
+            {
+              "vorne": "to employ",
+              "hinten": "beschäftigen, einstellen, einsetzen",
+              "beispiel": "My boss employed me because I am a hard worker.",
+              "zusatz": {
+                "lautschrift": "/ɪmˈplɔɪ/"
+              }
+            },
+            {
+              "vorne": "up to",
+              "hinten": "bis (zu)",
+              "beispiel": "Children had to work up to 14 hours a day.",
+              "zusatz": {
+                "lautschrift": "/ˈʌp tʊ/"
+              }
+            },
+            {
+              "vorne": "pay (no pl)",
+              "hinten": "Lohn, Gehalt, Bezahlung",
+              "zusatz": {
+                "lautschrift": "/peɪ/"
+              }
+            },
+            {
+              "vorne": "to attend",
+              "hinten": "besuchen, hier: teilnehmen an",
+              "beispiel": "Emily attended the meeting about school rules.",
+              "zusatz": {
+                "lautschrift": "/əˈtend/"
+              }
+            },
+            {
+              "vorne": "relentless",
+              "hinten": "unnachgiebig, unablässig",
+              "beispiel": "Ben will never give up trying, he's relentless.",
+              "zusatz": {
+                "lautschrift": "/rɪˈlentləs/"
+              }
+            },
+            {
+              "vorne": "lack (of) (no pl)",
+              "hinten": "Mangel (an)",
+              "beispiel": "Penelope's grades didn't improve because of her lack of work.",
+              "zusatz": {
+                "lautschrift": "/ˈlæk əv/"
+              }
+            },
+            {
+              "vorne": "deed",
+              "hinten": "Tat",
+              "beispiel": "It's nice to do a good deed for someone else.",
+              "zusatz": {
+                "lautschrift": "/diːd/"
+              }
+            },
+            {
+              "vorne": "to turn",
+              "hinten": "(sich) (um)drehen, hier: wenden",
+              "beispiel": "Amara turned to her mum for help.",
+              "zusatz": {
+                "lautschrift": "/tɜːn/"
+              }
+            },
+            {
+              "vorne": "to jail",
+              "hinten": "einsperren, inhaftieren",
+              "beispiel": "Michael was jailed for breaking the law.",
+              "zusatz": {
+                "lautschrift": "/dʒeɪl/"
+              }
+            },
+            {
+              "vorne": "Roman",
+              "hinten": "Römer/in, römisch",
+              "beispiel": "You can still see how the Romans influenced the UK today.",
+              "zusatz": {
+                "lautschrift": "/ˈrəʊmən/"
+              }
+            },
+            {
+              "vorne": "to guard",
+              "hinten": "bewachen",
+              "beispiel": "They guarded the door to stop anyone from entering.",
+              "zusatz": {
+                "lautschrift": "/gɑːd/"
+              }
+            },
+            {
+              "vorne": "goods (pl)",
+              "hinten": "Waren, Güter",
+              "beispiel": "You can buy all sorts of goods at the supermarket.",
+              "zusatz": {
+                "lautschrift": "/gʊdz/"
+              }
+            },
+            {
+              "vorne": "inn",
+              "hinten": "Gasthaus",
+              "beispiel": "Let's find an inn where we can spend the night.",
+              "zusatz": {
+                "lautschrift": "/ɪn/"
+              }
+            },
+            {
+              "vorne": "to reconstruct",
+              "hinten": "rekonstruieren",
+              "zusatz": {
+                "lautschrift": "/ˌriːkənˈstrʌkt/"
+              }
+            },
+            {
+              "vorne": "Greater Manchester",
+              "hinten": "Großraum Manchester",
+              "zusatz": {
+                "lautschrift": "/ˌgreɪtə ˈmænˌtʃestə/"
+              }
+            },
+            {
+              "vorne": "to breathe (in/out)",
+              "hinten": "(ein/aus)atmen",
+              "beispiel": "If he needs to calm down, Tamir breathes in and out slowly.",
+              "zusatz": {
+                "lautschrift": "/ˌbriːð ˈɪn, ˌbriːð ˈaʊt/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "single parent",
+              "hinten": "Alleinerziehende/r",
+              "beispiel": "As a single parent, Jay is always busy looking after his son.",
+              "zusatz": {
+                "lautschrift": "/ˌsɪŋg(ə)l ˈpeərənt/"
+              }
+            },
+            {
+              "vorne": "role model",
+              "hinten": "Vorbild, Rollenbild",
+              "beispiel": "Micha's mum is his role model.",
+              "zusatz": {
+                "lautschrift": "/ˈrəʊl ˌmɒd(ə)l/"
+              }
+            },
+            {
+              "vorne": "to raise",
+              "hinten": "heben, hier: schärfen",
+              "zusatz": {
+                "lautschrift": "/reɪz/"
+              }
+            },
+            {
+              "vorne": "awareness (no pl)",
+              "hinten": "Bewusstsein",
+              "beispiel": "The documentary raised awareness about climate change.",
+              "zusatz": {
+                "lautschrift": "/əˈweənəs/"
+              }
+            },
+            {
+              "vorne": "to campaign (for/against sth)",
+              "hinten": "(für etw) eintreten/(gegen etw) kämpfen",
+              "beispiel": "He often campaigns against racism.",
+              "zusatz": {
+                "lautschrift": "/kæmˈpeɪn fɔː/əˌgenst/"
+              }
+            },
+            {
+              "vorne": "instantly",
+              "hinten": "sofort",
+              "beispiel": "The news spread instantly, with hundreds of people reposting it online.",
+              "zusatz": {
+                "lautschrift": "/ˈɪnstəntli/"
+              }
+            },
+            {
+              "vorne": "the Second World War",
+              "hinten": "der Zweite Weltkrieg",
+              "zusatz": {
+                "lautschrift": "/ðə ˌsekənd ˌwɜːld ˈwɔː/"
+              }
+            },
+            {
+              "vorne": "bomber",
+              "hinten": "Bombenflugzeug",
+              "zusatz": {
+                "lautschrift": "/ˈbɒmə/"
+              }
+            },
+            {
+              "vorne": "aircraft (pl aircraft)",
+              "hinten": "Luftfahrzeug, Flugzeug",
+              "beispiel": "A pilot flies an aircraft.",
+              "zusatz": {
+                "lautschrift": "/ˈeəˌkrɑːft/"
+              }
+            },
+            {
+              "vorne": "barrage balloon",
+              "hinten": "Sperrballon (Ballon, der der Kriegsführung dient)",
+              "zusatz": {
+                "lautschrift": "/ˈbærɑːʒ bəˌluːn/"
+              }
+            },
+            {
+              "vorne": "to manufacture",
+              "hinten": "herstellen",
+              "beispiel": "The factory manufactures car parts.",
+              "zusatz": {
+                "lautschrift": "/ˌmænjʊˈfæktʃə/"
+              }
+            },
+            {
+              "vorne": "mainly",
+              "hinten": "hauptsächlich, in erster Linie",
+              "beispiel": "Although David isn't a vegetarian, he mainly eats meat-free meals.",
+              "zusatz": {
+                "lautschrift": "/ˈmeɪnli/"
+              }
+            },
+            {
+              "vorne": "the Blitz",
+              "hinten": "deutsche Luftangriffe auf britische Städte im Zweiten Weltkrieg",
+              "zusatz": {
+                "lautschrift": "/ðə ˈblɪts/"
+              }
+            },
+            {
+              "vorne": "to crack",
+              "hinten": "(zer)brechen, hier: knacken",
+              "beispiel": "The puzzle was hard, but Leia cracked it.",
+              "zusatz": {
+                "lautschrift": "/kræk/"
+              }
+            },
+            {
+              "vorne": "the allies",
+              "hinten": "die Alliierten",
+              "zusatz": {
+                "lautschrift": "/ðiː ˈælaɪz/"
+              }
+            },
+            {
+              "vorne": "to lay, laid, laid",
+              "hinten": "legen",
+              "beispiel": "Priya laid the book on the table.",
+              "zusatz": {
+                "lautschrift": "/leɪ, leɪd, leɪd/"
+              }
+            },
+            {
+              "vorne": "foundation",
+              "hinten": "Fundament, Basis, Grundlage",
+              "beispiel": "The foundations are the most important part of a structure.",
+              "zusatz": {
+                "lautschrift": "/faʊnˈdeɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "computing (no pl)",
+              "hinten": "EDV, Computing",
+              "beispiel": "She has a degree in computing so she knows all about technology.",
+              "zusatz": {
+                "lautschrift": "/kəmˈpjuːtɪŋ/"
+              }
+            },
+            {
+              "vorne": "artificial intelligence (AI) (no pl)",
+              "hinten": "künstliche Intelligenz",
+              "beispiel": "Artificial intelligence is a very controversial topic.",
+              "seite": 48,
+              "zusatz": {
+                "lautschrift": "/ˌɑːtɪˌfɪʃ(ə)l ɪnˈtelɪdʒ(ə)ns, ˌeɪ ˈaɪ/"
+              }
+            },
+            {
+              "vorne": "tabloid",
+              "hinten": "Boulevardzeitung, Klatschzeitung",
+              "beispiel": "Tabloids feature very dramatic articles.",
+              "zusatz": {
+                "lautschrift": "/ˈtæblɔɪd/"
+              }
+            },
+            {
+              "vorne": "quality newspaper",
+              "hinten": "seriöse (Tages)zeitung",
+              "beispiel": "Will prefers reading a quality newspaper because the information is better.",
+              "zusatz": {
+                "lautschrift": "/ˈkwɒləti ˌnjuːzˌpeɪpə/"
+              }
+            },
+            {
+              "vorne": "disruption",
+              "hinten": "Unterbrechung, Störung",
+              "zusatz": {
+                "lautschrift": "/dɪsˈrʌpʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "to spray",
+              "hinten": "(be)sprühen",
+              "beispiel": "Amelia sprayed her skateboard green.",
+              "zusatz": {
+                "lautschrift": "/spreɪ/"
+              }
+            },
+            {
+              "vorne": "oil",
+              "hinten": "(Erd)öl(-)",
+              "beispiel": "Oil is a kind of fossil fuel.",
+              "zusatz": {
+                "lautschrift": "/ɔɪl/"
+              }
+            },
+            {
+              "vorne": "onto",
+              "hinten": "in, auf",
+              "beispiel": "We ran onto the beach when we saw the boat.",
+              "zusatz": {
+                "lautschrift": "/ˈɒntə/"
+              }
+            },
+            {
+              "vorne": "to glue",
+              "hinten": "kleben",
+              "beispiel": "Ryan glued his photographs into his book.",
+              "zusatz": {
+                "lautschrift": "/gluː/"
+              }
+            },
+            {
+              "vorne": "painting",
+              "hinten": "Bild, Gemälde, Malerei",
+              "beispiel": "Louise spent the day working on her painting of a horse.",
+              "zusatz": {
+                "lautschrift": "/ˈpeɪntɪŋ/"
+              }
+            },
+            {
+              "vorne": "employee",
+              "hinten": "Angestellte/r, Mitarbeiter/in, Beschäftigte/r",
+              "beispiel": "Poppy is the youngest employee at her company.",
+              "zusatz": {
+                "lautschrift": "/ɪmˈplɔɪiː/"
+              }
+            },
+            {
+              "vorne": "gutless (informal)",
+              "hinten": "feige, lahm",
+              "zusatz": {
+                "lautschrift": "/ˈgʌtləs/"
+              }
+            },
+            {
+              "vorne": "attack",
+              "hinten": "Angriff, Anfall",
+              "beispiel": "The army carried out an attack in the early hours of the morning.",
+              "zusatz": {
+                "lautschrift": "/əˈtæk/"
+              }
+            },
+            {
+              "vorne": "to wreak havoc",
+              "hinten": "schlimme Schäden anrichten",
+              "zusatz": {
+                "lautschrift": "/ˌriːk ˈhævək/"
+              }
+            },
+            {
+              "vorne": "treasure",
+              "hinten": "Schatz",
+              "beispiel": "Pirates often hid their treasure to keep it safe.",
+              "zusatz": {
+                "lautschrift": "/ˈtreʒə/"
+              }
+            },
+            {
+              "vorne": "fossil fuel",
+              "hinten": "fossiler Brennstoff",
+              "beispiel": "Fossil fuels are bad for the environment.",
+              "zusatz": {
+                "lautschrift": "/ˈfɒs(ə)l ˌfjuːəl/"
+              }
+            },
+            {
+              "vorne": "to threaten",
+              "hinten": "(be)drohen",
+              "beispiel": "Richard threatened to find a new job if his employer didn't pay him more.",
+              "zusatz": {
+                "lautschrift": "/ˈθret(ə)n/"
+              }
+            },
+            {
+              "vorne": "demand",
+              "hinten": "(An)forderung",
+              "beispiel": "The employer agreed to her employee's demands, so he stayed.",
+              "zusatz": {
+                "lautschrift": "/dɪˈmɑːnd/"
+              }
+            },
+            {
+              "vorne": "to meet, met, met",
+              "hinten": "(sich) treffen, hier: erfüllen, entsprechen",
+              "beispiel": "Sahar worked hard to meet his deadlines.",
+              "zusatz": {
+                "lautschrift": "/miːt, met, met/"
+              }
+            },
+            {
+              "vorne": "to evacuate",
+              "hinten": "evakuieren, räumen",
+              "beispiel": "The town was evacuated because of extreme weather.",
+              "zusatz": {
+                "lautschrift": "/ɪˈvækjueɪt/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to arrest sb (on suspicion of sth)",
+              "hinten": "jdn (wegen des Verdachts auf etw) verhaften",
+              "beispiel": "The man was arrested on suspicion of stealing a car.",
+              "zusatz": {
+                "lautschrift": "/əˌrest ˌsʌmbədi ɒn səˈspɪʃ(ə)n əv/"
+              }
+            },
+            {
+              "vorne": "suspicion",
+              "hinten": "Verdacht, Misstrauen",
+              "beispiel": "I don't know who did this, but I have my suspicions.",
+              "zusatz": {
+                "lautschrift": "/səˈspɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "frame",
+              "hinten": "(Bilder)rahmen",
+              "beispiel": "The painting has a very pretty frame.",
+              "zusatz": {
+                "lautschrift": "/freɪm/"
+              }
+            },
+            {
+              "vorne": "exploration",
+              "hinten": "Erforschung",
+              "zusatz": {
+                "lautschrift": "/ˌekspləˈreɪʃ(ə)n/",
+                "verwandt": "Lat. explōrātio"
+              }
+            },
+            {
+              "vorne": "to launch",
+              "hinten": "starten, beginnen",
+              "beispiel": "They only launched their business last month.",
+              "zusatz": {
+                "lautschrift": "/lɔːntʃ/"
+              }
+            },
+            {
+              "vorne": "campaign",
+              "hinten": "Kampagne, Aktion",
+              "beispiel": "Ross supports the campaign for a new library.",
+              "zusatz": {
+                "lautschrift": "/kæmˈpeɪn/"
+              }
+            },
+            {
+              "vorne": "to spray-paint",
+              "hinten": "mit Farbe besprühen",
+              "zusatz": {
+                "lautschrift": "/ˈspreɪˌpeɪnt/"
+              }
+            },
+            {
+              "vorne": "to apply",
+              "hinten": "anwenden, gebrauchen, auftragen",
+              "beispiel": "Lucy applied glue to the back of the photos and stuck them in her book.",
+              "zusatz": {
+                "lautschrift": "/əˈplaɪ/"
+              }
+            },
+            {
+              "vorne": "to stick, stuck, stuck",
+              "hinten": "kleben, stecken",
+              "zusatz": {
+                "lautschrift": "/stɪk, stʌk, stʌk/"
+              }
+            },
+            {
+              "vorne": "to criticize",
+              "hinten": "kritisch beurteilen, kritisieren",
+              "beispiel": "Many people criticize the government for not doing more to prevent climate change.",
+              "zusatz": {
+                "lautschrift": "/ˈkrɪtɪsaɪz/"
+              }
+            },
+            {
+              "vorne": "work of art",
+              "hinten": "Kunstwerk",
+              "zusatz": {
+                "lautschrift": "/ˌwɜːk əv ˈɑːt/"
+              }
+            },
+            {
+              "vorne": "public nuisance",
+              "hinten": "öffentliches Ärgernis",
+              "zusatz": {
+                "lautschrift": "/ˌpʌblɪk ˈnjuːs(ə)ns/"
+              }
+            },
+            {
+              "vorne": "to praise",
+              "hinten": "loben",
+              "beispiel": "Rose was praised for doing so well.",
+              "zusatz": {
+                "lautschrift": "/preɪz/"
+              }
+            },
+            {
+              "vorne": "form",
+              "hinten": "Form, hier: Art",
+              "beispiel": "Painting and film are different forms of art.",
+              "zusatz": {
+                "lautschrift": "/fɔːm/"
+              }
+            },
+            {
+              "vorne": "outrageous",
+              "hinten": "empörend, unerhört",
+              "beispiel": "The cost of the food was outrageous: it was so expensive!",
+              "zusatz": {
+                "lautschrift": "/aʊtˈreɪdʒəs/"
+              }
+            },
+            {
+              "vorne": "scandalous",
+              "hinten": "skandalös, unerhört",
+              "beispiel": "The story was so scandalous that it was in every newspaper.",
+              "zusatz": {
+                "lautschrift": "/ˈskænd(ə)ləs/"
+              }
+            },
+            {
+              "vorne": "to condemn",
+              "hinten": "verurteilen, verdammen",
+              "beispiel": "The government condemned the protests for being too violent.",
+              "zusatz": {
+                "lautschrift": "/kənˈdem/"
+              }
+            },
+            {
+              "vorne": "to license",
+              "hinten": "die Lizenz erteilen, erlauben",
+              "zusatz": {
+                "lautschrift": "/ˈlaɪs(ə)ns/",
+                "hinweis": "Achte auf die Schreibung."
+              }
+            },
+            {
+              "vorne": "to evaluate",
+              "hinten": "beurteilen, bewerten",
+              "beispiel": "We need to evaluate the damage.",
+              "zusatz": {
+                "lautschrift": "/ɪˈvæljueɪt/",
+                "verwandt": "Frz. évaluer, Sp. evaluar"
+              }
+            },
+            {
+              "vorne": "analysis (pl analyses)",
+              "hinten": "Analyse, Beurteilung",
+              "beispiel": "The scientists conducted an analysis of their results.",
+              "seite": 50,
+              "zusatz": {
+                "lautschrift": "/əˈnæləsɪs, əˈnæləsiːz/"
+              }
+            },
+            {
+              "vorne": "size",
+              "hinten": "Größe",
+              "beispiel": "The size of the house was surprisingly large.",
+              "zusatz": {
+                "lautschrift": "/saɪz/"
+              }
+            },
+            {
+              "vorne": "to evoke",
+              "hinten": "hervorrufen",
+              "beispiel": "The song evoked memories of my past.",
+              "zusatz": {
+                "lautschrift": "/ɪˈvəʊk/"
+              }
+            },
+            {
+              "vorne": "tone",
+              "hinten": "Klang, Ton, hier: Stimmung",
+              "beispiel": "The tone of the article is very negative.",
+              "zusatz": {
+                "lautschrift": "/təʊn/"
+              }
+            },
+            {
+              "vorne": "matter-of-fact",
+              "hinten": "sachlich, nüchtern",
+              "beispiel": "Mia spoke in a matter-of-fact way, it was hard to know how she felt.",
+              "zusatz": {
+                "lautschrift": "/ˌmætər əv ˈfækt/"
+              }
+            },
+            {
+              "vorne": "emotive",
+              "hinten": "emotional, gefühlsbetont",
+              "beispiel": "The speech uses lots of emotive language.",
+              "zusatz": {
+                "lautschrift": "/ɪˈməʊtɪv/"
+              }
+            },
+            {
+              "vorne": "address",
+              "hinten": "Adresse, Anschrift, hier: Anrede",
+              "beispiel": "There are several examples of direct address in the article.",
+              "zusatz": {
+                "lautschrift": "/əˈdres/"
+              }
+            },
+            {
+              "vorne": "exaggeration",
+              "hinten": "Übertreibung",
+              "beispiel": "Toby says he saw a real dinosaur, but I think that was an exaggeration.",
+              "zusatz": {
+                "lautschrift": "/ɪgˌzædʒəˈreɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "factual",
+              "hinten": "sachlich, auf Tatsachen beruhend",
+              "beispiel": "You have to be factual and don't make anything up.",
+              "zusatz": {
+                "lautschrift": "/ˈfæktʃuəl/"
+              }
+            },
+            {
+              "vorne": "cause",
+              "hinten": "Grund, Ursache, Anlass; hier: (gute) Sache",
+              "beispiel": "Do you want to raise money for a good cause?",
+              "zusatz": {
+                "lautschrift": "/kɔːz/"
+              }
+            },
+            {
+              "vorne": "lines (pl)",
+              "hinten": "Text (für Schauspieler/innen)",
+              "beispiel": "Sally learned all her lines for the play.",
+              "seite": 55,
+              "zusatz": {
+                "lautschrift": "/laɪnz/"
+              }
+            },
+            {
+              "vorne": "to stress",
+              "hinten": "betonen",
+              "beispiel": "Fred stressed the importance of waking up early.",
+              "zusatz": {
+                "lautschrift": "/stres/"
+              }
+            },
+            {
+              "vorne": "volume",
+              "hinten": "Volumen, Umfang, Lautstärke",
+              "beispiel": "The volume is too high; it is so loud!",
+              "zusatz": {
+                "lautschrift": "/ˈvɒljuːm/"
+              }
+            },
+            {
+              "vorne": "to offend",
+              "hinten": "beleidigen, kränken",
+              "beispiel": "Isabelle was offended by the joke.",
+              "zusatz": {
+                "lautschrift": "/əˈfend/"
+              }
+            },
+            {
+              "vorne": "paint (no pl)",
+              "hinten": "Farbe, Lack",
+              "beispiel": "There's not much red paint left because Tom used most of it to paint his room.",
+              "zusatz": {
+                "lautschrift": "/peɪnt/"
+              }
+            },
+            {
+              "vorne": "quote",
+              "hinten": "Zitat",
+              "beispiel": "Many famous quotes come from Shakespeare.",
+              "seite": 56,
+              "zusatz": {
+                "lautschrift": "/kwəʊt/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Scene one",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "client",
+              "hinten": "Kunde/Kundin, Klient/in, Auftraggeber/in",
+              "seite": 52,
+              "zusatz": {
+                "lautschrift": "/ˈklaɪənt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "tight (informal)",
+              "hinten": "knausrig",
+              "zusatz": {
+                "lautschrift": "/taɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "unimpressed",
+              "hinten": "unbeeindruckt",
+              "zusatz": {
+                "lautschrift": "/ˌʌnɪmˈprest/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "engine",
+              "hinten": "Maschine, Motor",
+              "zusatz": {
+                "lautschrift": "/ˈendʒɪn/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "dirty",
+              "hinten": "dreckig, schmutzig, hier: böse",
+              "zusatz": {
+                "lautschrift": "/ˈdɜːti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "whilst (BE)",
+              "hinten": "während, obwohl, wo(hin)gegen",
+              "zusatz": {
+                "lautschrift": "/waɪlst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "self-obsessed",
+              "hinten": "selbstsüchtig",
+              "zusatz": {
+                "lautschrift": "/ˌselfəbˈsest/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "global warming",
+              "hinten": "Erwärmung der Erdatmosphäre",
+              "zusatz": {
+                "lautschrift": "/ˌgləʊb(ə)l ˈwɔːmɪŋ/"
+              }
+            },
+            {
+              "vorne": "mark (BE)",
+              "hinten": "Note, Zensur",
+              "zusatz": {
+                "lautschrift": "/mɑːk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "bleak",
+              "hinten": "kahl, trostlos, düster",
+              "zusatz": {
+                "lautschrift": "/bliːk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to twist",
+              "hinten": "(ver)drehen",
+              "zusatz": {
+                "lautschrift": "/twɪst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "packaging (no pl)",
+              "hinten": "Verpackung(smaterial)",
+              "zusatz": {
+                "lautschrift": "/ˈpækɪdʒɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "dish",
+              "hinten": "Schale, Schüssel, Gericht",
+              "zusatz": {
+                "lautschrift": "/dɪʃ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to donate",
+              "hinten": "spenden",
+              "zusatz": {
+                "lautschrift": "/dəʊˈneɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "homeless shelter",
+              "hinten": "Notschlafstelle, Obdachlosenunterkunft",
+              "zusatz": {
+                "lautschrift": "/ˈhəʊmləs ˌʃeltə/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Scene two",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to flick through sth",
+              "hinten": "etw (schnell) durchblättern",
+              "seite": 54,
+              "zusatz": {
+                "lautschrift": "/ˈflɪk θruː/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "pile",
+              "hinten": "Stapel, Haufen",
+              "zusatz": {
+                "lautschrift": "/paɪl/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to rush",
+              "hinten": "eilen, hetzen",
+              "zusatz": {
+                "lautschrift": "/rʌʃ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "nod",
+              "hinten": "Nicken",
+              "zusatz": {
+                "lautschrift": "/nɒd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to blush",
+              "hinten": "erröten, rot werden",
+              "zusatz": {
+                "lautschrift": "/blʌʃ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to give sb a lift (irr)",
+              "hinten": "jdn (im Auto) mitnehmen",
+              "zusatz": {
+                "lautschrift": "/ˌgɪv ˌsʌmbədi ə ˈlɪft/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to raise one's eyebrows",
+              "hinten": "die Augenbrauen hochziehen",
+              "zusatz": {
+                "lautschrift": "/ˌreɪz wʌnz ˈaɪˌbraʊz/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "sensible",
+              "hinten": "vernünftig, angemessen, hier: sinnvoll",
+              "zusatz": {
+                "lautschrift": "/ˈsensəb(ə)l/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to cross",
+              "hinten": "überqueren, hier: verschränken",
+              "zusatz": {
+                "lautschrift": "/krɒs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to slash",
+              "hinten": "aufschlitzen, aufschneiden",
+              "zusatz": {
+                "lautschrift": "/slæʃ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "tyre",
+              "hinten": "Reifen",
+              "zusatz": {
+                "lautschrift": "/ˈtaɪə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "disgust (no pl)",
+              "hinten": "Abscheu, Ekel, Empörung",
+              "zusatz": {
+                "lautschrift": "/dɪsˈgʌst/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "car dealership",
+              "hinten": "Autohaus",
+              "zusatz": {
+                "lautschrift": "/ˈkɑː ˌdiːləʃɪp/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to earn a living",
+              "hinten": "seinen Lebensunterhalt verdienen",
+              "zusatz": {
+                "lautschrift": "/ˌɜːn ə ˈlɪvɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "gas-guzzling (AE)",
+              "hinten": "spritfressend",
+              "zusatz": {
+                "lautschrift": "/ˈgæsˌgʌz(ə)lɪŋ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "tank",
+              "hinten": "(Flüssigkeits)behälter, Tank, hier: Riesenauto",
+              "zusatz": {
+                "lautschrift": "/tæŋk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to be obsessed (with sth) (irr)",
+              "hinten": "(von etw) besessen sein",
+              "zusatz": {
+                "lautschrift": "/ˌbiː əbˈsest wɪð/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to happen to do sth",
+              "hinten": "zufällig etw tun",
+              "zusatz": {
+                "lautschrift": "/ˌhæpən tə ˈduː/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "piggy bank",
+              "hinten": "Sparschwein",
+              "zusatz": {
+                "lautschrift": "/ˈpɪgi bæŋk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to bail on sb (informal)",
+              "hinten": "jdn im Stich lassen",
+              "zusatz": {
+                "lautschrift": "/ˈbeɪl ɒn/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Say it in English – Theme 2",
+          "bidirektional": false,
+          "karten": [
+            {
+              "vorne": "So kannst du über kulturelle Angebote sprechen",
+              "hinten": "The Museum of Liverpool tells the story of the city and its people. · Home to the Beatles and other world-famous musicians, Liverpool also has a vibrant music scene. · Each year on a weekend in August, one of the UK's most popular music festivals takes place in Leeds. · With rock and pop acts, as well as house, drum 'n' bass, metal, techno and more, there is something for everyone! · Manchester does not only have great theatres, but there is also … · Visitors can take a look behind the scenes of … · Sheffield celebrates the best new adventure and documentary films from around the world with an annual festival. · There are exciting events and workshops on film-making throughout the year."
+            },
+            {
+              "vorne": "So kannst du eine Auswahl begründen",
+              "hinten": "I chose … because … · … appeals to me the most because … · It wasn't easy to decide between … and … but I went for … because …"
+            },
+            {
+              "vorne": "So kannst du begründen, welchen Zeitungsartikel du lieber lesen würdest",
+              "hinten": "The article from the quality newspaper/tabloid appeals to me more because … · I'd prefer … because … · Although … looks …, I would choose to read … · … might provide more/better information. · … wouldn't take as long to read. · … the photo is more attractive. · … the headline does/does not interest me."
+            },
+            {
+              "vorne": "So kannst du in einem Zeitungsartikel über Protestaktionen berichten",
+              "hinten": "It has been the third act of protest from the group this week, with two similar protests earlier in the week in London and Glasgow. · Through protest and other forms of direct action, they demand that … · The group launched in … and made headlines in April with … · A video of the protest action was shared on social media and quickly gained millions of views. · The comments on social media were mixed, with some criticizing …, and others praising the form of protest and their message. · … was closed for a short period while the police dealt with the incident and the two men were arrested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Theme 3: The world we live in",
+      "bloecke": [
+        {
+          "name": "Wortliste 1",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "augmented reality (AR) (no pl)",
+              "hinten": "erweiterte Realität (computergestützte Erweiterung der Realitätswahrnehmung)",
+              "beispiel": "Augmented reality allows you to see the world in a different way.",
+              "seite": 70,
+              "zusatz": {
+                "lautschrift": "/ɔːgˌmentɪd riˈæləti, ˌeɪ ˈɑː/"
+              }
+            },
+            {
+              "vorne": "virtual reality (VR) (no pl)",
+              "hinten": "virtuelle Realität",
+              "beispiel": "Virtual reality allows you to experience another world.",
+              "zusatz": {
+                "lautschrift": "/ˌvɜːtʃuəl riˈæləti, ˌviː ˈɑː/"
+              }
+            },
+            {
+              "vorne": "artificial intelligence (AI) (no pl)",
+              "hinten": "künstliche Intelligenz",
+              "beispiel": "Artificial intelligence has become more advanced in the past ten years.",
+              "zusatz": {
+                "lautschrift": "/ˌɑːtɪˌfɪʃ(ə)l ɪnˈtelɪdʒ(ə)ns, ˌeɪ ˈaɪ/"
+              }
+            },
+            {
+              "vorne": "robotics (no pl)",
+              "hinten": "Robotertechnik, Robotik",
+              "beispiel": "Tara made a mini robot at robotics club.",
+              "zusatz": {
+                "lautschrift": "/rəʊˈbɒtɪks/"
+              }
+            },
+            {
+              "vorne": "genetic engineering (no pl)",
+              "hinten": "Gentechnik, Gentechnologie",
+              "beispiel": "In the future, genetic engineering could be used to treat diseases.",
+              "zusatz": {
+                "lautschrift": "/dʒəˌnetɪk ˌendʒɪˈnɪərɪŋ/"
+              }
+            },
+            {
+              "vorne": "3D printing (no pl)",
+              "hinten": "3D-Druck",
+              "beispiel": "Scientists have used 3D printing to make useful tools.",
+              "zusatz": {
+                "lautschrift": "/ˌθriː ˌdiː ˈprɪntɪŋ/"
+              }
+            },
+            {
+              "vorne": "autonomous vehicle",
+              "hinten": "selbstfahrendes Kraftfahrzeug",
+              "beispiel": "Autonomous vehicles don't require a driver.",
+              "zusatz": {
+                "lautschrift": "/ɔːˌtɒnəməs ˈviːɪk(ə)l/"
+              }
+            },
+            {
+              "vorne": "to be involved in sth (irr)",
+              "hinten": "mit etw zu tun haben, hier: von etw gefesselt sein",
+              "beispiel": "Tracy was so involved in reading that she didn't hear the doorbell.",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ɪnˈvɒlvd ɪn/"
+              }
+            },
+            {
+              "vorne": "to be at risk (irr)",
+              "hinten": "einem Risiko ausgesetzt sein",
+              "beispiel": "The house near the lake is at risk of flooding.",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ət ˈrɪsk/"
+              }
+            },
+            {
+              "vorne": "perception (no pl)",
+              "hinten": "Wahrnehmung, Empfinden",
+              "beispiel": "Your perception of the world is affected by your previous experiences.",
+              "zusatz": {
+                "lautschrift": "/pəˈsepʃ(ə)n/",
+                "verwandt": "Frz. perception, Sp. percepción"
+              }
+            },
+            {
+              "vorne": "surroundings (pl)",
+              "hinten": "Umgebung",
+              "beispiel": "Your surroundings are what you see when you look around.",
+              "zusatz": {
+                "lautschrift": "/səˈraʊndɪŋz/"
+              }
+            },
+            {
+              "vorne": "to enhance",
+              "hinten": "verbessern, hervorheben",
+              "beispiel": "Doing exercise and eating well can enhance your quality of life.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈhɑːns/"
+              }
+            },
+            {
+              "vorne": "to immerse",
+              "hinten": "eintauchen, untertauchen",
+              "beispiel": "When learning a language, you should immerse yourself in the culture.",
+              "zusatz": {
+                "lautschrift": "/ɪˈmɜːs/"
+              }
+            },
+            {
+              "vorne": "computer-generated",
+              "hinten": "computeranimiert, computergeneriert",
+              "beispiel": "The images in animated films today are computer-generated.",
+              "zusatz": {
+                "lautschrift": "/kəmˌpjuːtə ˈdʒenəreɪtɪd/"
+              }
+            },
+            {
+              "vorne": "possibility",
+              "hinten": "Möglichkeit",
+              "beispiel": "There are endless possibilities when you are young.",
+              "zusatz": {
+                "lautschrift": "/ˌpɒsəˈbɪləti/"
+              }
+            },
+            {
+              "vorne": "to perform",
+              "hinten": "vorführen, aufführen, auftreten, hier: erledigen",
+              "beispiel": "This AI performs typical office tasks more efficiently than humans.",
+              "zusatz": {
+                "lautschrift": "/pəˈfɔːm/"
+              }
+            },
+            {
+              "vorne": "being",
+              "hinten": "Wesen, (Da)sein",
+              "beispiel": "Intelligent beings are capable of complex actions.",
+              "zusatz": {
+                "lautschrift": "/ˈbiːɪŋ/"
+              }
+            },
+            {
+              "vorne": "to process",
+              "hinten": "verarbeiten",
+              "beispiel": "The information was complicated so it took Gaia a long time to process it.",
+              "zusatz": {
+                "lautschrift": "/ˈprəʊses/"
+              }
+            },
+            {
+              "vorne": "pattern",
+              "hinten": "Muster",
+              "beispiel": "Omar is really good at spotting patterns.",
+              "zusatz": {
+                "lautschrift": "/ˈpætən/"
+              }
+            },
+            {
+              "vorne": "prediction",
+              "hinten": "Vorhersage",
+              "beispiel": "Ivana made a prediction about who would win the game.",
+              "zusatz": {
+                "lautschrift": "/prɪˈdɪkʃ(ə)n/",
+                "verwandt": "Frz. prédiction, Sp. predicción, Lat. praedictiō"
+              }
+            },
+            {
+              "vorne": "to transform",
+              "hinten": "verwandeln",
+              "beispiel": "Robots have transformed the way in which we do things.",
+              "zusatz": {
+                "lautschrift": "/trænsˈfɔːm/"
+              }
+            },
+            {
+              "vorne": "efficiency",
+              "hinten": "Leistungsfähigkeit, Effizienz, Wirksamkeit",
+              "beispiel": "Improving efficiency makes everything easier and quicker.",
+              "zusatz": {
+                "lautschrift": "/ɪˈfɪʃ(ə)nsi/"
+              }
+            },
+            {
+              "vorne": "intervention",
+              "hinten": "Eingreifen",
+              "beispiel": "Without her brother's intervention, Tiva's experiment would not have succeeded.",
+              "zusatz": {
+                "lautschrift": "/ˌɪntəˈvenʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "technological",
+              "hinten": "technologisch",
+              "beispiel": "There has been significant technological development over the last ten years.",
+              "zusatz": {
+                "lautschrift": "/ˌteknəˈlɒdʒɪk(ə)l/"
+              }
+            },
+            {
+              "vorne": "to integrate",
+              "hinten": "(sich) integrieren",
+              "beispiel": "AI should be integrated into schools so that children learn how to use it.",
+              "zusatz": {
+                "lautschrift": "/ˈɪntɪˌgreɪt/"
+              }
+            },
+            {
+              "vorne": "advancement",
+              "hinten": "Fortschritt, Verbesserung, Weiterkommen",
+              "beispiel": "Recent advancements in medicine have saved thousands of lives.",
+              "zusatz": {
+                "lautschrift": "/ədˈvɑːnsmənt/"
+              }
+            },
+            {
+              "vorne": "biotechnology (no pl)",
+              "hinten": "Biotechnologie, Biotechnik",
+              "beispiel": "Researchers in biotechnology are finding out new things about humans.",
+              "zusatz": {
+                "lautschrift": "/ˌbaɪəʊtekˈnɒlədʒi/"
+              }
+            },
+            {
+              "vorne": "to unlock",
+              "hinten": "aufschließen, entsperren, hier: entschlüsseln",
+              "beispiel": "Shuri needed to unlock the secrets to solve the mystery.",
+              "zusatz": {
+                "lautschrift": "/ʌnˈlɒk/"
+              }
+            },
+            {
+              "vorne": "to personalize",
+              "hinten": "auf eine Person beziehen oder ausrichten, persönlicher gestalten",
+              "beispiel": "Usman's bag is personalized; it has his name on it.",
+              "zusatz": {
+                "lautschrift": "/ˈpɜːsənəlaɪz/"
+              }
+            },
+            {
+              "vorne": "prevention (no pl)",
+              "hinten": "Verhinderung, Vermeidung, Vorbeugung",
+              "beispiel": "Biotech innovation can lead to better disease prevention.",
+              "zusatz": {
+                "lautschrift": "/prɪˈvenʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "agriculture (no pl)",
+              "hinten": "Landwirtschaft",
+              "beispiel": "Agriculture is an important industry as it provides food.",
+              "zusatz": {
+                "lautschrift": "/ˈægrɪˌkʌltʃə/"
+              }
+            },
+            {
+              "vorne": "genetic",
+              "hinten": "genetisch, Erb-",
+              "beispiel": "Hair and eye colour are genetic traits.",
+              "zusatz": {
+                "lautschrift": "/dʒəˈnetɪk/"
+              }
+            },
+            {
+              "vorne": "sustainable",
+              "hinten": "nachhaltig, haltbar",
+              "beispiel": "Sustainable living is best for the environment.",
+              "zusatz": {
+                "lautschrift": "/səˈsteɪnəb(ə)l/"
+              }
+            },
+            {
+              "vorne": "to evolve",
+              "hinten": "(sich) entwickeln",
+              "beispiel": "When something evolves, it usually becomes better.",
+              "zusatz": {
+                "lautschrift": "/ɪˈvɒlv/"
+              }
+            },
+            {
+              "vorne": "beyond",
+              "hinten": "jenseits (von), über",
+              "beispiel": "Pandora couldn't see beyond the horizon.",
+              "zusatz": {
+                "lautschrift": "/bɪˈjɒnd/"
+              }
+            },
+            {
+              "vorne": "novelty",
+              "hinten": "Neuheit, Novum",
+              "beispiel": "Novelties are new and exciting but they don't last long.",
+              "zusatz": {
+                "lautschrift": "/ˈnɒv(ə)lti/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 2",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "layer",
+              "hinten": "Schicht, Stufe, Ebene",
+              "beispiel": "Cakes often have lots of layers.",
+              "zusatz": {
+                "lautschrift": "/ˈleɪə/"
+              }
+            },
+            {
+              "vorne": "product",
+              "hinten": "Produkt, Erzeugnis",
+              "beispiel": "That shop sells many different products.",
+              "zusatz": {
+                "lautschrift": "/ˈprɒdʌkt/"
+              }
+            },
+            {
+              "vorne": "production",
+              "hinten": "Produktion(s-), Herstellung(s-)",
+              "beispiel": "The production stage is when a product gets made or built.",
+              "zusatz": {
+                "lautschrift": "/prəˈdʌkʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "transportation (no pl)",
+              "hinten": "Transport(mittel), Verkehrsmittel",
+              "beispiel": "What form of transportation do you use to get to school?",
+              "zusatz": {
+                "lautschrift": "/ˌtrænspɔːˈteɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "traffic (no pl)",
+              "hinten": "Verkehr(s-)",
+              "beispiel": "The bus was late due to heavy traffic.",
+              "zusatz": {
+                "lautschrift": "/ˈtræfɪk/"
+              }
+            },
+            {
+              "vorne": "to adjust (to)",
+              "hinten": "einstellen, anpassen (an)",
+              "beispiel": "When you move house, you have to adjust to a new area.",
+              "zusatz": {
+                "lautschrift": "/əˈdʒʌst tʊ/",
+                "verwandt": "Frz. ajuster, Sp. ajustar"
+              }
+            },
+            {
+              "vorne": "responsibly",
+              "hinten": "verantwortungsbewusst",
+              "beispiel": "Joao acted responsibly and asked a teacher for help.",
+              "zusatz": {
+                "lautschrift": "/rɪˈspɒnsəbli/"
+              }
+            },
+            {
+              "vorne": "promising",
+              "hinten": "vielversprechend",
+              "beispiel": "Next year is looking promising for Aoife, who is starting a new job.",
+              "zusatz": {
+                "lautschrift": "/ˈprɒmɪsɪŋ/"
+              }
+            },
+            {
+              "vorne": "benefit",
+              "hinten": "Nutzen, Vorteil",
+              "beispiel": "There are lots of benefits to eating fruit and vegetables.",
+              "zusatz": {
+                "lautschrift": "/ˈbenɪfɪt/"
+              }
+            },
+            {
+              "vorne": "billboard",
+              "hinten": "Reklamefläche, Reklametafel, Plakatwand",
+              "seite": 72,
+              "zusatz": {
+                "lautschrift": "/ˈbɪlˌbɔːd/"
+              }
+            },
+            {
+              "vorne": "algorithm",
+              "hinten": "Algorithmus",
+              "zusatz": {
+                "lautschrift": "/ˈælgərɪðəm/"
+              }
+            },
+            {
+              "vorne": "ad (= advertisement) (informal)",
+              "hinten": "Werbung, Reklame, Anzeige, Inserat",
+              "beispiel": "Sally never likes it when ads appear on her phone.",
+              "zusatz": {
+                "lautschrift": "/æd, ədˈvɜːtɪsmənt/"
+              }
+            },
+            {
+              "vorne": "advertising (no pl)",
+              "hinten": "Werbung, Reklame, Werbe-",
+              "beispiel": "Companies use advertising to tell people about their products.",
+              "zusatz": {
+                "lautschrift": "/ˈædvəˌtaɪzɪŋ/"
+              }
+            },
+            {
+              "vorne": "framework",
+              "hinten": "Gerüst, Rahmen, hier: Regel(werk)",
+              "zusatz": {
+                "lautschrift": "/ˈfreɪmwɜːk/"
+              }
+            },
+            {
+              "vorne": "to purchase",
+              "hinten": "kaufen, (käuflich) erwerben",
+              "beispiel": "Oisin went into the shop to purchase some shoes.",
+              "zusatz": {
+                "lautschrift": "/ˈpɜːtʃəs/"
+              }
+            },
+            {
+              "vorne": "captivating",
+              "hinten": "faszinierend, bezaubernd, hier: fesselnd",
+              "beispiel": "Captivating images catch people's attention.",
+              "zusatz": {
+                "lautschrift": "/ˈkæptɪˌveɪtɪŋ/"
+              }
+            },
+            {
+              "vorne": "visuals (pl)",
+              "hinten": "Bildmaterial, Bilder",
+              "beispiel": "The music video had good visuals but I didn't like the song.",
+              "zusatz": {
+                "lautschrift": "/ˈvɪʒʊəlz/"
+              }
+            },
+            {
+              "vorne": "font",
+              "hinten": "Schriftart",
+              "beispiel": "Narine's favourite font is Times New Roman.",
+              "zusatz": {
+                "lautschrift": "/fɒnt/"
+              }
+            },
+            {
+              "vorne": "to promote",
+              "hinten": "(be)fördern, aufsteigen, hier: werben (für)",
+              "beispiel": "Companies promote their products because they want people to buy them.",
+              "zusatz": {
+                "lautschrift": "/prəˈməʊt/"
+              }
+            },
+            {
+              "vorne": "brand",
+              "hinten": "Marke(n-)",
+              "beispiel": "People pay more money for well-known brands.",
+              "zusatz": {
+                "lautschrift": "/brænd/"
+              }
+            },
+            {
+              "vorne": "desire",
+              "hinten": "Verlangen, Sehnsucht, Wunsch",
+              "beispiel": "Dov had no desire to go on a run in the rain.",
+              "zusatz": {
+                "lautschrift": "/dɪˈzaɪə/"
+              }
+            },
+            {
+              "vorne": "appeal",
+              "hinten": "Appell, Einspruch, Berufung",
+              "beispiel": "The organisation made an appeal to the audience for support.",
+              "zusatz": {
+                "lautschrift": "/əˈpiːl/"
+              }
+            },
+            {
+              "vorne": "persuasive",
+              "hinten": "überzeugend",
+              "beispiel": "Kata was very persuasive and won the argument.",
+              "zusatz": {
+                "lautschrift": "/pəˈsweɪsɪv/",
+                "verwandt": "Frz. persuasif (-ve), Sp. persuasivo (-va)"
+              }
+            },
+            {
+              "vorne": "to link",
+              "hinten": "verbinden, hier: verlinken",
+              "beispiel": "The company linked their website so everyone could visit it.",
+              "zusatz": {
+                "lautschrift": "/lɪŋk/"
+              }
+            },
+            {
+              "vorne": "trial period",
+              "hinten": "Probezeit, hier: Zeit, in der man etw ausprobieren kann",
+              "zusatz": {
+                "lautschrift": "/ˈtraɪəl ˌpɪəriəd/"
+              }
+            },
+            {
+              "vorne": "purchase",
+              "hinten": "Kauf, Ankauf, Einkauf",
+              "beispiel": "After a day of shopping, Fatimah came home with many purchases.",
+              "zusatz": {
+                "lautschrift": "/ˈpɜːtʃəs/"
+              }
+            },
+            {
+              "vorne": "consumer",
+              "hinten": "Verbraucher/in, Konsument/in",
+              "beispiel": "Consumers are the people who buy a company's products.",
+              "zusatz": {
+                "lautschrift": "/kənˈsjuːmə/"
+              }
+            },
+            {
+              "vorne": "loyalty",
+              "hinten": "Treue, Loyalität",
+              "beispiel": "Loyalty is an important part of any relationship.",
+              "zusatz": {
+                "lautschrift": "/ˈlɔɪəlti/"
+              }
+            },
+            {
+              "vorne": "advocacy (no pl)",
+              "hinten": "Fürsprache, Befürwortung, Eintreten",
+              "zusatz": {
+                "lautschrift": "/ˈædvəkəsi/"
+              }
+            },
+            {
+              "vorne": "delivery",
+              "hinten": "Lieferung, Zustellung",
+              "beispiel": "Fata doesn't buy anything online unless there's next-day delivery.",
+              "zusatz": {
+                "lautschrift": "/dɪˈlɪv(ə)ri/"
+              }
+            },
+            {
+              "vorne": "discount",
+              "hinten": "Rabatt, Preisnachlass, Abschlag",
+              "beispiel": "Discounts encourage people to buy things.",
+              "zusatz": {
+                "lautschrift": "/ˈdɪsˌkaʊnt/"
+              }
+            },
+            {
+              "vorne": "to encourage",
+              "hinten": "ermutigen, ermuntern, fördern",
+              "beispiel": "Sophie encouraged her friends to join in.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈkʌrɪdʒ/"
+              }
+            },
+            {
+              "vorne": "to employ",
+              "hinten": "beschäftigen, einstellen, einsetzen",
+              "beispiel": "If you employ the right technique, you will succeed.",
+              "zusatz": {
+                "lautschrift": "/ɪmˈplɔɪ/"
+              }
+            },
+            {
+              "vorne": "to capture",
+              "hinten": "gefangen nehmen, festnehmen, hier: erregen",
+              "beispiel": "Fiona captured everyone's attention in her bright dress.",
+              "zusatz": {
+                "lautschrift": "/ˈkæptʃə/"
+              }
+            },
+            {
+              "vorne": "opposite",
+              "hinten": "Gegenteil, gegensätzlich, gegenüber(liegend)",
+              "beispiel": "Tall is the opposite of small.",
+              "seite": 74,
+              "zusatz": {
+                "lautschrift": "/ˈɒpəzɪt/"
+              }
+            },
+            {
+              "vorne": "convenience (no pl)",
+              "hinten": "Zweckmäßigkeit, Annehmlichkeit",
+              "beispiel": "It was a convenience to have a shop at the end of the road.",
+              "zusatz": {
+                "lautschrift": "/kənˈviːniəns/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 3",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "concern",
+              "hinten": "Anliegen, Sorge, Besorgnis",
+              "beispiel": "Anna's main concern was completing the project on time.",
+              "zusatz": {
+                "lautschrift": "/kənˈsɜːn/"
+              }
+            },
+            {
+              "vorne": "integral",
+              "hinten": "wesentlich",
+              "zusatz": {
+                "lautschrift": "/ˈɪntɪgrəl, ɪnˈtegrəl/"
+              }
+            },
+            {
+              "vorne": "to tailor",
+              "hinten": "(zu)schneiden, abstimmen",
+              "zusatz": {
+                "lautschrift": "/ˈteɪlə/"
+              }
+            },
+            {
+              "vorne": "preference",
+              "hinten": "Vorliebe, Vorzug, Priorität",
+              "beispiel": "Maya's preference is apples not oranges.",
+              "zusatz": {
+                "lautschrift": "/ˈpref(ə)rəns/"
+              }
+            },
+            {
+              "vorne": "advert (BE) (= advertisement)",
+              "hinten": "Anzeige, Inserat, Werbespot",
+              "beispiel": "There are lots of adverts for hair care on TV.",
+              "zusatz": {
+                "lautschrift": "/ˈædvɜːt, ədˈvɜːtɪsmənt/"
+              }
+            },
+            {
+              "vorne": "privacy (no pl)",
+              "hinten": "Privatsphäre, Intimsphäre",
+              "beispiel": "Privacy settings help protect our personal data.",
+              "zusatz": {
+                "lautschrift": "/ˈprɪvəsi, ˈpraɪvəsi/"
+              }
+            },
+            {
+              "vorne": "to utilize",
+              "hinten": "nutzen",
+              "zusatz": {
+                "lautschrift": "/ˈjuːtɪlaɪz/"
+              }
+            },
+            {
+              "vorne": "data",
+              "hinten": "Daten",
+              "zusatz": {
+                "lautschrift": "/ˈdeɪtə/"
+              }
+            },
+            {
+              "vorne": "targeted",
+              "hinten": "(ziel)gerichtet",
+              "zusatz": {
+                "lautschrift": "/ˈtɑːgɪtɪd/"
+              }
+            },
+            {
+              "vorne": "overload (no pl)",
+              "hinten": "Überlast(ung), Überladung, Überangebot",
+              "zusatz": {
+                "lautschrift": "/ˈəʊvələʊd/"
+              }
+            },
+            {
+              "vorne": "for instance",
+              "hinten": "zum Beispiel",
+              "zusatz": {
+                "lautschrift": "/fər ˈɪnstəns/"
+              }
+            },
+            {
+              "vorne": "to avoid",
+              "hinten": "(ver)meiden, ausweichen",
+              "beispiel": "Tulla tries to avoid buying what she sees in ads.",
+              "zusatz": {
+                "lautschrift": "/əˈvɔɪd/"
+              }
+            },
+            {
+              "vorne": "extensive",
+              "hinten": "weit(reichend), umfangreich, umfassend",
+              "beispiel": "Asaf has extensive knowledge on that topic.",
+              "zusatz": {
+                "lautschrift": "/ɪkˈstensɪv/"
+              }
+            },
+            {
+              "vorne": "cart",
+              "hinten": "(Einkaufs)wagen, Karren",
+              "beispiel": "I added a pair of trousers to my online cart.",
+              "zusatz": {
+                "lautschrift": "/kɑːt/"
+              }
+            },
+            {
+              "vorne": "undeniably",
+              "hinten": "unbestreitbar",
+              "zusatz": {
+                "lautschrift": "/ˌʌndɪˈnaɪəbli/"
+              }
+            },
+            {
+              "vorne": "by contrast",
+              "hinten": "im Gegensatz, dagegen",
+              "beispiel": "Ahmet loves dancing. Anna, by contrast, hates it.",
+              "zusatz": {
+                "lautschrift": "/ˌbaɪ ˈkɒntrɑːst/"
+              }
+            },
+            {
+              "vorne": "opponent",
+              "hinten": "Gegner/in",
+              "zusatz": {
+                "lautschrift": "/əˈpəʊnənt/"
+              }
+            },
+            {
+              "vorne": "to miss out",
+              "hinten": "verpassen, sich entgehen lassen",
+              "zusatz": {
+                "lautschrift": "/ˌmɪs ˈaʊt/"
+              }
+            },
+            {
+              "vorne": "to expose",
+              "hinten": "freilegen, aussetzen, offenbaren",
+              "beispiel": "Consumers are constantly exposed to advertisements.",
+              "zusatz": {
+                "lautschrift": "/ɪkˈspəʊz/"
+              }
+            },
+            {
+              "vorne": "convenient",
+              "hinten": "praktisch, günstig, bequem",
+              "beispiel": "Next-day delivery is very convenient.",
+              "zusatz": {
+                "lautschrift": "/kənˈviːniənt/"
+              }
+            },
+            {
+              "vorne": "to be in favour of sth (irr)",
+              "hinten": "für etw sein, etw befürworten",
+              "beispiel": "Lara is in favour of school ending an hour earlier.",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ɪn ˈfeɪv(ə)r əv/"
+              }
+            },
+            {
+              "vorne": "to appreciate",
+              "hinten": "schätzen, zu schätzen wissen",
+              "beispiel": "Shuba appreciates it when people are nice to her.",
+              "zusatz": {
+                "lautschrift": "/əˈpriːʃiˌeɪt/"
+              }
+            },
+            {
+              "vorne": "specifically",
+              "hinten": "speziell, ausdrücklich",
+              "beispiel": "Malik wanted ice cream, specifically chocolate.",
+              "zusatz": {
+                "lautschrift": "/spəˈsɪfɪkli/"
+              }
+            },
+            {
+              "vorne": "psychological",
+              "hinten": "psychisch, seelisch",
+              "zusatz": {
+                "lautschrift": "/ˌsaɪkəˈlɒdʒɪk(ə)l/"
+              }
+            },
+            {
+              "vorne": "connection",
+              "hinten": "Verbindung, Beziehung, Zusammenhang, hier: Verbundenheit",
+              "beispiel": "Nushi felt a connection to the character in the story.",
+              "zusatz": {
+                "lautschrift": "/kəˈnekʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "bond",
+              "hinten": "Bindung",
+              "zusatz": {
+                "lautschrift": "/bɒnd/"
+              }
+            },
+            {
+              "vorne": "effort",
+              "hinten": "Mühe, Anstrengung, Bemühung",
+              "beispiel": "It took a lot of effort for Maria to climb the hill.",
+              "zusatz": {
+                "lautschrift": "/ˈefət/"
+              }
+            },
+            {
+              "vorne": "history",
+              "hinten": "Geschichte, hier: Verlauf",
+              "beispiel": "Abed deleted his search history to get cheaper flights.",
+              "zusatz": {
+                "lautschrift": "/ˈhɪst(ə)ri/",
+                "verwandt": "Frz. histoire, Sp. historia, Lat. historia"
+              }
+            },
+            {
+              "vorne": "to engage with sth",
+              "hinten": "auf etw eingehen, sich mit etw beschäftigen",
+              "zusatz": {
+                "lautschrift": "/ɪnˈgeɪdʒ wɪð/"
+              }
+            },
+            {
+              "vorne": "in exchange for",
+              "hinten": "dafür, im Gegenzug, im Austausch für",
+              "zusatz": {
+                "lautschrift": "/ɪn ɪksˈtʃeɪndʒ fɔː/"
+              }
+            },
+            {
+              "vorne": "questionable",
+              "hinten": "fraglich, zweifelhaft, bedenklich",
+              "zusatz": {
+                "lautschrift": "/ˈkwestʃənəb(ə)l/"
+              }
+            },
+            {
+              "vorne": "to maintain",
+              "hinten": "(bei)behalten, (be)wahren, aufrechterhalten, hier: beteuern",
+              "beispiel": "Doctors maintain that people shouldn't sit around all day.",
+              "zusatz": {
+                "lautschrift": "/meɪnˈteɪn/"
+              }
+            },
+            {
+              "vorne": "insight",
+              "hinten": "Einsicht, Einblick",
+              "zusatz": {
+                "lautschrift": "/ˈɪnsaɪt/"
+              }
+            },
+            {
+              "vorne": "to determine",
+              "hinten": "entscheiden, ermitteln, bestimmen",
+              "beispiel": "Lana couldn't determine which was the right way to go.",
+              "zusatz": {
+                "lautschrift": "/dɪˈtɜːmɪn/"
+              }
+            },
+            {
+              "vorne": "beneficial",
+              "hinten": "nützlich, vorteilhaft",
+              "zusatz": {
+                "lautschrift": "/ˌbenɪˈfɪʃ(ə)l/"
+              }
+            },
+            {
+              "vorne": "fast-paced",
+              "hinten": "temporeich, tempogeladen",
+              "zusatz": {
+                "lautschrift": "/ˌfɑːst ˈpeɪst/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wortliste 4",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "to review",
+              "hinten": "(erneut) (über)prüfen",
+              "zusatz": {
+                "lautschrift": "/rɪˈvjuː/"
+              }
+            },
+            {
+              "vorne": "moreover",
+              "hinten": "überdies, zudem, ferner",
+              "zusatz": {
+                "lautschrift": "/mɔːrˈəʊvə/"
+              }
+            },
+            {
+              "vorne": "confusing",
+              "hinten": "verwirrend",
+              "beispiel": "New games are confusing if you don't know the rules.",
+              "zusatz": {
+                "lautschrift": "/kənˈfjuːzɪŋ/"
+              }
+            },
+            {
+              "vorne": "to intend",
+              "hinten": "beabsichtigen",
+              "beispiel": "Sayeh did not intend to go the wrong way.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈtend/"
+              }
+            },
+            {
+              "vorne": "to leak",
+              "hinten": "verlieren, austreten lassen, durchsickern",
+              "zusatz": {
+                "lautschrift": "/liːk/"
+              }
+            },
+            {
+              "vorne": "risk",
+              "hinten": "Risiko",
+              "beispiel": "There are risks to giving out personal information.",
+              "zusatz": {
+                "lautschrift": "/rɪsk/",
+                "verwandt": "Frz. risque, Sp. riesgo"
+              }
+            },
+            {
+              "vorne": "unauthorized",
+              "hinten": "nicht autorisiert, unerlaubt, unbefugt",
+              "zusatz": {
+                "lautschrift": "/ʌnˈɔːθəraɪzd/"
+              }
+            },
+            {
+              "vorne": "consumerism (no pl)",
+              "hinten": "Konsumdenken",
+              "zusatz": {
+                "lautschrift": "/kənˈsjuːməˌrɪz(ə)m/"
+              }
+            },
+            {
+              "vorne": "unsustainable",
+              "hinten": "umweltschädigend, nicht aufrechtzuerhalten",
+              "beispiel": "Cutting down lots of trees is unsustainable.",
+              "zusatz": {
+                "lautschrift": "/ˌʌnsəˈsteɪnəbl/"
+              }
+            },
+            {
+              "vorne": "human rights (pl)",
+              "hinten": "Menschenrechte",
+              "beispiel": "Human rights are the same for all people, whatever their beliefs, ethnic group or gender.",
+              "seite": 80,
+              "zusatz": {
+                "lautschrift": "/ˌhjuːmən ˈraɪts/"
+              }
+            },
+            {
+              "vorne": "healthcare (no pl)",
+              "hinten": "Gesundheitsversorgung, Gesundheitsfürsorge",
+              "zusatz": {
+                "lautschrift": "/ˈhelθ ˌkeə/"
+              }
+            },
+            {
+              "vorne": "tone",
+              "hinten": "Klang, Ton, hier: Stimmung",
+              "beispiel": "The author's humorous tone made the novel very entertaining.",
+              "zusatz": {
+                "lautschrift": "/təʊn/"
+              }
+            },
+            {
+              "vorne": "tragicomedy",
+              "hinten": "Tragikomödie",
+              "beispiel": "A tragicomedy has both happy and sad parts.",
+              "zusatz": {
+                "lautschrift": "/ˌtrædʒiˈkɒmədi/"
+              }
+            },
+            {
+              "vorne": "fictional",
+              "hinten": "erfunden, fiktiv",
+              "beispiel": "That novel is set in a fictional world where magical creatures exist.",
+              "zusatz": {
+                "lautschrift": "/ˈfɪkʃ(ə)nəl/"
+              }
+            },
+            {
+              "vorne": "tension",
+              "hinten": "(An)spannung, Spannungen",
+              "beispiel": "The tension in the room made everyone feel uncomfortable.",
+              "seite": 82,
+              "zusatz": {
+                "lautschrift": "/ˈtenʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "climax",
+              "hinten": "Höhepunkt",
+              "beispiel": "There's a huge plot twist at the climax of the book.",
+              "zusatz": {
+                "lautschrift": "/ˈklaɪmæks/"
+              }
+            },
+            {
+              "vorne": "turning point",
+              "hinten": "Wendepunkt",
+              "beispiel": "At the turning point, the main character changed sides.",
+              "zusatz": {
+                "lautschrift": "/ˈtɜːnɪŋ pɔɪnt/"
+              }
+            },
+            {
+              "vorne": "to advance",
+              "hinten": "sich vorwärtsbewegen, näherkommen",
+              "beispiel": "The plot advanced even after the main character died.",
+              "zusatz": {
+                "lautschrift": "/ədˈvɑːns/"
+              }
+            },
+            {
+              "vorne": "personality",
+              "hinten": "Persönlichkeit, Charakter",
+              "beispiel": "The main character has a friendly personality.",
+              "zusatz": {
+                "lautschrift": "/ˌpɜːsəˈnæləti/"
+              }
+            },
+            {
+              "vorne": "intensity",
+              "hinten": "Stärke, Intensität, Heftigkeit",
+              "beispiel": "The characters raised their voices, increasing the intensity of the scene.",
+              "zusatz": {
+                "lautschrift": "/ɪnˈtensəti/"
+              }
+            },
+            {
+              "vorne": "peak",
+              "hinten": "Gipfel, (Berg)spitze, Höhepunkt",
+              "beispiel": "The story reaches its peak when the two characters have a fight.",
+              "zusatz": {
+                "lautschrift": "/piːk/"
+              }
+            },
+            {
+              "vorne": "dynamics (pl)",
+              "hinten": "Dynamik",
+              "beispiel": "The character dynamics changed after they found out Ally's secret.",
+              "zusatz": {
+                "lautschrift": "/daɪˈnæmɪks/"
+              }
+            },
+            {
+              "vorne": "reference",
+              "hinten": "Verweis, Anspielung, Bezugnahme",
+              "beispiel": "In this scene, there are references to the past.",
+              "seite": 83,
+              "zusatz": {
+                "lautschrift": "/ˈref(ə)rəns/"
+              }
+            },
+            {
+              "vorne": "reasonable",
+              "hinten": "vernünftig, einsichtig, hier: plausibel",
+              "beispiel": "Safa gave a reasonable explanation as to why she wasn't at school.",
+              "zusatz": {
+                "lautschrift": "/ˈriːz(ə)nəbl/"
+              }
+            },
+            {
+              "vorne": "platform",
+              "hinten": "Plattform, Bahnsteig, Gleis",
+              "zusatz": {
+                "lautschrift": "/ˈplætˌfɔːm/"
+              }
+            },
+            {
+              "vorne": "trait",
+              "hinten": "Eigenschaft",
+              "beispiel": "Harry's loyalty is a character trait which makes him a great friend.",
+              "zusatz": {
+                "lautschrift": "/treɪt/"
+              }
+            },
+            {
+              "vorne": "encounter",
+              "hinten": "Begegnung",
+              "beispiel": "Sara had an encounter with an angry man this morning.",
+              "seite": 85,
+              "zusatz": {
+                "lautschrift": "/ɪnˈkaʊntə/"
+              }
+            },
+            {
+              "vorne": "exaggeration",
+              "hinten": "Übertreibung",
+              "beispiel": "It was an exaggeration that the fish was as long as Mica's leg.",
+              "zusatz": {
+                "lautschrift": "/ɪgˌzædʒəˈreɪʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "misunderstanding",
+              "hinten": "Missverständnis, Meinungsverschiedenheit",
+              "beispiel": "There was a misunderstanding and Wura was given the wrong meal.",
+              "zusatz": {
+                "lautschrift": "/ˌmɪsʌndəˈstændɪŋ/"
+              }
+            },
+            {
+              "vorne": "stage direction",
+              "hinten": "Bühnenanweisung",
+              "beispiel": "Stage directions help actors with their performance.",
+              "zusatz": {
+                "lautschrift": "/ˈsteɪdʒ dɪˌrekʃ(ə)n/"
+              }
+            },
+            {
+              "vorne": "playwright",
+              "hinten": "Dramatiker/in",
+              "beispiel": "Shakespeare is a very famous playwright.",
+              "zusatz": {
+                "lautschrift": "/ˈpleɪˌraɪt/"
+              }
+            },
+            {
+              "vorne": "prop",
+              "hinten": "Requisit (für eine Theater- oder Filmszene verwendeter Gegenstand)",
+              "beispiel": "Props can make plays feel more real.",
+              "zusatz": {
+                "lautschrift": "/prɒp/"
+              }
+            },
+            {
+              "vorne": "to serve",
+              "hinten": "servieren, dienen",
+              "beispiel": "What purpose does this object serve?",
+              "seite": 86,
+              "zusatz": {
+                "lautschrift": "/sɜːv/"
+              }
+            },
+            {
+              "vorne": "to post",
+              "hinten": "posten (einen Beitrag/Artikel online stellen), hier: (per Post) schicken",
+              "beispiel": "Nonye posted a letter to her friend in Fiji.",
+              "zusatz": {
+                "lautschrift": "/pəʊst/"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Textwortschatz S. 76",
+          "bidirektional": true,
+          "karten": [
+            {
+              "vorne": "inevitable",
+              "hinten": "unvermeidlich",
+              "seite": 76,
+              "zusatz": {
+                "lautschrift": "/ɪnˈevɪtəb(ə)l/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "ubiquitous",
+              "hinten": "allgegenwärtig",
+              "zusatz": {
+                "lautschrift": "/juːˈbɪkwɪtəs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "sophisticated",
+              "hinten": "hoch entwickelt, ausgeklügelt, kultiviert",
+              "zusatz": {
+                "lautschrift": "/səˈfɪstɪkeɪtɪd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "pushback (no pl)",
+              "hinten": "Widerstand, Gegenwind",
+              "zusatz": {
+                "lautschrift": "/ˈpʊʃbæk/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "prevalent",
+              "hinten": "vorherrschend, weitverbreitet",
+              "zusatz": {
+                "lautschrift": "/ˈprevələnt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "invisible",
+              "hinten": "unsichtbar",
+              "zusatz": {
+                "lautschrift": "/ɪnˈvɪzəb(ə)l/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "insidious",
+              "hinten": "heimtückisch, schleichend",
+              "zusatz": {
+                "lautschrift": "/ɪnˈsɪdiəs/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "consent (no pl)",
+              "hinten": "Zustimmung, Einwilligung",
+              "zusatz": {
+                "lautschrift": "/kənˈsent/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to captivate",
+              "hinten": "faszinieren, in seinen Bann ziehen",
+              "zusatz": {
+                "lautschrift": "/ˈkæptɪveɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "facial detection (no pl)",
+              "hinten": "Gesichtserkennung",
+              "zusatz": {
+                "lautschrift": "/ˌfeɪʃ(ə)l dɪˈtekʃ(ə)n/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to bother",
+              "hinten": "beunruhigen, stören",
+              "zusatz": {
+                "lautschrift": "/ˈbɒðə/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "mind",
+              "hinten": "Geist, Verstand, Kopf",
+              "zusatz": {
+                "lautschrift": "/maɪnd/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to be at the mercy of sb (irr)",
+              "hinten": "jdm auf Gedeih und Verderb ausgeliefert sein",
+              "zusatz": {
+                "lautschrift": "/ˌbiː ət ðə ˈmɜːsi əv/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "surveillance (no pl)",
+              "hinten": "Überwachung, Kontrolle",
+              "zusatz": {
+                "lautschrift": "/səˈveɪləns/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "adtech, ad-tech (no pl)",
+              "hinten": "Verwendung von Technologie für digitale Werbung",
+              "zusatz": {
+                "lautschrift": "/ˈædtek/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to pollute",
+              "hinten": "verschmutzen",
+              "zusatz": {
+                "lautschrift": "/pəˈluːt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "billion",
+              "hinten": "Milliarde",
+              "zusatz": {
+                "lautschrift": "/ˈbɪljən/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "authority",
+              "hinten": "Autorität, Befugnis, Behörde",
+              "zusatz": {
+                "lautschrift": "/ɔːˈθɒrəti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "to investigate",
+              "hinten": "untersuchen, nachgehen",
+              "zusatz": {
+                "lautschrift": "/ɪnˈvestɪgeɪt/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "ASA (= Advertising Standards Authority)",
+              "hinten": "Behörde zur Überwachung der Werbung in Großbritannien",
+              "zusatz": {
+                "lautschrift": "/ˌeɪ es ˈeɪ, ˌædvəˌtaɪzɪŋ ˌstændədz ɔːˈθɒrəti/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "pledge",
+              "hinten": "Versprechen, Zusicherung",
+              "zusatz": {
+                "lautschrift": "/pledʒ/",
+                "markierung": "°"
+              }
+            },
+            {
+              "vorne": "scrutiny (no pl)",
+              "hinten": "(genaue Über)prüfung, Untersuchung",
+              "zusatz": {
+                "lautschrift": "/ˈskruːtəni/",
+                "markierung": "°"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Say it in English – Theme 3",
+          "bidirektional": false,
+          "karten": [
+            {
+              "vorne": "So kannst du über technologische Entwicklungen sprechen",
+              "hinten": "Technology has become an integral part of our lives, revolutionizing the way we live, work and interact with the world and with each other. · Augmented reality (AR) and virtual reality (VR) are redefining our perception of the world. From gaming and entertainment to education and healthcare, AR and VR are creating new possibilities. · Unlike humans, AI can process vast amounts of data at incredible speed. This ability allows AI systems to quickly identify patterns, make predictions and provide insights. · The rise of robotics is transforming industries by enhancing efficiency and minimizing human intervention in dangerous environments. · In the fields of biotechnology and genetic engineering, scientists are unlocking secrets of our DNA, leading to breakthroughs in personalized medicine, disease prevention, and agriculture. · 3D printing has evolved beyond a novelty to a transformative technology. Three-dimensional objects can be created layer by layer, with applications ranging from manufacturing and healthcare to construction and aerospace. · The development of autonomous vehicles will most likely revolutionize transportation."
+            },
+            {
+              "vorne": "So kannst du Argumente anführen",
+              "hinten": "Supporters of personalized advertising argue that it improves user experience. · It is also often said that you can even save money through discounts. · Another argument in favour of personalized advertising is the idea that customers feel more appreciated when they see an advertisement that seems specifically targeted towards them. · Receiving discounts on products you would have bought anyway is undeniably a benefit. · Most companies maintain that they offer clear insight into which data is collected and how it is used."
+            },
+            {
+              "vorne": "So kannst du Argumente abwägen und gegenüberstellen",
+              "hinten": "By contrast, opponents of personalized advertising claim that you might miss out on other products because you are only exposed to companies that fit your preferences. · Still, some people disagree with this because, from their perspective, seeing ads everywhere that are based on their browser history can be scary. · However, those privacy controls might not always be as beneficial as they seem. · While companies argue that users have full control over their data, many customers fear their personal data gets leaked. · On the one hand, personalized advertising definitely has its advantages, but on the other hand, it also comes with risks that should not be ignored."
+            },
+            {
+              "vorne": "So kannst du Beispiele nennen",
+              "hinten": "For instance, this also means you save time by avoiding extensive research for a specific product. · For example, by receiving offers via email for products left in your online cart. · In other words, those recommendations might not be as convenient as they seem to begin with. · From a psychological perspective, this is supposed to create a sense of connection, an emotional bond, mainly because it gives the impression the company is putting in an effort to understand their customers. · Giving away so much of your data in exchange for a small advantage, such as a 5% discount, seems questionable to many. · To give an example, privacy controls are often hidden in the settings and difficult to find. · That is to say, no matter what your privacy settings, there is always a risk that unauthorized individuals or companies could gain access to your data."
+            },
+            {
+              "vorne": "So kannst du über den Schauplatz einer Szene sprechen",
+              "hinten": "It seems likely that the scene is set in … because of the references to … · It's reasonable to assume that the scene is set in … · Nina's obsession with social media platforms like … suggest that the scene takes place in …"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
