@@ -11,6 +11,15 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    ignore:
+      # GitPython bewusst zurueckgehalten. python-semantic-release 10.6.1 liest
+      # `git.Actor.name_email_regex`; GitPython hat das Attribut in 3.1.59
+      # entfernt, `semantic-release version` bricht danach schon beim Laden der
+      # Config ab. 10.6.1 ist die neueste PSR-Version -- es gibt kein Update, auf
+      # das man warten koennte. Der Pin in requirements-release.txt IST der Fix,
+      # kein veralteter Zopf. Ohne diese Sperre schlaegt Dependabot ihn monatlich
+      # zur Anhebung vor; wer zugreift, legt das Release lahm.
+      - dependency-name: GitPython
     groups:
       python-deps-minor-patch:
         patterns: ["*"]
