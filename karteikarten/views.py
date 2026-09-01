@@ -14,7 +14,7 @@ from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.db.models import Count, Max
+from django.db.models import Max
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 
