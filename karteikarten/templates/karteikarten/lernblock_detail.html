@@ -117,4 +117,63 @@
     </a>
     {% endif %}
 </div>
+
+<!-- Offline -->
+<h6 class="mt-4 mb-3"><i class="bi bi-cloud-offline me-2"></i>Offline</h6>
+
+<div class="d-flex gap-2 flex-wrap align-items-center">
+    <button id="offline-laden" class="btn btn-outline-info" data-id="{{ lernblock.pk }}" disabled>
+        <i class="bi bi-download me-1"></i>Für offline laden
+    </button>
+    <a href="{% url 'lernen_offline' %}" class="btn btn-link">Offline-Modus öffnen</a>
+</div>
+<p id="offline-hinweis" class="text-muted small mt-2 mb-0"></p>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% url 'js_db' %}"></script>
+<script src="{% url 'js_sync' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    const btn = document.getElementById('offline-laden');
+    const hinweis = document.getElementById('offline-hinweis');
+    const blockId = parseInt(btn.dataset.id);
+
+    async function zeichne() {
+        const vorhanden = await window.karteikartenDB.getLernblock(blockId);
+        if (vorhanden) {
+            const karten = await window.karteikartenDB.getKartenByLernblock(blockId);
+            btn.disabled = true;
+            btn.innerHTML = '<i class="bi bi-check-lg me-1"></i>Auf dem Gerät';
+            hinweis.textContent = `${karten.length} Karten liegen lokal — im Offline-Modus lernbar, auch ohne Verbindung.`;
+        } else if (navigator.onLine) {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="bi bi-download me-1"></i>Für offline laden';
+            hinweis.textContent = 'Holt diesen Lernblock auf das Gerät.';
+        } else {
+            btn.disabled = true;
+            hinweis.textContent = 'Zum Herunterladen brauchst du eine Verbindung.';
+        }
+    }
+
+    btn.addEventListener('click', async () => {
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Lade...';
+        try {
+            const ergebnis = await window.karteikartenSync.downloadBloecke([blockId]);
+            await zeichne();
+            window.karteikartenSync.showStatus('online', `${ergebnis.karten} Karten sind jetzt offline verfügbar`);
+        } catch (error) {
+            console.error('Download fehlgeschlagen:', error);
+            hinweis.textContent = 'Download fehlgeschlagen.';
+            btn.disabled = false;
+            btn.innerHTML = '<i class="bi bi-download me-1"></i>Für offline laden';
+        }
+    });
+
+    window.addEventListener('online', zeichne);
+    window.addEventListener('offline', zeichne);
+    await zeichne();
+});
+</script>
 {% endblock %}

@@ -1,20 +1,38 @@
-const CACHE_NAME = 'karteikarten-v2';
-const STATIC_ASSETS = [
+const CACHE_NAME = 'karteikarten-v3';
+
+// Eigene Seiten und Skripte: die muessen liegen, sonst gibt es keinen Offline-Betrieb.
+const EIGENE_ASSETS = [
     '/',
     '/lernen/offline/',
     '/js/db.js',
     '/js/sync.js',
-    '/js/offline-learning.js',
+    '/js/offline-learning.js'
+];
+
+// Bootstrap kommt vom CDN. Frueher steckte es mit im selben addAll() -- und weil
+// addAll atomar ist, riss ein einziger fehlschlagender CDN-Request die komplette
+// Installation mit sich, also den ganzen Offline-Betrieb. Jetzt wird jede
+// CDN-Datei einzeln versucht und ein Fehlschlag nur notiert.
+const CDN_ASSETS = [
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
     'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
 ];
 
+const STATIC_ASSETS = EIGENE_ASSETS.concat(CDN_ASSETS);
+
 // Install: Cache static assets
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(STATIC_ASSETS))
+            .then(async cache => {
+                await cache.addAll(EIGENE_ASSETS);
+                await Promise.all(CDN_ASSETS.map(url =>
+                    cache.add(url).catch(err =>
+                        console.warn('CDN-Asset nicht vorab gecacht:', url, err)
+                    )
+                ));
+            })
             .then(() => self.skipWaiting())
     );
 });
@@ -73,8 +91,12 @@ self.addEventListener('fetch', event => {
         return;
     }
 
-    // Handle static assets - Cache first, fallback to network
-    if (STATIC_ASSETS.some(asset => url.pathname === asset || url.href === asset)) {
+    // Handle static assets - Cache first, fallback to network.
+    // Der ganze CDN-Host zaehlt dazu, nicht nur die drei vorab gecachten Dateien:
+    // bootstrap-icons.css laedt seine Schriftdateien nach, und ohne die zeigt die
+    // App offline nur leere Kaesten statt Symbole.
+    const istCdnAsset = url.origin === 'https://cdn.jsdelivr.net';
+    if (istCdnAsset || STATIC_ASSETS.some(asset => url.pathname === asset || url.href === asset)) {
         event.respondWith(
             caches.match(event.request)
                 .then(cached => {
