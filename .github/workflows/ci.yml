@@ -24,4 +24,4 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: config.settings
           SECRET_KEY: ci-secret-key-not-for-production
-        run: make check
+        run: make dod

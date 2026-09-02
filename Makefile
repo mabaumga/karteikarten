@@ -42,10 +42,31 @@ lint: ## Linting + Format-Pruefung (im Gate)
 format: ## Formatierung anwenden
 	$(PYTHON) -m ruff format .
 
-check: ## Quality-Gate: Django System-Checks + Lint + Tests
+format-check:  ## Formatierung pruefen, ohne zu aendern
+	$(PYTHON) -m ruff format --check .
+
+migrations-check: ## Fehlende Migrationen aufdecken
+	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py makemigrations --check --dry-run
+
+# DAS Qualitaetsgate — einziger Einstiegspunkt fuer lokale Hooks UND die CI.
+#
+# CI und pre-push-Hook riefen hier schon dasselbe Ziel — das war bereits richtig.
+# Es fehlten aber zwei Pruefungen, und zwar auf beiden Seiten gleichzeitig:
+# `ruff format --check` und die Vollstaendigkeit der Migrationen. Ein geaendertes
+# Modell ohne Migration waere nirgends aufgefallen.
+#
+# Das Ziel heisst jetzt `dod`, weil die Flotte diesen Namen fuehrt (CLAUDE.md,
+# STACK.md, Skills); `check` bleibt als Alias.
+#
+# Siehe software/L0-entwicklungsphilosophie, Abschnitt Qualitaets-Gate.
+dod: ## Definition of Done — DAS Gate (CI == lokal)
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
 	$(MAKE) lint
+	$(MAKE) format-check
+	$(MAKE) migrations-check
 	$(MAKE) test
+
+check: dod ## Alias, weil der Name in Doku und Fingern verankert ist
 
 release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
 	gh workflow run release.yml

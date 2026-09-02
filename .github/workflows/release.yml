@@ -36,7 +36,7 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: config.settings
           SECRET_KEY: ci-secret-key-not-for-production
-        run: make check
+        run: make dod
 
       - name: python-semantic-release installieren
         # Gepinnt ueber requirements-release.txt — ein blankes
