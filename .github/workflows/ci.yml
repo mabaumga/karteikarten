@@ -25,3 +25,79 @@ jobs:
           DJANGO_SETTINGS_MODULE: config.settings
           SECRET_KEY: ci-secret-key-not-for-production
         run: make dod
+
+  automerge:
+    name: Dependabot zusammenfuehren
+    # An den Sammel-Job, nicht an die Teststufe: `quality-gate` haengt an allen
+    # anderen. Wer nur die Tests nennt, merged einen PR, dessen Image-Rauchtest
+    # gescheitert ist.
+    needs: quality-gate
+    if: github.event_name == 'pull_request' && github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    # Der voreingestellte Token ist bei Dependabot-PRs nur lesend. Diese beiden
+    # Rechte hebt der Block wieder an — mehr *kann* er nicht anheben, siehe
+    # unten bei den Actions.
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Was fuer ein Update ist das?
+        id: art
+        uses: dependabot/fetch-metadata@v2
+
+      # **Warum nicht `--auto`.** GitHubs Auto-Merge wartet auf Pflichtpruefungen
+      # aus dem Branch-Schutz — und den gibt es auf privaten Repos ohne GitHub
+      # Pro nicht. Ohne Pflichtpruefung wuerde `--auto` sofort mergen, also
+      # genau das Gegenteil. `needs` wartet stattdessen bauartbedingt.
+      #
+      # **Actions sind ausgenommen, und zwar zwangslaeufig.** Ein Bump von
+      # `actions/checkout` aendert diese Datei hier — und das darf `GITHUB_TOKEN`
+      # nicht: "refusing to allow a GitHub App to create or update workflow
+      # .github/workflows/ci.yml without `workflows` permission". Diese
+      # Berechtigung laesst sich fuer das voreingestellte Token gar nicht
+      # vergeben; sie gaebe es nur ueber einen eigenen PAT mit `workflow`-Recht.
+      # Ein solcher Schluessel duerfte flottenweit Workflows schreiben — das ist
+      # als stehende Berechtigung mehr wert als die drei Action-Bumps im Quartal.
+      - name: Zusammenfuehren, wo es vertretbar ist
+        if: |
+          steps.art.outputs.package-ecosystem != 'github_actions' && (
+            steps.art.outputs.update-type == 'version-update:semver-patch' ||
+            steps.art.outputs.update-type == 'version-update:semver-minor' ||
+            steps.art.outputs.dependency-type == 'direct:development'
+          )
+        run: gh pr merge --squash --delete-branch "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Action-Bump liegen lassen und sagen, warum
+        if: steps.art.outputs.package-ecosystem == 'github_actions'
+        run: |
+          gh pr comment "$PR_URL" --body "Nicht automatisch zusammengefuehrt: \
+          Der PR aendert eine Workflow-Datei, und das darf GITHUB_TOKEN nicht \
+          (\`without workflows permission\`). Die CI ist gruen — von Hand mergen."
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # **Warum ein Major einer Laufzeit-Abhaengigkeit liegen bleibt.** Nicht
+      # weil Major gefaehrlich waere, sondern weil die CI dort wenig aussagt.
+      # Am 06.09.2026 lagen in fuenf Repos zehn Dependabot-PRs mit gruener CI
+      # vor — darunter `python:3.12-slim -> 3.14-slim` und `gunicorn 23 -> 26`,
+      # ein Major-Sprung im Laufzeitunterbau. Bei Entwicklungs-Abhaengigkeiten
+      # ist es umgekehrt: Bricht pytest 9, wird genau dieser Lauf rot.
+      - name: Laufzeit-Major liegen lassen und sagen, warum
+        if: |
+          steps.art.outputs.package-ecosystem != 'github_actions' &&
+          steps.art.outputs.update-type == 'version-update:semver-major' &&
+          steps.art.outputs.dependency-type != 'direct:development'
+        run: |
+          gh pr comment "$PR_URL" --body "Nicht automatisch zusammengefuehrt: \
+          Major-Sprung einer Laufzeit-Abhaengigkeit (\`${{ steps.art.outputs.dependency-names }}\`). \
+          Die CI startet keinen Server — ihr gruenes Haeckchen sagt hier wenig. \
+          Bitte von Hand pruefen."
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
