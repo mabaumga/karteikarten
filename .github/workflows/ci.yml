@@ -36,8 +36,8 @@ jobs:
     runs-on: ubuntu-latest
 
     # Der voreingestellte Token ist bei Dependabot-PRs nur lesend. Diese beiden
-    # Rechte hebt der Block wieder an — mehr *kann* er nicht anheben, siehe
-    # unten bei den Actions.
+    # Rechte hebt der Block wieder an — mehr *kann* er nicht anheben, siehe die
+    # Actions-Regel unten.
     permissions:
       contents: write
       pull-requests: write
@@ -47,57 +47,64 @@ jobs:
         id: art
         uses: dependabot/fetch-metadata@v2
 
-      # **Warum nicht `--auto`.** GitHubs Auto-Merge wartet auf Pflichtpruefungen
-      # aus dem Branch-Schutz — und den gibt es auf privaten Repos ohne GitHub
-      # Pro nicht. Ohne Pflichtpruefung wuerde `--auto` sofort mergen, also
-      # genau das Gegenteil. `needs` wartet stattdessen bauartbedingt.
+      # **Eine Entscheidung, zwei Ausgaenge — und keine Luecke dazwischen.**
+      # Vorher stand hier eine Kette von `if:`-Bedingungen an den Schritten.
+      # Sie hatte ein Loch: Bei einem PR der Form "update requirement from
+      # >=1.0.0 to >=1.2.3" verschiebt Dependabot nur eine Untergrenze, es gibt
+      # also kein "von A auf B" — `update-type` ist dann **null**. Ein solcher
+      # PR traf keine der Bedingungen, wurde weder zusammengefuehrt noch
+      # kommentiert und blieb wortlos liegen. Genau das sieht aus wie ein
+      # Fehler, ohne einer zu sein.
       #
-      # **Actions sind ausgenommen, und zwar zwangslaeufig.** Ein Bump von
-      # `actions/checkout` aendert diese Datei hier — und das darf `GITHUB_TOKEN`
-      # nicht: "refusing to allow a GitHub App to create or update workflow
-      # .github/workflows/ci.yml without `workflows` permission". Diese
-      # Berechtigung laesst sich fuer das voreingestellte Token gar nicht
-      # vergeben; sie gaebe es nur ueber einen eigenen PAT mit `workflow`-Recht.
-      # Ein solcher Schluessel duerfte flottenweit Workflows schreiben — das ist
-      # als stehende Berechtigung mehr wert als die drei Action-Bumps im Quartal.
-      - name: Zusammenfuehren, wo es vertretbar ist
-        if: |
-          steps.art.outputs.package-ecosystem != 'github_actions' && (
-            steps.art.outputs.update-type == 'version-update:semver-patch' ||
-            steps.art.outputs.update-type == 'version-update:semver-minor' ||
-            steps.art.outputs.dependency-type == 'direct:development'
-          )
+      # Mit `else` faellt nichts mehr durch: Jeder PR landet in genau einem der
+      # beiden Ausgaenge, und wer nicht gemerged wird, erfaehrt warum.
+      - name: Entscheiden
+        id: regel
+        env:
+          OEKO: ${{ steps.art.outputs.package-ecosystem }}
+          ART: ${{ steps.art.outputs.update-type }}
+          TYP: ${{ steps.art.outputs.dependency-type }}
+          NAMEN: ${{ steps.art.outputs.dependency-names }}
+        run: |
+          if [ "$OEKO" = "github_actions" ]; then
+            # Ein Action-Bump aendert diese Datei hier, und das darf
+            # GITHUB_TOKEN nicht: "refusing to allow a GitHub App to create or
+            # update workflow ... without `workflows` permission". Die
+            # Berechtigung laesst sich fuer das voreingestellte Token gar nicht
+            # vergeben; es gaebe sie nur ueber einen eigenen PAT mit
+            # `workflow`-Recht, der flottenweit Workflows schreiben duerfte.
+            echo "merge=nein" >> "$GITHUB_OUTPUT"
+            echo "grund=Der PR aendert eine Workflow-Datei, und das darf GITHUB_TOKEN nicht. Die CI ist gruen — bitte von Hand mergen." >> "$GITHUB_OUTPUT"
+          elif [ "$ART" = "version-update:semver-patch" ] || [ "$ART" = "version-update:semver-minor" ]; then
+            echo "merge=ja" >> "$GITHUB_OUTPUT"
+          elif [ "$TYP" = "direct:development" ]; then
+            # Bricht pytest 9 oder ruff 0.17, wird genau dieser Lauf rot — dann
+            # merged der Job ohnehin nicht. Hier sagt die CI etwas.
+            echo "merge=ja" >> "$GITHUB_OUTPUT"
+          else
+            # Laufzeit-Abhaengigkeit, deren Sprung die CI nicht beurteilen
+            # kann: Sie faehrt die Tests gegen das Runner-Python und startet
+            # keinen Server. Am 06.09.2026 lagen in fuenf Repos zehn
+            # Dependabot-PRs mit gruener CI vor, darunter
+            # `python:3.12-slim -> 3.14-slim` und `gunicorn 23 -> 26`.
+            echo "merge=nein" >> "$GITHUB_OUTPUT"
+            echo "grund=Laufzeit-Abhaengigkeit ($NAMEN, update-type=${ART:-unbestimmt}). Die CI startet keinen Server — ihr gruenes Haeckchen sagt hier wenig. Bitte von Hand pruefen." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Zusammenfuehren
+        if: steps.regel.outputs.merge == 'ja'
         run: gh pr merge --squash --delete-branch "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Action-Bump liegen lassen und sagen, warum
-        if: steps.art.outputs.package-ecosystem == 'github_actions'
+      - name: Liegen lassen und sagen, warum
+        if: steps.regel.outputs.merge == 'nein'
+        # Block-Skalar, kein Einzeiler: Das ": " im Text laese YAML sonst als
+        # Mapping — "mapping values are not allowed here".
         run: |
-          gh pr comment "$PR_URL" --body "Nicht automatisch zusammengefuehrt: \
-          Der PR aendert eine Workflow-Datei, und das darf GITHUB_TOKEN nicht \
-          (\`without workflows permission\`). Die CI ist gruen — von Hand mergen."
+          gh pr comment "$PR_URL" --body "Nicht automatisch zusammengefuehrt: $GRUND"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # **Warum ein Major einer Laufzeit-Abhaengigkeit liegen bleibt.** Nicht
-      # weil Major gefaehrlich waere, sondern weil die CI dort wenig aussagt.
-      # Am 06.09.2026 lagen in fuenf Repos zehn Dependabot-PRs mit gruener CI
-      # vor — darunter `python:3.12-slim -> 3.14-slim` und `gunicorn 23 -> 26`,
-      # ein Major-Sprung im Laufzeitunterbau. Bei Entwicklungs-Abhaengigkeiten
-      # ist es umgekehrt: Bricht pytest 9, wird genau dieser Lauf rot.
-      - name: Laufzeit-Major liegen lassen und sagen, warum
-        if: |
-          steps.art.outputs.package-ecosystem != 'github_actions' &&
-          steps.art.outputs.update-type == 'version-update:semver-major' &&
-          steps.art.outputs.dependency-type != 'direct:development'
-        run: |
-          gh pr comment "$PR_URL" --body "Nicht automatisch zusammengefuehrt: \
-          Major-Sprung einer Laufzeit-Abhaengigkeit (\`${{ steps.art.outputs.dependency-names }}\`). \
-          Die CI startet keinen Server — ihr gruenes Haeckchen sagt hier wenig. \
-          Bitte von Hand pruefen."
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          GRUND: ${{ steps.regel.outputs.grund }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
