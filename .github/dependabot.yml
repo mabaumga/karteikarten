@@ -1,5 +1,6 @@
 # Dependabot — GitHub-nativer Dependency-Fluss (Standards-Review 2026-08 §9).
-# Ersetzt den selbstgebauten dependency-check.yml-Workflow. Kein Auto-Merge.
+# Ersetzt den selbstgebauten dependency-check.yml-Workflow.
+# Auto-Merge entscheidet der Job `automerge` in ci.yml, nicht diese Datei.
 # Gruppierung: minor/patch gebuendelt (klein + mergebar), MAJOR einzeln —
 # ein Sammel-PR ueber alle Updates scheitert an ResolutionImpossible.
 
