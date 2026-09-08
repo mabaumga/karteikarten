@@ -45,7 +45,7 @@ jobs:
     steps:
       - name: Was fuer ein Update ist das?
         id: art
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
 
       # **Eine Entscheidung, zwei Ausgaenge — und keine Luecke dazwischen.**
       # Vorher stand hier eine Kette von `if:`-Bedingungen an den Schritten.
