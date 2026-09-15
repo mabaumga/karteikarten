@@ -1,0 +1,53 @@
+# gitleaks-Konfiguration — stack-agnostische Vorlage.
+# Vendoren nach .gitleaks.toml im Repo-Wurzelverzeichnis.
+#
+# PFLICHT, wenn secret-scan.yml GITLEAKS_CONFIG: .gitleaks.toml setzt: fehlt die Datei,
+# scheitert der Workflow an der Konfiguration statt an einem Fund — und der rote Lauf
+# sagt dann etwas anderes, als er zu sagen scheint.
+#
+# Grundsatz: Default-Regelwerk verwenden und nur ergaenzen. Eine handgeschnitzte
+# Regelsammlung veraltet gegenueber dem gitleaks-Upstream und uebersieht neue Token-Formate.
+
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Bewusst erlaubte Platzhalter, Beispielwerte und Testfixtures."
+
+# Dateien, die per Definition nur Platzhalter enthalten.
+paths = [
+  '''\.env\.example$''',
+  '''\.env\.template$''',
+  # Datendumps und Logs. Die Regel generic-api-key trifft dort auf jede laengere
+  # Zufallszeichenkette — Kontonummern, Hashes, Session-IDs. Gemessen am 15.09.2026:
+  # 23.067 Treffer in EINER Umsatz-JSON, 57 in Webserver-Logs. Ungefiltert ertrinkt
+  # der echte Fund im Rauschen und der Scan wird abgeschaltet statt gelesen.
+  '''(^|/)data/.*\.(json|sql|csv)$''',
+  '''(^|/)logs?/''',
+  '''\.log$''',
+]
+
+# Offensichtliche Nicht-Secrets. Ergaenzen statt Regeln abschalten:
+# eine abgeschaltete Regel schweigt auch beim echten Fund.
+regexes = [
+  '''(?i)(REDACTED|<token>|<secret>|xxxx+|changeme|platzhalter|dein[A-Za-z]*Hier)''',
+  '''(?i)(dev|test|example|insecure)-secret-key''',
+  '''(?i)not-for-(production|tests)''',
+  '''django-insecure''',
+]
+
+# Historische Funde, die vor Einfuehrung des Scans entstanden sind.
+#
+# Der Commit bleibt exakt benannt — kein Pfad- oder Regex-Freibrief, der auch kuenftige
+# Funde verschluckt. Jede Zeile nennt Repo-Stelle und Grund; ein Eintrag ohne Begruendung
+# ist ein Defekt.
+#
+# Das ist eine Baseline, keine Entwarnung: Die Secrets sind offengelegt und gehoeren
+# rotiert. Der Scan schuetzt ab hier gegen NEUE Funde — die Altlast bleibt ein eigener
+# Vorgang und gehoert als Ticket nachverfolgt.
+#
+# commits = [
+#   "abc1234...",  # <Datei>: <was> — rotiert/nachverfolgt in <Ticket>
+# ]
