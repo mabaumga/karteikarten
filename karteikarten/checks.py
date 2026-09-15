@@ -1,7 +1,19 @@
 """Konkrete Liveness-Checks fuer den oeffentlichen ``/health/``-Poll.
 
-Nur lokale, schnelle Pflicht-Checks (DB, Disk) — laufen ohne Auth im Docker/Kuma-Poll.
+Nur lokale, schnelle Pflicht-Checks — laufen ohne Auth im Docker/Kuma-Poll.
 Keine externen Integrationen (die App hat keine).
+
+Geprueft wird die **Datenbank**. Sie *ist* eine Eigenschaft der Anwendung: Die App
+hat ihre eigene, und ohne sie kann sie nicht arbeiten.
+
+Der **Plattenplatz gehoert nicht dazu** (INFRA-249). Er ist eine Eigenschaft des
+Hosts: Auf hetzner-web liegen fuenfzehn Stacks auf derselben Platte, und am
+02.09.2026 meldeten deswegen acht Dienste gleichzeitig ``degraded`` — acht Alarme
+fuer eine Tatsache, gegen die keine der acht etwas tun konnte. Geprueft wird der
+Host jetzt einmal, in ``check_disk.sh``.
+
+``DiskSpaceCheck`` bleibt trotzdem hier: Liegen die Daten einmal auf einem eigenen
+Datentraeger, wird die Pruefung mit dessen Pfad wieder eingehaengt.
 """
 
 from __future__ import annotations
@@ -34,7 +46,10 @@ class DatabaseCheck(HealthCheck):
 
 
 class DiskSpaceCheck(HealthCheck):
-    """Freier Plattenplatz (degraded ab ``warn_pct``, unhealthy ab ``crit_pct``)."""
+    """Freier Plattenplatz (degraded ab ``warn_pct``, unhealthy ab ``crit_pct``).
+
+    Seit INFRA-249 **nicht mehr Teil von** ``liveness_checks()`` — siehe Modul-Kopf.
+    """
 
     name = "speicher"
     critical = True
@@ -68,4 +83,4 @@ class DiskSpaceCheck(HealthCheck):
 
 def liveness_checks() -> list[HealthCheck]:
     """Oeffentlicher Health-Poll: nur lokal und schnell."""
-    return [DatabaseCheck(), DiskSpaceCheck()]
+    return [DatabaseCheck()]
