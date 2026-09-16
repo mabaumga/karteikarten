@@ -9,8 +9,25 @@ jobs:
   quality-gate:
     runs-on: ubuntu-latest
 
+    # gitleaks-action braucht pull-requests:write, sonst 403 bei jedem PR.
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      # Secret-Scan (app-rahmen Baustein 11). Bewusst ein Schritt und kein eigener
+      # Job: GitHub rundet je Job auf volle Minuten auf, und der Scan laeuft neun
+      # Sekunden. Die tragende Stufe ist ohnehin der pre-commit-Hook — hier steht
+      # der Auffangposten gegen `--no-verify`.
+      - name: Secret-Scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITLEAKS_CONFIG: .gitleaks.toml
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Python einrichten
         uses: actions/setup-python@v7
