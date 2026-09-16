@@ -51,3 +51,24 @@ regexes = [
 # commits = [
 #   "abc1234...",  # <Datei>: <was> — rotiert/nachverfolgt in <Ticket>
 # ]
+
+# ---------------------------------------------------------------------------
+# Eigene Regel — Luecke im Default-Regelwerk (app-rahmen, 16.09.2026).
+#
+# In `kvb-website-goethe110` lag eine `.htpasswd` mit `$apr1$`-Hash seit dem
+# 20.08.2021. Das Repo hatte Secret-Scan UND eine .gitleaks.toml, die Datei
+# stand auf keiner Allowlist — gemeldet wurde trotzdem nichts. Das
+# Default-Regelwerk zielt auf API-Schluessel, Token und private Schluessel und
+# kennt kein Muster fuer htpasswd-Eintraege.
+#
+# Nachgewiesen am echten Binary gegen jene Historie: ohne Regel 0 Funde, mit 1.
+# `$apr1$` ist Apache-MD5 und in Stunden zu brechen — ein Fund ist kein
+# Formfehler, der Zugang gilt als offengelegt.
+#
+# Achtung: `allowlist.commits` gilt je Commit, nicht je Regel. Ein Commit auf
+# der Baseline verschluckt auch Funde NEUER Regeln — beim Ergaenzen nachsehen.
+[[rules]]
+id = "htpasswd-eintrag"
+description = "htpasswd-Zeile: Benutzername plus Passwort-Hash (apr1/bcrypt/SHA/crypt)"
+regex = '''(?m)^[^:\s#]{1,64}:(\$apr1\$[^\s:]+|\$2[aby]\$[^\s:]+|\{SHA\}[A-Za-z0-9+/=]+|\$[156]\$[^\s:]+|[A-Za-z0-9./]{13})\s*$'''
+keywords = ["$apr1$", "$2y$", "$2a$", "$2b$", "{SHA}", "$6$", "$5$", "$1$"]
