@@ -10,8 +10,11 @@ updates:
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      # Monatlich statt woechentlich seit 16.09.2026 (INFRA-269, Massnahme 4):
+      # 282 Dependabot-PR-Laeufe im September waren rund 70 % aller PR-Minuten.
+      # Betrifft nur Versions-Updates. **Security-Updates kommen weiter sofort** —
+      # die haengen am Repo-Schalter, nicht an diesem `interval`.
+      interval: monthly
     ignore:
       # GitPython bewusst zurueckgehalten. python-semantic-release 10.6.1 liest
       # `git.Actor.name_email_regex`; GitPython hat das Attribut in 3.1.59
@@ -29,8 +32,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
     groups:
       actions-minor-patch:
         patterns: ["*"]
@@ -39,5 +41,4 @@ updates:
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
