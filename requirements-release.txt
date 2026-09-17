@@ -3,19 +3,26 @@
 
 python-semantic-release==10.6.2
 
-# GitPython bewusst zurueckgehalten.
+# GitPython war bis zum 17.09.2026 auf `<3.1.59` zurueckgehalten.
 #
-# python-semantic-release validiert den Commit-Author ueber `git.Actor.name_email_regex`
-# (semantic_release/cli/config.py:745). GitPython hat das Attribut in 3.1.59 entfernt.
-# Seitdem stirbt jeder Release-Lauf sofort mit
+# python-semantic-release validierte den Commit-Author ueber
+# `git.Actor.name_email_regex`; GitPython hatte das Attribut in 3.1.59 entfernt.
+# Jeder Release-Lauf starb sofort mit
 #
 #     ::ERROR:: type object 'Actor' has no attribute 'name_email_regex'
 #
-# 10.6.1 ist die neueste PSR-Version (Stand 2026-08-28) — es gibt also kein Update, das
-# den Fehler behebt. Der Pin IST der Fix, nicht eine Verzoegerung davon.
+# **Behoben — und zwar von beiden Seiten.** Am 17.09.2026 nachgemessen:
 #
-# Beim naechsten PSR-Release pruefen, ob die Obergrenze fallen kann:
-#   .venv-release/bin/pip install -U python-semantic-release GitPython
-#   .venv-release/bin/semantic-release version --print
-# Laeuft das durch, kann die Zeile hier weg.
-GitPython<3.1.59
+#   * PSR 10.6.2 referenziert `name_email_regex` nicht mehr. Es validiert ueber
+#     einen Feld-Validator (`validate_commit_author`) mit `Actor.from_string()`.
+#   * GitPython 3.1.62 hat das Attribut wieder eingefuehrt, als deprecated —
+#     mit Hinweis, dass die Suche in langen Zeichenketten quadratisch laeuft.
+#
+# Der Test, den die vorige Fassung dieser Datei vorgegeben hat, laeuft durch —
+# in allen neun Repos der Flotte geprueft:
+#
+#     pip install -U python-semantic-release GitPython   # 10.6.2 + 3.1.62
+#     semantic-release version --print
+#
+# Die Obergrenze ist damit weg. Sollte sie je wieder noetig werden, ist das der
+# Befund, an dem man es merkt: derselbe AttributeError beim ersten Lauf.
