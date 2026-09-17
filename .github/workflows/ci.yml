@@ -5,6 +5,13 @@ on:
     branches: [main]
   pull_request:
 
+# Ein Lauf je Zweig. Ein zweiter Push macht den ersten Lauf wertlos — er wird
+# trotzdem abgerechnet. Auch auf `main` unbedenklich: Der letzte Lauf prueft den
+# Zustand, der alle vorher gemergten PRs enthaelt.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   quality-gate:
     runs-on: ubuntu-latest
