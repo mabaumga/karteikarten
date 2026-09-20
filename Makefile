@@ -26,6 +26,10 @@ migrate: ## Create and run migrations
 setup: ## Create venv and install dependencies
 	python -m venv .venv
 	.venv/bin/pip install -r requirements.txt
+	# **Auch die Entwicklungswerkzeuge.** Ohne sie legt `make setup` ein venv an,
+	# in dem `make dod` sofort mit „No module named ruff" abbricht — das Ziel
+	# verspricht „install dependencies" und laesst das Gate unbenutzbar.
+	.venv/bin/pip install -r requirements-dev.txt
 	mkdir -p data
 
 init: ## Idempotent: Migrationen + Static (auch vom docker-entrypoint genutzt)

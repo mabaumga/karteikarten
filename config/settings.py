@@ -83,7 +83,20 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# **`STATICFILES_STORAGE` gibt es nicht mehr.** Seit Django 4.2 veraltet, in
+# 5.1 entfernt — und dieses Projekt laeuft auf 6.1. Die Zeile stand hier und
+# las sich wie eine fertige Konfiguration; tatsaechlich gab es keine gehashten
+# Dateinamen, keine Fern-Cache-Kopfzeilen, kein `staticfiles.json` und keine
+# vorkomprimierten Varianten aus WhiteNoise.
+#
+# Erkennungsmerkmal: `collectstatic` meldete „130 static files copied" **ohne**
+# den Zusatz „post-processed".
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    },
+}
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
