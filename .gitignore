@@ -4,9 +4,15 @@ __pycache__/
 *$py.class
 *.so
 .Python
-.venv/
-.venv-release/
-venv/
+# **Ohne Schraegstrich.** `\.venv/` passt nur auf ein *Verzeichnis*. Genau
+# daran ist es am 07.09.2026 vorbeigegangen: Im Baum lag ein `.venv` als
+# **Symlink auf sich selbst** — kein Verzeichnis, also nicht ignoriert, also
+# eingecheckt (PR #52). Jeder Aufruf endete danach in „Zu viele Ebenen aus
+# symbolischen Links", und ein `git pull` holte den Defekt zurueck, sobald ihn
+# jemand lokal reparierte.
+.venv
+.venv-release
+venv
 ENV/
 
 # Django
