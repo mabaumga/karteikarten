@@ -3,7 +3,7 @@
 
 pytest==9.1.1
 pytest-django==4.14.0
-ruff==0.16.7
+ruff==0.16.8
 
 # Der Git-Hook ruft pre-commit bei jedem Commit auf. Stand es hier nicht, war
 # ein frisch eingerichtetes venv commit-unfaehig: „No module named pre_commit",
