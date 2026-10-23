@@ -2141,13 +2141,12 @@ def lernen_offline(request):
         Lernblock.objects.filter(benutzer_zuordnungen__benutzer=request.user)
         .annotate(karten_anzahl=Count("karten"))
         .order_by("name")
+        .values("id", "name", "karten_anzahl")
     )
     # Die Liste kommt serverseitig mit, damit die Seite keinen zweiten Endpunkt
     # braucht. Offline liefert der Service Worker die zuletzt gesehene Fassung --
     # heruntergeladene Bloecke zeigt die Seite ohnehin aus der IndexedDB.
-    verfuegbar = [
-        {"id": b.id, "name": b.name, "karten_anzahl": b.karten_anzahl} for b in bloecke
-    ]
+    verfuegbar = list(bloecke)
     return render(
         request,
         "karteikarten/lernen_offline.html",
@@ -2326,7 +2325,7 @@ def benutzer_liste(request):
             {
                 "user": user,
                 "stats": stats,
-                "bloecke": user.lernbloecke.count(),
+                "bloecke": BenutzerLernblock.objects.filter(benutzer=user).count(),
             }
         )
 

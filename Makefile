@@ -49,6 +49,13 @@ format: ## Formatierung anwenden
 format-check:  ## Formatierung pruefen, ohne zu aendern
 	$(PYTHON) -m ruff format --check .
 
+# Typpruefung mit pyright im Modus `standard` (SK-21), Konfiguration in
+# pyrightconfig.json. Ueber den Interpreter, nicht ueber ein `pyright` vom PATH —
+# sonst prueft lokal und in der CI ein anderes Werkzeug. Der Exit-Code geht
+# unveraendert ans Gate: ein Typfehler haelt `make dod` an.
+typecheck: ## Typpruefung (pyright, Modus standard)
+	$(PYTHON) -m pyright
+
 migrations-check: ## Fehlende Migrationen aufdecken
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py makemigrations --check --dry-run
 
@@ -67,6 +74,7 @@ dod: ## Definition of Done — DAS Gate (CI == lokal)
 	DJANGO_SETTINGS_MODULE=config.settings $(PYTHON) manage.py check
 	$(MAKE) lint
 	$(MAKE) format-check
+	$(MAKE) typecheck
 	$(MAKE) migrations-check
 	$(MAKE) test
 
