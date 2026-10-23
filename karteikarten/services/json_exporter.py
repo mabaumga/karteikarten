@@ -10,6 +10,7 @@ import logging
 import os
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from django.conf import settings
 
@@ -28,7 +29,7 @@ class JSONExporter:
     - Creates timestamped backup files
     """
 
-    def __init__(self, backup_dir: str = None):
+    def __init__(self, backup_dir: str | None = None):
         """
         Initialize exporter.
 
@@ -50,7 +51,7 @@ class JSONExporter:
 
     def _karte_to_dict(self, karte: Karteikarte) -> dict:
         """Convert a Karteikarte to dictionary format."""
-        result = {
+        result: dict[str, Any] = {
             "vorne": karte.begriff,
             "hinten": karte.definition,
         }
@@ -254,7 +255,7 @@ class JSONExporter:
 
         return results
 
-    def backup_all_to_single_file(self, filename: str = None) -> Path:
+    def backup_all_to_single_file(self, filename: str | None = None) -> Path:
         """
         Backup all content to a single JSON file with multiple Lehrwerke.
 

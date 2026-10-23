@@ -90,4 +90,4 @@ def navigation_context(request) -> dict:
     """
     treffer = getattr(request, "resolver_match", None)
     url_name = treffer.url_name if treffer else None
-    return {"aktiver_reiter": _REITER_JE_URL.get(url_name, "")}
+    return {"aktiver_reiter": _REITER_JE_URL.get(url_name or "", "")}

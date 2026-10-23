@@ -44,7 +44,7 @@ jobs:
       - name: Abhaengigkeiten installieren
         run: pip install -r requirements-dev.txt
 
-      - name: Quality-Gate (Django-Checks + Lint + Tests)
+      - name: Quality-Gate (Django-Checks + Lint + Typen + Tests)
         env:
           DJANGO_SETTINGS_MODULE: config.settings
           SECRET_KEY: ci-secret-key-not-for-production

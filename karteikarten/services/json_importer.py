@@ -49,7 +49,7 @@ class JSONImporter:
     SCHEMA_VERSION = "1.0"
     MIN_CARDS_PER_BLOCK = 1  # Minimum cards per block
 
-    def __init__(self, import_dir: str = None, archive_dir: str = None):
+    def __init__(self, import_dir: str | None = None, archive_dir: str | None = None):
         """
         Initialize importer.
 

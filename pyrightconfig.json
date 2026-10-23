@@ -1,0 +1,16 @@
+{
+  // Typpruefung (SK-21): pyright ist der Typchecker der Flotte, Mindestmodus
+  // `standard`. Stil django-standard (Feature-App + Service-Layer) — es gibt
+  // keine domain/application-Schichten, deshalb keine strict-Stufe.
+  //
+  // `include` deckt alle Quellen ab, auch Seed-Skripte und Tests: In zwei
+  // Seed-Skripten stand eine Rueckbeziehung, die es nicht gibt
+  // (`lernblock.karteikarten` statt `.karten`) — ungeprueft waere sie erst
+  // beim naechsten Lauf als AttributeError aufgefallen.
+  "include": ["config", "karteikarten", "scripts", "tests", "manage.py"],
+  "exclude": ["**/migrations", "**/__pycache__", ".venv"],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "standard"
+}

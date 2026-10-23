@@ -1,8 +1,16 @@
 """Models for Karteikarten application."""
 
 from datetime import date, timedelta
+from typing import TYPE_CHECKING
+
 from django.db import models
 from django.contrib.auth.models import User
+
+if TYPE_CHECKING:
+    # Nur fuer pyright (SK-21): Django legt Rueckbeziehungen (`related_name`)
+    # und die `*_id`-Spalten zur Laufzeit an, die Stubs sehen sie nicht.
+    # Deklariert am Modell statt die Regel abzuschalten.
+    from django.db.models.manager import RelatedManager
 
 
 class Schulfach(models.Model):
@@ -64,6 +72,10 @@ class Lehrwerk(models.Model):
     )
     erstellt_am = models.DateTimeField(auto_now_add=True)
 
+    if TYPE_CHECKING:
+        id: int
+        units: RelatedManager["LehrwerkUnit"]
+
     class Meta:
         ordering = ["name", "band"]
         verbose_name = "Lehrwerk"
@@ -99,6 +111,11 @@ class LehrwerkUnit(models.Model):
     )
     beschreibung = models.TextField(blank=True)
     reihenfolge = models.IntegerField(default=0, help_text="Sortierreihenfolge")
+
+    if TYPE_CHECKING:
+        id: int
+        lehrwerk_id: int
+        lernbloecke: RelatedManager["Lernblock"]
 
     class Meta:
         ordering = ["lehrwerk", "reihenfolge", "name"]
@@ -181,6 +198,12 @@ class Lernblock(models.Model):
 
     erstellt_am = models.DateTimeField(auto_now_add=True)
     aktualisiert_am = models.DateTimeField(auto_now=True)
+
+    if TYPE_CHECKING:
+        id: int
+        lehrwerk_unit_id: int | None
+        karten: RelatedManager["Karteikarte"]
+        benutzer_zuordnungen: RelatedManager["BenutzerLernblock"]
 
     class Meta:
         ordering = ["name"]
@@ -607,6 +630,10 @@ class BenutzerKarteStatus(models.Model):
     )
     naechste_wiederholung = models.DateField(default=date.today)
 
+    if TYPE_CHECKING:
+        benutzer_id: int
+        karte_id: int
+
     class Meta:
         unique_together = ["benutzer", "karte"]
         verbose_name = "Benutzer-Kartenstatus"
@@ -676,6 +703,9 @@ class BenutzerStatistik(models.Model):
     streak = models.IntegerField(default=0)
     gesamt_gelernt = models.IntegerField(default=0)
     gesamt_richtig = models.IntegerField(default=0)
+
+    if TYPE_CHECKING:
+        bevorzugte_jahrgangsstufe_id: int | None
 
     class Meta:
         verbose_name = "Benutzerstatistik"

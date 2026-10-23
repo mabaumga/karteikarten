@@ -110,8 +110,8 @@ def erstelle_lernbloecke(bloecke, schulfach, jahrgangsstufe):
 
         if not created:
             # Block existiert bereits - lösche alte Karten
-            alte_karten = lernblock.karteikarten.count()
-            lernblock.karteikarten.all().delete()
+            alte_karten = lernblock.karten.count()
+            lernblock.karten.all().delete()
             print(f"  → {alte_karten} alte Karten gelöscht")
 
         # Erstelle Karteikarten

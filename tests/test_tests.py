@@ -102,9 +102,11 @@ def test_test_sammelt_ueber_bloecke_hinweg(angemeldet, schueler, block, db):
     pruefung = Test.objects.create(benutzer=schueler, name="Gemischt")
 
     for quelle in (block, zweiter):
+        karte = quelle.karten.first()
+        assert karte is not None
         angemeldet.post(
             reverse("test_karten_uebernehmen", args=[quelle.pk]),
-            {"karten": [quelle.karten.first().pk], "test": pruefung.pk},
+            {"karten": [karte.pk], "test": pruefung.pk},
         )
 
     assert pruefung.anzahl_karten == 2

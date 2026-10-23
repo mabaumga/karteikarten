@@ -68,8 +68,8 @@ def erstelle_vokabel_lernblock(data, schulfach, jahrgangsstufe):
     )
 
     if not created:
-        alte_karten = lernblock.karteikarten.count()
-        lernblock.karteikarten.all().delete()
+        alte_karten = lernblock.karten.count()
+        lernblock.karten.all().delete()
         print(f"    {alte_karten} alte Karten geloescht")
 
     karten_erstellt = 0
@@ -110,8 +110,8 @@ def erstelle_emotionen_lernblock(data, schulfach, jahrgangsstufe):
     )
 
     if not created:
-        alte_karten = lernblock.karteikarten.count()
-        lernblock.karteikarten.all().delete()
+        alte_karten = lernblock.karten.count()
+        lernblock.karten.all().delete()
         print(f"    {alte_karten} alte Karten geloescht")
 
     karten_erstellt = 0

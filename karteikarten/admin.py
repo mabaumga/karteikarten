@@ -57,10 +57,9 @@ class LernblockAdmin(admin.ModelAdmin):
     list_filter = ["schulfach", "jahrgangsstufe", "thema", "bidirektional"]
     search_fields = ["name", "beschreibung", "thema"]
 
+    @admin.display(description="Karten")
     def anzahl_karten(self, obj):
         return obj.anzahl_karten
-
-    anzahl_karten.short_description = "Karten"
 
 
 @admin.register(Karteikarte)
@@ -105,10 +104,9 @@ class CustomUserAdmin(UserAdmin):
         "lernblock_count",
     ]
 
+    @admin.display(description="Lernblöcke")
     def lernblock_count(self, obj):
         return obj.lernbloecke.count()
-
-    lernblock_count.short_description = "Lernblöcke"
 
 
 # Re-register User with custom admin
@@ -143,10 +141,9 @@ class BenutzerStatistikAdmin(admin.ModelAdmin):
     ]
     list_filter = ["letzter_lerntag"]
 
+    @admin.display(description="Erfolgsquote")
     def erfolgsquote(self, obj):
         return f"{obj.erfolgsquote}%"
-
-    erfolgsquote.short_description = "Erfolgsquote"
 
 
 @admin.register(Lernergebnis)
