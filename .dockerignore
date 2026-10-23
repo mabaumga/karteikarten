@@ -43,3 +43,19 @@ docker-compose.yml
 *.md
 *.log
 Makefile
+
+# Testcode gehoert nicht ins Produktions-Image (INFRA-336): Doubles, Fixtures,
+# Feature-Dateien und Schrittdefinitionen sind Angriffsflaeche ohne Gegenwert,
+# und wer sie im Image findet, haelt sie fuer Produktionscode.
+# Zwei Muster fuer src/, nicht eines: Nicht jede Testdatei liegt in einem
+# `tests/`-Verzeichnis — genau diese Luecke hat in kvb-admin2 KVB-33 verursacht.
+# Wortgleich mit kvb-admin2 und vermietung.
+src/**/tests/
+src/**/test_*.py
+tests/
+# Die App liegt hier (noch) nicht unter src/, sondern in karteikarten/ —
+# deshalb dieselben Muster zusaetzlich fuer jede Tiefe. Die Templates
+# `test_*.html` und die Migration `0010_test.py` gehoeren zum Fachbegriff
+# „Test" (Abfrage) und bleiben: Die Muster greifen nur auf `test_*.py`.
+**/tests/
+**/test_*.py
