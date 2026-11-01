@@ -1,9 +1,9 @@
 # Test- und Lint-Abhaengigkeiten (nicht im Produktions-Image).
 -r requirements.txt
 
-pytest==9.1.1
+pytest==9.2.0
 pytest-django==4.14.0
-ruff==0.16.9
+ruff==0.17.3
 
 # Typpruefung (make typecheck, SK-21). Exakt gepinnt: Eine neue pyright-Version
 # bringt neue Befunde mit — das soll ein bewusster Bump sein, kein Zufall.
@@ -14,4 +14,4 @@ django-types==0.24.0
 # Der Git-Hook ruft pre-commit bei jedem Commit auf. Stand es hier nicht, war
 # ein frisch eingerichtetes venv commit-unfaehig: „No module named pre_commit",
 # ohne dass irgendwo stuende, woher das Werkzeug kommen soll.
-pre-commit==4.6.2
+pre-commit==4.7.0
