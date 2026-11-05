@@ -18,8 +18,8 @@ app:
 
   # Produktiv-Deployment — wo laeuft die App?
   deployment:
-    platform: hetzner-cpx22       # produktiv auf Hetzner; oeffentliche DNS karteikarten.baumgartner.online -> 178.105.222.1
-    ssh_host: root@178.105.222.1
+    platform: unraid              # seit 05.11.2026 (Entlastung Hetzner, INFRA-302); oeffentlich ueber den Cloudflare-Tunnel
+    ssh_host: root@192.168.17.80
     url: https://karteikarten.baumgartner.online
 
     # Quelle fuer die Uptime-Kuma-Monitore (siehe app-rahmen/reference/uptime-kuma.md).
@@ -31,14 +31,16 @@ app:
 
     container: karteikarten
     image: ghcr.io/mabaumga/karteikarten:latest
-    compose_path: /opt/hetzner/karteikarten/docker-compose.yml
+    compose_path: /boot/config/plugins/compose.manager/projects/Karteikarten/docker-compose.yml
     deploy_cmd: "make release -> GitHub Actions (release.yml: semantic-release + ghcr-Push); dann: ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten' (sops-decrypt -> compose pull -> up -d). KEIN Auto-Deploy."
     notes: >-
-      Caddy (proxy/) -> karteikarten:8000 (gunicorn); SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import.
+      Cloudflare-Tunnel -> karteikarten:8000 (gunicorn, Netz proxy auf Unraid); SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import.
       Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
       Die frueher erwaehnte Alt-Instanz auf Unraid ist am 20.06.2026 stillgelegt worden:
       kein Container, kein /mnt/user/appdata/karteikarten, kein compose.manager-Projekt mehr.
-      Ihre Daten sind vollstaendig in der Hetzner-DB enthalten (Abgleich am 28.08.2026).
+      Am 05.11.2026 von Hetzner wieder nach Unraid gezogen: Daten unter
+      /mnt/user/appdata/karteikarten/data, Backup borgmatic.d/karteikarten.yml
+      (Repos unraid-hetzner-karteikarten, Name wegen der Historie beibehalten).
 
 backup:
   required: true
