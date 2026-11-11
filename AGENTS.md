@@ -1,108 +1,56 @@
-# AGENTS.md — Karteikarten
+# AGENTS.md — karteikarten
 
-> **Mobile-optimierte Web-App zum Lernen mit digitalen Karteikarten (Leitner-System) — Einzelbenutzer, als PWA offline nutzbar.**
-> Kompakter Steckbrief für KI-Agenten. Ausführliche Arbeitsanweisungen: siehe `CLAUDE.md`.
+Einzige Quelle der Projektregeln für jeden KI-Agenten. Knapp halten: Was nicht bei fast jeder
+Aufgabe gebraucht wird, steht in einer verlinkten Datei (Tabelle unten), nicht hier.
+Maschinenlesbare Fakten (Deployment, Backup, Monitoring, Plane-Projekt): `app-info.yml`.
 
-## Zweck
+## Zweck und Status
 
-Lern-Anwendung für digitale Karteikarten nach dem **Leitner-System** (5 Fächer mit
-steigenden Wiederholungsintervallen: 1/3/7/14/30 Tage). Karten haben Vorder-/Rückseite +
-Zusatzinfos, sind bidirektional lernbar und in thematischen Lernblöcken organisiert.
-Single-User (kein Login), mobile-first, als Progressive Web App offline nutzbar.
+Mobile Web-App zum Lernen mit digitalen Karteikarten nach dem Leitner-System (5 Stufen,
+Intervalle 1/3/7/14/30 Tage), bidirektional, in Lernblöcken, als PWA offline nutzbar. Login
+über Django-Auth; Verwaltung nur für `is_staff`. Bastelprojekt: einfach halten.
 
-## Tech-Stack
+## Stack und Einstieg
 
-- **Sprache:** Python 3.12
-- **Framework:** Django 6.0.5
-- **Persistenz:** SQLite
-- **Frontend:** Bootstrap 5, Alpine.js, HTMX, PWA (Manifest + Service Worker)
-- **Serving:** gunicorn + whitenoise (Static Files)
-- **Tooling:** make, Docker
+- Python/Django, SQLite, Bootstrap 5 + Alpine.js + HTMX, gunicorn + whitenoise
+- Flach im Repo-Root: `config/` (Projektpaket, `DJANGO_SETTINGS_MODULE=config.settings`) und
+  die einzige App `karteikarten/`; Einstieg `karteikarten/models.py`
+- Gate: `make dod` (= `make check`), auch als pre-push-Hook. GitHub Actions ist **aus** — nur
+  das lokale Gate zählt.
 
-## Architektur
+## Harte Regeln
 
-Einfache, flache **Django-App-Struktur** — bewusst **kein** hexagonales Layout
-(erklärtes „Bastelprojekt"). `config/` ist das Django-Projektpaket,
-die gesamte Fachlichkeit liegt in der einzelnen App `karteikarten/`.
+- In der Oberfläche heißt das Leitner-Fach „Stufe“; „Fach“ ist dort das Schulfach. Angezeigt
+  wird immer `BenutzerKarteStatus.fach` (persönlich), nie `Karteikarte.fach` (altes globales
+  Feld).
+- Verwaltendes (Blöcke, Karten, Import, Benutzer, Backup) nur mit `is_staff` und in eigenen
+  Abschnitten, nie zwischen den Lernaktionen.
+- SQLite bleibt, kein PostgreSQL; mobile first.
+- Tickets nur in Plane, Projekt „Karteikarten“ (`KK`), Beschreibungen als HTML. Nie GitHub
+  Issues.
 
-## Struktur & Einstiegspunkte
+## Aktive Skills
 
-```
-config/                    # Django-Projektpaket (Settings, URLs, WSGI) — DJANGO_SETTINGS_MODULE=config.settings
-karteikarten/              # Haupt-App
-  models.py                # Domänen-Modelle (Einstieg für Datenmodell)
-  views.py · urls.py       # UI/Routing
-  services/                # Import-Services
-  management/commands/     # import_json, import_csv
-  middleware.py            # Auto-Import-Middleware
-  templates/ · static/     # UI, CSS/JS, PWA-Manifest
-docs/                      # FACHLICHE_BESCHREIBUNG.md, KI_IMPORT_ANLEITUNG.md, JSON-Import-Schema
-scripts/                   # Seed-Skripte
-```
+- software/L0-entwicklungsphilosophie
+- software/L1-architektur
+- software/L1-anforderungen
+- software/L1-dokumentation
+- software/L2-django-standard
 
-- **Hier anfangen:** `karteikarten/models.py` (Datenmodell) + `docs/FACHLICHE_BESCHREIBUNG.md`.
-- **Kern-Entitäten:** Schulfach, Jahrgangsstufe, Lehrwerk(Unit), Lernblock, Karteikarte,
-  ImportLog, Lernergebnis, Tages-/Globale-/Benutzer-Statistik, BenutzerLernblock, BenutzerKarteStatus.
+Abweichungen:
+- software/L1-api-design: nicht aktiv — `api/…` bedient nur das eigene Frontend (Antworten,
+  PWA-Sync), keine fremden Consumer.
+- software/L2-django-standard: Code nicht unter `src/` bzw. `apps/`, sondern flach im
+  Repo-Root — eine App, minimaler Schnitt.
+- software/L3-deploy-one, L3-deploy-hetzner: nicht aktiv — läuft auf Unraid (`app-info.yml`
+  → `deployment`).
+- software/opt-in/barrierearm: nicht aktiv — Bastelprojekt, L0-Basis genügt.
 
-## Bauen & Ausführen
+## Lies bei Bedarf
 
-| Befehl | Zweck |
+| Wenn du … | lies |
 |---|---|
-| `make setup` | venv + Dependencies |
-| `make run` | Django Dev Server (Port 8000) |
-| `make migrate` | Migrationen erstellen + ausführen |
-| `make seed` | Beispieldaten laden |
-| `make release` | Release auslösen (semantic-release: Version + CHANGELOG + Tag + Docker-Push nach ghcr.io) |
-| `make docker-build` / `docker-run` | Image lokal bauen / starten |
-
-## Daten-Import
-
-- **JSON (bevorzugt):** `python manage.py import_json <datei.json>` — Schema unter
-  `docs/input/json/schema/`, Struktur `meta → inhalt → units → bloecke → karten`.
-- **CSV (einfach):** `python manage.py import_csv <datei.csv> --block "Name"` — Spalten `vorne;hinten;beispiel;tags`.
-- **Auto-Import:** Dateien in `/app/data/import` werden periodisch eingelesen
-  (`KARTEIKARTEN_IMPORT_INTERVAL`, Default 60s) und nach `/app/data/archive` verschoben.
-
-## Oberfläche
-
-Vier Bereiche über eine beschriftete Navigation: **Start · Blöcke · Fortschritt · Mehr**.
-Mobile first — die Navigation sitzt unten und wandert ab `lg` (≥ 992 px) nach links als
-Schiene; beides steht im selben Markup, umgeschaltet über `d-lg-none` / `d-none d-lg-flex`.
-Abfrageansichten erben von `lernansicht.html` und laufen ohne Navigation.
-
-Verwaltung (Blöcke, Karten, Import, Benutzer, Backup) ist mit `is_staff` bedingt und steht
-in eigenen, beschrifteten Abschnitten — nie zwischen den Lernaktionen. Details:
-`docs/FACHLICHE_BESCHREIBUNG.md` §4.
-
-## Konventionen (Kurz)
-
-- Domänenbegriffe Deutsch (Lernblock, Karteikarte), IT-Begriffe Englisch, Doku Deutsch.
-- **In der Oberfläche heißt das Leitner-Fach „Stufe"**, „Fach" ist dort das Schulfach.
-  Das Modellfeld heißt weiter `fach` — beim Anzeigen immer `BenutzerKarteStatus.fach`
-  (persönlich), nie `Karteikarte.fach` (das alte globale Feld).
-- Einfach halten, kein Over-Engineering. SQLite statt PostgreSQL. Mobile-first (Bootstrap 5).
-- Tests mit pytest unter `tests/` (`make test`), Gate über `make check`.
-  `DJANGO_SETTINGS_MODULE=config.settings`.
-
-→ Vollständig: `CLAUDE.md`.
-
-## Integrationen & verwandte Repos
-
-- Keine externen APIs. Datenzufluss ausschließlich über Datei-Import (JSON/CSV).
-
-## Deployment
-
-Docker-Standalone auf dem **Hetzner-Server** (`root@178.105.222.1`), URL
-`https://karteikarten.baumgartner.online`. Image `ghcr.io/mabaumga/karteikarten:latest`,
-Container `karteikarten`, persistentes Volume `./data` (SQLite + `import`/`archive`).
-Deploy: `ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'`.
-Die Alt-Instanz auf Unraid ist seit dem 20.06.2026 stillgelegt.
-**Release:** `make release` → GitHub Actions (`release.yml`) mit python-semantic-release
-(Version + CHANGELOG + Tag) und Docker-Push nach ghcr.io. Solange Actions deaktiviert ist:
-`make release-local`.
-
-## Mehr Kontext
-
-- `CLAUDE.md` — Arbeitsanweisungen & Konventionen
-- `docs/FACHLICHE_BESCHREIBUNG.md` — fachliche Beschreibung
-- `docs/KI_IMPORT_ANLEITUNG.md` — Import-Anleitung für KI-gestützte Inhaltserstellung
+| Struktur, Make-Targets, Tests, Version, Health oder Daten-Import im Detail brauchst | `docs/STACK.md` |
+| Fachlichkeit, Lernmodi, Oberfläche oder Datenmodell verstehen willst | `docs/FACHLICHE_BESCHREIBUNG.md` |
+| Lerninhalte per KI für den JSON-Import erzeugen willst | `docs/KI_IMPORT_ANLEITUNG.md`, Schema `docs/input/json/schema/` |
+| deployen oder releasen willst | `app-info.yml` → `deployment`; Release lokal: `make release-local` |
