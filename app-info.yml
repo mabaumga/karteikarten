@@ -70,6 +70,14 @@ skills:
     result: "Retrofit: Versionsanzeige, /health/, Make init/check/release/deploy, Release-Pipeline (semantic-release + ghcr + CHANGELOG), Registry vereinheitlicht auf ghcr.io/mabaumga, Deployment-URL ermittelt."
     offen: "Bewusst offen: System-Menue, Hardware, Pre-commit, Dev-Container. Baseline-Tag v1.0.0 + erstes Release noch ausstehend (Bestaetigung Nutzer)."
 
+  projekt-init:
+    last_run: 2026-11-11T00:00:00+01:00
+    mode: update
+    status: ok
+    target: AGENTS.md
+    result: "D8 (SK-23): AGENTS.md einzige Regelquelle (2,6 KB), CLAUDE.md nur @AGENTS.md; Themenwissen nach docs/STACK.md; veraltete Deploy-/Login-/Versionsangaben gestrichen."
+    offen: "deployment.deploy_cmd und Makefile-Ziel deploy nennen noch Hetzner; docs/FACHLICHE_BESCHREIBUNG.md §1.2 sagt noch 'kein Login'."
+
   agents-md:
     last_run: 2026-06-03T23:07:06+02:00
     skill_version: 1
