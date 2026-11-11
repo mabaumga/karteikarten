@@ -1,22 +1,32 @@
 # Konfiguration fuer python-semantic-release.
 # Single Source der Version ist karteikarten/__init__.py:__version__.
-# Release laeuft ueber `make release` -> GitHub Actions (.github/workflows/release.yml).
+# Release laeuft lokal ueber `make release` (Actions sind aus, INFRA-267); live
+# bringt es infrastruktur/scripts/ship.sh.
 # Version NIEMALS manuell bumpen — semantic-release leitet sie aus Conventional Commits ab.
 
 [tool.semantic_release]
 version_variables = ["karteikarten/__init__.py:__version__"]
-branch = "main"
 upload_to_pypi = false
 build_command = ""
 tag_format = "v{version}"
 commit_message = "chore(release): {version} [skip ci]"
 major_on_zero = false
 
+# **Seit v9 steht der Zweig in einer eigenen Gruppe.** Ein `branch = "main"` auf
+# oberster Ebene (stand hier bis KK-10) ist in v10 ein unbekannter Schluessel und
+# wird ignoriert; gegriffen hat bisher nur die Vorgabe des Werkzeugs.
+[tool.semantic_release.branches.main]
+match = "main"
+
 [tool.semantic_release.changelog]
 default_templates = { changelog_file = "CHANGELOG.md" }
+# Neue Versionen landen hinter dieser Marke in CHANGELOG.md. Fehlt sie dort,
+# schreibt semantic-release wortlos nichts.
+mode = "update"
+insertion_flag = "<!-- version list -->"
 
 [tool.semantic_release.commit_parser_options]
-allowed_tags = ["feat", "fix", "refactor", "perf", "docs", "style", "test", "chore", "ci"]
+allowed_tags = ["feat", "fix", "refactor", "perf", "docs", "style", "test", "chore", "ci", "build"]
 minor_tags = ["feat"]
 patch_tags = ["fix", "refactor", "perf"]
 

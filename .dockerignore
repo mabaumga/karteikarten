@@ -10,6 +10,8 @@ __pycache__
 .Python
 venv
 .venv
+# Release-Werkzeug: ship.sh baut es im frischen Klon, aus dem auch das Image entsteht.
+.venv-release
 *.egg-info
 
 # IDE
