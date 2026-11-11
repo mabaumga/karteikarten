@@ -23,8 +23,6 @@ repos:
       - id: check-merge-conflict
       - id: detect-private-key
 
-  # rev muss zur ruff-Version im venv passen. Laufen die auseinander,
-  # formatiert der Hook gegen das, was `make lint` durchwinkt.
   # **Secret-Scan als Hook, nicht nur als Action.** Die Actions dieser Flotte
   # sind bis September 2026 abgeschaltet — ein Scan, der nur dort laeuft, laeuft
   # gar nicht. Am 25.08.2026 ist deshalb eine `.env`-Sicherungskopie mit
@@ -39,12 +37,28 @@ repos:
     hooks:
       - id: gitleaks
 
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.8
+  # **Der Hook nimmt das ruff aus dem venv** — dasselbe, das `make lint` aufruft.
+  #
+  # Bis zum 11.11.2026 stand hier `repo: astral-sh/ruff-pre-commit` mit eigener
+  # `rev` (0.16.8), waehrend `requirements-dev.txt` auf 0.17.3 steht: zwei
+  # Quellen fuer dieselbe Zahl, die Schere aus INFRA-330/INFRA-415. Mit
+  # `language: system` gibt es nur noch den Pin.
+  # Setzt voraus, dass `make setup` gelaufen ist.
+  - repo: local
     hooks:
       - id: ruff
-        args: [--fix]
+        name: ruff check (venv)
+        entry: .venv/bin/python -m ruff check --fix
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
       - id: ruff-format
+        name: ruff format (venv)
+        entry: .venv/bin/python -m ruff format
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
 
   - repo: local
     hooks:
