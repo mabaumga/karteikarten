@@ -8,10 +8,16 @@ Eine mobile-optimierte Webanwendung zum Lernen mit digitalen Karteikarten. Die A
 ### 1.2 Technische Rahmenbedingungen
 - **Framework**: Django (Python)
 - **Datenbank**: SQLite (leichtgewichtig, keine separate DB-Installation)
-- **Deployment**: Standalone Docker-Container
+- **Deployment**: Standalone Docker-Container (auf Unraid, siehe `app-info.yml` → `deployment`)
 - **Frontend**: Bootstrap 5 (Mobile-first, responsive)
 - **Offline**: Progressive Web App (PWA)
-- **Benutzer**: Einzelbenutzer-Anwendung (kein Login erforderlich)
+- **Benutzer**: Mehrere Benutzer mit Login (Django-Auth, `/login/`). Die fachlichen Seiten
+  verlangen eine Anmeldung (`login_required`); offen sind nur Login, `/health/` und die
+  PWA-Dateien. Lernstand und Statistik gelten je Benutzer.
+- **Verwaltung**: Bücher und Kapitel, Benutzer und Backups nur mit `is_staff` (serverseitig
+  geprüft). Die Pflege von Blöcken und Karten zeigt die Oberfläche ebenfalls nur `is_staff`
+  an, in eigenen Abschnitten („Nur für Verwalter“); serverseitig verlangen diese Seiten
+  bisher nur eine Anmeldung.
 
 ---
 

@@ -53,4 +53,4 @@ Abweichungen:
 | Struktur, Make-Targets, Tests, Version, Health oder Daten-Import im Detail brauchst | `docs/STACK.md` |
 | Fachlichkeit, Lernmodi, Oberfläche oder Datenmodell verstehen willst | `docs/FACHLICHE_BESCHREIBUNG.md` |
 | Lerninhalte per KI für den JSON-Import erzeugen willst | `docs/KI_IMPORT_ANLEITUNG.md`, Schema `docs/input/json/schema/` |
-| deployen oder releasen willst | `app-info.yml` → `deployment`; Release lokal: `make release-local` |
+| deployen oder releasen willst | `app-info.yml` → `deployment`; Weg: `infrastruktur/scripts/ship.sh ~/git/karteikarten` |
