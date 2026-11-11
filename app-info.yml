@@ -32,7 +32,10 @@ app:
     container: karteikarten
     image: ghcr.io/mabaumga/karteikarten:latest
     compose_path: /boot/config/plugins/compose.manager/projects/Karteikarten/docker-compose.yml
-    deploy_cmd: "make release -> GitHub Actions (release.yml: semantic-release + ghcr-Push); dann: ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten' (sops-decrypt -> compose pull -> up -d). KEIN Auto-Deploy."
+    # container/image/compose_path am 11.11.2026 auf Unraid nachgeprueft (docker ps,
+    # Compose-Label working_dir). Das Image heisst weiter ghcr.io/...:latest, wird aber
+    # lokal gebaut und per ssh geladen — die Compose-Datei zieht nicht (kein pull_policy).
+    deploy_cmd: "infrastruktur/scripts/ship.sh ~/git/karteikarten (make release lokal -> deploy-lokal.sh: Image lokal bauen, per ssh nach Unraid laden, compose up -d, Health pruefen). KEIN Auto-Deploy."
     notes: >-
       Cloudflare-Tunnel -> karteikarten:8000 (gunicorn, Netz proxy auf Unraid); SQLite, Volumes data/import/archive; Auto-Import aus /app/data/import.
       Health: /health/ JSON-Contract (DB + Disk), ohne Auth, 200/503; Docker-HEALTHCHECK prueft nur TCP:8000.
@@ -41,6 +44,17 @@ app:
       Am 05.11.2026 von Hetzner wieder nach Unraid gezogen: Daten unter
       /mnt/user/appdata/karteikarten/data, Backup borgmatic.d/karteikarten.yml
       (Repos unraid-hetzner-karteikarten, Name wegen der Historie beibehalten).
+
+# Stil laut AGENTS.md (L2-django-standard): Services + duenne Views.
+architektur:
+  stil: django-standard
+  ausnahmen:
+    - regel: src-layout
+      grund: >
+        Code liegt flach im Repo-Root (config/ und die einzige App karteikarten/),
+        nicht unter src/ und nicht unter apps/<feature>/. Bastelprojekt mit einer
+        App; der Umbau auf src/ ist geplant und offen: Plane KK-3
+        ("Quellwurzel src/ einfuehren"). Faellt mit KK-3 weg.
 
 backup:
   required: true
@@ -76,7 +90,7 @@ skills:
     status: ok
     target: AGENTS.md
     result: "D8 (SK-23): AGENTS.md einzige Regelquelle (2,6 KB), CLAUDE.md nur @AGENTS.md; Themenwissen nach docs/STACK.md; veraltete Deploy-/Login-/Versionsangaben gestrichen."
-    offen: "deployment.deploy_cmd und Makefile-Ziel deploy nennen noch Hetzner; docs/FACHLICHE_BESCHREIBUNG.md §1.2 sagt noch 'kein Login'."
+    offen: "Erledigt mit KK-10: deploy_cmd/deploy auf Unraid+ship.sh, FACHLICHE_BESCHREIBUNG §1.2 an Login angeglichen, architektur-Block ergaenzt."
 
   agents-md:
     last_run: 2026-06-03T23:07:06+02:00

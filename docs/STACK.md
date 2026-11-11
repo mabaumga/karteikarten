@@ -34,12 +34,16 @@ BenutzerKarteStatus.
 | `make init` | idempotent: `migrate --noinput` + `collectstatic` (auch im Docker-Entrypoint) |
 | `make seed` | Beispieldaten laden |
 | `make dod` (= `make check`) | Gate: Django-Check, ruff lint + format, pyright, Migrations-Check, pytest |
-| `make release-local` | Release ohne Actions: Gate, Version, Tag, CHANGELOG, Image nach ghcr.io |
+| `make release-dry-run` | nächste Version ausgeben, ändert nichts |
+| `make release` | lokal: Version, CHANGELOG, Commit, Tag, Push — kein Image, kein Deploy |
+| `make deploy` | Hinweis auf den Weg live: `infrastruktur/scripts/ship.sh ~/git/karteikarten` |
 | `make docker-build` / `docker-run` | Image lokal bauen / starten |
 
 Das Gate läuft als pre-push-Hook (`.pre-commit-config.yaml`); beim Commit nur schnelle
-Autofixes und gitleaks. `make release` / `make release-dry-run` stoßen nur den
-GitHub-Workflow an und laufen ins Leere, solange Actions aus ist.
+Autofixes und gitleaks. Release und Deploy laufen lokal (Actions ist aus): `ship.sh` ruft
+`make release-dry-run` und `make release` in einem frischen Klon von `origin/main` und rollt
+dann über `deploy-lokal.sh` nach Unraid aus (Image lokal gebaut, per ssh geladen).
+`release-local` / `release-dry-run-local` sind nur noch Aliase.
 
 ## Tests
 

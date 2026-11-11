@@ -1,5 +1,5 @@
 .PHONY: run migrate setup init check release deploy seed clean help
-.PHONY: release-local release-dry-run-local
+.PHONY: release-dry-run release-local release-dry-run-local
 .PHONY: docker-build docker-run docker-stop docker-logs docker-shell docker-migrate docker-push
 
 # Auto-venv: PYTHON zeigt auf .venv/bin/python falls vorhanden, sonst system-python3.
@@ -7,7 +7,8 @@
 VENV := .venv
 PYTHON ?= $(shell test -x $(VENV)/bin/python && echo $(VENV)/bin/python || echo python3)
 
-# Registry (einheitlich ghcr.io — siehe release.yml + docker-compose.unraid.yml)
+# Image-Name, wie ihn die Compose-Datei auf Unraid erwartet. Kein Registry-Weg mehr:
+# deploy-lokal.sh baut lokal und laedt das Image per ssh (docker load).
 REGISTRY := ghcr.io/mabaumga
 IMAGE := karteikarten
 TAG := latest
@@ -80,48 +81,54 @@ dod: ## Definition of Done — DAS Gate (CI == lokal)
 
 check: dod ## Alias, weil der Name in Doku und Fingern verankert ist
 
-release: ## Release ausloesen: semantic-release (Version + CHANGELOG + Tag + Docker-Push) via GitHub Actions
-	gh workflow run release.yml
-
-release-dry-run: ## Zeigt die nächste Version, ohne zu releasen
-	gh workflow run release.yml -f dry_run=true
-	@echo "Dry-Run gestartet — Ergebnis: gh run watch"
-
-# --- Lokaler Release-Weg -----------------------------------------------------
-# Solange GitHub Actions deaktiviert ist, laufen `release` und `release-dry-run`
-# ins Leere: sie stossen nur einen Workflow an, der nicht startet. Die *-local-
-# Ziele machen dasselbe von Hand.
+# --- Release (lokal) -----------------------------------------------------------
+# GitHub Actions ist flottenweit aus (INFRA-267). Das Release laeuft deshalb
+# lokal: Version, CHANGELOG, Commit und Tag — kein Image, kein Deploy. Ausgerollt
+# wird danach mit infrastruktur/scripts/ship.sh: Es ruft `make release-dry-run`
+# und `make release` in einem frischen Klon und rollt dann ueber deploy-lokal.sh
+# nach Unraid aus (Zielangaben: app-info.yml -> app.deployment).
 #
-# Eigenes venv, weil python-semantic-release ein zurueckgehaltenes GitPython
-# braucht (Begruendung in requirements-release.txt) — das soll nicht im Dev-venv
-# landen, mit dem `make check` laeuft.
+# Eigenes venv, damit python-semantic-release nicht im Dev-venv landet, mit dem
+# das Gate laeuft (Begruendung in requirements-release.txt).
 
 RELEASE_VENV := .venv-release
-SEMANTIC_RELEASE := $(RELEASE_VENV)/bin/semantic-release
+RELEASE_PY := $(RELEASE_VENV)/bin/python
+# Marke statt bin/python als Ziel: bin/python ist ein Symlink auf den System-
+# Interpreter, ein touch darauf scheitert — und ohne Marke baut make jedes Mal neu.
+RELEASE_STAMP := $(RELEASE_VENV)/.installiert
 
-$(SEMANTIC_RELEASE): requirements-release.txt
+$(RELEASE_STAMP): requirements-release.txt
 	python3 -m venv $(RELEASE_VENV)
-	$(RELEASE_VENV)/bin/pip install -q -r requirements-release.txt
+	$(RELEASE_PY) -m pip install -q -r requirements-release.txt
+	@touch $(RELEASE_STAMP)
 
-release-dry-run-local: $(SEMANTIC_RELEASE) ## Naechste Version anzeigen (ohne Actions)
-	@GH_TOKEN=$$(gh auth token) $(SEMANTIC_RELEASE) version --print
+# Letzte Ausgabezeile = naechste Version; ship.sh liest genau die.
+release-dry-run: $(RELEASE_STAMP) ## Naechste Version anzeigen (schreibt nichts)
+	@$(RELEASE_PY) -m semantic_release --noop version --print
 
-release-local: $(SEMANTIC_RELEASE) ## Release ohne Actions: Gate + Version + Tag + CHANGELOG + Image nach ghcr.io
-	$(MAKE) check
-	GH_TOKEN=$$(gh auth token) $(SEMANTIC_RELEASE) version --push --tag --commit --changelog
-	@VERSION=$$($(PYTHON) -c "import karteikarten; print(karteikarten.__version__)"); \
-	  echo "Release $$VERSION — Image bauen und pushen"; \
-	  gh auth token | docker login ghcr.io -u mabaumga --password-stdin; \
-	  docker build --platform linux/amd64 \
-	    -t $(REGISTRY)/$(IMAGE):$$VERSION -t $(REGISTRY)/$(IMAGE):latest .; \
-	  docker push $(REGISTRY)/$(IMAGE):$$VERSION; \
-	  docker push $(REGISTRY)/$(IMAGE):latest; \
-	  echo "Deploy: ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'"
+release: $(RELEASE_STAMP) ## Version, CHANGELOG, Commit und Tag setzen, nach main pushen
+	@# **`--no-vcs-release`:** Ohne den Schalter legt semantic-release nach Tag
+	@# und Commit ein GitHub-Release an und scheitert mangels Token mit 401 — der
+	@# Tag ist dann gesetzt, der Push fehlt (gesellschaft, GES-17). Gepusht wird
+	@# deshalb erst am Ende, Commit und Tag atomar in einem Schritt.
+	@test "$$(git rev-parse --abbrev-ref HEAD)" = "main" \
+		|| { echo "Nur auf main. Aktuell: $$(git rev-parse --abbrev-ref HEAD)"; exit 1; }
+	@test -z "$$(git status --porcelain)" || { echo "Arbeitsbaum nicht sauber."; exit 1; }
+	@git fetch -q origin main && test "$$(git rev-parse HEAD)" = "$$(git rev-parse origin/main)" \
+		|| { echo "main entspricht nicht origin/main. Erst pullen bzw. pushen."; exit 1; }
+	$(RELEASE_PY) -m semantic_release version --no-push --no-vcs-release
+	@TAG=$$(git tag --points-at HEAD --list 'v[0-9]*' --sort=-v:refname | head -n1); \
+	  if [ -z "$$TAG" ]; then echo "Kein Release faellig — nichts zu pushen."; exit 0; fi; \
+	  git push --atomic origin main "$$TAG"
 
-deploy: ## Hinweis: Deployment laeuft ueber das Release (ghcr.io) + deploy.sh auf Hetzner
-	@echo "Kein direktes Deployment. Das Release baut+pusht das Image nach ghcr.io;"
-	@echo "danach auf dem Hetzner-Server:"
-	@echo "  ssh root@178.105.222.1 'cd /opt/hetzner && ./deploy.sh karteikarten'"
+# Alte Namen aus der Zeit vor KK-10, damit Notizen und Gewohnheit nicht ins Leere laufen.
+release-local: release ## Alias fuer release
+release-dry-run-local: release-dry-run ## Alias fuer release-dry-run
+
+deploy: ## Hinweis: ausgerollt wird nur ein Release, ueber ship.sh
+	@echo "Kein direktes Deployment. Release und Ausrollen nach Unraid in einem Schritt:"
+	@echo "  ~/git/infrastruktur/scripts/ship.sh ~/git/karteikarten"
+	@echo "Zielangaben (Host, Container, Image, Compose-Pfad): app-info.yml -> app.deployment"
 
 seed: ## Seed database with Stilmittel
 	DJANGO_SETTINGS_MODULE=config.settings .venv/bin/python scripts/seed_stilmittel.py
@@ -192,9 +199,8 @@ help: ## Show this help
 	@echo ""
 	@echo "Quality & Release:"
 	@echo "  make check                 - Quality-Gate (Django-Checks + Lint + Tests)"
-	@echo "  make release               - Release ueber GitHub Actions"
-	@echo "  make release-dry-run       - Naechste Version anzeigen (ueber Actions)"
-	@echo "  make release-local         - Release ohne Actions (Gate + Tag + Image)"
-	@echo "  make release-dry-run-local - Naechste Version anzeigen (ohne Actions)"
+	@echo "  make release-dry-run       - Naechste Version anzeigen (schreibt nichts)"
+	@echo "  make release               - Version + CHANGELOG + Tag, Push (lokal, kein Deploy)"
+	@echo "  make deploy                - Hinweis: Ausrollen ueber infrastruktur/scripts/ship.sh"
 	@echo ""
 	@echo "  make clean      - Remove containers and cache"
